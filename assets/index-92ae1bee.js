@@ -47,7 +47,7 @@ Error generating stack: `+i.message+`
         lg:w-32 lg:h-32
         rounded-full border-2 border-blue-500 
         overflow-hidden mb-2
-      `,children:g.jsx("img",{src:"src/assets/images/profile.jpg",alt:"Abdelrahman Eita",className:"w-full h-full object-cover"})}),g.jsxs("div",{className:"lg:flex-1",children:[g.jsx("h1",{className:"text-2xl lg:text-3xl font-semibold",children:"Abdelrahman Eita"}),g.jsx("p",{className:"text-gray-400 text-sm lg:text-base mt-1",children:"Staff Software Engineer"})]})]}),qd="/icons/medium.svg",bd="/icons/substack.png",ep=({href:e,icon:t,label:n,hoverColor:r})=>g.jsxs("a",{href:e,className:"flex flex-col items-center group",target:"_blank",rel:"noopener noreferrer",children:[g.jsx("div",{className:`
+      `,children:g.jsx("img",{src:"/images/profile.jpg",alt:"Abdelrahman Eita",className:"w-full h-full object-cover"})}),g.jsxs("div",{className:"lg:flex-1",children:[g.jsx("h1",{className:"text-2xl lg:text-3xl font-semibold",children:"Abdelrahman Eita"}),g.jsx("p",{className:"text-gray-400 text-sm lg:text-base mt-1",children:"Staff Software Engineer"})]})]}),qd="/icons/medium.svg",bd="/icons/substack.png",ep=({href:e,icon:t,label:n,hoverColor:r})=>g.jsxs("a",{href:e,className:"flex flex-col items-center group",target:"_blank",rel:"noopener noreferrer",children:[g.jsx("div",{className:`
           w-14 h-14
           bg-gray-700
           rounded-full
