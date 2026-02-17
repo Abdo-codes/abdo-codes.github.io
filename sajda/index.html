@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajda - Quran for Apple TV</title>
+    <meta name="description" content="Listen to the Holy Quran on your Apple TV with beautiful recitations, verse-by-verse sync, and stunning backgrounds.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0f1a;
+            color: #e8e8e8;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 24px 60px;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(45,138,110,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .app-icon {
+            width: 100px; height: 100px;
+            background: linear-gradient(135deg, #2d8a6e, #1a5c47);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 48px;
+            box-shadow: 0 8px 32px rgba(45,138,110,0.3);
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #4ecba0, #2d8a6e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .tagline {
+            font-size: 20px;
+            color: #8a9bb5;
+            max-width: 480px;
+            margin: 0 auto 36px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(78,203,160,0.1);
+            border: 1px solid rgba(78,203,160,0.2);
+            border-radius: 20px;
+            color: #4ecba0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Features */
+        .features {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 640px) {
+            .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .feature {
+            background: #131a2b;
+            border: 1px solid #1e2a40;
+            border-radius: 14px;
+            padding: 28px;
+            transition: border-color 0.2s;
+        }
+        .feature:hover {
+            border-color: #2d8a6e;
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+        .feature h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .feature p {
+            color: #8a9bb5;
+            font-size: 14px;
+        }
+
+        /* Highlight */
+        .highlight {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #131a2b, #0f1524);
+            border: 1px solid #1e2a40;
+            border-radius: 16px;
+            padding: 48px 32px;
+        }
+        .highlight-card h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .highlight-card p {
+            color: #8a9bb5;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #1e2a40;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            color: #4ecba0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .copy {
+            color: #556680;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="app-icon">📖</div>
+        <h1><span>Sajda</span></h1>
+        <p class="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
+        <span class="badge">Available on Apple TV</span>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🎙️</div>
+                <h3>World-Class Reciters</h3>
+                <p>Choose from a curated selection of renowned Quran reciters to listen to your favorite recitations.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📜</div>
+                <h3>Verse-by-Verse Sync</h3>
+                <p>Follow along with highlighted verses that sync perfectly with the audio recitation.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Backgrounds</h3>
+                <p>Enjoy serene and stunning visual backgrounds that create a peaceful listening atmosphere.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🕌</div>
+                <h3>Designed for the Big Screen</h3>
+                <p>Purpose-built for Apple TV with intuitive navigation and a beautiful interface optimized for your living room.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlight">
+        <div class="highlight-card">
+            <h2>Your Living Room, Transformed</h2>
+            <p>Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/sajda/support">Support</a>
+            <a href="mailto:abdoelrhman.eaita@gmail.com">Contact</a>
+        </div>
+        <p class="copy">&copy; 2025 Sajda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
