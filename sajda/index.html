@@ -1,231 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sajda - Quran for Apple TV</title>
-    <meta name="description" content="Listen to the Holy Quran on your Apple TV with beautiful recitations, verse-by-verse sync, and stunning backgrounds.">
+    <meta name="description" content="Listen to the Holy Quran on your Apple TV with beautiful recitations, verse-by-verse sync, prayer times, athan alerts, Qibla direction, and stunning backgrounds. Free Islamic app for Apple TV.">
+    <link rel="canonical" href="https://yoloabdo.com/sajda/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/sajda/">
+    <meta property="og:title" content="Sajda — Quran Recitations for Apple TV">
+    <meta property="og:description" content="Listen to the Holy Quran on your Apple TV with world-class reciters, verse-by-verse sync, and stunning backgrounds.">
+    <meta property="og:site_name" content="Sajda">
+    <meta property="og:image" content="https://yoloabdo.com/sajda/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sajda — Quran Recitations for Apple TV">
+    <meta name="twitter:description" content="Listen to the Holy Quran on your Apple TV with world-class reciters, verse-by-verse sync, and stunning backgrounds.">
+    <meta name="twitter:image" content="https://yoloabdo.com/sajda/og-image.png">
+    <meta name="keywords" content="Quran, Apple TV, Quran app, Quran recitation, Islamic app, Sajda, tvOS, Quran streaming, verse by verse Quran, muslim tv app, al quran streaming online, islamic streaming app, prayer times, athan, adhan, azan, qibla, القرآن الكريم, تطبيقات اسلامية, افضل تطبيق اذان, تطبيق مسلم أبل تي في">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sajda">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Sajda",
+        "description": "Listen to the Holy Quran on your Apple TV with beautiful recitations, verse-by-verse sync, and stunning backgrounds.",
+        "operatingSystem": "tvOS",
+        "applicationCategory": "ReligionApplication",
+        "url": "https://apps.apple.com/us/app/sajdatv/id6759179587",
+        "downloadUrl": "https://apps.apple.com/us/app/sajdatv/id6759179587",
+        "screenshot": "https://yoloabdo.com/sajda/screenshot-player.jpg",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Abdo Elrhman" }
+    }
+    </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0f1a;
-            color: #e8e8e8;
-            min-height: 100vh;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            padding: 80px 24px 60px;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(45,138,110,0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .app-icon {
-            width: 100px; height: 100px;
-            background: linear-gradient(135deg, #2d8a6e, #1a5c47);
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 28px;
-            font-size: 48px;
-            box-shadow: 0 8px 32px rgba(45,138,110,0.3);
-        }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-        .hero h1 span {
-            background: linear-gradient(135deg, #4ecba0, #2d8a6e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero .tagline {
-            font-size: 20px;
-            color: #8a9bb5;
-            max-width: 480px;
-            margin: 0 auto 36px;
-        }
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(78,203,160,0.1);
-            border: 1px solid rgba(78,203,160,0.2);
-            border-radius: 20px;
-            color: #4ecba0;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* Features */
-        .features {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 24px 60px;
-        }
-        .features h2 {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        @media (min-width: 640px) {
-            .feature-grid { grid-template-columns: 1fr 1fr; }
-        }
-        .feature {
-            background: #131a2b;
-            border: 1px solid #1e2a40;
-            border-radius: 14px;
-            padding: 28px;
-            transition: border-color 0.2s;
-        }
-        .feature:hover {
-            border-color: #2d8a6e;
-        }
-        .feature-icon {
-            font-size: 32px;
-            margin-bottom: 14px;
-        }
-        .feature h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .feature p {
-            color: #8a9bb5;
-            font-size: 14px;
-        }
-
-        /* Highlight */
-        .highlight {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 24px;
-            text-align: center;
-        }
-        .highlight-card {
-            background: linear-gradient(135deg, #131a2b, #0f1524);
-            border: 1px solid #1e2a40;
-            border-radius: 16px;
-            padding: 48px 32px;
-        }
-        .highlight-card h2 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .highlight-card p {
-            color: #8a9bb5;
-            font-size: 16px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 40px 24px;
-            border-top: 1px solid #1e2a40;
-            max-width: 800px;
-            margin: 40px auto 0;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 16px;
-        }
-        .footer-links a {
-            color: #4ecba0;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        .footer .copy {
-            color: #556680;
-            font-size: 13px;
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0f1a;color:#e8e8e8;min-height:100vh;line-height:1.6;overflow-x:hidden}
+        .lang-bar{display:flex;justify-content:flex-end;align-items:center;padding:12px 24px;position:relative;max-width:900px;margin:0 auto}
+        .lang-btn{background:rgba(78,203,160,.1);border:1px solid rgba(78,203,160,.25);border-radius:10px;color:#4ecba0;font-size:14px;font-weight:500;padding:8px 16px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s}
+        .lang-btn:hover{background:rgba(78,203,160,.18)}
+        .lang-btn svg{width:16px;height:16px;fill:currentColor}
+        .lang-dropdown{display:none;position:absolute;top:100%;right:24px;background:#131a2b;border:1px solid #1e2a40;border-radius:12px;padding:8px 0;min-width:180px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:100}
+        .lang-dropdown.open{display:block}
+        .lang-option{display:block;width:100%;text-align:left;padding:10px 18px;color:#8a9bb5;font-size:14px;cursor:pointer;background:none;border:none;font-family:inherit;transition:background .15s,color .15s}
+        .lang-option:hover{background:rgba(78,203,160,.08);color:#e8e8e8}
+        .lang-option.active{color:#4ecba0;font-weight:600}
+        .hero{text-align:center;padding:40px 24px 60px;position:relative}
+        .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(45,138,110,.15) 0%,transparent 70%);pointer-events:none}
+        .app-icon{width:100px;height:100px;background:linear-gradient(135deg,#2d8a6e,#1a5c47);border-radius:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:48px;box-shadow:0 8px 32px rgba(45,138,110,.3)}
+        .hero h1{font-size:42px;font-weight:700;margin-bottom:12px;letter-spacing:-.5px;color:#e8e8e8}
+        .hero h1 .brand{background:linear-gradient(135deg,#4ecba0,#2d8a6e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero .tagline{font-size:20px;color:#8a9bb5;max-width:480px;margin:0 auto 36px}
+        .badge{display:inline-block;padding:6px 16px;background:rgba(78,203,160,.1);border:1px solid rgba(78,203,160,.2);border-radius:20px;color:#4ecba0;font-size:14px;font-weight:500}
+        .features{max-width:800px;margin:0 auto;padding:40px 24px 60px}
+        .features h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:40px}
+        .feature-grid{display:grid;grid-template-columns:1fr;gap:16px}
+        @media(min-width:640px){.feature-grid{grid-template-columns:1fr 1fr}}
+        .feature{background:#131a2b;border:1px solid #1e2a40;border-radius:14px;padding:28px;transition:border-color .2s}
+        .feature:hover{border-color:#2d8a6e}
+        .feature-icon{font-size:32px;margin-bottom:14px}
+        .feature h3{font-size:17px;font-weight:600;margin-bottom:8px}
+        .feature p{color:#8a9bb5;font-size:14px}
+        .highlight{max-width:800px;margin:0 auto;padding:40px 24px;text-align:center}
+        .highlight-card{background:linear-gradient(135deg,#131a2b,#0f1524);border:1px solid #1e2a40;border-radius:16px;padding:48px 32px}
+        .highlight-card h2{font-size:26px;font-weight:700;margin-bottom:16px}
+        .highlight-card p{color:#8a9bb5;font-size:16px;max-width:500px;margin:0 auto}
+        .cta-btn{display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#4ecba0,#2d8a6e);color:#fff;font-size:16px;font-weight:600;border-radius:12px;text-decoration:none;transition:opacity .2s}
+        .cta-btn:hover{opacity:.85}
+        .appstore-link{display:inline-block;margin-top:20px}
+        .appstore-link img{height:44px}
+        .screenshots{max-width:900px;margin:0 auto;padding:20px 24px 60px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .screenshots h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:32px}
+        .screenshot-scroll{display:flex;gap:16px;padding-bottom:12px}
+        .screenshot-scroll img{height:360px;border-radius:12px;flex-shrink:0;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+        @media(max-width:640px){.screenshot-scroll img{height:220px}}
+        .footer{text-align:center;padding:40px 24px;border-top:1px solid #1e2a40;max-width:800px;margin:40px auto 0}
+        .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
+        .footer-links a{color:#4ecba0;text-decoration:none;font-size:14px;font-weight:500}
+        .footer-links a:hover{text-decoration:underline}
+        .footer .copy{color:#556680;font-size:13px}
+        [dir="rtl"] .lang-bar{justify-content:flex-start}
+        [dir="rtl"] .lang-dropdown{right:auto;left:24px}
+        [dir="rtl"] .lang-option{text-align:right}
     </style>
 </head>
 <body>
+    <nav class="lang-bar">
+        <button class="lang-btn" id="lang-toggle" aria-label="Change language">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <span id="current-lang-label">English</span>
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown"></div>
+    </nav>
+
     <section class="hero">
         <div class="app-icon">📖</div>
-        <h1><span>Sajda</span></h1>
-        <p class="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
-        <span class="badge">Available on Apple TV</span>
+        <h1><span class="brand">Sajda</span> — <span data-i18n="heroSuffix">Quran for Apple TV</span></h1>
+        <p class="tagline" data-i18n="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
+        <span class="badge" data-i18n="badge">Available on Apple TV</span>
+        <div>
+            <a href="https://apps.apple.com/us/app/sajdatv/id6759179587" target="_blank" rel="noopener" class="appstore-link" aria-label="Download on the App Store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download Sajda on the App Store">
+            </a>
+        </div>
     </section>
 
     <section class="features">
-        <h2>Features</h2>
+        <h2 data-i18n="featuresTitle">Features</h2>
         <div class="feature-grid">
             <div class="feature">
                 <div class="feature-icon">🎙️</div>
-                <h3>World-Class Reciters</h3>
-                <p>Choose from a curated selection of renowned Quran reciters to listen to your favorite recitations.</p>
+                <h3 data-i18n="recitersTitle">Hundreds of Reciters</h3>
+                <p data-i18n="recitersDesc">Choose from hundreds of reciters with different narrations.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">📜</div>
-                <h3>Verse-by-Verse Sync</h3>
-                <p>Follow along with highlighted verses that sync perfectly with the audio recitation.</p>
+                <h3 data-i18n="verseTitle">Verse Tracking</h3>
+                <p data-i18n="verseDesc">Follow along with precise verse synchronization.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🎨</div>
-                <h3>Beautiful Backgrounds</h3>
-                <p>Enjoy serene and stunning visual backgrounds that create a peaceful listening atmosphere.</p>
+                <h3 data-i18n="bgTitle">Calming Backgrounds</h3>
+                <p data-i18n="bgDesc">Enjoy animated nature backgrounds while listening.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🕌</div>
-                <h3>Designed for the Big Screen</h3>
-                <p>Purpose-built for Apple TV with intuitive navigation and a beautiful interface optimized for your living room.</p>
+                <h3 data-i18n="screenTitle">Designed for the Big Screen</h3>
+                <p data-i18n="screenDesc">Purpose-built for Apple TV with intuitive navigation and a beautiful interface.</p>
             </div>
         </div>
     </section>
 
-    <section class="highlight">
-        <div class="highlight-card">
-            <h2>Your Living Room, Transformed</h2>
-            <p>Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.</p>
+    <section class="screenshots">
+        <h2 data-i18n="screenshotsTitle">See It in Action</h2>
+        <div class="screenshot-scroll">
+            <img src="/sajda/screenshot-reciters.jpg" alt="Sajda reciters screen showing 236 Quran reciters on Apple TV" loading="lazy">
+            <img src="/sajda/screenshot-surahs.jpg" alt="Sajda surah list with Play All and Shuffle options on Apple TV" loading="lazy">
+            <img src="/sajda/screenshot-player.jpg" alt="Sajda Quran player with cloud background on Apple TV" loading="lazy">
+            <img src="/sajda/screenshot-prayer.jpg" alt="Sajda prayer times and Qibla direction on Apple TV" loading="lazy">
         </div>
     </section>
 
     <section class="highlight">
         <div class="highlight-card">
-            <div style="font-size: 40px; margin-bottom: 16px;">☕</div>
-            <h2>Support Sajda</h2>
-            <p style="margin-bottom: 24px;">Sajda is free and built with love. If you enjoy the app, consider supporting its development.</p>
-            <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #4ecba0, #2d8a6e); color: #fff; font-size: 16px; font-weight: 600; border-radius: 12px; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Buy Me a Coffee</a>
+            <h2 data-i18n="transformTitle">Your Living Room, Transformed</h2>
+            <p data-i18n="transformDesc">Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.</p>
         </div>
     </section>
+
+    <section class="highlight">
+        <div class="highlight-card">
+            <div style="font-size:40px;margin-bottom:16px">☕</div>
+            <h2 data-i18n="supportTitle">Support Sajda</h2>
+            <p style="margin-bottom:24px" data-i18n="supportDesc">Sajda is free and built with love. If you enjoy the app, consider supporting its development.</p>
+            <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener" class="cta-btn" data-i18n="supportCta">Buy Me a Coffee</a>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+        const app = initializeApp({
+            apiKey: "AIzaSyAnAVi1mdntCHSAXHRYRBm7GQl3y3Y8WvM",
+            authDomain: "sajdatv-7537d.firebaseapp.com",
+            projectId: "sajdatv-7537d",
+            storageBucket: "sajdatv-7537d.firebasestorage.app",
+            messagingSenderId: "19706506620",
+            appId: "1:19706506620:web:0471f5b7fe940b874dc8f9",
+            measurementId: "G-P578B6JJ0P"
+        });
+        getAnalytics(app);
+    </script>
 
     <footer class="footer">
         <div class="footer-links">
-            <a href="/sajda/support">Support</a>
+            <a href="/sajda/support" data-i18n="footerSupport">Support</a>
+            <a href="/sajda/privacy" data-i18n="footerPrivacy">Privacy</a>
             <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener">Buy Me a Coffee</a>
-            <a href="mailto:abdoelrhman.eaita@gmail.com">Contact</a>
+            <a href="mailto:abdoelrhman.eaita@gmail.com" data-i18n="footerContact">Contact</a>
         </div>
-        <p class="copy">&copy; 2025 Sajda. All rights reserved.</p>
+        <p class="copy">&copy; 2026 Sajda. <span data-i18n="rights">All rights reserved.</span></p>
     </footer>
+
+    <script>
+    var T = {
+        en: { label:"English", screenshotsTitle:"See It in Action", heroSuffix:"Quran for Apple TV", tagline:"Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.", badge:"Available on Apple TV", featuresTitle:"Features", recitersTitle:"Hundreds of Reciters", recitersDesc:"Choose from hundreds of reciters with different narrations.", verseTitle:"Verse Tracking", verseDesc:"Follow along with precise verse synchronization.", bgTitle:"Calming Backgrounds", bgDesc:"Enjoy animated nature backgrounds while listening.", screenTitle:"Designed for the Big Screen", screenDesc:"Purpose-built for Apple TV with intuitive navigation and a beautiful interface.", transformTitle:"Your Living Room, Transformed", transformDesc:"Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.", supportTitle:"Support Sajda", supportDesc:"Sajda is free and built with love. If you enjoy the app, consider supporting its development.", supportCta:"Buy Me a Coffee", footerSupport:"Support", footerPrivacy:"Privacy", footerContact:"Contact", rights:"All rights reserved." },
+        ar: { label:"العربية", dir:"rtl", screenshotsTitle:"شاهد التطبيق", heroSuffix:"القرآن الكريم على Apple TV", tagline:"استمع إلى القرآن الكريم على Apple TV مع تلاوات جميلة وتتبع الآيات بتزامن دقيق.", badge:"متوفر على Apple TV", featuresTitle:"مميزات التطبيق", recitersTitle:"مئات القراء", recitersDesc:"اختر من بين مئات القراء بروايات مختلفة.", verseTitle:"تتبع الآيات", verseDesc:"تابع الآيات مع الاستماع بتزامن دقيق.", bgTitle:"خلفيات هادئة", bgDesc:"استمتع بخلفيات طبيعية متحركة أثناء الاستماع.", screenTitle:"مصمم للشاشة الكبيرة", screenDesc:"مصمم خصيصاً لـ Apple TV بواجهة جميلة وتنقل سهل.", transformTitle:"غرفة المعيشة بشكل جديد", transformDesc:"حوّل Apple TV إلى مصدر للسكينة. سواء كنت تقرأ أو تستمع، ستعيش تجربة قرآنية فريدة في منزلك.", supportTitle:"ادعم سجدة", supportDesc:"سجدة مجاني وصُنع بحب. إذا أعجبك التطبيق، فكّر في دعم تطويره.", supportCta:"اشترِ لي قهوة", footerSupport:"الدعم", footerPrivacy:"الخصوصية", footerContact:"تواصل معنا", rights:"جميع الحقوق محفوظة." },
+        tr: { label:"Türkçe", screenshotsTitle:"Uygulamayı Görün", heroSuffix:"Apple TV için Kur'an", tagline:"Apple TV'nizde güzel tilavetler ve hassas ayet senkronizasyonu ile Kur'an-ı Kerim dinleyin.", badge:"Apple TV'de mevcut", featuresTitle:"Uygulama Özellikleri", recitersTitle:"Yüzlerce Kari", recitersDesc:"Farklı rivayetlerle yüzlerce kari arasından seçim yapın.", verseTitle:"Ayet Takibi", verseDesc:"Hassas ayet senkronizasyonu ile takip edin.", bgTitle:"Huzurlu Arka Planlar", bgDesc:"Dinlerken animasyonlu doğa arka planlarının keyfini çıkarın.", screenTitle:"Büyük Ekran İçin Tasarlandı", screenDesc:"Apple TV için sezgisel gezinme ve güzel arayüzle özel olarak tasarlandı.", transformTitle:"Oturma Odanız Dönüştü", transformDesc:"Apple TV'nizi bir huzur kaynağına dönüştürün. İster okuyun ister dinleyin, Sajda Kur'an deneyimini evinize taşır.", supportTitle:"Sajda'yı Destekle", supportDesc:"Sajda ücretsiz ve sevgiyle yapıldı. Uygulamayı beğendiyseniz, geliştirilmesini desteklemeyi düşünün.", supportCta:"Bana Bir Kahve Al", footerSupport:"Destek", footerPrivacy:"Gizlilik", footerContact:"İletişim", rights:"Tüm hakları saklıdır." },
+        fr: { label:"Français", screenshotsTitle:"Découvrez l'app", heroSuffix:"Le Coran sur Apple TV", tagline:"Écoutez le Saint Coran sur votre Apple TV avec de belles récitations et une synchronisation verset par verset.", badge:"Disponible sur Apple TV", featuresTitle:"Fonctionnalités", recitersTitle:"Des centaines de récitateurs", recitersDesc:"Choisissez parmi des centaines de récitateurs avec différentes narrations.", verseTitle:"Suivi des versets", verseDesc:"Suivez avec une synchronisation précise des versets.", bgTitle:"Arrière-plans apaisants", bgDesc:"Profitez d'arrière-plans naturels animés en écoutant.", screenTitle:"Conçu pour le grand écran", screenDesc:"Conçu spécialement pour Apple TV avec une navigation intuitive et une belle interface.", transformTitle:"Votre salon, transformé", transformDesc:"Transformez votre Apple TV en source de tranquillité. Que vous lisiez ou écoutiez, Sajda apporte l'expérience du Coran chez vous.", supportTitle:"Soutenez Sajda", supportDesc:"Sajda est gratuit et fait avec amour. Si vous aimez l'app, pensez à soutenir son développement.", supportCta:"Offrez-moi un café", footerSupport:"Support", footerPrivacy:"Confidentialité", footerContact:"Contact", rights:"Tous droits réservés." },
+        es: { label:"Español", screenshotsTitle:"Mira la app", heroSuffix:"Corán para Apple TV", tagline:"Escucha el Sagrado Corán en tu Apple TV con hermosas recitaciones y sincronización verso a verso.", badge:"Disponible en Apple TV", featuresTitle:"Funciones", recitersTitle:"Cientos de recitadores", recitersDesc:"Elige entre cientos de recitadores con diferentes narraciones.", verseTitle:"Seguimiento de versos", verseDesc:"Sigue con sincronización precisa de versos.", bgTitle:"Fondos relajantes", bgDesc:"Disfruta de fondos animados de naturaleza mientras escuchas.", screenTitle:"Diseñado para la pantalla grande", screenDesc:"Creado especialmente para Apple TV con navegación intuitiva y una hermosa interfaz.", transformTitle:"Tu sala de estar, transformada", transformDesc:"Convierte tu Apple TV en una fuente de tranquilidad. Ya sea leyendo o escuchando, Sajda lleva la experiencia del Corán a tu hogar.", supportTitle:"Apoya a Sajda", supportDesc:"Sajda es gratis y hecho con amor. Si disfrutas la app, considera apoyar su desarrollo.", supportCta:"Invítame un café", footerSupport:"Soporte", footerPrivacy:"Privacidad", footerContact:"Contacto", rights:"Todos los derechos reservados." },
+        ur: { label:"اردو", dir:"rtl", screenshotsTitle:"ایپ دیکھیں", heroSuffix:"Apple TV کے لیے قرآن", tagline:"Apple TV پر خوبصورت تلاوتوں اور آیت بہ آیت ہم آہنگی کے ساتھ قرآن مجید سنیں۔", badge:"Apple TV پر دستیاب", featuresTitle:"ایپ کی خصوصیات", recitersTitle:"سینکڑوں قاری", recitersDesc:"مختلف روایات کے ساتھ سینکڑوں قاریوں میں سے منتخب کریں۔", verseTitle:"آیت ٹریکنگ", verseDesc:"درست آیت ہم آہنگی کے ساتھ پیروی کریں۔", bgTitle:"پرسکون پس منظر", bgDesc:"سنتے ہوئے متحرک قدرتی پس منظر سے لطف اندوز ہوں۔", screenTitle:"بڑی سکرین کے لیے ڈیزائن", screenDesc:"Apple TV کے لیے خاص طور پر بنایا گیا، آسان نیویگیشن اور خوبصورت انٹرفیس کے ساتھ۔", transformTitle:"آپ کا لاؤنج، نئے انداز میں", transformDesc:"اپنے Apple TV کو سکون کا ذریعہ بنائیں۔ چاہے آپ پڑھ رہے ہوں یا سن رہے ہوں، سجدہ قرآن کا تجربہ آپ کے گھر لاتا ہے۔", supportTitle:"سجدہ کی حمایت کریں", supportDesc:"سجدہ مفت ہے اور محبت سے بنایا گیا ہے۔ اگر آپ کو ایپ پسند ہے تو اس کی ترقی میں مدد کریں۔", supportCta:"مجھے ایک کافی پلائیں", footerSupport:"سپورٹ", footerPrivacy:"رازداری", footerContact:"رابطہ کریں", rights:"جملہ حقوق محفوظ ہیں۔" },
+        bn: { label:"বাংলা", screenshotsTitle:"অ্যাপটি দেখুন", heroSuffix:"Apple TV-তে কুরআন", tagline:"আপনার Apple TV-তে সুন্দর তিলাওয়াত এবং আয়াত-ভিত্তিক সিঙ্ক্রোনাইজেশনের সাথে পবিত্র কুরআন শুনুন।", badge:"Apple TV-তে উপলব্ধ", featuresTitle:"অ্যাপের বৈশিষ্ট্য", recitersTitle:"শত শত কারী", recitersDesc:"বিভিন্ন বর্ণনায় শত শত কারী থেকে বেছে নিন।", verseTitle:"আয়াত ট্র্যাকিং", verseDesc:"নির্ভুল আয়াত সিঙ্ক্রোনাইজেশনের সাথে অনুসরণ করুন।", bgTitle:"প্রশান্তিদায়ক পটভূমি", bgDesc:"শোনার সময় প্রকৃতির অ্যানিমেটেড পটভূমি উপভোগ করুন।", screenTitle:"বড় পর্দার জন্য ডিজাইন করা", screenDesc:"Apple TV-এর জন্য বিশেষভাবে তৈরি, সহজ নেভিগেশন এবং সুন্দর ইন্টারফেস সহ।", transformTitle:"আপনার বসার ঘর, রূপান্তরিত", transformDesc:"আপনার Apple TV-কে প্রশান্তির উৎসে পরিণত করুন। পড়ুন বা শুনুন, সাজদা কুরআনের অভিজ্ঞতা আপনার ঘরে নিয়ে আসে।", supportTitle:"সাজদাকে সমর্থন করুন", supportDesc:"সাজদা বিনামূল্যে এবং ভালোবাসায় তৈরি। অ্যাপটি ভালো লাগলে এর উন্নয়নে সহায়তা করুন।", supportCta:"আমাকে একটি কফি কিনুন", footerSupport:"সাপোর্ট", footerPrivacy:"গোপনীয়তা", footerContact:"যোগাযোগ", rights:"সর্বস্বত্ব সংরক্ষিত।" },
+        id: { label:"Bahasa Indonesia", screenshotsTitle:"Lihat Aplikasi", heroSuffix:"Al-Quran untuk Apple TV", tagline:"Dengarkan Al-Quran di Apple TV Anda dengan bacaan indah dan sinkronisasi ayat per ayat.", badge:"Tersedia di Apple TV", featuresTitle:"Fitur Aplikasi", recitersTitle:"Ratusan Qari", recitersDesc:"Pilih dari ratusan qari dengan berbagai riwayat.", verseTitle:"Pelacakan Ayat", verseDesc:"Ikuti dengan sinkronisasi ayat yang tepat.", bgTitle:"Latar Belakang Menenangkan", bgDesc:"Nikmati latar belakang alam animasi saat mendengarkan.", screenTitle:"Dirancang untuk Layar Besar", screenDesc:"Dibuat khusus untuk Apple TV dengan navigasi intuitif dan antarmuka yang indah.", transformTitle:"Ruang Tamu Anda, Berubah", transformDesc:"Ubah Apple TV Anda menjadi sumber ketenangan. Baik membaca maupun mendengarkan, Sajda membawa pengalaman Al-Quran ke rumah Anda.", supportTitle:"Dukung Sajda", supportDesc:"Sajda gratis dan dibuat dengan cinta. Jika Anda menikmati aplikasinya, pertimbangkan untuk mendukung pengembangannya.", supportCta:"Belikan Saya Kopi", footerSupport:"Dukungan", footerPrivacy:"Privasi", footerContact:"Kontak", rights:"Hak cipta dilindungi." },
+        ru: { label:"Русский", screenshotsTitle:"Посмотрите приложение", heroSuffix:"Коран для Apple TV", tagline:"Слушайте Священный Коран на Apple TV с прекрасными чтениями и точной синхронизацией аятов.", badge:"Доступно на Apple TV", featuresTitle:"Возможности", recitersTitle:"Сотни чтецов", recitersDesc:"Выбирайте из сотен чтецов с различными чтениями.", verseTitle:"Отслеживание аятов", verseDesc:"Следите с точной синхронизацией аятов.", bgTitle:"Успокаивающие фоны", bgDesc:"Наслаждайтесь анимированными природными фонами во время прослушивания.", screenTitle:"Для большого экрана", screenDesc:"Создано специально для Apple TV с интуитивной навигацией и красивым интерфейсом.", transformTitle:"Ваша гостиная преобразилась", transformDesc:"Превратите Apple TV в источник спокойствия. Читайте или слушайте — Sajda приносит опыт Корана в ваш дом.", supportTitle:"Поддержите Sajda", supportDesc:"Sajda бесплатен и создан с любовью. Если вам нравится приложение, поддержите его развитие.", supportCta:"Угостите меня кофе", footerSupport:"Поддержка", footerPrivacy:"Конфиденциальность", footerContact:"Контакт", rights:"Все права защищены." },
+        sv: { label:"Svenska", screenshotsTitle:"Se appen", heroSuffix:"Koranen för Apple TV", tagline:"Lyssna på den heliga Koranen på din Apple TV med vackra recitationer och exakt verssynkronisering.", badge:"Tillgänglig på Apple TV", featuresTitle:"Funktioner", recitersTitle:"Hundratals recitatörer", recitersDesc:"Välj bland hundratals recitatörer med olika berättelser.", verseTitle:"Versspårning", verseDesc:"Följ med exakt verssynkronisering.", bgTitle:"Lugnande bakgrunder", bgDesc:"Njut av animerade naturbakgrunder medan du lyssnar.", screenTitle:"Designad för storbildsskärm", screenDesc:"Specialbyggd för Apple TV med intuitiv navigering och ett vackert gränssnitt.", transformTitle:"Ditt vardagsrum, förvandlat", transformDesc:"Förvandla din Apple TV till en källa av lugn. Oavsett om du läser eller lyssnar, ger Sajda Koran-upplevelsen hem till dig.", supportTitle:"Stöd Sajda", supportDesc:"Sajda är gratis och gjord med kärlek. Om du gillar appen, överväg att stödja dess utveckling.", supportCta:"Köp mig en kaffe", footerSupport:"Support", footerPrivacy:"Integritet", footerContact:"Kontakt", rights:"Alla rättigheter förbehållna." },
+        zh: { label:"中文", screenshotsTitle:"查看应用", heroSuffix:"Apple TV 上的古兰经", tagline:"在 Apple TV 上聆听古兰经，配有优美的诵读和逐节同步功能。", badge:"可在 Apple TV 上使用", featuresTitle:"应用功能", recitersTitle:"数百位诵读者", recitersDesc:"从数百位不同传述版本的诵读者中选择。", verseTitle:"经文跟踪", verseDesc:"通过精确的经文同步跟随。", bgTitle:"宁静背景", bgDesc:"聆听时享受动态自然背景。", screenTitle:"专为大屏设计", screenDesc:"专为 Apple TV 打造，直观导航和精美界面。", transformTitle:"改变您的客厅", transformDesc:"将您的 Apple TV 变成宁静之源。无论是阅读还是聆听，Sajda 将古兰经体验带入您的家中。", supportTitle:"支持 Sajda", supportDesc:"Sajda 免费且用心制作。如果您喜欢这个应用，请考虑支持它的开发。", supportCta:"请我喝杯咖啡", footerSupport:"支持", footerPrivacy:"隐私", footerContact:"联系", rights:"版权所有。" }
+    };
+
+    var rtl = ['ar','ur'];
+    var order = ['en','ar','tr','fr','es','ur','bn','id','ru','sv','zh'];
+    var lang = localStorage.getItem('sajda-lang') || (navigator.language || '').split('-')[0] || 'en';
+    if (!T[lang]) lang = 'en';
+
+    function buildDropdown() {
+        var dd = document.getElementById('lang-dropdown');
+        while (dd.firstChild) dd.removeChild(dd.firstChild);
+        order.forEach(function(code) {
+            var btn = document.createElement('button');
+            btn.className = 'lang-option' + (code === lang ? ' active' : '');
+            btn.textContent = T[code].label;
+            btn.addEventListener('click', function() { setLang(code); });
+            dd.appendChild(btn);
+        });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+        document.getElementById('lang-dropdown').classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.lang-bar'))
+            document.getElementById('lang-dropdown').classList.remove('open');
+    });
+
+    function setLang(code) {
+        lang = code;
+        localStorage.setItem('sajda-lang', code);
+        apply();
+        document.getElementById('lang-dropdown').classList.remove('open');
+        buildDropdown();
+    }
+
+    function apply() {
+        var t = T[lang];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = rtl.indexOf(lang) >= 0 ? 'rtl' : 'ltr';
+        document.getElementById('current-lang-label').textContent = t.label;
+        var els = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < els.length; i++) {
+            var k = els[i].getAttribute('data-i18n');
+            if (t[k]) els[i].textContent = t[k];
+        }
+    }
+
+    buildDropdown();
+    apply();
+    </script>
 </body>
 </html>
