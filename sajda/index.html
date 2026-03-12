@@ -55,12 +55,12 @@
             {
                 "@type": "Question",
                 "name": "What is Sajda?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is a free Quran app for Apple TV that lets you listen to the Holy Quran with beautiful recitations from hundreds of reciters, verse-by-verse synchronization, prayer times with athan alerts, Qibla direction, and stunning animated backgrounds." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is a free Quran app for Apple TV featuring 200+ reciters with verse-by-verse sync, live Islamic TV channels, Quran radio stations, a sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, playback speed control, focus mode, translations, and stunning animated backgrounds — all designed for your big screen." }
             },
             {
                 "@type": "Question",
                 "name": "Is Sajda free?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is free to download. Quran listening with hundreds of reciters and verse-by-verse sync is completely free. Some additional features like prayer times, athan alerts, and premium backgrounds are available through in-app purchases." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is free to download. Quran listening with 200+ reciters, verse-by-verse sync, search, favorites, and playback controls are completely free. Premium features including live TV channels, radio stations, prayer times, athan alerts, and premium backgrounds are available through affordable in-app purchases." }
             },
             {
                 "@type": "Question",
@@ -70,7 +70,7 @@
             {
                 "@type": "Question",
                 "name": "Does Sajda have prayer times and athan?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes, Sajda includes accurate prayer times based on your location with customizable athan (adhan/azan) alerts for all five daily prayers. It also shows Qibla direction on your Apple TV screen." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, Sajda includes accurate prayer times based on your location with 13 beautiful athan voices to choose from. Get alerts for all five daily prayers and see Qibla direction on your Apple TV screen." }
             },
             {
                 "@type": "Question",
@@ -90,7 +90,7 @@
             {
                 "@type": "Question",
                 "name": "What is the best Quran app for Apple TV?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is the leading Quran app for Apple TV, offering 200+ reciters with multiple narrations (Hafs, Warsh), verse-by-verse synchronization, prayer times, athan alerts, Qibla direction, and beautiful animated backgrounds — all designed for the big screen." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Sajda is the most feature-rich Quran app for Apple TV — 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and beautiful themes — all on your big screen." }
             },
             {
                 "@type": "Question",
@@ -106,262 +106,836 @@
                 "@type": "Question",
                 "name": "Does Sajda work offline?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Sajda streams Quran recitations over the internet for the best quality and widest reciter selection. An internet connection is required to listen to recitations and get prayer times." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Sajda have live TV and radio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, Sajda offers live Islamic TV channels and Quran radio stations with a live equalizer. These are premium features available through in-app purchase." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Sajda for Quran memorization?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes! Sajda has A-B repeat that lets you loop specific verses for Hifz practice. Combined with playback speed control (0.5x to 2x), repeat modes, and focus mode for distraction-free verse display, it's a powerful tool for memorization." }
             }
         ]
     }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0f1a;color:#e8e8e8;min-height:100vh;line-height:1.6;overflow-x:hidden}
-        .lang-bar{display:flex;justify-content:flex-end;align-items:center;padding:12px 24px;position:relative;max-width:900px;margin:0 auto}
-        .lang-btn{background:rgba(78,203,160,.1);border:1px solid rgba(78,203,160,.25);border-radius:10px;color:#4ecba0;font-size:14px;font-weight:500;padding:8px 16px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s}
-        .lang-btn:hover{background:rgba(78,203,160,.18)}
-        .lang-btn svg{width:16px;height:16px;fill:currentColor}
-        .lang-dropdown{display:none;position:absolute;top:100%;right:24px;background:#131a2b;border:1px solid #1e2a40;border-radius:12px;padding:8px 0;min-width:180px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:100}
-        .lang-dropdown.open{display:block}
-        .lang-option{display:block;width:100%;text-align:left;padding:10px 18px;color:#8a9bb5;font-size:14px;cursor:pointer;background:none;border:none;font-family:inherit;transition:background .15s,color .15s}
-        .lang-option:hover{background:rgba(78,203,160,.08);color:#e8e8e8}
-        .lang-option.active{color:#4ecba0;font-weight:600}
-        .hero{text-align:center;padding:40px 24px 60px;position:relative}
-        .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(45,138,110,.15) 0%,transparent 70%);pointer-events:none}
-        .app-icon{width:100px;height:100px;background:linear-gradient(135deg,#2d8a6e,#1a5c47);border-radius:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:48px;box-shadow:0 8px 32px rgba(45,138,110,.3)}
-        .hero h1{font-size:42px;font-weight:700;margin-bottom:12px;letter-spacing:-.5px;color:#e8e8e8}
-        .hero h1 .brand{background:linear-gradient(135deg,#4ecba0,#2d8a6e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero .tagline{font-size:20px;color:#8a9bb5;max-width:480px;margin:0 auto 36px}
-        .badge{display:inline-block;padding:6px 16px;background:rgba(78,203,160,.1);border:1px solid rgba(78,203,160,.2);border-radius:20px;color:#4ecba0;font-size:14px;font-weight:500}
-        .features{max-width:800px;margin:0 auto;padding:40px 24px 60px}
-        .features h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:40px}
-        .feature-grid{display:grid;grid-template-columns:1fr;gap:16px}
-        @media(min-width:640px){.feature-grid{grid-template-columns:1fr 1fr}}
-        .feature{background:#131a2b;border:1px solid #1e2a40;border-radius:14px;padding:28px;transition:border-color .2s}
-        .feature:hover{border-color:#2d8a6e}
-        .feature-icon{font-size:32px;margin-bottom:14px}
-        .feature h3{font-size:17px;font-weight:600;margin-bottom:8px}
-        .feature p{color:#8a9bb5;font-size:14px}
-        .highlight{max-width:800px;margin:0 auto;padding:40px 24px;text-align:center}
-        .highlight-card{background:linear-gradient(135deg,#131a2b,#0f1524);border:1px solid #1e2a40;border-radius:16px;padding:48px 32px}
-        .highlight-card h2{font-size:26px;font-weight:700;margin-bottom:16px}
-        .highlight-card p{color:#8a9bb5;font-size:16px;max-width:500px;margin:0 auto}
-        .cta-btn{display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#4ecba0,#2d8a6e);color:#fff;font-size:16px;font-weight:600;border-radius:12px;text-decoration:none;transition:opacity .2s}
-        .cta-btn:hover{opacity:.85}
-        .appstore-link{display:inline-block;margin-top:20px}
-        .appstore-link img{height:44px}
-        .screenshots{max-width:900px;margin:0 auto;padding:20px 24px 60px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-        .screenshots h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:32px}
-        .screenshot-scroll{display:flex;gap:16px;padding-bottom:12px}
-        .screenshot-scroll img{height:360px;border-radius:12px;flex-shrink:0;box-shadow:0 4px 24px rgba(0,0,0,.4)}
-        @media(max-width:640px){.screenshot-scroll img{height:220px}}
-        .prayer-section{max-width:800px;margin:0 auto;padding:20px 24px 60px}
-        .prayer-section h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:16px}
-        .prayer-section .prayer-intro{text-align:center;color:#8a9bb5;font-size:16px;max-width:600px;margin:0 auto 32px}
-        .prayer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-        @media(max-width:640px){.prayer-grid{grid-template-columns:1fr}}
-        .prayer-card{background:#131a2b;border:1px solid #1e2a40;border-radius:14px;padding:24px;text-align:center;transition:border-color .2s}
-        .prayer-card:hover{border-color:#2d8a6e}
-        .prayer-card .prayer-icon{font-size:28px;margin-bottom:10px}
-        .prayer-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
-        .prayer-card p{color:#8a9bb5;font-size:13px}
-        .faq{max-width:800px;margin:0 auto;padding:20px 24px 60px}
-        .faq h2{text-align:center;font-size:28px;font-weight:700;margin-bottom:32px}
-        .faq-item{background:#131a2b;border:1px solid #1e2a40;border-radius:14px;margin-bottom:12px;overflow:hidden}
-        .faq-q{padding:20px 24px;font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s}
-        .faq-q:hover{color:#4ecba0}
-        .faq-q::after{content:'+';font-size:20px;color:#4ecba0;transition:transform .2s}
-        .faq-item.open .faq-q::after{transform:rotate(45deg)}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
-        .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
-        .faq-a p{color:#8a9bb5;font-size:14px;line-height:1.7}
-        .footer{text-align:center;padding:40px 24px;border-top:1px solid #1e2a40;max-width:800px;margin:40px auto 0}
-        .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
-        .footer-links a{color:#4ecba0;text-decoration:none;font-size:14px;font-weight:500}
-        .footer-links a:hover{text-decoration:underline}
-        .footer .copy{color:#556680;font-size:13px}
-        [dir="rtl"] .lang-bar{justify-content:flex-start}
-        [dir="rtl"] .lang-dropdown{right:24px;left:auto}
-        [dir="rtl"] .lang-option{text-align:right}
+        :root {
+            --bg-deep: #070b12;
+            --bg-card: rgba(16, 22, 36, 0.7);
+            --border: rgba(78, 203, 160, 0.08);
+            --emerald: #4ecba0;
+            --emerald-deep: #2d8a6e;
+            --gold: #c9a84c;
+            --gold-soft: rgba(201, 168, 76, 0.15);
+            --text: #e2e8f0;
+            --text-muted: #7a8ba8;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        /* Floating gradient orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(78, 203, 160, 0.08), transparent 70%);
+            top: -200px; right: -200px;
+            animation: float1 20s ease-in-out infinite;
+        }
+        .orb-2 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.06), transparent 70%);
+            bottom: 20%; left: -150px;
+            animation: float2 25s ease-in-out infinite;
+        }
+        .orb-3 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(78, 203, 160, 0.05), transparent 70%);
+            top: 50%; right: -100px;
+            animation: float3 18s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-60px, 40px); }
+            66% { transform: translate(30px, -30px); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(50px, -40px); }
+            66% { transform: translate(-30px, 50px); }
+        }
+        @keyframes float3 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-40px, -60px); }
+        }
+
+        /* Scroll animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero staggered animation */
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-anim { opacity: 0; animation: heroFadeIn 0.8s ease forwards; }
+        .hero-anim-1 { animation-delay: 0.1s; }
+        .hero-anim-2 { animation-delay: 0.3s; }
+        .hero-anim-3 { animation-delay: 0.5s; }
+        .hero-anim-4 { animation-delay: 0.7s; }
+        .hero-anim-5 { animation-delay: 0.9s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { opacity: 1; transform: none; transition: none; }
+            .hero-anim { opacity: 1; animation: none; }
+            .orb { animation: none !important; }
+        }
+
+        /* Wrapper for z-index above orbs */
+        .page-content { position: relative; z-index: 1; }
+
+        /* Language bar */
+        .lang-bar {
+            display: flex; justify-content: flex-end; align-items: center;
+            padding: 16px 24px; position: relative;
+            max-width: 960px; margin: 0 auto;
+        }
+        .lang-btn {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 10px; color: var(--emerald);
+            font-size: 14px; font-weight: 500; font-family: 'DM Sans', sans-serif;
+            padding: 8px 16px; cursor: pointer;
+            display: flex; align-items: center; gap: 6px;
+            transition: background 0.2s, border-color 0.3s;
+        }
+        .lang-btn:hover { background: rgba(78, 203, 160, 0.1); border-color: rgba(78, 203, 160, 0.2); }
+        .lang-btn svg { width: 16px; height: 16px; fill: currentColor; }
+        .lang-dropdown {
+            display: none; position: absolute; top: 100%; right: 24px;
+            background: rgba(16, 22, 36, 0.95);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(78, 203, 160, 0.1);
+            border-radius: 12px; padding: 8px 0;
+            min-width: 180px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); z-index: 100;
+        }
+        .lang-dropdown.open { display: block; }
+        .lang-option {
+            display: block; width: 100%; text-align: left;
+            padding: 10px 18px; color: var(--text-muted);
+            font-size: 14px; cursor: pointer; background: none;
+            border: none; font-family: 'DM Sans', sans-serif;
+            transition: background 0.15s, color 0.15s;
+        }
+        .lang-option:hover { background: rgba(78, 203, 160, 0.08); color: var(--text); }
+        .lang-option.active { color: var(--emerald); font-weight: 600; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 24px 80px;
+            position: relative;
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(45, 138, 110, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .app-icon {
+            width: 110px; height: 110px;
+            background: linear-gradient(135deg, var(--emerald-deep), #1a5c47);
+            border-radius: 26px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 36px;
+            font-size: 52px;
+            box-shadow: 0 8px 40px rgba(45, 138, 110, 0.35), 0 0 80px rgba(78, 203, 160, 0.1);
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 64px; font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            color: var(--text);
+            line-height: 1.1;
+        }
+        .hero h1 .brand {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-deep));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .tagline {
+            font-size: 20px; color: var(--text-muted);
+            max-width: 520px; margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Decorative separator */
+        .separator {
+            display: flex; align-items: center; justify-content: center;
+            gap: 16px; margin: 28px auto;
+            max-width: 200px;
+        }
+        .separator::before, .separator::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3), transparent);
+        }
+        .separator .diamond {
+            width: 8px; height: 8px;
+            background: var(--emerald);
+            transform: rotate(45deg);
+            opacity: 0.6;
+        }
+
+        .badge {
+            display: inline-block; padding: 8px 20px;
+            background: rgba(78, 203, 160, 0.08);
+            border: 1px solid rgba(78, 203, 160, 0.15);
+            border-radius: 24px; color: var(--emerald);
+            font-size: 14px; font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .appstore-link {
+            display: inline-block; margin-top: 24px;
+            transition: filter 0.3s, transform 0.3s;
+        }
+        .appstore-link:hover {
+            filter: brightness(1.1) drop-shadow(0 0 20px rgba(78, 203, 160, 0.3));
+            transform: translateY(-2px);
+        }
+        .appstore-link img { height: 48px; }
+
+        /* Section headings */
+        .section-heading {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 36px; font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: var(--text);
+        }
+        .section-heading-decorated {
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+        }
+        .section-heading-decorated::before, .section-heading-decorated::after {
+            content: '';
+            width: 60px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3));
+        }
+        .section-heading-decorated::after {
+            background: linear-gradient(90deg, rgba(78, 203, 160, 0.3), transparent);
+        }
+
+        /* Features */
+        .features { max-width: 900px; margin: 0 auto; padding: 60px 24px 80px; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .feature {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px; padding: 32px;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            border-color: rgba(78, 203, 160, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(78, 203, 160, 0.08);
+        }
+        .feature-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(78, 203, 160, 0.1), rgba(45, 138, 110, 0.05));
+            border: 1px solid rgba(78, 203, 160, 0.12);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; margin-bottom: 18px;
+        }
+        .feature h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px; font-weight: 600; margin-bottom: 8px;
+        }
+        .feature p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+        /* Player section */
+        .player-section { max-width: 900px; margin: 0 auto; padding: 20px 24px 80px; }
+        .player-intro { text-align: center; color: var(--text-muted); font-size: 16px; max-width: 500px; margin: 0 auto 36px; }
+        .player-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .player-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .player-card:hover { border-color: var(--emerald-deep); transform: translateY(-3px); }
+        .player-card-icon { font-size: 28px; margin-bottom: 12px; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 14px; background: rgba(78,203,160,0.06); border: 1px solid rgba(78,203,160,0.12); }
+        .player-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .player-card p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+
+        /* More features pill section */
+        .more-features { max-width: 800px; margin: 0 auto; padding: 20px 24px 60px; text-align: center; }
+        .pill-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .pill {
+            padding: 12px 28px;
+            border-radius: 100px;
+            background: rgba(78,203,160,0.06);
+            border: 1px solid rgba(78,203,160,0.15);
+            color: rgba(255,255,255,0.75);
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* Screenshots */
+        .screenshots { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+        .screenshot-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 16px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .screenshot-grid::-webkit-scrollbar { display: none; }
+        .screenshot-item {
+            flex-shrink: 0;
+            width: 72%;
+            max-width: 560px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            scroll-snap-align: center;
+        }
+        .screenshot-item::after {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0;
+            height: 30%;
+            background: linear-gradient(to top, rgba(7, 11, 18, 0.5), transparent);
+            pointer-events: none;
+        }
+        .screenshot-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+        }
+        .screenshot-item img {
+            width: 100%; height: auto; display: block;
+        }
+
+        /* Prayer */
+        .prayer-section { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+        .prayer-intro {
+            text-align: center; color: var(--text-muted);
+            font-size: 17px; max-width: 600px;
+            margin: -32px auto 40px; line-height: 1.7;
+        }
+        .prayer-heading {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 36px; font-weight: 700;
+            text-align: center; margin-bottom: 48px;
+            color: var(--gold);
+        }
+        .prayer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .prayer-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            border-radius: 16px; padding: 28px; text-align: center;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        .prayer-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
+        }
+        .prayer-card .prayer-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: var(--gold-soft);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; margin: 0 auto 14px;
+        }
+        .prayer-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--gold); }
+        .prayer-card p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+
+        /* FAQ */
+        .faq { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        .faq-item {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 14px; margin-bottom: 12px; overflow: hidden;
+        }
+        .faq-q {
+            padding: 22px 28px; font-size: 16px; font-weight: 600;
+            cursor: pointer; display: flex;
+            justify-content: space-between; align-items: center;
+            transition: color 0.2s;
+        }
+        .faq-q:hover { color: var(--emerald); }
+        .faq-q::after {
+            content: '';
+            width: 20px; height: 20px; flex-shrink: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234ecba0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: contain; background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.open .faq-q::after { transform: rotate(180deg); }
+        .faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 28px 22px; }
+        .faq-a p { color: var(--text-muted); font-size: 15px; line-height: 1.8; }
+
+        /* Highlight / CTA sections */
+        .highlight { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        .highlight-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 20px; padding: 56px 40px;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .highlight-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3), transparent);
+        }
+        .highlight-card h2 {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 34px; font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .highlight-card p {
+            color: var(--text-muted); font-size: 17px;
+            max-width: 520px; margin: 0 auto; line-height: 1.7;
+        }
+
+        /* Gold variant for support */
+        .highlight-card.gold-accent { border-color: rgba(201, 168, 76, 0.1); }
+        .highlight-card.gold-accent::before {
+            background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+        }
+        .highlight-card.gold-accent h2 { color: var(--gold); }
+
+        .cta-btn {
+            display: inline-block; padding: 14px 32px;
+            background: linear-gradient(135deg, var(--gold), #a88a3a);
+            color: #fff; font-size: 16px; font-weight: 600;
+            border-radius: 12px; text-decoration: none;
+            font-family: 'DM Sans', sans-serif;
+            transition: opacity 0.2s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.2);
+        }
+        .cta-btn:hover {
+            opacity: 0.9; transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center; padding: 48px 24px;
+            max-width: 900px; margin: 40px auto 0;
+            position: relative;
+        }
+        .footer::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.15), transparent);
+        }
+        .footer-links {
+            display: flex; justify-content: center; gap: 28px;
+            margin-bottom: 20px; flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--emerald); text-decoration: none;
+            font-size: 14px; font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .footer-links a:hover { opacity: 0.7; }
+        .footer .copy { color: #4a5568; font-size: 13px; }
+
+        /* RTL support */
+        [dir="rtl"] body { font-family: 'Noto Naskh Arabic', 'DM Sans', sans-serif; }
+        [dir="rtl"] .hero h1,
+        [dir="rtl"] .section-heading-decorated,
+        [dir="rtl"] .highlight-card h2,
+        [dir="rtl"] .prayer-section h2 {
+            font-family: 'Amiri', 'Cormorant Garamond', serif;
+            letter-spacing: 0;
+            line-height: 1.4;
+        }
+        [dir="rtl"] .hero h1 { font-size: 46px; }
+        [dir="rtl"] .hero .tagline,
+        [dir="rtl"] .feature p,
+        [dir="rtl"] .prayer-card p,
+        [dir="rtl"] .faq-a p,
+        [dir="rtl"] .highlight-card p,
+        [dir="rtl"] .prayer-intro { font-family: 'Noto Naskh Arabic', sans-serif; line-height: 1.9; }
+        [dir="rtl"] .feature h3,
+        [dir="rtl"] .prayer-card h3,
+        [dir="rtl"] .faq-q { font-family: 'Noto Naskh Arabic', sans-serif; font-weight: 600; }
+        [dir="rtl"] .badge,
+        [dir="rtl"] .lang-btn,
+        [dir="rtl"] .lang-option { font-family: 'Noto Naskh Arabic', sans-serif; }
+        [dir="rtl"] .player-card h3 { font-family: 'Noto Naskh Arabic', sans-serif; font-weight: 600; }
+        [dir="rtl"] .player-card p,
+        [dir="rtl"] .player-intro { font-family: 'Noto Naskh Arabic', sans-serif; line-height: 1.9; }
+        [dir="rtl"] .pill { font-family: 'Noto Naskh Arabic', sans-serif; }
+        [dir="rtl"] .lang-bar { justify-content: flex-start; }
+        [dir="rtl"] .lang-dropdown { right: 24px; left: auto; }
+        [dir="rtl"] .lang-option { text-align: right; }
+        [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+        [dir="rtl"] .section-heading-decorated::before {
+            background: linear-gradient(90deg, rgba(78, 203, 160, 0.3), transparent);
+        }
+        [dir="rtl"] .section-heading-decorated::after {
+            background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3));
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 40px 24px 60px; }
+            .hero h1 { font-size: 40px; }
+            .hero .tagline { font-size: 17px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .player-grid { grid-template-columns: 1fr; }
+            .section-heading, .prayer-heading { font-size: 28px; }
+            .screenshot-item {
+                width: 85%;
+                max-width: none;
+            }
+            .screenshot-item:hover { transform: none; }
+            .prayer-grid { grid-template-columns: 1fr; }
+            .highlight-card { padding: 40px 24px; }
+            .highlight-card h2 { font-size: 26px; }
+            .appstore-link img { height: 44px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 32px; }
+            .section-heading-decorated::before,
+            .section-heading-decorated::after { width: 30px; }
+        }
     </style>
 </head>
 <body>
-    <nav class="lang-bar">
-        <button class="lang-btn" id="lang-toggle" aria-label="Change language">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            <span id="current-lang-label">English</span>
-        </button>
-        <div class="lang-dropdown" id="lang-dropdown"></div>
-    </nav>
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
 
-    <section class="hero">
-        <div class="app-icon">📖</div>
-        <h1><span class="brand">Sajda</span> — <span data-i18n="heroSuffix">Quran for Apple TV</span></h1>
-        <p class="tagline" data-i18n="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
-        <span class="badge" data-i18n="badge">Available on Apple TV</span>
-        <div>
-            <a href="https://apps.apple.com/us/app/sajdatv/id6759179587" target="_blank" rel="noopener" class="appstore-link" aria-label="Download on the App Store">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download Sajda on the App Store">
-            </a>
-        </div>
-    </section>
+    <div class="page-content">
+        <nav class="lang-bar">
+            <button class="lang-btn" id="lang-toggle" aria-label="Change language">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span id="current-lang-label">English</span>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown"></div>
+        </nav>
 
-    <section class="features">
-        <h2 data-i18n="featuresTitle">Features</h2>
-        <div class="feature-grid">
-            <div class="feature">
-                <div class="feature-icon">🎙️</div>
-                <h3 data-i18n="recitersTitle">Hundreds of Reciters</h3>
-                <p data-i18n="recitersDesc">Choose from hundreds of reciters with different narrations.</p>
+        <section class="hero">
+            <div class="app-icon hero-anim hero-anim-1">📖</div>
+            <h1 class="hero-anim hero-anim-2"><span class="brand">Sajda</span> — <span data-i18n="heroSuffix">Quran for Apple TV</span></h1>
+            <div class="separator hero-anim hero-anim-2"><div class="diamond"></div></div>
+            <p class="tagline hero-anim hero-anim-3" data-i18n="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
+            <span class="badge hero-anim hero-anim-4" data-i18n="badge">Available on Apple TV</span>
+            <div class="hero-anim hero-anim-5">
+                <a href="https://apps.apple.com/us/app/sajdatv/id6759179587" target="_blank" rel="noopener" class="appstore-link" aria-label="Download on the App Store">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download Sajda on the App Store">
+                </a>
             </div>
-            <div class="feature">
-                <div class="feature-icon">📜</div>
-                <h3 data-i18n="verseTitle">Verse Tracking</h3>
-                <p data-i18n="verseDesc">Follow along with precise verse synchronization.</p>
+        </section>
+
+        <section class="features">
+            <h2 class="section-heading section-heading-decorated fade-in" data-i18n="featuresTitle">Features</h2>
+            <div class="feature-grid">
+                <div class="feature fade-in" style="transition-delay:0.1s">
+                    <div class="feature-icon">🎙️</div>
+                    <h3 data-i18n="recitersTitle">Hundreds of Reciters</h3>
+                    <p data-i18n="recitersDesc">Choose from hundreds of reciters with different narrations.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.2s">
+                    <div class="feature-icon">📺</div>
+                    <h3 data-i18n="liveTvTitle">Live TV Channels</h3>
+                    <p data-i18n="liveTvDesc">Watch live Islamic TV channels right on your Apple TV.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.3s">
+                    <div class="feature-icon">📻</div>
+                    <h3 data-i18n="radioTitle">Radio Stations</h3>
+                    <p data-i18n="radioDesc">Stream Quran radio stations with live equalizer.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.4s">
+                    <div class="feature-icon">📜</div>
+                    <h3 data-i18n="verseTitle">Verse Tracking</h3>
+                    <p data-i18n="verseDesc">Follow along with precise verse synchronization.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.5s">
+                    <div class="feature-icon">🌙</div>
+                    <h3 data-i18n="sleepTitle">Sleep Timer</h3>
+                    <p data-i18n="sleepDesc">Fall asleep to recitation. Set 15–60 min or end of surah.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.6s">
+                    <div class="feature-icon">🔁</div>
+                    <h3 data-i18n="memorizationTitle">Memorization Mode</h3>
+                    <p data-i18n="memorizationDesc">A-B repeat to loop verses for Hifz practice.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.7s">
+                    <div class="feature-icon">🎨</div>
+                    <h3 data-i18n="bgTitle">Calming Backgrounds</h3>
+                    <p data-i18n="bgDesc">Enjoy animated nature backgrounds while listening.</p>
+                </div>
+                <div class="feature fade-in" style="transition-delay:0.8s">
+                    <div class="feature-icon">🕌</div>
+                    <h3 data-i18n="screenTitle">Designed for the Big Screen</h3>
+                    <p data-i18n="screenDesc">Purpose-built for Apple TV with intuitive navigation and a beautiful interface.</p>
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <h3 data-i18n="bgTitle">Calming Backgrounds</h3>
-                <p data-i18n="bgDesc">Enjoy animated nature backgrounds while listening.</p>
+        </section>
+
+        <section class="screenshots">
+            <h2 class="section-heading section-heading-decorated fade-in" data-i18n="screenshotsTitle">See It in Action</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-item fade-in" style="transition-delay:0.1s">
+                    <img src="/sajda/screenshot-reciters.jpg" alt="Sajda reciters screen showing 236 Quran reciters on Apple TV" loading="lazy">
+                </div>
+                <div class="screenshot-item fade-in" style="transition-delay:0.2s">
+                    <img src="/sajda/screenshot-surahs.jpg" alt="Sajda surah list with Play All and Shuffle options on Apple TV" loading="lazy">
+                </div>
+                <div class="screenshot-item fade-in" style="transition-delay:0.3s">
+                    <img src="/sajda/screenshot-player.jpg" alt="Sajda Quran player with cloud background on Apple TV" loading="lazy">
+                </div>
+                <div class="screenshot-item fade-in" style="transition-delay:0.4s">
+                    <img src="/sajda/screenshot-prayer.jpg" alt="Sajda prayer times and Qibla direction on Apple TV" loading="lazy">
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🕌</div>
-                <h3 data-i18n="screenTitle">Designed for the Big Screen</h3>
-                <p data-i18n="screenDesc">Purpose-built for Apple TV with intuitive navigation and a beautiful interface.</p>
+        </section>
+
+        <section class="player-section">
+            <h2 class="section-heading section-heading-decorated fade-in" data-i18n="playerTitle">Powerful Player</h2>
+            <p class="player-intro fade-in" data-i18n="playerIntro">Every detail designed for the perfect listening experience.</p>
+            <div class="player-grid">
+                <div class="player-card fade-in" style="transition-delay:0.1s">
+                    <div class="player-card-icon">🎯</div>
+                    <h3 data-i18n="focusTitle">Focus Mode</h3>
+                    <p data-i18n="focusDesc">Immersive full-screen verse display. No distractions.</p>
+                </div>
+                <div class="player-card fade-in" style="transition-delay:0.2s">
+                    <div class="player-card-icon">⚡</div>
+                    <h3 data-i18n="speedTitle">Playback Speed</h3>
+                    <p data-i18n="speedDesc">From 0.5x to 2x. Learn at your own pace.</p>
+                </div>
+                <div class="player-card fade-in" style="transition-delay:0.3s">
+                    <div class="player-card-icon">🌐</div>
+                    <h3 data-i18n="translationTitle">Translations</h3>
+                    <p data-i18n="translationDesc">Follow along with verse translations in your language.</p>
+                </div>
+                <div class="player-card fade-in" style="transition-delay:0.4s">
+                    <div class="player-card-icon">🎨</div>
+                    <h3 data-i18n="themesTitle">Themes & Colors</h3>
+                    <p data-i18n="themesDesc">Multiple themes, accent colors, and dark mode.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="screenshots">
-        <h2 data-i18n="screenshotsTitle">See It in Action</h2>
-        <div class="screenshot-scroll">
-            <img src="/sajda/screenshot-reciters.jpg" alt="Sajda reciters screen showing 236 Quran reciters on Apple TV" loading="lazy">
-            <img src="/sajda/screenshot-surahs.jpg" alt="Sajda surah list with Play All and Shuffle options on Apple TV" loading="lazy">
-            <img src="/sajda/screenshot-player.jpg" alt="Sajda Quran player with cloud background on Apple TV" loading="lazy">
-            <img src="/sajda/screenshot-prayer.jpg" alt="Sajda prayer times and Qibla direction on Apple TV" loading="lazy">
-        </div>
-    </section>
-
-    <section class="prayer-section">
-        <h2 data-i18n="prayerTitle">Prayer Times & Athan on Your TV</h2>
-        <p class="prayer-intro" data-i18n="prayerIntro">Never miss a prayer. Sajda shows accurate prayer times for your location and plays the athan right on your Apple TV.</p>
-        <div class="prayer-grid">
-            <div class="prayer-card">
-                <div class="prayer-icon">🕐</div>
-                <h3 data-i18n="prayerAccurate">Accurate Prayer Times</h3>
-                <p data-i18n="prayerAccurateDesc">Auto-detects your location for precise Fajr, Dhuhr, Asr, Maghrib, and Isha times.</p>
+        <section class="prayer-section">
+            <h2 class="prayer-heading fade-in" data-i18n="prayerTitle">Prayer Times & Athan on Your TV</h2>
+            <p class="prayer-intro fade-in" data-i18n="prayerIntro">Never miss a prayer. Sajda shows accurate prayer times for your location and plays the athan right on your Apple TV.</p>
+            <div class="prayer-grid">
+                <div class="prayer-card fade-in" style="transition-delay:0.1s">
+                    <div class="prayer-icon">🕐</div>
+                    <h3 data-i18n="prayerAccurate">Accurate Prayer Times</h3>
+                    <p data-i18n="prayerAccurateDesc">Auto-detects your location for precise Fajr, Dhuhr, Asr, Maghrib, and Isha times.</p>
+                </div>
+                <div class="prayer-card fade-in" style="transition-delay:0.2s">
+                    <div class="prayer-icon">🔔</div>
+                    <h3 data-i18n="prayerAthan">Athan Alerts</h3>
+                    <p data-i18n="prayerAthanDesc">Choose from 13 beautiful athan voices on your Apple TV.</p>
+                </div>
+                <div class="prayer-card fade-in" style="transition-delay:0.3s">
+                    <div class="prayer-icon">🧭</div>
+                    <h3 data-i18n="prayerQibla">Qibla Direction</h3>
+                    <p data-i18n="prayerQiblaDesc">See the Qibla direction displayed on your big screen.</p>
+                </div>
             </div>
-            <div class="prayer-card">
-                <div class="prayer-icon">🔔</div>
-                <h3 data-i18n="prayerAthan">Athan Alerts</h3>
-                <p data-i18n="prayerAthanDesc">Beautiful athan plays on your Apple TV when it's time to pray.</p>
+        </section>
+
+        <section class="faq">
+            <h2 class="section-heading section-heading-decorated fade-in" data-i18n="faqTitle">Frequently Asked Questions</h2>
+            <div class="faq-item fade-in" style="transition-delay:0.05s">
+                <div class="faq-q" data-i18n="faqQ1">What is Sajda?</div>
+                <div class="faq-a"><p data-i18n="faqA1">Sajda is a free Quran app for Apple TV featuring 200+ reciters with verse-by-verse sync, live Islamic TV channels, Quran radio stations, a sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, playback speed control, focus mode, translations, and stunning animated backgrounds — all designed for your big screen.</p></div>
             </div>
-            <div class="prayer-card">
-                <div class="prayer-icon">🧭</div>
-                <h3 data-i18n="prayerQibla">Qibla Direction</h3>
-                <p data-i18n="prayerQiblaDesc">See the Qibla direction displayed on your big screen.</p>
+            <div class="faq-item fade-in" style="transition-delay:0.1s">
+                <div class="faq-q" data-i18n="faqQ2">Is Sajda free?</div>
+                <div class="faq-a"><p data-i18n="faqA2">Sajda is free to download. Quran listening with 200+ reciters, verse-by-verse sync, search, favorites, and playback controls are completely free. Premium features including live TV channels, radio stations, prayer times, athan alerts, and premium backgrounds are available through affordable in-app purchases.</p></div>
             </div>
-        </div>
-    </section>
+            <div class="faq-item fade-in" style="transition-delay:0.15s">
+                <div class="faq-q" data-i18n="faqQ3">What reciters are available?</div>
+                <div class="faq-a"><p data-i18n="faqA3">Sajda offers over 200 Quran reciters with different narrations including Hafs, Warsh, and others. Popular reciters include Mishary Rashid Alafasy, Abdul Rahman Al-Sudais, Maher Al Muaiqly, and many more.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.2s">
+                <div class="faq-q" data-i18n="faqQ4">Does Sajda have prayer times and athan?</div>
+                <div class="faq-a"><p data-i18n="faqA4">Yes, Sajda includes accurate prayer times based on your location with 13 beautiful athan voices to choose from. Get alerts for all five daily prayers and see Qibla direction on your Apple TV screen.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.25s">
+                <div class="faq-q" data-i18n="faqQ5">What languages does Sajda support?</div>
+                <div class="faq-a"><p data-i18n="faqA5">Sajda supports 11 languages: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.3s">
+                <div class="faq-q" data-i18n="faqQ6">What devices can run Sajda?</div>
+                <div class="faq-a"><p data-i18n="faqA6">Sajda is available on Apple TV (tvOS). It is designed specifically for the big screen experience, making it perfect for listening to Quran in your living room.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.35s">
+                <div class="faq-q" data-i18n="faqQ7">How to listen to Quran on Apple TV?</div>
+                <div class="faq-a"><p data-i18n="faqA7">Download Sajda from the App Store on your Apple TV. Once installed, browse over 200 reciters, select any surah, and listen with verse-by-verse sync on your big screen. You can also use Play All or Shuffle to listen continuously.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.4s">
+                <div class="faq-q" data-i18n="faqQ8">What is the best Quran app for Apple TV?</div>
+                <div class="faq-a"><p data-i18n="faqA8">Sajda is the most feature-rich Quran app for Apple TV — 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and beautiful themes — all on your big screen.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.45s">
+                <div class="faq-q" data-i18n="faqQ9">Can I get prayer times and athan on Apple TV?</div>
+                <div class="faq-a"><p data-i18n="faqA9">Yes, Sajda displays accurate prayer times based on your location and plays the athan on your Apple TV. It supports all five daily prayers — Fajr, Dhuhr, Asr, Maghrib, and Isha — with customizable alerts.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.5s">
+                <div class="faq-q" data-i18n="faqQ10">How to play Quran on TV?</div>
+                <div class="faq-a"><p data-i18n="faqA10">The easiest way to play Quran on your TV is through Sajda on Apple TV. It streams Quran recitations from 200+ reciters with beautiful backgrounds and verse tracking, turning your living room into a peaceful Quran experience.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.55s">
+                <div class="faq-q" data-i18n="faqQ12">Does Sajda have live TV and radio?</div>
+                <div class="faq-a"><p data-i18n="faqA12">Yes, Sajda offers live Islamic TV channels and Quran radio stations with a live equalizer. These are premium features available through in-app purchase.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.6s">
+                <div class="faq-q" data-i18n="faqQ13">Can I use Sajda for Quran memorization?</div>
+                <div class="faq-a"><p data-i18n="faqA13">Yes! Sajda has A-B repeat that lets you loop specific verses for Hifz practice. Combined with playback speed control (0.5x–2x), repeat modes, and focus mode for distraction-free verse display, it's a powerful tool for memorization.</p></div>
+            </div>
+            <div class="faq-item fade-in" style="transition-delay:0.65s">
+                <div class="faq-q" data-i18n="faqQ11">Does Sajda work offline?</div>
+                <div class="faq-a"><p data-i18n="faqA11">Sajda streams Quran recitations over the internet for the best quality and widest reciter selection. An internet connection is required to listen to recitations and get prayer times.</p></div>
+            </div>
+        </section>
 
-    <section class="faq">
-        <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ1">What is Sajda?</div>
-            <div class="faq-a"><p data-i18n="faqA1">Sajda is a free Quran app for Apple TV that lets you listen to the Holy Quran with beautiful recitations from hundreds of reciters, verse-by-verse synchronization, prayer times with athan alerts, Qibla direction, and stunning animated backgrounds.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ2">Is Sajda free?</div>
-            <div class="faq-a"><p data-i18n="faqA2">Sajda is free to download. Quran listening with hundreds of reciters and verse-by-verse sync is completely free. Some additional features like prayer times, athan alerts, and premium backgrounds are available through in-app purchases.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ3">What reciters are available?</div>
-            <div class="faq-a"><p data-i18n="faqA3">Sajda offers over 200 Quran reciters with different narrations including Hafs, Warsh, and others. Popular reciters include Mishary Rashid Alafasy, Abdul Rahman Al-Sudais, Maher Al Muaiqly, and many more.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ4">Does Sajda have prayer times and athan?</div>
-            <div class="faq-a"><p data-i18n="faqA4">Yes, Sajda includes accurate prayer times based on your location with customizable athan alerts for all five daily prayers. It also shows Qibla direction on your Apple TV screen.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ5">What languages does Sajda support?</div>
-            <div class="faq-a"><p data-i18n="faqA5">Sajda supports 11 languages: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ6">What devices can run Sajda?</div>
-            <div class="faq-a"><p data-i18n="faqA6">Sajda is available on Apple TV (tvOS). It is designed specifically for the big screen experience, making it perfect for listening to Quran in your living room.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ7">How to listen to Quran on Apple TV?</div>
-            <div class="faq-a"><p data-i18n="faqA7">Download Sajda from the App Store on your Apple TV. Once installed, browse over 200 reciters, select any surah, and listen with verse-by-verse sync on your big screen. You can also use Play All or Shuffle to listen continuously.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ8">What is the best Quran app for Apple TV?</div>
-            <div class="faq-a"><p data-i18n="faqA8">Sajda is the leading Quran app for Apple TV, offering 200+ reciters with multiple narrations, verse-by-verse synchronization, prayer times, athan alerts, Qibla direction, and beautiful animated backgrounds — all designed for the big screen.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ9">Can I get prayer times and athan on Apple TV?</div>
-            <div class="faq-a"><p data-i18n="faqA9">Yes, Sajda displays accurate prayer times based on your location and plays the athan on your Apple TV. It supports all five daily prayers — Fajr, Dhuhr, Asr, Maghrib, and Isha — with customizable alerts.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ10">How to play Quran on TV?</div>
-            <div class="faq-a"><p data-i18n="faqA10">The easiest way to play Quran on your TV is through Sajda on Apple TV. It streams Quran recitations from 200+ reciters with beautiful backgrounds and verse tracking, turning your living room into a peaceful Quran experience.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-q" data-i18n="faqQ11">Does Sajda work offline?</div>
-            <div class="faq-a"><p data-i18n="faqA11">Sajda streams Quran recitations over the internet for the best quality and widest reciter selection. An internet connection is required to listen to recitations and get prayer times.</p></div>
-        </div>
-    </section>
+        <section class="more-features">
+            <h2 class="section-heading section-heading-decorated fade-in" data-i18n="moreTitle">And So Much More</h2>
+            <div class="pill-grid fade-in">
+                <span class="pill" data-i18n="pillPlayAll">Play All & Shuffle</span>
+                <span class="pill" data-i18n="pillRepeat">Repeat Modes</span>
+                <span class="pill" data-i18n="pill12Lang">12 Languages</span>
+                <span class="pill" data-i18n="pillSearch">Smart Search</span>
+                <span class="pill" data-i18n="pillRecently">Recently Played</span>
+                <span class="pill" data-i18n="pillFeatured">Featured Reciters</span>
+                <span class="pill" data-i18n="pillMushaf">Multiple Mushaf Types</span>
+                <span class="pill" data-i18n="pillAthanVoices">13 Athan Voices</span>
+            </div>
+        </section>
 
-    <section class="highlight">
-        <div class="highlight-card">
-            <h2 data-i18n="transformTitle">Your Living Room, Transformed</h2>
-            <p data-i18n="transformDesc">Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.</p>
-        </div>
-    </section>
+        <section class="highlight fade-in">
+            <div class="highlight-card">
+                <h2 data-i18n="transformTitle">Your Living Room, Transformed</h2>
+                <div class="separator" style="margin:16px auto 20px"><div class="diamond"></div></div>
+                <p data-i18n="transformDesc">Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.</p>
+            </div>
+        </section>
 
-    <section class="highlight">
-        <div class="highlight-card">
-            <div style="font-size:40px;margin-bottom:16px">☕</div>
-            <h2 data-i18n="supportTitle">Support Sajda</h2>
-            <p style="margin-bottom:24px" data-i18n="supportDesc">Sajda is free and built with love. If you enjoy the app, consider supporting its development.</p>
-            <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener" class="cta-btn" data-i18n="supportCta">Buy Me a Coffee</a>
-        </div>
-    </section>
+        <section class="highlight fade-in">
+            <div class="highlight-card gold-accent">
+                <div style="font-size:44px;margin-bottom:16px">☕</div>
+                <h2 data-i18n="supportTitle">Support Sajda</h2>
+                <p style="margin-bottom:28px" data-i18n="supportDesc">Sajda is free and built with love. If you enjoy the app, consider supporting its development.</p>
+                <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener" class="cta-btn" data-i18n="supportCta">Buy Me a Coffee</a>
+            </div>
+        </section>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-        const app = initializeApp({
-            apiKey: "AIzaSyAnAVi1mdntCHSAXHRYRBm7GQl3y3Y8WvM",
-            authDomain: "sajdatv-7537d.firebaseapp.com",
-            projectId: "sajdatv-7537d",
-            storageBucket: "sajdatv-7537d.firebasestorage.app",
-            messagingSenderId: "19706506620",
-            appId: "1:19706506620:web:0471f5b7fe940b874dc8f9",
-            measurementId: "G-P578B6JJ0P"
-        });
-        getAnalytics(app);
-    </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P578B6JJ0P"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P578B6JJ0P');
+        </script>
 
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="/sajda/support" data-i18n="footerSupport">Support</a>
-            <a href="/sajda/privacy" data-i18n="footerPrivacy">Privacy</a>
-            <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener">Buy Me a Coffee</a>
-            <a href="mailto:abdoelrhman.eaita@gmail.com" data-i18n="footerContact">Contact</a>
-        </div>
-        <p class="copy">&copy; 2026 Sajda. <span data-i18n="rights">All rights reserved.</span></p>
-    </footer>
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="/sajda/support" data-i18n="footerSupport">Support</a>
+                <a href="/sajda/privacy" data-i18n="footerPrivacy">Privacy</a>
+                <a href="https://buymeacoffee.com/yoloabdo" target="_blank" rel="noopener">Buy Me a Coffee</a>
+                <a href="mailto:abdoelrhman.eaita@gmail.com" data-i18n="footerContact">Contact</a>
+            </div>
+            <p class="copy">&copy; 2026 Sajda. <span data-i18n="rights">All rights reserved.</span></p>
+        </footer>
+    </div>
 
     <script>
     var T = {
-        en: { label:"English", screenshotsTitle:"See It in Action", heroSuffix:"Quran for Apple TV", tagline:"Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.", badge:"Available on Apple TV", featuresTitle:"Features", recitersTitle:"Hundreds of Reciters", recitersDesc:"Choose from hundreds of reciters with different narrations.", verseTitle:"Verse Tracking", verseDesc:"Follow along with precise verse synchronization.", bgTitle:"Calming Backgrounds", bgDesc:"Enjoy animated nature backgrounds while listening.", screenTitle:"Designed for the Big Screen", screenDesc:"Purpose-built for Apple TV with intuitive navigation and a beautiful interface.", prayerTitle:"Prayer Times & Athan on Your TV", prayerIntro:"Never miss a prayer. Sajda shows accurate prayer times for your location and plays the athan right on your Apple TV.", prayerAccurate:"Accurate Prayer Times", prayerAccurateDesc:"Auto-detects your location for precise Fajr, Dhuhr, Asr, Maghrib, and Isha times.", prayerAthan:"Athan Alerts", prayerAthanDesc:"Beautiful athan plays on your Apple TV when it's time to pray.", prayerQibla:"Qibla Direction", prayerQiblaDesc:"See the Qibla direction displayed on your big screen.", faqTitle:"Frequently Asked Questions", faqQ1:"What is Sajda?", faqA1:"Sajda is a free Quran app for Apple TV that lets you listen to the Holy Quran with beautiful recitations from hundreds of reciters, verse-by-verse synchronization, prayer times with athan alerts, Qibla direction, and stunning animated backgrounds.", faqQ2:"Is Sajda free?", faqA2:"Sajda is free to download. Quran listening with hundreds of reciters and verse-by-verse sync is completely free. Some additional features like prayer times, athan alerts, and premium backgrounds are available through in-app purchases.", faqQ3:"What reciters are available?", faqA3:"Sajda offers over 200 Quran reciters with different narrations including Hafs, Warsh, and others. Popular reciters include Mishary Rashid Alafasy, Abdul Rahman Al-Sudais, Maher Al Muaiqly, and many more.", faqQ4:"Does Sajda have prayer times and athan?", faqA4:"Yes, Sajda includes accurate prayer times based on your location with customizable athan alerts for all five daily prayers. It also shows Qibla direction on your Apple TV screen.", faqQ5:"What languages does Sajda support?", faqA5:"Sajda supports 11 languages: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese.", faqQ6:"What devices can run Sajda?", faqA6:"Sajda is available on Apple TV (tvOS). It is designed specifically for the big screen experience, making it perfect for listening to Quran in your living room.", faqQ7:"How to listen to Quran on Apple TV?", faqA7:"Download Sajda from the App Store on your Apple TV. Browse over 200 reciters, select any surah, and listen with verse-by-verse sync on your big screen. You can also use Play All or Shuffle to listen continuously.", faqQ8:"What is the best Quran app for Apple TV?", faqA8:"Sajda is the leading Quran app for Apple TV, offering 200+ reciters with multiple narrations, verse-by-verse synchronization, prayer times, athan alerts, Qibla direction, and beautiful animated backgrounds — all designed for the big screen.", faqQ9:"Can I get prayer times and athan on Apple TV?", faqA9:"Yes, Sajda displays accurate prayer times based on your location and plays the athan on your Apple TV. It supports all five daily prayers — Fajr, Dhuhr, Asr, Maghrib, and Isha — with customizable alerts.", faqQ10:"How to play Quran on TV?", faqA10:"The easiest way to play Quran on your TV is through Sajda on Apple TV. It streams Quran recitations from 200+ reciters with beautiful backgrounds and verse tracking.", faqQ11:"Does Sajda work offline?", faqA11:"Sajda streams Quran recitations over the internet for the best quality and widest reciter selection. An internet connection is required to listen to recitations and get prayer times.", transformTitle:"Your Living Room, Transformed", transformDesc:"Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.", supportTitle:"Support Sajda", supportDesc:"Sajda is free and built with love. If you enjoy the app, consider supporting its development.", supportCta:"Buy Me a Coffee", footerSupport:"Support", footerPrivacy:"Privacy", footerContact:"Contact", rights:"All rights reserved." },
-        ar: { label:"العربية", dir:"rtl", screenshotsTitle:"شاهد التطبيق", heroSuffix:"القرآن الكريم على Apple TV", tagline:"استمع إلى القرآن الكريم على Apple TV مع تلاوات جميلة وتتبع الآيات بتزامن دقيق.", badge:"متوفر على Apple TV", featuresTitle:"مميزات التطبيق", recitersTitle:"مئات القراء", recitersDesc:"اختر من بين مئات القراء بروايات مختلفة.", verseTitle:"تتبع الآيات", verseDesc:"تابع الآيات مع الاستماع بتزامن دقيق.", bgTitle:"خلفيات هادئة", bgDesc:"استمتع بخلفيات طبيعية متحركة أثناء الاستماع.", screenTitle:"مصمم للشاشة الكبيرة", screenDesc:"مصمم خصيصاً لـ Apple TV بواجهة جميلة وتنقل سهل.", prayerTitle:"مواقيت الصلاة والأذان على تلفازك", prayerIntro:"لا تفوّت صلاة. سجدة يعرض مواقيت الصلاة الدقيقة لموقعك ويرفع الأذان على Apple TV.", prayerAccurate:"مواقيت صلاة دقيقة", prayerAccurateDesc:"يكتشف موقعك تلقائياً لعرض أوقات الفجر والظهر والعصر والمغرب والعشاء.", prayerAthan:"تنبيهات الأذان", prayerAthanDesc:"أذان جميل يُرفع على Apple TV عند حلول وقت الصلاة.", prayerQibla:"اتجاه القبلة", prayerQiblaDesc:"شاهد اتجاه القبلة على شاشتك الكبيرة.", faqTitle:"الأسئلة الشائعة", faqQ1:"ما هو تطبيق سجدة؟", faqA1:"سجدة هو تطبيق قرآن مجاني لـ Apple TV يتيح لك الاستماع إلى القرآن الكريم بتلاوات جميلة من مئات القراء، مع تتبع الآيات ومواقيت الصلاة وتنبيهات الأذان واتجاه القبلة وخلفيات متحركة رائعة.", faqQ2:"هل سجدة مجاني؟", faqA2:"سجدة مجاني للتحميل. الاستماع للقرآن مع مئات القراء وتتبع الآيات مجاني تماماً. بعض المميزات الإضافية مثل مواقيت الصلاة والأذان والخلفيات المميزة متاحة عبر عمليات شراء داخل التطبيق.", faqQ3:"ما القراء المتوفرون؟", faqA3:"يوفر سجدة أكثر من 200 قارئ بروايات مختلفة منها حفص وورش وغيرها. من أشهر القراء: مشاري راشد العفاسي، عبدالرحمن السديس، ماهر المعيقلي، وغيرهم.", faqQ4:"هل يوفر سجدة مواقيت الصلاة والأذان؟", faqA4:"نعم، يتضمن سجدة مواقيت صلاة دقيقة حسب موقعك مع تنبيهات أذان للصلوات الخمس. كما يعرض اتجاه القبلة.", faqQ5:"ما اللغات التي يدعمها سجدة؟", faqA5:"يدعم سجدة 11 لغة: العربية، الإنجليزية، التركية، الفرنسية، الإسبانية، الأردية، البنغالية، الإندونيسية، الروسية، السويدية، والصينية.", faqQ6:"على أي أجهزة يعمل سجدة؟", faqA6:"سجدة متوفر على Apple TV (tvOS). مصمم خصيصاً لتجربة الشاشة الكبيرة.", faqQ7:"كيف أستمع للقرآن على Apple TV؟", faqA7:"حمّل سجدة من App Store على Apple TV. تصفح أكثر من 200 قارئ، اختر أي سورة، واستمع مع تتبع الآيات على شاشتك الكبيرة.", faqQ8:"ما أفضل تطبيق قرآن لـ Apple TV؟", faqA8:"سجدة هو التطبيق الرائد للقرآن على Apple TV، يوفر أكثر من 200 قارئ بروايات متعددة، تتبع الآيات، مواقيت الصلاة، الأذان، واتجاه القبلة.", faqQ9:"هل يمكنني الحصول على مواقيت الصلاة والأذان على Apple TV؟", faqA9:"نعم، سجدة يعرض مواقيت صلاة دقيقة حسب موقعك ويرفع الأذان على Apple TV للصلوات الخمس.", faqQ10:"كيف أشغل القرآن على التلفاز؟", faqA10:"أسهل طريقة لتشغيل القرآن على تلفازك هي عبر سجدة على Apple TV. يبث تلاوات القرآن من أكثر من 200 قارئ مع خلفيات جميلة وتتبع الآيات.", faqQ11:"هل يعمل سجدة بدون إنترنت؟", faqA11:"سجدة يبث تلاوات القرآن عبر الإنترنت لأفضل جودة وأوسع اختيار من القراء. يتطلب اتصالاً بالإنترنت.", transformTitle:"غرفة المعيشة بشكل جديد", transformDesc:"حوّل Apple TV إلى مصدر للسكينة. سواء كنت تقرأ أو تستمع، ستعيش تجربة قرآنية فريدة في منزلك.", supportTitle:"ادعم سجدة", supportDesc:"سجدة مجاني وصُنع بحب. إذا أعجبك التطبيق، فكّر في دعم تطويره.", supportCta:"اشترِ لي قهوة", footerSupport:"الدعم", footerPrivacy:"الخصوصية", footerContact:"تواصل معنا", rights:"جميع الحقوق محفوظة." },
-        tr: { label:"Türkçe", screenshotsTitle:"Uygulamayı Görün", heroSuffix:"Apple TV için Kur'an", tagline:"Apple TV'nizde güzel tilavetler ve hassas ayet senkronizasyonu ile Kur'an-ı Kerim dinleyin.", badge:"Apple TV'de mevcut", featuresTitle:"Uygulama Özellikleri", recitersTitle:"Yüzlerce Kari", recitersDesc:"Farklı rivayetlerle yüzlerce kari arasından seçim yapın.", verseTitle:"Ayet Takibi", verseDesc:"Hassas ayet senkronizasyonu ile takip edin.", bgTitle:"Huzurlu Arka Planlar", bgDesc:"Dinlerken animasyonlu doğa arka planlarının keyfini çıkarın.", screenTitle:"Büyük Ekran İçin Tasarlandı", screenDesc:"Apple TV için sezgisel gezinme ve güzel arayüzle özel olarak tasarlandı.", prayerTitle:"TV'nizde Namaz Vakitleri ve Ezan", prayerIntro:"Hiçbir namazı kaçırmayın. Sajda konumunuza göre doğru namaz vakitlerini gösterir ve Apple TV'nizde ezan okur.", prayerAccurate:"Doğru Namaz Vakitleri", prayerAccurateDesc:"İmsak, Öğle, İkindi, Akşam ve Yatsı vakitlerini otomatik tespit eder.", prayerAthan:"Ezan Uyarıları", prayerAthanDesc:"Namaz vakti geldiğinde Apple TV'nizde güzel ezan sesi.", prayerQibla:"Kıble Yönü", prayerQiblaDesc:"Büyük ekranınızda kıble yönünü görün.", faqTitle:"Sıkça Sorulan Sorular", faqQ1:"Sajda nedir?", faqA1:"Sajda, Apple TV için ücretsiz bir Kur'an uygulamasıdır. Yüzlerce kari, ayet takibi, namaz vakitleri, ezan ve güzel arka planlarla Kur'an dinlemenizi sağlar.", faqQ2:"Sajda ücretsiz mi?", faqA2:"Sajda ücretsiz indirilebilir. Kur'an dinleme ve ayet takibi tamamen ücretsizdir. Namaz vakitleri, ezan ve özel arka planlar gibi ek özellikler uygulama içi satın alımlarla kullanılabilir.", faqQ3:"Hangi kariler mevcut?", faqA3:"Sajda, Hafs, Verş ve diğer rivayetlerle 200'den fazla kari sunar.", faqQ4:"Sajda'da namaz vakitleri ve ezan var mı?", faqA4:"Evet, konumunuza göre doğru namaz vakitleri ve beş vakit için ezan uyarıları içerir.", faqQ5:"Sajda hangi dilleri destekliyor?", faqA5:"Sajda 11 dili destekler: İngilizce, Arapça, Türkçe, Fransızca, İspanyolca, Urduca, Bengalce, Endonezce, Rusça, İsveççe ve Çince.", faqQ6:"Sajda hangi cihazlarda çalışır?", faqA6:"Sajda Apple TV'de (tvOS) kullanılabilir. Büyük ekran deneyimi için özel olarak tasarlanmıştır.", faqQ7:"Apple TV'de Kur'an nasıl dinlenir?", faqA7:"Apple TV'nizde App Store'dan Sajda'yı indirin. 200'den fazla kari arasından seçim yapın ve büyük ekranınızda ayet takibiyle dinleyin.", faqQ8:"Apple TV için en iyi Kur'an uygulaması hangisi?", faqA8:"Sajda, Apple TV için 200+ kari, ayet takibi, namaz vakitleri, ezan ve güzel arka planlarla öncü Kur'an uygulamasıdır.", faqQ9:"Apple TV'de namaz vakitleri ve ezan alabilir miyim?", faqA9:"Evet, Sajda konumunuza göre doğru namaz vakitlerini gösterir ve beş vakit için ezan çalar.", faqQ10:"TV'de Kur'an nasıl çalınır?", faqA10:"TV'nizde Kur'an çalmanın en kolay yolu Apple TV'de Sajda'dır. 200+ kariden güzel arka planlarla Kur'an dinleyin.", faqQ11:"Sajda çevrimdışı çalışır mı?", faqA11:"Sajda en iyi kalite için Kur'an tilavetlerini internet üzerinden yayınlar. İnternet bağlantısı gereklidir.", transformTitle:"Oturma Odanız Dönüştü", transformDesc:"Apple TV'nizi bir huzur kaynağına dönüştürün. İster okuyun ister dinleyin, Sajda Kur'an deneyimini evinize taşır.", supportTitle:"Sajda'yı Destekle", supportDesc:"Sajda ücretsiz ve sevgiyle yapıldı. Uygulamayı beğendiyseniz, geliştirilmesini desteklemeyi düşünün.", supportCta:"Bana Bir Kahve Al", footerSupport:"Destek", footerPrivacy:"Gizlilik", footerContact:"İletişim", rights:"Tüm hakları saklıdır." },
-        fr: { label:"Français", screenshotsTitle:"Découvrez l'app", heroSuffix:"Le Coran sur Apple TV", tagline:"Écoutez le Saint Coran sur votre Apple TV avec de belles récitations et une synchronisation verset par verset.", badge:"Disponible sur Apple TV", featuresTitle:"Fonctionnalités", recitersTitle:"Des centaines de récitateurs", recitersDesc:"Choisissez parmi des centaines de récitateurs avec différentes narrations.", verseTitle:"Suivi des versets", verseDesc:"Suivez avec une synchronisation précise des versets.", bgTitle:"Arrière-plans apaisants", bgDesc:"Profitez d'arrière-plans naturels animés en écoutant.", screenTitle:"Conçu pour le grand écran", screenDesc:"Conçu spécialement pour Apple TV avec une navigation intuitive et une belle interface.", prayerTitle:"Horaires de prière et adhan sur votre TV", prayerIntro:"Ne manquez jamais une prière. Sajda affiche les horaires précis et lance l'adhan sur votre Apple TV.", prayerAccurate:"Horaires de prière précis", prayerAccurateDesc:"Détecte automatiquement votre position pour Fajr, Dhuhr, Asr, Maghrib et Isha.", prayerAthan:"Alertes Adhan", prayerAthanDesc:"Un bel adhan retentit sur votre Apple TV à l'heure de la prière.", prayerQibla:"Direction de la Qibla", prayerQiblaDesc:"Affichez la direction de la Qibla sur votre grand écran.", faqTitle:"Questions fréquentes", faqQ1:"Qu'est-ce que Sajda ?", faqA1:"Sajda est une application Coran gratuite pour Apple TV avec des centaines de récitateurs, le suivi des versets, les horaires de prière, l'adhan et des arrière-plans animés.", faqQ2:"Sajda est-il gratuit ?", faqA2:"Sajda est gratuit à télécharger. L'écoute du Coran avec des centaines de récitateurs est entièrement gratuite. Certaines fonctionnalités comme les horaires de prière, l'adhan et les arrière-plans premium sont disponibles via des achats intégrés.", faqQ3:"Quels récitateurs sont disponibles ?", faqA3:"Sajda propose plus de 200 récitateurs avec différentes narrations dont Hafs, Warsh et autres.", faqQ4:"Sajda a-t-il les horaires de prière et l'adhan ?", faqA4:"Oui, avec des horaires précis selon votre position et des alertes adhan pour les cinq prières quotidiennes.", faqQ5:"Quelles langues Sajda supporte-t-il ?", faqA5:"Sajda supporte 11 langues : anglais, arabe, turc, français, espagnol, ourdou, bengali, indonésien, russe, suédois et chinois.", faqQ6:"Sur quels appareils Sajda fonctionne-t-il ?", faqA6:"Sajda est disponible sur Apple TV (tvOS), conçu pour l'expérience grand écran.", faqQ7:"Comment écouter le Coran sur Apple TV ?", faqA7:"Téléchargez Sajda depuis l'App Store sur votre Apple TV. Parcourez plus de 200 récitateurs et écoutez avec le suivi des versets.", faqQ8:"Quelle est la meilleure app Coran pour Apple TV ?", faqA8:"Sajda est l'app Coran de référence pour Apple TV avec 200+ récitateurs, suivi des versets, horaires de prière et arrière-plans animés.", faqQ9:"Peut-on avoir les horaires de prière sur Apple TV ?", faqA9:"Oui, Sajda affiche les horaires précis et joue l'adhan pour les cinq prières quotidiennes.", faqQ10:"Comment écouter le Coran sur la télé ?", faqA10:"Le plus simple est d'utiliser Sajda sur Apple TV. Plus de 200 récitateurs avec de beaux arrière-plans et le suivi des versets.", faqQ11:"Sajda fonctionne-t-il hors ligne ?", faqA11:"Sajda diffuse les récitations en streaming pour la meilleure qualité. Une connexion internet est nécessaire.", transformTitle:"Votre salon, transformé", transformDesc:"Transformez votre Apple TV en source de tranquillité. Que vous lisiez ou écoutiez, Sajda apporte l'expérience du Coran chez vous.", supportTitle:"Soutenez Sajda", supportDesc:"Sajda est gratuit et fait avec amour. Si vous aimez l'app, pensez à soutenir son développement.", supportCta:"Offrez-moi un café", footerSupport:"Support", footerPrivacy:"Confidentialité", footerContact:"Contact", rights:"Tous droits réservés." },
-        es: { label:"Español", screenshotsTitle:"Mira la app", heroSuffix:"Corán para Apple TV", tagline:"Escucha el Sagrado Corán en tu Apple TV con hermosas recitaciones y sincronización verso a verso.", badge:"Disponible en Apple TV", featuresTitle:"Funciones", recitersTitle:"Cientos de recitadores", recitersDesc:"Elige entre cientos de recitadores con diferentes narraciones.", verseTitle:"Seguimiento de versos", verseDesc:"Sigue con sincronización precisa de versos.", bgTitle:"Fondos relajantes", bgDesc:"Disfruta de fondos animados de naturaleza mientras escuchas.", screenTitle:"Diseñado para la pantalla grande", screenDesc:"Creado especialmente para Apple TV con navegación intuitiva y una hermosa interfaz.", prayerTitle:"Horarios de oración y adhan en tu TV", prayerIntro:"No te pierdas ninguna oración. Sajda muestra horarios precisos y reproduce el adhan en tu Apple TV.", prayerAccurate:"Horarios precisos", prayerAccurateDesc:"Detecta tu ubicación para Fajr, Dhuhr, Asr, Maghrib e Isha.", prayerAthan:"Alertas de Adhan", prayerAthanDesc:"Un hermoso adhan suena en tu Apple TV a la hora de la oración.", prayerQibla:"Dirección de la Qibla", prayerQiblaDesc:"Ve la dirección de la Qibla en tu pantalla grande.", faqTitle:"Preguntas frecuentes", faqQ1:"¿Qué es Sajda?", faqA1:"Sajda es una app gratuita del Corán para Apple TV con cientos de recitadores, seguimiento de versos, horarios de oración, adhan y fondos animados.", faqQ2:"¿Es Sajda gratuito?", faqA2:"Sajda es gratis para descargar. Escuchar el Corán con cientos de recitadores es completamente gratis. Algunas funciones como horarios de oración, adhan y fondos premium están disponibles mediante compras dentro de la app.", faqQ3:"¿Qué recitadores están disponibles?", faqA3:"Sajda ofrece más de 200 recitadores con diferentes narraciones incluyendo Hafs, Warsh y otros.", faqQ4:"¿Tiene Sajda horarios de oración y adhan?", faqA4:"Sí, incluye horarios precisos según tu ubicación y alertas de adhan para las cinco oraciones diarias.", faqQ5:"¿Qué idiomas soporta Sajda?", faqA5:"Sajda soporta 11 idiomas: inglés, árabe, turco, francés, español, urdu, bengalí, indonesio, ruso, sueco y chino.", faqQ6:"¿En qué dispositivos funciona Sajda?", faqA6:"Sajda está disponible en Apple TV (tvOS), diseñado para la experiencia de pantalla grande.", faqQ7:"¿Cómo escuchar el Corán en Apple TV?", faqA7:"Descarga Sajda desde la App Store en tu Apple TV. Explora más de 200 recitadores y escucha con seguimiento de versos.", faqQ8:"¿Cuál es la mejor app de Corán para Apple TV?", faqA8:"Sajda es la app líder del Corán para Apple TV con 200+ recitadores, seguimiento de versos, horarios de oración y fondos animados.", faqQ9:"¿Puedo obtener horarios de oración en Apple TV?", faqA9:"Sí, Sajda muestra horarios precisos y reproduce el adhan para las cinco oraciones diarias.", faqQ10:"¿Cómo reproducir el Corán en la TV?", faqA10:"La forma más fácil es usar Sajda en Apple TV. Más de 200 recitadores con fondos hermosos y seguimiento de versos.", faqQ11:"¿Funciona Sajda sin internet?", faqA11:"Sajda transmite las recitaciones por internet para la mejor calidad. Se requiere conexión a internet.", transformTitle:"Tu sala de estar, transformada", transformDesc:"Convierte tu Apple TV en una fuente de tranquilidad. Ya sea leyendo o escuchando, Sajda lleva la experiencia del Corán a tu hogar.", supportTitle:"Apoya a Sajda", supportDesc:"Sajda es gratis y hecho con amor. Si disfrutas la app, considera apoyar su desarrollo.", supportCta:"Invítame un café", footerSupport:"Soporte", footerPrivacy:"Privacidad", footerContact:"Contacto", rights:"Todos los derechos reservados." },
-        ur: { label:"اردو", dir:"rtl", screenshotsTitle:"ایپ دیکھیں", heroSuffix:"Apple TV کے لیے قرآن", tagline:"Apple TV پر خوبصورت تلاوتوں اور آیت بہ آیت ہم آہنگی کے ساتھ قرآن مجید سنیں۔", badge:"Apple TV پر دستیاب", featuresTitle:"ایپ کی خصوصیات", recitersTitle:"سینکڑوں قاری", recitersDesc:"مختلف روایات کے ساتھ سینکڑوں قاریوں میں سے منتخب کریں۔", verseTitle:"آیت ٹریکنگ", verseDesc:"درست آیت ہم آہنگی کے ساتھ پیروی کریں۔", bgTitle:"پرسکون پس منظر", bgDesc:"سنتے ہوئے متحرک قدرتی پس منظر سے لطف اندوز ہوں۔", screenTitle:"بڑی سکرین کے لیے ڈیزائن", screenDesc:"Apple TV کے لیے خاص طور پر بنایا گیا، آسان نیویگیشن اور خوبصورت انٹرفیس کے ساتھ۔", prayerTitle:"آپ کے TV پر نماز کے اوقات اور اذان", prayerIntro:"کوئی نماز نہ چھوٹے۔ سجدہ آپ کے مقام کے مطابق درست اوقات دکھاتا ہے اور Apple TV پر اذان دیتا ہے۔", prayerAccurate:"درست نماز اوقات", prayerAccurateDesc:"فجر، ظہر، عصر، مغرب اور عشاء کے درست اوقات خودکار طریقے سے۔", prayerAthan:"اذان الرٹس", prayerAthanDesc:"نماز کے وقت Apple TV پر خوبصورت اذان۔", prayerQibla:"قبلہ کی سمت", prayerQiblaDesc:"بڑی سکرین پر قبلہ کی سمت دیکھیں۔", faqTitle:"اکثر پوچھے گئے سوالات", faqQ1:"سجدہ کیا ہے؟", faqA1:"سجدہ Apple TV کے لیے ایک مفت قرآن ایپ ہے جس میں سینکڑوں قاری، آیت ٹریکنگ، نماز اوقات، اذان اور خوبصورت پس منظر شامل ہیں۔", faqQ2:"کیا سجدہ مفت ہے؟", faqA2:"سجدہ مفت ڈاؤن لوڈ ہے۔ قرآن سننا مکمل طور پر مفت ہے۔ کچھ اضافی خصوصیات جیسے نماز اوقات اور اذان ایپ میں خریداری سے دستیاب ہیں۔", faqQ3:"کون سے قاری دستیاب ہیں؟", faqA3:"سجدہ میں 200 سے زائد قاری مختلف روایات کے ساتھ دستیاب ہیں۔", faqQ4:"کیا سجدہ میں نماز اوقات اور اذان ہے؟", faqA4:"جی ہاں، آپ کے مقام کے مطابق درست اوقات اور پانچوں نمازوں کے لیے اذان الرٹس۔", faqQ5:"سجدہ کن زبانوں کو سپورٹ کرتا ہے؟", faqA5:"سجدہ 11 زبانوں کو سپورٹ کرتا ہے۔", faqQ6:"سجدہ کن آلات پر چلتا ہے؟", faqA6:"سجدہ Apple TV (tvOS) پر دستیاب ہے۔", faqQ7:"Apple TV پر قرآن کیسے سنیں؟", faqA7:"Apple TV پر App Store سے سجدہ ڈاؤن لوڈ کریں۔ 200 سے زائد قاریوں میں سے منتخب کریں اور آیت ٹریکنگ کے ساتھ سنیں۔", faqQ8:"Apple TV کے لیے بہترین قرآن ایپ؟", faqA8:"سجدہ Apple TV کے لیے سب سے بہتر قرآن ایپ ہے۔ 200+ قاری، آیت ٹریکنگ، نماز اوقات اور خوبصورت پس منظر۔", faqQ9:"کیا Apple TV پر نماز اوقات اور اذان مل سکتا ہے؟", faqA9:"جی ہاں، سجدہ آپ کے مقام کے مطابق درست نماز اوقات دکھاتا ہے اور پانچوں نمازوں کے لیے اذان دیتا ہے۔", faqQ10:"TV پر قرآن کیسے چلائیں؟", faqA10:"Apple TV پر سجدہ استعمال کریں۔ 200+ قاریوں سے خوبصورت پس منظر کے ساتھ قرآن سنیں۔", faqQ11:"کیا سجدہ آف لائن کام کرتا ہے؟", faqA11:"سجدہ بہترین کوالٹی کے لیے انٹرنیٹ سے قرآن سنواتا ہے۔ انٹرنیٹ کنکشن ضروری ہے۔", transformTitle:"آپ کا لاؤنج، نئے انداز میں", transformDesc:"اپنے Apple TV کو سکون کا ذریعہ بنائیں۔ چاہے آپ پڑھ رہے ہوں یا سن رہے ہوں، سجدہ قرآن کا تجربہ آپ کے گھر لاتا ہے۔", supportTitle:"سجدہ کی حمایت کریں", supportDesc:"سجدہ مفت ہے اور محبت سے بنایا گیا ہے۔ اگر آپ کو ایپ پسند ہے تو اس کی ترقی میں مدد کریں۔", supportCta:"مجھے ایک کافی پلائیں", footerSupport:"سپورٹ", footerPrivacy:"رازداری", footerContact:"رابطہ کریں", rights:"جملہ حقوق محفوظ ہیں۔" },
-        bn: { label:"বাংলা", screenshotsTitle:"অ্যাপটি দেখুন", heroSuffix:"Apple TV-তে কুরআন", tagline:"আপনার Apple TV-তে সুন্দর তিলাওয়াত এবং আয়াত-ভিত্তিক সিঙ্ক্রোনাইজেশনের সাথে পবিত্র কুরআন শুনুন।", badge:"Apple TV-তে উপলব্ধ", featuresTitle:"অ্যাপের বৈশিষ্ট্য", recitersTitle:"শত শত কারী", recitersDesc:"বিভিন্ন বর্ণনায় শত শত কারী থেকে বেছে নিন।", verseTitle:"আয়াত ট্র্যাকিং", verseDesc:"নির্ভুল আয়াত সিঙ্ক্রোনাইজেশনের সাথে অনুসরণ করুন।", bgTitle:"প্রশান্তিদায়ক পটভূমি", bgDesc:"শোনার সময় প্রকৃতির অ্যানিমেটেড পটভূমি উপভোগ করুন।", screenTitle:"বড় পর্দার জন্য ডিজাইন করা", screenDesc:"Apple TV-এর জন্য বিশেষভাবে তৈরি, সহজ নেভিগেশন এবং সুন্দর ইন্টারফেস সহ।", prayerTitle:"আপনার TV-তে নামাজের সময় ও আজান", prayerIntro:"কোনো নামাজ মিস করবেন না। সাজদা আপনার অবস্থান অনুযায়ী সঠিক সময় দেখায় এবং Apple TV-তে আজান দেয়।", prayerAccurate:"সঠিক নামাজের সময়", prayerAccurateDesc:"ফজর, যোহর, আসর, মাগরিব ও ইশার সঠিক সময় স্বয়ংক্রিয়ভাবে।", prayerAthan:"আজান সতর্কতা", prayerAthanDesc:"নামাজের সময় Apple TV-তে সুন্দর আজান।", prayerQibla:"কিবলার দিক", prayerQiblaDesc:"বড় পর্দায় কিবলার দিক দেখুন।", faqTitle:"সচরাচর জিজ্ঞাসা", faqQ1:"সাজদা কী?", faqA1:"সাজদা Apple TV-এর জন্য একটি বিনামূল্যে কুরআন অ্যাপ যেখানে শত শত কারী, আয়াত ট্র্যাকিং, নামাজের সময়, আজান ও সুন্দর পটভূমি রয়েছে।", faqQ2:"সাজদা কি বিনামূল্যে?", faqA2:"সাজদা বিনামূল্যে ডাউনলোড করা যায়। কুরআন শোনা সম্পূর্ণ বিনামূল্যে। নামাজের সময়, আজান এবং প্রিমিয়াম পটভূমির মতো কিছু অতিরিক্ত বৈশিষ্ট্য অ্যাপ-মধ্যস্থ ক্রয়ের মাধ্যমে পাওয়া যায়।", faqQ3:"কোন কারীরা পাওয়া যায়?", faqA3:"সাজদায় ২০০+ কারী বিভিন্ন রেওয়ায়েতে পাওয়া যায়।", faqQ4:"সাজদায় কি নামাজের সময় ও আজান আছে?", faqA4:"হ্যাঁ, আপনার অবস্থান অনুযায়ী সঠিক সময় ও পাঁচ ওয়াক্তের আজান সতর্কতা।", faqQ5:"সাজদা কোন ভাষা সমর্থন করে?", faqA5:"সাজদা ১১টি ভাষা সমর্থন করে।", faqQ6:"সাজদা কোন ডিভাইসে চলে?", faqA6:"সাজদা Apple TV (tvOS)-এ পাওয়া যায়।", faqQ7:"Apple TV-তে কুরআন কীভাবে শুনবেন?", faqA7:"Apple TV-তে App Store থেকে সাজদা ডাউনলোড করুন। ২০০+ কারী থেকে বেছে নিন এবং আয়াত ট্র্যাকিং সহ শুনুন।", faqQ8:"Apple TV-র জন্য সেরা কুরআন অ্যাপ কোনটি?", faqA8:"সাজদা Apple TV-র জন্য শীর্ষ কুরআন অ্যাপ — ২০০+ কারী, আয়াত ট্র্যাকিং, নামাজের সময় ও সুন্দর পটভূমি।", faqQ9:"Apple TV-তে কি নামাজের সময় ও আজান পাওয়া যায়?", faqA9:"হ্যাঁ, সাজদা আপনার অবস্থান অনুযায়ী সঠিক সময় দেখায় এবং পাঁচ ওয়াক্তের আজান দেয়।", faqQ10:"TV-তে কুরআন কীভাবে চালাবেন?", faqA10:"Apple TV-তে সাজদা ব্যবহার করুন। ২০০+ কারী থেকে সুন্দর পটভূমি সহ কুরআন শুনুন।", faqQ11:"সাজদা কি অফলাইনে কাজ করে?", faqA11:"সাজদা সেরা মানের জন্য ইন্টারনেটের মাধ্যমে কুরআন স্ট্রিম করে। ইন্টারনেট সংযোগ প্রয়োজন।", transformTitle:"আপনার বসার ঘর, রূপান্তরিত", transformDesc:"আপনার Apple TV-কে প্রশান্তির উৎসে পরিণত করুন। পড়ুন বা শুনুন, সাজদা কুরআনের অভিজ্ঞতা আপনার ঘরে নিয়ে আসে।", supportTitle:"সাজদাকে সমর্থন করুন", supportDesc:"সাজদা বিনামূল্যে এবং ভালোবাসায় তৈরি। অ্যাপটি ভালো লাগলে এর উন্নয়নে সহায়তা করুন।", supportCta:"আমাকে একটি কফি কিনুন", footerSupport:"সাপোর্ট", footerPrivacy:"গোপনীয়তা", footerContact:"যোগাযোগ", rights:"সর্বস্বত্ব সংরক্ষিত।" },
-        id: { label:"Bahasa Indonesia", screenshotsTitle:"Lihat Aplikasi", heroSuffix:"Al-Quran untuk Apple TV", tagline:"Dengarkan Al-Quran di Apple TV Anda dengan bacaan indah dan sinkronisasi ayat per ayat.", badge:"Tersedia di Apple TV", featuresTitle:"Fitur Aplikasi", recitersTitle:"Ratusan Qari", recitersDesc:"Pilih dari ratusan qari dengan berbagai riwayat.", verseTitle:"Pelacakan Ayat", verseDesc:"Ikuti dengan sinkronisasi ayat yang tepat.", bgTitle:"Latar Belakang Menenangkan", bgDesc:"Nikmati latar belakang alam animasi saat mendengarkan.", screenTitle:"Dirancang untuk Layar Besar", screenDesc:"Dibuat khusus untuk Apple TV dengan navigasi intuitif dan antarmuka yang indah.", prayerTitle:"Waktu Shalat & Adzan di TV Anda", prayerIntro:"Jangan lewatkan shalat. Sajda menampilkan waktu shalat akurat dan memutar adzan di Apple TV.", prayerAccurate:"Waktu Shalat Akurat", prayerAccurateDesc:"Deteksi otomatis lokasi untuk Subuh, Dzuhur, Ashar, Maghrib, dan Isya.", prayerAthan:"Peringatan Adzan", prayerAthanDesc:"Adzan indah terdengar di Apple TV saat waktu shalat tiba.", prayerQibla:"Arah Kiblat", prayerQiblaDesc:"Lihat arah kiblat di layar besar Anda.", faqTitle:"Pertanyaan yang Sering Diajukan", faqQ1:"Apa itu Sajda?", faqA1:"Sajda adalah aplikasi Al-Quran gratis untuk Apple TV dengan ratusan qari, pelacakan ayat, waktu shalat, adzan, dan latar belakang animasi.", faqQ2:"Apakah Sajda gratis?", faqA2:"Sajda gratis diunduh. Mendengarkan Al-Quran dengan ratusan qari sepenuhnya gratis. Beberapa fitur tambahan seperti waktu shalat, adzan, dan latar belakang premium tersedia melalui pembelian dalam aplikasi.", faqQ3:"Qari apa saja yang tersedia?", faqA3:"Sajda menyediakan 200+ qari dengan berbagai riwayat.", faqQ4:"Apakah Sajda memiliki waktu shalat dan adzan?", faqA4:"Ya, dengan waktu akurat berdasarkan lokasi dan peringatan adzan untuk lima waktu shalat.", faqQ5:"Bahasa apa yang didukung Sajda?", faqA5:"Sajda mendukung 11 bahasa.", faqQ6:"Di perangkat apa Sajda berjalan?", faqA6:"Sajda tersedia di Apple TV (tvOS).", faqQ7:"Bagaimana mendengarkan Al-Quran di Apple TV?", faqA7:"Unduh Sajda dari App Store di Apple TV. Pilih dari 200+ qari dan dengarkan dengan pelacakan ayat.", faqQ8:"Apa aplikasi Al-Quran terbaik untuk Apple TV?", faqA8:"Sajda adalah aplikasi Al-Quran terkemuka untuk Apple TV dengan 200+ qari, pelacakan ayat, waktu shalat, dan latar belakang animasi.", faqQ9:"Bisakah mendapatkan waktu shalat dan adzan di Apple TV?", faqA9:"Ya, Sajda menampilkan waktu shalat akurat dan memutar adzan untuk lima waktu shalat.", faqQ10:"Bagaimana memutar Al-Quran di TV?", faqA10:"Gunakan Sajda di Apple TV. Dengarkan dari 200+ qari dengan latar belakang indah.", faqQ11:"Apakah Sajda bisa offline?", faqA11:"Sajda streaming bacaan Al-Quran melalui internet untuk kualitas terbaik. Koneksi internet diperlukan.", transformTitle:"Ruang Tamu Anda, Berubah", transformDesc:"Ubah Apple TV Anda menjadi sumber ketenangan. Baik membaca maupun mendengarkan, Sajda membawa pengalaman Al-Quran ke rumah Anda.", supportTitle:"Dukung Sajda", supportDesc:"Sajda gratis dan dibuat dengan cinta. Jika Anda menikmati aplikasinya, pertimbangkan untuk mendukung pengembangannya.", supportCta:"Belikan Saya Kopi", footerSupport:"Dukungan", footerPrivacy:"Privasi", footerContact:"Kontak", rights:"Hak cipta dilindungi." },
-        ru: { label:"Русский", screenshotsTitle:"Посмотрите приложение", heroSuffix:"Коран для Apple TV", tagline:"Слушайте Священный Коран на Apple TV с прекрасными чтениями и точной синхронизацией аятов.", badge:"Доступно на Apple TV", featuresTitle:"Возможности", recitersTitle:"Сотни чтецов", recitersDesc:"Выбирайте из сотен чтецов с различными чтениями.", verseTitle:"Отслеживание аятов", verseDesc:"Следите с точной синхронизацией аятов.", bgTitle:"Успокаивающие фоны", bgDesc:"Наслаждайтесь анимированными природными фонами во время прослушивания.", screenTitle:"Для большого экрана", screenDesc:"Создано специально для Apple TV с интуитивной навигацией и красивым интерфейсом.", prayerTitle:"Время намаза и азан на вашем ТВ", prayerIntro:"Не пропустите намаз. Sajda показывает точное время и воспроизводит азан на Apple TV.", prayerAccurate:"Точное время намаза", prayerAccurateDesc:"Автоопределение местоположения для Фаджр, Зухр, Аср, Магриб и Иша.", prayerAthan:"Уведомления азана", prayerAthanDesc:"Красивый азан звучит на Apple TV в время намаза.", prayerQibla:"Направление Киблы", prayerQiblaDesc:"Видите направление Киблы на большом экране.", faqTitle:"Часто задаваемые вопросы", faqQ1:"Что такое Sajda?", faqA1:"Sajda — бесплатное приложение Корана для Apple TV с сотнями чтецов, отслеживанием аятов, временем намаза, азаном и анимированными фонами.", faqQ2:"Sajda бесплатен?", faqA2:"Sajda бесплатен для скачивания. Слушать Коран с сотнями чтецов полностью бесплатно. Некоторые функции, такие как время намаза, азан и премиум-фоны, доступны через встроенные покупки.", faqQ3:"Какие чтецы доступны?", faqA3:"Sajda предлагает более 200 чтецов с различными чтениями.", faqQ4:"Есть ли в Sajda время намаза и азан?", faqA4:"Да, с точным временем по вашему местоположению и уведомлениями азана для пяти ежедневных намазов.", faqQ5:"Какие языки поддерживает Sajda?", faqA5:"Sajda поддерживает 11 языков.", faqQ6:"На каких устройствах работает Sajda?", faqA6:"Sajda доступен на Apple TV (tvOS).", faqQ7:"Как слушать Коран на Apple TV?", faqA7:"Скачайте Sajda из App Store на Apple TV. Выберите из 200+ чтецов и слушайте с отслеживанием аятов.", faqQ8:"Лучшее приложение Корана для Apple TV?", faqA8:"Sajda — ведущее приложение Корана для Apple TV с 200+ чтецами, отслеживанием аятов, временем намаза и анимированными фонами.", faqQ9:"Можно ли получить время намаза на Apple TV?", faqA9:"Да, Sajda показывает точное время и воспроизводит азан для пяти ежедневных намазов.", faqQ10:"Как слушать Коран на телевизоре?", faqA10:"Используйте Sajda на Apple TV. 200+ чтецов с красивыми фонами и отслеживанием аятов.", faqQ11:"Работает ли Sajda офлайн?", faqA11:"Sajda транслирует чтения через интернет для лучшего качества. Требуется подключение к интернету.", transformTitle:"Ваша гостиная преобразилась", transformDesc:"Превратите Apple TV в источник спокойствия. Читайте или слушайте — Sajda приносит опыт Корана в ваш дом.", supportTitle:"Поддержите Sajda", supportDesc:"Sajda бесплатен и создан с любовью. Если вам нравится приложение, поддержите его развитие.", supportCta:"Угостите меня кофе", footerSupport:"Поддержка", footerPrivacy:"Конфиденциальность", footerContact:"Контакт", rights:"Все права защищены." },
-        sv: { label:"Svenska", screenshotsTitle:"Se appen", heroSuffix:"Koranen för Apple TV", tagline:"Lyssna på den heliga Koranen på din Apple TV med vackra recitationer och exakt verssynkronisering.", badge:"Tillgänglig på Apple TV", featuresTitle:"Funktioner", recitersTitle:"Hundratals recitatörer", recitersDesc:"Välj bland hundratals recitatörer med olika berättelser.", verseTitle:"Versspårning", verseDesc:"Följ med exakt verssynkronisering.", bgTitle:"Lugnande bakgrunder", bgDesc:"Njut av animerade naturbakgrunder medan du lyssnar.", screenTitle:"Designad för storbildsskärm", screenDesc:"Specialbyggd för Apple TV med intuitiv navigering och ett vackert gränssnitt.", prayerTitle:"Bönetider och adhan på din TV", prayerIntro:"Missa aldrig en bön. Sajda visar exakta bönetider och spelar adhan på din Apple TV.", prayerAccurate:"Exakta bönetider", prayerAccurateDesc:"Automatisk platsdetektering för Fajr, Dhuhr, Asr, Maghrib och Isha.", prayerAthan:"Adhan-varningar", prayerAthanDesc:"Vacker adhan spelas på din Apple TV vid bönetid.", prayerQibla:"Qibla-riktning", prayerQiblaDesc:"Se Qibla-riktningen på din stora skärm.", faqTitle:"Vanliga frågor", faqQ1:"Vad är Sajda?", faqA1:"Sajda är en gratis Koran-app för Apple TV med hundratals recitatörer, versspårning, bönetider, adhan och animerade bakgrunder.", faqQ2:"Är Sajda gratis?", faqA2:"Sajda är gratis att ladda ner. Att lyssna på Koranen med hundratals recitatörer är helt gratis. Vissa funktioner som bönetider, adhan och premiumbakgrunder finns via köp i appen.", faqQ3:"Vilka recitatörer finns?", faqA3:"Sajda erbjuder 200+ recitatörer med olika berättelser.", faqQ4:"Har Sajda bönetider och adhan?", faqA4:"Ja, med exakta tider baserat på din plats och adhan-varningar för alla fem dagliga böner.", faqQ5:"Vilka språk stöder Sajda?", faqA5:"Sajda stöder 11 språk.", faqQ6:"På vilka enheter fungerar Sajda?", faqA6:"Sajda finns på Apple TV (tvOS).", faqQ7:"Hur lyssnar man på Koranen på Apple TV?", faqA7:"Ladda ner Sajda från App Store på din Apple TV. Välj bland 200+ recitatörer och lyssna med versspårning.", faqQ8:"Bästa Koran-appen för Apple TV?", faqA8:"Sajda är den ledande Koran-appen för Apple TV med 200+ recitatörer, versspårning, bönetider och animerade bakgrunder.", faqQ9:"Kan man få bönetider på Apple TV?", faqA9:"Ja, Sajda visar exakta bönetider och spelar adhan för alla fem dagliga böner.", faqQ10:"Hur spelar man Koranen på TV?", faqA10:"Använd Sajda på Apple TV. 200+ recitatörer med vackra bakgrunder och versspårning.", faqQ11:"Fungerar Sajda offline?", faqA11:"Sajda streamar recitationer via internet för bästa kvalitet. Internetanslutning krävs.", transformTitle:"Ditt vardagsrum, förvandlat", transformDesc:"Förvandla din Apple TV till en källa av lugn. Oavsett om du läser eller lyssnar, ger Sajda Koran-upplevelsen hem till dig.", supportTitle:"Stöd Sajda", supportDesc:"Sajda är gratis och gjord med kärlek. Om du gillar appen, överväg att stödja dess utveckling.", supportCta:"Köp mig en kaffe", footerSupport:"Support", footerPrivacy:"Integritet", footerContact:"Kontakt", rights:"Alla rättigheter förbehållna." },
-        zh: { label:"中文", screenshotsTitle:"查看应用", heroSuffix:"Apple TV 上的古兰经", tagline:"在 Apple TV 上聆听古兰经，配有优美的诵读和逐节同步功能。", badge:"可在 Apple TV 上使用", featuresTitle:"应用功能", recitersTitle:"数百位诵读者", recitersDesc:"从数百位不同传述版本的诵读者中选择。", verseTitle:"经文跟踪", verseDesc:"通过精确的经文同步跟随。", bgTitle:"宁静背景", bgDesc:"聆听时享受动态自然背景。", screenTitle:"专为大屏设计", screenDesc:"专为 Apple TV 打造，直观导航和精美界面。", prayerTitle:"您电视上的祈祷时间和唤礼", prayerIntro:"不错过任何祈祷。Sajda 显示您所在位置的准确祈祷时间，并在 Apple TV 上播放唤礼。", prayerAccurate:"准确的祈祷时间", prayerAccurateDesc:"自动检测位置以获取晨礼、晌礼、晡礼、昏礼和宵礼的准确时间。", prayerAthan:"唤礼提醒", prayerAthanDesc:"祈祷时间到来时，Apple TV 播放优美的唤礼。", prayerQibla:"朝拜方向", prayerQiblaDesc:"在大屏幕上查看朝拜方向。", faqTitle:"常见问题", faqQ1:"Sajda 是什么？", faqA1:"Sajda 是 Apple TV 上的免费古兰经应用，提供数百位诵读者、经文跟踪、祈祷时间、唤礼和动态背景。", faqQ2:"Sajda 免费吗？", faqA2:"Sajda 免费下载。使用数百位诵读者聆听古兰经完全免费。祈祷时间、唤礼和高级背景等附加功能可通过应用内购买获得。", faqQ3:"有哪些诵读者？", faqA3:"Sajda 提供 200 多位不同传述版本的诵读者。", faqQ4:"Sajda 有祈祷时间和唤礼吗？", faqA4:"是的，根据您的位置提供准确时间和五次每日祈祷的唤礼提醒。", faqQ5:"Sajda 支持哪些语言？", faqA5:"Sajda 支持 11 种语言。", faqQ6:"Sajda 在哪些设备上运行？", faqA6:"Sajda 可在 Apple TV (tvOS) 上使用。", faqQ7:"如何在 Apple TV 上听古兰经？", faqA7:"从 Apple TV 的 App Store 下载 Sajda。从 200 多位诵读者中选择，配合经文跟踪聆听。", faqQ8:"Apple TV 最好的古兰经应用是什么？", faqA8:"Sajda 是 Apple TV 上领先的古兰经应用，提供 200 多位诵读者、经文跟踪、祈祷时间和动态背景。", faqQ9:"Apple TV 上能获取祈祷时间和唤礼吗？", faqA9:"是的，Sajda 根据您的位置显示准确的祈祷时间，并为五次每日祈祷播放唤礼。", faqQ10:"如何在电视上播放古兰经？", faqA10:"在 Apple TV 上使用 Sajda。200 多位诵读者配以美丽背景和经文跟踪。", faqQ11:"Sajda 可以离线使用吗？", faqA11:"Sajda 通过互联网流式播放古兰经以获得最佳质量。需要互联网连接。", transformTitle:"改变您的客厅", transformDesc:"将您的 Apple TV 变成宁静之源。无论是阅读还是聆听，Sajda 将古兰经体验带入您的家中。", supportTitle:"支持 Sajda", supportDesc:"Sajda 免费且用心制作。如果您喜欢这个应用，请考虑支持它的开发。", supportCta:"请我喝杯咖啡", footerSupport:"支持", footerPrivacy:"隐私", footerContact:"联系", rights:"版权所有。" }
+        en: { label:"English", screenshotsTitle:"See It in Action", heroSuffix:"Quran for Apple TV", tagline:"Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.", badge:"Available on Apple TV", featuresTitle:"Features", recitersTitle:"Hundreds of Reciters", recitersDesc:"Choose from hundreds of reciters with different narrations.", verseTitle:"Verse Tracking", verseDesc:"Follow along with precise verse synchronization.", bgTitle:"Calming Backgrounds", bgDesc:"Enjoy animated nature backgrounds while listening.", screenTitle:"Designed for the Big Screen", screenDesc:"Purpose-built for Apple TV with intuitive navigation and a beautiful interface.", prayerTitle:"Prayer Times & Athan on Your TV", prayerIntro:"Never miss a prayer. Sajda shows accurate prayer times for your location and plays the athan right on your Apple TV.", prayerAccurate:"Accurate Prayer Times", prayerAccurateDesc:"Auto-detects your location for precise Fajr, Dhuhr, Asr, Maghrib, and Isha times.", prayerAthan:"Athan Alerts", prayerAthanDesc:"Choose from 13 beautiful athan voices on your Apple TV.", prayerQibla:"Qibla Direction", prayerQiblaDesc:"See the Qibla direction displayed on your big screen.", faqTitle:"Frequently Asked Questions", faqQ1:"What is Sajda?", faqA1:"Sajda is a free Quran app for Apple TV featuring 200+ reciters with verse-by-verse sync, live Islamic TV channels, Quran radio stations, a sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, playback speed control, focus mode, translations, and stunning animated backgrounds \u2014 all designed for your big screen.", faqQ2:"Is Sajda free?", faqA2:"Sajda is free to download. Quran listening with 200+ reciters, verse-by-verse sync, search, favorites, and playback controls are completely free. Premium features including live TV channels, radio stations, prayer times, athan alerts, and premium backgrounds are available through affordable in-app purchases.", faqQ3:"What reciters are available?", faqA3:"Sajda offers over 200 Quran reciters with different narrations including Hafs, Warsh, and others. Popular reciters include Mishary Rashid Alafasy, Abdul Rahman Al-Sudais, Maher Al Muaiqly, and many more.", faqQ4:"Does Sajda have prayer times and athan?", faqA4:"Yes, Sajda includes accurate prayer times based on your location with 13 beautiful athan voices to choose from. Get alerts for all five daily prayers and see Qibla direction on your Apple TV screen.", faqQ5:"What languages does Sajda support?", faqA5:"Sajda supports 11 languages: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese.", faqQ6:"What devices can run Sajda?", faqA6:"Sajda is available on Apple TV (tvOS). It is designed specifically for the big screen experience, making it perfect for listening to Quran in your living room.", faqQ7:"How to listen to Quran on Apple TV?", faqA7:"Download Sajda from the App Store on your Apple TV. Browse over 200 reciters, select any surah, and listen with verse-by-verse sync on your big screen. You can also use Play All or Shuffle to listen continuously.", faqQ8:"What is the best Quran app for Apple TV?", faqA8:"Sajda is the most feature-rich Quran app for Apple TV \u2014 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and beautiful themes \u2014 all on your big screen.", faqQ9:"Can I get prayer times and athan on Apple TV?", faqA9:"Yes, Sajda displays accurate prayer times based on your location and plays the athan on your Apple TV. It supports all five daily prayers — Fajr, Dhuhr, Asr, Maghrib, and Isha — with customizable alerts.", faqQ10:"How to play Quran on TV?", faqA10:"The easiest way to play Quran on your TV is through Sajda on Apple TV. It streams Quran recitations from 200+ reciters with beautiful backgrounds and verse tracking.", faqQ11:"Does Sajda work offline?", faqA11:"Sajda streams Quran recitations over the internet for the best quality and widest reciter selection. An internet connection is required to listen to recitations and get prayer times.", faqQ12:"Does Sajda have live TV and radio?", faqA12:"Yes, Sajda offers live Islamic TV channels and Quran radio stations with a live equalizer. These are premium features available through in-app purchase.", faqQ13:"Can I use Sajda for Quran memorization?", faqA13:"Yes! Sajda has A-B repeat that lets you loop specific verses for Hifz practice. Combined with playback speed control (0.5x\u20132x), repeat modes, and focus mode for distraction-free verse display, it\u2019s a powerful tool for memorization.", liveTvTitle:"Live TV Channels", liveTvDesc:"Watch live Islamic TV channels right on your Apple TV.", radioTitle:"Radio Stations", radioDesc:"Stream Quran radio stations with live equalizer.", sleepTitle:"Sleep Timer", sleepDesc:"Fall asleep to recitation. Set 15–60 min or end of surah.", memorizationTitle:"Memorization Mode", memorizationDesc:"A-B repeat to loop verses for Hifz practice.", playerTitle:"Powerful Player", playerIntro:"Every detail designed for the perfect listening experience.", focusTitle:"Focus Mode", focusDesc:"Immersive full-screen verse display. No distractions.", speedTitle:"Playback Speed", speedDesc:"From 0.5x to 2x. Learn at your own pace.", translationTitle:"Translations", translationDesc:"Follow along with verse translations in your language.", themesTitle:"Themes & Colors", themesDesc:"Multiple themes, accent colors, and dark mode.", moreTitle:"And So Much More", pillPlayAll:"Play All & Shuffle", pillRepeat:"Repeat Modes", pill12Lang:"12 Languages", pillSearch:"Smart Search", pillRecently:"Recently Played", pillFeatured:"Featured Reciters", pillMushaf:"Multiple Mushaf Types", pillAthanVoices:"13 Athan Voices", transformTitle:"Your Living Room, Transformed", transformDesc:"Turn your Apple TV into a source of tranquility. Whether you're reading along or simply listening, Sajda brings the Quran experience to your home like never before.", supportTitle:"Support Sajda", supportDesc:"Sajda is free and built with love. If you enjoy the app, consider supporting its development.", supportCta:"Buy Me a Coffee", footerSupport:"Support", footerPrivacy:"Privacy", footerContact:"Contact", rights:"All rights reserved." },
+        ar: { label:"العربية", dir:"rtl", screenshotsTitle:"شاهد التطبيق", heroSuffix:"القرآن الكريم على Apple TV", tagline:"استمع إلى القرآن الكريم على Apple TV مع تلاوات جميلة وتتبع الآيات بتزامن دقيق.", badge:"متوفر على Apple TV", featuresTitle:"مميزات التطبيق", recitersTitle:"مئات القراء", recitersDesc:"اختر من بين مئات القراء بروايات مختلفة.", verseTitle:"تتبع الآيات", verseDesc:"تابع الآيات مع الاستماع بتزامن دقيق.", bgTitle:"خلفيات هادئة", bgDesc:"استمتع بخلفيات طبيعية متحركة أثناء الاستماع.", screenTitle:"مصمم للشاشة الكبيرة", screenDesc:"مصمم خصيصاً لـ Apple TV بواجهة جميلة وتنقل سهل.", prayerTitle:"مواقيت الصلاة والأذان على تلفازك", prayerIntro:"لا تفوّت صلاة. سجدة يعرض مواقيت الصلاة الدقيقة لموقعك ويرفع الأذان على Apple TV.", prayerAccurate:"مواقيت صلاة دقيقة", prayerAccurateDesc:"يكتشف موقعك تلقائياً لعرض أوقات الفجر والظهر والعصر والمغرب والعشاء.", prayerAthan:"تنبيهات الأذان", prayerAthanDesc:"اختر من بين 13 صوت أذان جميل على Apple TV.", prayerQibla:"اتجاه القبلة", prayerQiblaDesc:"شاهد اتجاه القبلة على شاشتك الكبيرة.", faqTitle:"الأسئلة الشائعة", faqQ1:"ما هو تطبيق سجدة؟", faqA1:"سجدة هو تطبيق قرآن مجاني لـ Apple TV يتضمن أكثر من 200 قارئ مع تتبع الآيات، قنوات تلفزيونية إسلامية مباشرة، محطات راديو القرآن، مؤقت نوم، تكرار A-B للحفظ، مواقيت الصلاة مع 13 صوت أذان، اتجاه القبلة، التحكم بسرعة التشغيل، وضع التركيز، ترجمات، وخلفيات متحركة رائعة \u2014 الكل مصمم لشاشتك الكبيرة.", faqQ2:"هل سجدة مجاني؟", faqA2:"سجدة مجاني للتحميل. الاستماع للقرآن مع أكثر من 200 قارئ وتتبع الآيات والبحث والمفضلة وأدوات التشغيل مجاني تماماً. المميزات المتقدمة مثل القنوات التلفزيونية المباشرة ومحطات الراديو ومواقيت الصلاة وتنبيهات الأذان والخلفيات المميزة متاحة عبر عمليات شراء بأسعار معقولة.", faqQ3:"ما القراء المتوفرون؟", faqA3:"يوفر سجدة أكثر من 200 قارئ بروايات مختلفة منها حفص وورش وغيرها. من أشهر القراء: مشاري راشد العفاسي، عبدالرحمن السديس، ماهر المعيقلي، وغيرهم.", faqQ4:"هل يوفر سجدة مواقيت الصلاة والأذان؟", faqA4:"نعم، يتضمن سجدة مواقيت صلاة دقيقة حسب موقعك مع 13 صوت أذان جميل للاختيار من بينها. احصل على تنبيهات للصلوات الخمس وشاهد اتجاه القبلة على شاشة Apple TV.", faqQ5:"ما اللغات التي يدعمها سجدة؟", faqA5:"يدعم سجدة 11 لغة: العربية، الإنجليزية، التركية، الفرنسية، الإسبانية، الأردية، البنغالية، الإندونيسية، الروسية، السويدية، والصينية.", faqQ6:"على أي أجهزة يعمل سجدة؟", faqA6:"سجدة متوفر على Apple TV (tvOS). مصمم خصيصاً لتجربة الشاشة الكبيرة.", faqQ7:"كيف أستمع للقرآن على Apple TV؟", faqA7:"حمّل سجدة من App Store على Apple TV. تصفح أكثر من 200 قارئ، اختر أي سورة، واستمع مع تتبع الآيات على شاشتك الكبيرة.", faqQ8:"ما أفضل تطبيق قرآن لـ Apple TV؟", faqA8:"سجدة هو أغنى تطبيق قرآن بالمميزات لـ Apple TV \u2014 أكثر من 200 قارئ، تتبع الآيات، قنوات تلفزيونية إسلامية مباشرة، محطات راديو، مؤقت نوم، تكرار A-B للحفظ، مواقيت الصلاة مع 13 صوت أذان، اتجاه القبلة، وضع التركيز، ترجمات، التحكم بسرعة التشغيل، وسمات جميلة \u2014 الكل على شاشتك الكبيرة.", faqQ9:"هل يمكنني الحصول على مواقيت الصلاة والأذان على Apple TV؟", faqA9:"نعم، سجدة يعرض مواقيت صلاة دقيقة حسب موقعك ويرفع الأذان على Apple TV للصلوات الخمس.", faqQ10:"كيف أشغل القرآن على التلفاز؟", faqA10:"أسهل طريقة لتشغيل القرآن على تلفازك هي عبر سجدة على Apple TV. يبث تلاوات القرآن من أكثر من 200 قارئ مع خلفيات جميلة وتتبع الآيات.", faqQ11:"هل يعمل سجدة بدون إنترنت؟", faqA11:"سجدة يبث تلاوات القرآن عبر الإنترنت لأفضل جودة وأوسع اختيار من القراء. يتطلب اتصالاً بالإنترنت.", faqQ12:"هل يوفر سجدة تلفزيون مباشر وراديو؟", faqA12:"نعم، يوفر سجدة قنوات تلفزيونية إسلامية مباشرة ومحطات راديو القرآن مع معادل صوت مباشر. هذه مميزات متقدمة متاحة عبر الشراء داخل التطبيق.", faqQ13:"هل يمكنني استخدام سجدة لحفظ القرآن؟", faqA13:"نعم! يوفر سجدة تكرار A-B يتيح لك تكرار آيات محددة لممارسة الحفظ. مع التحكم بسرعة التشغيل (0.5x\u20132x) وأوضاع التكرار ووضع التركيز لعرض الآيات بدون تشتيت، إنه أداة قوية للحفظ.", liveTvTitle:"قنوات تلفزيونية مباشرة", liveTvDesc:"شاهد القنوات الإسلامية مباشرة على Apple TV.", radioTitle:"محطات الراديو", radioDesc:"استمع لمحطات راديو القرآن مع معادل صوت مباشر.", sleepTitle:"مؤقت النوم", sleepDesc:"نم على صوت التلاوة. اضبط 15–60 دقيقة أو نهاية السورة.", memorizationTitle:"وضع الحفظ", memorizationDesc:"تكرار A-B لتكرار الآيات لممارسة الحفظ.", playerTitle:"مشغّل قوي", playerIntro:"كل تفصيلة مصممة لتجربة استماع مثالية.", focusTitle:"وضع التركيز", focusDesc:"عرض آيات بملء الشاشة بدون أي تشتيت.", speedTitle:"سرعة التشغيل", speedDesc:"من 0.5x إلى 2x. تعلّم بالسرعة التي تناسبك.", translationTitle:"الترجمات", translationDesc:"تابع ترجمة الآيات بلغتك.", themesTitle:"السمات والألوان", themesDesc:"سمات متعددة وألوان مميزة ووضع داكن.", moreTitle:"والمزيد أيضاً", pillPlayAll:"تشغيل الكل وعشوائي", pillRepeat:"أوضاع التكرار", pill12Lang:"12 لغة", pillSearch:"بحث ذكي", pillRecently:"سُمع مؤخراً", pillFeatured:"قراء مميزون", pillMushaf:"أنواع مصاحف متعددة", pillAthanVoices:"13 صوت أذان", transformTitle:"غرفة المعيشة بشكل جديد", transformDesc:"حوّل Apple TV إلى مصدر للسكينة. سواء كنت تقرأ أو تستمع، ستعيش تجربة قرآنية فريدة في منزلك.", supportTitle:"ادعم سجدة", supportDesc:"سجدة مجاني وصُنع بحب. إذا أعجبك التطبيق، فكّر في دعم تطويره.", supportCta:"اشترِ لي قهوة", footerSupport:"الدعم", footerPrivacy:"الخصوصية", footerContact:"تواصل معنا", rights:"جميع الحقوق محفوظة." },
+        tr: { label:"Türkçe", screenshotsTitle:"Uygulamayı Görün", heroSuffix:"Apple TV için Kur'an", tagline:"Apple TV'nizde güzel tilavetler ve hassas ayet senkronizasyonu ile Kur'an-ı Kerim dinleyin.", badge:"Apple TV'de mevcut", featuresTitle:"Uygulama Özellikleri", recitersTitle:"Yüzlerce Kari", recitersDesc:"Farklı rivayetlerle yüzlerce kari arasından seçim yapın.", verseTitle:"Ayet Takibi", verseDesc:"Hassas ayet senkronizasyonu ile takip edin.", bgTitle:"Huzurlu Arka Planlar", bgDesc:"Dinlerken animasyonlu doğa arka planlarının keyfini çıkarın.", screenTitle:"Büyük Ekran İçin Tasarlandı", screenDesc:"Apple TV için sezgisel gezinme ve güzel arayüzle özel olarak tasarlandı.", prayerTitle:"TV'nizde Namaz Vakitleri ve Ezan", prayerIntro:"Hiçbir namazı kaçırmayın. Sajda konumunuza göre doğru namaz vakitlerini gösterir ve Apple TV'nizde ezan okur.", prayerAccurate:"Doğru Namaz Vakitleri", prayerAccurateDesc:"İmsak, Öğle, İkindi, Akşam ve Yatsı vakitlerini otomatik tespit eder.", prayerAthan:"Ezan Uyarıları", prayerAthanDesc:"Apple TV'nizde 13 güzel ezan sesinden birini seçin.", prayerQibla:"Kıble Yönü", prayerQiblaDesc:"Büyük ekranınızda kıble yönünü görün.", faqTitle:"Sıkça Sorulan Sorular", faqQ1:"Sajda nedir?", faqA1:"Sajda, Apple TV i\u00e7in \u00fccretsiz bir Kur'an uygulamas\u0131d\u0131r. 200'den fazla kari, ayet takibi, canl\u0131 \u0130slami TV kanallar\u0131, Kur'an radyo istasyonlar\u0131, uyku zamanlay\u0131c\u0131, ezber i\u00e7in A-B tekrar\u0131, 13 ezan sesiyle namaz vakitleri, k\u0131ble y\u00f6n\u00fc, oynatma h\u0131z\u0131 kontrol\u00fc, odak modu, \u00e7eviriler ve animasyonlu arka planlar sunar \u2014 t\u00fcm\u00fc b\u00fcy\u00fck ekran\u0131n\u0131z i\u00e7in tasarlanm\u0131\u015ft\u0131r.", faqQ2:"Sajda \u00fccretsiz mi?", faqA2:"Sajda \u00fccretsiz indirilebilir. 200+ kari ile Kur'an dinleme, ayet takibi, arama, favoriler ve oynatma kontrolleri tamamen \u00fccretsizdir. Canl\u0131 TV kanallar\u0131, radyo istasyonlar\u0131, namaz vakitleri, ezan uyar\u0131lar\u0131 ve \u00f6zel arka planlar gibi premium \u00f6zellikler uygun fiyatl\u0131 uygulama i\u00e7i sat\u0131n al\u0131mlarla kullan\u0131labilir.", faqQ3:"Hangi kariler mevcut?", faqA3:"Sajda, Hafs, Verş ve diğer rivayetlerle 200'den fazla kari sunar.", faqQ4:"Sajda'da namaz vakitleri ve ezan var mı?", faqA4:"Evet, Sajda konumunuza g\u00f6re do\u011fru namaz vakitleri ve se\u00e7ebilece\u011finiz 13 g\u00fczel ezan sesi sunar. Be\u015f vakit namaz i\u00e7in uyar\u0131 al\u0131n ve Apple TV ekran\u0131n\u0131zda k\u0131ble y\u00f6n\u00fcn\u00fc g\u00f6r\u00fcn.", faqQ5:"Sajda hangi dilleri destekliyor?", faqA5:"Sajda 11 dili destekler: İngilizce, Arapça, Türkçe, Fransızca, İspanyolca, Urduca, Bengalce, Endonezce, Rusça, İsveççe ve Çince.", faqQ6:"Sajda hangi cihazlarda çalışır?", faqA6:"Sajda Apple TV'de (tvOS) kullanılabilir. Büyük ekran deneyimi için özel olarak tasarlanmıştır.", faqQ7:"Apple TV'de Kur'an nasıl dinlenir?", faqA7:"Apple TV'nizde App Store'dan Sajda'yı indirin. 200'den fazla kari arasından seçim yapın ve büyük ekranınızda ayet takibiyle dinleyin.", faqQ8:"Apple TV için en iyi Kur'an uygulaması hangisi?", faqA8:"Sajda, Apple TV i\u00e7in en zengin \u00f6zellikli Kur'an uygulamas\u0131d\u0131r \u2014 200+ kari, ayet takibi, canl\u0131 \u0130slami TV kanallar\u0131, radyo istasyonlar\u0131, uyku zamanlay\u0131c\u0131, ezber i\u00e7in A-B tekrar\u0131, 13 ezan sesiyle namaz vakitleri, k\u0131ble y\u00f6n\u00fc, odak modu, \u00e7eviriler, h\u0131z kontrol\u00fc ve g\u00fczel temalar \u2014 t\u00fcm\u00fc b\u00fcy\u00fck ekran\u0131n\u0131zda.", faqQ9:"Apple TV'de namaz vakitleri ve ezan alabilir miyim?", faqA9:"Evet, Sajda konumunuza göre doğru namaz vakitlerini gösterir ve beş vakit için ezan çalar.", faqQ10:"TV'de Kur'an nasıl çalınır?", faqA10:"TV'nizde Kur'an çalmanın en kolay yolu Apple TV'de Sajda'dır. 200+ kariden güzel arka planlarla Kur'an dinleyin.", faqQ11:"Sajda \u00e7evrimd\u0131\u015f\u0131 \u00e7al\u0131\u015f\u0131r m\u0131?", faqA11:"Sajda en iyi kalite i\u00e7in Kur'an tilavetlerini internet \u00fczerinden yay\u0131nlar. \u0130nternet ba\u011flant\u0131s\u0131 gereklidir.", faqQ12:"Sajda'da canl\u0131 TV ve radyo var m\u0131?", faqA12:"Evet, Sajda canl\u0131 \u0130slami TV kanallar\u0131 ve ekolay\u0131zrl\u0131 Kur'an radyo istasyonlar\u0131 sunar. Bunlar uygulama i\u00e7i sat\u0131n al\u0131mla kullan\u0131labilen premium \u00f6zelliklerdir.", faqQ13:"Sajda'y\u0131 Kur'an ezberlemek i\u00e7in kullanabilir miyim?", faqA13:"Evet! Sajda'da h\u0131fz \u00e7al\u0131\u015fmas\u0131 i\u00e7in belirli ayetleri d\u00f6ng\u00fcleyen A-B tekrar\u0131 vard\u0131r. Oynatma h\u0131z\u0131 kontrol\u00fc (0.5x\u20132x), tekrar modlar\u0131 ve dikkat da\u011f\u0131tmayan odak modu ile birlikte g\u00fc\u00e7l\u00fc bir ezber arac\u0131d\u0131r.", liveTvTitle:"Canl\u0131 TV Kanallar\u0131", liveTvDesc:"Apple TV'nizde canlı İslami TV kanalları izleyin.", radioTitle:"Radyo İstasyonları", radioDesc:"Canlı ekolayzır ile Kur'an radyo istasyonları dinleyin.", sleepTitle:"Uyku Zamanlayıcı", sleepDesc:"Tilavet eşliğinde uyuyun. 15–60 dk veya sure sonu.", memorizationTitle:"Ezber Modu", memorizationDesc:"Hıfz çalışması için A-B tekrarı ile ayetleri döngüleyin.", playerTitle:"Güçlü Oynatıcı", playerIntro:"Mükemmel dinleme deneyimi için tasarlanmış her detay.", focusTitle:"Odak Modu", focusDesc:"Tam ekran ayet görünümü. Dikkat dağıtıcı yok.", speedTitle:"Oynatma Hızı", speedDesc:"0.5x'ten 2x'e. Kendi hızınızda öğrenin.", translationTitle:"Çeviriler", translationDesc:"Ayetlerin çevirilerini kendi dilinizde takip edin.", themesTitle:"Temalar ve Renkler", themesDesc:"Birden fazla tema, vurgu rengi ve karanlık mod.", moreTitle:"Ve Çok Daha Fazlası", pillPlayAll:"Tümünü Çal ve Karıştır", pillRepeat:"Tekrar Modları", pill12Lang:"12 Dil", pillSearch:"Akıllı Arama", pillRecently:"Son Dinlenenler", pillFeatured:"Öne Çıkan Kariler", pillMushaf:"Birden Fazla Mushaf", pillAthanVoices:"13 Ezan Sesi", transformTitle:"Oturma Odanız Dönüştü", transformDesc:"Apple TV'nizi bir huzur kaynağına dönüştürün. İster okuyun ister dinleyin, Sajda Kur'an deneyimini evinize taşır.", supportTitle:"Sajda'yı Destekle", supportDesc:"Sajda ücretsiz ve sevgiyle yapıldı. Uygulamayı beğendiyseniz, geliştirilmesini desteklemeyi düşünün.", supportCta:"Bana Bir Kahve Al", footerSupport:"Destek", footerPrivacy:"Gizlilik", footerContact:"İletişim", rights:"Tüm hakları saklıdır." },
+        fr: { label:"Français", screenshotsTitle:"Découvrez l'app", heroSuffix:"Le Coran sur Apple TV", tagline:"Écoutez le Saint Coran sur votre Apple TV avec de belles récitations et une synchronisation verset par verset.", badge:"Disponible sur Apple TV", featuresTitle:"Fonctionnalités", recitersTitle:"Des centaines de récitateurs", recitersDesc:"Choisissez parmi des centaines de récitateurs avec différentes narrations.", verseTitle:"Suivi des versets", verseDesc:"Suivez avec une synchronisation précise des versets.", bgTitle:"Arrière-plans apaisants", bgDesc:"Profitez d'arrière-plans naturels animés en écoutant.", screenTitle:"Conçu pour le grand écran", screenDesc:"Conçu spécialement pour Apple TV avec une navigation intuitive et une belle interface.", prayerTitle:"Horaires de prière et adhan sur votre TV", prayerIntro:"Ne manquez jamais une prière. Sajda affiche les horaires précis et lance l'adhan sur votre Apple TV.", prayerAccurate:"Horaires de prière précis", prayerAccurateDesc:"Détecte automatiquement votre position pour Fajr, Dhuhr, Asr, Maghrib et Isha.", prayerAthan:"Alertes Adhan", prayerAthanDesc:"Choisissez parmi 13 belles voix d'adhan sur votre Apple TV.", prayerQibla:"Direction de la Qibla", prayerQiblaDesc:"Affichez la direction de la Qibla sur votre grand écran.", faqTitle:"Questions fréquentes", faqQ1:"Qu'est-ce que Sajda ?", faqA1:"Sajda est une application Coran gratuite pour Apple TV avec plus de 200 récitateurs, synchronisation verset par verset, chaînes TV islamiques en direct, stations de radio coraniques, minuterie de sommeil, répétition A-B pour la mémorisation, horaires de prière avec 13 voix d'adhan, direction de la Qibla, contrôle de vitesse, mode focus, traductions et arrière-plans animés \u2014 le tout conçu pour votre grand écran.", faqQ2:"Sajda est-il gratuit ?", faqA2:"Sajda est gratuit à télécharger. L'écoute du Coran avec 200+ récitateurs, le suivi des versets, la recherche, les favoris et les contrôles de lecture sont entièrement gratuits. Les fonctionnalités premium comme les chaînes TV en direct, les stations de radio, les horaires de prière, les alertes adhan et les arrière-plans premium sont disponibles via des achats intégrés abordables.", faqQ3:"Quels récitateurs sont disponibles ?", faqA3:"Sajda propose plus de 200 récitateurs avec différentes narrations dont Hafs, Warsh et autres.", faqQ4:"Sajda a-t-il les horaires de prière et l'adhan ?", faqA4:"Oui, Sajda inclut des horaires de prière précis selon votre position avec 13 belles voix d'adhan au choix. Recevez des alertes pour les cinq prières quotidiennes et voyez la direction de la Qibla sur votre Apple TV.", faqQ5:"Quelles langues Sajda supporte-t-il ?", faqA5:"Sajda supporte 11 langues : anglais, arabe, turc, français, espagnol, ourdou, bengali, indonésien, russe, suédois et chinois.", faqQ6:"Sur quels appareils Sajda fonctionne-t-il ?", faqA6:"Sajda est disponible sur Apple TV (tvOS), conçu pour l'expérience grand écran.", faqQ7:"Comment écouter le Coran sur Apple TV ?", faqA7:"Téléchargez Sajda depuis l'App Store sur votre Apple TV. Parcourez plus de 200 récitateurs et écoutez avec le suivi des versets.", faqQ8:"Quelle est la meilleure app Coran pour Apple TV ?", faqA8:"Sajda est l'application Coran la plus complète pour Apple TV \u2014 200+ récitateurs, suivi des versets, chaînes TV islamiques en direct, stations de radio, minuterie de sommeil, répétition A-B pour la mémorisation, horaires de prière avec 13 voix d'adhan, Qibla, mode focus, traductions, contrôle de vitesse et beaux thèmes \u2014 tout sur votre grand écran.", faqQ9:"Peut-on avoir les horaires de prière sur Apple TV ?", faqA9:"Oui, Sajda affiche les horaires précis et joue l'adhan pour les cinq prières quotidiennes.", faqQ10:"Comment écouter le Coran sur la télé ?", faqA10:"Le plus simple est d'utiliser Sajda sur Apple TV. Plus de 200 récitateurs avec de beaux arrière-plans et le suivi des versets.", faqQ11:"Sajda fonctionne-t-il hors ligne ?", faqA11:"Sajda diffuse les récitations en streaming pour la meilleure qualité. Une connexion internet est nécessaire.", faqQ12:"Sajda a-t-il la TV en direct et la radio ?", faqA12:"Oui, Sajda propose des chaînes TV islamiques en direct et des stations de radio coraniques avec égaliseur. Ce sont des fonctionnalités premium disponibles via achat intégré.", faqQ13:"Puis-je utiliser Sajda pour mémoriser le Coran ?", faqA13:"Oui ! Sajda dispose de la répétition A-B pour boucler des versets spécifiques pour le Hifz. Avec le contrôle de vitesse (0.5x\u20132x), les modes de répétition et le mode focus, c'est un outil puissant pour la mémorisation.", liveTvTitle:"Chaînes TV en direct", liveTvDesc:"Regardez des chaînes TV islamiques en direct sur Apple TV.", radioTitle:"Stations de radio", radioDesc:"Écoutez des stations de radio coraniques avec égaliseur en direct.", sleepTitle:"Minuterie de sommeil", sleepDesc:"Endormez-vous avec la récitation. 15–60 min ou fin de sourate.", memorizationTitle:"Mode mémorisation", memorizationDesc:"Répétition A-B pour boucler les versets et pratiquer le Hifz.", playerTitle:"Lecteur puissant", playerIntro:"Chaque détail conçu pour une expérience d'écoute parfaite.", focusTitle:"Mode focus", focusDesc:"Affichage des versets en plein écran. Sans distraction.", speedTitle:"Vitesse de lecture", speedDesc:"De 0.5x à 2x. Apprenez à votre rythme.", translationTitle:"Traductions", translationDesc:"Suivez les traductions des versets dans votre langue.", themesTitle:"Thèmes et couleurs", themesDesc:"Plusieurs thèmes, couleurs d'accent et mode sombre.", moreTitle:"Et bien plus encore", pillPlayAll:"Tout lire et mélanger", pillRepeat:"Modes de répétition", pill12Lang:"12 langues", pillSearch:"Recherche intelligente", pillRecently:"Écoutés récemment", pillFeatured:"Récitateurs en vedette", pillMushaf:"Types de Mushaf multiples", pillAthanVoices:"13 voix d'adhan", transformTitle:"Votre salon, transformé", transformDesc:"Transformez votre Apple TV en source de tranquillité. Que vous lisiez ou écoutiez, Sajda apporte l'expérience du Coran chez vous.", supportTitle:"Soutenez Sajda", supportDesc:"Sajda est gratuit et fait avec amour. Si vous aimez l'app, pensez à soutenir son développement.", supportCta:"Offrez-moi un café", footerSupport:"Support", footerPrivacy:"Confidentialité", footerContact:"Contact", rights:"Tous droits réservés." },
+        es: { label:"Español", screenshotsTitle:"Mira la app", heroSuffix:"Corán para Apple TV", tagline:"Escucha el Sagrado Corán en tu Apple TV con hermosas recitaciones y sincronización verso a verso.", badge:"Disponible en Apple TV", featuresTitle:"Funciones", recitersTitle:"Cientos de recitadores", recitersDesc:"Elige entre cientos de recitadores con diferentes narraciones.", verseTitle:"Seguimiento de versos", verseDesc:"Sigue con sincronización precisa de versos.", bgTitle:"Fondos relajantes", bgDesc:"Disfruta de fondos animados de naturaleza mientras escuchas.", screenTitle:"Diseñado para la pantalla grande", screenDesc:"Creado especialmente para Apple TV con navegación intuitiva y una hermosa interfaz.", prayerTitle:"Horarios de oración y adhan en tu TV", prayerIntro:"No te pierdas ninguna oración. Sajda muestra horarios precisos y reproduce el adhan en tu Apple TV.", prayerAccurate:"Horarios precisos", prayerAccurateDesc:"Detecta tu ubicación para Fajr, Dhuhr, Asr, Maghrib e Isha.", prayerAthan:"Alertas de Adhan", prayerAthanDesc:"Elige entre 13 hermosas voces de adhan en tu Apple TV.", prayerQibla:"Dirección de la Qibla", prayerQiblaDesc:"Ve la dirección de la Qibla en tu pantalla grande.", faqTitle:"Preguntas frecuentes", faqQ1:"¿Qué es Sajda?", faqA1:"Sajda es una app gratuita del Corán para Apple TV con más de 200 recitadores, sincronización verso a verso, canales de TV islámicos en vivo, estaciones de radio del Corán, temporizador de sueño, repetición A-B para memorización, horarios de oración con 13 voces de adhan, dirección de la Qibla, control de velocidad, modo enfoque, traducciones y fondos animados \u2014 todo diseñado para tu pantalla grande.", faqQ2:"¿Es Sajda gratuito?", faqA2:"Sajda es gratis para descargar. Escuchar el Corán con 200+ recitadores, sincronización de versos, búsqueda, favoritos y controles de reproducción es completamente gratis. Las funciones premium como canales de TV en vivo, estaciones de radio, horarios de oración, alertas de adhan y fondos premium están disponibles mediante compras dentro de la app a precios accesibles.", faqQ3:"¿Qué recitadores están disponibles?", faqA3:"Sajda ofrece más de 200 recitadores con diferentes narraciones incluyendo Hafs, Warsh y otros.", faqQ4:"¿Tiene Sajda horarios de oración y adhan?", faqA4:"Sí, Sajda incluye horarios de oración precisos según tu ubicación con 13 hermosas voces de adhan para elegir. Recibe alertas para las cinco oraciones diarias y ve la dirección de la Qibla en tu Apple TV.", faqQ5:"¿Qué idiomas soporta Sajda?", faqA5:"Sajda soporta 11 idiomas: inglés, árabe, turco, francés, español, urdu, bengalí, indonesio, ruso, sueco y chino.", faqQ6:"¿En qué dispositivos funciona Sajda?", faqA6:"Sajda está disponible en Apple TV (tvOS), diseñado para la experiencia de pantalla grande.", faqQ7:"¿Cómo escuchar el Corán en Apple TV?", faqA7:"Descarga Sajda desde la App Store en tu Apple TV. Explora más de 200 recitadores y escucha con seguimiento de versos.", faqQ8:"¿Cuál es la mejor app de Corán para Apple TV?", faqA8:"Sajda es la app de Corán más completa para Apple TV \u2014 200+ recitadores, sincronización de versos, canales de TV islámicos en vivo, estaciones de radio, temporizador de sueño, repetición A-B para memorización, horarios de oración con 13 voces de adhan, Qibla, modo enfoque, traducciones, control de velocidad y hermosos temas \u2014 todo en tu pantalla grande.", faqQ9:"¿Puedo obtener horarios de oración en Apple TV?", faqA9:"Sí, Sajda muestra horarios precisos y reproduce el adhan para las cinco oraciones diarias.", faqQ10:"¿Cómo reproducir el Corán en la TV?", faqA10:"La forma más fácil es usar Sajda en Apple TV. Más de 200 recitadores con fondos hermosos y seguimiento de versos.", faqQ11:"¿Funciona Sajda sin internet?", faqA11:"Sajda transmite las recitaciones por internet para la mejor calidad. Se requiere conexión a internet.", faqQ12:"¿Tiene Sajda TV en vivo y radio?", faqA12:"Sí, Sajda ofrece canales de TV islámicos en vivo y estaciones de radio del Corán con ecualizador. Son funciones premium disponibles mediante compra dentro de la app.", faqQ13:"¿Puedo usar Sajda para memorizar el Corán?", faqA13:"¡Sí! Sajda tiene repetición A-B para repetir versos específicos para practicar el Hifz. Junto con control de velocidad (0.5x\u20132x), modos de repetición y modo enfoque, es una herramienta poderosa para la memorización.", liveTvTitle:"Canales de TV en vivo", liveTvDesc:"Mira canales de TV islámicos en vivo en tu Apple TV.", radioTitle:"Estaciones de radio", radioDesc:"Transmite estaciones de radio del Corán con ecualizador en vivo.", sleepTitle:"Temporizador de sueño", sleepDesc:"Duerme con la recitación. 15–60 min o fin de sura.", memorizationTitle:"Modo memorización", memorizationDesc:"Repetición A-B para practicar el Hifz con los versos en bucle.", playerTitle:"Reproductor potente", playerIntro:"Cada detalle diseñado para la experiencia de escucha perfecta.", focusTitle:"Modo enfoque", focusDesc:"Pantalla completa con versos. Sin distracciones.", speedTitle:"Velocidad de reproducción", speedDesc:"De 0.5x a 2x. Aprende a tu ritmo.", translationTitle:"Traducciones", translationDesc:"Sigue las traducciones de los versos en tu idioma.", themesTitle:"Temas y colores", themesDesc:"Múltiples temas, colores de acento y modo oscuro.", moreTitle:"Y mucho más", pillPlayAll:"Reproducir todo y aleatorio", pillRepeat:"Modos de repetición", pill12Lang:"12 idiomas", pillSearch:"Búsqueda inteligente", pillRecently:"Escuchados recientemente", pillFeatured:"Recitadores destacados", pillMushaf:"Tipos de Mushaf múltiples", pillAthanVoices:"13 voces de adhan", transformTitle:"Tu sala de estar, transformada", transformDesc:"Convierte tu Apple TV en una fuente de tranquilidad. Ya sea leyendo o escuchando, Sajda lleva la experiencia del Corán a tu hogar.", supportTitle:"Apoya a Sajda", supportDesc:"Sajda es gratis y hecho con amor. Si disfrutas la app, considera apoyar su desarrollo.", supportCta:"Invítame un café", footerSupport:"Soporte", footerPrivacy:"Privacidad", footerContact:"Contacto", rights:"Todos los derechos reservados." },
+        ur: { label:"اردو", dir:"rtl", screenshotsTitle:"ایپ دیکھیں", heroSuffix:"Apple TV کے لیے قرآن", tagline:"Apple TV پر خوبصورت تلاوتوں اور آیت بہ آیت ہم آہنگی کے ساتھ قرآن مجید سنیں۔", badge:"Apple TV پر دستیاب", featuresTitle:"ایپ کی خصوصیات", recitersTitle:"سینکڑوں قاری", recitersDesc:"مختلف روایات کے ساتھ سینکڑوں قاریوں میں سے منتخب کریں۔", verseTitle:"آیت ٹریکنگ", verseDesc:"درست آیت ہم آہنگی کے ساتھ پیروی کریں۔", bgTitle:"پرسکون پس منظر", bgDesc:"سنتے ہوئے متحرک قدرتی پس منظر سے لطف اندوز ہوں۔", screenTitle:"بڑی سکرین کے لیے ڈیزائن", screenDesc:"Apple TV کے لیے خاص طور پر بنایا گیا، آسان نیویگیشن اور خوبصورت انٹرفیس کے ساتھ۔", prayerTitle:"آپ کے TV پر نماز کے اوقات اور اذان", prayerIntro:"کوئی نماز نہ چھوٹے۔ سجدہ آپ کے مقام کے مطابق درست اوقات دکھاتا ہے اور Apple TV پر اذان دیتا ہے۔", prayerAccurate:"درست نماز اوقات", prayerAccurateDesc:"فجر، ظہر، عصر، مغرب اور عشاء کے درست اوقات خودکار طریقے سے۔", prayerAthan:"اذان الرٹس", prayerAthanDesc:"Apple TV پر 13 خوبصورت اذان آوازوں میں سے منتخب کریں۔", prayerQibla:"قبلہ کی سمت", prayerQiblaDesc:"بڑی سکرین پر قبلہ کی سمت دیکھیں۔", faqTitle:"اکثر پوچھے گئے سوالات", faqQ1:"سجدہ کیا ہے؟", faqA1:"سجدہ Apple TV کے لیے ایک مفت قرآن ایپ ہے جس میں 200+ قاری، آیت بہ آیت ٹریکنگ، لائیو اسلامی ٹی وی چینلز، قرآن ریڈیو اسٹیشنز، سلیپ ٹائمر، حفظ کے لیے A-B ریپیٹ، 13 اذان آوازوں کے ساتھ نماز اوقات، قبلہ کی سمت، پلے بیک اسپیڈ کنٹرول، فوکس موڈ، ترجمے اور متحرک پس منظر شامل ہیں \u2014 سب بڑی سکرین کے لیے ڈیزائن کیا گیا۔", faqQ2:"کیا سجدہ مفت ہے؟", faqA2:"سجدہ مفت ڈاؤن لوڈ ہے۔ 200+ قاریوں کے ساتھ قرآن سننا، آیت ٹریکنگ، سرچ، پسندیدہ اور پلے بیک کنٹرولز مکمل طور پر مفت ہیں۔ لائیو ٹی وی چینلز، ریڈیو اسٹیشنز، نماز اوقات، اذان الرٹس اور پریمیم پس منظر جیسی خصوصیات مناسب قیمت پر ایپ میں خریداری سے دستیاب ہیں۔", faqQ3:"کون سے قاری دستیاب ہیں؟", faqA3:"سجدہ میں 200 سے زائد قاری مختلف روایات کے ساتھ دستیاب ہیں۔", faqQ4:"کیا سجدہ میں نماز اوقات اور اذان ہے؟", faqA4:"جی ہاں، سجدہ آپ کے مقام کے مطابق درست نماز اوقات اور 13 خوبصورت اذان آوازیں فراہم کرتا ہے۔ پانچوں نمازوں کے لیے الرٹس حاصل کریں اور Apple TV سکرین پر قبلہ کی سمت دیکھیں۔", faqQ5:"سجدہ کن زبانوں کو سپورٹ کرتا ہے؟", faqA5:"سجدہ 11 زبانوں کو سپورٹ کرتا ہے۔", faqQ6:"سجدہ کن آلات پر چلتا ہے؟", faqA6:"سجدہ Apple TV (tvOS) پر دستیاب ہے۔", faqQ7:"Apple TV پر قرآن کیسے سنیں؟", faqA7:"Apple TV پر App Store سے سجدہ ڈاؤن لوڈ کریں۔ 200 سے زائد قاریوں میں سے منتخب کریں اور آیت ٹریکنگ کے ساتھ سنیں۔", faqQ8:"Apple TV کے لیے بہترین قرآن ایپ؟", faqA8:"سجدہ Apple TV کے لیے سب سے زیادہ فیچرز والا قرآن ایپ ہے \u2014 200+ قاری، آیت ٹریکنگ، لائیو اسلامی ٹی وی چینلز، ریڈیو اسٹیشنز، سلیپ ٹائمر، حفظ کے لیے A-B ریپیٹ، 13 اذان آوازوں کے ساتھ نماز اوقات، قبلہ، فوکس موڈ، ترجمے، اسپیڈ کنٹرول اور خوبصورت تھیمز \u2014 سب بڑی سکرین پر۔", faqQ9:"کیا Apple TV پر نماز اوقات اور اذان مل سکتا ہے؟", faqA9:"جی ہاں، سجدہ آپ کے مقام کے مطابق درست نماز اوقات دکھاتا ہے اور پانچوں نمازوں کے لیے اذان دیتا ہے۔", faqQ10:"TV پر قرآن کیسے چلائیں؟", faqA10:"Apple TV پر سجدہ استعمال کریں۔ 200+ قاریوں سے خوبصورت پس منظر کے ساتھ قرآن سنیں۔", faqQ11:"کیا سجدہ آف لائن کام کرتا ہے؟", faqA11:"سجدہ بہترین کوالٹی کے لیے انٹرنیٹ سے قرآن سنواتا ہے۔ انٹرنیٹ کنکشن ضروری ہے۔", faqQ12:"کیا سجدہ میں لائیو ٹی وی اور ریڈیو ہے؟", faqA12:"جی ہاں، سجدہ لائیو اسلامی ٹی وی چینلز اور ایکولائزر کے ساتھ قرآن ریڈیو اسٹیشنز فراہم کرتا ہے۔ یہ پریمیم خصوصیات ہیں جو ایپ میں خریداری سے دستیاب ہیں۔", faqQ13:"کیا میں سجدہ کو قرآن حفظ کرنے کے لیے استعمال کر سکتا ہوں؟", faqA13:"جی ہاں! سجدہ میں A-B ریپیٹ ہے جو آپ کو حفظ کی مشق کے لیے مخصوص آیات دہرانے دیتا ہے۔ پلے بیک اسپیڈ کنٹرول (0.5x\u20132x)، ریپیٹ موڈز اور فوکس موڈ کے ساتھ یہ حفظ کا طاقتور ذریعہ ہے۔", liveTvTitle:"لائیو ٹی وی چینلز", liveTvDesc:"Apple TV پر لائیو اسلامی ٹی وی چینلز دیکھیں۔", radioTitle:"ریڈیو اسٹیشنز", radioDesc:"لائیو ایکولائزر کے ساتھ قرآن ریڈیو اسٹیشنز سنیں۔", sleepTitle:"سلیپ ٹائمر", sleepDesc:"تلاوت سنتے ہوئے سو جائیں۔ 15–60 منٹ یا سورت کا اختتام۔", memorizationTitle:"حفظ موڈ", memorizationDesc:"حفظ کی مشق کے لیے A-B ریپیٹ سے آیات دہرائیں۔", playerTitle:"طاقتور پلیئر", playerIntro:"بہترین سننے کے تجربے کے لیے ہر تفصیل ڈیزائن کی گئی۔", focusTitle:"فوکس موڈ", focusDesc:"فل سکرین آیت ڈسپلے۔ کوئی خلل نہیں۔", speedTitle:"پلے بیک اسپیڈ", speedDesc:"0.5x سے 2x تک۔ اپنی رفتار سے سیکھیں۔", translationTitle:"ترجمے", translationDesc:"اپنی زبان میں آیات کے ترجمے کے ساتھ پڑھیں۔", themesTitle:"تھیمز اور رنگ", themesDesc:"متعدد تھیمز، ایکسنٹ کلرز اور ڈارک موڈ۔", moreTitle:"اور بھی بہت کچھ", pillPlayAll:"سب چلائیں اور شفل", pillRepeat:"ریپیٹ موڈز", pill12Lang:"12 زبانیں", pillSearch:"سمارٹ سرچ", pillRecently:"حال ہی میں سنا", pillFeatured:"نمایاں قاری", pillMushaf:"متعدد مصاحف", pillAthanVoices:"13 اذان آوازیں", transformTitle:"آپ کا لاؤنج، نئے انداز میں", transformDesc:"اپنے Apple TV کو سکون کا ذریعہ بنائیں۔ چاہے آپ پڑھ رہے ہوں یا سن رہے ہوں، سجدہ قرآن کا تجربہ آپ کے گھر لاتا ہے۔", supportTitle:"سجدہ کی حمایت کریں", supportDesc:"سجدہ مفت ہے اور محبت سے بنایا گیا ہے۔ اگر آپ کو ایپ پسند ہے تو اس کی ترقی میں مدد کریں۔", supportCta:"مجھے ایک کافی پلائیں", footerSupport:"سپورٹ", footerPrivacy:"رازداری", footerContact:"رابطہ کریں", rights:"جملہ حقوق محفوظ ہیں۔" },
+        bn: { label:"বাংলা", screenshotsTitle:"অ্যাপটি দেখুন", heroSuffix:"Apple TV-তে কুরআন", tagline:"আপনার Apple TV-তে সুন্দর তিলাওয়াত এবং আয়াত-ভিত্তিক সিঙ্ক্রোনাইজেশনের সাথে পবিত্র কুরআন শুনুন।", badge:"Apple TV-তে উপলব্ধ", featuresTitle:"অ্যাপের বৈশিষ্ট্য", recitersTitle:"শত শত কারী", recitersDesc:"বিভিন্ন বর্ণনায় শত শত কারী থেকে বেছে নিন।", verseTitle:"আয়াত ট্র্যাকিং", verseDesc:"নির্ভুল আয়াত সিঙ্ক্রোনাইজেশনের সাথে অনুসরণ করুন।", bgTitle:"প্রশান্তিদায়ক পটভূমি", bgDesc:"শোনার সময় প্রকৃতির অ্যানিমেটেড পটভূমি উপভোগ করুন।", screenTitle:"বড় পর্দার জন্য ডিজাইন করা", screenDesc:"Apple TV-এর জন্য বিশেষভাবে তৈরি, সহজ নেভিগেশন এবং সুন্দর ইন্টারফেস সহ।", prayerTitle:"আপনার TV-তে নামাজের সময় ও আজান", prayerIntro:"কোনো নামাজ মিস করবেন না। সাজদা আপনার অবস্থান অনুযায়ী সঠিক সময় দেখায় এবং Apple TV-তে আজান দেয়।", prayerAccurate:"সঠিক নামাজের সময়", prayerAccurateDesc:"ফজর, যোহর, আসর, মাগরিব ও ইশার সঠিক সময় স্বয়ংক্রিয়ভাবে।", prayerAthan:"আজান সতর্কতা", prayerAthanDesc:"Apple TV-তে ১৩টি সুন্দর আজান কণ্ঠ থেকে বেছে নিন।", prayerQibla:"কিবলার দিক", prayerQiblaDesc:"বড় পর্দায় কিবলার দিক দেখুন।", faqTitle:"সচরাচর জিজ্ঞাসা", faqQ1:"সাজদা কী?", faqA1:"সাজদা Apple TV-এর জন্য একটি বিনামূল্যে কুরআন অ্যাপ যেখানে ২০০+ কারী, আয়াত ট্র্যাকিং, লাইভ ইসলামিক টিভি চ্যানেল, কুরআন রেডিও স্টেশন, স্লিপ টাইমার, হিফজের জন্য A-B রিপিট, ১৩টি আজান কণ্ঠ সহ নামাজের সময়, কিবলার দিক, প্লেব্যাক স্পিড, ফোকাস মোড, অনুবাদ এবং অ্যানিমেটেড পটভূমি রয়েছে \u2014 সবকিছু বড় পর্দার জন্য ডিজাইন করা।", faqQ2:"সাজদা কি বিনামূল্যে?", faqA2:"সাজদা বিনামূল্যে ডাউনলোড করা যায়। ২০০+ কারী দিয়ে কুরআন শোনা, আয়াত ট্র্যাকিং, সার্চ, ফেভারিট এবং প্লেব্যাক কন্ট্রোল সম্পূর্ণ বিনামূল্যে। লাইভ টিভি চ্যানেল, রেডিও স্টেশন, নামাজের সময়, আজান সতর্কতা এবং প্রিমিয়াম পটভূমির মতো প্রিমিয়াম ফিচার সাশ্রয়ী মূল্যে অ্যাপ-মধ্যস্থ ক্রয়ের মাধ্যমে পাওয়া যায়।", faqQ3:"কোন কারীরা পাওয়া যায়?", faqA3:"সাজদায় ২০০+ কারী বিভিন্ন রেওয়ায়েতে পাওয়া যায়।", faqQ4:"সাজদায় কি নামাজের সময় ও আজান আছে?", faqA4:"হ্যাঁ, সাজদায় আপনার অবস্থান অনুযায়ী সঠিক নামাজের সময় এবং বেছে নেওয়ার জন্য ১৩টি সুন্দর আজান কণ্ঠ রয়েছে। পাঁচ ওয়াক্ত নামাজের সতর্কতা পান এবং Apple TV স্ক্রিনে কিবলার দিক দেখুন।", faqQ5:"সাজদা কোন ভাষা সমর্থন করে?", faqA5:"সাজদা ১১টি ভাষা সমর্থন করে।", faqQ6:"সাজদা কোন ডিভাইসে চলে?", faqA6:"সাজদা Apple TV (tvOS)-এ পাওয়া যায়।", faqQ7:"Apple TV-তে কুরআন কীভাবে শুনবেন?", faqA7:"Apple TV-তে App Store থেকে সাজদা ডাউনলোড করুন। ২০০+ কারী থেকে বেছে নিন এবং আয়াত ট্র্যাকিং সহ শুনুন।", faqQ8:"Apple TV-র জন্য সেরা কুরআন অ্যাপ কোনটি?", faqA8:"সাজদা Apple TV-র জন্য সবচেয়ে ফিচার-সমৃদ্ধ কুরআন অ্যাপ \u2014 ২০০+ কারী, আয়াত ট্র্যাকিং, লাইভ ইসলামিক টিভি চ্যানেল, রেডিও স্টেশন, স্লিপ টাইমার, হিফজের জন্য A-B রিপিট, ১৩টি আজান কণ্ঠ সহ নামাজের সময়, কিবলা, ফোকাস মোড, অনুবাদ, স্পিড কন্ট্রোল এবং সুন্দর থিম \u2014 সবকিছু আপনার বড় পর্দায়।", faqQ9:"Apple TV-তে কি নামাজের সময় ও আজান পাওয়া যায়?", faqA9:"হ্যাঁ, সাজদা আপনার অবস্থান অনুযায়ী সঠিক সময় দেখায় এবং পাঁচ ওয়াক্তের আজান দেয়।", faqQ10:"TV-তে কুরআন কীভাবে চালাবেন?", faqA10:"Apple TV-তে সাজদা ব্যবহার করুন। ২০০+ কারী থেকে সুন্দর পটভূমি সহ কুরআন শুনুন।", faqQ11:"সাজদা কি অফলাইনে কাজ করে?", faqA11:"সাজদা সেরা মানের জন্য ইন্টারনেটের মাধ্যমে কুরআন স্ট্রিম করে। ইন্টারনেট সংযোগ প্রয়োজন।", faqQ12:"সাজদায় কি লাইভ টিভি ও রেডিও আছে?", faqA12:"হ্যাঁ, সাজদায় লাইভ ইসলামিক টিভি চ্যানেল এবং ইকুয়ালাইজার সহ কুরআন রেডিও স্টেশন রয়েছে। এগুলো প্রিমিয়াম ফিচার যা অ্যাপ-মধ্যস্থ ক্রয়ের মাধ্যমে পাওয়া যায়।", faqQ13:"সাজদা কি কুরআন মুখস্থ করতে ব্যবহার করা যায়?", faqA13:"হ্যাঁ! সাজদায় A-B রিপিট আছে যা হিফজ অনুশীলনের জন্য নির্দিষ্ট আয়াত লুপ করতে দেয়। প্লেব্যাক স্পিড কন্ট্রোল (০.৫x\u2013২x), রিপিট মোড এবং ফোকাস মোডের সাথে এটি মুখস্থ করার একটি শক্তিশালী টুল।", liveTvTitle:"লাইভ টিভি চ্যানেল", liveTvDesc:"Apple TV-তে সরাসরি ইসলামিক টিভি চ্যানেল দেখুন।", radioTitle:"রেডিও স্টেশন", radioDesc:"লাইভ ইকুয়ালাইজার সহ কুরআন রেডিও স্টেশন শুনুন।", sleepTitle:"স্লিপ টাইমার", sleepDesc:"তিলাওয়াত শুনতে শুনতে ঘুমান। ১৫–৬০ মিনিট বা সূরার শেষ।", memorizationTitle:"হিফজ মোড", memorizationDesc:"হিফজ অনুশীলনের জন্য A-B রিপিট দিয়ে আয়াত লুপ করুন।", playerTitle:"শক্তিশালী প্লেয়ার", playerIntro:"নিখুঁত শ্রবণ অভিজ্ঞতার জন্য প্রতিটি বিশদ ডিজাইন করা।", focusTitle:"ফোকাস মোড", focusDesc:"ফুল-স্ক্রিন আয়াত প্রদর্শন। কোনো বিভ্রান্তি নেই।", speedTitle:"প্লেব্যাক স্পিড", speedDesc:"০.৫x থেকে ২x। নিজের গতিতে শিখুন।", translationTitle:"অনুবাদ", translationDesc:"আপনার ভাষায় আয়াতের অনুবাদ অনুসরণ করুন।", themesTitle:"থিম ও রং", themesDesc:"একাধিক থিম, অ্যাকসেন্ট রং এবং ডার্ক মোড।", moreTitle:"আরও অনেক কিছু", pillPlayAll:"সব চালান ও শাফল", pillRepeat:"রিপিট মোড", pill12Lang:"১২টি ভাষা", pillSearch:"স্মার্ট সার্চ", pillRecently:"সম্প্রতি শোনা", pillFeatured:"বৈশিষ্ট্যযুক্ত কারী", pillMushaf:"একাধিক মুসহাফ", pillAthanVoices:"১৩টি আজান কণ্ঠ", transformTitle:"আপনার বসার ঘর, রূপান্তরিত", transformDesc:"আপনার Apple TV-কে প্রশান্তির উৎসে পরিণত করুন। পড়ুন বা শুনুন, সাজদা কুরআনের অভিজ্ঞতা আপনার ঘরে নিয়ে আসে।", supportTitle:"সাজদাকে সমর্থন করুন", supportDesc:"সাজদা বিনামূল্যে এবং ভালোবাসায় তৈরি। অ্যাপটি ভালো লাগলে এর উন্নয়নে সহায়তা করুন।", supportCta:"আমাকে একটি কফি কিনুন", footerSupport:"সাপোর্ট", footerPrivacy:"গোপনীয়তা", footerContact:"যোগাযোগ", rights:"সর্বস্বত্ব সংরক্ষিত।" },
+        id: { label:"Bahasa Indonesia", screenshotsTitle:"Lihat Aplikasi", heroSuffix:"Al-Quran untuk Apple TV", tagline:"Dengarkan Al-Quran di Apple TV Anda dengan bacaan indah dan sinkronisasi ayat per ayat.", badge:"Tersedia di Apple TV", featuresTitle:"Fitur Aplikasi", recitersTitle:"Ratusan Qari", recitersDesc:"Pilih dari ratusan qari dengan berbagai riwayat.", verseTitle:"Pelacakan Ayat", verseDesc:"Ikuti dengan sinkronisasi ayat yang tepat.", bgTitle:"Latar Belakang Menenangkan", bgDesc:"Nikmati latar belakang alam animasi saat mendengarkan.", screenTitle:"Dirancang untuk Layar Besar", screenDesc:"Dibuat khusus untuk Apple TV dengan navigasi intuitif dan antarmuka yang indah.", prayerTitle:"Waktu Shalat & Adzan di TV Anda", prayerIntro:"Jangan lewatkan shalat. Sajda menampilkan waktu shalat akurat dan memutar adzan di Apple TV.", prayerAccurate:"Waktu Shalat Akurat", prayerAccurateDesc:"Deteksi otomatis lokasi untuk Subuh, Dzuhur, Ashar, Maghrib, dan Isya.", prayerAthan:"Peringatan Adzan", prayerAthanDesc:"Pilih dari 13 suara adzan indah di Apple TV Anda.", prayerQibla:"Arah Kiblat", prayerQiblaDesc:"Lihat arah kiblat di layar besar Anda.", faqTitle:"Pertanyaan yang Sering Diajukan", faqQ1:"Apa itu Sajda?", faqA1:"Sajda adalah aplikasi Al-Quran gratis untuk Apple TV dengan 200+ qari, pelacakan ayat, siaran TV Islam langsung, stasiun radio Al-Quran, timer tidur, pengulangan A-B untuk hafalan, waktu shalat dengan 13 suara adzan, arah kiblat, kontrol kecepatan, mode fokus, terjemahan, dan latar belakang animasi \u2014 semuanya dirancang untuk layar besar Anda.", faqQ2:"Apakah Sajda gratis?", faqA2:"Sajda gratis diunduh. Mendengarkan Al-Quran dengan 200+ qari, pelacakan ayat, pencarian, favorit, dan kontrol pemutaran sepenuhnya gratis. Fitur premium seperti siaran TV langsung, stasiun radio, waktu shalat, peringatan adzan, dan latar belakang premium tersedia melalui pembelian dalam aplikasi yang terjangkau.", faqQ3:"Qari apa saja yang tersedia?", faqA3:"Sajda menyediakan 200+ qari dengan berbagai riwayat.", faqQ4:"Apakah Sajda memiliki waktu shalat dan adzan?", faqA4:"Ya, Sajda menyertakan waktu shalat akurat berdasarkan lokasi Anda dengan 13 suara adzan indah untuk dipilih. Dapatkan peringatan untuk lima waktu shalat dan lihat arah kiblat di layar Apple TV.", faqQ5:"Bahasa apa yang didukung Sajda?", faqA5:"Sajda mendukung 11 bahasa.", faqQ6:"Di perangkat apa Sajda berjalan?", faqA6:"Sajda tersedia di Apple TV (tvOS).", faqQ7:"Bagaimana mendengarkan Al-Quran di Apple TV?", faqA7:"Unduh Sajda dari App Store di Apple TV. Pilih dari 200+ qari dan dengarkan dengan pelacakan ayat.", faqQ8:"Apa aplikasi Al-Quran terbaik untuk Apple TV?", faqA8:"Sajda adalah aplikasi Al-Quran terlengkap untuk Apple TV \u2014 200+ qari, pelacakan ayat, siaran TV Islam langsung, stasiun radio, timer tidur, pengulangan A-B untuk hafalan, waktu shalat dengan 13 suara adzan, kiblat, mode fokus, terjemahan, kontrol kecepatan, dan tema indah \u2014 semuanya di layar besar Anda.", faqQ9:"Bisakah mendapatkan waktu shalat dan adzan di Apple TV?", faqA9:"Ya, Sajda menampilkan waktu shalat akurat dan memutar adzan untuk lima waktu shalat.", faqQ10:"Bagaimana memutar Al-Quran di TV?", faqA10:"Gunakan Sajda di Apple TV. Dengarkan dari 200+ qari dengan latar belakang indah.", faqQ11:"Apakah Sajda bisa offline?", faqA11:"Sajda streaming bacaan Al-Quran melalui internet untuk kualitas terbaik. Koneksi internet diperlukan.", faqQ12:"Apakah Sajda punya TV langsung dan radio?", faqA12:"Ya, Sajda menawarkan siaran TV Islam langsung dan stasiun radio Al-Quran dengan equalizer. Ini adalah fitur premium yang tersedia melalui pembelian dalam aplikasi.", faqQ13:"Bisakah Sajda digunakan untuk menghafal Al-Quran?", faqA13:"Ya! Sajda memiliki pengulangan A-B untuk menghafal ayat tertentu dalam praktik Hifz. Dengan kontrol kecepatan (0.5x\u20132x), mode pengulangan, dan mode fokus, ini adalah alat yang kuat untuk menghafal.", liveTvTitle:"Siaran TV Langsung", liveTvDesc:"Tonton siaran TV Islam langsung di Apple TV Anda.", radioTitle:"Stasiun Radio", radioDesc:"Streaming stasiun radio Al-Quran dengan equalizer langsung.", sleepTitle:"Timer Tidur", sleepDesc:"Tidur dengan bacaan. Atur 15–60 menit atau akhir surah.", memorizationTitle:"Mode Hafalan", memorizationDesc:"Pengulangan A-B untuk menghafal ayat dalam praktik Hifz.", playerTitle:"Pemutar Canggih", playerIntro:"Setiap detail dirancang untuk pengalaman mendengarkan yang sempurna.", focusTitle:"Mode Fokus", focusDesc:"Tampilan ayat layar penuh. Tanpa gangguan.", speedTitle:"Kecepatan Putar", speedDesc:"Dari 0.5x hingga 2x. Belajar sesuai kecepatan Anda.", translationTitle:"Terjemahan", translationDesc:"Ikuti terjemahan ayat dalam bahasa Anda.", themesTitle:"Tema & Warna", themesDesc:"Beragam tema, warna aksen, dan mode gelap.", moreTitle:"Dan Masih Banyak Lagi", pillPlayAll:"Putar Semua & Acak", pillRepeat:"Mode Pengulangan", pill12Lang:"12 Bahasa", pillSearch:"Pencarian Cerdas", pillRecently:"Terakhir Didengar", pillFeatured:"Qari Pilihan", pillMushaf:"Beragam Jenis Mushaf", pillAthanVoices:"13 Suara Adzan", transformTitle:"Ruang Tamu Anda, Berubah", transformDesc:"Ubah Apple TV Anda menjadi sumber ketenangan. Baik membaca maupun mendengarkan, Sajda membawa pengalaman Al-Quran ke rumah Anda.", supportTitle:"Dukung Sajda", supportDesc:"Sajda gratis dan dibuat dengan cinta. Jika Anda menikmati aplikasinya, pertimbangkan untuk mendukung pengembangannya.", supportCta:"Belikan Saya Kopi", footerSupport:"Dukungan", footerPrivacy:"Privasi", footerContact:"Kontak", rights:"Hak cipta dilindungi." },
+        ru: { label:"Русский", screenshotsTitle:"Посмотрите приложение", heroSuffix:"Коран для Apple TV", tagline:"Слушайте Священный Коран на Apple TV с прекрасными чтениями и точной синхронизацией аятов.", badge:"Доступно на Apple TV", featuresTitle:"Возможности", recitersTitle:"Сотни чтецов", recitersDesc:"Выбирайте из сотен чтецов с различными чтениями.", verseTitle:"Отслеживание аятов", verseDesc:"Следите с точной синхронизацией аятов.", bgTitle:"Успокаивающие фоны", bgDesc:"Наслаждайтесь анимированными природными фонами во время прослушивания.", screenTitle:"Для большого экрана", screenDesc:"Создано специально для Apple TV с интуитивной навигацией и красивым интерфейсом.", prayerTitle:"Время намаза и азан на вашем ТВ", prayerIntro:"Не пропустите намаз. Sajda показывает точное время и воспроизводит азан на Apple TV.", prayerAccurate:"Точное время намаза", prayerAccurateDesc:"Автоопределение местоположения для Фаджр, Зухр, Аср, Магриб и Иша.", prayerAthan:"Уведомления азана", prayerAthanDesc:"Выберите из 13 красивых голосов азана на Apple TV.", prayerQibla:"Направление Киблы", prayerQiblaDesc:"Видите направление Киблы на большом экране.", faqTitle:"Часто задаваемые вопросы", faqQ1:"Что такое Sajda?", faqA1:"Sajda \u2014 бесплатное приложение Корана для Apple TV с 200+ чтецами, отслеживанием аятов, исламскими ТВ-каналами в прямом эфире, радиостанциями Корана, таймером сна, повтором A-B для заучивания, временем намаза с 13 голосами азана, направлением Киблы, контролем скорости, режимом фокуса, переводами и анимированными фонами \u2014 всё для вашего большого экрана.", faqQ2:"Sajda бесплатен?", faqA2:"Sajda бесплатен для скачивания. Прослушивание Корана с 200+ чтецами, отслеживание аятов, поиск, избранное и управление воспроизведением полностью бесплатны. Премиум-функции \u2014 ТВ-каналы в прямом эфире, радиостанции, время намаза, уведомления азана и премиум-фоны \u2014 доступны через доступные встроенные покупки.", faqQ3:"Какие чтецы доступны?", faqA3:"Sajda предлагает более 200 чтецов с различными чтениями.", faqQ4:"Есть ли в Sajda время намаза и азан?", faqA4:"Да, Sajda включает точное время намаза по вашему местоположению с 13 красивыми голосами азана на выбор. Получайте уведомления для пяти ежедневных намазов и видьте направление Киблы на экране Apple TV.", faqQ5:"Какие языки поддерживает Sajda?", faqA5:"Sajda поддерживает 11 языков.", faqQ6:"На каких устройствах работает Sajda?", faqA6:"Sajda доступен на Apple TV (tvOS).", faqQ7:"Как слушать Коран на Apple TV?", faqA7:"Скачайте Sajda из App Store на Apple TV. Выберите из 200+ чтецов и слушайте с отслеживанием аятов.", faqQ8:"Лучшее приложение Корана для Apple TV?", faqA8:"Sajda \u2014 самое функциональное приложение Корана для Apple TV: 200+ чтецов, отслеживание аятов, исламские ТВ-каналы в прямом эфире, радиостанции, таймер сна, повтор A-B для заучивания, время намаза с 13 голосами азана, Кибла, режим фокуса, переводы, контроль скорости и красивые темы \u2014 всё на вашем большом экране.", faqQ9:"Можно ли получить время намаза на Apple TV?", faqA9:"Да, Sajda показывает точное время и воспроизводит азан для пяти ежедневных намазов.", faqQ10:"Как слушать Коран на телевизоре?", faqA10:"Используйте Sajda на Apple TV. 200+ чтецов с красивыми фонами и отслеживанием аятов.", faqQ11:"Работает ли Sajda офлайн?", faqA11:"Sajda транслирует чтения через интернет для лучшего качества. Требуется подключение к интернету.", faqQ12:"Есть ли в Sajda прямой эфир ТВ и радио?", faqA12:"Да, Sajda предлагает исламские ТВ-каналы в прямом эфире и радиостанции Корана с эквалайзером. Это премиум-функции, доступные через встроенные покупки.", faqQ13:"Можно ли использовать Sajda для заучивания Корана?", faqA13:"Да! В Sajda есть повтор A-B для циклического повторения конкретных аятов для практики Хифз. В сочетании с контролем скорости (0.5x\u20132x), режимами повтора и режимом фокуса \u2014 это мощный инструмент для заучивания.", liveTvTitle:"Прямой эфир ТВ", liveTvDesc:"Смотрите исламские ТВ-каналы в прямом эфире на Apple TV.", radioTitle:"Радиостанции", radioDesc:"Слушайте радиостанции Корана с живым эквалайзером.", sleepTitle:"Таймер сна", sleepDesc:"Засыпайте под чтение. 15–60 мин или конец суры.", memorizationTitle:"Режим заучивания", memorizationDesc:"Повтор A-B для заучивания аятов и практики Хифз.", playerTitle:"Мощный плеер", playerIntro:"Каждая деталь создана для идеального прослушивания.", focusTitle:"Режим фокуса", focusDesc:"Полноэкранное отображение аятов. Без отвлечений.", speedTitle:"Скорость воспроизведения", speedDesc:"От 0.5x до 2x. Учитесь в своём темпе.", translationTitle:"Переводы", translationDesc:"Следите за переводом аятов на вашем языке.", themesTitle:"Темы и цвета", themesDesc:"Несколько тем, акцентных цветов и тёмный режим.", moreTitle:"И многое другое", pillPlayAll:"Воспроизвести всё", pillRepeat:"Режимы повтора", pill12Lang:"12 языков", pillSearch:"Умный поиск", pillRecently:"Недавно слушали", pillFeatured:"Избранные чтецы", pillMushaf:"Несколько типов Мусхафа", pillAthanVoices:"13 голосов азана", transformTitle:"Ваша гостиная преобразилась", transformDesc:"Превратите Apple TV в источник спокойствия. Читайте или слушайте — Sajda приносит опыт Корана в ваш дом.", supportTitle:"Поддержите Sajda", supportDesc:"Sajda бесплатен и создан с любовью. Если вам нравится приложение, поддержите его развитие.", supportCta:"Угостите меня кофе", footerSupport:"Поддержка", footerPrivacy:"Конфиденциальность", footerContact:"Контакт", rights:"Все права защищены." },
+        sv: { label:"Svenska", screenshotsTitle:"Se appen", heroSuffix:"Koranen för Apple TV", tagline:"Lyssna på den heliga Koranen på din Apple TV med vackra recitationer och exakt verssynkronisering.", badge:"Tillgänglig på Apple TV", featuresTitle:"Funktioner", recitersTitle:"Hundratals recitatörer", recitersDesc:"Välj bland hundratals recitatörer med olika berättelser.", verseTitle:"Versspårning", verseDesc:"Följ med exakt verssynkronisering.", bgTitle:"Lugnande bakgrunder", bgDesc:"Njut av animerade naturbakgrunder medan du lyssnar.", screenTitle:"Designad för storbildsskärm", screenDesc:"Specialbyggd för Apple TV med intuitiv navigering och ett vackert gränssnitt.", prayerTitle:"Bönetider och adhan på din TV", prayerIntro:"Missa aldrig en bön. Sajda visar exakta bönetider och spelar adhan på din Apple TV.", prayerAccurate:"Exakta bönetider", prayerAccurateDesc:"Automatisk platsdetektering för Fajr, Dhuhr, Asr, Maghrib och Isha.", prayerAthan:"Adhan-varningar", prayerAthanDesc:"Välj bland 13 vackra adhan-röster på din Apple TV.", prayerQibla:"Qibla-riktning", prayerQiblaDesc:"Se Qibla-riktningen på din stora skärm.", faqTitle:"Vanliga frågor", faqQ1:"Vad är Sajda?", faqA1:"Sajda är en gratis Koran-app för Apple TV med 200+ recitatörer, versspårning, islamiska TV-kanaler live, Koran-radiostationer, sovtimer, A-B-upprepning för memorering, bönetider med 13 adhan-röster, Qibla-riktning, hastighetskontroll, fokusläge, översättningar och animerade bakgrunder \u2014 allt designat för din stora skärm.", faqQ2:"Är Sajda gratis?", faqA2:"Sajda är gratis att ladda ner. Att lyssna på Koranen med 200+ recitatörer, versspårning, sökning, favoriter och uppspelningskontroller är helt gratis. Premiumfunktioner som live TV-kanaler, radiostationer, bönetider, adhan-varningar och premiumbakgrunder finns via prisvärda köp i appen.", faqQ3:"Vilka recitatörer finns?", faqA3:"Sajda erbjuder 200+ recitatörer med olika berättelser.", faqQ4:"Har Sajda bönetider och adhan?", faqA4:"Ja, Sajda visar exakta bönetider baserat på din plats med 13 vackra adhan-röster att välja mellan. Få varningar för alla fem dagliga böner och se Qibla-riktningen på din Apple TV-skärm.", faqQ5:"Vilka språk stöder Sajda?", faqA5:"Sajda stöder 11 språk.", faqQ6:"På vilka enheter fungerar Sajda?", faqA6:"Sajda finns på Apple TV (tvOS).", faqQ7:"Hur lyssnar man på Koranen på Apple TV?", faqA7:"Ladda ner Sajda från App Store på din Apple TV. Välj bland 200+ recitatörer och lyssna med versspårning.", faqQ8:"Bästa Koran-appen för Apple TV?", faqA8:"Sajda är den mest funktionsrika Koran-appen för Apple TV \u2014 200+ recitatörer, versspårning, islamiska TV-kanaler live, radiostationer, sovtimer, A-B-upprepning för memorering, bönetider med 13 adhan-röster, Qibla, fokusläge, översättningar, hastighetskontroll och vackra teman \u2014 allt på din stora skärm.", faqQ9:"Kan man få bönetider på Apple TV?", faqA9:"Ja, Sajda visar exakta bönetider och spelar adhan för alla fem dagliga böner.", faqQ10:"Hur spelar man Koranen på TV?", faqA10:"Använd Sajda på Apple TV. 200+ recitatörer med vackra bakgrunder och versspårning.", faqQ11:"Fungerar Sajda offline?", faqA11:"Sajda streamar recitationer via internet för bästa kvalitet. Internetanslutning krävs.", faqQ12:"Har Sajda live-TV och radio?", faqA12:"Ja, Sajda erbjuder islamiska TV-kanaler live och Koran-radiostationer med equalizer. Dessa är premiumfunktioner tillgängliga via köp i appen.", faqQ13:"Kan jag använda Sajda för att memorera Koranen?", faqA13:"Ja! Sajda har A-B-upprepning som låter dig loopa specifika verser för Hifz-övning. Tillsammans med hastighetskontroll (0.5x\u20132x), upprepningslägen och fokusläge är det ett kraftfullt verktyg för memorering.", liveTvTitle:"Live TV-kanaler", liveTvDesc:"Se islamiska TV-kanaler live på din Apple TV.", radioTitle:"Radiostationer", radioDesc:"Streama Koran-radiostationer med live-equalizer.", sleepTitle:"Sovtimer", sleepDesc:"Somna till recitation. Ställ in 15–60 min eller surans slut.", memorizationTitle:"Memoreringsläge", memorizationDesc:"A-B-upprepning för att öva Hifz med verser i loop.", playerTitle:"Kraftfull spelare", playerIntro:"Varje detalj designad för den perfekta lyssningsupplevelsen.", focusTitle:"Fokusläge", focusDesc:"Helskärmsvisning av verser. Inga distraktioner.", speedTitle:"Uppspelningshastighet", speedDesc:"Från 0.5x till 2x. Lär dig i din egen takt.", translationTitle:"Översättningar", translationDesc:"Följ med i versöversättningar på ditt språk.", themesTitle:"Teman och färger", themesDesc:"Flera teman, accentfärger och mörkt läge.", moreTitle:"Och mycket mer", pillPlayAll:"Spela alla och blanda", pillRepeat:"Upprepningslägen", pill12Lang:"12 språk", pillSearch:"Smart sökning", pillRecently:"Nyligen lyssnat", pillFeatured:"Utvalda recitatörer", pillMushaf:"Flera Mushaf-typer", pillAthanVoices:"13 adhan-röster", transformTitle:"Ditt vardagsrum, förvandlat", transformDesc:"Förvandla din Apple TV till en källa av lugn. Oavsett om du läser eller lyssnar, ger Sajda Koran-upplevelsen hem till dig.", supportTitle:"Stöd Sajda", supportDesc:"Sajda är gratis och gjord med kärlek. Om du gillar appen, överväg att stödja dess utveckling.", supportCta:"Köp mig en kaffe", footerSupport:"Support", footerPrivacy:"Integritet", footerContact:"Kontakt", rights:"Alla rättigheter förbehållna." },
+        zh: { label:"中文", screenshotsTitle:"查看应用", heroSuffix:"Apple TV 上的古兰经", tagline:"在 Apple TV 上聆听古兰经，配有优美的诵读和逐节同步功能。", badge:"可在 Apple TV 上使用", featuresTitle:"应用功能", recitersTitle:"数百位诵读者", recitersDesc:"从数百位不同传述版本的诵读者中选择。", verseTitle:"经文跟踪", verseDesc:"通过精确的经文同步跟随。", bgTitle:"宁静背景", bgDesc:"聆听时享受动态自然背景。", screenTitle:"专为大屏设计", screenDesc:"专为 Apple TV 打造，直观导航和精美界面。", prayerTitle:"您电视上的祈祷时间和唤礼", prayerIntro:"不错过任何祈祷。Sajda 显示您所在位置的准确祈祷时间，并在 Apple TV 上播放唤礼。", prayerAccurate:"准确的祈祷时间", prayerAccurateDesc:"自动检测位置以获取晨礼、晌礼、晡礼、昏礼和宵礼的准确时间。", prayerAthan:"唤礼提醒", prayerAthanDesc:"在 Apple TV 上从 13 种优美的唤礼声中选择。", prayerQibla:"朝拜方向", prayerQiblaDesc:"在大屏幕上查看朝拜方向。", faqTitle:"常见问题", faqQ1:"Sajda 是什么？", faqA1:"Sajda 是 Apple TV 上的免费古兰经应用，提供 200+ 诵读者、逐节同步、伊斯兰电视直播频道、古兰经电台、睡眠定时器、A-B 重复背诵、13 种唤礼声的祈祷时间、朝拜方向、播放速度控制、专注模式、翻译和动画背景 \u2014 一切为大屏幕而设计。", faqQ2:"Sajda 免费吗？", faqA2:"Sajda 免费下载。使用 200+ 诵读者收听古兰经、逐节同步、搜索、收藏和播放控制完全免费。高级功能如电视直播频道、电台、祈祷时间、唤礼提醒和高级背景可通过实惠的应用内购买获得。", faqQ3:"有哪些诵读者？", faqA3:"Sajda 提供 200 多位不同传述版本的诵读者。", faqQ4:"Sajda 有祈祷时间和唤礼吗？", faqA4:"是的，Sajda 根据您的位置提供准确的祈祷时间，并有 13 种优美的唤礼声可供选择。获取五次每日祈祷的提醒，并在 Apple TV 屏幕上查看朝拜方向。", faqQ5:"Sajda 支持哪些语言？", faqA5:"Sajda 支持 11 种语言。", faqQ6:"Sajda 在哪些设备上运行？", faqA6:"Sajda 可在 Apple TV (tvOS) 上使用。", faqQ7:"如何在 Apple TV 上听古兰经？", faqA7:"从 Apple TV 的 App Store 下载 Sajda。从 200 多位诵读者中选择，配合经文跟踪聆听。", faqQ8:"Apple TV 最好的古兰经应用是什么？", faqA8:"Sajda 是 Apple TV 上功能最丰富的古兰经应用 \u2014 200+ 诵读者、逐节同步、伊斯兰电视直播频道、电台、睡眠定时器、A-B 重复背诵、13 种唤礼声的祈祷时间、朝拜方向、专注模式、翻译、播放速度控制和精美主题 \u2014 一切尽在大屏幕上。", faqQ9:"Apple TV 上能获取祈祷时间和唤礼吗？", faqA9:"是的，Sajda 根据您的位置显示准确的祈祷时间，并为五次每日祈祷播放唤礼。", faqQ10:"如何在电视上播放古兰经？", faqA10:"在 Apple TV 上使用 Sajda。200 多位诵读者配以美丽背景和经文跟踪。", faqQ11:"Sajda 可以离线使用吗？", faqA11:"Sajda 通过互联网流式播放古兰经以获得最佳质量。需要互联网连接。", faqQ12:"Sajda 有电视直播和电台吗？", faqA12:"是的，Sajda 提供伊斯兰电视直播频道和带均衡器的古兰经电台。这些是通过应用内购买获得的高级功能。", faqQ13:"可以用 Sajda 背诵古兰经吗？", faqA13:"可以！Sajda 有 A-B 重复功能，可以循环特定经文练习背诵。配合播放速度控制（0.5x\u20132x）、重复模式和专注模式，是强大的背诵工具。", liveTvTitle:"电视直播频道", liveTvDesc:"在 Apple TV 上观看伊斯兰电视直播频道。", radioTitle:"电台", radioDesc:"收听古兰经电台，配有实时均衡器。", sleepTitle:"睡眠定时器", sleepDesc:"伴着诵读入睡。设置 15-60 分钟或章节结束。", memorizationTitle:"背诵模式", memorizationDesc:"A-B 重复循环经文，练习背诵。", playerTitle:"强大播放器", playerIntro:"每个细节都为完美的聆听体验而设计。", focusTitle:"专注模式", focusDesc:"全屏经文显示，零干扰。", speedTitle:"播放速度", speedDesc:"0.5x 到 2x，按自己的节奏学习。", translationTitle:"翻译", translationDesc:"用您的语言跟随经文翻译。", themesTitle:"主题与颜色", themesDesc:"多种主题、强调色和深色模式。", moreTitle:"还有更多", pillPlayAll:"全部播放和随机", pillRepeat:"重复模式", pill12Lang:"12 种语言", pillSearch:"智能搜索", pillRecently:"最近收听", pillFeatured:"精选诵读者", pillMushaf:"多种经本类型", pillAthanVoices:"13 种唤礼声", transformTitle:"改变您的客厅", transformDesc:"将您的 Apple TV 变成宁静之源。无论是阅读还是聆听，Sajda 将古兰经体验带入您的家中。", supportTitle:"支持 Sajda", supportDesc:"Sajda 免费且用心制作。如果您喜欢这个应用，请考虑支持它的开发。", supportCta:"请我喝杯咖啡", footerSupport:"支持", footerPrivacy:"隐私", footerContact:"联系", rights:"版权所有。" }
     };
 
     var rtl = ['ar','ur'];
@@ -413,11 +987,34 @@
     buildDropdown();
     apply();
 
+    // FAQ toggle
     document.querySelectorAll('.faq-q').forEach(function(q) {
         q.addEventListener('click', function() {
             this.parentElement.classList.toggle('open');
         });
     });
+
+    // Intersection Observer for scroll animations
+    (function() {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) {
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                el.classList.add('visible');
+            });
+            return;
+        }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
     </script>
 </body>
 </html>
