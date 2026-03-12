@@ -1,0 +1,43 @@
+# Sajda - Quran for Apple TV
+
+> Sajda is the most feature-rich Quran app for Apple TV (tvOS). Free to download with 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and stunning animated backgrounds.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/sajda/)
+- [App Store](https://apps.apple.com/us/app/sajdatv/id6759179587)
+- [Support](https://yoloabdo.com/sajda/support/)
+- [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
+
+## Key Features
+
+- **200+ Quran Reciters** with multiple narrations (Hafs, Warsh, and others)
+- **Verse-by-Verse Sync** with precise ayah tracking
+- **Live Islamic TV Channels** (premium)
+- **Quran Radio Stations** with live equalizer (premium)
+- **Sleep Timer** with 15-60 min or end-of-surah options
+- **A-B Repeat** for Hifz (Quran memorization) practice
+- **Prayer Times** with automatic location detection for Fajr, Dhuhr, Asr, Maghrib, and Isha
+- **13 Athan Voices** to choose from (premium)
+- **Qibla Direction** compass on your TV screen
+- **Focus Mode** for distraction-free full-screen verse display
+- **Translations** in multiple languages
+- **Playback Speed** from 0.5x to 2x
+- **Calming Backgrounds** with animated nature scenes
+- **Themes & Colors** with multiple accent colors and dark mode
+- **12 Languages** supported: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, Chinese
+
+## Pricing
+
+- Free: Quran listening, 200+ reciters, verse sync, search, favorites, playback controls
+- Premium (in-app purchase): Live TV, Radio, Prayer Times, Athan Alerts, Premium Backgrounds
+
+## Platform
+
+- Apple TV (tvOS) only
+- Requires internet connection for streaming
+
+## Developer
+
+- Built by Abdo Elrhman
+- Contact: abdoelrhman.eaita@gmail.com
