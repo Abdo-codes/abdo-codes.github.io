@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Tally</title>
+    <meta name="description" content="Get help with Tally, the scoreboard app for Apple TV. FAQ and contact information.">
+    <link rel="canonical" href="https://yoloabdo.com/tally/support/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A0A0F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0A0A0F;
+            --surface: #16161F;
+            --text: #F5F5F0;
+            --text-dim: #8A8A9A;
+            --text-muted: #6B6B7B;
+            --accent: #E85D3A;
+            --divider: #2A2A38;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover { opacity: 0.8; }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-brand {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-sep {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .nav-page {
+            color: var(--text-dim);
+            font-size: 16px;
+        }
+
+        main {
+            padding: 80px 0 120px;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 5vw, 48px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .support-intro {
+            color: var(--text-dim);
+            font-size: 20px;
+            margin-bottom: 64px;
+            max-width: 560px;
+        }
+
+        /* Contact card */
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin-bottom: 64px;
+        }
+
+        .contact-card h2 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg);
+            border: 1px solid var(--divider);
+            border-radius: 10px;
+            padding: 14px 24px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 17px;
+            transition: border-color 0.2s;
+        }
+
+        .contact-email:hover {
+            border-color: var(--accent);
+            opacity: 1;
+        }
+
+        .contact-email svg {
+            flex-shrink: 0;
+        }
+
+        /* FAQ */
+        h2.faq-heading {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+        }
+
+        .faq-list {
+            margin-bottom: 64px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item summary {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 24px 0;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .faq-item summary:hover {
+            color: var(--accent);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding-bottom: 24px;
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Tips */
+        .tips-section h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .tip-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tip-list li {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .tip-list li strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--divider);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-content p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-content a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .footer-content a:hover { color: var(--text); }
+
+        @media (max-width: 600px) {
+            main { padding: 48px 0 80px; }
+            .contact-card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/tally/" class="nav-brand">Tally</a>
+            <span class="nav-sep">/</span>
+            <span class="nav-page">Support</span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Support</h1>
+            <p class="support-intro">Need help with Tally? Check the FAQ below or reach out directly.</p>
+
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p>Have a question, found a bug, or want to request a feature? Send an email and you'll hear back within 48 hours.</p>
+                <a href="mailto:abdoelrhman.eaita@gmail.com" class="contact-email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    abdoelrhman.eaita@gmail.com
+                </a>
+            </div>
+
+            <h2 class="faq-heading">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What sports does Tally support?</summary>
+                    <div class="faq-answer">
+                        Tally supports 6 sports with full scoring rules: Basketball (4 quarters), Soccer (2 halves), Tennis (best of 3 sets), Ping Pong (best of 5 games), Volleyball (best of 3 sets), and a Generic mode for any custom game.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Which Apple TV models are supported?</summary>
+                    <div class="faq-answer">
+                        Tally requires tvOS 17 or later and works on both Apple TV 4K (all generations) and Apple TV HD.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I customize team names?</summary>
+                    <div class="faq-answer">
+                        Yes. When starting a new game, you can set custom names for both teams in the setup screen.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I access the controls during a game?</summary>
+                    <div class="faq-answer">
+                        Press the Menu button on your Siri Remote to show the controls overlay. From there you can undo, adjust the timer, switch periods, and more.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Does Tally support VoiceOver?</summary>
+                    <div class="faq-answer">
+                        Yes. Tally has full VoiceOver support throughout the app. It also respects the Reduce Motion accessibility setting.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I turn off the sound effects?</summary>
+                    <div class="faq-answer">
+                        Yes. You can mute score sounds, the timer buzzer, and the game over fanfare from the controls overlay.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Is there a subscription?</summary>
+                    <div class="faq-answer">
+                        No. Tally is a one-time purchase of $9.99. No ads, no subscriptions, no in-app purchases. You pay once and own it forever.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Does Tally collect my data?</summary>
+                    <div class="faq-answer">
+                        Tally collects only anonymous usage analytics via Firebase to help improve the app. No personal data is ever collected. Read our full <a href="/tally/privacy/">Privacy Policy</a> for details.
+                    </div>
+                </details>
+            </div>
+
+            <div class="tips-section">
+                <h2>Quick Tips</h2>
+                <ul class="tip-list">
+                    <li><strong>Undo a mistake:</strong> Press Menu to open the controls overlay, then select Undo to revert the last score change.</li>
+                    <li><strong>Switch appearance:</strong> Tally follows your Apple TV system appearance. Go to Settings &gt; General &gt; Appearance to switch between Light and Dark.</li>
+                    <li><strong>Navigate quickly:</strong> Swipe on the Siri Remote touchpad to move between score buttons. Click to increment.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Abdelrahman Eita</p>
+                <a href="/tally/">Back to Tally</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

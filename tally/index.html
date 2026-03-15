@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally — The Scoreboard Your Living Room Deserves</title>
+    <meta name="description" content="Tally is a premium scoreboard app for Apple TV. Track basketball, soccer, tennis, ping pong, volleyball, and more with giant scores designed for the 10-foot experience.">
+    <link rel="canonical" href="https://yoloabdo.com/tally/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/tally/">
+    <meta property="og:title" content="Tally — The Scoreboard Your Living Room Deserves">
+    <meta property="og:description" content="A premium scoreboard app for Apple TV. 6 sports, giant scores, full control. $9.99 one-time.">
+    <meta property="og:site_name" content="Tally">
+    <meta property="og:image" content="https://yoloabdo.com/images/tally/hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tally — The Scoreboard Your Living Room Deserves">
+    <meta name="twitter:description" content="A premium scoreboard app for Apple TV. 6 sports, giant scores, full control. $9.99 one-time.">
+    <meta name="twitter:image" content="https://yoloabdo.com/images/tally/hero.png">
+
+    <!-- Apple Smart App Banner (placeholder app ID — update when live) -->
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX">
+
+    <meta name="theme-color" content="#0A0A0F">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Abdelrahman Eita">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tally",
+        "description": "A premium scoreboard app for Apple TV. Track 6 sports with giant scores designed for the 10-foot experience.",
+        "operatingSystem": "tvOS",
+        "applicationCategory": "SportsApplication",
+        "url": "https://yoloabdo.com/tally/",
+        "screenshot": "https://yoloabdo.com/images/tally/hero.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "category": "paid"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Abdelrahman Eita"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "1"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           TOKENS
+           ============================================ */
+        :root {
+            --bg: #0A0A0F;
+            --surface: #16161F;
+            --surface-secondary: #1E1E2A;
+            --text: #F5F5F0;
+            --text-dim: #8A8A9A;
+            --text-muted: #6B6B7B;
+            --accent: #E85D3A;
+            --success: #4CAF7D;
+            --divider: #2A2A38;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes scoreFlash {
+            0% { color: var(--text); }
+            25% { color: var(--accent); }
+            100% { color: var(--text); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============================================
+           NAV
+           ============================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 0;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--divider);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+        }
+
+        .nav-brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        .nav-brand span {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            opacity: 1;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin: 0 auto 40px;
+            box-shadow: 0 20px 60px rgba(232, 93, 58, 0.15);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(80px, 12vw, 160px);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 0.9;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: clamp(20px, 3vw, 28px);
+            color: var(--text-dim);
+            font-weight: 400;
+            margin-bottom: 48px;
+            line-height: 1.4;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 64px;
+            flex-wrap: wrap;
+        }
+
+        .badge-link {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .badge-link:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .badge-link img {
+            height: 54px;
+        }
+
+        .platform-note {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .platform-note svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+        .hero-screenshot {
+            max-width: 960px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--divider);
+        }
+
+        .hero-screenshot img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ============================================
+           SECTION HEADER
+           ============================================ */
+        .section-label {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-dim);
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-header--center {
+            text-align: center;
+        }
+
+        .section-header--center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============================================
+           FEATURES GRID
+           ============================================ */
+        .features {
+            background: var(--bg);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 36px 32px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: block;
+            width: 56px;
+            height: 56px;
+            background: var(--surface-secondary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           SCOREBOARD PREVIEW
+           ============================================ */
+        .scoreboard-section {
+            background: var(--surface);
+            border-top: 1px solid var(--divider);
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .scoreboard-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .scoreboard-preview {
+            background: var(--bg);
+            border: 1px solid var(--divider);
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .scoreboard-sport {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .scoreboard-period {
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .scoreboard-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .scoreboard-team {
+            text-align: center;
+        }
+
+        .scoreboard-team-name {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+        }
+
+        .scoreboard-score {
+            font-family: var(--font-heading);
+            font-size: clamp(64px, 10vw, 96px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .scoreboard-divider {
+            font-family: var(--font-heading);
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 300;
+            color: var(--text-muted);
+        }
+
+        .scoreboard-timer {
+            margin-top: 24px;
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .scoreboard-screenshot {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--divider);
+        }
+
+        .scoreboard-screenshot img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ============================================
+           SPORTS GRID
+           ============================================ */
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .sport-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 14px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .sport-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .sport-emoji {
+            font-size: 36px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .sport-card h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+
+        .sport-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ============================================
+           PRICING
+           ============================================ */
+        .pricing {
+            text-align: center;
+        }
+
+        .price-tag {
+            font-family: var(--font-heading);
+            font-size: clamp(80px, 12vw, 140px);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        .price-tag .dollar {
+            font-size: 0.5em;
+            vertical-align: super;
+            color: var(--accent);
+        }
+
+        .pricing-note {
+            font-size: 22px;
+            color: var(--text-dim);
+            max-width: 500px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+
+        .pricing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 100px;
+            padding: 14px 28px;
+            font-size: 15px;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+
+        .pricing-badge .check {
+            color: var(--success);
+            font-size: 18px;
+        }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq {
+            background: var(--surface);
+            border-top: 1px solid var(--divider);
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item summary {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 24px 0;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .faq-item summary:hover {
+            color: var(--accent);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding-bottom: 24px;
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--divider);
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .scoreboard-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sports-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 64px 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sports-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .scoreboard-display {
+                gap: 16px;
+            }
+
+            .scoreboard-preview {
+                padding: 32px 20px;
+            }
+
+            .hero-icon {
+                width: 72px;
+                height: 72px;
+                border-radius: 16px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         NAV
+         ========================================== -->
+    <nav id="nav">
+        <div class="container">
+            <a href="/tally/" class="nav-brand">
+                <img src="/images/tally/icon.png" alt="Tally app icon" width="36" height="36">
+                <span>Tally</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="/images/tally/icon.png" alt="Tally app icon" class="hero-icon" width="100" height="100">
+                <h1 class="hero-title">Tally</h1>
+                <p class="hero-tagline">The scoreboard your living room deserves.</p>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/app/id0000000000" class="badge-link" aria-label="Download on the App Store">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" height="54">
+                    </a>
+                    <span class="platform-note">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                        Available on Apple TV
+                    </span>
+                </div>
+                <div class="hero-screenshot reveal">
+                    <img src="/images/tally/hero.png" alt="Tally scoreboard app running on Apple TV showing a basketball game" width="960" height="540">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURES
+         ========================================== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">Built for the Big Screen</p>
+                <h2 class="section-title reveal reveal-delay-1">Everything you need.<br>Nothing you don't.</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <span class="feature-icon" aria-hidden="true">&#127936;</span>
+                    <h3>6 Sports</h3>
+                    <p>Basketball, Soccer, Tennis, Ping Pong, Volleyball, and a Generic mode for anything else.</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-1">
+                    <span class="feature-icon" aria-hidden="true">&#128290;</span>
+                    <h3>Giant Scores</h3>
+                    <p>Readable from across the room. Designed for the 10-foot experience.</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-2">
+                    <span class="feature-icon" aria-hidden="true">&#127918;</span>
+                    <h3>Full Control</h3>
+                    <p>Undo, timers, period tracking. Press Menu for the controls overlay.</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-3">
+                    <span class="feature-icon" aria-hidden="true">&#127761;</span>
+                    <h3>Dark &amp; Light</h3>
+                    <p>Follows your Apple TV appearance. OLED-friendly dark mode included.</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-4">
+                    <span class="feature-icon" aria-hidden="true">&#128266;</span>
+                    <h3>Audio Feedback</h3>
+                    <p>Score sounds, timer buzzer, game over fanfare. Mute anytime.</p>
+                </div>
+                <div class="feature-card reveal reveal-delay-5">
+                    <span class="feature-icon" aria-hidden="true">&#9855;</span>
+                    <h3>Accessibility</h3>
+                    <p>Full VoiceOver support. Reduce Motion respected. Everyone plays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SCOREBOARD PREVIEW
+         ========================================== -->
+    <section class="scoreboard-section" id="scoreboard">
+        <div class="container">
+            <div class="scoreboard-layout">
+                <div class="reveal">
+                    <p class="section-label">Live Preview</p>
+                    <h2 class="section-title">Designed to be<br>seen from the couch.</h2>
+                    <p class="section-subtitle">Giant typography. Clear contrast. Every detail optimized for a TV across the room.</p>
+                </div>
+                <div class="scoreboard-preview reveal reveal-delay-2">
+                    <p class="scoreboard-sport">Basketball</p>
+                    <p class="scoreboard-period">Q4 &middot; 02:41</p>
+                    <div class="scoreboard-display">
+                        <div class="scoreboard-team">
+                            <p class="scoreboard-team-name">Home</p>
+                            <p class="scoreboard-score" id="score-home">47</p>
+                        </div>
+                        <span class="scoreboard-divider">:</span>
+                        <div class="scoreboard-team">
+                            <p class="scoreboard-team-name">Away</p>
+                            <p class="scoreboard-score" id="score-away">38</p>
+                        </div>
+                    </div>
+                    <p class="scoreboard-timer">02:41</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SPORTS GRID
+         ========================================== -->
+    <section id="sports">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">Your Sport, Your Rules</p>
+                <h2 class="section-title reveal reveal-delay-1">Pick your game.</h2>
+            </div>
+            <div class="sports-grid">
+                <div class="sport-card reveal">
+                    <span class="sport-emoji" aria-hidden="true">&#127936;</span>
+                    <h3>Basketball</h3>
+                    <p>4 Quarters</p>
+                </div>
+                <div class="sport-card reveal reveal-delay-1">
+                    <span class="sport-emoji" aria-hidden="true">&#9917;</span>
+                    <h3>Soccer</h3>
+                    <p>2 Halves</p>
+                </div>
+                <div class="sport-card reveal reveal-delay-2">
+                    <span class="sport-emoji" aria-hidden="true">&#127934;</span>
+                    <h3>Tennis</h3>
+                    <p>Best of 3</p>
+                </div>
+                <div class="sport-card reveal reveal-delay-3">
+                    <span class="sport-emoji" aria-hidden="true">&#127955;</span>
+                    <h3>Ping Pong</h3>
+                    <p>Best of 5</p>
+                </div>
+                <div class="sport-card reveal reveal-delay-4">
+                    <span class="sport-emoji" aria-hidden="true">&#127952;</span>
+                    <h3>Volleyball</h3>
+                    <p>Best of 3</p>
+                </div>
+                <div class="sport-card reveal reveal-delay-5">
+                    <span class="sport-emoji" aria-hidden="true">&#127942;</span>
+                    <h3>Generic</h3>
+                    <p>Custom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PRICING
+         ========================================== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <p class="section-label reveal">Pricing</p>
+            <p class="price-tag reveal reveal-delay-1"><span class="dollar">$</span>9.99</p>
+            <p class="pricing-note reveal reveal-delay-2">One-time purchase. No ads. No subscriptions. Ever.</p>
+            <div class="reveal reveal-delay-3">
+                <span class="pricing-badge">
+                    <span class="check" aria-hidden="true">&#10003;</span>
+                    Pay once, own it forever
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ
+         ========================================== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">FAQ</p>
+                <h2 class="section-title reveal reveal-delay-1">Questions? Answered.</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary>What sports does Tally support?</summary>
+                    <div class="faq-answer">
+                        Tally supports 6 sports with full scoring rules: Basketball (4 quarters), Soccer (2 halves), Tennis (best of 3 sets), Ping Pong (best of 5 games), Volleyball (best of 3 sets), and a Generic mode for custom scoring.
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-1">
+                    <summary>Does it work with my Apple TV?</summary>
+                    <div class="faq-answer">
+                        Tally requires tvOS 17 or later and works on both Apple TV 4K and Apple TV HD.
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-2">
+                    <summary>Can I customize team names?</summary>
+                    <div class="faq-answer">
+                        Yes! You can set custom team names before each game in the setup screen.
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-3">
+                    <summary>Does it support VoiceOver?</summary>
+                    <div class="faq-answer">
+                        Absolutely. Tally has full VoiceOver support and respects the Reduce Motion accessibility setting.
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-4">
+                    <summary>Is there a subscription?</summary>
+                    <div class="faq-answer">
+                        No. Tally is a one-time purchase of $9.99. No ads, no subscriptions, no in-app purchases. You pay once and own it forever.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-left">Made by Abdelrahman Eita &middot; &copy; 2026</p>
+                <ul class="footer-links">
+                    <li><a href="/tally/privacy/">Privacy Policy</a></li>
+                    <li><a href="mailto:abdoelrhman.eaita@gmail.com">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         SCRIPTS
+         ========================================== -->
+    <script>
+        // Scroll reveal with IntersectionObserver
+        (function() {
+            var reveals = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                reveals.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                // Fallback: show all
+                reveals.forEach(function(el) {
+                    el.classList.add('visible');
+                });
+            }
+        })();
+
+        // Nav scroll state
+        (function() {
+            var nav = document.getElementById('nav');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 40) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }, { passive: true });
+        })();
+    </script>
+</body>
+</html>
