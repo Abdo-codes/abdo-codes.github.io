@@ -41,3 +41,43 @@
 
 - Built by Abdo Elrhman
 - Contact: abdoelrhman.eaita@gmail.com
+
+---
+
+# Tally - Scoreboard App for Apple TV
+
+> Tally is a premium scoreboard app for Apple TV (tvOS) that supports 6 sports: basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Features include giant room-readable scores optimized for the 10-foot TV viewing experience, countdown and countup timers, period and set tracking, undo up to 20 actions, custom team names, dark and light mode, OLED burn-in protection, VoiceOver accessibility, and audio feedback with score sounds and buzzer. One-time purchase with no ads or subscriptions.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/tally/)
+- [Support](https://yoloabdo.com/tally/support/)
+- [Privacy Policy](https://yoloabdo.com/tally/privacy/)
+
+## Key Features
+
+- **6 Sports** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Generic (custom)
+- **Giant Scores** — 220pt typography readable from across the room
+- **Timers** — Countdown (basketball), countup (soccer), buzzer on expiration
+- **Full Undo** — Revert any scoring action, up to 20 steps back
+- **Custom Team Names** — Set before each game, saved automatically
+- **Dark & Light Mode** — Follows Apple TV appearance, OLED-friendly
+- **Controls Overlay** — Press Menu for undo, point values, timer controls, end game
+- **Audio Feedback** — Score sounds, timer buzzer, game over fanfare
+- **VoiceOver** — Full accessibility with score announcements
+- **Onboarding** — First-launch walkthrough for Siri Remote controls
+
+## Pricing
+
+- One-time purchase (no ads, no subscriptions, no in-app purchases)
+
+## Platform
+
+- Apple TV (tvOS 17+)
+- Works on Apple TV 4K and Apple TV HD
+- No internet required — works fully offline
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdoelrhman.eaita@gmail.com
