@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tally — The Scoreboard Your Living Room Deserves</title>
-    <meta name="description" content="Tally is a premium scoreboard app for Apple TV. Track basketball, soccer, tennis, ping pong, volleyball, and more with giant scores designed for the 10-foot experience.">
+    <title>Tally — Apple TV Scoreboard App for Basketball, Tennis, Soccer & More</title>
+    <meta name="description" content="Tally is the best scoreboard app for Apple TV. Keep score for basketball, soccer, tennis, ping pong, and volleyball with giant scores readable from across the room. One-time purchase, no ads.">
     <link rel="canonical" href="https://yoloabdo.com/tally/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yoloabdo.com/tally/">
     <meta property="og:title" content="Tally — The Scoreboard Your Living Room Deserves">
-    <meta property="og:description" content="A premium scoreboard app for Apple TV. 6 sports, giant scores, full control. $9.99 one-time.">
+    <meta property="og:description" content="Keep score for basketball, soccer, tennis, ping pong, volleyball on your Apple TV. Giant scores readable from across the room.">
     <meta property="og:site_name" content="Tally">
     <meta property="og:image" content="https://yoloabdo.com/images/tally/hero.png">
+    <meta property="og:image:width" content="2320">
+    <meta property="og:image:height" content="720">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tally — The Scoreboard Your Living Room Deserves">
-    <meta name="twitter:description" content="A premium scoreboard app for Apple TV. 6 sports, giant scores, full control. $9.99 one-time.">
+    <meta name="twitter:title" content="Tally — Apple TV Scoreboard App">
+    <meta name="twitter:description" content="Keep score for basketball, soccer, tennis, ping pong, volleyball on your Apple TV. Giant scores readable from across the room.">
     <meta name="twitter:image" content="https://yoloabdo.com/images/tally/hero.png">
 
     <!-- Apple Smart App Banner (placeholder app ID — update when live) -->
@@ -25,33 +28,74 @@
     <meta name="theme-color" content="#0A0A0F">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Abdelrahman Eita">
+    <meta name="keywords" content="apple tv scoreboard, tvos scoreboard app, basketball scoreboard app, score keeper apple tv, tennis scoreboard, soccer scoreboard, ping pong score tracker, volleyball scoreboard, tv scoreboard app, living room scoreboard, game score tracker, sports scoreboard apple tv">
+    <link rel="icon" type="image/png" href="../images/tally/icon.png">
+    <link rel="apple-touch-icon" href="../images/tally/icon.png">
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org JSON-LD: SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Tally",
-        "description": "A premium scoreboard app for Apple TV. Track 6 sports with giant scores designed for the 10-foot experience.",
-        "operatingSystem": "tvOS",
+        "description": "A premium scoreboard app for Apple TV. Track basketball, soccer, tennis, ping pong, volleyball with giant scores designed for the 10-foot viewing experience.",
+        "operatingSystem": "tvOS 17",
         "applicationCategory": "SportsApplication",
         "url": "https://yoloabdo.com/tally/",
+        "image": "https://yoloabdo.com/images/tally/icon.png",
         "screenshot": "https://yoloabdo.com/images/tally/hero.png",
+        "featureList": "Basketball scoring, Soccer scoring, Tennis scoring, Ping Pong scoring, Volleyball scoring, Generic scoreboard, Dark and Light themes, VoiceOver accessibility, Game timers, Undo, Audio feedback, OLED protection",
+        "softwareVersion": "1.0",
         "offers": {
             "@type": "Offer",
             "price": "9.99",
             "priceCurrency": "USD",
-            "category": "paid"
+            "availability": "https://schema.org/InStock"
         },
         "author": {
             "@type": "Person",
-            "name": "Abdelrahman Eita"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "1"
+            "name": "Abdelrahman Eita",
+            "url": "https://yoloabdo.com"
         }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD: WebPage + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Tally — Apple TV Scoreboard App",
+        "description": "Keep score for 6 sports on your Apple TV with giant, readable-from-across-the-room scores. Basketball, soccer, tennis, ping pong, volleyball.",
+        "url": "https://yoloabdo.com/tally/",
+        "inLanguage": "en",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Abdelrahman Eita",
+            "url": "https://yoloabdo.com"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Tally", "item": "https://yoloabdo.com/tally/" }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD: FAQPage (for AI/LLM citation) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "What sports does Tally support?", "acceptedAnswer": { "@type": "Answer", "text": "Tally supports 6 sports with full scoring rules: Basketball (4 quarters with countdown timer), Soccer (2 halves with countup timer and stoppage time), Tennis (game/set/match with deuce, advantage, and tiebreaks), Ping Pong (best of 5 with serve rotation), Volleyball (rally-point scoring with final set to 15), and a Generic mode for any custom game." } },
+            { "@type": "Question", "name": "Does Tally work with my Apple TV?", "acceptedAnswer": { "@type": "Answer", "text": "Tally requires tvOS 17 or later and works on Apple TV 4K (all generations) and Apple TV HD." } },
+            { "@type": "Question", "name": "Can I customize team names in Tally?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Before each game, the setup screen lets you enter custom team names. Tally remembers your names for each sport automatically." } },
+            { "@type": "Question", "name": "Does Tally support VoiceOver accessibility?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tally has full VoiceOver support with score announcements, accessibility labels on all controls, and respects the Reduce Motion accessibility setting." } },
+            { "@type": "Question", "name": "Is Tally a subscription app?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tally is a one-time purchase. No ads, no subscriptions, no in-app purchases. Pay once and own it forever." } }
+        ]
     }
     </script>
 
@@ -784,14 +828,13 @@
     <nav id="nav">
         <div class="container">
             <a href="/tally/" class="nav-brand">
-                <img src="/images/tally/icon.png" alt="Tally app icon" width="36" height="36">
+                <img src="../images/tally/icon.png" alt="Tally app icon" width="36" height="36">
                 <span>Tally</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#sports">Sports</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
     </nav>
@@ -802,9 +845,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="/images/tally/icon.png" alt="Tally app icon" class="hero-icon" width="100" height="100">
+                <img src="../images/tally/icon.png" alt="Tally app icon" class="hero-icon" width="100" height="100">
                 <h1 class="hero-title">Tally</h1>
-                <p class="hero-tagline">The scoreboard your living room deserves.</p>
+                <p class="hero-tagline">The Apple TV scoreboard app your living room deserves.</p>
+                <p style="color: var(--text-muted); font-size: 16px; max-width: 600px; margin: 0 auto 32px; line-height: 1.6;">Keep score for basketball, soccer, tennis, ping pong, volleyball, and more — right on your TV. Giant scores readable from across the room. No phone required.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/app/id0000000000" class="badge-link" aria-label="Download on the App Store">
                         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" height="54">
@@ -815,7 +859,7 @@
                     </span>
                 </div>
                 <div class="hero-screenshot reveal">
-                    <img src="/images/tally/hero.png" alt="Tally scoreboard app running on Apple TV showing a basketball game" width="960" height="540">
+                    <img src="../images/tally/hero.png" alt="Tally scoreboard app running on Apple TV showing a basketball game" width="960" height="540">
                 </div>
             </div>
         </div>
@@ -828,7 +872,8 @@
         <div class="container">
             <div class="section-header section-header--center">
                 <p class="section-label reveal">Built for the Big Screen</p>
-                <h2 class="section-title reveal reveal-delay-1">Everything you need.<br>Nothing you don't.</h2>
+                <h2 class="section-title reveal reveal-delay-1">The best score keeper<br>for Apple TV.</h2>
+                <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Tally is a dedicated TV scoreboard app designed for the 10-foot viewing experience. Whether you're tracking a basketball game, tennis match, or casual ping pong, every score is readable from across the room.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card reveal">
@@ -908,51 +953,52 @@
             <div class="sports-grid">
                 <div class="sport-card reveal">
                     <span class="sport-emoji" aria-hidden="true">&#127936;</span>
-                    <h3>Basketball</h3>
-                    <p>4 Quarters</p>
+                    <h3>Basketball Scoreboard</h3>
+                    <p>4 quarters, 1/2/3-point scoring, countdown timer, possession arrow</p>
                 </div>
                 <div class="sport-card reveal reveal-delay-1">
                     <span class="sport-emoji" aria-hidden="true">&#9917;</span>
-                    <h3>Soccer</h3>
-                    <p>2 Halves</p>
+                    <h3>Soccer Scoreboard</h3>
+                    <p>2 halves, countup timer, stoppage time tracking</p>
                 </div>
                 <div class="sport-card reveal reveal-delay-2">
                     <span class="sport-emoji" aria-hidden="true">&#127934;</span>
-                    <h3>Tennis</h3>
-                    <p>Best of 3</p>
+                    <h3>Tennis Scoreboard</h3>
+                    <p>Game/set/match, deuce &amp; advantage, tiebreaks, serve indicator</p>
                 </div>
                 <div class="sport-card reveal reveal-delay-3">
                     <span class="sport-emoji" aria-hidden="true">&#127955;</span>
-                    <h3>Ping Pong</h3>
-                    <p>Best of 5</p>
+                    <h3>Ping Pong Score Tracker</h3>
+                    <p>Best of 5, win-by-two, serve rotation every 2 points</p>
                 </div>
                 <div class="sport-card reveal reveal-delay-4">
                     <span class="sport-emoji" aria-hidden="true">&#127952;</span>
-                    <h3>Volleyball</h3>
-                    <p>Best of 3</p>
+                    <h3>Volleyball Scoreboard</h3>
+                    <p>Rally-point scoring, final set to 15, serve indicator</p>
                 </div>
                 <div class="sport-card reveal reveal-delay-5">
                     <span class="sport-emoji" aria-hidden="true">&#127942;</span>
-                    <h3>Generic</h3>
-                    <p>Custom</p>
+                    <h3>Generic Score Keeper</h3>
+                    <p>Custom increment, optional timer, works for any game</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================
-         PRICING
+         WHY TALLY (SEO content section)
          ========================================== -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <p class="section-label reveal">Pricing</p>
-            <p class="price-tag reveal reveal-delay-1"><span class="dollar">$</span>9.99</p>
-            <p class="pricing-note reveal reveal-delay-2">One-time purchase. No ads. No subscriptions. Ever.</p>
-            <div class="reveal reveal-delay-3">
-                <span class="pricing-badge">
-                    <span class="check" aria-hidden="true">&#10003;</span>
-                    Pay once, own it forever
-                </span>
+    <section style="border-top: 1px solid var(--divider);">
+        <div class="container" style="max-width: 720px;">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">Why Tally?</p>
+                <h2 class="section-title reveal reveal-delay-1">Built exclusively for Apple TV.</h2>
+            </div>
+            <div class="reveal reveal-delay-2" style="color: var(--text-dim); font-size: 17px; line-height: 1.7;">
+                <p style="margin-bottom: 20px;">Most scoreboard apps are designed for phones and tablets. Tally is different — it's built from the ground up for tvOS, optimized for the 10-foot viewing experience where you're sitting on your couch, not holding a device.</p>
+                <p style="margin-bottom: 20px;">Scores are displayed in giant 220-pixel typography that's readable from across any living room. The Siri Remote is all you need — swipe left or right to pick a team, press Select to score. No second screen, no phone pairing, no account required.</p>
+                <p style="margin-bottom: 20px;">Every sport has its own scoring engine with real rules: basketball tracks quarters with a countdown timer and possession arrow, tennis handles deuce, advantage, and tiebreaks automatically, volleyball uses rally-point scoring with a final set to 15. Undo any action up to 20 steps back.</p>
+                <p>Tally follows your Apple TV's appearance setting — dark mode for movie nights, light mode for daytime. The dark theme is OLED-friendly with pixel drift protection to prevent burn-in on your Apple TV 4K's display.</p>
             </div>
         </div>
     </section>
