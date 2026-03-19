@@ -81,3 +81,39 @@
 
 - Built by Abdelrahman Eita
 - Contact: abdoelrhman.eaita@gmail.com
+
+---
+
+# تطعيمي (Tateemi) - Vaccination Tracker
+
+> Tateemi is a free Arabic vaccination tracker for iPhone following the Saudi Ministry of Health national immunization schedule. It automatically calculates 38+ doses from the child's birth date, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/tateemi/)
+- [App Store](https://apps.apple.com/app/id6760822504)
+- [Support](https://yoloabdo.com/tateemi/support/)
+- [Privacy Policy](https://yoloabdo.com/tateemi/privacy/)
+
+## Key Features
+
+- **38+ Doses Calculated Automatically** from the child's birth date based on the Saudi MOH national immunization schedule
+- **Vaccination Progress Tracking** with visual completion percentage for each child
+- **Smart Reminders** — notifications 1 week, 3 days, and on the day of each upcoming dose
+- **Medical Information** for each vaccine: what it is, why it matters, and possible side effects
+- **Multiple Children Support** — track all your children's vaccinations in one place
+- **Offline / Local Data Only** — all data stored on-device, no servers, no tracking, no account required
+
+## Pricing
+
+- Free (no subscription, no ads, no in-app purchases)
+
+## Platform
+
+- iOS (iPhone), requires iOS 17+
+- Works fully offline — no internet required
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdoelrhman.eaita@gmail.com
