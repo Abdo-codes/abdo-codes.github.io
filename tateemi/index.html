@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWW2E9NVE3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-FWW2E9NVE3");
+    </script>
+
+    <title>تطعيمي — جدول تطعيمات أطفالك حسب وزارة الصحة السعودية</title>
+    <meta name="description" content="تطبيق عربي مجاني لمتابعة تطعيمات أطفالك حسب جدول وزارة الصحة السعودية. أكثر من ٣٨ جرعة محسوبة تلقائياً. تنبيهات ذكية ومعلومات طبية موثوقة.">
+    <link rel="canonical" href="https://yoloabdo.com/tateemi/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="keywords" content="تطعيمات اطفال, جدول تطعيم, تطعيم, لقاح, مواعيد تطعيم, دفتر صحي, تطعيمات, لقاحات اطفال, صحة طفلي, وزارة الصحة, vaccination tracker, saudi vaccination schedule">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/tateemi/">
+    <meta property="og:title" content="تطعيمي — جدول تطعيمات أطفالك">
+    <meta property="og:description" content="تطبيق عربي مجاني لمتابعة تطعيمات أطفالك حسب جدول وزارة الصحة السعودية. تنبيهات ذكية ومعلومات طبية موثوقة.">
+    <meta property="og:site_name" content="تطعيمي">
+    <meta property="og:locale" content="ar_SA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تطعيمي — جدول تطعيمات أطفالك">
+    <meta name="twitter:description" content="تطبيق عربي مجاني لمتابعة تطعيمات أطفالك حسب جدول وزارة الصحة السعودية.">
+
+    <!-- Apple Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6760822504">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "تطعيمي",
+        "alternateName": "Tateemi",
+        "description": "تطبيق عربي مجاني لمتابعة تطعيمات أطفالك حسب جدول وزارة الصحة السعودية. أكثر من ٣٨ جرعة محسوبة تلقائياً من تاريخ ميلاد طفلك.",
+        "operatingSystem": "iOS 17",
+        "applicationCategory": "HealthApplication",
+        "url": "https://yoloabdo.com/tateemi/",
+        "inLanguage": "ar",
+        "softwareVersion": "1.0",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "SAR",
+            "availability": "https://schema.org/InStock"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Abdelrahman Eita",
+            "url": "https://yoloabdo.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "هل تطعيمي مجاني؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. متابعة جدول التطعيمات وتسجيل الجرعات والمعلومات الطبية — كلها مجانية بالكامل." } },
+            { "@type": "Question", "name": "هل بياناتي آمنة؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. جميع بياناتك مخزنة محلياً على جهازك فقط ولا تُرسل لأي خادم خارجي. لا نطلب حساب ولا تسجيل دخول." } },
+            { "@type": "Question", "name": "هل الجدول حسب وزارة الصحة السعودية؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. جدول التطعيمات مبني على الجدول الوطني للتحصينات المعتمد من وزارة الصحة السعودية." } }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #FFFBF5;
+            --surface: #FFFFFF;
+            --green: #2E7D32;
+            --green-light: #E8F5E9;
+            --green-dark: #1B5E20;
+            --terracotta: #C67B5C;
+            --text: #2D2D2D;
+            --text-dim: #666;
+            --text-muted: #999;
+            --border: #E8F5E9;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Tajawal', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Hero ── */
+        .hero {
+            text-align: center;
+            padding: 80px 24px 60px;
+        }
+        .hero-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            height: 96px;
+            background: var(--green-light);
+            border-radius: 24px;
+            margin-bottom: 24px;
+        }
+        .hero-icon svg { width: 44px; height: 44px; fill: var(--green); }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--green);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .hero .tagline {
+            font-size: 20px;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--green);
+            color: #fff;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta svg { width: 20px; height: 20px; fill: #fff; }
+        .hero .cta:hover { background: var(--green-dark); }
+        .hero .badge {
+            display: block;
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ── Features ── */
+        .features {
+            padding: 40px 0 60px;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--green);
+            margin-bottom: 40px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .feature-card .emoji {
+            font-size: 28px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+
+        /* ── Stats ── */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+            margin: 20px 0 40px;
+        }
+        .stat { text-align: center; }
+        .stat .num {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--green);
+        }
+        .stat .label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ── Highlights ── */
+        .highlights {
+            padding: 0 0 60px;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .highlight-item .check {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--green-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .highlight-item .check svg { width: 14px; height: 14px; fill: var(--green); }
+        .highlight-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .highlight-item p {
+            font-size: 14px;
+            color: var(--text-dim);
+            margin: 0;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 2px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        footer a {
+            color: var(--green);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        footer a:hover { text-decoration: underline; }
+        footer .links { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h1>تطعيمي</h1>
+        <p class="tagline">تابع تطعيمات أطفالك حسب جدول وزارة الصحة السعودية — عشان ما تنسى ولا جرعة</p>
+        <a href="https://apps.apple.com/app/id6760822504" class="cta">
+            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+            حمّل من App Store
+        </a>
+        <span class="badge">مجاني — بدون اشتراك ولا إعلانات</span>
+    </section>
+
+    <div class="container">
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">
+                <div class="num">٣٨</div>
+                <div class="label">جرعة في الجدول</div>
+            </div>
+            <div class="stat">
+                <div class="num">٩</div>
+                <div class="label">فئات عمرية</div>
+            </div>
+            <div class="stat">
+                <div class="num">٠</div>
+                <div class="label">بيانات مرسلة لخوادم</div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>ماذا يقدم لك تطعيمي؟</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="emoji">💉</span>
+                    <h3>جدول وزارة الصحة الكامل</h3>
+                    <p>أكثر من ٣٨ جرعة محسوبة تلقائياً من تاريخ ميلاد طفلك — من الولادة لعمر ٦ سنوات</p>
+                </div>
+                <div class="feature-card">
+                    <span class="emoji">📊</span>
+                    <h3>متابعة بصرية</h3>
+                    <p>شوف نسبة اكتمال تطعيمات كل طفل بنظرة وحدة. تعرف وين وصلت وإيش الجاي</p>
+                </div>
+                <div class="feature-card">
+                    <span class="emoji">🔔</span>
+                    <h3>تنبيهات ذكية</h3>
+                    <p>يذكّرك قبل الموعد بأسبوع، ٣ أيام، ويوم الموعد. وإذا تأخرت يرسل لك تنبيه</p>
+                </div>
+                <div class="feature-card">
+                    <span class="emoji">📖</span>
+                    <h3>معلومات طبية موثوقة</h3>
+                    <p>تعرف عن كل تطعيم — إيش هو، ليش مهم، وإيش الآثار الجانبية المتوقعة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="highlights">
+            <div class="highlight-item">
+                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <div>
+                    <h4>عربي من الأساس</h4>
+                    <p>مو ترجمة. واجهة مصممة بالعربي للعائلة السعودية</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <div>
+                    <h4>بدون حساب ولا تسجيل</h4>
+                    <p>افتح التطبيق وابدأ مباشرة. بياناتك على جهازك فقط — ما نرسل شي لخوادم</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <div>
+                    <h4>تابع أكثر من طفل</h4>
+                    <p>أضف جميع أطفالك وتابع تطعيمات كل واحد على حدة</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <div>
+                    <h4>طفلك عمره أكبر؟</h4>
+                    <p>التطبيق يعرض لك التطعيمات السابقة عشان تسجلها بسرعة وتبدأ من وين وصلت</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="links">
+            <a href="/tateemi/privacy/">سياسة الخصوصية</a>
+            <a href="/tateemi/support/">الدعم</a>
+        </div>
+        <p>صُمم في السعودية 🇸🇦 &copy; 2026 تطعيمي</p>
+    </footer>
+
+</body>
+</html>
