@@ -35,11 +35,16 @@
     <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX">
 
     <meta name="theme-color" content="#0A0A0F">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Abdelrahman Eita">
     <meta name="keywords" content="apple tv scoreboard, tvos scoreboard app, basketball scoreboard app, score keeper apple tv, tennis scoreboard, soccer scoreboard, ping pong score tracker, volleyball scoreboard, tv scoreboard app, living room scoreboard, game score tracker, sports scoreboard apple tv">
     <link rel="icon" type="image/png" href="../images/tally/icon.png">
     <link rel="apple-touch-icon" href="../images/tally/icon.png">
+
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "WebSite", "name": "Tally", "url": "https://yoloabdo.com/tally/", "inLanguage": "en" }
+    </script>
 
     <!-- Schema.org JSON-LD: SoftwareApplication -->
     <script type="application/ld+json">
@@ -50,6 +55,7 @@
         "description": "A premium scoreboard app for Apple TV. Track basketball, soccer, tennis, ping pong, volleyball with giant scores designed for the 10-foot viewing experience.",
         "operatingSystem": "tvOS 17",
         "applicationCategory": "SportsApplication",
+        "inLanguage": "en",
         "url": "https://yoloabdo.com/tally/",
         "image": "https://yoloabdo.com/images/tally/icon.png",
         "screenshot": "https://yoloabdo.com/images/tally/hero.png",
@@ -81,7 +87,7 @@
         "isPartOf": {
             "@type": "WebSite",
             "name": "Abdelrahman Eita",
-            "url": "https://yoloabdo.com"
+            "url": "https://yoloabdo.com/"
         },
         "breadcrumb": {
             "@type": "BreadcrumbList",
@@ -828,7 +834,14 @@
                 text-align: center;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            @keyframes pulse { 0%, 100% { opacity: 1; } }
+            @keyframes scoreFlash { 0%, 100% { color: var(--text); } }
+        }
     </style>
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <!-- ==========================================

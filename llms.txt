@@ -1,3 +1,9 @@
+# yoloabdo.com
+
+> Apps and projects by Abdelrahman Eita — Staff Software Engineer. Content available for AI search citation.
+
+---
+
 # Sajda - Quran for Apple TV
 
 > Sajda is the most feature-rich Quran app for Apple TV (tvOS). Free to download with 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and stunning animated backgrounds.
