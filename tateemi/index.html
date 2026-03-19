@@ -35,7 +35,7 @@
     <!-- Apple Smart App Banner -->
     <meta name="apple-itunes-app" content="app-id=6760822504">
 
-    <!-- Schema.org -->
+    <!-- Schema.org: SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -62,14 +62,17 @@
     }
     </script>
 
+    <!-- Schema.org: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "هل تطعيمي مجاني؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. متابعة جدول التطعيمات وتسجيل الجرعات والمعلومات الطبية — كلها مجانية بالكامل." } },
-            { "@type": "Question", "name": "هل بياناتي آمنة؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. جميع بياناتك مخزنة محلياً على جهازك فقط ولا تُرسل لأي خادم خارجي. لا نطلب حساب ولا تسجيل دخول." } },
-            { "@type": "Question", "name": "هل الجدول حسب وزارة الصحة السعودية؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. جدول التطعيمات مبني على الجدول الوطني للتحصينات المعتمد من وزارة الصحة السعودية." } }
+            { "@type": "Question", "name": "هل تطعيمي مجاني؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم بالكامل. بدون اشتراك ولا إعلانات." } },
+            { "@type": "Question", "name": "هل الجدول حسب وزارة الصحة؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. الجدول الوطني للتحصينات المعتمد." } },
+            { "@type": "Question", "name": "هل بياناتي آمنة؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. مخزنة محلياً فقط، لا خوادم ولا تتبع." } },
+            { "@type": "Question", "name": "طفلي عمره أكبر — كيف أبدأ؟", "acceptedAnswer": { "@type": "Answer", "text": "التطبيق يعرض التطعيمات السابقة لتسجلها بسرعة." } },
+            { "@type": "Question", "name": "هل يعمل بدون إنترنت؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم. كل شي محلي." } }
         ]
     }
     </script>
@@ -80,303 +83,964 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <style>
+        /* ============================================
+           TOKENS
+           ============================================ */
         :root {
             --bg: #FFFBF5;
             --surface: #FFFFFF;
+            --surface-warm: #FFF8F0;
             --green: #2E7D32;
             --green-light: #E8F5E9;
             --green-dark: #1B5E20;
+            --green-muted: rgba(46, 125, 50, 0.08);
             --terracotta: #C67B5C;
+            --terracotta-light: rgba(198, 123, 92, 0.1);
             --text: #2D2D2D;
-            --text-dim: #666;
-            --text-muted: #999;
-            --border: #E8F5E9;
+            --text-dim: #5A5A5A;
+            --text-muted: #8A8A8A;
+            --border: #E8E2D9;
+            --border-green: #E8F5E9;
+            --divider: #F0EBE3;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
         }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
 
         body {
-            font-family: 'Tajawal', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--text);
+            font-family: 'Tajawal', -apple-system, sans-serif;
+            font-size: 18px;
             line-height: 1.8;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-
-        /* ── Hero ── */
-        .hero {
-            text-align: center;
-            padding: 80px 24px 60px;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        .hero-icon {
-            display: inline-flex;
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* ============================================
+           NAV
+           ============================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            background: rgba(255, 251, 245, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--divider);
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+
+        .nav-brand-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-light);
+            border-radius: 10px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 96px;
-            height: 96px;
-            background: var(--green-light);
-            border-radius: 24px;
-            margin-bottom: 24px;
         }
-        .hero-icon svg { width: 44px; height: 44px; fill: var(--green); }
-        .hero h1 {
-            font-size: 42px;
+
+        .nav-brand-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--green);
+        }
+
+        .nav-brand span {
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+            opacity: 1;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle radial glow behind hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(46, 125, 50, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--green-light);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            box-shadow: 0 16px 48px rgba(46, 125, 50, 0.12);
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+
+        .hero-icon svg {
+            width: 56px;
+            height: 56px;
+            fill: var(--green);
+        }
+
+        .hero-title {
+            font-size: clamp(56px, 10vw, 88px);
             font-weight: 800;
             color: var(--green);
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
-        .hero .tagline {
-            font-size: 20px;
+
+        .hero-tagline {
+            font-size: clamp(18px, 3vw, 24px);
             color: var(--text-dim);
-            margin-bottom: 32px;
-            max-width: 500px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            max-width: 520px;
             margin-left: auto;
             margin-right: auto;
         }
-        .hero .cta {
-            display: inline-flex;
+
+        .hero-cta {
+            display: flex;
             align-items: center;
-            gap: 10px;
-            background: var(--green);
-            color: #fff;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            padding: 14px 36px;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .cta svg { width: 20px; height: 20px; fill: #fff; }
-        .hero .cta:hover { background: var(--green-dark); }
-        .hero .badge {
-            display: block;
-            margin-top: 16px;
-            font-size: 14px;
-            color: var(--text-muted);
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
         }
 
-        /* ── Features ── */
-        .features {
-            padding: 40px 0 60px;
+        .badge-link {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
         }
-        .features h2 {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--green);
-            margin-bottom: 40px;
+        .badge-link:hover {
+            transform: scale(1.05);
+            opacity: 1;
         }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+
+        .badge-link img {
+            height: 54px;
         }
-        @media (max-width: 600px) {
-            .feature-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 32px; }
-        }
-        .feature-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-        }
-        .feature-card .emoji {
-            font-size: 28px;
-            margin-bottom: 12px;
-            display: block;
-        }
-        .feature-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 6px;
-        }
-        .feature-card p {
+
+        .hero-note {
             font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* ============================================
+           STATS STRIP
+           ============================================ */
+        .stats-strip {
+            background: var(--surface);
+            border-top: 1px solid var(--divider);
+            border-bottom: 1px solid var(--divider);
+            padding: 48px 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: clamp(40px, 6vw, 56px);
+            font-weight: 800;
+            color: var(--green);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* ============================================
+           SECTION HEADERS
+           ============================================ */
+        .section-label {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--terracotta);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
             color: var(--text-dim);
+            max-width: 560px;
             line-height: 1.7;
         }
 
-        /* ── Stats ── */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 40px 0;
-            border-top: 2px solid var(--border);
-            border-bottom: 2px solid var(--border);
-            margin: 20px 0 40px;
-        }
-        .stat { text-align: center; }
-        .stat .num {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--green);
-        }
-        .stat .label {
-            font-size: 14px;
-            color: var(--text-muted);
+        .section-header {
+            margin-bottom: 56px;
         }
 
-        /* ── Highlights ── */
-        .highlights {
-            padding: 0 0 60px;
+        .section-header--center {
+            text-align: center;
         }
-        .highlight-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 20px;
+
+        .section-header--center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
         }
-        .highlight-item .check {
-            flex-shrink: 0;
-            width: 28px;
-            height: 28px;
-            background: var(--green-light);
-            border-radius: 8px;
+
+        /* ============================================
+           FEATURES GRID
+           ============================================ */
+        .features-section {
+            background: var(--bg);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px 28px;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--green);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-emoji {
+            font-size: 32px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .highlight-item .check svg { width: 14px; height: 14px; fill: var(--green); }
-        .highlight-item h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 2px;
-        }
-        .highlight-item p {
-            font-size: 14px;
-            color: var(--text-dim);
-            margin: 0;
+            width: 56px;
+            height: 56px;
+            background: var(--green-light);
+            border-radius: 16px;
         }
 
-        /* ── Footer ── */
-        footer {
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           HOW IT WORKS
+           ============================================ */
+        .how-it-works {
+            background: var(--surface);
+            border-top: 1px solid var(--divider);
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .step-card {
             text-align: center;
-            padding: 40px 24px;
-            border-top: 2px solid var(--border);
-            color: var(--text-muted);
-            font-size: 14px;
+            position: relative;
         }
-        footer a {
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--green);
+            color: #fff;
+            font-size: 24px;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 24px rgba(46, 125, 50, 0.2);
+        }
+
+        .step-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .step-card p {
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Connector lines between steps */
+        .step-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: -16px;
+            width: calc(100% - 56px - 32px + 32px);
+            height: 2px;
+            background: linear-gradient(to left, var(--green-light), var(--green), var(--green-light));
+            opacity: 0.4;
+            transform: translateX(-50%);
+        }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq-section {
+            background: var(--bg);
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item summary {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 24px 0;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .faq-item summary:hover {
             color: var(--green);
-            text-decoration: none;
-            margin: 0 12px;
         }
-        footer a:hover { text-decoration: underline; }
-        footer .links { margin-bottom: 12px; }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding-bottom: 24px;
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           MORE APPS
+           ============================================ */
+        .more-apps {
+            background: var(--surface);
+            border-top: 1px solid var(--divider);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+        }
+
+        .app-card:hover {
+            border-color: var(--green);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            opacity: 1;
+        }
+
+        .app-card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .app-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .app-card .app-card-platform {
+            font-size: 13px;
+            color: var(--terracotta);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .app-card p {
+            color: var(--text-dim);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--divider);
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--green);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .step-card:not(:last-child)::after {
+                display: none;
+            }
+
+            .stats-grid {
+                gap: 40px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 64px 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-icon {
+                width: 88px;
+                height: 88px;
+                border-radius: 22px;
+            }
+
+            .hero-icon svg {
+                width: 44px;
+                height: 44px;
+            }
+
+            .stats-grid {
+                gap: 32px;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <!-- ==========================================
+         NAV
+         ========================================== -->
+    <nav id="nav">
+        <div class="container">
+            <a href="/tateemi/" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <span>تطعيمي</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">المميزات</a></li>
+                <li><a href="#how">كيف يعمل</a></li>
+                <li><a href="#faq">الأسئلة</a></li>
+            </ul>
         </div>
-        <h1>تطعيمي</h1>
-        <p class="tagline">تابع تطعيمات أطفالك حسب جدول وزارة الصحة السعودية — عشان ما تنسى ولا جرعة</p>
-        <a href="https://apps.apple.com/app/id6760822504" class="cta">
-            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
-            حمّل من App Store
-        </a>
-        <span class="badge">مجاني — بدون اشتراك ولا إعلانات</span>
+    </nav>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon reveal">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h1 class="hero-title reveal reveal-delay-1">تطعيمي</h1>
+                <p class="hero-tagline reveal reveal-delay-2">تابع تطعيمات أطفالك حسب جدول وزارة الصحة السعودية — عشان ما تنسى ولا جرعة</p>
+                <div class="hero-cta reveal reveal-delay-3">
+                    <a href="https://apps.apple.com/app/id6760822504" class="badge-link" aria-label="حمّل من App Store">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ar-sa?size=250x83" alt="حمّل من App Store" height="54">
+                    </a>
+                </div>
+                <p class="hero-note reveal reveal-delay-4">مجاني بالكامل — بدون اشتراك ولا إعلانات</p>
+            </div>
+        </div>
     </section>
 
-    <div class="container">
-
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat">
-                <div class="num">٣٨</div>
-                <div class="label">جرعة في الجدول</div>
-            </div>
-            <div class="stat">
-                <div class="num">٩</div>
-                <div class="label">فئات عمرية</div>
-            </div>
-            <div class="stat">
-                <div class="num">٠</div>
-                <div class="label">بيانات مرسلة لخوادم</div>
+    <!-- ==========================================
+         STATS STRIP
+         ========================================== -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">٣٨+</div>
+                    <div class="stat-label">جرعة في الجدول</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number">٩</div>
+                    <div class="stat-label">فئات عمرية</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number">١٣</div>
+                    <div class="stat-label">لقاح مختلف</div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Features -->
-        <section class="features">
-            <h2>ماذا يقدم لك تطعيمي؟</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <span class="emoji">💉</span>
-                    <h3>جدول وزارة الصحة الكامل</h3>
-                    <p>أكثر من ٣٨ جرعة محسوبة تلقائياً من تاريخ ميلاد طفلك — من الولادة لعمر ٦ سنوات</p>
+    <!-- ==========================================
+         FEATURES
+         ========================================== -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">كل شي تحتاجه</p>
+                <h2 class="section-title reveal reveal-delay-1">ماذا يقدم لك تطعيمي؟</h2>
+                <p class="section-subtitle reveal reveal-delay-2">تطبيق عربي صُمم لمساعدتك في متابعة تطعيمات أطفالك بسهولة ودقة — من الجرعة الأولى حتى آخر جرعة.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <span class="feature-emoji" aria-hidden="true">💉</span>
+                    <h3>جدول وزارة الصحة</h3>
+                    <p>أكثر من ٣٨ جرعة محسوبة تلقائياً من تاريخ ميلاد طفلك</p>
                 </div>
-                <div class="feature-card">
-                    <span class="emoji">📊</span>
+                <div class="feature-card reveal reveal-delay-1">
+                    <span class="feature-emoji" aria-hidden="true">📊</span>
                     <h3>متابعة بصرية</h3>
-                    <p>شوف نسبة اكتمال تطعيمات كل طفل بنظرة وحدة. تعرف وين وصلت وإيش الجاي</p>
+                    <p>نسبة اكتمال التطعيمات لكل طفل بنظرة وحدة</p>
                 </div>
-                <div class="feature-card">
-                    <span class="emoji">🔔</span>
+                <div class="feature-card reveal reveal-delay-2">
+                    <span class="feature-emoji" aria-hidden="true">🔔</span>
                     <h3>تنبيهات ذكية</h3>
-                    <p>يذكّرك قبل الموعد بأسبوع، ٣ أيام، ويوم الموعد. وإذا تأخرت يرسل لك تنبيه</p>
+                    <p>تذكير قبل الموعد بأسبوع و٣ أيام ويوم الموعد</p>
                 </div>
-                <div class="feature-card">
-                    <span class="emoji">📖</span>
-                    <h3>معلومات طبية موثوقة</h3>
-                    <p>تعرف عن كل تطعيم — إيش هو، ليش مهم، وإيش الآثار الجانبية المتوقعة</p>
+                <div class="feature-card reveal reveal-delay-3">
+                    <span class="feature-emoji" aria-hidden="true">📖</span>
+                    <h3>معلومات طبية</h3>
+                    <p>عن كل تطعيم: إيش هو، ليش مهم، الآثار الجانبية</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Highlights -->
-        <section class="highlights">
-            <div class="highlight-item">
-                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                <div>
-                    <h4>عربي من الأساس</h4>
-                    <p>مو ترجمة. واجهة مصممة بالعربي للعائلة السعودية</p>
+                <div class="feature-card reveal reveal-delay-4">
+                    <span class="feature-emoji" aria-hidden="true">👶</span>
+                    <h3>أكثر من طفل</h3>
+                    <p>تابع تطعيمات جميع أطفالك في مكان واحد</p>
                 </div>
-            </div>
-            <div class="highlight-item">
-                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                <div>
-                    <h4>بدون حساب ولا تسجيل</h4>
-                    <p>افتح التطبيق وابدأ مباشرة. بياناتك على جهازك فقط — ما نرسل شي لخوادم</p>
+                <div class="feature-card reveal reveal-delay-5">
+                    <span class="feature-emoji" aria-hidden="true">🔒</span>
+                    <h3>بدون حساب</h3>
+                    <p>بياناتك على جهازك فقط، لا خوادم ولا تتبع</p>
                 </div>
             </div>
-            <div class="highlight-item">
-                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                <div>
-                    <h4>تابع أكثر من طفل</h4>
-                    <p>أضف جميع أطفالك وتابع تطعيمات كل واحد على حدة</p>
-                </div>
-            </div>
-            <div class="highlight-item">
-                <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                <div>
-                    <h4>طفلك عمره أكبر؟</h4>
-                    <p>التطبيق يعرض لك التطعيمات السابقة عشان تسجلها بسرعة وتبدأ من وين وصلت</p>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="links">
-            <a href="/tateemi/privacy/">سياسة الخصوصية</a>
-            <a href="/tateemi/support/">الدعم</a>
         </div>
-        <p>صُمم في السعودية 🇸🇦 &copy; 2026 تطعيمي</p>
+    </section>
+
+    <!-- ==========================================
+         HOW IT WORKS
+         ========================================== -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">ثلاث خطوات فقط</p>
+                <h2 class="section-title reveal reveal-delay-1">كيف يعمل؟</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">١</div>
+                    <h3>أضف طفلك</h3>
+                    <p>اسمه وتاريخ ميلاده</p>
+                </div>
+                <div class="step-card reveal reveal-delay-1">
+                    <div class="step-number">٢</div>
+                    <h3>شوف الجدول</h3>
+                    <p>التطعيمات محسوبة تلقائياً</p>
+                </div>
+                <div class="step-card reveal reveal-delay-2">
+                    <div class="step-number">٣</div>
+                    <h3>سجّل وتابع</h3>
+                    <p>سجّل كل جرعة وتابع التقدم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ
+         ========================================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">أسئلة شائعة</p>
+                <h2 class="section-title reveal reveal-delay-1">عندك سؤال؟</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary>هل تطعيمي مجاني؟</summary>
+                    <div class="faq-answer">نعم بالكامل. بدون اشتراك ولا إعلانات.</div>
+                </details>
+                <details class="faq-item reveal reveal-delay-1">
+                    <summary>هل الجدول حسب وزارة الصحة؟</summary>
+                    <div class="faq-answer">نعم. الجدول الوطني للتحصينات المعتمد.</div>
+                </details>
+                <details class="faq-item reveal reveal-delay-2">
+                    <summary>هل بياناتي آمنة؟</summary>
+                    <div class="faq-answer">نعم. مخزنة محلياً فقط، لا خوادم ولا تتبع.</div>
+                </details>
+                <details class="faq-item reveal reveal-delay-3">
+                    <summary>طفلي عمره أكبر — كيف أبدأ؟</summary>
+                    <div class="faq-answer">التطبيق يعرض التطعيمات السابقة لتسجلها بسرعة.</div>
+                </details>
+                <details class="faq-item reveal reveal-delay-4">
+                    <summary>هل يعمل بدون إنترنت؟</summary>
+                    <div class="faq-answer">نعم. كل شي محلي.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MORE APPS
+         ========================================== -->
+    <section class="more-apps">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">من المطور</p>
+                <h2 class="section-title reveal reveal-delay-1">تطبيقاتنا الأخرى</h2>
+            </div>
+            <div class="apps-grid">
+                <a href="/sajda/" class="app-card reveal">
+                    <div class="app-card-icon">🕌</div>
+                    <h3>Sajda</h3>
+                    <div class="app-card-platform">Apple TV</div>
+                    <p>استمع للقرآن الكريم على Apple TV مع أكثر من ٢٠٠ قارئ، مواقيت الصلاة، وخلفيات هادئة.</p>
+                </a>
+                <a href="/tally/" class="app-card reveal reveal-delay-1">
+                    <div class="app-card-icon">🏀</div>
+                    <h3>Tally</h3>
+                    <div class="app-card-platform">Apple TV</div>
+                    <p>لوحة نتائج رياضية على Apple TV. ٦ رياضات، نتائج عملاقة، بدون اشتراك.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-left">&copy; 2026 تطعيمي &middot; Abdelrahman Eita</p>
+                <ul class="footer-links">
+                    <li><a href="/tateemi/privacy/">سياسة الخصوصية</a></li>
+                    <li><a href="/tateemi/support/">الدعم</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
+    <!-- ==========================================
+         SCRIPTS
+         ========================================== -->
+    <script>
+        // Scroll reveal with IntersectionObserver
+        (function() {
+            var reveals = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                reveals.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                reveals.forEach(function(el) {
+                    el.classList.add('visible');
+                });
+            }
+        })();
+
+        // Nav scroll state
+        (function() {
+            var nav = document.getElementById('nav');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 40) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }, { passive: true });
+        })();
+    </script>
 </body>
 </html>
