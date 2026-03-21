@@ -92,7 +92,7 @@
 
 # تطعيمي (Tateemi) - Vaccination Tracker
 
-> Tateemi is a free Arabic vaccination tracker for iPhone following the Saudi Ministry of Health national immunization schedule. It automatically calculates 38+ doses from the child's birth date, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
+> Tateemi is a free Arabic vaccination tracker for iPhone following the Saudi national immunization schedule. It automatically calculates 38+ doses from the child's birth date, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
 
 ## Links
 
@@ -103,7 +103,7 @@
 
 ## Key Features
 
-- **38+ Doses Calculated Automatically** from the child's birth date based on the Saudi MOH national immunization schedule
+- **38+ Doses Calculated Automatically** from the child's birth date based on the Saudi national immunization schedule
 - **Vaccination Progress Tracking** with visual completion percentage for each child
 - **Smart Reminders** — notifications 1 week, 3 days, and on the day of each upcoming dose
 - **Medical Information** for each vaccine: what it is, why it matters, and possible side effects
