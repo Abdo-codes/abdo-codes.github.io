@@ -384,18 +384,63 @@
             margin-right: 6px;
         }
 
-        .hero-screenshot {
+        .hero-video-card {
             max-width: 960px;
             margin: 0 auto;
-            border-radius: 16px;
+            padding: 18px;
+            border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
             border: 1px solid var(--divider);
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+                rgba(22, 22, 31, 0.84);
         }
 
-        .hero-screenshot img {
+        .hero-video-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 14px;
+            text-align: left;
+        }
+
+        .hero-video-kicker {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .hero-video-runtime {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero-video-frame {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: #050507;
+        }
+
+        .hero-video-frame video {
             width: 100%;
             display: block;
+            aspect-ratio: 16 / 9;
+            background: #050507;
+        }
+
+        .hero-video-note {
+            color: var(--text-dim);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 14px;
+            text-align: left;
         }
 
         /* ============================================
@@ -836,6 +881,16 @@
                 border-radius: 16px;
             }
 
+            .hero-video-card {
+                padding: 12px;
+                border-radius: 18px;
+            }
+
+            .hero-video-meta {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -890,8 +945,17 @@
                         Available on Apple TV
                     </span>
                 </div>
-                <div class="hero-screenshot reveal">
-                    <img src="../images/tally/hero.jpg" alt="Tally scoreboard app running on Apple TV showing a basketball game" width="960" height="540" loading="eager">
+                <div class="hero-video-card reveal">
+                    <div class="hero-video-meta">
+                        <span class="hero-video-kicker">Watch Tally in action</span>
+                        <span class="hero-video-runtime">36 second trailer</span>
+                    </div>
+                    <div class="hero-video-frame">
+                        <video controls playsinline preload="metadata" poster="../images/tally/hero.jpg" aria-label="Tally trailer showing Game Night mode and live score tracking on Apple TV">
+                            <source src="../media/tally/tally-v13-promo-1080.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="hero-video-note">See how Tally keeps game night moving with quick setup, live score tracking, and a big-screen winner reveal.</p>
                 </div>
             </div>
         </div>
