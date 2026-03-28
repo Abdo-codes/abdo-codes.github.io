@@ -52,7 +52,7 @@
 
 # Tally - Scoreboard App for Apple TV
 
-> Tally is a premium scoreboard app for Apple TV (tvOS) that supports 6 sports: basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Features include giant room-readable scores optimized for the 10-foot TV viewing experience, countdown and countup timers, period and set tracking, undo up to 20 actions, custom team names, dark and light mode, OLED burn-in protection, VoiceOver accessibility, and audio feedback with score sounds and buzzer. One-time purchase with no ads or subscriptions.
+> Tally is a premium scoreboard app for Apple TV (tvOS) that supports 7 sports plus Game Night mode. Sports: basketball, soccer, tennis, ping pong, volleyball, party game (up to 8 players), and a generic custom mode. Game Night mode features three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, and Play Again. Features include giant room-readable scores optimized for the 10-foot TV viewing experience, countdown and countup timers, period and set tracking, undo up to 20 actions, custom team names, dark and light mode, OLED burn-in protection, VoiceOver accessibility, and audio feedback with score sounds and buzzer. Free to try with 2 sports; upgrade to Tally Pro for all sports, Game Night, and more.
 
 ## Links
 
@@ -63,7 +63,7 @@
 
 ## Key Features
 
-- **6 Sports** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Generic (custom)
+- **7 Sports + Game Night** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Party Game (up to 8 players), Generic (custom). Game Night mode: 2–8 players, three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, Play Again
 - **Giant Scores** — 220pt typography readable from across the room
 - **Timers** — Countdown (basketball), countup (soccer), buzzer on expiration
 - **Full Undo** — Revert any scoring action, up to 20 steps back
@@ -76,7 +76,9 @@
 
 ## Pricing
 
-- One-time purchase (no ads, no subscriptions, no in-app purchases)
+- Free to try with 2 sports (Basketball, Generic)
+- Tally Pro: weekly ($0.49/week), annual ($14.99/year), or lifetime ($39.99) — with free trial
+- No ads
 
 ## Platform
 
