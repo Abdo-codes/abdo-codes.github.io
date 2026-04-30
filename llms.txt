@@ -127,3 +127,40 @@
 
 - Built by Abdelrahman Eita
 - Contact: abdoelrhman.eaita@gmail.com
+
+---
+
+# Stampt — Capture photos through real vintage postal stamps
+
+> Stampt is a keepsake camera for iPhone that frames every photo inside a real vintage postal stamp. Point the camera through a stamp window, tap once, and the shot lands inside perforated edges with original paper texture and ink. The catalog is built from high-resolution scans of actual postal stamps from Egypt, Palestine, Lebanon, Saudi Arabia, Jordan, and Morocco. All processing happens on-device — no account, no upload.
+
+## Links
+
+- [App Store](https://apps.apple.com/us/app/stampt-stamp-camera/id6763900018)
+- [Landing Page](https://yoloabdo.com/stampt/)
+- [Support](https://yoloabdo.com/stampt/support/)
+- [Privacy Policy](https://yoloabdo.com/stampt/privacy/)
+
+## Key Features
+
+- **Real Vintage Stamps** — every stamp is a high-resolution scan of an actual postal stamp, not a generated graphic
+- **Capture Through the Stamp** — the camera viewfinder shows your shot already framed inside the perforated stamp window before you tap
+- **Curated Regional Catalog** — stamps grouped by Levant, Gulf, Egypt, and North Africa, with the design history behind each
+- **Album That Feels Mailed** — captures land on a soft-paper collector's page, decisively rotated, room to breathe
+- **Share or Just Keep** — save to Photos, share anywhere, or simply keep them on-device
+- **Works Offline** — camera, stamp catalog, and album work fully offline; no account required
+- **Privacy-First** — photos are processed and stored entirely on the iPhone; nothing is uploaded to any server
+
+## Pricing
+
+- Free to download
+- Stampt Pro (in-app purchase) unlocks the full vintage stamp catalog and removes capture limits — weekly, annual, or lifetime
+
+## Platform
+
+- iOS (iPhone), requires iOS 17+
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: stampt.app@gmail.com
