@@ -94,6 +94,45 @@
 
 ---
 
+# Capybara Rush: Swipe Fast - Cozy iPhone Reflex Game
+
+> Capybara Rush: Swipe Fast is a cozy iPhone reflex game built for quick 30-second rounds. Players read prompts, swipe in the correct direction, keep combos alive, trigger Fever Rush, grab golden bonuses, earn coins, unlock capybara skins, and compare high scores with Game Center. It works offline and includes no ads, no tracking, and no account requirement.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/capybara-rush/)
+- [App Store](https://apps.apple.com/app/id6766263673)
+- [Support](https://yoloabdo.com/capybara-rush/support/)
+- [Privacy Policy](https://yoloabdo.com/capybara-rush/privacy/)
+
+## Key Features
+
+- **30-Second Swipe Rounds** — quick one-thumb arcade sessions
+- **Prompt Twists** — normal prompts, fake prompts, and opposite prompts
+- **Fever Rush** — strong runs fill a meter and shift into faster scoring
+- **Golden Bonuses** — special moments worth more score and coins
+- **Unlockable Skins** — Sleepy, Strawberry, Sunglasses, Wizard, Space, and Golden capybara styles
+- **Game Center** — leaderboard support for high scores
+- **Offline Friendly** — progress, coins, best score, skins, tutorial state, and settings are stored locally
+- **Privacy-First** — no ads, no tracking, no account, and no personal data collection
+
+## Pricing
+
+- Free
+- No ads
+
+## Platform
+
+- iOS (iPhone), requires iOS 17+
+- Works fully offline; Game Center leaderboard features use Apple's Game Center services
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdoelrhman.eaita@gmail.com
+
+---
+
 # تطعيمي (Tateemi) - Vaccination Tracker
 
 > Tateemi is a free Arabic vaccination tracker for iPhone following the Saudi national immunization schedule. It automatically calculates 38+ doses from the child's birth date, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
