@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://yoloabdo.com/</loc>
-        <lastmod>2026-03-19</lastmod>
+        <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/apps/</loc>
+        <lastmod>2026-06-02</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
@@ -43,6 +47,18 @@
     <url>
         <loc>https://yoloabdo.com/capybara-rush/privacy/</loc>
         <lastmod>2026-05-05</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/wifi-qr/</loc>
+        <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/wifi-qr/privacy/</loc>
+        <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/wifi-qr/support/</loc>
+        <lastmod>2026-06-02</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/tateemi/</loc>

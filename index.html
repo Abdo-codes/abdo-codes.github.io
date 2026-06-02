@@ -42,7 +42,7 @@
     {
         "@context": "https://schema.org",
         "@type": "ProfilePage",
-        "dateModified": "2026-03-19",
+        "dateModified": "2026-06-02",
         "mainEntity": {
             "@type": "Person",
             "@id": "https://yoloabdo.com/#person",
@@ -66,7 +66,9 @@
                 { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Sajda", "description": "Quran, Prayer Times & Athan for Apple TV", "url": "https://yoloabdo.com/sajda/", "applicationCategory": "ReligionApplication", "operatingSystem": "tvOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
                 { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Tally", "description": "Scoreboard & Score Keeper for Apple TV", "url": "https://yoloabdo.com/tally/", "applicationCategory": "SportsApplication", "operatingSystem": "tvOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
                 { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Capybara Rush: Swipe Fast", "description": "Cozy iPhone reflex game with quick 30-second swipe rounds, Fever Rush, golden bonuses, unlockable skins, offline play, and Game Center scores.", "url": "https://yoloabdo.com/capybara-rush/", "applicationCategory": "GameApplication", "operatingSystem": "iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "تطعيمي", "alternateName": "Tateemi", "description": "Vaccination Tracker — Saudi Vaccination Schedule", "url": "https://yoloabdo.com/tateemi/", "applicationCategory": "HealthApplication", "operatingSystem": "iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } }
+                { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Wi-Fi QR", "description": "Private Wi-Fi QR code generator for iPhone and iPad. Save trusted networks, generate QR codes, and share access without accounts or tracking.", "url": "https://yoloabdo.com/wifi-qr/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "تطعيمي", "alternateName": "Tateemi", "description": "Vaccination tracker with country-based child immunization schedules", "url": "https://yoloabdo.com/tateemi/", "applicationCategory": "HealthApplication", "operatingSystem": "iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Stampt", "description": "Keepsake camera for iPhone that frames photos inside real vintage postal stamps.", "url": "https://yoloabdo.com/stampt/", "applicationCategory": "PhotoApplication", "operatingSystem": "iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } }
             ]
         }
     }
@@ -193,6 +195,20 @@
 
         .section-title .icon {
             margin-right: 8px;
+        }
+
+        .section-note {
+            margin: -4px 0 16px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .section-note a {
+            color: var(--text);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: var(--border);
+            text-underline-offset: 2px;
         }
 
         /* ── App cards (Notion database-row style) ── */
@@ -472,7 +488,7 @@
         <h2 class="section-title"><span class="icon">&#128100;</span> About</h2>
         <div class="prose">
             <p>I grew up tinkering — taking things apart to see how they worked, then building something new from the pieces. That curiosity never left. Today I live in Amsterdam, where I split my time between building apps, 3D printing odd little objects, and keeping a small garden alive against all odds.</p>
-            <p>I've spent the past decade building across the Apple ecosystem — from apps that reached #1 on the US App Store to products used by millions. Commercially, I've shipped apps at BleacherReport, Niceone, Iqraaly, NewStore, and Marktplaats (eBay), with deep experience in ecommerce. On my own time, I build things I care about: <a href="/sajda/">Sajda</a> brings Quran recitations and prayer times to Apple TV, <a href="/tally/">Tally</a> turns your TV into a scoreboard for game nights, <a href="/capybara-rush/">Capybara Rush</a> is a cozy iPhone reflex game, <a href="/tateemi/">Tateemi</a> helps Saudi parents track vaccinations, and <a href="/stampt/">Stampt</a> turns your iPhone into a keepsake camera that frames photos through real vintage postal stamps. I also started <strong>SwiftCairo</strong> — Egypt's largest iOS developer community — and <strong>LintSchool</strong>, where I've mentored 50+ developers.</p>
+            <p>I've spent the past decade building across the Apple ecosystem — from apps that reached #1 on the US App Store to products used by millions. Commercially, I've shipped apps at BleacherReport, Niceone, Iqraaly, NewStore, and Marktplaats (eBay), with deep experience in ecommerce. On my own time, I build things I care about: <a href="/sajda/">Sajda</a> brings Quran recitations and prayer times to Apple TV, <a href="/tally/">Tally</a> turns your TV into a scoreboard for game nights, <a href="/capybara-rush/">Capybara Rush</a> is a cozy iPhone reflex game, <a href="/wifi-qr/">Wi-Fi QR</a> lets guests join your network by scanning a private on-device QR code, <a href="/tateemi/">Tateemi</a> helps parents track child vaccinations across supported country schedules, and <a href="/stampt/">Stampt</a> turns your iPhone into a keepsake camera that frames photos through real vintage postal stamps. I also started <strong>SwiftCairo</strong> — Egypt's largest iOS developer community — and <strong>LintSchool</strong>, where I've mentored 50+ developers.</p>
             <p>When I'm not writing code, you'll find me reading, walking the canals, or starting yet another side project I'm convinced the world needs.</p>
         </div>
 
@@ -480,6 +496,7 @@
 
         <!-- Apps -->
         <h2 class="section-title"><span class="icon">&#128241;</span> Apps</h2>
+        <p class="section-note"><a href="/apps/">View the full app gallery</a> with landing pages, App Store links, support, and privacy details.</p>
         <div class="app-list">
             <a href="/sajda/" class="app-row">
                 <div class="app-icon" style="background: #0d1a2d;">
@@ -520,13 +537,26 @@
                 </div>
                 <span class="app-arrow">&rsaquo;</span>
             </a>
+            <a href="/wifi-qr/" class="app-row">
+                <div class="app-icon" style="overflow: hidden; padding: 0;">
+                    <img src="/wifi-qr/app-icon.png" alt="Wi-Fi QR app icon" width="48" height="48" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Wi-Fi QR</div>
+                    <div class="app-desc">Private Wi-Fi QR codes for guests and saved networks</div>
+                </div>
+                <div class="app-tags">
+                    <span class="tag tag--blue">iPhone</span>
+                </div>
+                <span class="app-arrow">&rsaquo;</span>
+            </a>
             <a href="/tateemi/" class="app-row">
-                <div class="app-icon" style="background: #e8f5e9;">
-                    <span>💚</span>
+                <div class="app-icon" style="overflow: hidden; padding: 0;">
+                    <img src="/tateemi/app-icon.png" alt="Tateemi app icon" width="48" height="48" style="display: block; width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="app-info">
                     <div class="app-name">تطعيمي <span style="font-weight: 400; color: var(--text-secondary);">(Tateemi)</span></div>
-                    <div class="app-desc">Vaccination Tracker — Saudi Vaccination Schedule</div>
+                    <div class="app-desc">Vaccination tracker with country-based schedules</div>
                 </div>
                 <div class="app-tags">
                     <span class="tag tag--blue">iPhone</span>
@@ -551,7 +581,7 @@
         <div class="divider"></div>
 
         <!-- Writing -->
-        <h2 class="section-title"><span class="icon">&#9997;</span> Writing</h2>
+        <h2 id="writing" class="section-title"><span class="icon">&#9997;</span> Writing</h2>
         <div class="writing-list">
             <a href="https://levelup.gitconnected.com/optimizing-ios-dependencies-a-developers-guide-964057374ade" class="writing-row" target="_blank" rel="noopener">
                 <span class="writing-title">Optimizing iOS Dependencies: A Developer's Guide</span>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi QR - Private Wi-Fi QR Code Generator</title>
+    <meta name="description" content="Wi-Fi QR is a private iPhone and iPad app for generating Wi-Fi QR codes, saving trusted networks locally, searching saved networks, and sharing guest access without accounts or tracking.">
+    <meta name="author" content="Abdelrahman Eita">
+    <link rel="canonical" href="https://yoloabdo.com/wifi-qr/">
+    <link rel="icon" href="/wifi-qr/app-icon.png" type="image/png">
+
+    <meta property="og:title" content="Wi-Fi QR - Private Wi-Fi QR Code Generator">
+    <meta property="og:description" content="Generate Wi-Fi QR codes, save trusted networks locally, and share guest access from your iPhone. No accounts, ads, or tracking.">
+    <meta property="og:image" content="https://yoloabdo.com/wifi-qr/screenshot-qr.png">
+    <meta property="og:url" content="https://yoloabdo.com/wifi-qr/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wi-Fi QR">
+    <meta name="twitter:description" content="Private Wi-Fi QR codes for guests and saved networks.">
+    <meta name="twitter:image" content="https://yoloabdo.com/wifi-qr/screenshot-qr.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Q8WZXXZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X0Q8WZXXZG');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Wi-Fi QR",
+        "description": "Private Wi-Fi QR code generator for iPhone and iPad.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "iOS",
+        "url": "https://yoloabdo.com/wifi-qr/",
+        "image": "https://yoloabdo.com/wifi-qr/app-icon.png",
+        "author": {
+            "@type": "Person",
+            "name": "Abdelrahman Eita",
+            "url": "https://yoloabdo.com/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --ink: #102033;
+            --muted: #5d6c7b;
+            --line: #dce5ee;
+            --paper: #ffffff;
+            --wash: #f6fbff;
+            --blue: #2374f7;
+            --blue-ink: #154a9c;
+            --mint: #1fae85;
+            --mint-soft: #e7f8f2;
+            --amber: #f3b344;
+            --shadow: 0 22px 60px rgba(30, 58, 91, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+            color: var(--ink);
+            background: var(--wash);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(220, 229, 238, 0.82);
+            background: rgba(246, 251, 255, 0.88);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav-inner,
+        .section-inner {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            box-shadow: 0 8px 22px rgba(35, 116, 247, 0.22);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: var(--muted);
+            font-size: 0.94rem;
+            font-weight: 650;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .hero {
+            overflow: hidden;
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(246, 251, 255, 0.98)),
+                radial-gradient(circle at 78% 16%, rgba(31, 174, 133, 0.2), transparent 30%),
+                radial-gradient(circle at 12% 12%, rgba(35, 116, 247, 0.16), transparent 28%);
+        }
+
+        .hero-inner {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+            min-height: min(760px, calc(100vh - 120px));
+            display: grid;
+            grid-template-columns: minmax(0, 0.96fr) minmax(320px, 1.04fr);
+            gap: 56px;
+            align-items: center;
+            padding: 64px 0 44px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border: 1px solid #bfe9dc;
+            border-radius: 999px;
+            background: var(--mint-soft);
+            color: #16745a;
+            font-size: 0.83rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            margin: 22px 0 18px;
+            max-width: 720px;
+            font-size: clamp(3.1rem, 8vw, 6.6rem);
+            line-height: 0.92;
+            letter-spacing: 0;
+        }
+
+        .lead {
+            margin: 0;
+            max-width: 620px;
+            color: var(--muted);
+            font-size: clamp(1.13rem, 2vw, 1.38rem);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+        }
+
+        .button.primary {
+            border-color: var(--blue);
+            background: var(--blue);
+            color: white;
+            box-shadow: 0 14px 32px rgba(35, 116, 247, 0.28);
+        }
+
+        .hero-notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+            padding: 0;
+            list-style: none;
+            color: var(--muted);
+            font-size: 0.95rem;
+            font-weight: 650;
+        }
+
+        .hero-notes li {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--mint);
+        }
+
+        .showcase {
+            position: relative;
+            min-height: 640px;
+        }
+
+        .phone {
+            position: absolute;
+            width: min(270px, 44vw);
+            border-radius: 30px;
+            border: 10px solid #101820;
+            background: #101820;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .phone img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .phone.primary {
+            right: 18%;
+            top: 12px;
+            z-index: 3;
+        }
+
+        .phone.secondary {
+            left: 0;
+            top: 130px;
+            z-index: 2;
+            transform: rotate(-4deg);
+        }
+
+        .phone.tertiary {
+            right: 0;
+            top: 220px;
+            z-index: 1;
+            transform: rotate(5deg);
+        }
+
+        .app-icon-large {
+            position: absolute;
+            left: 14%;
+            top: 18px;
+            width: 108px;
+            height: 108px;
+            border-radius: 24px;
+            box-shadow: 0 18px 44px rgba(35, 116, 247, 0.28);
+            z-index: 4;
+        }
+
+        section {
+            padding: 82px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 720px;
+            margin-bottom: 34px;
+        }
+
+        .section-kicker {
+            color: var(--blue-ink);
+            font-weight: 850;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.02;
+            letter-spacing: 0;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .feature {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 22px;
+            box-shadow: 0 12px 30px rgba(16, 32, 51, 0.06);
+        }
+
+        .feature-mark {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            background: #e9f1ff;
+            color: var(--blue);
+            font-weight: 900;
+        }
+
+        .feature:nth-child(2n) .feature-mark {
+            background: var(--mint-soft);
+            color: #16745a;
+        }
+
+        .feature:nth-child(3n) .feature-mark {
+            background: #fff4d9;
+            color: #9a6500;
+        }
+
+        .feature h3 {
+            margin: 0 0 8px;
+            font-size: 1.13rem;
+        }
+
+        .feature p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .privacy-band {
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .privacy-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+            gap: 36px;
+            align-items: start;
+        }
+
+        .privacy-panel {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fbfdff;
+        }
+
+        .privacy-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 20px;
+            padding: 18px;
+            border-top: 1px solid var(--line);
+        }
+
+        .privacy-row:first-child {
+            border-top: 0;
+        }
+
+        .privacy-row strong {
+            color: var(--ink);
+        }
+
+        .privacy-row span {
+            color: var(--muted);
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 18px;
+            box-shadow: 0 18px 44px rgba(16, 32, 51, 0.08);
+        }
+
+        .screen img {
+            display: block;
+            width: min(100%, 190px);
+            height: auto;
+            border: 8px solid #101820;
+            border-radius: 26px;
+            background: #101820;
+            box-shadow: 0 16px 34px rgba(16, 32, 51, 0.16);
+        }
+
+        .screen h3 {
+            align-self: stretch;
+            margin: 18px 4px 4px;
+            font-size: 1rem;
+        }
+
+        .screen p {
+            align-self: stretch;
+            margin: 0 4px 6px;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .faq {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .faq article {
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+        }
+
+        .faq h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+        }
+
+        .faq p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 34px 0;
+            color: var(--muted);
+            background: #f0f6fc;
+        }
+
+        .footer-inner {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner a {
+            color: var(--ink);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner,
+            .privacy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-inner {
+                min-height: auto;
+            }
+
+            .showcase {
+                min-height: 600px;
+            }
+
+            .feature-grid,
+            .screens,
+            .faq {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .nav-inner,
+            .section-inner,
+            .hero-inner,
+            .footer-inner {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: 0.88rem;
+            }
+
+            .hero-inner {
+                gap: 24px;
+                padding-top: 30px;
+                padding-bottom: 28px;
+            }
+
+            .showcase {
+                min-height: 390px;
+            }
+
+            .phone {
+                width: min(42vw, 164px);
+                border-width: 7px;
+                border-radius: 24px;
+            }
+
+            .phone.primary {
+                left: 50%;
+                right: auto;
+                top: 0;
+                transform: translateX(-50%);
+            }
+
+            .phone.secondary {
+                display: none;
+            }
+
+            .phone.tertiary {
+                display: none;
+            }
+
+            .app-icon-large {
+                left: calc(50% - 128px);
+                width: 86px;
+                height: 86px;
+                border-radius: 19px;
+            }
+
+            .privacy-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/wifi-qr/">
+                <img src="/wifi-qr/app-icon.png" alt="Wi-Fi QR app icon">
+                <span>Wi-Fi QR</span>
+            </a>
+            <div class="nav-links" aria-label="Wi-Fi QR links">
+                <a href="/wifi-qr/privacy/">Privacy</a>
+                <a href="/wifi-qr/support/">Support</a>
+                <a href="/">Abdo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div>
+                <span class="eyebrow">Private by design</span>
+                <h1>Wi-Fi QR</h1>
+                <p class="lead">Create a scannable Wi-Fi QR code in seconds, keep trusted networks saved on your device, and share guest access without accounts, ads, or tracking.</p>
+                <div class="actions">
+                    <a class="button primary" href="/wifi-qr/support/">Get Support</a>
+                    <a class="button" href="/wifi-qr/privacy/">Read Privacy Policy</a>
+                </div>
+                <ul class="hero-notes" aria-label="App highlights">
+                    <li><span class="dot"></span> iPhone and iPad</li>
+                    <li><span class="dot"></span> Free</li>
+                    <li><span class="dot"></span> Works offline</li>
+                </ul>
+            </div>
+
+            <div class="showcase" aria-label="Wi-Fi QR app screenshots">
+                <img class="app-icon-large" src="/wifi-qr/app-icon.png" alt="">
+                <div class="phone secondary">
+                    <img src="/wifi-qr/screenshot-search.png" alt="Search saved Wi-Fi networks in Wi-Fi QR" width="1170" height="2532">
+                </div>
+                <div class="phone primary">
+                    <img src="/wifi-qr/screenshot-qr.png" alt="Generated Wi-Fi QR code in Wi-Fi QR" width="1170" height="2532">
+                </div>
+                <div class="phone tertiary">
+                    <img src="/wifi-qr/screenshot-settings.png" alt="Wi-Fi QR settings screen" width="1170" height="2532">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">For guests, family, and saved networks</span>
+                    <h2>Less typing. Fewer password mistakes.</h2>
+                    <p>Wi-Fi QR keeps the flow focused: add a network, generate the code, and let someone scan it from Camera.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature">
+                        <div class="feature-mark">QR</div>
+                        <h3>Generate Wi-Fi QR Codes</h3>
+                        <p>Create QR codes for WPA/WPA2/WPA3, WEP, and open networks with the standard Wi-Fi QR format supported by iOS.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">SSID</div>
+                        <h3>Start From Current Wi-Fi</h3>
+                        <p>With permission, the app can read your current Wi-Fi network name so you do not have to type it manually.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">Save</div>
+                        <h3>Save Trusted Networks</h3>
+                        <p>Keep networks on your device for quick reuse at home, work, or places where you regularly help guests connect.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">Find</div>
+                        <h3>Search From the Tab Bar</h3>
+                        <p>Open search when you need it, find the right network quickly, and return to generating codes without extra screens.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">Hide</div>
+                        <h3>Hidden and Manual Networks</h3>
+                        <p>Add hidden networks or type any SSID manually when the network is not currently available on your device.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">Share</div>
+                        <h3>Share QR Images</h3>
+                        <p>Export the generated QR image through the iOS share sheet for printing, messaging, or saving where you need it.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="privacy-band">
+            <div class="section-inner privacy-layout">
+                <div class="section-heading">
+                    <span class="section-kicker">Privacy</span>
+                    <h2>Your Wi-Fi details stay with you.</h2>
+                    <p>Wi-Fi QR is built as a local utility. There is no account system, no advertising SDK, no analytics SDK, and no server upload.</p>
+                </div>
+                <div class="privacy-panel">
+                    <div class="privacy-row">
+                        <strong>Data collected</strong>
+                        <span>None by the developer.</span>
+                    </div>
+                    <div class="privacy-row">
+                        <strong>Saved networks</strong>
+                        <span>Stored locally on your device so the app can regenerate QR codes.</span>
+                    </div>
+                    <div class="privacy-row">
+                        <strong>Location permission</strong>
+                        <span>Used only when iOS requires it to read the current Wi-Fi network name.</span>
+                    </div>
+                    <div class="privacy-row">
+                        <strong>Sharing</strong>
+                        <span>QR images leave the app only when you choose to share or save them.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">Screens</span>
+                    <h2>Built for quick repeat use.</h2>
+                    <p>The app keeps generation, saved networks, search, onboarding, and settings predictable for first-time users and people who use it often.</p>
+                </div>
+                <div class="screens">
+                    <article class="screen">
+                        <img src="/wifi-qr/screenshot-qr.png" alt="Generated Wi-Fi QR code screen" width="1170" height="2532" loading="lazy">
+                        <h3>Generate</h3>
+                        <p>Check network details and share the QR image.</p>
+                    </article>
+                    <article class="screen">
+                        <img src="/wifi-qr/screenshot-search.png" alt="Search saved networks screen" width="1170" height="2532" loading="lazy">
+                        <h3>Search</h3>
+                        <p>Find saved networks without leaving the main flow.</p>
+                    </article>
+                    <article class="screen">
+                        <img src="/wifi-qr/screenshot-settings.png" alt="Settings and privacy screen" width="1170" height="2532" loading="lazy">
+                        <h3>Settings</h3>
+                        <p>Review privacy, support, version, and onboarding.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">FAQ</span>
+                    <h2>Small answers before you need support.</h2>
+                </div>
+                <div class="faq">
+                    <article>
+                        <h3>Does Wi-Fi QR upload my network password?</h3>
+                        <p>No. Saved networks stay on your device. The app does not have an account, server sync, ads, analytics, or tracking.</p>
+                    </article>
+                    <article>
+                        <h3>Why does the app ask for location permission?</h3>
+                        <p>iOS requires location permission before an app can read the current Wi-Fi network name. Wi-Fi QR uses it only for that SSID shortcut.</p>
+                    </article>
+                    <article>
+                        <h3>Can I use it for hidden networks?</h3>
+                        <p>Yes. Add the network manually and enable the hidden network option before generating the QR code.</p>
+                    </article>
+                    <article>
+                        <h3>How do guests join?</h3>
+                        <p>They scan the QR code with the iPhone Camera app and confirm the Wi-Fi join prompt.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>&copy; 2026 Abdelrahman Eita. Wi-Fi QR.</span>
+            <span><a href="/wifi-qr/privacy/">Privacy</a> &middot; <a href="/wifi-qr/support/">Support</a> &middot; <a href="/">Developer</a></span>
+        </div>
+    </footer>
+</body>
+</html>

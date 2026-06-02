@@ -2,6 +2,11 @@
 
 > Apps and projects by Abdelrahman Eita — Staff Software Engineer. Content available for AI search citation.
 
+## Site Links
+
+- [All Apps](https://yoloabdo.com/apps/)
+- [Developer Profile](https://yoloabdo.com/)
+
 ---
 
 # Sajda - Quran for Apple TV
@@ -133,9 +138,46 @@
 
 ---
 
+# Wi-Fi QR - Private Wi-Fi QR Code Generator
+
+> Wi-Fi QR is a private iPhone and iPad utility for generating Wi-Fi QR codes. It can start from the current Wi-Fi network name, add hidden or manual networks, save trusted networks locally, search saved networks, and share QR code images. No account, ads, tracking, or analytics.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Support](https://yoloabdo.com/wifi-qr/support/)
+- [Privacy Policy](https://yoloabdo.com/wifi-qr/privacy/)
+
+## Key Features
+
+- **Generate Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, and open networks
+- **Use Current Network Name** - with permission, reads the current Wi-Fi SSID to reduce typing
+- **Manual and Hidden Networks** - supports manual SSID entry and hidden-network QR codes
+- **Saved Networks** - stores trusted networks locally on the device for quick reuse
+- **Search** - finds saved networks quickly from the tab bar
+- **Share QR Images** - exports QR code images through the iOS share sheet
+- **Privacy-First** - no accounts, ads, tracking, analytics, or third-party data collection
+
+## Pricing
+
+- Free
+- No ads, no subscription, no in-app purchases
+
+## Platform
+
+- iOS 17+ for iPhone and iPad
+- Works offline for saved/manual networks; current Wi-Fi name detection uses iOS location permission
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
 # تطعيمي (Tateemi) - Vaccination Tracker
 
-> Tateemi is a free Arabic vaccination tracker for iPhone following the Saudi national immunization schedule. It automatically calculates 38+ doses from the child's birth date, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
+> Tateemi is a free Arabic vaccination tracker for iPhone with country-based child immunization schedules. Parents choose the supported country schedule, add a child with their birth date, and the app calculates upcoming doses, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
 
 ## Links
 
@@ -146,7 +188,7 @@
 
 ## Key Features
 
-- **38+ Doses Calculated Automatically** from the child's birth date based on the Saudi national immunization schedule
+- **Country-Based Schedules** with dose timelines calculated from the child's birth date
 - **Vaccination Progress Tracking** with visual completion percentage for each child
 - **Smart Reminders** — notifications 1 week, 3 days, and on the day of each upcoming dose
 - **Medical Information** for each vaccine: what it is, why it matters, and possible side effects

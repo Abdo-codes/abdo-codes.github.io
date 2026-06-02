@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Wi-Fi QR</title>
+    <meta name="description" content="Support for Wi-Fi QR, a private Wi-Fi QR code generator for iPhone and iPad.">
+    <link rel="canonical" href="https://yoloabdo.com/wifi-qr/support/">
+    <link rel="icon" href="/wifi-qr/app-icon.png" type="image/png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Q8WZXXZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X0Q8WZXXZG');
+    </script>
+
+    <style>
+        :root {
+            --ink: #102033;
+            --muted: #5d6c7b;
+            --line: #dce5ee;
+            --paper: #ffffff;
+            --wash: #f6fbff;
+            --blue: #2374f7;
+            --mint: #1fae85;
+            --amber: #f3b344;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+            color: var(--ink);
+            background: var(--wash);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            width: min(900px, calc(100% - 36px));
+            margin: 0 auto;
+            padding: 46px 0 72px;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-weight: 750;
+            text-decoration: none;
+            margin-bottom: 32px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 84px minmax(0, 1fr);
+            gap: 18px;
+            align-items: center;
+            margin-bottom: 34px;
+        }
+
+        .hero img {
+            width: 84px;
+            height: 84px;
+            border-radius: 18px;
+            box-shadow: 0 14px 34px rgba(35, 116, 247, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.4rem, 8vw, 4rem);
+            line-height: 1;
+            letter-spacing: 0;
+        }
+
+        .lead {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 12px 30px rgba(16, 32, 51, 0.06);
+        }
+
+        .contact strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .contact span {
+            color: var(--muted);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 16px;
+            border-radius: 8px;
+            background: var(--blue);
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        article {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 20px;
+        }
+
+        article h2 {
+            margin: 0 0 8px;
+            font-size: 1.18rem;
+        }
+
+        article p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        a {
+            color: var(--blue);
+            font-weight: 760;
+        }
+
+        .privacy-note {
+            margin-top: 16px;
+            border-left: 4px solid var(--mint);
+        }
+
+        .warning-note {
+            margin-top: 16px;
+            border-left: 4px solid var(--amber);
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <a class="back" href="/wifi-qr/">&larr; Wi-Fi QR</a>
+        <header class="hero">
+            <img src="/wifi-qr/app-icon.png" alt="Wi-Fi QR app icon">
+            <div>
+                <h1>Support</h1>
+                <p class="lead">Help for generating, saving, searching, and sharing Wi-Fi QR codes.</p>
+            </div>
+        </header>
+
+        <section class="contact" aria-label="Contact support">
+            <div>
+                <strong>Need help?</strong>
+                <span>Email support and include your iPhone or iPad model, iOS version, and what happened.</span>
+            </div>
+            <a class="button" href="mailto:abdulrhman.eaita@gmail.com?subject=Wi-Fi%20QR%20Support">Email Support</a>
+        </section>
+
+        <div class="grid">
+            <article>
+                <h2>How do I make a QR code?</h2>
+                <p>Add a network name and password, choose the security type, then generate the QR code. Guests can scan it with the iPhone Camera app.</p>
+            </article>
+            <article>
+                <h2>Why does the app ask for location permission?</h2>
+                <p>iOS requires location permission before apps can read the current Wi-Fi network name. Wi-Fi QR uses it only to fill in the SSID.</p>
+            </article>
+            <article>
+                <h2>Can I add a hidden network?</h2>
+                <p>Yes. Enter the network manually and enable the hidden network option before generating the QR code.</p>
+            </article>
+            <article>
+                <h2>Can I share or print the QR code?</h2>
+                <p>Yes. Use the iOS share sheet from the QR screen to send, save, print, or place the image somewhere useful.</p>
+            </article>
+            <article>
+                <h2>Where are saved networks stored?</h2>
+                <p>Saved networks are stored locally on your device so Wi-Fi QR can regenerate QR codes later.</p>
+            </article>
+            <article>
+                <h2>Does the app collect analytics?</h2>
+                <p>No. Wi-Fi QR has no accounts, ads, tracking, analytics SDK, or developer-operated server upload.</p>
+            </article>
+        </div>
+
+        <article class="privacy-note">
+            <h2>Privacy Policy</h2>
+            <p>Read the full <a href="/wifi-qr/privacy/">Wi-Fi QR Privacy Policy</a> for details about local storage, location permission, and sharing.</p>
+        </article>
+
+        <article class="warning-note">
+            <h2>Share Carefully</h2>
+            <p>A Wi-Fi QR code can contain your network password. Share QR codes only with people you trust.</p>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps by Abdelrahman Eita</title>
+    <meta name="description" content="A catalog of independent Apple apps by Abdelrahman Eita, including Sajda, Tally, Capybara Rush, Wi-Fi QR, Tateemi, and Stampt.">
+    <meta name="author" content="Abdelrahman Eita">
+    <link rel="canonical" href="https://yoloabdo.com/apps/">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/apps/">
+    <meta property="og:title" content="Apps by Abdelrahman Eita">
+    <meta property="og:description" content="Independent apps for Apple TV, iPhone, Arabic families, game nights, private utilities, and stamp photography.">
+    <meta property="og:image" content="https://yoloabdo.com/images/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apps by Abdelrahman Eita">
+    <meta name="twitter:description" content="Independent apps for Apple TV, iPhone, Arabic families, game nights, private utilities, and stamp photography.">
+    <meta name="twitter:image" content="https://yoloabdo.com/images/profile.jpg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWW2E9NVE3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-FWW2E9NVE3");
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Apps by Abdelrahman Eita",
+        "description": "A catalog of independent Apple apps by Abdelrahman Eita.",
+        "url": "https://yoloabdo.com/apps/",
+        "author": { "@type": "Person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+        "hasPart": [
+            { "@type": "SoftwareApplication", "name": "Sajda", "url": "https://yoloabdo.com/sajda/", "applicationCategory": "ReligionApplication", "operatingSystem": "tvOS" },
+            { "@type": "SoftwareApplication", "name": "Tally", "url": "https://yoloabdo.com/tally/", "applicationCategory": "SportsApplication", "operatingSystem": "tvOS" },
+            { "@type": "SoftwareApplication", "name": "Capybara Rush: Swipe Fast", "url": "https://yoloabdo.com/capybara-rush/", "applicationCategory": "GameApplication", "operatingSystem": "iOS" },
+            { "@type": "SoftwareApplication", "name": "Wi-Fi QR", "url": "https://yoloabdo.com/wifi-qr/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "iOS" },
+            { "@type": "SoftwareApplication", "name": "تطعيمي", "alternateName": "Tateemi", "url": "https://yoloabdo.com/tateemi/", "applicationCategory": "HealthApplication", "operatingSystem": "iOS" },
+            { "@type": "SoftwareApplication", "name": "Stampt", "url": "https://yoloabdo.com/stampt/", "applicationCategory": "PhotoApplication", "operatingSystem": "iOS" }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #5f6b7a;
+            --soft: #8a94a3;
+            --line: #dfe5ec;
+            --paper: #ffffff;
+            --wash: #f7f9fc;
+            --blue: #2368d9;
+            --green: #167a61;
+            --gold: #a86e10;
+            --shadow: 0 18px 50px rgba(23, 32, 51, 0.1);
+            --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Segoe UI", sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: var(--font);
+            color: var(--ink);
+            background: var(--wash);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; }
+        img { max-width: 100%; }
+
+        .wrap {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(223, 229, 236, 0.82);
+            background: rgba(247, 249, 252, 0.9);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav-inner {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: var(--muted);
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--ink);
+        }
+
+        .hero {
+            padding: 68px 0 44px;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .kicker {
+            margin: 0 0 14px;
+            color: var(--blue);
+            font-size: 0.82rem;
+            font-weight: 850;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            max-width: 980px;
+            margin: 0;
+            font-size: 4.7rem;
+            line-height: 0.98;
+            letter-spacing: 0;
+            overflow-wrap: break-word;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            margin: 22px 0 0;
+            color: var(--muted);
+            font-size: 1.28rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .button.primary {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .app-runway {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(90px, 1fr));
+            gap: 12px;
+            margin-top: 42px;
+        }
+
+        .runway-item {
+            min-height: 126px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fbfcfe;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .runway-item img,
+        .runway-item img {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 10px 24px rgba(23, 32, 51, 0.13);
+        }
+
+        .runway-item span {
+            color: var(--muted);
+            font-size: 0.83rem;
+            font-weight: 750;
+        }
+
+        section {
+            padding: 64px 0;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 2.4rem;
+            line-height: 1.08;
+            letter-spacing: 0;
+        }
+
+        .section-head p {
+            max-width: 420px;
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .app-card {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            min-height: 100%;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .visual {
+            position: relative;
+            min-height: 220px;
+            overflow: hidden;
+            background: #eef2f7;
+        }
+
+        .visual > img.art {
+            width: 100%;
+            height: 260px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .visual.wifi {
+            display: grid;
+            place-items: center;
+            min-height: 260px;
+            background: #eef8ff;
+        }
+
+        .visual.wifi img.art {
+            width: 176px;
+            height: auto;
+            border: 8px solid #101820;
+            border-radius: 26px;
+            box-shadow: 0 18px 42px rgba(23, 32, 51, 0.16);
+        }
+
+        .visual.plain {
+            display: grid;
+            place-items: center;
+            min-height: 220px;
+            padding: 28px;
+        }
+
+        .app-icon {
+            position: absolute;
+            left: 18px;
+            bottom: 18px;
+            width: 66px;
+            height: 66px;
+            border-radius: 16px;
+            border: 4px solid rgba(255, 255, 255, 0.92);
+            object-fit: cover;
+            box-shadow: 0 12px 28px rgba(23, 32, 51, 0.24);
+        }
+
+        .app-body {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 22px;
+        }
+
+        .app-title-row {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .app-title-row h3 {
+            margin: 0 0 5px;
+            font-size: 1.55rem;
+            line-height: 1.12;
+        }
+
+        .app-title-row p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .status {
+            flex-shrink: 0;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: #edf2f7;
+            color: var(--muted);
+            font-size: 0.76rem;
+            font-weight: 850;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .status.live { background: #e9f7ef; color: var(--green); }
+        .status.soon { background: #fff3d8; color: var(--gold); }
+
+        .tags,
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 5px 9px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 750;
+        }
+
+        .links {
+            margin-top: auto;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .links a.main {
+            border-color: var(--blue);
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .apps-note {
+            margin-top: 28px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--muted);
+        }
+
+        .apps-note a {
+            color: var(--blue);
+            font-weight: 800;
+        }
+
+        .sajda .visual { background: #0d1a2d; }
+        .tally .visual { background: #11131e; }
+        .capybara .visual { background: #feeccf; }
+        .stampt .visual { background: #f3eadc; }
+        .tateemi .visual { background: #eff8f1; }
+
+        .tateemi-icon-large {
+            width: 116px;
+            height: 116px;
+            border-radius: 26px;
+            object-fit: cover;
+            box-shadow: 0 18px 42px rgba(22, 138, 84, 0.18);
+        }
+
+        footer {
+            padding: 30px 0 48px;
+            border-top: 1px solid var(--line);
+            color: var(--soft);
+            background: var(--paper);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-inner a {
+            color: var(--ink);
+            font-weight: 750;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            h1 { font-size: 3.35rem; }
+            .app-runway { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .app-grid { grid-template-columns: 1fr; }
+            .section-head { align-items: start; flex-direction: column; }
+        }
+
+        @media (max-width: 620px) {
+            .wrap {
+                width: min(340px, calc(100vw - 28px));
+                max-width: 340px;
+                margin-left: 14px;
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .nav-inner { align-items: center; }
+            .brand { min-width: 0; }
+            .brand span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .nav-links {
+                flex-shrink: 0;
+                gap: 12px;
+                font-size: 0.88rem;
+            }
+            .nav-links a:not(:first-child) { display: none; }
+            .hero { padding-top: 42px; }
+            .nav-links { display: none; }
+            h1 {
+                max-width: 340px;
+                font-size: 2rem;
+                line-height: 1.08;
+            }
+            .hero-copy {
+                max-width: 340px;
+                font-size: 1rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .button { width: 100%; }
+            .app-runway { grid-template-columns: 1fr; }
+            .visual > img.art { height: 220px; }
+            .app-title-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="wrap nav-inner">
+            <a href="/" class="brand">
+                <img src="/images/profile.jpg" alt="Abdelrahman Eita" width="36" height="36">
+                <span>Abdelrahman Eita</span>
+            </a>
+            <div class="nav-links" aria-label="Site links">
+                <a href="/apps/">Apps</a>
+                <a href="/#writing">Writing</a>
+                <a href="mailto:abdulrhman.eaita@gmail.com">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap">
+            <p class="kicker">Independent Apple apps</p>
+            <h1>Small, focused apps for real everyday moments.</h1>
+            <p class="hero-copy">A catalog of apps I build across Apple TV and iPhone: Quran listening, living-room scoreboards, cozy games, private Wi-Fi sharing, Arabic family utilities, and stamp photography.</p>
+            <div class="hero-actions">
+                <a class="button primary" href="#apps">Browse apps</a>
+                <a class="button" href="/">Developer profile</a>
+            </div>
+
+            <div class="app-runway" aria-label="App icons">
+                <a class="runway-item" href="/sajda/">
+                    <img src="/sajda/apple-touch-icon.png" alt="Sajda app icon" width="58" height="58">
+                    <span>Sajda</span>
+                </a>
+                <a class="runway-item" href="/tally/">
+                    <img src="/images/tally/icon.png" alt="Tally app icon" width="58" height="58">
+                    <span>Tally</span>
+                </a>
+                <a class="runway-item" href="/capybara-rush/">
+                    <img src="/images/capybara-rush/icon.png" alt="Capybara Rush app icon" width="58" height="58">
+                    <span>Capybara Rush</span>
+                </a>
+                <a class="runway-item" href="/wifi-qr/">
+                    <img src="/wifi-qr/app-icon.png" alt="Wi-Fi QR app icon" width="58" height="58">
+                    <span>Wi-Fi QR</span>
+                </a>
+                <a class="runway-item" href="/tateemi/">
+                    <img src="/tateemi/app-icon.png" alt="Tateemi app icon" width="58" height="58">
+                    <span>Tateemi</span>
+                </a>
+                <a class="runway-item" href="/stampt/">
+                    <img src="/stampt/app-icon.png" alt="Stampt app icon" width="58" height="58">
+                    <span>Stampt</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="apps">
+        <section>
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="kicker">Catalog</p>
+                        <h2>All Apps</h2>
+                    </div>
+                    <p>Each app has a dedicated page with product details, support, and privacy information. App Store links are included where the app is live.</p>
+                </div>
+
+                <div class="app-grid">
+                    <article class="app-card sajda">
+                        <div class="visual">
+                            <img class="art" src="/sajda/screenshot-player.jpg" alt="Sajda Quran player on Apple TV" width="1920" height="1080" loading="lazy">
+                            <img class="app-icon" src="/sajda/apple-touch-icon.png" alt="" width="66" height="66">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>Sajda</h3>
+                                    <p>Quran, prayer times, athan, reciters, translations, and focus mode for Apple TV.</p>
+                                </div>
+                                <span class="status live">Live</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Apple TV</span>
+                                <span class="tag">Quran</span>
+                                <span class="tag">Prayer Times</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/sajda/">Open page</a>
+                                <a href="https://apps.apple.com/us/app/sajdatv/id6759179587">App Store</a>
+                                <a href="/sajda/support/">Support</a>
+                                <a href="/sajda/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="app-card tally">
+                        <div class="visual">
+                            <img class="art" src="/images/tally/hero.jpg" alt="Tally scoreboard on Apple TV" width="1920" height="1080" loading="lazy">
+                            <img class="app-icon" src="/images/tally/icon.png" alt="" width="66" height="66">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>Tally</h3>
+                                    <p>Living-room scoreboard and game night score keeper with giant TV-readable scores.</p>
+                                </div>
+                                <span class="status live">Live</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Apple TV</span>
+                                <span class="tag">Scoreboard</span>
+                                <span class="tag">Game Night</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/tally/">Open page</a>
+                                <a href="https://apps.apple.com/us/app/tally-scoreboard-keeper/id6760623633">App Store</a>
+                                <a href="/tally/support/">Support</a>
+                                <a href="/tally/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="app-card capybara">
+                        <div class="visual">
+                            <img class="art" src="/images/capybara-rush/key-art.png" alt="Capybara Rush cozy arcade key art" width="1024" height="1536" loading="lazy">
+                            <img class="app-icon" src="/images/capybara-rush/icon.png" alt="" width="66" height="66">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>Capybara Rush</h3>
+                                    <p>A cozy 30-second iPhone reflex game with combos, Fever Rush, skins, and offline play.</p>
+                                </div>
+                                <span class="status live">Live</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">iPhone</span>
+                                <span class="tag">Game</span>
+                                <span class="tag">Offline</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/capybara-rush/">Open page</a>
+                                <a href="https://apps.apple.com/app/id6766263673">App Store</a>
+                                <a href="/capybara-rush/support/">Support</a>
+                                <a href="/capybara-rush/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="app-card wifiqr">
+                        <div class="visual wifi">
+                            <img class="art" src="/wifi-qr/screenshot-qr.png" alt="Wi-Fi QR code screen" width="1170" height="2532" loading="lazy">
+                            <img class="app-icon" src="/wifi-qr/app-icon.png" alt="" width="66" height="66">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>Wi-Fi QR</h3>
+                                    <p>Private Wi-Fi QR codes for guests, saved networks, search, and on-device sharing.</p>
+                                </div>
+                                <span class="status soon">Preparing</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">iPhone</span>
+                                <span class="tag">Utility</span>
+                                <span class="tag">Private</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/wifi-qr/">Open page</a>
+                                <a href="/wifi-qr/support/">Support</a>
+                                <a href="/wifi-qr/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="app-card tateemi">
+                        <div class="visual plain">
+                            <img class="tateemi-icon-large" src="/tateemi/app-icon.png" alt="Tateemi app icon" width="116" height="116">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>تطعيمي <span lang="en">(Tateemi)</span></h3>
+                                    <p>Arabic vaccination tracker with country-based schedules, reminders, and dose tracking.</p>
+                                </div>
+                                <span class="status live">Live</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">iPhone</span>
+                                <span class="tag">Arabic</span>
+                                <span class="tag">Country schedules</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/tateemi/">Open page</a>
+                                <a href="https://apps.apple.com/app/id6760822504">App Store</a>
+                                <a href="/tateemi/support/">Support</a>
+                                <a href="/tateemi/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="app-card stampt">
+                        <div class="visual">
+                            <img class="art" src="/stampt/captures/capture-egypt-sunsetsea.jpg" alt="Photo captured through a vintage stamp in Stampt" width="1600" height="1200" loading="lazy">
+                            <img class="app-icon" src="/stampt/app-icon.png" alt="" width="66" height="66">
+                        </div>
+                        <div class="app-body">
+                            <div class="app-title-row">
+                                <div>
+                                    <h3>Stampt</h3>
+                                    <p>A keepsake camera that frames photos inside real vintage postal stamp scans.</p>
+                                </div>
+                                <span class="status live">Live</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">iPhone</span>
+                                <span class="tag">Camera</span>
+                                <span class="tag">Offline</span>
+                            </div>
+                            <div class="links">
+                                <a class="main" href="/stampt/">Open page</a>
+                                <a href="https://apps.apple.com/us/app/stampt-stamp-camera/id6763900018">App Store</a>
+                                <a href="/stampt/support/">Support</a>
+                                <a href="/stampt/privacy/">Privacy</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="apps-note">Looking for support or privacy details? Every app card links to its dedicated support and privacy pages. For anything else, email <a href="mailto:abdulrhman.eaita@gmail.com">abdulrhman.eaita@gmail.com</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="/">Home</a> &middot; <a href="/llms.txt">LLM Index</a> &middot; <a href="mailto:abdulrhman.eaita@gmail.com">Contact</a></span>
+        </div>
+    </footer>
+</body>
+</html>
