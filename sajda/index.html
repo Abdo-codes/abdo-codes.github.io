@@ -58,7 +58,8 @@
         "operatingSystem": "tvOS",
         "applicationCategory": "ReligionApplication",
         "url": "https://yoloabdo.com/sajda/",
-        "downloadUrl": "https://apps.apple.com/us/app/sajdatv/id6759179587",
+        "downloadUrl": "https://apps.apple.com/us/app/sajdah-quran-athan-tv/id6759179587",
+        "image": "https://yoloabdo.com/sajda/app-icon.png",
         "screenshot": "https://yoloabdo.com/sajda/screenshot-player.jpg",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free", "availability": "https://schema.org/InStock" },
         "author": { "@type": "Person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com" }
@@ -313,11 +314,11 @@
         }
         .app-icon {
             width: 110px; height: 110px;
-            background: linear-gradient(135deg, var(--emerald-deep), #1a5c47);
+            background: #0d1a2d;
             border-radius: 26px;
-            display: flex; align-items: center; justify-content: center;
+            display: block;
             margin: 0 auto 36px;
-            font-size: 52px;
+            object-fit: cover;
             box-shadow: 0 8px 40px rgba(45, 138, 110, 0.35), 0 0 80px rgba(78, 203, 160, 0.1);
         }
         .hero h1 {
@@ -710,13 +711,13 @@
         </nav>
 
         <section class="hero">
-            <div class="app-icon hero-anim hero-anim-1">📖</div>
+            <img class="app-icon hero-anim hero-anim-1" src="/sajda/app-icon.png" alt="Sajda app icon" width="110" height="110">
             <h1 class="hero-anim hero-anim-2"><span class="brand">Sajda</span> — <span data-i18n="heroSuffix">Quran for Apple TV</span></h1>
             <div class="separator hero-anim hero-anim-2"><div class="diamond"></div></div>
             <p class="tagline hero-anim hero-anim-3" data-i18n="tagline">Listen to the Holy Quran on your Apple TV with beautiful recitations and verse-by-verse sync.</p>
             <span class="badge hero-anim hero-anim-4" data-i18n="badge">Available on Apple TV</span>
             <div class="hero-anim hero-anim-5">
-                <a href="https://apps.apple.com/us/app/sajdatv/id6759179587" target="_blank" rel="noopener" class="appstore-link" aria-label="Download on the App Store">
+                <a href="https://apps.apple.com/us/app/sajdah-quran-athan-tv/id6759179587" target="_blank" rel="noopener" class="appstore-link" aria-label="Download on the App Store">
                     <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download Sajda on the App Store" width="180" height="60">
                 </a>
             </div>
@@ -978,16 +979,16 @@
             </h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
                 <a href="/tally/" class="fade-in" style="background: var(--bg-card); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; text-decoration: none; color: var(--text); display: block;" onmouseover="this.style.borderColor='rgba(78,203,160,0.25)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(78,203,160,0.08)'" onmouseout="this.style.borderColor='rgba(78,203,160,0.08)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-                    <div style="font-size: 40px; margin-bottom: 16px;">🏀</div>
+                    <img src="/images/tally/app-icon.png" alt="Tally app icon" width="56" height="56" style="display: block; width: 56px; height: 56px; border-radius: 14px; object-fit: cover; margin: 0 auto 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.18);">
                     <h3 style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 4px;">Tally</h3>
                     <p style="font-size: 13px; color: var(--emerald); font-weight: 500; margin-bottom: 10px;">Apple TV</p>
                     <p style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">The scoreboard app your living room deserves. 7 sports + Game Night mode. Free to try.</p>
                 </a>
                 <a href="/tateemi/" class="fade-in" style="background: var(--bg-card); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; text-decoration: none; color: var(--text); display: block;" onmouseover="this.style.borderColor='rgba(78,203,160,0.25)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(78,203,160,0.08)'" onmouseout="this.style.borderColor='rgba(78,203,160,0.08)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-                    <div style="font-size: 40px; margin-bottom: 16px;">💚</div>
+                    <img src="/tateemi/app-icon.png" alt="Tateemi app icon" width="56" height="56" style="display: block; width: 56px; height: 56px; border-radius: 14px; object-fit: cover; margin: 0 auto 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.18);">
                     <h3 style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 4px;">Tateemi</h3>
                     <p style="font-size: 13px; color: var(--emerald); font-weight: 500; margin-bottom: 10px;">iPhone</p>
-                    <p style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Track your children's vaccinations with the Saudi MoH schedule. Arabic-first, free, no account required.</p>
+                    <p style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Track your children's vaccinations with country-based schedules. Arabic-first, free, no account required.</p>
                 </a>
             </div>
         </section>

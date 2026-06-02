@@ -16,7 +16,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/sajda/)
-- [App Store](https://apps.apple.com/us/app/sajdatv/id6759179587)
+- [App Store](https://apps.apple.com/us/app/sajdah-quran-athan-tv/id6759179587)
 - [Support](https://yoloabdo.com/sajda/support/)
 - [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
 
@@ -63,7 +63,7 @@
 
 - [Landing Page](https://yoloabdo.com/tally/)
 - [Trailer](https://yoloabdo.com/media/tally/tally-v13-promo-1080.mp4)
-- [App Store](https://apps.apple.com/us/app/tally-scoreboard-keeper/id6760623633)
+- [App Store](https://apps.apple.com/us/app/tally-game-night-scoreboard/id6760623633)
 - [Support](https://yoloabdo.com/tally/support/)
 - [Privacy Policy](https://yoloabdo.com/tally/privacy/)
 
@@ -106,7 +106,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/capybara-rush/)
-- [App Store](https://apps.apple.com/app/id6766263673)
+- [App Store](https://apps.apple.com/us/app/capybara-rush-swipe-fast/id6766263673)
 - [Support](https://yoloabdo.com/capybara-rush/support/)
 - [Privacy Policy](https://yoloabdo.com/capybara-rush/privacy/)
 
@@ -182,7 +182,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/tateemi/)
-- [App Store](https://apps.apple.com/app/id6760822504)
+- [App Store](https://apps.apple.com/us/app/tateemi-baby-vaccine-tracker/id6760822504)
 - [Support](https://yoloabdo.com/tateemi/support/)
 - [Privacy Policy](https://yoloabdo.com/tateemi/privacy/)
 
@@ -217,7 +217,7 @@
 
 ## Links
 
-- [App Store](https://apps.apple.com/us/app/stampt-stamp-camera/id6763900018)
+- [App Store](https://apps.apple.com/us/app/stampt-vintage-stamp-camera/id6763900018)
 - [Landing Page](https://yoloabdo.com/stampt/)
 - [Support](https://yoloabdo.com/stampt/support/)
 - [Privacy Policy](https://yoloabdo.com/stampt/privacy/)

@@ -79,7 +79,8 @@
         "operatingSystem": "iOS 17",
         "applicationCategory": "HealthApplication",
         "url": "https://yoloabdo.com/tateemi/",
-        "downloadUrl": "https://apps.apple.com/app/id6760822504",
+        "downloadUrl": "https://apps.apple.com/us/app/tateemi-baby-vaccine-tracker/id6760822504",
+        "image": "https://yoloabdo.com/tateemi/app-icon.png",
         "inLanguage": "ar",
         "softwareVersion": "1.0.0",
         "offers": {
@@ -289,17 +290,19 @@
         .nav-brand-icon {
             width: 36px;
             height: 36px;
-            background: var(--green-light);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(46, 125, 50, 0.14);
         }
 
-        .nav-brand-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--green);
+        .nav-brand-icon img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
         .nav-brand span {
@@ -363,20 +366,21 @@
         .hero-icon {
             width: 120px;
             height: 120px;
-            background: var(--green-light);
             border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 40px;
-            box-shadow: 0 16px 48px rgba(46, 125, 50, 0.12);
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(46, 125, 50, 0.18);
             animation: heroFloat 4s ease-in-out infinite;
         }
 
-        .hero-icon svg {
-            width: 56px;
-            height: 56px;
-            fill: var(--green);
+        .hero-icon img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
         .hero-title {
@@ -714,7 +718,11 @@
         }
 
         .app-card-icon {
-            font-size: 40px;
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
             margin-bottom: 16px;
         }
 
@@ -815,11 +823,6 @@
                 border-radius: 22px;
             }
 
-            .hero-icon svg {
-                width: 44px;
-                height: 44px;
-            }
-
             .stats-grid {
                 gap: 32px;
             }
@@ -844,7 +847,7 @@
         <div class="container">
             <a href="/tateemi/" class="nav-brand">
                 <div class="nav-brand-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <img src="/tateemi/app-icon.png" alt="" width="36" height="36">
                 </div>
                 <span>تطعيمي</span>
             </a>
@@ -863,12 +866,12 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-icon reveal">
-                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <img src="/tateemi/app-icon.png" alt="أيقونة تطبيق تطعيمي" width="120" height="120">
                 </div>
                 <h1 class="hero-title reveal reveal-delay-1">تطعيمي</h1>
                 <p class="hero-tagline reveal reveal-delay-2">تابع تطعيمات أطفالك حسب جدول التحصينات في بلدك — عشان ما تنسى ولا جرعة</p>
                 <div class="hero-cta reveal reveal-delay-3">
-                    <a href="https://apps.apple.com/app/id6760822504" class="badge-link" aria-label="حمّل من App Store">
+                    <a href="https://apps.apple.com/us/app/tateemi-baby-vaccine-tracker/id6760822504" class="badge-link" aria-label="حمّل من App Store">
                         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ar-sa?size=250x83" alt="حمّل من App Store" height="54" width="180">
                     </a>
                 </div>
@@ -1081,13 +1084,13 @@
             </div>
             <div class="apps-grid">
                 <a href="/sajda/" class="app-card reveal">
-                    <div class="app-card-icon">🕌</div>
+                    <img class="app-card-icon" src="/sajda/app-icon.png" alt="Sajda app icon" width="56" height="56">
                     <h3>Sajda</h3>
                     <div class="app-card-platform">Apple TV</div>
                     <p>استمع للقرآن الكريم على Apple TV مع أكثر من ٢٠٠ قارئ، مواقيت الصلاة، وخلفيات هادئة.</p>
                 </a>
                 <a href="/tally/" class="app-card reveal reveal-delay-1">
-                    <div class="app-card-icon">🏀</div>
+                    <img class="app-card-icon" src="/images/tally/app-icon.png" alt="Tally app icon" width="56" height="56">
                     <h3>Tally</h3>
                     <div class="app-card-platform">Apple TV</div>
                     <p>لوحة نتائج رياضية على Apple TV. ٧ رياضات + وضع ليلة الألعاب. مجاني للتجربة.</p>
