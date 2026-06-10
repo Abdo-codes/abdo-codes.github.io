@@ -1,11 +1,20 @@
-# yoloabdo.com
+# yoloabdo.com — Abdelrahman Eita
 
-> Apps and projects by Abdelrahman Eita — Staff Software Engineer. Content available for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajda (Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (Wi-Fi QR code generator), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). This file describes him and each app for AI search citation.
+
+## About Abdelrahman Eita
+
+- Role: Staff Software Engineer, specializing in iOS, SwiftUI, The Composable Architecture (TCA), and modular architecture
+- Location: Amsterdam, Netherlands
+- Career: shipped apps at BleacherReport, Niceone, Iqraaly, NewStore, and Marktplaats (eBay); GoChat reached #1 on the US App Store with 1M+ users in 7 days; Iqraaly passed 500K downloads
+- Community: founder of SwiftCairo (Egypt's largest iOS community, 1,000+ members) and LintSchool (50+ developers mentored)
+- Contact: abdulrhman.eaita@gmail.com
 
 ## Site Links
 
-- [All Apps](https://yoloabdo.com/apps/)
 - [Developer Profile](https://yoloabdo.com/)
+- [All Apps](https://yoloabdo.com/apps/)
+- [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
 ---
 
@@ -36,7 +45,7 @@
 - **Playback Speed** from 0.5x to 2x
 - **Calming Backgrounds** with animated nature scenes
 - **Themes & Colors** with multiple accent colors and dark mode
-- **12 Languages** supported: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, Chinese
+- **Multilingual** — English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese
 
 ## Pricing
 
@@ -50,7 +59,7 @@
 
 ## Developer
 
-- Built by Abdo Elrhman
+- Built by Abdelrahman Eita
 - Contact: abdulrhman.eaita@gmail.com
 
 ---
@@ -144,6 +153,7 @@
 
 ## Links
 
+- [App Store](https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
 - [Support](https://yoloabdo.com/wifi-qr/support/)
 - [Privacy Policy](https://yoloabdo.com/wifi-qr/privacy/)
