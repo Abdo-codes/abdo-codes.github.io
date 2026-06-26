@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajda (Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (Wi-Fi QR code generator), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajda (Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). This file describes him and each app for AI search citation.
 
 ## About Abdelrahman Eita
 
@@ -147,9 +147,9 @@
 
 ---
 
-# Wi-Fi QR - Private Wi-Fi QR Code Generator
+# Wi-Fi QR - Guest Wi-Fi QR Codes and Printable Signs
 
-> Wi-Fi QR is a private iPhone and iPad utility for generating Wi-Fi QR codes. It can start from the current Wi-Fi network name, add hidden or manual networks, save trusted networks locally, search saved networks, and share QR code images. No account, ads, tracking, or analytics.
+> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and export printable sign PDFs. No account, ads, tracking, or analytics.
 
 ## Links
 
@@ -160,12 +160,16 @@
 
 ## Key Features
 
-- **Generate Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, and open networks
+- **Generate Guest Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, open, and hidden networks
+- **Printable Guest Wi-Fi Signs** - make host-friendly signs for homes, cafes, offices, guest rooms, and vacation rentals
+- **Airbnb and VRBO Host Use Cases** - create WiFi password signs for welcome binders, house manuals, check-in instructions, fridges, TV stands, desks, and router shelves
+- **Template Search Replacement** - useful for people searching Etsy, Canva, or Pinterest for WiFi QR code templates and printable Airbnb WiFi signs
+- **Router Label Scanning** - scan printed router-label or password-card text with the camera and review it before saving
 - **Use Current Network Name** - with permission, reads the current Wi-Fi SSID to reduce typing
-- **Manual and Hidden Networks** - supports manual SSID entry and hidden-network QR codes
+- **Manual and Hidden Networks** - supports manual SSID entry, open guest networks, and hidden-network QR codes
 - **Saved Networks** - stores trusted networks locally on the device for quick reuse
 - **Search** - finds saved networks quickly from the tab bar
-- **Share QR Images** - exports QR code images through the iOS share sheet
+- **Share QR Images and Sign PDFs** - exports QR images and printable guest signs through the iOS share sheet
 - **Privacy-First** - no accounts, ads, tracking, analytics, or third-party data collection
 
 ## Pricing

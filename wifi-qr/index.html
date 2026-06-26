@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wi-Fi QR - Private Wi-Fi QR Code Generator</title>
-    <meta name="description" content="Wi-Fi QR is a private iPhone and iPad app for generating Wi-Fi QR codes, saving trusted networks locally, searching saved networks, and sharing guest access without accounts or tracking.">
+    <title>Airbnb WiFi QR Code Sign Template | Wi-Fi QR</title>
+    <meta name="description" content="Create an Airbnb WiFi sign, guest WiFi QR code, or printable WiFi password sign for rentals, VRBO stays, homes, cafes, and offices. Scan router labels and save networks locally.">
     <meta name="author" content="Abdelrahman Eita">
     <link rel="canonical" href="https://yoloabdo.com/wifi-qr/">
     <link rel="icon" href="/wifi-qr/app-icon.png" type="image/png">
 
-    <meta property="og:title" content="Wi-Fi QR - Private Wi-Fi QR Code Generator">
-    <meta property="og:description" content="Generate Wi-Fi QR codes, save trusted networks locally, and share guest access from your iPhone. No accounts, ads, or tracking.">
-    <meta property="og:image" content="https://yoloabdo.com/wifi-qr/screenshot-qr.png">
+    <meta property="og:title" content="Airbnb WiFi QR Code Sign Template | Wi-Fi QR">
+    <meta property="og:description" content="Make printable WiFi signs and guest QR codes for Airbnb hosts, VRBO stays, vacation rentals, cafes, offices, and homes. Private, local, and fast on iPhone and iPad.">
+    <meta property="og:image" content="https://yoloabdo.com/wifi-qr/og-guest-sign.png">
     <meta property="og:url" content="https://yoloabdo.com/wifi-qr/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wi-Fi QR">
-    <meta name="twitter:description" content="Private Wi-Fi QR codes for guests and saved networks.">
-    <meta name="twitter:image" content="https://yoloabdo.com/wifi-qr/screenshot-qr.png">
+    <meta name="twitter:title" content="Airbnb WiFi QR Code Sign Template">
+    <meta name="twitter:description" content="Create guest WiFi QR codes and printable WiFi password signs for Airbnb hosts, VRBO stays, rentals, cafes, offices, and homes.">
+    <meta name="twitter:image" content="https://yoloabdo.com/wifi-qr/og-guest-sign.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Q8WZXXZG"></script>
     <script>
@@ -31,15 +31,32 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
+        "@type": "MobileApplication",
         "@id": "https://yoloabdo.com/wifi-qr/#app",
-        "name": "Wi-Fi QR",
-        "description": "Private Wi-Fi QR code generator for iPhone and iPad.",
+        "name": "Wi-Fi QR: Code Maker",
+        "alternateName": ["Wi-Fi QR", "Guest Wi-Fi QR Code Maker", "Airbnb WiFi Sign Maker"],
+        "description": "Create guest Wi-Fi QR codes, Airbnb WiFi signs, editable-style WiFi password signs, and printable guest WiFi templates for homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, and vacation rentals. Scan router-label text, save networks locally, and share without accounts, ads, or tracking.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "iOS",
         "url": "https://yoloabdo.com/wifi-qr/",
         "installUrl": "https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783",
         "image": "https://yoloabdo.com/wifi-qr/app-icon.png",
+        "screenshot": [
+            "https://yoloabdo.com/wifi-qr/screenshot-guest-sign.webp",
+            "https://yoloabdo.com/wifi-qr/screenshot-guest-qr.webp",
+            "https://yoloabdo.com/wifi-qr/screenshot-scan-paper.webp",
+            "https://yoloabdo.com/wifi-qr/screenshot-saved-networks.webp"
+        ],
+        "softwareVersion": "1.4",
+        "keywords": "Airbnb WiFi QR code, Airbnb WiFi sign, Airbnb WiFi password sign, guest Wi-Fi QR code, printable guest Wi-Fi sign, editable WiFi template, Canva WiFi sign template, Etsy WiFi QR sign, VRBO WiFi sign, vacation rental WiFi, house manual WiFi, welcome binder WiFi, router label scanner, hidden network QR code",
+        "featureList": [
+            "Create Wi-Fi QR codes for WPA, WPA2, WPA3, WEP, open, and hidden networks",
+            "Print guest Wi-Fi signs and WiFi password signs for Airbnb listings, homes, offices, cafes, guest rooms, and vacation rentals",
+            "Scan router-label or printed password text with the camera before saving",
+            "Save multiple trusted networks locally on device",
+            "Share QR images and printable sign PDFs through the iOS share sheet",
+            "No accounts, ads, tracking, analytics, or server upload"
+        ],
         "author": {
             "@type": "Person",
             "name": "Abdelrahman Eita",
@@ -78,6 +95,7 @@
             color: var(--ink);
             background: var(--wash);
             line-height: 1.5;
+            overflow-x: hidden;
         }
 
         a {
@@ -379,6 +397,69 @@
             color: var(--muted);
         }
 
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .use-case {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 20px;
+        }
+
+        .use-case strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--ink);
+            font-size: 1rem;
+        }
+
+        .use-case span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .template-band {
+            background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .template-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .template-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .template-item {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            padding: 18px;
+            box-shadow: 0 12px 30px rgba(16, 32, 51, 0.05);
+        }
+
+        .template-item strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--ink);
+        }
+
+        .template-item span {
+            display: block;
+            color: var(--muted);
+        }
+
         .privacy-band {
             background: var(--paper);
             border-top: 1px solid var(--line);
@@ -421,7 +502,7 @@
 
         .screens {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 18px;
         }
 
@@ -504,6 +585,7 @@
 
         @media (max-width: 900px) {
             .hero-inner,
+            .template-layout,
             .privacy-layout {
                 grid-template-columns: 1fr;
             }
@@ -517,6 +599,7 @@
             }
 
             .feature-grid,
+            .use-case-grid,
             .screens,
             .faq {
                 grid-template-columns: 1fr;
@@ -532,14 +615,45 @@
             }
 
             .nav-links {
+                gap: 10px;
+                font-size: 0.82rem;
+            }
+
+            .nav-inner {
                 gap: 12px;
-                font-size: 0.88rem;
+            }
+
+            .brand {
+                gap: 8px;
+            }
+
+            .brand img {
+                width: 40px;
+                height: 40px;
             }
 
             .hero-inner {
                 gap: 24px;
                 padding-top: 30px;
                 padding-bottom: 28px;
+            }
+
+            .lead {
+                font-size: 1.08rem;
+            }
+
+            h2 {
+                font-size: 1.9rem;
+                line-height: 1.08;
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
             }
 
             .showcase {
@@ -599,30 +713,30 @@
     <header class="hero">
         <div class="hero-inner">
             <div>
-                <span class="eyebrow">Private by design</span>
+                <span class="eyebrow">Guest Wi-Fi signs for hosts</span>
                 <h1>Wi-Fi QR</h1>
-                <p class="lead">Create a scannable Wi-Fi QR code in seconds, keep trusted networks saved on your device, and share guest access without accounts, ads, or tracking.</p>
+                <p class="lead">Create guest Wi-Fi QR codes and printable signs for homes, cafes, offices, guest rooms, and rentals. Scan router labels, save networks locally, and share fast.</p>
                 <div class="actions">
                     <a class="button primary" href="https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783">Download on the App Store</a>
                     <a class="button" href="/wifi-qr/support/">Get Support</a>
                 </div>
                 <ul class="hero-notes" aria-label="App highlights">
-                    <li><span class="dot"></span> iPhone and iPad</li>
-                    <li><span class="dot"></span> Free</li>
-                    <li><span class="dot"></span> Works offline</li>
+                    <li><span class="dot"></span> Guest Wi-Fi QR codes</li>
+                    <li><span class="dot"></span> Printable signs</li>
+                    <li><span class="dot"></span> Private on device</li>
                 </ul>
             </div>
 
             <div class="showcase" aria-label="Wi-Fi QR app screenshots">
                 <img class="app-icon-large" src="/wifi-qr/app-icon.png" alt="">
                 <div class="phone secondary">
-                    <img src="/wifi-qr/screenshot-search.png" alt="Search saved Wi-Fi networks in Wi-Fi QR" width="1170" height="2532">
+                    <img src="/wifi-qr/screenshot-guest-qr.webp" alt="Saved guest Wi-Fi QR code in Wi-Fi QR" width="660" height="1434">
                 </div>
                 <div class="phone primary">
-                    <img src="/wifi-qr/screenshot-qr.png" alt="Generated Wi-Fi QR code in Wi-Fi QR" width="1170" height="2532">
+                    <img src="/wifi-qr/screenshot-guest-sign.webp" alt="Printable guest Wi-Fi sign preview in Wi-Fi QR" width="660" height="1434">
                 </div>
                 <div class="phone tertiary">
-                    <img src="/wifi-qr/screenshot-settings.png" alt="Wi-Fi QR settings screen" width="1170" height="2532">
+                    <img src="/wifi-qr/screenshot-scan-paper.webp" alt="Scan a router label or printed Wi-Fi password in Wi-Fi QR" width="660" height="1434">
                 </div>
             </div>
         </div>
@@ -632,40 +746,96 @@
         <section>
             <div class="section-inner">
                 <div class="section-heading">
-                    <span class="section-kicker">For guests, family, and saved networks</span>
-                    <h2>Less typing. Fewer password mistakes.</h2>
-                    <p>Wi-Fi QR keeps the flow focused: add a network, generate the code, and let someone scan it from Camera.</p>
+                    <span class="section-kicker">Guest Wi-Fi QR code maker</span>
+                    <h2>Make guest access easy.</h2>
+                    <p>Wi-Fi QR keeps the flow focused: add a network, generate a guest QR code, print a sign, and let visitors scan from Camera.</p>
                 </div>
                 <div class="feature-grid">
                     <article class="feature">
-                        <div class="feature-mark">QR</div>
-                        <h3>Generate Wi-Fi QR Codes</h3>
-                        <p>Create QR codes for WPA/WPA2/WPA3, WEP, and open networks with the standard Wi-Fi QR format supported by iOS.</p>
+                        <div class="feature-mark">Sign</div>
+                        <h3>Printable Guest Wi-Fi Signs</h3>
+                        <p>Make polished signs for homes, offices, cafes, guest rooms, and rentals in 4 x 6, 5 x 7, A4, and US Letter layouts.</p>
                     </article>
                     <article class="feature">
-                        <div class="feature-mark">SSID</div>
-                        <h3>Start From Current Wi-Fi</h3>
-                        <p>With permission, the app can read your current Wi-Fi network name so you do not have to type it manually.</p>
+                        <div class="feature-mark">QR</div>
+                        <h3>Guest Wi-Fi QR Codes</h3>
+                        <p>Create scannable Wi-Fi QR codes for WPA/WPA2/WPA3, WEP, open, and hidden networks with the standard iOS QR format.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">Scan</div>
+                        <h3>Scan Router Labels</h3>
+                        <p>Use the camera to read printed router-label or password-card text, then review the result before saving or sharing.</p>
                     </article>
                     <article class="feature">
                         <div class="feature-mark">Save</div>
                         <h3>Save Trusted Networks</h3>
-                        <p>Keep networks on your device for quick reuse at home, work, or places where you regularly help guests connect.</p>
-                    </article>
-                    <article class="feature">
-                        <div class="feature-mark">Find</div>
-                        <h3>Search From the Tab Bar</h3>
-                        <p>Open search when you need it, find the right network quickly, and return to generating codes without extra screens.</p>
+                        <p>Keep guest, home, office, cafe, and rental networks on your device for quick reuse without server sync.</p>
                     </article>
                     <article class="feature">
                         <div class="feature-mark">Hide</div>
-                        <h3>Hidden and Manual Networks</h3>
-                        <p>Add hidden networks or type any SSID manually when the network is not currently available on your device.</p>
+                        <h3>Hidden and Open Networks</h3>
+                        <p>Add a hidden SSID manually, create a no-password guest network QR code, or start from the current network name when iOS allows.</p>
                     </article>
                     <article class="feature">
                         <div class="feature-mark">Share</div>
-                        <h3>Share QR Images</h3>
-                        <p>Export the generated QR image through the iOS share sheet for printing, messaging, or saving where you need it.</p>
+                        <h3>Share Images and PDFs</h3>
+                        <p>Send a styled QR image, save it for later, or share a printable sign PDF through the iOS share sheet.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">Made for host workflows</span>
+                    <h2>From kitchen counters to vacation rentals.</h2>
+                    <p>Use one private Wi-Fi QR app for the places where people ask for the password again and again.</p>
+                </div>
+                <div class="use-case-grid">
+                    <article class="use-case">
+                        <strong>Airbnb and vacation rental hosts</strong>
+                        <span>Print an Airbnb WiFi sign for a cabin, apartment, VRBO stay, short-term rental, or guest room.</span>
+                    </article>
+                    <article class="use-case">
+                        <strong>Cafes, salons, and studios</strong>
+                        <span>Keep a clean QR code on the counter so customers can join without spelling a password.</span>
+                    </article>
+                    <article class="use-case">
+                        <strong>Offices and shared workspaces</strong>
+                        <span>Save office networks locally and share guest access when teammates or visitors arrive.</span>
+                    </article>
+                    <article class="use-case">
+                        <strong>Homes and family visits</strong>
+                        <span>Make a simple QR code for the home network, hidden SSID, or a dedicated guest hotspot.</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="template-band">
+            <div class="section-inner template-layout">
+                <div class="section-heading">
+                    <span class="section-kicker">WiFi QR template searches</span>
+                    <h2>Looking for an Airbnb WiFi sign template?</h2>
+                    <p>If you are searching Etsy, Canva, or Pinterest for a WiFi QR code template, Wi-Fi QR gives you the useful part first: a real scannable guest network QR code, plus a printable sign you can place in your rental.</p>
+                </div>
+                <div class="template-list">
+                    <article class="template-item">
+                        <strong>For welcome books and house manuals</strong>
+                        <span>Add the WiFi network name, password, and QR code to a printed welcome binder, house manual, check-in guide, or digital guest handbook.</span>
+                    </article>
+                    <article class="template-item">
+                        <strong>For Airbnb, VRBO, and short-term rentals</strong>
+                        <span>Create a WiFi password sign for a cabin, apartment, guest suite, beach house, or serviced apartment without editing a generic template by hand.</span>
+                    </article>
+                    <article class="template-item">
+                        <strong>For the places guests actually look</strong>
+                        <span>Print a 4 x 6, 5 x 7, A4, or US Letter sign for the fridge, entry table, TV stand, router shelf, desk, or bedside guide.</span>
+                    </article>
+                    <article class="template-item">
+                        <strong>For fewer "what's the WiFi password?" messages</strong>
+                        <span>Guests can scan the QR code with the phone camera, while the network name and password remain readable for laptops and older devices.</span>
                     </article>
                 </div>
             </div>
@@ -692,8 +862,12 @@
                         <span>Used only when iOS requires it to read the current Wi-Fi network name.</span>
                     </div>
                     <div class="privacy-row">
+                        <strong>Camera permission</strong>
+                        <span>Used only when you choose to scan printed router-label or password-card text.</span>
+                    </div>
+                    <div class="privacy-row">
                         <strong>Sharing</strong>
-                        <span>QR images leave the app only when you choose to share or save them.</span>
+                        <span>QR images and printable sign PDFs leave the app only when you choose to share or save them.</span>
                     </div>
                 </div>
             </div>
@@ -703,24 +877,29 @@
             <div class="section-inner">
                 <div class="section-heading">
                     <span class="section-kicker">Screens</span>
-                    <h2>Built for quick repeat use.</h2>
-                    <p>The app keeps generation, saved networks, search, onboarding, and settings predictable for first-time users and people who use it often.</p>
+                    <h2>Built for quick repeat hosting.</h2>
+                    <p>The app keeps guest QR generation, printable signs, router-label scanning, saved networks, and search predictable for first-time users and repeat hosts.</p>
                 </div>
                 <div class="screens">
                     <article class="screen">
-                        <img src="/wifi-qr/screenshot-qr.png" alt="Generated Wi-Fi QR code screen" width="1170" height="2532" loading="lazy">
-                        <h3>Generate</h3>
+                        <img src="/wifi-qr/screenshot-guest-sign.webp" alt="Printable guest Wi-Fi sign screen" width="660" height="1434" loading="lazy">
+                        <h3>Print Signs</h3>
+                        <p>Customize text, paper size, and style for a guest Wi-Fi sign.</p>
+                    </article>
+                    <article class="screen">
+                        <img src="/wifi-qr/screenshot-guest-qr.webp" alt="Generated guest Wi-Fi QR code screen" width="660" height="1434" loading="lazy">
+                        <h3>Share QR Codes</h3>
                         <p>Check network details and share the QR image.</p>
                     </article>
                     <article class="screen">
-                        <img src="/wifi-qr/screenshot-search.png" alt="Search saved networks screen" width="1170" height="2532" loading="lazy">
-                        <h3>Search</h3>
-                        <p>Find saved networks without leaving the main flow.</p>
+                        <img src="/wifi-qr/screenshot-scan-paper.webp" alt="Add network screen with scan from paper action" width="660" height="1434" loading="lazy">
+                        <h3>Scan Labels</h3>
+                        <p>Read printed router-label text and review it before saving.</p>
                     </article>
                     <article class="screen">
-                        <img src="/wifi-qr/screenshot-settings.png" alt="Settings and privacy screen" width="1170" height="2532" loading="lazy">
-                        <h3>Settings</h3>
-                        <p>Review privacy, support, version, and onboarding.</p>
+                        <img src="/wifi-qr/screenshot-saved-networks.webp" alt="Saved guest Wi-Fi networks search screen" width="660" height="1434" loading="lazy">
+                        <h3>Find Networks</h3>
+                        <p>Search saved networks without leaving the main flow.</p>
                     </article>
                 </div>
             </div>
@@ -738,16 +917,32 @@
                         <p>No. Saved networks stay on your device. The app does not have an account, server sync, ads, analytics, or tracking.</p>
                     </article>
                     <article>
+                        <h3>Can I use it for an Airbnb or vacation rental?</h3>
+                        <p>Yes. Create a guest Wi-Fi QR code, customize a printable WiFi password sign, and place it in a rental, guest room, office, cafe, or shared space.</p>
+                    </article>
+                    <article>
+                        <h3>Is this a WiFi QR code template?</h3>
+                        <p>It replaces the template hunt for many hosts: enter or scan the network details once, then export a ready-to-print sign instead of editing a generic Canva or Etsy template.</p>
+                    </article>
+                    <article>
+                        <h3>Can I add it to a welcome binder or house manual?</h3>
+                        <p>Yes. Share the printable sign PDF or QR image and include it in a house manual, digital guest guide, check-in instructions, or printed welcome book.</p>
+                    </article>
+                    <article>
+                        <h3>Does it recover saved Wi-Fi passwords?</h3>
+                        <p>No. iOS does not let the app read saved system Wi-Fi passwords. You enter the password or scan printed text that you can review.</p>
+                    </article>
+                    <article>
                         <h3>Why does the app ask for location permission?</h3>
                         <p>iOS requires location permission before an app can read the current Wi-Fi network name. Wi-Fi QR uses it only for that SSID shortcut.</p>
                     </article>
                     <article>
-                        <h3>Can I use it for hidden networks?</h3>
-                        <p>Yes. Add the network manually and enable the hidden network option before generating the QR code.</p>
+                        <h3>Can I print a guest Wi-Fi sign?</h3>
+                        <p>Yes. Version 1.4 adds printable guest signs with customizable title, subtitle, paper size, and visual style.</p>
                     </article>
                     <article>
-                        <h3>How do guests join?</h3>
-                        <p>They scan the QR code with the iPhone Camera app and confirm the Wi-Fi join prompt.</p>
+                        <h3>Can I use it for hidden networks?</h3>
+                        <p>Yes. Add the network manually and enable the hidden network option before generating the QR code or sign.</p>
                     </article>
                 </div>
             </div>
