@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How Surfing Works</title>
+  <meta name="description" content="An interactive 3D explainer: where waves come from, why they break, and how to ride them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage">
+    <canvas id="gl"></canvas>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <header class="brand">
+    <svg viewBox="0 0 32 20" aria-hidden="true"><path d="M1 15c4 0 5-9 11-9 5 0 6 5 3 7-2 1-4-1-2-2M17 15c3 0 4-3 7-3s4 3 7 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    How Surfing Works
+  </header>
+
+  <div class="top-actions">
+    <button id="btn-play" class="btn light"><span class="ico">🏄</span><span class="txt">Surf it</span></button>
+    <button id="btn-film" class="btn primary"><span class="ico">▶</span><span class="txt">Watch as film</span></button>
+    <button id="btn-record" class="btn"><span class="dot"></span><span class="txt">Record video</span></button>
+    <button id="btn-sound" class="btn" aria-pressed="false"><span class="ico">♪</span><span class="txt">Sound off</span></button>
+  </div>
+
+  <aside id="panel" class="panel">
+    <button id="btn-collapse" class="collapse" aria-label="Collapse panel">▾</button>
+    <div class="kicker" id="p-kicker"></div>
+    <h1 id="p-title"></h1>
+    <div class="panel-body">
+      <ol id="p-lines" class="lines"></ol>
+      <div id="p-hud" class="hud" hidden>
+        <div id="hud-rows"></div>
+        <div id="hud-meter" hidden>
+          <div class="meter"><i id="hud-fill"></i><em id="hud-mark"></em></div>
+          <div class="meter-scale"><span id="hud-mlabel"></span><span id="hud-mnote"></span></div>
+        </div>
+        <div class="hud-state" id="hud-state"></div>
+      </div>
+      <div id="p-controls" class="controls"></div>
+    </div>
+    <div class="panel-nav">
+      <button id="btn-prev" class="btn ghost">← Back</button>
+      <button id="btn-next" class="btn light">Next →</button>
+    </div>
+  </aside>
+
+  <button id="btn-tilt" class="btn small tilt-chip" aria-pressed="false" hidden>📱 Tilt to steer: off</button>
+  <nav id="chapters" class="chapters" aria-label="Chapters"></nav>
+  <div class="hint">Drag to look around · scroll to zoom · double-click to reset</div>
+
+  <div id="film-bar" class="film-bar">
+    <div class="film-progress"><i id="film-progress"></i></div>
+    <button id="btn-film-exit" class="btn small">Exit film · Esc</button>
+  </div>
+  <div id="rec-badge" class="rec-badge" hidden><i></i><span id="rec-time">REC 0:00</span></div>
+
+  <div id="loading" class="loading"><span>Paddling out…</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js" integrity="sha384-vV17nr/rMaJqmeZkFUzXLpHdQ+ME5QHKdydaqqN+3Ga39RJlNrTatJxHwGV4ml2C" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/shaders/CopyShader.js" integrity="sha384-jEqYdJwVhbnk5LMD7OzkM7Zn+m7ziM3b+VsGVfa/5BJobkk7Y0Gv8UWSFMs6lww0" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/shaders/LuminosityHighPassShader.js" integrity="sha384-pemnF+L/kioV52+hCxIKwYFCATMpS1eg1Jsq8tKbIwG9j4G3v6v1OpEuBnwFDfHe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/EffectComposer.js" integrity="sha384-R0mna39OFXOi0vozEMV5F7tgsuOL4JYlJA1zMRSF/G36T6DdB9tLl4u4sGx195Te" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/RenderPass.js" integrity="sha384-MvqV+yMfQqfT4GMD7NmeHbAcLhOaki0I2139ZAxe6+VyME2ys9TLRrRTsFtBJK21" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/ShaderPass.js" integrity="sha384-ZiGZOW8SNIUe2yogdaaTRbEdiEpMlAIx9hL5bw50EwSpa4fbthhT67TiAHlC9x5U" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/UnrealBloomPass.js" integrity="sha384-EYOqTmLl8GhcXCeuHZ88cRp7inJaG/+pOg9hPG2GjQp535CVdHPNqMDbJMBbOypa" crossorigin="anonymous"></script>
+  <script src="js/waveMath.js"></script>
+  <script src="js/sky.js"></script>
+  <script src="js/ocean.js"></script>
+  <script src="js/seabed.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/spray.js"></script>
+  <script src="js/surferModel.js"></script>
+  <script src="js/surferPose.js"></script>
+  <script src="js/surferRide.js"></script>
+  <script src="js/chapters1.js"></script>
+  <script src="js/chapters2.js"></script>
+  <script src="js/chapters3.js"></script>
+  <script src="js/chapters4.js"></script>
+  <script src="js/chapters5.js"></script>
+  <script src="js/rip.js"></script>
+  <script src="js/gameInput.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/gameHud.js"></script>
+  <script src="js/timingHud.js"></script>
+  <script src="js/inset.js"></script>
+  <script src="js/post.js"></script>
+  <script src="js/quality.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/overlay.js"></script>
+  <script src="js/director.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
