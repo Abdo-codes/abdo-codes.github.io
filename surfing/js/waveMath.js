@@ -51,13 +51,24 @@
     S.inset = null;
     S.insetRect = null;
     S.timing = null;
+    S.dof = 0; // depth of field strength for this shot (0 = everything sharp)
+    S.waveShade = true; // let the wave block the sun on the surfer (off for diagrams)
     Object.assign(S.sound, { surf: 0.5, wind: 0.1, crash: 0 });
   };
   SURF.resetScene();
 
   /* Hero wave envelope along the crest (z): height, curl (hollowness) and whitewater. */
   const env = { H: 0, b: 0, foam: 0 };
+  // no two stretches of a real crest are identical (mirrors crestVar / crestShift in ocean.js)
+  const crestVar = (z) => 1 + 0.07 * Math.sin(z * 0.093 + 1.3) + 0.05 * Math.sin(z * 0.231 + 0.4) + 0.03 * Math.sin(z * 0.61 + 2.2);
+  const crestShift = (z) => 0.3 * Math.sin(z * 0.071 + 0.9) + 0.12 * Math.sin(z * 0.19 + 2.4);
   function heroEnv(z) {
+    heroEnvBase(z);
+    env.H *= crestVar(z);
+    env.b = Math.min(1, env.b * (1 + 0.1 * Math.sin(z * 0.17 + 2.0)));
+    return env;
+  }
+  function heroEnvBase(z) {
     const h = S.hero;
     if (h.peelMode === 0) {
       env.H = h.H; env.b = h.curl; env.foam = h.broken;
@@ -98,8 +109,8 @@
 
   /* Surface position for a rest point (x0, z) in world space. */
   function surface(x0, z, out) {
-    const e = heroEnv(z);
-    const H = e.H, b = e.b, u = x0 - S.hero.X;
+    const e = heroEnv(z), shift = crestShift(z);
+    const H = e.H, b = e.b, u = x0 - S.hero.X - shift;
     let hx = u, hy = 0;
     if (H > 0.001) {
       const sb = 1.7 * H + 0.5;
@@ -119,7 +130,7 @@
     const k = (2 * Math.PI) / S.swell.L;
     const th = k * x0 - S.swell.phase;
     return out.set(
-      S.hero.X + hx - S.swell.A * Math.sin(th),
+      S.hero.X + shift + hx - S.swell.A * Math.sin(th),
       hy + S.swell.A * Math.cos(th) + S.chop * chopAt(x0, z, S.t) * Math.exp(-Math.hypot(x0 - S.focus.x, z - S.focus.z) / 70),
       z
     );

@@ -4,9 +4,9 @@
 (function () {
   const SURF = window.SURF;
   const LEVELS = [
-    { name: 'low', scale: 0.7, dpr: 1.25, grid: 'low', post: false, samples: 0 },
-    { name: 'medium', scale: 0.85, dpr: 1.5, grid: 'medium', post: true, samples: 0 },
-    { name: 'high', scale: 1, dpr: 1.75, grid: 'high', post: true, samples: 4 },
+    { name: 'low', scale: 0.7, dpr: 1.25, grid: 'low', post: false, samples: 0, dof: false, shadow: 0 },
+    { name: 'medium', scale: 0.85, dpr: 1.5, grid: 'medium', post: true, samples: 0, dof: false, shadow: 512 },
+    { name: 'high', scale: 1, dpr: 1.75, grid: 'high', post: true, samples: 4, dof: true, shadow: 1024 },
   ];
 
   SURF.createQuality = function ({ ocean, post, main, recorder }) {
@@ -17,7 +17,8 @@
       const L = LEVELS[Q.level];
       main.setRender(L.scale, L.dpr);
       ocean.setDetail(L.grid);
-      if (post) post.configure(L.post, L.samples);
+      main.setShadows(L.shadow);
+      if (post) post.configure(L.post, L.samples, L.dof);
       Q.name = L.name;
     }
 

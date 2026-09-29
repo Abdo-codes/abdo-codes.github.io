@@ -91,15 +91,17 @@
       p.needsUpdate = true;
     }
 
-    return {
+    const api = {
       root,
       body,
       leash,
+      stand: 0,
       /* w = { paddle, ride, tuck } (any scale). time drives paddling, wobble and the balance filter. */
       setPose(w, time) {
         const tot = (w.paddle || 0) + (w.ride || 0) + (w.tuck || 0) || 1;
         const f = { paddle: (w.paddle || 0) / tot, ride: (w.ride || 0) / tot, tuck: (w.tuck || 0) / tot };
         const stand = 1 - f.paddle;
+        api.stand = stand;
         dyn.lastT = time;
 
         for (const j of FK_JOINTS) {
@@ -188,5 +190,6 @@
         prevPos.copy(pos);
       },
     };
+    return api;
   };
 })();

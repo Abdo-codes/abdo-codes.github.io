@@ -37,6 +37,7 @@
       this.level = null;
       this.pos = new THREE.Vector3();
       S.surferVisible = true;
+      S.dof = 0.4;
     },
     leave(S) { this.input.active = false; this.input.reset(); },
     setLevel(S) {

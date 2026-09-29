@@ -90,23 +90,22 @@
   SURF.buildSurferRig = function (scene, colors) {
     const U = SURF.util;
     const C = Object.assign({ vest: 0x1fa3a0, stripe: 0xe8552f, board: 0xf5f0e5 }, colors);
-    const std = (hex, rough) => new THREE.MeshStandardMaterial({ color: U.srgb(hex), roughness: rough });
-    const suit = new THREE.MeshPhysicalMaterial({ color: U.srgb(0x15171b), roughness: 0.4, clearcoat: 0.6, clearcoatRoughness: 0.35 });
-    const vest = std(C.vest, 0.55), skin = std(0xc98d68, 0.62), hair = std(0x24160c, 0.85), dark = std(0x121314, 0.5);
-    const boardMat = new THREE.MeshPhysicalMaterial({ color: U.srgb(C.board), roughness: 0.3, clearcoat: 1, clearcoatRoughness: 0.12, side: THREE.DoubleSide });
-    const accent = std(C.stripe, 0.4), pad = std(0x1d1f24, 0.95);
+    // wet materials, lit by the sky's environment map: neoprene, lycra, skin, resin-coated board
+    const phys = (hex, o) => new THREE.MeshPhysicalMaterial(Object.assign({ color: U.srgb(hex) }, o));
+    const suit = phys(0x17191c, { roughness: 0.62, clearcoat: 0.22, clearcoatRoughness: 0.45, sheen: 0.5, sheenRoughness: 0.7, sheenColor: U.srgb(0x3a4650) });
+    const vest = phys(C.vest, { roughness: 0.52, clearcoat: 0.3, clearcoatRoughness: 0.45, sheen: 0.6, sheenRoughness: 0.5, sheenColor: U.srgb(0xbfe9e6) });
+    const skin = phys(0xc0856a, { roughness: 0.5, clearcoat: 0.22, clearcoatRoughness: 0.4, sheen: 0.25, sheenRoughness: 0.8, sheenColor: U.srgb(0xffc4a3) });
+    const hair = phys(0x21150c, { roughness: 0.62, clearcoat: 0.15, clearcoatRoughness: 0.5, sheen: 0.6, sheenRoughness: 0.4, sheenColor: U.srgb(0x6a4a30) });
+    const dark = phys(0x0e0f10, { roughness: 0.2, clearcoat: 1 });
+    const boardMat = phys(C.board, { roughness: 0.34, clearcoat: 1, clearcoatRoughness: 0.07, side: THREE.DoubleSide });
+    const accent = phys(C.stripe, { roughness: 0.4, clearcoat: 0.8, clearcoatRoughness: 0.15 });
+    const pad = phys(0x383c43, { roughness: 0.95 });
 
     const root = new THREE.Group();
     scene.add(root);
     const add = (parent, obj, x, y, z) => { obj.position.set(x || 0, y || 0, z || 0); parent.add(obj); return obj; };
     const group = (parent, x, y, z) => add(parent, new THREE.Group(), x, y, z);
     const ball = (r, mat, sx, sy, sz) => { const m = new THREE.Mesh(new THREE.SphereGeometry(r, 18, 14), mat); m.scale.set(sx || 1, sy || 1, sz || 1); return m; };
-    // tapered limb from the joint (y = 0) down to y = -len
-    const limb = (r0, r1, len, mat) => {
-      const g = new THREE.CylinderGeometry(r0, r1, len, 14, 1);
-      g.translate(0, -len / 2, 0);
-      return new THREE.Mesh(g, mat);
-    };
 
     // ---------- board ----------
     add(root, new THREE.Mesh(boardGeometry(), boardMat));
@@ -120,6 +119,19 @@
     }
 
     // ---------- body ----------
+    // limbs are lathed from muscle profiles ([fraction along the bone, radius]), not plain tubes
+    const muscle = (profile, len, mat, sx, sz) => {
+      const pts = profile.slice().reverse().map(([t, r]) => new THREE.Vector2(r, -t * len));
+      const m = new THREE.Mesh(new THREE.LatheGeometry(pts, 16), mat);
+      m.scale.set(sx || 1, 1, sz || 1);
+      return m;
+    };
+    const THIGH = [[0, 0.083], [0.12, 0.087], [0.35, 0.081], [0.6, 0.069], [0.85, 0.057], [1, 0.053]];
+    const SHIN = [[0, 0.052], [0.1, 0.056], [0.26, 0.061], [0.44, 0.052], [0.7, 0.04], [0.92, 0.032], [1, 0.033]];
+    const UPPER = [[0, 0.056], [0.15, 0.055], [0.4, 0.05], [0.75, 0.042], [1, 0.038]];
+    const FORE = [[0, 0.039], [0.2, 0.044], [0.5, 0.038], [0.85, 0.029], [1, 0.027]];
+    const rnd = ((seed) => () => (seed = (seed * 16807) % 2147483647) / 2147483647)(42);
+
     const body = group(root);
     body.rotation.order = 'YXZ';
     const parts = {};
@@ -128,31 +140,43 @@
     const prof = [[0.001, 0], [0.12, 0.01], [0.14, 0.07], [0.13, 0.15], [0.122, 0.21], [0.138, 0.3], [0.155, 0.38], [0.15, 0.44], [0.12, 0.49], [0.07, 0.525], [0.045, 0.545], [0.001, 0.55]];
     const torso = add(parts.spine, new THREE.Mesh(new THREE.LatheGeometry(prof.map(([r, y]) => new THREE.Vector2(r, y)), 22), vest));
     torso.scale.set(1.2, 1, 0.72);
+    for (const sx of [-1, 1]) add(parts.spine, ball(0.07, vest, 1, 0.8, 0.45), sx * 0.065, 0.38, 0.068); // chest
+    add(parts.spine, ball(0.09, vest, 1.6, 0.5, 0.8), 0, 0.5, -0.012); // trapezius
     const chest = group(parts.spine, 0, 0.47, 0);
 
     parts.neck = group(chest, 0, 0.05, 0);
-    add(parts.neck, limb(0.045, 0.048, 0.1, skin), 0, 0.1, 0);
+    add(parts.neck, muscle([[0, 0.05], [0.5, 0.045], [1, 0.047]], 0.1, skin), 0, 0.1, 0);
     const head = group(parts.neck, 0, 0.13, 0.01);
     add(head, ball(0.1, skin, 0.92, 1.05, 1));
     add(head, ball(0.075, skin, 0.9, 0.8, 0.95), 0, -0.045, 0.025);
     add(head, ball(0.022, skin, 0.8, 1, 1.6), 0, -0.005, 0.097);
+    add(head, ball(0.06, skin, 1.3, 0.35, 0.6), 0, 0.03, 0.07); // brow
     for (const sx of [-1, 1]) {
       add(head, ball(0.022, skin, 0.5, 1, 0.8), sx * 0.093, -0.005, -0.005);
       add(head, ball(0.011, dark), sx * 0.035, 0.012, 0.09);
     }
     const cap = add(head, new THREE.Mesh(new THREE.SphereGeometry(0.107, 20, 14, 0, 2 * PI, 0, 0.6 * PI), hair), 0, 0.012, -0.008);
     cap.rotation.x = -0.4;
+    for (let i = 0; i < 7; i++) { // messy wet tufts
+      const a = rnd() * PI * 2, e = 0.35 + rnd() * 0.5;
+      const t = add(head, ball(0.034 + rnd() * 0.014, hair, 1, 0.5, 1.3), Math.cos(a) * Math.cos(e) * 0.09, 0.02 + Math.sin(e) * 0.09, Math.sin(a) * Math.cos(e) * 0.09 - 0.02);
+      t.rotation.set(rnd() - 0.5, rnd() * PI, rnd() - 0.5);
+    }
 
     function arm(side, key) {
       const sh = (parts['arm' + key] = group(chest, side * 0.2, -0.02, 0));
-      add(sh, ball(0.062, vest, 1, 1.1, 1));
-      add(sh, limb(0.052, 0.042, 0.29, vest));
+      add(sh, ball(0.064, vest, 1, 1.1, 1));
+      add(sh, muscle(UPPER, 0.29, vest));
       const el = (parts['elb' + key] = group(sh, 0, -0.3, 0));
-      add(el, ball(0.038, skin));
-      add(el, limb(0.04, 0.03, 0.25, skin));
-      const hand = group(el, 0, -0.27, 0);
-      add(hand, ball(0.045, skin, 0.55, 1.15, 1));
-      add(hand, ball(0.018, skin, 1, 1.6, 1), side * -0.018, 0.01, 0.03);
+      add(el, ball(0.037, skin));
+      add(el, muscle(FORE, 0.25, skin, 1.12, 0.92));
+      const hand = group(el, 0, -0.265, 0);
+      add(hand, ball(0.028, skin));
+      add(hand, ball(0.045, skin, 0.5, 1.15, 1.05), 0, -0.035, 0);
+      const fingers = add(hand, new THREE.Mesh(new THREE.CapsuleGeometry(0.017, 0.045, 4, 8), skin), 0, -0.085, 0.004);
+      fingers.scale.set(0.8, 1, 2.1);
+      const thumb = add(hand, new THREE.Mesh(new THREE.CapsuleGeometry(0.011, 0.028, 4, 8), skin), side * -0.012, -0.04, 0.038);
+      thumb.rotation.x = 0.5;
     }
     arm(-1, 'N');
     arm(1, 'T');
@@ -160,15 +184,18 @@
     const contacts = [];
     function leg(side, key) {
       const hip = (parts['leg' + key] = group(body, side * 0.1, -0.03, 0));
-      add(hip, ball(0.078, suit));
-      add(hip, limb(0.08, 0.056, 0.45, suit));
+      add(hip, ball(0.08, suit));
+      add(hip, muscle(THIGH, 0.45, suit, 1, 1.08));
       const knee = (parts['knee' + key] = group(hip, 0, -0.45, 0));
-      add(knee, ball(0.057, suit));
-      add(knee, limb(0.054, 0.037, 0.44, skin));
-      add(knee, ball(0.05, skin, 0.9, 1.7, 1), 0, -0.15, -0.014);
+      add(knee, ball(0.055, suit));
+      const shin = add(knee, muscle(SHIN, 0.44, skin, 1, 1.05));
+      shin.position.z = -0.006;
       const foot = (parts['foot' + key] = group(knee, 0, -0.44, 0));
-      add(foot, ball(0.04, skin));
-      add(foot, ball(0.09, skin, 0.46, 0.3, 1.28), 0, -0.035, 0.045);
+      add(foot, ball(0.036, skin));
+      add(foot, ball(0.038, skin, 1, 0.9, 1.1), 0, -0.036, -0.018); // heel
+      const sole = add(foot, new THREE.Mesh(new THREE.CapsuleGeometry(0.035, 0.13, 4, 10), skin), 0, -0.043, 0.058);
+      sole.rotation.x = PI / 2;
+      sole.scale.set(1.25, 1, 0.62);
       contacts.push([foot, 0.06], [knee, 0.06]);
     }
     leg(-1, 'N');
@@ -182,6 +209,7 @@
     leash.frustumCulled = false;
     root.add(leash);
 
+    root.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
     return { root, body, parts, contacts, leash, board: SURF.board };
   };
 })();

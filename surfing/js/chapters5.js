@@ -38,6 +38,7 @@
       S.swell.L = 50;
       S.chop = 0.1;
       S.surferVisible = true;
+      S.waveShade = false;
       S.inset = {
         cam: this.cam || (this.cam = new THREE.PerspectiveCamera(70, 16 / 9, 0.05, 6000)),
         label: 'Surfer’s view',

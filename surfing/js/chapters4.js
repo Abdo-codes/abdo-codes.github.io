@@ -53,6 +53,7 @@
         S.hero.speed = 6;
         S.surferVisible = true;
         S.surfer2Visible = true;
+        S.dof = 0.25;
         this.tau = 5;
       } else {
         S.rip = true;

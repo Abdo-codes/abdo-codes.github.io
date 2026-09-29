@@ -33,6 +33,7 @@
       this.t = 0;
       this.since = 0;
       S.camSnap = true;
+      S.dof = 0.2;
     },
     update(S, ct, sdt) {
       if (S.film.active) this.params.spot = ['beach', 'beach', 'point', 'reef'][Math.max(0, S.captionIndex)];
@@ -90,7 +91,7 @@
       { type: 'seg', key: 'tide', label: 'Tide', options: [['low', 'Low'], ['mid', 'Mid'], ['high', 'High']] },
       { type: 'toggle', key: 'rider', label: 'Show a surfer' },
     ],
-    enter(S) { SURF.setupPeel(S, 2, 0.8); this.tau = 6; this.pos = new THREE.Vector3(); },
+    enter(S) { SURF.setupPeel(S, 2, 0.8); S.dof = 0.35; this.tau = 6; this.pos = new THREE.Vector3(); },
     update(S, ct, sdt, dt) {
       const p = this.params, h = S.hero;
       const w = p.wind / 30;

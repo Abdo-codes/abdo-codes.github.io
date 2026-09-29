@@ -36,6 +36,7 @@
     ],
     enter(S) {
       SURF.setupPeel(S, 2.3, this.params.hollow);
+      S.dof = 0.15;
       this.labels = SURF.makeLabels([
         ['Peels this way →', 0, -40], ['Peak', 1, 70], ['Pocket', 2, -60], ['Face', 3, 50], ['Shoulder', 3],
         ['Lip', 4, 40], ['Barrel', 4, -30], ['Whitewater', 5, 60],
@@ -105,6 +106,7 @@
       S.fade = Math.max(1 - U.ss(0, 0.6, tau), U.ss(25.3, 26, tau));
       S.sound.surf = 0.6 + 0.4 * grow;
       S.allowUnder = this.params.cam === 'follow';
+      S.dof = this.params.cam === 'follow' ? 0.55 : 0.3;
       S.drops = this.params.cam === 'follow' ? U.ss(16.5, 17.5, tau) * (1 - U.ss(20.5, 23, tau)) : 0;
     },
     captionIndex(S) { return S.activeLine; },
@@ -138,6 +140,7 @@
       SURF.setupPeel(S, 2.4, 0.9);
       S.hero.speed = 6;
       S.surferVisible = true;
+      S.dof = 0.45;
       this.tau = 8;
       this.pos = new THREE.Vector3();
     },

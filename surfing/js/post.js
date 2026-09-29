@@ -1,6 +1,6 @@
-/* Cinematic post-processing: HDR render → bloom → one grading pass (sun rays, underwater tint,
-   lens droplets, ACES tone mapping, split-tone grade, vignette, grain). Falls back to a plain
-   render if the three.js effect scripts did not load. */
+/* Cinematic post-processing: HDR render → bloom → one grading pass (depth of field, colour fringing,
+   sun rays, underwater tint, lens droplets, ACES tone mapping, split-tone grade, vignette, grain).
+   Falls back to a plain render if the three.js effect scripts did not load. */
 (function () {
   const SURF = window.SURF;
 
@@ -15,14 +15,20 @@
       uSun: { value: new THREE.Vector2(0.5, 0.5) },
       uSunVis: { value: 0 },
       uVignette: { value: 0.5 },
+      tDepth: { value: null },
+      uNear: { value: 0.1 },
+      uFar: { value: 6000 },
+      uFocus: { value: 10 },
+      uAperture: { value: 0 },
+      uCA: { value: 0.0022 },
     },
     vertexShader: /* glsl */ `
       varying vec2 vUv;
       void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }
     `,
     fragmentShader: /* glsl */ `
-      uniform sampler2D tDiffuse;
-      uniform float uTime, uExposure, uUnder, uDrops, uSunVis, uVignette;
+      uniform sampler2D tDiffuse, tDepth;
+      uniform float uTime, uExposure, uUnder, uDrops, uSunVis, uVignette, uNear, uFar, uFocus, uAperture, uCA;
       uniform vec2 uRes, uSun;
       varying vec2 vUv;
 
@@ -51,12 +57,43 @@
         return vec3(-d * m * 0.9 / scale, rim);
       }
 
+      float linDepth(vec2 uv) {
+        float z = texture2D(tDepth, uv).x * 2.0 - 1.0;
+        return (2.0 * uNear * uFar) / (uFar + uNear - z * (uFar - uNear));
+      }
+      float coc(float z) {
+        float c = abs(z - uFocus) / z * uAperture;
+        if (z > uFocus) c = min(c, 0.28 * uAperture); // keep the horizon and the sun crisp
+        return clamp(c, 0.0, 1.0);
+      }
+      // depth of field: golden-angle disc blur; a tap only counts if it is blurred enough to reach here
+      vec3 dofBlur(vec2 uv, float c0) {
+        float maxR = 16.0 * uRes.y / 1080.0;
+        vec3 acc = vec3(0.0);
+        float wsum = 0.0;
+        for (int i = 0; i < 24; i++) {
+          float r = sqrt((float(i) + 0.5) / 24.0), a = float(i) * 2.39996;
+          vec2 suv = uv + vec2(cos(a), sin(a)) * r * c0 * maxR / uRes;
+          float w = smoothstep(r - 0.25, r, max(coc(linDepth(suv)), c0 * 0.6)) + 0.001;
+          acc += texture2D(tDiffuse, suv).rgb * w;
+          wsum += w;
+        }
+        return acc / wsum;
+      }
+
       void main() {
         vec2 uv = vUv;
         uv += uUnder * 0.003 * vec2(sin(uv.y * 38.0 + uTime * 1.8), cos(uv.x * 31.0 + uTime * 1.5));
         vec3 dr = vec3(0.0);
         if (uDrops > 0.01) { dr = drops(uv, 6.0, 0.0) + drops(uv, 13.0, 4.0) * 0.8; uv += dr.xy; }
         vec3 col = texture2D(tDiffuse, uv).rgb;
+        vec2 cav = (vUv - 0.5) * uCA; // slight colour fringing toward the frame edges, like a real lens
+        col.r = texture2D(tDiffuse, uv + cav).r;
+        col.b = texture2D(tDiffuse, uv - cav).b;
+        if (uAperture > 0.001) {
+          float c0 = coc(linDepth(uv));
+          if (c0 > 0.02) col = mix(col, dofBlur(uv, c0), smoothstep(0.02, 0.25, c0));
+        }
 
         // light shafts from the sun (screen-space radial blur of the brightest pixels)
         if (uSunVis > 0.01) {
@@ -69,7 +106,7 @@
             acc += max(dot(s, vec3(0.333)) - 1.1, 0.0) * decay;
             decay *= 0.93;
           }
-          col += vec3(1.0, 0.72, 0.45) * acc * 0.035 * uSunVis;
+          col += vec3(1.0, 0.72, 0.45) * acc * 0.02 * uSunVis;
         }
 
         if (uUnder > 0.01) {
@@ -95,9 +132,12 @@
     if (!THREE.EffectComposer || !THREE.RenderPass || !THREE.UnrealBloomPass || !THREE.ShaderPass) return null;
     const rt = new THREE.WebGLRenderTarget(4, 4, { type: THREE.HalfFloatType, stencilBuffer: true });
     rt.samples = 4;
+    rt.depthTexture = new THREE.DepthTexture(4, 4);
+    rt.depthTexture.format = THREE.DepthStencilFormat;
+    rt.depthTexture.type = THREE.UnsignedInt248Type;
     const composer = new THREE.EffectComposer(renderer, rt);
     composer.addPass(new THREE.RenderPass(scene, camera));
-    const bloom = new THREE.UnrealBloomPass(new THREE.Vector2(4, 4), 0.38, 0.65, 0.95);
+    const bloom = new THREE.UnrealBloomPass(new THREE.Vector2(4, 4), 0.3, 0.55, 1.7);
     composer.addPass(bloom);
     const grade = new THREE.ShaderPass(GradeShader);
     grade.material.toneMapped = false;
@@ -107,9 +147,11 @@
 
     return {
       enabled: true,
-      /* quality hook: turn the whole chain on/off and change MSAA samples */
-      configure(on, samples) {
+      dof: true,
+      /* quality hook: turn the whole chain on/off, change MSAA samples, allow depth of field */
+      configure(on, samples, dof) {
         this.enabled = on;
+        this.dof = !!dof;
         if (rt.samples !== samples) {
           rt.samples = composer.renderTarget2.samples = samples;
           rt.dispose();
@@ -117,8 +159,13 @@
         }
       },
       setSize(w, h) { composer.setSize(w, h); u.uRes.value.set(w, h); },
-      render(S, dt, under) {
+      render(S, dt, under, focus) {
         u.uTime.value += dt;
+        u.tDepth.value = composer.readBuffer.depthTexture;
+        u.uNear.value = camera.near;
+        u.uFar.value = camera.far;
+        u.uFocus.value = focus;
+        u.uAperture.value += ((this.dof ? S.dof * 1.4 : 0) - u.uAperture.value) * Math.min(1, dt * 4);
         u.uUnder.value = under;
         u.uDrops.value = S.drops;
         u.uVignette.value = S.film.active ? 0.62 : 0.45;
@@ -128,7 +175,7 @@
         const off = Math.max(Math.abs(sp.x), Math.abs(sp.y));
         u.uSun.value.set(sp.x * 0.5 + 0.5, sp.y * 0.5 + 0.5);
         u.uSunVis.value = facing > 0 ? (1 - SURF.util.ss(1.0, 1.6, off)) * (1 - under) : 0;
-        bloom.strength = under > 0.5 ? 0.22 : 0.38;
+        bloom.strength = under > 0.5 ? 0.2 : 0.3;
         composer.render(dt);
       },
     };

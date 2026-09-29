@@ -15,12 +15,16 @@
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.05;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(SURF.util.srgb(0xf2ac7c), 140, 1100);
   const camera = (SURF.camera = new THREE.PerspectiveCamera(50, 1, 0.1, 6000));
 
-  const sky = SURF.createSky(scene);
+  const sky = SURF.createSky(scene, renderer);
+  sky.captureEnv(); // sky → environment map for reflections and lighting
+  SURF.createWaterTextures(renderer);
   const ocean = SURF.createOcean(scene);
   const seabed = SURF.createSeabed(scene);
   SURF.particles = SURF.createParticles(scene);
@@ -30,6 +34,20 @@
   SURF.rip = SURF.createRip(scene);
   SURF.gameInput = SURF.createGameInput(stage);
   const post = SURF.createPost(renderer, scene, camera);
+
+  // soft sun shadows, from a small shadow camera that follows the surfer
+  const sun = SURF.sunLight;
+  Object.assign(sun.shadow.camera, { left: -2.4, right: 2.4, top: 2.4, bottom: -2.4, near: 1, far: 60 });
+  sun.shadow.camera.updateProjectionMatrix();
+  sun.shadow.bias = -0.0004;
+  sun.shadow.normalBias = 0.02;
+  function setShadows(size) {
+    sun.castShadow = size > 0;
+    if (size > 0 && sun.shadow.mapSize.x !== size) {
+      sun.shadow.mapSize.set(size, size);
+      if (sun.shadow.map) { sun.shadow.map.dispose(); sun.shadow.map = null; }
+    }
+  }
   const inset = SURF.createInset({ renderer, scene, ocean, seabed, sky, canvas: glCanvas });
   const overlay = SURF.createOverlay(ovCanvas, camera);
   const rig = SURF.createRig(camera, stage);
@@ -63,6 +81,7 @@
   SURF.main = {
     setFixedSize(w, h) { fixed = w ? { w, h } : null; resize(); },
     setRender(scale, dpr) { rScale = scale; rDpr = dpr; resize(); },
+    setShadows,
   };
   addEventListener('resize', resize);
   resize();
@@ -77,6 +96,29 @@
   director.goTo(Math.max(0, director.EXPLORE.indexOf(location.hash.slice(1))));
   addEventListener('hashchange', fromHash);
   if (/[?&]clean\b/.test(location.search)) document.body.classList.add('clean');
+
+  // the wave shades the surfer: with the sun behind it, direct light is blocked by the crest and
+  // what gets through is filtered teal by the water. March toward the sun and see if we hit water.
+  const glow = new THREE.DirectionalLight(SURF.util.srgb(0x3fcfb2), 0);
+  scene.add(glow, glow.target);
+  const ray = new THREE.Vector3(), surf = new THREE.Vector3();
+  let shade = 0;
+  function waveShade(dt) {
+    const p = SURF.surfer.root.position;
+    let hit = 0;
+    for (let i = 1; i <= 10; i++) {
+      ray.copy(p).addScaledVector(SURF.sunDir, i * 1.2);
+      ray.y += 1.0; // test from about chest height
+      SURF.wave.surface(ray.x, ray.z, surf);
+      if (surf.y > ray.y) { hit = 1; break; }
+    }
+    shade += (hit - shade) * Math.min(1, dt * 4);
+    sun.intensity = 2.6 * (1 - 0.85 * shade);
+    glow.intensity = 1.1 * shade;
+    glow.position.copy(sun.position);
+    glow.target.position.copy(p);
+    glow.target.updateMatrixWorld();
+  }
 
   // underwater camera: swap fog + tell the shaders
   const U = SURF.util, fogAir = scene.fog.color.clone(), fogWater = U.srgb(0x0b3a48), probe = new THREE.Vector3();
@@ -113,10 +155,21 @@
     SURF.rip.update(dt, sdt);
     SURF.surfer.root.visible = S.surferVisible;
     SURF.surfer2.root.visible = S.surfer2Visible;
+    if (S.surferVisible) {
+      sun.target.position.copy(SURF.surfer.root.position);
+      sun.position.copy(sun.target.position).addScaledVector(SURF.sunDir, 30);
+      sun.target.updateMatrixWorld();
+      if (S.waveShade) waveShade(dt);
+      else { sun.intensity = 2.6; glow.intensity = 0; }
+    } else {
+      sun.intensity = 2.6;
+      glow.intensity = 0;
+    }
     updateUnder(dt);
     sky.update(camera, S.t);
     audio.update(S, dt);
-    if (post && post.enabled) post.render(S, dt, underS); else renderer.render(scene, camera);
+    if (post && post.enabled) post.render(S, dt, underS, camera.position.distanceTo(rig.target));
+    else renderer.render(scene, camera);
     const unit = S.film.active ? ovCanvas.height / 1080 : SURF.cssScale;
     inset.render(S, unit);
     overlay.draw(S, unit);

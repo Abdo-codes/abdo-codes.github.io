@@ -32,13 +32,13 @@
     const bedGeo = new THREE.PlaneGeometry(700, 500, 350, 1);
     bedGeo.rotateX(-Math.PI / 2);
     bedGeo.translate(0, 0, -250);
-    const bed = new THREE.Mesh(bedGeo, new THREE.MeshStandardMaterial({ color: U.srgb(0xc9a877), roughness: 1 }));
+    const bed = new THREE.Mesh(bedGeo, new THREE.MeshStandardMaterial({ color: U.srgb(0xc9a877), roughness: 1, emissive: U.srgb(0x3a2c1c) }));
     group.add(bed);
 
     // sand cross-section at the cut
     const SC = 350;
     const sandGeo = strip(SC);
-    const sand = new THREE.Mesh(sandGeo, new THREE.MeshStandardMaterial({ color: U.srgb(0x8c6b47), roughness: 1, side: THREE.DoubleSide }));
+    const sand = new THREE.Mesh(sandGeo, new THREE.MeshStandardMaterial({ color: U.srgb(0x8c6b47), roughness: 1, side: THREE.DoubleSide, emissive: U.srgb(0x4a3421) }));
     group.add(sand);
 
     // water cross-section: a translucent gradient curtain under the surface line

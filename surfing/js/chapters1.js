@@ -21,7 +21,7 @@
     kicker: 'A short film',
     title: 'How Surfing Works',
     subtitle: 'From a distant storm to riding the barrel',
-    enter(S) { SURF.setupPeel(S, 2.3, 0.92); },
+    enter(S) { SURF.setupPeel(S, 2.3, 0.92); S.dof = 0.3; },
     update(S, ct, sdt) { SURF.advancePeel(S, sdt); },
     camera(S, ct, out) {
       const z = S.hero.peelZ, k = U.ss(0, 7.5, ct);
