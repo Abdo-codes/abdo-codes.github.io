@@ -13,19 +13,21 @@
       armN: [0, 0, -0.15], elbN: [0, 0, 0], armT: [0, 0, 0.15], elbT: [0, 0, 0],
       legN: [-0.14, 0, -0.07], kneeN: [0.06, 0, 0], legT: [-0.12, 0, 0.07], kneeT: [0.1, 0, 0],
     },
-    ride: {
-      spine: [0.3, 0, 0], neck: [-0.22, -0.95, 0],
-      armN: [0.1, 0, -1.15], elbN: [0, 0, -0.35], armT: [-0.1, 0, 1.0], elbT: [0, 0, 0.45],
+    ride: { // athletic stance: chest turned down the line, lead arm reaching forward, elbows soft
+      spine: [0.14, -0.3, 0], neck: [-0.36, -0.85, 0],
+      armN: [-0.35, 0, -0.85], elbN: [-0.6, 0, 0], armT: [0.15, 0, 0.7], elbT: [-0.5, 0, 0],
       legN: [-0.6, 0, -0.42], kneeN: [1.0, 0, 0], legT: [-0.5, 0, 0.44], kneeT: [1.05, 0, 0],
     },
     tuck: {
-      spine: [0.72, 0, 0], neck: [-0.55, -0.9, 0],
-      armN: [-0.7, 0, -0.55], elbN: [0, 0, -0.7], armT: [0.3, 0, 0.9], elbT: [0, 0, 0.3],
+      spine: [0.45, -0.25, 0], neck: [-0.55, -0.85, 0],
+      armN: [-0.75, 0, -0.5], elbN: [-0.5, 0, 0], armT: [0.2, 0, 0.6], elbT: [-0.6, 0, 0],
       legN: [-1.25, 0, -0.36], kneeN: [2.0, 0, 0], legT: [-1.1, 0, 0.38], kneeT: [2.05, 0, 0],
     },
   };
   const FK_JOINTS = Object.keys(POSES.ride);
   const THIGH = 0.45, SHIN = 0.44, ANKLE_H = 0.062;
+  const STAND_H = 0.76, TUCK_H = 0.52; // pelvis height above the deck, standing and crouched
+  const UPRIGHT = 0.75; // how much of the face's slope the rider stands up against (0 = square to the board)
   const FEET = { N: { x: 0.2, toe: -0.32 }, T: { x: -0.5, toe: 0.12 } }; // stance on the deck
   const X_AXIS = new THREE.Vector3(1, 0, 0), Y_AXIS = new THREE.Vector3(0, 1, 0);
   const Q_PRONE = new THREE.Quaternion().setFromEuler(new THREE.Euler(PI / 2, PI / 2, 0, 'YXZ'));
@@ -42,7 +44,7 @@
     const bx = new THREE.Vector3(), by = new THREE.Vector3(), bz = new THREE.Vector3();
     const poleN = new THREE.Vector3(-0.35, 0, 1).normalize(), poleT = new THREE.Vector3(-0.65, 0, 1).normalize();
     const hipIK = new THREE.Quaternion(), kneeIK = new THREE.Quaternion();
-    const dyn = { lean: 0, yaw: 0, compress: 0, speed: 0, lastT: -1, placeT: -1 };
+    const dyn = { lean: 0, yaw: 0, compress: 0, speed: 0, grav: 0, lastT: -1, placeT: -1 };
     const prevX = new THREE.Vector3(1, 0, 0), prevPos = new THREE.Vector3(), prevVel = new THREE.Vector3(), vel = new THREE.Vector3();
     const X = new THREE.Vector3(), Y = new THREE.Vector3(), Z = new THREE.Vector3();
 
@@ -94,8 +96,11 @@
     const api = {
       root,
       body,
+      parts,
       leash,
+      hideables: [body, leash], // hidden in the rider's own eye view (a loaded human model adds itself)
       stand: 0,
+      carve: 0,
       /* w = { paddle, ride, tuck } (any scale). time drives paddling, wobble and the balance filter. */
       setPose(w, time) {
         const tot = (w.paddle || 0) + (w.ride || 0) + (w.tuck || 0) || 1;
@@ -121,7 +126,7 @@
         // balance: lean into the turn, counter-swing the arms, absorb compression
         const lean = dyn.lean * stand, turn = U.clamp(dyn.yaw / 1.2, -1, 1) * stand, T = Math.abs(turn);
         const crouch = U.clamp(f.tuck / Math.max(stand, 1e-3) + dyn.compress * 0.6, 0, 1);
-        parts.spine.rotation.x += (-lean * 0.45 + dyn.compress * 0.3) * stand;
+        parts.spine.rotation.x += (-lean * 0.25 + dyn.compress * 0.22) * stand;
         parts.spine.rotation.z += Math.sin(time * 1.7) * 0.04 * stand;
         parts.neck.rotation.y += turn * 0.3;
         parts.armN.rotation.x += lean * 0.9;
@@ -129,13 +134,16 @@
         parts.armT.rotation.x += -lean * 0.6;
         parts.armT.rotation.z += 0.4 * T + Math.sin(time * 1.9 + 1) * 0.08 * stand;
 
-        // body placement
-        q.setFromAxisAngle(X_AXIS, lean).multiply(q2.setFromAxisAngle(Y_AXIS, U.clamp(dyn.yaw * 0.15, -0.25, 0.25) * stand)).multiply(Q_STAND);
+        // body placement: stand up against the slope of the face rather than square to the tilted
+        // board, lean into the turn, pivot about the feet so the hips stay over them, hinge at the hips
+        const tilt = lean + U.clamp(dyn.grav, -0.7, 0.7) * UPRIGHT * stand;
+        q.setFromAxisAngle(X_AXIS, tilt).multiply(q2.setFromAxisAngle(Y_AXIS, U.clamp(dyn.yaw * 0.15, -0.25, 0.25) * stand)).multiply(Q_STAND);
+        q.multiply(q2.setFromAxisAngle(X_AXIS, U.lerp(0.2, 0.34, crouch)));
         body.quaternion.copy(Q_PRONE).slerp(q, stand);
-        const hipX = U.lerp(-0.13, -0.16, crouch);
+        const hipX = U.lerp(-0.13, -0.16, crouch), h = U.lerp(STAND_H, TUCK_H, crouch);
         body.position.x = U.lerp(-0.42, hipX, stand);
-        body.position.z = lean * 0.28;
-        const yStand = board.deckAt(hipX, 0) + U.lerp(0.86, 0.56, crouch);
+        body.position.z = h * Math.sin(tilt) + 0.04 * stand;
+        const yStand = board.deckAt(hipX, 0) + h * Math.cos(tilt);
         body.position.y = stand > 0.999 ? yStand : U.lerp(settle(), yStand, stand * stand);
 
         // legs: plant both feet on the deck
@@ -168,11 +176,13 @@
         root.quaternion.setFromRotationMatrix(m4.makeBasis(X, Y, Z));
         root.position.copy(pos);
 
-        // balance filter: yaw rate, speed and push into the board, from the board's real motion
-        const dt = dyn.lastT - dyn.placeT;
+        // balance filter: yaw rate, speed and push into the board, from the board's real motion;
+        // grav = how far world-up leans across the board, rail to rail
+        const dt = dyn.lastT - dyn.placeT, grav = Math.atan2(Z.y, Y.y);
         dyn.placeT = dyn.lastT;
         if (dt > 1e-4 && dt < 0.2 && pos.distanceTo(prevPos) < 3) {
           const k = 1 - Math.exp(-dt * 6);
+          dyn.grav += (grav - dyn.grav) * k;
           const yawRate = Math.asin(U.clamp(v.crossVectors(prevX, X).dot(Y), -1, 1)) / dt;
           dyn.yaw += (U.clamp(yawRate, -3, 3) - dyn.yaw) * k;
           vel.subVectors(pos, prevPos).divideScalar(dt);
@@ -184,8 +194,10 @@
           prevVel.copy(vel);
         } else if (dt >= 0.2 || dt < 0) {
           dyn.yaw = dyn.lean = dyn.compress = 0;
+          dyn.grav = grav;
           prevVel.set(0, 0, 0);
         }
+        api.carve = (dyn.speed * dyn.yaw) / 9.81; // sideways g of the turn, + when turning toward the toes
         prevX.copy(X);
         prevPos.copy(pos);
       },

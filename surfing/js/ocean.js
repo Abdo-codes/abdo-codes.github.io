@@ -136,33 +136,46 @@
       uAlpha: { value: 1 }, uCutZ: { value: 1e5 }, uFogDensity: { value: 0.0021 }, uSunDir: { value: SURF.sunDir },
       uRipples: { value: tex.ripples }, uFoamTex: { value: tex.foam }, uEnv: { value: SURF.env.cube }, uDetail: { value: 3 },
       uBoard: { value: Array.from({ length: TRAIL }, () => new THREE.Vector4()) }, uBoardN: { value: 0 }, uBoardBox: { value: new THREE.Vector4() },
+      uShadeP: { value: [new THREE.Vector4(), new THREE.Vector4()] },
+      uShadeX: { value: [new THREE.Vector3(), new THREE.Vector3()] }, uShadeZ: { value: [new THREE.Vector3(), new THREE.Vector3()] },
     };
     const mat = new THREE.ShaderMaterial({ uniforms, vertexShader: vert, fragmentShader: SURF.oceanFrag, side: THREE.DoubleSide });
     const mesh = new THREE.Mesh(grid('high'), mat);
     mesh.frustumCulled = false;
     scene.add(mesh);
 
-    // the board's wake: recent tail positions while the surfer is standing
-    const trail = [], tail = new THREE.Vector3();
+    // the board's wake: the water the tail passed over, remembered by its rest position so the foam
+    // rides the moving surface; the newest point is the tail itself, so the wake starts at the fins
+    const W = SURF.wave, trail = [], tail = new THREE.Vector3(), wp = new THREE.Vector3();
     let lastT = -1;
+    function restX(x, z) { // the rest x whose surface point lies at world x (the surface only moves along x)
+      let x0 = x;
+      for (let i = 0; i < 3; i++) x0 -= W.surface(x0, z, wp).x - x;
+      return x0;
+    }
     function updateTrail(S) {
-      const s = SURF.surfer, now = S.t;
+      const s = SURF.surfer, now = S.t, riding = S.surferVisible && s && s.stand > 0.6;
       if (!S.surferVisible || !s) trail.length = 0;
-      else if (s.stand > 0.6 && now - lastT > 0.05) {
-        lastT = now;
-        s.root.localToWorld(tail.set(-0.8, 0.03, 0));
-        if (trail.length && trail[0].p.distanceTo(tail) > 3) trail.length = 0; // the surfer was moved
-        trail.unshift({ p: tail.clone(), t: now });
-        if (trail.length > TRAIL) trail.pop();
+      if (riding) {
+        tail.set(-0.95, 0.02, 0).applyQuaternion(s.root.quaternion).add(s.root.position);
+        if (trail.length && Math.hypot(trail[0].px - tail.x, trail[0].z - tail.z) > 3) trail.length = 0; // the surfer was moved
+        if (!trail.length || now - lastT > TRAIL_LIFE / (TRAIL - 2)) {
+          lastT = now;
+          trail.unshift({ x0: restX(tail.x, tail.z), z: tail.z, px: tail.x, t: now });
+          if (trail.length > TRAIL - 1) trail.pop();
+        }
       }
       while (trail.length && (now - trail[trail.length - 1].t > TRAIL_LIFE || now < trail[trail.length - 1].t)) trail.pop();
-      let x0 = 1e9, z0 = 1e9, x1 = -1e9, z1 = -1e9;
-      trail.forEach((pt, i) => {
-        uniforms.uBoard.value[i].set(pt.p.x, pt.p.y, pt.p.z, (now - pt.t) / TRAIL_LIFE);
-        x0 = Math.min(x0, pt.p.x); z0 = Math.min(z0, pt.p.z); x1 = Math.max(x1, pt.p.x); z1 = Math.max(z1, pt.p.z);
-      });
-      uniforms.uBoardN.value = trail.length;
-      uniforms.uBoardBox.value.set(x0 - 1.2, z0 - 1.2, x1 + 1.2, z1 + 1.2);
+      const pts = uniforms.uBoard.value;
+      let n = 0, x0 = 1e9, z0 = 1e9, x1 = -1e9, z1 = -1e9;
+      const add = (p, age) => {
+        pts[n++].set(p.x, p.y, p.z, age);
+        x0 = Math.min(x0, p.x); z0 = Math.min(z0, p.z); x1 = Math.max(x1, p.x); z1 = Math.max(z1, p.z);
+      };
+      if (riding) add(tail, 0);
+      for (const pt of trail) if (n < TRAIL) add(W.surface(pt.x0, pt.z, wp), (now - pt.t) / TRAIL_LIFE);
+      uniforms.uBoardN.value = n;
+      uniforms.uBoardBox.value.set(x0 - 1.6, z0 - 1.6, x1 + 1.6, z1 + 1.6);
     }
 
     return {
@@ -184,6 +197,15 @@
         u.uCutZ.value = S.cutZ;
         mat.transparent = S.alpha < 0.999;
         updateTrail(S);
+        // where the boards are, for the shade they cast on the water
+        [SURF.surfer, SURF.surfer2].forEach((s, i) => {
+          const on = s && (i ? S.surfer2Visible : S.surferVisible), r = s && s.root;
+          u.uShadeP.value[i].set(on ? r.position.x : 0, on ? r.position.y : 0, on ? r.position.z : 0, on ? 1 : 0);
+          if (on) {
+            u.uShadeX.value[i].set(1, 0, 0).applyQuaternion(r.quaternion);
+            u.uShadeZ.value[i].set(0, 0, 1).applyQuaternion(r.quaternion);
+          }
+        });
       },
     };
   };

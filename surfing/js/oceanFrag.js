@@ -1,6 +1,6 @@
 /* Ocean fragment shader: multi-scale ripple normals, sky reflections from the baked environment map,
    depth/angle-based water colour with light glowing through thin water, sun glitter, textured foam,
-   foam streaks drawn up the face, and the white wake the board leaves behind. */
+   foam streaks drawn up the face, the white wake the board leaves behind and the soft shade around it. */
 (function () {
   const SURF = window.SURF;
 
@@ -12,6 +12,8 @@
     uniform vec4 uBoard[24];
     uniform float uBoardN;
     uniform vec4 uBoardBox;
+    uniform vec4 uShadeP[2];
+    uniform vec3 uShadeX[2], uShadeZ[2];
     varying vec3 vWorld;
     varying vec3 vNormal;
     varying vec4 vInfo;
@@ -26,25 +28,48 @@
       vec2 n = (texture2D(uRipples, p * 0.085 + uTime * vec2(0.011, 0.004)).xy * 2.0 - 1.0) * 0.6;
       if (uDetail > 1.5) n += (texture2D(uRipples, p * 0.23 + uTime * vec2(-0.012, 0.017)).xy * 2.0 - 1.0) * 0.38;
       if (uDetail > 2.5) n += (texture2D(uRipples, p * 0.67 + uTime * vec2(0.028, -0.021)).xy * 2.0 - 1.0) * 0.24 * exp(-dist / 60.0);
+      // fine ripples close up break the smooth, curved face's mirror image of the sky into water, not streaks
+      if (uDetail > 1.5) n += (texture2D(uRipples, p * 2.1 + uTime * vec2(-0.05, 0.04)).xy * 2.0 - 1.0) * 0.2 * exp(-dist / 22.0);
       return n;
     }
 
-    /* foam along the path the board just carved; it widens and fades as it ages */
-    float boardWake() {
-      if (uBoardN < 1.5) return 0.0;
+    /* the board's wake: churned white water right behind the fins that breaks into two spreading,
+       fading streaks of bubbles, with the water between them smoothed flat (the slick).
+       Returns (foam, slick). */
+    vec2 boardWake() {
+      if (uBoardN < 1.5) return vec2(0.0);
       vec2 q = vWorld.xz;
-      if (q.x < uBoardBox.x || q.x > uBoardBox.z || q.y < uBoardBox.y || q.y > uBoardBox.w) return 0.0;
-      float best = 0.0;
+      if (q.x < uBoardBox.x || q.x > uBoardBox.z || q.y < uBoardBox.y || q.y > uBoardBox.w) return vec2(0.0);
+      float d = 1e9, age = 1.0; // distance to the board's path, and how long ago it passed there
       for (int i = 0; i < 23; i++) {
         if (float(i) >= uBoardN - 1.0) break;
         vec4 a = uBoard[i], b = uBoard[i + 1];
         vec3 ab = b.xyz - a.xyz;
         float t = clamp(dot(vWorld - a.xyz, ab) / max(dot(ab, ab), 1e-4), 0.0, 1.0);
-        float age = mix(a.w, b.w, t), width = 0.14 + 0.55 * age;
-        float d = length(vWorld - (a.xyz + ab * t));
-        best = max(best, (1.0 - smoothstep(width * 0.35, width, d)) * (1.0 - age) * (1.0 - age));
+        vec3 c = vWorld - (a.xyz + ab * t);
+        float di = length(vec3(c.x, c.y * 0.5, c.z)); // some slack for the height of the moving surface
+        if (di < d) { d = di; age = mix(a.w, b.w, t); }
       }
-      return best;
+      float fade = (1.0 - age) * (1.0 - age);
+      float hw = 0.13 + 0.9 * age; // the two streaks drift apart as the wake ages
+      float e = (d - hw) / (0.04 + 0.11 * age);
+      float core = exp(-d * d / (0.008 + 0.04 * age)) * (1.0 - smoothstep(0.03, 0.28, age));
+      return vec2(max(core, exp(-e * e) * fade * 0.7), (1.0 - smoothstep(hw * 0.7, hw + 0.2, d)) * fade);
+    }
+
+    /* a board on the water blocks the sky above it: a contact shade, darkest at the rails, gone ~25 cm out */
+    float boardShade() {
+      float s = 0.0;
+      for (int i = 0; i < 2; i++) {
+        if (uShadeP[i].w < 0.5) continue;
+        vec3 d = vWorld - uShadeP[i].xyz;
+        if (dot(d, d) > 6.0) continue;
+        vec2 q = vec2(dot(d, uShadeX[i]), dot(d, uShadeZ[i])), r = vec2(1.02, 0.27); // half length, half width
+        float k0 = length(q / r), sd = k0 * (k0 - 1.0) / max(length(q / (r * r)), 1e-4); // ~distance outside the outline
+        float h = dot(d, cross(uShadeZ[i], uShadeX[i]));
+        s = max(s, (1.0 - smoothstep(0.0, 0.26, sd)) * (1.0 - smoothstep(0.1, 0.45, abs(h))));
+      }
+      return s;
     }
 
     void main() {
@@ -56,14 +81,24 @@
       vec3 N = normalize(vNormal);
       float steep = 1.0 - abs(N.y); // on the face and lip, project foam from the side, not from above
       N = normalize(mix(N, vec3(0.0, 1.0, 0.0), 0.7 * far));
-      vec2 rp = ripple(p, dist) * mix(0.32, 0.12, far) * (1.0 - 0.7 * clamp(vInfo.z * 1.5, 0.0, 1.0));
-      N = normalize(N + vec3(rp.x, 0.0, rp.y));
+      vec2 wake = boardWake();
+      // ripples: laid on from above, and from the side on the steep face so they don't stretch into streaks
+      float side = smoothstep(0.35, 0.75, steep);
+      vec2 rTop = ripple(p, dist), rSide = side > 0.01 ? ripple(vec2(vWorld.z, vWorld.y * 1.3), dist) : vec2(0.0);
+      // a wave face is stretched smooth as it rises (glassy); flat water keeps its full texture. Seen at a
+      // low angle every bump flips the reflection between sky and water, so calm them there too
+      float upFace = vInfo.w > 0.05 ? clamp(vHero.y / vInfo.w, 0.0, 1.0) : 0.0;
+      float grazeK = pow(1.0 - abs(dot(normalize(vNormal), V)), 3.0);
+      float rAmp = mix(0.32, 0.12, far) * (1.0 - 0.7 * clamp(vInfo.z * 1.5, 0.0, 1.0)) * (1.0 - 0.6 * wake.y)
+        * mix(1.0, 0.35, smoothstep(0.02, 0.45, upFace)) * (1.0 - 0.7 * grazeK);
+      N = normalize(N + mix(vec3(rTop.x, 0.0, rTop.y), vec3(0.0, rSide.y, rSide.x), side) * rAmp);
       if (dot(N, V) < 0.0) N = -N;
       float NdV = max(dot(N, V), 0.0);
       float fres = 0.02 + 0.98 * pow(1.0 - NdV, 5.0);
       vec3 R = reflect(-V, N);
+      float below = smoothstep(0.02, -0.25, R.y); // the underside of the lip mirrors the water, not the sky
       R.y = abs(R.y);
-      vec3 refl = env(R, 3.0 * far + clamp(vInfo.z, 0.0, 1.0));
+      vec3 refl = mix(env(R, 3.0 * far + clamp(vInfo.z, 0.0, 1.0)), srgb(vec3(0.015, 0.1, 0.11)), below);
 
       // body colour: deep water absorbs, the top layer scatters, thin water glows when backlit
       float H = vInfo.w;
@@ -87,12 +122,11 @@
       water *= 0.45 + 0.75 * sunCol * (0.3 + 0.7 * diff);
       vec3 col = mix(water, refl, fres * (uRip > 0.5 ? 0.35 : 1.0));
       float rs = max(dot(R, uSunDir), 0.0);
-      col += sunCol * (pow(rs, mix(1200.0, 200.0, far)) * mix(14.0, 5.0, far) + pow(rs, 80.0) * 0.35);
+      col += sunCol * (pow(rs, mix(1200.0, 200.0, far)) * mix(14.0, 5.0, far) + pow(rs, 80.0) * 0.35) * (1.0 - below);
 
       // foam: whitewater, the lip's edge, the trail behind the break, and the board's wake
-      float lipW = vInfo.x * vInfo.x * smoothstep(0.95, 0.999, vInfo.y); // just the fringe at the tip
+      float lipW = 0.7 * vInfo.x * vInfo.x * smoothstep(0.96, 0.999, vInfo.y); // a lacy fringe at the tip
       float f = max(max(lipW, vInfo.z * 1.15), vTrail * 0.6);
-      f = max(f, boardWake());
       float foam = 0.0;
       if (f > 0.02) {
         vec2 fq = mix(p, vec2(vWorld.z, vWorld.y * 1.2 + vWorld.x * 0.4), smoothstep(0.45, 0.75, steep));
@@ -100,8 +134,15 @@
         float lace = texture2D(uFoamTex, fp).r * 0.6 + texture2D(uFoamTex, fp * 2.6 + 0.37).r * 0.5;
         foam = smoothstep(0.35, 0.62, f + (lace - 0.55) * (0.95 - 0.55 * f)) * min(1.0, f * 3.0);
       }
-      vec3 foamCol = env(N, 5.0) * 0.9 + sunCol * (0.25 + 1.1 * diff) * 0.55;
+      if (wake.x > 0.01) { // bubbles: solid in the churned core, breaking into scattered patches as they thin out
+        vec2 bq = p * 1.6 + vec2(uTime * 0.04, -uTime * 0.02);
+        float bub = texture2D(uFoamTex, bq).r * 0.6 + texture2D(uFoamTex, bq * 2.3 + 0.61).r * 0.55;
+        foam = max(foam, smoothstep(1.05 - wake.x, 1.35 - wake.x, bub + 0.2) * min(1.0, wake.x * 2.5) * 0.9);
+      }
+      vec3 foamCol = env(vec3(N.x, abs(N.y), N.z), 5.0) * 0.9 + sunCol * (0.25 + 1.1 * diff) * 0.55; // lit by the sky, even facing down
+      foamCol = mix(foamCol, vec3(dot(foamCol, vec3(0.333))), 0.3); // foam scatters every colour: whiter than the sky it sits under
       col = mix(col, foamCol, foam);
+      col *= 1.0 - 0.5 * boardShade();
 
       float fog = 1.0 - exp(-pow(dist * uFogDensity, 1.6));
       col = mix(col, env(normalize(vec3(-V.x, 0.02, -V.z)), 4.0), fog);

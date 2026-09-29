@@ -96,10 +96,12 @@
   director.goTo(Math.max(0, director.EXPLORE.indexOf(location.hash.slice(1))));
   addEventListener('hashchange', fromHash);
   if (/[?&]clean\b/.test(location.search)) document.body.classList.add('clean');
+  // real people replace the sculpted surfers once their models have arrived
+  SURF.humansReady = Promise.all([SURF.loadHuman(SURF.surfer, 'models/surfer_m.glb'), SURF.loadHuman(SURF.surfer2, 'models/surfer_f.glb')]);
 
   // the wave shades the surfer: with the sun behind it, direct light is blocked by the crest and
   // what gets through is filtered teal by the water. March toward the sun and see if we hit water.
-  const glow = new THREE.DirectionalLight(SURF.util.srgb(0x3fcfb2), 0);
+  const glow = new THREE.DirectionalLight(SURF.util.srgb(0x6fd6c0), 0);
   scene.add(glow, glow.target);
   const ray = new THREE.Vector3(), surf = new THREE.Vector3();
   let shade = 0;
@@ -114,7 +116,7 @@
     }
     shade += (hit - shade) * Math.min(1, dt * 4);
     sun.intensity = 2.6 * (1 - 0.85 * shade);
-    glow.intensity = 1.1 * shade;
+    glow.intensity = 0.75 * shade;
     glow.position.copy(sun.position);
     glow.target.position.copy(p);
     glow.target.updateMatrixWorld();
@@ -136,13 +138,16 @@
     scene.fog.far = under ? 55 : 1100;
   }
 
+  // keep the loading screen up until the real surfers have arrived (at most 6 s on a slow connection)
+  let humansIn = false, shown = false;
+  Promise.race([SURF.humansReady, new Promise((r) => setTimeout(r, 6000))]).then(() => { humansIn = true; });
   let last = performance.now(), frames = 0;
   function frame(now) {
     const raw = (now - last) / 1000, dt = Math.min(0.05, raw);
     last = now;
     quality.frame(raw);
     step(dt);
-    if (++frames === 3) loading.classList.add('done');
+    if (++frames >= 3 && humansIn && !shown) { shown = true; loading.classList.add('done'); }
     requestAnimationFrame(frame);
   }
   /* one simulation + render step (exposed so a hidden tab can be driven for testing) */
@@ -155,6 +160,7 @@
     SURF.rip.update(dt, sdt);
     SURF.surfer.root.visible = S.surferVisible;
     SURF.surfer2.root.visible = S.surfer2Visible;
+    for (const s of [SURF.surfer, SURF.surfer2]) if (s.human && s.root.visible) s.human.sync();
     if (S.surferVisible) {
       sun.target.position.copy(SURF.surfer.root.position);
       sun.position.copy(sun.target.position).addScaledVector(SURF.sunDir, 30);

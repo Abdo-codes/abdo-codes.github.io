@@ -42,7 +42,7 @@
       S.inset = {
         cam: this.cam || (this.cam = new THREE.PerspectiveCamera(70, 16 / 9, 0.05, 6000)),
         label: 'Surfer’s view',
-        hide: [SURF.surfer.body, SURF.surfer.leash],
+        hide: SURF.surfer.hideables,
       };
       S.timing = { uN: 5, pop: null, result: null, kind: null };
       this.labels = SURF.makeLabels([['You', 0, 46]]);
@@ -178,7 +178,7 @@
       const cam = S.inset.cam;
       // look along the board (on a steep face that already points down the drop)
       const boardFwd = tmp.set(1, 0, 0).applyQuaternion(SURF.surfer.root.quaternion);
-      head.copy(p).addScaledVector(n, U.lerp(0.42, 1.55, standK)).addScaledVector(boardFwd, U.lerp(0.3, -0.05, standK));
+      head.copy(p).addScaledVector(n, U.lerp(0.42, 1.45, standK)).addScaledVector(boardFwd, U.lerp(0.3, -0.05, standK));
       dir.copy(boardFwd);
       dir.y += U.lerp(0.16, 0.4, standK); // eyes up: see the drop and the horizon, not just water
       dir.normalize().lerp(BACK, this.look).normalize();
