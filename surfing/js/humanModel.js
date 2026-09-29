@@ -172,7 +172,7 @@
       pelvisPos.copy(pelvisOff).applyQuaternion(P.body).add(body.position);
       spinePos.copy(spineOff).applyQuaternion(P.body).add(pelvisPos);
       bone.Pelvis.position.copy(pelvisPos).sub(bipP).applyQuaternion(bipQi).divideScalar(bipS);
-      for (const g of legs) solveLeg(g, surfer.stand);
+      for (const g of legs) solveLeg(g, surfer.legIK);
       for (const e of list) e.b.quaternion.copy(tq.copy(e.parent.q).invert()).multiply(e.q);
     }
 

@@ -44,19 +44,21 @@
     const bx = new THREE.Vector3(), by = new THREE.Vector3(), bz = new THREE.Vector3();
     const poleN = new THREE.Vector3(-0.35, 0, 1).normalize(), poleT = new THREE.Vector3(-0.65, 0, 1).normalize();
     const hipIK = new THREE.Quaternion(), kneeIK = new THREE.Quaternion();
+    const hand = new THREE.Vector3(), pole = new THREE.Vector3(), legFK = [0, 1, 2, 3].map(() => new THREE.Quaternion());
     const dyn = { lean: 0, yaw: 0, compress: 0, speed: 0, grav: 0, lastT: -1, placeT: -1 };
     const prevX = new THREE.Vector3(1, 0, 0), prevPos = new THREE.Vector3(), prevVel = new THREE.Vector3(), vel = new THREE.Vector3();
     const X = new THREE.Vector3(), Y = new THREE.Vector3(), Z = new THREE.Vector3();
 
-    /* analytic two-bone IK in body space: aim the thigh so the shin lands on `target` */
-    function solveLeg(hip, target, pole) {
+    /* analytic two-bone IK in the joint's parent space: aim the upper bone so the lower one lands on
+       `target`, bending toward `pole` (legs: thigh + shin; arms: upper arm + forearm) */
+    function solveLeg(hip, target, pole, L1 = THIGH, L2 = SHIN) {
       H.copy(hip.position);
       u.subVectors(target, H);
-      const d = U.clamp(u.length(), 0.15, THIGH + SHIN - 1e-3);
+      const d = U.clamp(u.length(), 0.15, L1 + L2 - 1e-3);
       u.normalize();
-      const cosA = U.clamp((THIGH * THIGH + d * d - SHIN * SHIN) / (2 * THIGH * d), -1, 1), sinA = Math.sqrt(1 - cosA * cosA);
+      const cosA = U.clamp((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d), -1, 1), sinA = Math.sqrt(1 - cosA * cosA);
       pp.copy(pole).addScaledVector(u, -pole.dot(u)).normalize();
-      K.copy(H).addScaledVector(u, THIGH * cosA).addScaledVector(pp, THIGH * sinA);
+      K.copy(H).addScaledVector(u, L1 * cosA).addScaledVector(pp, L1 * sinA);
       A.copy(H).addScaledVector(u, d);
       t.subVectors(K, H).normalize();
       s.subVectors(A, K).normalize();
@@ -100,6 +102,7 @@
       leash,
       hideables: [body, leash], // hidden in the rider's own eye view (a loaded human model adds itself)
       stand: 0,
+      legIK: 0, // how far the legs are planted on the deck (0 lying down, 1 standing)
       carve: 0,
       /* w = { paddle, ride, tuck } (any scale). time drives paddling, wobble and the balance filter. */
       setPose(w, time) {
@@ -107,6 +110,13 @@
         const f = { paddle: (w.paddle || 0) / tot, ride: (w.ride || 0) / tot, tuck: (w.tuck || 0) / tot };
         const stand = 1 - f.paddle;
         api.stand = stand;
+        // the pop-up, in three beats: hands on the deck push the chest up while the hips stay down,
+        // the feet tuck in under the body and it swings up into a deep crouch, then the rider rises out of it
+        const push = U.ss(0, 0.4, stand), tuckIn = U.ss(0.28, 0.62, stand), hop = U.ss(0.42, 0.8, stand);
+        const legW = U.ss(0.22, 0.32, stand); // legs switch to IK early; their feet then follow tuckIn's path
+        const plant = U.ss(0.02, 0.2, stand) * (1 - U.ss(0.6, 0.76, stand));
+        const low = stand < 1 ? 1 - U.ss(0.8, 1, stand) : 0; // still crouched deep from landing
+        api.legIK = legW;
         dyn.lastT = time;
 
         for (const j of FK_JOINTS) {
@@ -125,8 +135,8 @@
 
         // balance: lean into the turn, counter-swing the arms, absorb compression
         const lean = dyn.lean * stand, turn = U.clamp(dyn.yaw / 1.2, -1, 1) * stand, T = Math.abs(turn);
-        const crouch = U.clamp(f.tuck / Math.max(stand, 1e-3) + dyn.compress * 0.6, 0, 1);
-        parts.spine.rotation.x += (-lean * 0.25 + dyn.compress * 0.22) * stand;
+        const crouch = Math.max(low, U.clamp(f.tuck / Math.max(stand, 1e-3) + dyn.compress * 0.6, 0, 1));
+        parts.spine.rotation.x += (-lean * 0.25 + dyn.compress * 0.22) * stand - 0.75 * push * (1 - hop); // the push: chest up, hips stay on the board
         parts.spine.rotation.z += Math.sin(time * 1.7) * 0.04 * stand;
         parts.neck.rotation.y += turn * 0.3;
         parts.armN.rotation.x += lean * 0.9;
@@ -139,31 +149,56 @@
         const tilt = lean + U.clamp(dyn.grav, -0.7, 0.7) * UPRIGHT * stand;
         q.setFromAxisAngle(X_AXIS, tilt).multiply(q2.setFromAxisAngle(Y_AXIS, U.clamp(dyn.yaw * 0.15, -0.25, 0.25) * stand)).multiply(Q_STAND);
         q.multiply(q2.setFromAxisAngle(X_AXIS, U.lerp(0.2, 0.34, crouch)));
-        body.quaternion.copy(Q_PRONE).slerp(q, stand);
+        body.quaternion.copy(Q_PRONE).slerp(q, hop);
         const hipX = U.lerp(-0.13, -0.16, crouch), h = U.lerp(STAND_H, TUCK_H, crouch);
-        body.position.x = U.lerp(-0.42, hipX, stand);
-        body.position.z = h * Math.sin(tilt) + 0.04 * stand;
+        body.position.x = U.lerp(-0.42, hipX, hop);
+        body.position.z = (h * Math.sin(tilt) + 0.04) * hop;
         const yStand = board.deckAt(hipX, 0) + h * Math.cos(tilt);
-        body.position.y = stand > 0.999 ? yStand : U.lerp(settle(), yStand, stand * stand);
+        body.position.y = stand > 0.999 ? yStand : U.lerp(settle(), yStand, hop * hop);
 
-        // legs: plant both feet on the deck
-        if (stand > 0.01) {
+        // legs: plant both feet on the deck (they swing in during the hop)
+        const plantLegs = () => {
           body.updateMatrix();
           inv.copy(body.matrix).invert();
-          for (const key of ['N', 'T']) {
+          ['N', 'T'].forEach((key, i) => {
             const ft = FEET[key], fx = ft.x + (key === 'N' ? 0.03 : -0.02) * crouch;
-            v.set(fx, board.deckAt(fx, 0) + ANKLE_H, 0).applyMatrix4(inv);
-            solveLeg(parts['leg' + key], v, key === 'N' ? poleN : poleT);
-            parts['leg' + key].quaternion.slerp(hipIK, stand);
-            parts['knee' + key].quaternion.slerp(kneeIK, stand);
+            // each foot sweeps low over the deck from behind the hips to its spot in the stance
+            const x = U.lerp(body.position.x - 0.75, fx, tuckIn), z = (key === 'N' ? 0.12 : -0.12) * (1 - tuckIn);
+            v.set(x, board.deckAt(x, z) + ANKLE_H + 0.14 * Math.sin(PI * tuckIn), z).applyMatrix4(inv);
+            pole.copy(key === 'N' ? poleN : poleT);
+            pole.x *= hop; // knees straight under the body while tucking in; the stance's splay comes once up
+            solveLeg(parts['leg' + key], v, pole.normalize());
+            parts['leg' + key].quaternion.copy(legFK[i * 2]).slerp(hipIK, legW);
+            parts['knee' + key].quaternion.copy(legFK[i * 2 + 1]).slerp(kneeIK, legW);
             // foot flat on the deck, angled in a slight duck stance
             q.copy(body.quaternion).multiply(parts['leg' + key].quaternion).multiply(parts['knee' + key].quaternion).invert();
             q2.setFromAxisAngle(Y_AXIS, PI + ft.toe);
-            parts['foot' + key].quaternion.identity().slerp(q.multiply(q2), stand);
-          }
+            parts['foot' + key].quaternion.identity().slerp(q.multiply(q2), legW);
+          });
+        };
+        if (legW > 0.001) {
+          legFK.forEach((fq, i) => fq.copy(parts[['legN', 'kneeN', 'legT', 'kneeT'][i]].quaternion));
+          plantLegs();
+          // mid pop-up the tucked knees decide how high the body must be: settle again with them, re-plant
+          if (stand < 0.999) { body.position.y = U.lerp(settle(), yStand, hop * hop); plantLegs(); }
         } else {
           parts.footN.quaternion.identity();
           parts.footT.quaternion.identity();
+        }
+        // arms: during the push the hands are planted on the deck beside the chest, elbows back
+        if (plant > 0.001) {
+          root.updateMatrixWorld(true);
+          for (const key of ['N', 'T']) {
+            const sh = parts['arm' + key], chest = sh.parent;
+            root.worldToLocal(sh.getWorldPosition(hand));
+            const hz = Math.sign(hand.z || 1) * 0.2;
+            hand.set(hand.x - 0.04, board.deckAt(hand.x, hz) + 0.05, hz);
+            chest.worldToLocal(root.localToWorld(hand));
+            pole.set(sh.position.x * 3, -1, -0.4).normalize(); // elbows toward the feet, a little out
+            solveLeg(sh, hand, pole, 0.3, 0.3);
+            sh.quaternion.slerp(hipIK, plant);
+            parts['elb' + key].quaternion.slerp(kneeIK, plant);
+          }
         }
         updateLeash();
       },
