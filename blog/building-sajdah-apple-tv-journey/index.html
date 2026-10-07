@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey So Far: Building Sajdah, a Quran App for Apple TV</title>
+    <meta name="description" content="How Sajdah grew from a Quran player for the TV into a daily companion for Muslim homes on Apple TV: the origin, the design pivots, the lessons, and what comes next.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="The journey so far: building Sajdah for Apple TV">
+    <meta property="og:description" content="From a Quran player for the TV to a daily companion for the home: the pivots and lessons behind Sajdah.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sajdah ambient Quran mode on Apple TV: Fill your home with Quran">
+    <meta property="article:published_time" content="2026-10-07">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Story">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="The journey so far: building Sajdah for Apple TV">
+    <meta name="twitter:description" content="From a Quran player for the TV to a daily companion for the home: the pivots and lessons behind Sajdah.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <meta name="apple-itunes-app" content="app-id=6759179587">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="stylesheet" href="/blog/assets/blog.css">
+    <script src="/blog/assets/theme.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWW2E9NVE3"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-FWW2E9NVE3"); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/#post",
+              "headline": "The journey so far: building Sajdah for Apple TV",
+              "description": "How Sajdah grew from a Quran player for the TV into a daily companion for Muslim homes on Apple TV: the origin, the design pivots, the lessons, and what comes next.",
+              "url": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/", "mainEntityOfPage": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/",
+              "image": ["https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg", "https://yoloabdo.com/sajda/screenshots/sajdah-ambient-quran-mode-1280.webp"],
+              "datePublished": "2026-10-07", "dateModified": "2026-10-07", "inLanguage": "en", "articleSection": "Story",
+              "keywords": ["Sajdah", "Sajda", "Apple TV", "tvOS", "Quran app", "indie app", "SwiftUI", "product design"],
+              "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+              "publisher": { "@id": "https://yoloabdo.com/#person" },
+              "about": { "@type": "SoftwareApplication", "@id": "https://yoloabdo.com/sajda/#app", "name": "Sajdah", "operatingSystem": "tvOS", "applicationCategory": "LifestyleApplication", "url": "https://yoloabdo.com/sajda/", "installUrl": "https://apps.apple.com/app/id6759179587" },
+              "isPartOf": { "@type": "Blog", "@id": "https://yoloabdo.com/blog/#blog", "name": "Abdelrahman Eita's blog", "url": "https://yoloabdo.com/blog/" } },
+            { "@type": "BreadcrumbList", "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" },
+                { "@type": "ListItem", "position": 3, "name": "The journey so far", "item": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/" } ] }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/blog/">Blog</a>
+                <a href="/apps/" class="hide-sm">Apps</a>
+                <a href="/sajda/">Sajdah</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / The journey so far</nav>
+            <p class="eyebrow mono">Story · Building Sajdah</p>
+            <h1 class="post-title">The journey so far: building Sajdah for Apple TV</h1>
+            <p class="dek">In January 2026 I started a small side project: a way to play the Quran on the biggest screen in the house. Nine months later, Sajdah is a Quran, prayer and remembrance companion for Apple TV. This is the story so far.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-10-07">7 October 2026</time> · 8 min read</span>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="/sajda/screenshots/sajdah-ambient-quran-mode-1280.webp" srcset="/sajda/screenshots/sajdah-ambient-quran-mode-640.webp 640w, /sajda/screenshots/sajdah-ambient-quran-mode-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="Sajdah ambient Quran mode showing one verse of Surah Ar-Rahman on a dark screen" fetchpriority="high">
+            </figure>
+
+            <div class="prose">
+                <nav class="summary toc" aria-labelledby="toc-title">
+                    <h2 id="toc-title">Contents</h2>
+                    <ol>
+                        <li><a href="#why">Why a Quran app for the TV</a></li>
+                        <li><a href="#name">From QuraanTV to Sajdah</a></li>
+                        <li><a href="#basics">The first months</a></li>
+                        <li><a href="#companion">From player to daily companion</a></li>
+                        <li><a href="#onboarding">Onboarding, four times</a></li>
+                        <li><a href="#prayer-clock">The household prayer clock</a></li>
+                        <li><a href="#word-by-word">Reading along, word by word</a></li>
+                        <li><a href="#lessons">What the TV taught me</a></li>
+                        <li><a href="#next">What comes next</a></li>
+                    </ol>
+                </nav>
+
+                <h2 id="why">Why a Quran app for the TV</h2>
+                <p>A phone is personal. A TV belongs to the whole room. In many Muslim homes, Quran recitation plays in the background for hours, and the TV is often the best speaker and the biggest screen in the house. I wanted a way to fill the living room with recitation and let everyone follow the verses together, without passing a phone around.</p>
+                <p>The first commit landed on 27 January 2026, under the name <strong>QuraanTV</strong>. It already had a reciter picker, a player and verse timing. From the start I wanted Quran listening to be free and ad-free, something I hoped could be a small <em>sadaqah jariyah</em>: a good deed that keeps giving after the work is done.</p>
+
+                <h2 id="name">From QuraanTV to Sajdah</h2>
+                <p>QuraanTV described the first version well: Quran recitation on a TV. Within weeks the app also had prayer times, the Athan and a Qibla compass, and the name felt too narrow. <strong>Sajdah</strong>, the prostration in prayer, points at the whole daily rhythm the app now serves: prayer, Quran and remembrance. You will still see the shorter spelling, Sajda, in a few places, including the address of <a href="/sajda/">the app's page</a>. The code is still called QuraanTV, because renaming it would change nothing for anyone who uses the app.</p>
+
+                <h2 id="basics">The first months: getting the basics right on a TV</h2>
+                <p>February 2026 was about foundations: hundreds of reciters, verse sync, prayer times with a Qibla compass, the Athan at prayer time, and an interface in many languages, including right-to-left Arabic. At the end of the month came Quran radio and live Islamic TV. Today Sajdah speaks 11 languages.</p>
+                <p>Then came App Review, which taught me more than I expected:</p>
+                <ul>
+                    <li>A QR code in Settings that pointed to a donation page was not allowed inside the app (guideline 3.1.1), even though the same link is fine on a website.</li>
+                    <li>An app's first subscription has to be submitted together with a new app version.</li>
+                    <li>tvOS apps need a privacy policy URL too.</li>
+                    <li>Rejection messages can be vague, so each round needs some detective work.</li>
+                </ul>
+                <p>I turned several of these lessons into validation checks for the open-source App Store Connect CLI, so the next submission, mine or anyone else's, catches them before review does.</p>
+
+                <h2 id="companion">From player to daily companion</h2>
+                <p>The early app was a good Quran player, but people mostly opened it around prayer times. So in March, with version 1.3.0, the home screen changed from a grid of reciters to a <strong>Today</strong> tab: the next prayer with a live countdown, the Hijri and Gregorian dates, a verse of the day, and one press to continue the last recitation.</p>
+                <p>Morning and evening adhkar came with it, as a full-screen counter you press with the Siri Remote. In April a hadith of the day followed, drawn from Imam an-Nawawi's forty hadith, together with an ambient mode that shows one calm verse at a time for all-day listening.</p>
+                <figure>
+                    <img src="/sajda/screenshots/sajdah-verse-hadith-of-the-day-1280.webp" srcset="/sajda/screenshots/sajdah-verse-hadith-of-the-day-640.webp 640w, /sajda/screenshots/sajdah-verse-hadith-of-the-day-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" loading="lazy" alt="Sajdah Today screen with continue listening, the verse of the day and the hadith of the day">
+                    <figcaption>Today turned Sajdah from a player into a place to start the day.</figcaption>
+                </figure>
+
+                <h2 id="onboarding">Onboarding, four times</h2>
+                <p>No part of Sajdah has been rewritten as often as the first launch. The first version asked people to pick an accent color, and on a TV that step trapped the focus: the Siri Remote could not reach the Start button. I removed onboarding, brought it back as a single screen, removed it again, and in 1.5.0 it returns in its simplest form. You choose your language, pick a reciter, and hear Al-Fatiha in their voice.</p>
+                <p>The lesson: on a TV, every extra step costs more than on a phone, and the first thing people want is to hear the Quran.</p>
+
+                <h2 id="prayer-clock">The household prayer clock</h2>
+                <p>Prayer times on a phone are personal. On a TV, they belong to everyone in the room. In August, Sajdah gained <strong>Prayer Room</strong>: six full-screen displays that turn the TV into a prayer clock for the home, switched with the remote's up and down buttons. The screen stays awake while Prayer Room is open.</p>
+                <p>The TV also changes how the Athan works. Apple TV has no notification banners to lean on, so the Athan is played by the app itself. That made reliability the real feature. In 1.5.0, every Athan pauses whatever is playing first, and prayer times are calculated in your location's time zone rather than the device's.</p>
+                <figure>
+                    <img src="/sajda/screenshots/sajdah-prayer-times-qibla-1280.webp" srcset="/sajda/screenshots/sajdah-prayer-times-qibla-640.webp 640w, /sajda/screenshots/sajdah-prayer-times-qibla-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" loading="lazy" alt="Sajdah prayer times with a next prayer countdown, Prayer Room buttons and the Qibla direction">
+                    <figcaption>Prayer times, the Qibla direction and the doors to Prayer Room.</figcaption>
+                </figure>
+
+                <h2 id="word-by-word">Reading along, word by word</h2>
+                <p>From the first version, Sajdah highlighted the verse being recited. The idea I kept coming back to was a step further: highlight the word. That needs precise word timings for each specific recording, so 1.5.0 bundles timings for selected Hafs recordings and matches them to the exact audio. Where timings are missing or unreliable, the app falls back to verse tracking rather than lighting up the wrong word.</p>
+                <p>The player was redesigned around reading at the same time: a steady reading panel, the current word in gold, only four controls, and one More menu for everything else. Six Quran fonts arrived too, with Uthmanic free for everyone. The <a href="/blog/sajdah-1-5-0-release-notes/">1.5.0 release notes</a> cover all of it.</p>
+                <p>None of this would exist without generous open data: <a href="https://alquran.cloud/api" rel="noopener">Al Quran Cloud</a> for text and translations, <a href="https://mp3quran.net/api" rel="noopener">MP3Quran</a> for recitations, <a href="https://github.com/QUD-Technologies/quranic-universal-audio" rel="noopener">Qur'anic Universal Audio</a> for word timings, and <a href="https://aladhan.com/prayer-times-api" rel="noopener">Aladhan</a> for prayer times.</p>
+
+                <h2 id="lessons">What the TV taught me</h2>
+                <ul>
+                    <li><strong>Design for the remote, not the pointer.</strong> Clicking around in the simulator hides focus traps. Every flow has to work with four directions and one Select button, tested on a real Siri Remote.</li>
+                    <li><strong>Give people time.</strong> Player controls that hid after five seconds felt rushed. People read, step away and talk to each other. Forty seconds feels right in a living room.</li>
+                    <li><strong>Right-to-left is more than a mirrored layout.</strong> The remote reports physical left and right, so in Arabic the app has to swap them itself. Arrows have to mirror, and letter-spacing breaks joined Arabic script.</li>
+                    <li><strong>Never fall back to English quietly.</strong> If a translation is missing, hiding the line is better than English inside an Arabic or Swedish screen.</li>
+                    <li><strong>Time zones are part of prayer times.</strong> Times have to be calculated in the place you pray, not the zone your TV happens to use.</li>
+                    <li><strong>The screen saver is part of the design.</strong> On tvOS it can cover your app mid-recitation, so Sajdah keeps the screen awake while the player or Prayer Room is open.</li>
+                    <li><strong>Show the moment, not the feature list.</strong> App Store screenshots that said "Fill your home with Quran" said more than a count of reciters, and on a TV the text has to be readable from the couch.</li>
+                    <li><strong>Small numbers mislead.</strong> With a young app, a handful of people can swing any chart. I learned to wait for enough data and to keep my own test devices out of it.</li>
+                </ul>
+
+                <h2 id="free">Free at the core</h2>
+                <p>One decision has not changed since the first commit: listening to the Quran in Sajdah is free, with every reciter, and there are no ads. Sajdah Premium is an optional subscription for the extras, such as live TV and radio, prayer times with the Athan, Prayer Room, Quran fonts and memorization tools. It is what keeps the app growing.</p>
+
+                <h2 id="next">What comes next</h2>
+                <p>A few ideas I am exploring, with no promises on dates:</p>
+                <ul>
+                    <li><strong>Daily rituals:</strong> gentle routines such as Surah Al-Kahf on Friday and Quran before bed.</li>
+                    <li><strong>Memorization sessions:</strong> guided repetition for learning a passage together as a family.</li>
+                    <li><strong>Ramadan mode:</strong> an iftar countdown and a daily reading plan for the holy month.</li>
+                </ul>
+                <p>Sajdah has been shaped by the people who use it. If there is something you would love to see, <a href="/sajda/support/">tell me</a>. Every suggestion gets read.</p>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="/sajda/app-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">Try Sajdah on your Apple TV</h2>
+                    <p>Quran recitation with verse and word-by-word tracking, prayer times, adhkar and live Makkah TV, made for the big screen. Free to download.</p>
+                </div>
+                <div class="actions">
+                    <a href="https://apps.apple.com/app/id6759179587" target="_blank" rel="noopener" data-cta="journey" aria-label="Download Sajdah on the App Store"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="162" height="54" loading="lazy"></a>
+                    <a class="more" href="/sajda/">See all features &rarr;</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>Keep reading</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/blog/sajdah-1-5-0-release-notes/">
+                <p class="meta mono">Release notes · 7 Oct 2026</p>
+                <h3>Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</h3>
+                <p>Everything in the latest update, from the new Live tab to six Quran fonts and a calmer player.</p>
+            </a>
+        </div>
+        </main>
+
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="/sajda/">Sajdah</a> · <a href="/sajda/support/">Support</a> · <a href="/sajda/privacy/">Privacy</a> · <a href="/blog/">Blog</a></span>
+        </footer>
+    </div>
+</body>
+</html>
