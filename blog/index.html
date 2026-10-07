@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abdelrahman Eita: Building Apple TV and iOS Apps</title>
+    <meta name="description" content="Notes from Abdelrahman Eita on building indie apps for Apple TV and iPhone: release notes, product stories, and lessons from shipping Sajdah and other apps.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/blog/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Blog | Abdelrahman Eita">
+    <meta property="og:description" content="Release notes, product stories and lessons from building apps for Apple TV and iPhone.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Blog | Abdelrahman Eita">
+    <meta name="twitter:description" content="Release notes, product stories and lessons from building apps for Apple TV and iPhone.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="stylesheet" href="/blog/assets/blog.css">
+    <script src="/blog/assets/theme.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWW2E9NVE3"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-FWW2E9NVE3"); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "Blog", "@id": "https://yoloabdo.com/blog/#blog", "name": "Abdelrahman Eita's blog", "url": "https://yoloabdo.com/blog/", "inLanguage": "en",
+              "description": "Release notes, product stories and lessons from building apps for Apple TV and iPhone.",
+              "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+              "publisher": { "@id": "https://yoloabdo.com/#person" },
+              "blogPost": [
+                { "@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/#post", "headline": "Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation", "url": "https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/", "datePublished": "2026-10-07", "image": "https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/og-image.jpg", "author": { "@id": "https://yoloabdo.com/#person" } },
+                { "@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/#post", "headline": "The journey so far: building Sajdah for Apple TV", "url": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/", "datePublished": "2026-10-07", "image": "https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/og-image.jpg", "author": { "@id": "https://yoloabdo.com/#person" } }
+              ] },
+            { "@type": "BreadcrumbList", "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" } ] }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/blog/" aria-current="page">Blog</a>
+                <a href="/apps/" class="hide-sm">Apps</a>
+                <a href="/sajda/">Sajdah</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Blog</nav>
+            <h1 class="post-title">Blog</h1>
+            <p class="page-intro">Release notes, product stories and lessons from building apps for Apple TV and iPhone. Longer engineering articles live on <a href="https://medium.com/@yoloabdo" rel="noopener">Medium</a>.</p>
+
+            <div class="section-title"><h2>Sajdah</h2><span class="rule"></span></div>
+            <div class="post-list">
+                <a class="post-item featured" href="/blog/sajdah-1-5-0-release-notes/">
+                    <img src="/sajda/screenshots/sajdah-live-makkah-tv-radio-640.webp" alt="" width="640" height="360" loading="lazy">
+                    <div>
+                        <p class="meta mono">Release notes · <time datetime="2026-10-07">7 Oct 2026</time></p>
+                        <h3>Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</h3>
+                        <p>Radio and live TV in one tab, six Quran fonts, words that light up as they are recited, and a calmer player.</p>
+                    </div>
+                </a>
+                <a class="post-item featured" href="/blog/building-sajdah-apple-tv-journey/">
+                    <img src="/sajda/screenshots/sajdah-ambient-quran-mode-640.webp" alt="" width="640" height="360" loading="lazy">
+                    <div>
+                        <p class="meta mono">Story · <time datetime="2026-10-07">7 Oct 2026</time></p>
+                        <h3>The journey so far: building Sajdah for Apple TV</h3>
+                        <p>How a Quran player for the TV grew into a daily companion for the home, and what the big screen taught me.</p>
+                    </div>
+                </a>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="/sajda/app-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">Sajdah: Quran &amp; Athan for Apple TV</h2>
+                    <p>Hundreds of reciters, verse and word-by-word tracking, prayer times, adhkar and live Makkah TV. Free to download.</p>
+                </div>
+                <div class="actions">
+                    <a href="https://apps.apple.com/app/id6759179587" target="_blank" rel="noopener" data-cta="blog-index" aria-label="Download Sajdah on the App Store"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="162" height="54" loading="lazy"></a>
+                    <a class="more" href="/sajda/">About Sajdah &rarr;</a>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="/">Home</a> · <a href="/apps/">Apps</a> · <a href="/sajda/">Sajdah</a></span>
+        </footer>
+    </div>
+</body>
+</html>
