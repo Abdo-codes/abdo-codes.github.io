@@ -257,6 +257,7 @@ body {
 [data-theme="dark"] .wifi-bg { background: linear-gradient(160deg, #0f1b26 0%, #122334 100%); }
 .tateemi-bg { background: linear-gradient(160deg, #eaf7ee 0%, #d9f0e1 100%); }
 [data-theme="dark"] .tateemi-bg { background: linear-gradient(160deg, #0f2017 0%, #12281d 100%); }
+.nona-bg { background: linear-gradient(160deg, #2a2368 0%, #1d1846 100%); }
 
 .visual.contain img.art {
     object-fit: contain;

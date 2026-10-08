@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). His next game, Angry Nona: Night Shift (iPhone nanny game), is coming soon. This file describes him and each app for AI search citation.
 
 ## About Abdelrahman Eita
 
@@ -263,6 +263,46 @@
 - Contact: stampt.app@gmail.com
 
 ---
+
+# Angry Nona: Night Shift - Cozy iPhone Nanny Game (Coming Soon)
+
+> Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 13 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is not on the App Store yet.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/angry-nona/)
+- [Support](https://yoloabdo.com/angry-nona/support/)
+- [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
+
+## Key Features
+
+- **Six Toddlers, One Nanny** - keep every crib asleep through the night shift
+- **Shh and Fetch** - read each kid's bubble; shh them, or bring a bottle, a teddy, or a story
+- **Tap Queue** - tap several cribs in a row and the nanny serves them one by one
+- **Chores in Quiet Moments** - warm a bottle, crochet a teddy, or water the plant
+- **Coffee** - keeps the nanny going on long nights
+- **Mom's Calls** - decline fast, or the phone rings in the nursery
+- **Princess Nona** - the ringleader with a crown; if she wakes, the room can follow
+- **13 Nights + Endless** - nights add kids and twists, then Endless for high scores. Nights 1-4 free; Full Shift unlocks the rest
+- **Nanny Shop** - spend points earned in play on helps and new looks
+- **Outfits** - dress the nanny in new looks
+- **Accessibility** - VoiceOver and Reduce Motion support
+- **Privacy-First** - no ads, no tracking, no account; only anonymous game stats and crash reports
+
+## Availability
+
+- Coming soon to the App Store
+- Pricing will be announced at launch
+
+## Platform
+
+- iOS (iPhone), requires iOS 18+
+- Plays fully offline; progress, settings, and points are stored on the device
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
 
 # How Surfing Works - Interactive 3D Explainer
 
