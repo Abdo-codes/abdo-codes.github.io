@@ -1,0 +1,54 @@
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .step-card:not(:last-child)::after {
+        display: none;
+    }
+
+    .stats-grid {
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 64px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-icon {
+        width: 88px;
+        height: 88px;
+        border-radius: 22px;
+    }
+
+    .stats-grid {
+        gap: 32px;
+    }
+
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

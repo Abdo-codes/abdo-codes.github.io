@@ -1,3 +1,23 @@
+# yoloabdo.com: all crawlers, including AI search and assistant crawlers, are welcome.
 User-agent: *
 Allow: /
+
+# AI crawlers, named to make the intent explicit.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://yoloabdo.com/sitemap.xml
+
+# Plain-text site summaries for language models:
+# https://yoloabdo.com/llms.txt
+# https://yoloabdo.com/llms-full.txt
