@@ -124,6 +124,9 @@ body {
 }
 
 .wordmark b { color: var(--accent); font-weight: 600; }
+.topnav { display: flex; align-items: center; gap: 6px; }
+.topnav a { color: var(--text-secondary); text-decoration: none; font-size: 14px; padding: 10px; border-radius: 10px; transition: color 0.2s ease, background 0.2s ease; }
+.topnav a:hover, .topnav a[aria-current="page"] { color: var(--text); background: var(--accent-soft); }
 
 .theme-toggle {
     display: inline-flex;

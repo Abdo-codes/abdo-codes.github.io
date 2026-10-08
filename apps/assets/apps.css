@@ -127,24 +127,9 @@ body {
 .wordmark b { color: var(--accent); font-weight: 600; }
 .wordmark:hover { color: var(--text-secondary); }
 
-.topbar-right { display: flex; align-items: center; gap: 8px; }
-
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 16px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--surface);
-    color: var(--text-secondary);
-    font-size: 13.5px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.back-link:hover { color: var(--text); border-color: var(--border-strong); }
+.topnav { display: flex; align-items: center; gap: 6px; }
+.topnav a { color: var(--text-secondary); text-decoration: none; font-size: 14px; padding: 10px; border-radius: 10px; transition: color 0.2s ease, background 0.2s ease; }
+.topnav a:hover, .topnav a[aria-current="page"] { color: var(--text); background: var(--accent-soft); }
 
 .theme-toggle {
     display: inline-flex;
