@@ -14,7 +14,9 @@
 
 - [Developer Profile](https://yoloabdo.com/)
 - [All Apps](https://yoloabdo.com/apps/)
-- [Blog](https://yoloabdo.com/blog/)
+- [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
+- [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
+- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts and the surfing guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
 ---
@@ -259,3 +261,13 @@
 
 - Built by Abdelrahman Eita
 - Contact: stampt.app@gmail.com
+
+---
+
+# How Surfing Works - Interactive 3D Explainer
+
+> How Surfing Works is a free, interactive 3D explainer by Abdelrahman Eita that runs in the browser. It covers where waves come from, why they break, the anatomy of a wave, beach, point and reef breaks, how to read a surf report, how to ride a wave, when to pop up, and surf safety including rip currents. Visitors can watch it as a short film, change the wind and seabed, try a pop-up timing game, and record a video.
+
+## Links
+
+- [How Surfing Works](https://yoloabdo.com/surfing/)

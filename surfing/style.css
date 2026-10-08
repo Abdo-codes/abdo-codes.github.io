@@ -286,3 +286,14 @@ body.clean .brand, body.clean .top-actions, body.clean .panel, body.clean .chapt
   .chap span { display: none; }
   .hint { display: none; }
 }
+
+/* Text version for visitors and crawlers without JavaScript. */
+.static-guide {
+  position: fixed; inset: 0; z-index: 100; overflow: auto;
+  padding: 72px max(20px, calc(50% - 340px)) 48px;
+  background: #0b2a3a; color: #eaf4f8; font: 16px/1.6 Manrope, system-ui, sans-serif;
+}
+.static-guide h2 { font: 600 24px/1.25 Fraunces, Georgia, serif; margin: 28px 0 8px; }
+.static-guide ul { padding-left: 20px; }
+.static-guide li { margin: 6px 0; }
+.static-guide a { color: #7fd8e6; }

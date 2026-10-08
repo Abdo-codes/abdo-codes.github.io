@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Abdelrahman Eita's blog</title>
+    <subtitle>Release notes, product stories and lessons from building apps for Apple TV and iPhone.</subtitle>
+    <id>https://yoloabdo.com/blog/</id>
+    <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
+    <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
+    <updated>2026-10-07T12:00:00Z</updated>
+    <author>
+        <name>Abdelrahman Eita</name>
+        <uri>https://yoloabdo.com/</uri>
+    </author>
+    <icon>https://yoloabdo.com/favicon-32.png</icon>
+    <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</title>
+        <id>https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/"/>
+        <published>2026-10-07T12:00:00Z</published>
+        <updated>2026-10-07T12:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>What's new in Sajdah 1.5.0 for Apple TV: one Live tab for Quran radio and live TV, six Quran fonts, word-by-word recitation tracking, a calmer player and Top Shelf.</summary>
+    </entry>
+
+    <entry>
+        <title>The journey so far: building Sajdah for Apple TV</title>
+        <id>https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/"/>
+        <published>2026-10-07T11:00:00Z</published>
+        <updated>2026-10-07T11:00:00Z</updated>
+        <category term="Story"/>
+        <summary>How Sajdah grew from a Quran player for the TV into a daily companion for Muslim homes on Apple TV: the origin, the design pivots, the lessons, and what comes next.</summary>
+    </entry>
+</feed>

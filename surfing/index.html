@@ -3,8 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>How Surfing Works</title>
-  <meta name="description" content="An interactive 3D explainer: where waves come from, why they break, and how to ride them.">
+  <title>How Surfing Works: An Interactive 3D Wave Explainer</title>
+  <meta name="description" content="An interactive 3D explainer: where waves come from, why they break, how to read a surf report, and how to catch and ride a wave safely.">
+  <link rel="canonical" href="https://yoloabdo.com/surfing/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://yoloabdo.com/surfing/">
+  <meta property="og:site_name" content="Abdelrahman Eita">
+  <meta property="og:title" content="How Surfing Works: an interactive 3D explainer">
+  <meta property="og:description" content="From a distant storm to riding the barrel. Watch it as a film, then try to time your pop-up.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@yoloabdo">
+  <meta name="author" content="Abdelrahman Eita">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0b2a3a">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "LearningResource", "@id": "https://yoloabdo.com/surfing/#guide", "name": "How Surfing Works",
+        "headline": "How Surfing Works: an interactive 3D explainer", "url": "https://yoloabdo.com/surfing/", "inLanguage": "en",
+        "description": "Where waves come from, why they break, the anatomy of a wave, beach, point and reef breaks, reading a surf report, how to ride a wave, pop-up timing, and surf safety.",
+        "learningResourceType": "Interactive explainer", "interactivityType": "mixed", "isAccessibleForFree": true,
+        "teaches": ["Ocean swell", "Wave breaking", "Surf forecasting", "Surfing technique", "Rip currents"],
+        "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How Surfing Works", "item": "https://yoloabdo.com/surfing/" } ] }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -59,6 +89,94 @@
     <button id="btn-film-exit" class="btn small">Exit film · Esc</button>
   </div>
   <div id="rec-badge" class="rec-badge" hidden><i></i><span id="rec-time">REC 0:00</span></div>
+
+  <noscript>
+    <article class="static-guide">
+      <p>How Surfing Works is an interactive 3D explainer. Turn on JavaScript to watch the film and try the timing game. The short version:</p>
+      <section>
+        <h2>Born in a storm</h2>
+        <ul>
+          <li>Every wave you surf began as <b>wind</b> — often a storm thousands of kilometres away.</li>
+          <li>Wind drags on the sea: ripples grow into chop, chop into <b>swell</b>. Stronger wind, blowing longer over more open water, builds bigger swell.</li>
+          <li>Swell sorts itself into long, smooth lines that can cross whole oceans while losing surprisingly little energy.</li>
+          <li>The twist: the water does not travel with the wave. Each drop just <b>loops in a circle</b> — only the energy moves forward.</li>
+          <li>The loops shrink with depth. About half a wavelength down (the <b>wave base</b>) the water is almost still.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Why waves break</h2>
+        <ul>
+          <li>In deep water a swell never touches the bottom. It rolls along at full speed.</li>
+          <li>As the seabed rises, the water loops scrape the bottom. The wave <b>slows down and grows taller</b> — this is called shoaling.</li>
+          <li>The base drags while the crest keeps going, so the face gets steeper and steeper…</li>
+          <li>When the height reaches about <b>0.8 × the water depth</b> it can no longer hold its shape. The crest pitches forward: the wave breaks.</li>
+          <li>A <b>gentle slope</b> makes soft, crumbling waves. A <b>sudden reef</b> makes hollow, powerful ones.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Anatomy of a wave</h2>
+        <ul>
+          <li>Great waves do not break all at once. They <b>peel</b>: the break runs along the crest like a zipper. That is what lets you ride across it.</li>
+          <li><b>Peak</b> — the highest point, where it starts to break. This is where surfers take off.</li>
+          <li><b>Pocket</b> — the steep part right beside the curl, where the wave has the most power and speed.</li>
+          <li><b>Face</b> and <b>shoulder</b> — the open, unbroken wall ahead of you. It gets softer the further it is from the curl.</li>
+          <li><b>Lip</b> and <b>barrel</b> — on hollow waves the lip throws out over the face and leaves a tube of air: the barrel.</li>
+          <li><b>Whitewater</b> — the foam left behind the curl. Beginners learn here: it simply pushes you toward the beach.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Beach, point or reef</h2>
+        <ul>
+          <li>Where a wave breaks depends on what is underneath it. Surfers talk about three kinds of <b>break</b>.</li>
+          <li><b>Beach break</b> — waves break over shifting sandbars. Peaks pop up in different places and often peel both left and right: an <b>A-frame</b>.</li>
+          <li><b>Point break</b> — swell wraps around a headland and peels down the coast in long, even walls. The best for long rides.</li>
+          <li><b>Reef break</b> — waves jack up over shallow rock or coral. Hollow, powerful and consistent, but the bottom is close and sharp.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Is it worth paddling out?</h2>
+        <ul>
+          <li>A surf forecast is a recipe. Learn to read a few numbers and you will know if it is worth paddling out.</li>
+          <li><b>Swell height & period</b> — period is the time between waves. A long period (12 s or more) carries more energy, so waves break bigger and stronger than the height suggests.</li>
+          <li><b>Swell angle</b> — swell hitting the coast at an angle peels. Swell that hits straight on breaks all at once: a <b>closeout</b>.</li>
+          <li><b>Wind</b> — light or offshore (from land to sea) is best. Onshore wind makes it choppy and crumbly.</li>
+          <li><b>Tide</b> — changes the depth of water over the bottom. Low tide is often hollower and faster; high tide softer and fuller.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How to ride a wave</h2>
+        <ul>
+          <li><b>Paddle.</b> Lie on the board, chest up, and paddle hard toward shore. You must match the wave’s speed so it can pick you up.</li>
+          <li><b>Pop up.</b> Hands under your chest, push, and spring to your feet in one move — front foot between your hands, knees bent.</li>
+          <li><b>Drop and turn.</b> Angle along the face instead of going straight to the beach, then lean into a bottom turn.</li>
+          <li><b>Trim the pocket.</b> Stay close to the curl where it is steepest. Rise and fall on the face to keep your speed.</li>
+          <li><b>Get barrelled.</b> If the lip throws over you, crouch low, hold your line, and ride out with the spray.</li>
+          <li><b>Kick out.</b> When the wave ends, turn up and over the back of it — then paddle back out for the next one.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>When to pop up</h2>
+        <ul>
+          <li>Timing is everything. Pop up too early and the wave rolls under you; too late and it throws you over the falls.</li>
+          <li>Look back as it comes and paddle hard — you want to already be moving when the wave reaches you.</li>
+          <li><b>Too early:</b> the wave has not picked you up yet. You stand on flat water, lose speed, and it rolls under you.</li>
+          <li><b>Just right:</b> the tail lifts and the board starts to glide down the face on its own. That is the moment — pop up.</li>
+          <li><b>Too late:</b> you are at the very top as the lip pitches. The nose digs in and you go over the falls.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Surf smart, surf safe</h2>
+        <ul>
+          <li><b>Right of way:</b> the surfer closest to the breaking part of the wave (the peak) has priority. Everyone else waits.</li>
+          <li><b>Never drop in.</b> Taking off in front of someone already riding is the number-one rule broken in the water. It is dangerous and rude.</li>
+          <li><b>Rip currents</b> are rivers of water rushing back out to sea. Waves pile water onto the beach, and it escapes through deeper gaps between the sandbars.</li>
+          <li><b>Spot one</b> by the calm-looking, darker gap where waves are not breaking — often with foam or sand drifting outward.</li>
+          <li><b>Caught in one?</b> Do not swim against it. Stay calm, float, swim parallel to the beach until you are out of the pull, then let the waves bring you in.</li>
+        </ul>
+      </section>
+      <p><a href="/">By Abdelrahman Eita</a></p>
+    </article>
+  </noscript>
 
   <div id="loading" class="loading"><span>Paddling out…</span></div>
 
