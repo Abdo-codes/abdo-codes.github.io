@@ -1,0 +1,174 @@
+/* Sajdah landing page: content sections, RTL and responsive rules. */
+.section { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+.section.wide { max-width: 1100px; }
+.section.narrow { max-width: 760px; }
+
+/* Card grids (features, what's new, player) */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feature { padding: 30px; }
+.feature-icon {
+    width: 52px; height: 52px; border-radius: 14px; margin-bottom: 18px; font-size: 26px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, rgba(78, 203, 160, 0.1), rgba(45, 138, 110, 0.05));
+    border: 1px solid rgba(78, 203, 160, 0.12);
+}
+.feature h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.feature p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+/* What's new in 1.5.0 */
+.whats-new .feature { border-color: rgba(201, 168, 76, 0.14); }
+.whats-new .feature:hover { border-color: rgba(201, 168, 76, 0.4); box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08); }
+.whats-new .feature-icon { background: var(--gold-soft); border-color: rgba(201, 168, 76, 0.2); }
+.version-tag { display: block; text-align: center; color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.center { text-align: center; }
+
+/* Screenshot gallery */
+.gallery { position: relative; }
+.screenshot-grid {
+    display: flex; gap: 20px; overflow-x: auto; padding: 4px 0 16px;
+    scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.screenshot-grid::-webkit-scrollbar { display: none; }
+.screenshot-item {
+    flex-shrink: 0; width: 72%; max-width: 640px; margin: 0; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); scroll-snap-align: center; background: #0d1420;
+}
+.screenshot-item img { width: 100%; height: auto; display: block; aspect-ratio: 16 / 9; }
+.gallery-nav { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+.gallery-nav button {
+    width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 18px;
+    background: var(--bg-card); color: var(--emerald); border: 1px solid var(--border-strong);
+}
+.gallery-nav button:hover { background: rgba(78, 203, 160, 0.12); }
+
+/* Prayer */
+.prayer-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 48px; color: var(--gold); }
+.prayer-card { padding: 28px; text-align: center; border-color: rgba(201, 168, 76, 0.1); }
+.prayer-card:hover { border-color: rgba(201, 168, 76, 0.3); box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08); }
+.prayer-icon {
+    width: 48px; height: 48px; border-radius: 12px; margin: 0 auto 14px; font-size: 24px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gold-soft); border: 1px solid rgba(201, 168, 76, 0.15);
+}
+.prayer-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--gold); }
+.prayer-card p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+
+/* Pills */
+.pill-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.pill {
+    padding: 12px 24px; border-radius: 100px; font-size: 15px; font-weight: 500;
+    background: rgba(78, 203, 160, 0.06); border: 1px solid rgba(78, 203, 160, 0.15); color: rgba(255, 255, 255, 0.78);
+}
+
+/* FAQ */
+.faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+.faq-q {
+    width: 100%; padding: 20px 26px; font-size: 16px; font-weight: 600; font-family: inherit; color: var(--text);
+    background: none; border: 0; cursor: pointer; text-align: start;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s;
+}
+.faq-q:hover { color: var(--emerald); }
+.faq-q::after {
+    content: ''; width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s ease;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234ecba0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") center / contain no-repeat;
+}
+.faq-item.open .faq-q::after { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+.faq-item.open .faq-a { max-height: 420px; padding: 0 26px 22px; }
+.faq-a p { color: var(--text-muted); font-size: 15px; line-height: 1.8; }
+
+/* Highlight / CTA cards */
+.highlight-card { border-radius: 20px; padding: 56px 40px; text-align: center; position: relative; overflow: hidden; }
+.highlight-card:hover { transform: none; }
+.highlight-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3), transparent); }
+.highlight-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; font-weight: 700; margin-bottom: 12px; }
+.highlight-card p { color: var(--text-muted); font-size: 17px; max-width: 540px; margin: 0 auto; line-height: 1.7; }
+.highlight-card.gold-accent { border-color: rgba(201, 168, 76, 0.1); }
+.highlight-card.gold-accent::before { background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent); }
+.highlight-card.gold-accent h2 { color: var(--gold); }
+.coffee { font-size: 44px; margin-bottom: 12px; }
+
+/* Blog cards and app cards */
+.post-card { display: block; padding: 28px; text-decoration: none; color: var(--text); }
+.post-card .kicker { color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.post-card h3 { font-size: 20px; font-weight: 600; margin: 8px 0; }
+.post-card p { color: var(--text-muted); font-size: 15px; }
+.app-card { display: block; padding: 32px; text-align: center; text-decoration: none; color: var(--text); }
+.app-card img { display: block; width: 56px; height: 56px; border-radius: 14px; object-fit: cover; margin: 0 auto 16px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18); }
+.app-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+.app-card .platform { font-size: 13px; color: var(--emerald); font-weight: 500; margin-bottom: 10px; }
+.app-card p:last-child { color: var(--text-muted); font-size: 15px; line-height: 1.5; }
+
+/* Roadmap */
+.roadmap { max-width: 540px; margin: 0 auto; }
+.roadmap-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.roadmap-item:last-child { border-bottom: 0; }
+.roadmap-item > span { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.roadmap-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.roadmap-item p, .small-note { color: var(--text-muted); font-size: 15px; line-height: 1.5; }
+.small-note { font-size: 13px; margin-top: 12px; }
+
+/* Footer */
+.footer { text-align: center; padding: 48px 24px; max-width: 900px; margin: 40px auto 0; position: relative; }
+.footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.15), transparent); }
+.footer-links { display: flex; justify-content: center; gap: 12px 28px; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-links a { text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity 0.2s; }
+.footer-links a:hover { opacity: 0.7; }
+.footer .copy { color: #5a6578; font-size: 13px; }
+
+/* Sticky App Store bar (shown after the hero scrolls away) */
+.sticky-cta {
+    position: fixed; left: 50%; bottom: 16px; z-index: 50; transform: translate(-50%, 140%);
+    display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 14px; width: max-content; max-width: calc(100% - 32px);
+    background: rgba(12, 18, 30, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-strong); border-radius: 18px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.35s ease;
+}
+.sticky-cta.show { transform: translate(-50%, 0); }
+.sticky-cta img { width: 40px; height: 40px; border-radius: 10px; }
+.sticky-cta strong { display: block; font-size: 15px; }
+.sticky-cta small { color: var(--text-muted); font-size: 12px; }
+.sticky-cta a.get {
+    margin-inline-start: 6px; padding: 10px 18px; border-radius: 12px; white-space: nowrap; text-decoration: none;
+    background: linear-gradient(135deg, var(--emerald), var(--emerald-deep)); color: #04130d; font-weight: 700; font-size: 14px;
+}
+
+/* RTL */
+[dir="rtl"] body, [dir="rtl"] .lang-btn, [dir="rtl"] .lang-option, [dir="rtl"] .faq-q { font-family: 'Noto Naskh Arabic', 'DM Sans', sans-serif; }
+[dir="rtl"] .hero h1, [dir="rtl"] .section-heading, [dir="rtl"] .highlight-card h2, [dir="rtl"] .prayer-heading { font-family: 'Amiri', 'Cormorant Garamond', serif; letter-spacing: 0; line-height: 1.4; }
+[dir="rtl"] .hero h1 { font-size: 46px; }
+[dir="rtl"] .feature p, [dir="rtl"] .prayer-card p, [dir="rtl"] .faq-a p, [dir="rtl"] .highlight-card p, [dir="rtl"] .section-intro, [dir="rtl"] .hero .tagline { line-height: 1.9; }
+[dir="rtl"] .lang-dropdown { right: auto; left: 24px; }
+[dir="rtl"] .lang-option { text-align: right; }
+[dir="rtl"] .section-heading-decorated::before { background: linear-gradient(90deg, rgba(78, 203, 160, 0.3), transparent); }
+[dir="rtl"] .section-heading-decorated::after { background: linear-gradient(90deg, transparent, rgba(78, 203, 160, 0.3)); }
+[dir="rtl"] .arrow { display: inline-block; transform: scaleX(-1); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lang-bar { padding: 12px 16px; }
+    .top-links { gap: 14px; font-size: 13px; }
+    .hero { min-height: auto; padding: 32px 16px 56px; }
+    .hero h1 { font-size: 40px; }
+    .hero .tagline { font-size: 17px; }
+    .section { padding: 48px 16px; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .section-heading, .prayer-heading { font-size: 28px; margin-bottom: 36px; }
+    .section-intro { margin-top: -20px; font-size: 16px; }
+    .screenshot-item { width: 88%; }
+    .gallery-nav { display: none; }
+    .highlight-card { padding: 40px 22px; }
+    .highlight-card h2 { font-size: 26px; }
+    .appstore-link img { height: 54px; }
+    .feature, .post-card, .app-card { padding: 24px; }
+    .faq-q { padding: 18px 20px; }
+    .faq-item.open .faq-a { padding: 0 20px 20px; max-height: 600px; }
+}
+@media (max-width: 480px) {
+    .hero h1 { font-size: 34px; }
+    [dir="rtl"] .hero h1 { font-size: 34px; }
+    .top-links a.hide-sm { display: none; }
+    .section-heading-decorated::before, .section-heading-decorated::after { width: 24px; }
+    .sticky-cta small { display: none; }
+}

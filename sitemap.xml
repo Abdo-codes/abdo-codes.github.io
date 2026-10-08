@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://yoloabdo.com/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/apps/</loc>
@@ -10,7 +10,19 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
-        <lastmod>2026-03-19</lastmod>
+        <lastmod>2026-10-07</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/</loc>
+        <lastmod>2026-10-07</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/</loc>
+        <lastmod>2026-10-07</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/</loc>
+        <lastmod>2026-10-07</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/support/</loc>
@@ -86,14 +98,18 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/privacy/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/support/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/surfing/</loc>
+        <lastmod>2026-10-08</lastmod>
     </url>
 </urlset>

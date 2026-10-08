@@ -1,0 +1,60 @@
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scoreboard-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 64px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sports-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scoreboard-display {
+        gap: 16px;
+    }
+
+    .scoreboard-preview {
+        padding: 32px 20px;
+    }
+
+    .hero-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } }
+    @keyframes scoreFlash { 0%, 100% { color: var(--text); } }
+}

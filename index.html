@@ -12,19 +12,21 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Abdelrahman Eita — Staff Software Engineer">
     <meta property="og:description" content="Staff Software Engineer with 10+ years in iOS development. Expert in SwiftUI, TCA, and modular architecture.">
-    <meta property="og:image" content="https://yoloabdo.com/images/profile.jpg">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="538">
-    <meta property="og:image:alt" content="Portrait of Abdelrahman Eita">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://yoloabdo.com/images/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Abdelrahman Eita, Staff Software Engineer, with the icons of his six App Store apps">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yoloabdo">
     <meta name="twitter:title" content="Abdelrahman Eita — Staff Software Engineer">
     <meta name="twitter:description" content="Staff Software Engineer with 10+ years in iOS development. Expert in SwiftUI, TCA, and modular architecture.">
-    <meta name="twitter:image" content="https://yoloabdo.com/images/profile.jpg">
+    <meta name="twitter:image" content="https://yoloabdo.com/images/og-home.jpg">
+    <meta name="twitter:image:alt" content="Abdelrahman Eita, Staff Software Engineer, with the icons of his six App Store apps">
     <meta name="author" content="Abdelrahman Eita">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
     <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
@@ -126,7 +128,7 @@
         {
           "@type": "SoftwareApplication",
           "@id": "https://yoloabdo.com/sajda/#app",
-          "name": "Sajda",
+          "name": "Sajdah",
           "alternateName": "Sajdah: Quran, Athan TV",
           "description": "Quran, Prayer Times & Athan for Apple TV.",
           "url": "https://yoloabdo.com/sajda/",
@@ -214,495 +216,8 @@
     }
     </script>
 
-    <style>
-        :root {
-            --bg: #faf9f7;
-            --bg-glow: rgba(240, 81, 56, 0.07);
-            --surface: #ffffff;
-            --surface-hover: #ffffff;
-            --text: #1d1d1f;
-            --text-secondary: #6e6e73;
-            --text-tertiary: #9c9ca1;
-            --accent: #f05138;
-            --accent-soft: rgba(240, 81, 56, 0.1);
-            --border: rgba(29, 29, 31, 0.1);
-            --border-strong: rgba(29, 29, 31, 0.16);
-            --shadow: 0 1px 2px rgba(29, 29, 31, 0.04), 0 8px 24px rgba(29, 29, 31, 0.05);
-            --shadow-lift: 0 2px 4px rgba(29, 29, 31, 0.05), 0 16px 40px rgba(29, 29, 31, 0.1);
-            --grain-opacity: 0.35;
-        }
-
-        [data-theme="dark"] {
-            --bg: #0c0c0e;
-            --bg-glow: rgba(255, 106, 82, 0.06);
-            --surface: #161618;
-            --surface-hover: #1c1c1f;
-            --text: #f5f5f7;
-            --text-secondary: #a1a1a6;
-            --text-tertiary: #6e6e73;
-            --accent: #ff6a52;
-            --accent-soft: rgba(255, 106, 82, 0.12);
-            --border: rgba(245, 245, 247, 0.1);
-            --border-strong: rgba(245, 245, 247, 0.18);
-            --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
-            --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.35), 0 16px 40px rgba(0, 0, 0, 0.5);
-            --grain-opacity: 0.5;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-            transition: background 0.35s ease, color 0.35s ease;
-            overflow-x: hidden;
-        }
-
-        ::selection { background: var(--accent); color: #fff; }
-
-        .mono {
-            font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
-            font-feature-settings: "liga" 0;
-        }
-
-        /* ── Atmosphere ── */
-        .glow {
-            position: fixed;
-            top: -340px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 900px;
-            height: 680px;
-            background: radial-gradient(ellipse at center, var(--bg-glow) 0%, transparent 65%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .grain {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            opacity: var(--grain-opacity);
-            mix-blend-mode: overlay;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
-        }
-
-        .page {
-            position: relative;
-            z-index: 2;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 96px;
-        }
-
-        /* ── Load reveal ── */
-        @keyframes rise {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .rise { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
-        .d1 { animation-delay: 0.05s; }
-        .d2 { animation-delay: 0.14s; }
-        .d3 { animation-delay: 0.23s; }
-        .d4 { animation-delay: 0.32s; }
-        .d5 { animation-delay: 0.41s; }
-        .d6 { animation-delay: 0.5s; }
-        .d7 { animation-delay: 0.59s; }
-        .d8 { animation-delay: 0.68s; }
-
-        @media (prefers-reduced-motion: reduce) {
-            .rise { animation: none; }
-            html { scroll-behavior: auto; }
-            * { transition-duration: 0.01ms !important; }
-        }
-
-        /* ── Top bar ── */
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 56px;
-        }
-
-        .wordmark {
-            font-size: 13px;
-            letter-spacing: 0.04em;
-            color: var(--text-tertiary);
-            text-decoration: none;
-        }
-
-        .wordmark b { color: var(--accent); font-weight: 600; }
-
-        .theme-toggle {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: var(--surface);
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-        }
-
-        .theme-toggle:hover { border-color: var(--border-strong); color: var(--text); transform: rotate(15deg); }
-        .theme-toggle svg { width: 18px; height: 18px; }
-        [data-theme="light"] .moon { display: none; }
-        [data-theme="dark"] .sun { display: none; }
-
-        /* ── Hero ── */
-        .hero { margin-bottom: 72px; }
-
-        .hero-head {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 28px;
-        }
-
-        .avatar {
-            width: 96px;
-            height: 96px;
-            border-radius: 28px;
-            object-fit: cover;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .hero h1 {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-            font-size: clamp(34px, 6vw, 46px);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-        }
-
-        .hero-role {
-            margin-top: 10px;
-            font-size: 13px;
-            color: var(--accent);
-            letter-spacing: 0.02em;
-        }
-
-        .hero-bio {
-            font-size: 17px;
-            color: var(--text-secondary);
-            max-width: 60ch;
-        }
-
-        .hero-bio strong { color: var(--text); font-weight: 600; }
-        .hero-bio + .hero-bio { margin-top: 14px; }
-
-        .hero-bio a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; transition: text-decoration-color 0.2s ease; }
-        .hero-bio a:hover { text-decoration-color: var(--accent); }
-
-        /* ── Socials ── */
-        .socials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 28px;
-        }
-
-        .socials a {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            min-height: 44px;
-            padding: 10px 14px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: var(--surface);
-            color: var(--text-secondary);
-            font-size: 13.5px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .socials a:hover {
-            color: var(--text);
-            border-color: var(--border-strong);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .socials svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-        /* ── Sections ── */
-        section { margin-bottom: 72px; }
-
-        .eyebrow {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            margin-bottom: 24px;
-            font-size: 13px;
-            letter-spacing: 0.06em;
-            color: var(--text-tertiary);
-        }
-
-        .eyebrow::before { content: "//"; color: var(--accent); font-weight: 600; }
-
-        .eyebrow h2 {
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-        }
-
-        .eyebrow .rule { flex: 1; height: 1px; background: var(--border); align-self: center; }
-
-        /* ── Stats ── */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .stat {
-            padding: 22px 24px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .stat:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow); }
-
-        .stat .number {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
-            font-size: 34px;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--accent);
-            line-height: 1.1;
-        }
-
-        .stat .label {
-            margin-top: 6px;
-            font-size: 13.5px;
-            color: var(--text-secondary);
-            line-height: 1.45;
-        }
-
-        /* ── Companies ── */
-        .companies {
-            margin-top: 16px;
-            font-size: 13.5px;
-            color: var(--text-tertiary);
-        }
-
-        .companies span { color: var(--text-secondary); font-weight: 500; }
-
-        /* ── Prose ── */
-        .prose p { color: var(--text-secondary); font-size: 16px; }
-        .prose p + p { margin-top: 16px; }
-        .prose a { color: var(--text); font-weight: 500; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; transition: text-decoration-color 0.2s ease; }
-        .prose a:hover { text-decoration-color: var(--accent); }
-        .prose strong { color: var(--text); font-weight: 600; }
-
-        /* ── Apps ── */
-        .section-note { font-size: 14px; color: var(--text-tertiary); margin: -12px 0 20px; }
-        .section-note a { color: var(--text-secondary); text-underline-offset: 3px; }
-        .section-note a:hover { color: var(--accent); }
-
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .app-card {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            padding: 22px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-        }
-
-        .app-card:hover {
-            border-color: var(--border-strong);
-            background: var(--surface-hover);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lift);
-        }
-
-        .app-card-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .app-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .app-card:hover .app-icon { transform: scale(1.08) rotate(-3deg); }
-
-        .app-platform {
-            font-size: 11px;
-            letter-spacing: 0.05em;
-            color: var(--text-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            padding: 4px 10px;
-            transition: color 0.2s ease, border-color 0.2s ease;
-        }
-
-        .app-card:hover .app-platform { color: var(--accent); border-color: var(--accent-soft); }
-
-        .app-name {
-            font-size: 16.5px;
-            font-weight: 650;
-            color: var(--text);
-            letter-spacing: -0.01em;
-        }
-
-        .app-name .latin { font-weight: 400; color: var(--text-tertiary); font-size: 14px; }
-
-        .app-desc {
-            margin-top: 4px;
-            font-size: 13.5px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .app-cta {
-            font-size: 13px;
-            color: var(--text-tertiary);
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.2s ease, gap 0.2s ease;
-        }
-
-        .app-card:hover .app-cta { color: var(--accent); gap: 9px; }
-
-        /* ── Community ── */
-        .community-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .community-card {
-            padding: 24px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .community-card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow); }
-
-        .community-card h3 {
-            font-size: 17px;
-            font-weight: 650;
-            letter-spacing: -0.01em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .community-card h3::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 2px;
-            background: var(--accent);
-            transform: rotate(45deg);
-        }
-
-        .community-card p {
-            margin-top: 8px;
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.55;
-        }
-
-        /* ── Writing ── */
-        .writing-list { display: flex; flex-direction: column; }
-
-        .writing-row {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 16px 4px;
-            min-height: 44px;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            transition: padding-left 0.25s ease;
-        }
-
-        .writing-row:first-child { border-top: 1px solid var(--border); }
-        .writing-row:hover { padding-left: 12px; }
-
-        .writing-title {
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--text);
-            transition: color 0.2s ease;
-        }
-
-        .writing-row:hover .writing-title { color: var(--accent); }
-
-        .writing-source {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            white-space: nowrap;
-        }
-
-        /* ── Footer ── */
-        footer {
-            margin-top: 24px;
-            padding-top: 32px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 16px;
-            flex-wrap: wrap;
-            font-size: 13px;
-            color: var(--text-tertiary);
-        }
-
-        footer a { color: var(--text-secondary); text-decoration: none; }
-        footer a:hover { color: var(--accent); }
-
-        /* ── Responsive ── */
-        @media (max-width: 600px) {
-            .page { padding: 32px 20px 72px; }
-            .hero-head { gap: 18px; }
-            .avatar { width: 76px; height: 76px; border-radius: 22px; }
-            .stats, .app-grid, .community-grid { grid-template-columns: 1fr; }
-            section { margin-bottom: 56px; }
-            .hero { margin-bottom: 56px; }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/home.css">
+    <link rel="stylesheet" href="/assets/home-2.css">
 </head>
 <body>
 
@@ -713,10 +228,14 @@
 
         <header class="topbar rise">
             <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <nav class="topnav" aria-label="Site">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
                 <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
                 <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
+                </button>
+            </nav>
         </header>
 
         <!-- Hero -->
@@ -792,7 +311,7 @@
             <div class="eyebrow"><h2>About</h2><span class="rule"></span></div>
             <div class="prose">
                 <p>I grew up tinkering — taking things apart to see how they worked, then building something new from the pieces. These days I live in Amsterdam, where I split my time between building apps, 3D printing odd little objects, and a small garden that survives me, barely.</p>
-                <p>Professionally, that's meant a decade on the Apple ecosystem — a #1 app on the US App Store, products used by millions, years of ecommerce. On my own time, I build things I care about. <a href="/sajda/">Sajda</a> brings Quran recitations and prayer times to Apple TV; <a href="/tally/">Tally</a> turns your TV into a scoreboard for game nights; <a href="/capybara-rush/">Capybara Rush</a> is a cozy iPhone reflex game. <a href="/wifi-qr/">Wi-Fi QR</a> makes guest Wi-Fi QR codes, Airbnb WiFi signs, and printable password signs for hosts, homes, cafes, offices, and rentals; <a href="/tateemi/">Tateemi</a> helps parents track child vaccinations on their country's schedule; <a href="/stampt/">Stampt</a> frames your photos through real vintage postal stamps. Next up is <a href="/angry-nona/">Angry Nona: Night Shift</a>, a cozy iPhone game about one nanny and six toddlers.</p>
+                <p>Professionally, that's meant a decade on the Apple ecosystem — a #1 app on the US App Store, products used by millions, years of ecommerce. On my own time, I build things I care about. <a href="/sajda/">Sajdah</a> brings Quran recitations and prayer times to Apple TV; <a href="/tally/">Tally</a> turns your TV into a scoreboard for game nights; <a href="/capybara-rush/">Capybara Rush</a> is a cozy iPhone reflex game. <a href="/wifi-qr/">Wi-Fi QR</a> makes guest Wi-Fi QR codes, Airbnb WiFi signs, and printable password signs for hosts, homes, cafes, offices, and rentals; <a href="/tateemi/">Tateemi</a> helps parents track child vaccinations on their country's schedule; <a href="/stampt/">Stampt</a> frames your photos through real vintage postal stamps. Next up is <a href="/angry-nona/">Angry Nona: Night Shift</a>, a cozy iPhone game about one nanny and six toddlers.</p>
                 <p>Otherwise: reading, walking the canals, or starting yet another side project I'm convinced the world needs.</p>
             </div>
         </section>
@@ -804,11 +323,11 @@
             <div class="app-grid">
                 <a href="/sajda/" class="app-card">
                     <div class="app-card-top">
-                        <img src="/images/optimized/sajda-icon.webp" alt="Sajda app icon" class="app-icon" width="56" height="56" loading="lazy" decoding="async">
+                        <img src="/images/optimized/sajda-icon.webp" alt="Sajdah app icon" class="app-icon" width="56" height="56" loading="lazy" decoding="async">
                         <span class="app-platform mono">tvOS</span>
                     </div>
                     <div>
-                        <div class="app-name">Sajda</div>
+                        <div class="app-name">Sajdah</div>
                         <div class="app-desc">Quran, Prayer Times &amp; Athan for Apple TV</div>
                     </div>
                     <span class="app-cta">Explore <span aria-hidden="true">&rarr;</span></span>
@@ -901,6 +420,18 @@
         <section class="rise d8" id="writing">
             <div class="eyebrow"><h2>Writing</h2><span class="rule"></span></div>
             <div class="writing-list">
+                <a href="/blog/sajdah-1-5-0-release-notes/" class="writing-row">
+                    <span class="writing-title">Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</span>
+                    <span class="writing-source mono">Blog</span>
+                </a>
+                <a href="/blog/building-sajdah-apple-tv-journey/" class="writing-row">
+                    <span class="writing-title">The journey so far: building Sajdah for Apple TV</span>
+                    <span class="writing-source mono">Blog</span>
+                </a>
+                <a href="/surfing/" class="writing-row">
+                    <span class="writing-title">How Surfing Works: an interactive 3D explainer</span>
+                    <span class="writing-source mono">Interactive</span>
+                </a>
                 <a href="https://levelup.gitconnected.com/optimizing-ios-dependencies-a-developers-guide-964057374ade" class="writing-row" target="_blank" rel="noopener">
                     <span class="writing-title">Optimizing iOS Dependencies: A Developer's Guide</span>
                     <span class="writing-source mono">Level Up Coding</span>

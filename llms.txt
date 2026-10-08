@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajda (Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). His next game, Angry Nona: Night Shift (iPhone nanny game), is coming soon. This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). His next game, Angry Nona: Night Shift (iPhone nanny game), is coming soon. This file describes him and each app for AI search citation.
 
 ## About Abdelrahman Eita
 
@@ -14,47 +14,49 @@
 
 - [Developer Profile](https://yoloabdo.com/)
 - [All Apps](https://yoloabdo.com/apps/)
+- [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
+- [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
+- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts and the surfing guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
 ---
 
-# Sajda - Quran for Apple TV
+# Sajdah (Sajda) - Quran, Prayer Times & Athan for Apple TV
 
-> Sajda is the most feature-rich Quran app for Apple TV (tvOS). Free to download with 200+ reciters, verse-by-verse sync, live Islamic TV channels, radio stations, sleep timer, A-B repeat for memorization, prayer times with 13 athan voices, Qibla direction, focus mode, translations, playback speed control, and stunning animated backgrounds.
+> Sajdah (App Store name "Sajdah: Quran & Athan TV", also spelled Sajda) is a Quran, prayer and remembrance app for Apple TV (tvOS 17 or later). It is free to download, with 200+ reciters, verse-by-verse and word-by-word tracking, Quran fonts, prayer times with 13 athan voices, Qibla direction, Prayer Room displays, morning and evening adhkar, the verse and hadith of the day, Quran radio, live Islamic TV including Makkah, and Top Shelf cards on the Apple TV Home Screen.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/sajda/)
-- [App Store](https://apps.apple.com/us/app/sajdah-quran-athan-tv/id6759179587)
+- [App Store](https://apps.apple.com/app/id6759179587)
+- [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
+- [The journey so far: building Sajdah for Apple TV](https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/)
 - [Support](https://yoloabdo.com/sajda/support/)
 - [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
 
 ## Key Features
 
 - **200+ Quran Reciters** with multiple narrations (Hafs, Warsh, and others)
-- **Verse-by-Verse Sync** with precise ayah tracking
-- **Live Islamic TV Channels** (premium)
-- **Quran Radio Stations** with live equalizer (premium)
-- **Sleep Timer** with 15-60 min or end-of-surah options
-- **A-B Repeat** for Hifz (Quran memorization) practice
-- **Prayer Times** with automatic location detection for Fajr, Dhuhr, Asr, Maghrib, and Isha
-- **13 Athan Voices** to choose from (premium)
-- **Qibla Direction** compass on your TV screen
-- **Focus Mode** for distraction-free full-screen verse display
-- **Translations** in multiple languages
-- **Playback Speed** from 0.5x to 2x
-- **Calming Backgrounds** with animated nature scenes
-- **Themes & Colors** with multiple accent colors and dark mode
-- **Multilingual** — English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese
+- **Verse-by-Verse Sync** with precise ayah tracking, and **word-by-word highlighting** on selected Hafs reciters (premium)
+- **Quran Fonts**: Uthmanic (free), plus Amiri, Scheherazade New, Noto Naskh, KFGQPC Nastaleeq and Lateef (premium)
+- **Live Tab**: Quran radio stations with a live equalizer and live Islamic TV channels, including Makkah (premium)
+- **Today**: next prayer countdown, Hijri and Gregorian dates, verse of the day and hadith of the day in the app language, continue listening
+- **Morning and Evening Adhkar** with a Siri Remote counter
+- **Prayer Times** for Fajr, Dhuhr, Asr, Maghrib and Isha in the location's time zone, **13 Athan voices** plus a Fajr Athan, and **Qibla Direction** (premium)
+- **Prayer Room**: six full-screen prayer clock styles (premium)
+- **Top Shelf**: continue listening, verse of the day and next prayer on the Apple TV Home Screen
+- **Player**: focus mode, ambient mode, sleep timer (15-60 min or end of surah), repeat and A-B repeat, playback speed from 0.5x to 2x, translations and optional transliteration
+- **Multilingual**: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese
 
 ## Pricing
 
-- Free: Quran listening, 200+ reciters, verse sync, search, favorites, playback controls
-- Premium (in-app purchase): Live TV, Radio, Prayer Times, Athan Alerts, Premium Backgrounds
+- Free: every reciter, synchronized Arabic text, one translation, surah repeat, sleep timer
+- Sajdah Premium (optional in-app subscription): Quran radio, live TV, prayer times with Athan, Qibla direction, Prayer Room, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
+- No ads
 
 ## Platform
 
-- Apple TV (tvOS) only
+- Apple TV (tvOS 17 or later)
 - Requires internet connection for streaming
 
 ## Developer
@@ -285,7 +287,7 @@
 - **Nanny Shop** - spend points earned in play on helps and new looks
 - **Outfits** - dress the nanny in new looks
 - **Accessibility** - VoiceOver and Reduce Motion support
-- **Privacy-First** - no ads, no tracking, no network, no third-party SDKs, no data collected
+- **Privacy-First** - no ads, no tracking, no account; only anonymous game stats and crash reports
 
 ## Availability
 
@@ -295,9 +297,17 @@
 ## Platform
 
 - iOS (iPhone), requires iOS 18+
-- Works fully offline; all progress, settings, and points are stored on the device
+- Plays fully offline; progress, settings, and points are stored on the device
 
 ## Developer
 
 - Built by Abdelrahman Eita
 - Contact: abdulrhman.eaita@gmail.com
+
+# How Surfing Works - Interactive 3D Explainer
+
+> How Surfing Works is a free, interactive 3D explainer by Abdelrahman Eita that runs in the browser. It covers where waves come from, why they break, the anatomy of a wave, beach, point and reef breaks, how to read a surf report, how to ride a wave, when to pop up, and surf safety including rip currents. Visitors can watch it as a short film, change the wind and seabed, try a pop-up timing game, and record a video.
+
+## Links
+
+- [How Surfing Works](https://yoloabdo.com/surfing/)

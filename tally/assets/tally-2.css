@@ -1,0 +1,325 @@
+.feature-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background: var(--surface-secondary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ============================================
+   SCOREBOARD PREVIEW
+   ============================================ */
+.scoreboard-section {
+    background: var(--surface);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+}
+
+.scoreboard-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.scoreboard-preview {
+    background: var(--bg);
+    border: 1px solid var(--divider);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+}
+
+.scoreboard-sport {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.scoreboard-period {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.scoreboard-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.scoreboard-team {
+    text-align: center;
+}
+
+.scoreboard-team-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+.scoreboard-score {
+    font-family: var(--font-heading);
+    font-size: clamp(64px, 10vw, 96px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.scoreboard-divider {
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+.scoreboard-timer {
+    margin-top: 24px;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.scoreboard-screenshot {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--divider);
+}
+
+.scoreboard-screenshot img {
+    width: 100%;
+    display: block;
+}
+
+/* ============================================
+   SPORTS GRID
+   ============================================ */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.sport-card {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.sport-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.sport-emoji {
+    font-size: 36px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.sport-card h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+}
+
+.sport-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ============================================
+   PRICING
+   ============================================ */
+.pricing {
+    text-align: center;
+}
+
+.price-tag {
+    font-family: var(--font-heading);
+    font-size: clamp(80px, 12vw, 140px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--text);
+}
+
+.price-tag .dollar {
+    font-size: 0.5em;
+    vertical-align: super;
+    color: var(--accent);
+}
+
+.pricing-note {
+    font-size: 22px;
+    color: var(--text-dim);
+    max-width: 500px;
+    margin: 0 auto 48px;
+    line-height: 1.5;
+}
+
+.pricing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-size: 15px;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+.pricing-badge .check {
+    color: var(--success);
+    font-size: 18px;
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq {
+    background: var(--surface);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+}
+
+.faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--divider);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item summary {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.faq-item summary:hover {
+    color: var(--accent);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding-bottom: 24px;
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    padding: 48px 0;
+    border-top: 1px solid var(--divider);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}

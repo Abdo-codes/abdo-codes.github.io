@@ -1,0 +1,138 @@
+.privacy-strip {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--teal-dark);
+    color: var(--white);
+    padding: 46px;
+    border-radius: 8px;
+}
+
+.privacy-strip p {
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
+}
+
+.privacy-points {
+    display: grid;
+    gap: 12px;
+    color: #b8efe1;
+    font-weight: 800;
+}
+
+.cta {
+    text-align: center;
+    padding: 90px 0 100px;
+}
+
+.cta .section-title,
+.cta .section-copy {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0;
+    color: var(--ink-muted);
+    font-size: 14px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--teal);
+    font-weight: 700;
+}
+
+@media (max-width: 820px) {
+    nav .container {
+        min-height: 62px;
+    }
+
+    .nav-links {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 88vh;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(0deg, rgba(5, 33, 30, 0.93) 0%, rgba(5, 33, 30, 0.58) 58%, rgba(5, 33, 30, 0.18) 100%);
+    }
+
+    .hero-bg {
+        object-position: center top;
+    }
+
+    .hero-inner {
+        padding-top: 104px;
+        padding-bottom: 54px;
+    }
+
+    .intro-grid,
+    .privacy-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-grid {
+        grid-template-columns: none;
+        grid-auto-columns: minmax(230px, 72vw);
+        grid-auto-flow: column;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 18px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .screen-card {
+        scroll-snap-align: center;
+    }
+
+    .device-frame,
+    .screen-caption {
+        width: 100%;
+        max-width: none;
+    }
+
+    .privacy-strip {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+}
