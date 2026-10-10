@@ -266,7 +266,7 @@
 
 # ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad (Coming Soon)
 
-> ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline and has no ads, no accounts, no tracking, no third-party analytics, no in-app purchases, and no external links. It is not on the App Store yet.
+> ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends only crash reports and anonymous usage counts, never your child's name, age or drawings. It has no in-app purchases and no external links. It is not on the App Store yet.
 
 ## Links
 
@@ -281,7 +281,7 @@
 - **Lumo the Firefly** - says the letters, words, and prompts in recorded voice clips; spoken prompts are off by default, and a parent turns them on in Settings
 - **Parents Area** - behind a grown-up question; holds Settings and local progress
 - **Works Offline** - all pages, words, and prompts are bundled in the app
-- **Privacy-First** - no data leaves the iPad; optional voice answers (off by default) use on-device speech recognition and save no audio
+- **Privacy** - No ads, no accounts, no tracking. ColorTalk sends only crash reports and anonymous usage counts, never your child's name, age or drawings. Optional voice answers (off by default) use on-device speech recognition and save no audio
 
 ## Availability
 
