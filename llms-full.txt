@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Stampt (vintage stamp camera). His next app, ColorTalk (iPad ABC coloring app for children 5 and under), is coming soon. This file describes him and each app for AI search citation.
 
 ## About Abdelrahman Eita
 
@@ -261,6 +261,41 @@
 
 - Built by Abdelrahman Eita
 - Contact: stampt.app@gmail.com
+
+---
+
+# ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad (Coming Soon)
+
+> ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline and has no ads, no accounts, no tracking, no third-party analytics, no in-app purchases, and no external links. It is not on the App Store yet.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/colortalk/)
+- [Support](https://yoloabdo.com/colortalk/support/)
+- [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
+
+## Key Features
+
+- **One Letter, One Word** - each page teaches one letter and one word, such as "C is for cow"
+- **Coloring First** - coloring is the main activity; the letter and its word support the art
+- **Lumo the Firefly** - says the letters, words, and prompts in recorded voice clips; spoken prompts are off by default, and a parent turns them on in Settings
+- **Parents Area** - behind a grown-up question; holds Settings and local progress
+- **Works Offline** - all pages, words, and prompts are bundled in the app
+- **Privacy-First** - no data leaves the iPad; optional voice answers (off by default) use on-device speech recognition and save no audio
+
+## Availability
+
+- Coming soon to the App Store
+- Kids category, ages 5 and under
+
+## Platform
+
+- iPadOS (iPad), landscape only, English only
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
 
 ---
 
