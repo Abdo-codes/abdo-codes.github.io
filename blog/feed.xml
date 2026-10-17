@@ -5,13 +5,23 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-10-07T12:00:00Z</updated>
+    <updated>2026-10-17T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>The best Quran apps for Apple TV, compared (2026)</title>
+        <id>https://yoloabdo.com/blog/quran-apps-apple-tv-compared/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/quran-apps-apple-tv-compared/"/>
+        <published>2026-10-17T12:00:00Z</published>
+        <updated>2026-10-17T12:00:00Z</updated>
+        <category term="Comparison"/>
+        <summary>An honest comparison of the Quran apps that run on Apple TV in 2026, with price, reciters, prayer times, offline use and ads, and a source for every row. The author makes Sajdah, one of the apps compared.</summary>
+    </entry>
 
     <entry>
         <title>Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</title>
