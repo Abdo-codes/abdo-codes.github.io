@@ -30,9 +30,9 @@
 - [Landing Page](https://yoloabdo.com/sajda/)
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
+- [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
 - [The journey so far: building Sajdah for Apple TV](https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/)
-- [Support](https://yoloabdo.com/sajda/support/)
-- [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
+- [Support](https://yoloabdo.com/sajda/support/) · [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
 
 ## Key Features
 

@@ -30,9 +30,9 @@
 - [Landing Page](https://yoloabdo.com/sajda/)
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
+- [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
 - [The journey so far: building Sajdah for Apple TV](https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/)
-- [Support](https://yoloabdo.com/sajda/support/)
-- [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
+- [Support](https://yoloabdo.com/sajda/support/) · [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
 
 ## Key Features
 
@@ -312,6 +312,68 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts and the surfing guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/quran-apps-apple-tv-compared/
+
+Comparison · Quran on Apple TV
+
+# The best Quran apps for Apple TV, compared (2026)
+
+Nine Quran apps run on Apple TV. This post compares what each one confirms for the TV, what it costs, and who it suits. Every row has a source. Written by Abdelrahman Eita, 17 October 2026.
+
+Disclosure: the author makes Sajdah, one of the apps in this list. Nobody paid for a place in the list, and there are no affiliate links.
+
+## In short
+
+- Nine Quran apps have a confirmed Apple TV version. Three are built only for Apple TV: Sajdah, Quran Mushaf TV and the Holy Quran TV!. Six are phone apps with a TV version.
+- Sajdah puts recitation, the Quran text, prayer times with Athan, live TV and Top Shelf in one TV app. It needs the internet.
+- Quran Mushaf TV shows the Mushaf page on the TV, adds translation and tafsir, and works offline.
+- Ameen and Quran Pro say that you can listen to recitations on Apple TV.
+- For Muslim Pro, Quran TV, Quran Radios and Quran+, the store page does not describe the TV app.
+
+## How we compared
+
+Every app was checked on 17 October 2026 in the US App Store. An app is in the list only if its App Store page shows an Apple TV entry with a tvOS version. The comparison covers the TV only: listening, the Quran text, live streams, prayer times on the TV, Top Shelf, ads on the TV and price. For a phone app with a TV version, a feature counts only if the page says it works on Apple TV; "Not stated" means the listing does not say, not that the feature is missing. Store ratings are left out, because a phone app's rating covers every device. The apps were not installed and tested on an Apple TV.
+
+## The comparison table
+
+| App | Type | Price (US) | Listening on TV | Quran text on TV | Live streams | Prayer times and Athan | Top Shelf | Ads on TV |
+|---|---|---|---|---|---|---|---|---|
+| Sajdah | Built only for Apple TV (tvOS 17+) | Free; Premium $2.99/month or $26.90/year | 200+ reciters | Verse sync free; word by word on selected reciters (Premium) | Quran radio and live TV incl. Makkah (Premium) | Yes, 13 Athan voices and Qibla (Premium) | Yes | No |
+| Quran Mushaf TV | Built only for Apple TV (tvOS 16.4+) | Free; subscriptions from $0.99/week | Recitation with verse repeat | Madani Mushaf pages, translation, tafsir | Not stated | Not stated | Not stated | Yes |
+| the Holy Quran TV! | Built only for Apple TV (tvOS 9+) | $4.99 | 1 reciter (Abdelbasit Abdelsamad) | Verse by verse | Not stated | Not stated | Not stated | Not marked |
+| Quran Pro | Phone app with TV version (tvOS 12+) | Free; one subscription covers Apple TV | Yes | Not stated | Not stated | Not stated | Not stated | Not stated |
+| Ameen | Phone app with TV version (tvOS 17+) | Free, no in-app purchases listed | Yes | Not stated | Not stated | Not stated | Not stated | Not stated |
+| Muslim Pro | Phone app with TV version (tvOS 13+) | Free download | Not stated | Not stated | Not stated | Not stated | Not stated | Not stated |
+| Quran TV (Muslims & Islam) | Phone app with TV version (tvOS 9+) | Free download | Not stated | Not stated | Not stated | Not stated | Not stated | Not stated |
+| Quran Radios | Phone app with TV version (tvOS 9.2+) | Free download | Not stated | Not stated | Not stated | Not stated | Not stated | Not stated |
+| Quran+ | Phone app with TV version (tvOS 15+) | $7.99 | Not stated | Not stated | Not stated | Not stated | Not stated | Not stated |
+
+## Which app fits which person
+
+- One TV app for the whole home, with recitation, the Quran text, prayer times, Athan, live Makkah TV and Top Shelf: Sajdah.
+- Reading from the Mushaf page, or weak internet: Quran Mushaf TV. It works offline; Sajdah does not.
+- A free recitation player with no purchases: Ameen.
+- Already paying for Quran Pro on the phone: its subscription covers listening on Apple TV.
+- Already using Muslim Pro, Quran TV or Quran Radios: try the TV version.
+
+## Apps checked but left out
+
+These apps have no tvOS entry on their App Store page: Quran Majeed, Quran by Quran.com, Al Quran (Tafsir & by Word), iQuran, Ayah, MP3Quran and Tarteel. Quran Audio by Quran.com mentions Apple TV in its release notes, but its page lists no tvOS version. Al Quran Tv did not load in the US, UK, Saudi, UAE, Tunisia or France stores.
+
+## Sources
+
+- Sajdah: https://apps.apple.com/us/app/id6759179587?platform=appleTV
+- Quran Pro: https://apps.apple.com/us/app/id537070378?platform=appleTV
+- Muslim Pro: https://apps.apple.com/us/app/id388389451?platform=appleTV
+- Ameen: https://apps.apple.com/us/app/id6742055838?platform=appleTV
+- Quran TV (Muslims & Islam): https://apps.apple.com/us/app/id1044236957?platform=appleTV
+- Quran Mushaf TV: https://apps.apple.com/us/app/id6504163471?platform=appleTV
+- Quran Radios: https://apps.apple.com/us/app/id542977531?platform=appleTV
+- Quran+: https://apps.apple.com/us/app/id1561216697?platform=appleTV
+- the Holy Quran TV!: https://apps.apple.com/us/app/id1088553516?platform=appleTV
 
 ---
 
