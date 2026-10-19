@@ -68,7 +68,7 @@
 
 # Tally - Apple TV Scoreboard and Game Night Score Keeper
 
-> Tally is an Apple TV scoreboard app and game night score keeper built for the living room. It supports 7 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. Sports include basketball, soccer, tennis, ping pong, volleyball, party game, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives.
+> Tally is a free Apple TV scoreboard app and game night score keeper built for the living room. It supports 6 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. Sports include basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives. Since version 1.3.2 (28 August 2026), every feature is free, with no subscriptions, in-app purchases, ads, or analytics.
 
 ## Links
 
@@ -77,10 +77,11 @@
 - [App Store](https://apps.apple.com/us/app/tally-game-night-scoreboard/id6760623633)
 - [Support](https://yoloabdo.com/tally/support/)
 - [Privacy Policy](https://yoloabdo.com/tally/privacy/)
+- [Tally 1.3.2 release notes](https://yoloabdo.com/blog/tally-1-3-2-release-notes/): Tally is now fully free; every sport and Game Night unlocked; no analytics
 
 ## Key Features
 
-- **7 Sports + Game Night** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Party Game (up to 8 players), Generic (custom). Game Night mode: 2-8 players, three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, Play Again
+- **6 Sports + Game Night** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Generic (custom). Game Night mode: 2-8 players, three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, Play Again
 - **Giant Scores** — 220pt typography readable from across the room
 - **Live Score Tracking + Timers** — Countdown (basketball), countup (soccer), buzzer on expiration, and quick score updates on the big screen
 - **Full Undo** — Revert any scoring action, up to 20 steps back
@@ -93,9 +94,9 @@
 
 ## Pricing
 
-- Free to try with 2 sports (Basketball, Generic)
-- Tally Pro: weekly ($0.49/week), annual ($14.99/year), or lifetime ($39.99) — with free trial
-- No ads
+- Completely free since version 1.3.2 (28 August 2026)
+- No subscriptions, in-app purchases, paywalls, or ads
+- No analytics: the app collects no data
 
 ## Platform
 

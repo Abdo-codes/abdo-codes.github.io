@@ -68,7 +68,7 @@
 
 # Tally - Apple TV Scoreboard and Game Night Score Keeper
 
-> Tally is an Apple TV scoreboard app and game night score keeper built for the living room. It supports 7 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. Sports include basketball, soccer, tennis, ping pong, volleyball, party game, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives.
+> Tally is a free Apple TV scoreboard app and game night score keeper built for the living room. It supports 6 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. Sports include basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives. Since version 1.3.2 (28 August 2026), every feature is free, with no subscriptions, in-app purchases, ads, or analytics.
 
 ## Links
 
@@ -77,10 +77,11 @@
 - [App Store](https://apps.apple.com/us/app/tally-game-night-scoreboard/id6760623633)
 - [Support](https://yoloabdo.com/tally/support/)
 - [Privacy Policy](https://yoloabdo.com/tally/privacy/)
+- [Tally 1.3.2 release notes](https://yoloabdo.com/blog/tally-1-3-2-release-notes/): Tally is now fully free; every sport and Game Night unlocked; no analytics
 
 ## Key Features
 
-- **7 Sports + Game Night** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Party Game (up to 8 players), Generic (custom). Game Night mode: 2-8 players, three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, Play Again
+- **6 Sports + Game Night** — Basketball (quarters, 1/2/3-point), Soccer (halves, stoppage time), Tennis (game/set/match, deuce/advantage, tiebreaks), Ping Pong (best of 5, serve rotation), Volleyball (rally-point, final set to 15), Generic (custom). Game Night mode: 2-8 players, three scoring models (Running Total, Rounds Won, Lives), turn marker, MVP badge, Play Again
 - **Giant Scores** — 220pt typography readable from across the room
 - **Live Score Tracking + Timers** — Countdown (basketball), countup (soccer), buzzer on expiration, and quick score updates on the big screen
 - **Full Undo** — Revert any scoring action, up to 20 steps back
@@ -93,9 +94,9 @@
 
 ## Pricing
 
-- Free to try with 2 sports (Basketball, Generic)
-- Tally Pro: weekly ($0.49/week), annual ($14.99/year), or lifetime ($39.99) — with free trial
-- No ads
+- Completely free since version 1.3.2 (28 August 2026)
+- No subscriptions, in-app purchases, paywalls, or ads
+- No analytics: the app collects no data
 
 ## Platform
 
@@ -314,6 +315,64 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts and the surfing guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/tally-1-3-2-release-notes/
+
+Release notes · Tally for Apple TV
+
+# Tally 1.3.2: the Apple TV scoreboard is now fully free
+
+Every sport and Game Night mode are now unlocked for everyone. No subscription, no paywall, no ads, and no analytics.
+
+![The Tally home screen on Apple TV: Start Game Night and six sports, with nothing locked](https://yoloabdo.com/blog/tally-1-3-2-release-notes/tally-1-3-2-home-1280.webp)
+
+[Tally](https://yoloabdo.com/tally/) is a scoreboard app for Apple TV. You keep score with the Siri Remote, and the whole room sees giant numbers on the TV. Version 1.3.2 came out on **28 August 2026**, and it makes one big change: Tally is now completely free.
+
+## In short
+
+- Everything is unlocked: all sports, Game Night, timers and player colors
+- If you paid for Pro, you do not need to do anything
+- No analytics: the app now collects no data
+- Siri Remote focus fixes
+
+## Everything is unlocked
+
+Before 1.3.2, the free version had Basketball and the Generic scoreboard. The other sports, Game Night mode, the round timer and the player colors needed Tally Pro. Now there is no Pro. You get all of it:
+
+- **Six sports with real rules:** Basketball, Soccer, Tennis, Ping Pong, Volleyball and a Generic scoreboard for any game.
+- **Game Night mode** for 2–8 players, with custom names and eight colors.
+- **Three ways to score Game Night:** Running Total, Rounds Won and Lives.
+- **Timers:** game clocks for the sports, and an optional 5 or 10-minute countdown for Game Night.
+- **The finish:** ranked standings, an MVP badge and Play Again with the same players.
+
+There are no subscriptions, in-app purchases, paywalls or ads. The upgrade screens and the Tally Pro row in Settings are gone.
+
+![Tally Game Night on Apple TV with eight players, each in their own color, and Player 1 to play](https://yoloabdo.com/blog/tally-1-3-2-release-notes/tally-1-3-2-game-night-1280.webp)
+
+## If you paid for Tally Pro
+
+Thank you. You keep everything, and you do not need to do anything. Settings still has a **Restore Purchases** row if you want it, but the app no longer needs a purchase to unlock a feature.
+
+## No analytics
+
+Tally no longer includes Firebase. The app has no analytics, no ads, no accounts and no tracking. Your team names and settings stay on your Apple TV. The [privacy policy](https://yoloabdo.com/tally/privacy/) now says this.
+
+## Fixes
+
+The Siri Remote focus works better on the first-launch screens. Focus now lands where you expect it, so you can start your first game faster.
+
+## How to play with the Siri Remote
+
+- Swipe left or right to pick a team or a player.
+- Press Select to score.
+- Press Play/Pause to start or stop the clock. In Game Night, it moves to the next turn.
+- Press Menu for the controls overlay. Hold Menu for a quick undo.
+
+## How to get it
+
+Tally needs tvOS 17 or later, and it works on Apple TV 4K and Apple TV HD. If automatic updates are on, your Apple TV installs 1.3.2 by itself. If you are new, find Tally in the App Store on your Apple TV and download it for free. Questions or ideas? Write to me through [Tally support](https://yoloabdo.com/tally/support/).
 
 ---
 
