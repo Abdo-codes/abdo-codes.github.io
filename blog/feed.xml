@@ -5,13 +5,33 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-10-17T12:00:00Z</updated>
+    <updated>2026-10-19T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Capybara Rush 1.5: daily runs, the Capybara Cup and a poster of your best run</title>
+        <id>https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/"/>
+        <published>2026-10-19T12:00:00Z</published>
+        <updated>2026-10-19T12:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>What's new in Capybara Rush 1.5 for iPhone: a daily Game Center run from 21 October, the four-week Capybara Cup from 11 November, a poster of your run to share, and six Game Center achievements.</summary>
+    </entry>
+
+    <entry>
+        <title>Wi-Fi QR 1.7: guest signs that fit, WPA or WEP, and smarter sticker scans</title>
+        <id>https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/"/>
+        <published>2026-10-19T11:00:00Z</published>
+        <updated>2026-10-19T11:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>What's new in Wi-Fi QR 1.7 for iPhone: WPA or WEP security with clear checks, printable guest Wi-Fi signs that fit long passwords on every paper size, and better router-sticker scanning, including Arabic labels.</summary>
+    </entry>
 
     <entry>
         <title>The best Quran apps for Apple TV, compared (2026)</title>
