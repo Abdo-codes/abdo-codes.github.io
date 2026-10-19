@@ -6,8 +6,8 @@
 
 - Role: Staff Software Engineer, specializing in iOS, SwiftUI, The Composable Architecture (TCA), and modular architecture
 - Location: Amsterdam, Netherlands
-- Career: shipped apps at Bleacher Report, Niceone, Iqraaly, NewStore, and Marktplaats (eBay); GoChat reached #1 on the US App Store with 1M+ users in 7 days; Iqraaly, an audiobook app, passed 500K downloads and reached the top 10 in Egypt
-- Community: founder of SwiftCairo (Egypt's largest iOS community, 1,000+ members) and LintSchool (50+ developers mentored)
+- Career: shipped apps at Bleacher Report, Niceone, Iqraaly, NewStore, and Marktplaats (eBay); GoChat reached #1 on the US App Store with 1M+ users in 7 days; Iqraaly, an audiobook app, passed 500K downloads and reached the top 10 on the App Store in Egypt; across these apps, his work is used by millions of people
+- Community: founder of SwiftCairo (Egypt's largest iOS community, 1,000+ members) and LintSchool; 50+ developers mentored across both
 - Contact: abdulrhman.eaita@gmail.com
 
 ## Recent Writing
