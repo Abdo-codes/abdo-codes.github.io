@@ -281,3 +281,11 @@ footer {
         gap: 4px;
     }
 }
+
+a.eyebrow { text-decoration: none; }
+a.eyebrow:hover { border-color: var(--mint); }
+.release-list { margin: 4px 0 0; padding-left: 20px; color: var(--ink); line-height: 1.7; }
+.release-link { color: var(--blue-ink); font-weight: 750; text-decoration: none; }
+.release-link:hover { text-decoration: underline; }
+.release-figure { margin: 0; }
+.release-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
