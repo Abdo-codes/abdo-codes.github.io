@@ -118,6 +118,7 @@
 
 - [Landing Page](https://yoloabdo.com/capybara-rush/)
 - [App Store](https://apps.apple.com/us/app/capybara-rush-swipe-fast/id6766263673)
+- [Capybara Rush 1.5 release notes](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/): daily Game Center run from 21 October 2026, the Capybara Cup from 11 November to 8 December 2026, share poster, six achievements
 - [Support](https://yoloabdo.com/capybara-rush/support/)
 - [Privacy Policy](https://yoloabdo.com/capybara-rush/privacy/)
 
@@ -157,6 +158,7 @@
 
 - [App Store](https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
 - [Privacy Policy](https://yoloabdo.com/wifi-qr/privacy/)
 

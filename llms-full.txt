@@ -118,6 +118,7 @@
 
 - [Landing Page](https://yoloabdo.com/capybara-rush/)
 - [App Store](https://apps.apple.com/us/app/capybara-rush-swipe-fast/id6766263673)
+- [Capybara Rush 1.5 release notes](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/): daily Game Center run from 21 October 2026, the Capybara Cup from 11 November to 8 December 2026, share poster, six achievements
 - [Support](https://yoloabdo.com/capybara-rush/support/)
 - [Privacy Policy](https://yoloabdo.com/capybara-rush/privacy/)
 
@@ -157,6 +158,7 @@
 
 - [App Store](https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
 - [Privacy Policy](https://yoloabdo.com/wifi-qr/privacy/)
 
@@ -312,6 +314,170 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts and the surfing guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/
+
+Release notes · Capybara Rush for iPhone
+
+# Capybara Rush 1.5: daily runs, the Capybara Cup and a poster of your best run
+
+One 30-second run a day that counts, a four-week Cup from 11 November, and a poster that dares your friends to beat your score.
+
+![Capybara Rush 1.5: the Home screen with the daily challenge ticket, a Capybara Cup share poster, and a results screen with Cup progress](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/capybara-rush-1-5-cup-1280.webp)
+
+[Capybara Rush](https://yoloabdo.com/capybara-rush/) is a cozy swipe game for iPhone. A round lasts 30 seconds: an arrow appears, and you swipe that way before time runs out. Version 1.5 gives you a reason to come back every day, and a reason to show your friends. Here is what is new.
+
+## In short
+
+- A daily run with its own Game Center board from 21 October
+- The Capybara Cup: four weeks, 11 November to 8 December
+- A poster of your run to share or save to Photos
+- Six Game Center achievements
+- A clearer results screen
+- One optional question about how you found the game
+
+## One daily run that counts
+
+The Home screen now has a **Daily challenge** ticket. Every day has a level, Cozy, Flow or Rush, and every player gets the same arrows that day. Your timing still shapes the round, so no two runs are the same.
+
+- **Your first attempt each day counts.** It goes to the daily Game Center board. The attempt is used when the round starts, so quitting halfway does not give you a second try.
+- After that, you can play the daily again for practice. Practice runs still count for your all-time best and your streak.
+- The ticket has seven stamps, one for each day you play. Your streak earns badges at 4, 7 and 14 days.
+- You can turn on a reminder at 19:00 your time, if you want one.
+
+The daily Game Center board starts on **21 October 2026** and resets every day.
+
+## The Capybara Cup: four weeks from 11 November
+
+The Capybara Cup runs for four weeks, from **11 November to 8 December 2026**:
+
+- Week 1: 11–17 November
+- Week 2: 18–24 November
+- Week 3: 25 November – 1 December
+- Week 4: 2–8 December
+
+During the Cup, the daily run is the Cup run. Your first attempt each day also counts on the weekly **Capybara Cup** board in Game Center. Cup days follow your own local date. The results screen shows how many Cup dailies you have played. Finish five to earn the **Cup Finisher** badge and a gold frame on your poster.
+
+## A poster of your run
+
+After a run, tap **Share poster**. The poster shows your capybara, your grade, your score, your accuracy and combo, the coins you earned and your fever count. At the bottom it asks “Can you beat” your score, with a QR code your friends can scan to get the game. You can send it with the share sheet or save it to Photos. A Cup run gets a stamp with the week and the level.
+
+## Six Game Center achievements
+
+- **First Splash**: play your first round.
+- **Daily Debut**: play your first daily run.
+- **Weekly Finisher**: fill all seven daily stamps.
+- **Survivor**: score in Survival mode.
+- **Full Wardrobe**: collect the seven original skins, from Classic to Golden.
+- **Century**: play 100 rounds.
+
+## A clearer results screen
+
+The results screen now makes the next step obvious. **Play again** is the big button, with a goal such as “Only 120 to your best”. On your first daily run, or when you set a new best, **Share poster** takes its place. Below it, the row has Play again, Share, Scores and Home. Scores opens the board for the run you just played.
+
+![Capybara Rush gameplay with a Swipe Down prompt, the Home screen with the optional how-did-you-find-us card, and the skin collection](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/capybara-rush-1-5-play-1280.webp)
+
+## One quick, optional question
+
+The Home screen may ask once: “How did you find Capybara Rush?” You can pick a friend or challenge, App Store search, the Games app or Game Center, an event or feature, or Other. Or tap the X and it goes away. The answer helps me learn where new players come from.
+
+## The game, if you are new
+
+Each round lasts 30 seconds. Swipe the way the arrow points. Later in the round, twists appear: swipe the *opposite* way, or any way *except* the one shown. Correct swipes build a combo and fill the Fever meter, which doubles your points for five seconds. Golden prompts give bonus points and coins. Pick Cozy, Flow or Rush, or try Survival, which has no clock and ends after three mistakes. Spend your coins on capybara skins.
+
+## Price
+
+Capybara Rush is free, with no ads, no in-app purchases and no account. Coins come only from play. Game Center is optional. The game collects anonymous usage statistics only, and it does not track you across other apps.
+
+## How to update
+
+If automatic updates are on, your iPhone installs Capybara Rush 1.5 by itself. You can also open the App Store, find Capybara Rush, and tap Update. Sign in to Game Center to post your daily runs to the boards. Questions or ideas? Write to me through [Capybara Rush support](https://yoloabdo.com/capybara-rush/support/).
+
+---
+
+Source: https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/
+
+Release notes · Wi-Fi QR for iPhone
+
+# Wi-Fi QR 1.7: guest signs that fit, WPA or WEP, and smarter sticker scans
+
+A release about trust: the codes you make should always connect, and the signs you print should always show the full network name and password.
+
+![Three printable guest Wi-Fi signs from Wi-Fi QR: Gallery Placard, Ink-Safe Editorial with a long password, and Concierge Ledger](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/wifi-qr-1-7-guest-signs-1280.webp)
+
+[Wi-Fi QR](https://yoloabdo.com/wifi-qr/) makes a QR code for your Wi-Fi network and turns it into a printable sign for guests. Version 1.7 came out on 10 October 2026. It does not add a long list of new screens. It makes the parts you already use more dependable. Here is what changed.
+
+## In short
+
+- Choose WPA or WEP, with clear checks under each field
+- Guest signs fit long names and passwords on every paper size
+- Print works from the share sheet
+- Better router-sticker reading, including Arabic labels
+- Guest passwords stay out of the iOS Passwords app
+- Better VoiceOver, large text and Arabic layouts, plus many fixes
+
+## Choose WPA or WEP, and see problems before you save
+
+The network editor now has a **Security** picker. Most routers use WPA, WPA2 or WPA3, and that is the default. Older routers that still use WEP now get a code that works too. If a network has no password, turn on **No Password Required**.
+
+The editor also checks what you type and tells you what is wrong, right under the field:
+
+- A network name can be up to 32 bytes. Emoji and Arabic letters use more than one byte each, so the app counts bytes, not letters.
+- A WPA password needs 8 to 63 characters, or 64 hex digits.
+- A WEP key needs 5 or 13 characters, or 10 or 26 hex digits.
+- If another saved network already uses the same name, you see a warning, but you can still save.
+
+A QR code with a wrong password looks fine on paper and fails at the door. These checks stop that before you print. Networks that use a company login (enterprise Wi-Fi) also no longer get a code that cannot work.
+
+![The Add Network editor with the Security picker and Scan Router Sticker, next to the guest sign screen with six templates and four paper sizes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/wifi-qr-1-7-editor-print-1280.webp)
+
+## Guest signs that fit long names and passwords
+
+Router passwords can be long, and some network names are long too. Before 1.7, a long value could run past the edge of a sign. Now the text gets smaller, step by step, until it fits. If it is still too long, it wraps to the next line.
+
+This works on all four paper sizes, **4 × 6 in**, **5 × 7 in**, **A4** and **US Letter**, and in all six templates: Classic, Code Only, Gallery Placard, Concierge Ledger, Signal Grid and Ink-Safe Editorial. The middle sign in the picture at the top has a long router password on a 4 × 6 card.
+
+## Print from the share sheet
+
+Tap **Share Printable Guest Sign**, then choose **Print** in the share sheet. In earlier versions, Print could fail because the sign file was gone before the printer read it. The app now keeps the file until sharing is done. The button also waits while the sign updates, so you never share an old version after you change the text.
+
+## Better router-sticker reading, now with Arabic labels
+
+Tap **Scan Router Sticker** and point the camera at the label on your router. The app reads the text on your iPhone, finds the network name and the password, and shows them to you to check before it fills the form.
+
+- It now reads stickers laid out as a table, where the label and the value are on separate lines.
+- It knows more labels, such as SSID, Network Name, Network Key and WPA2 Key, plus German, French and Arabic labels such as اسم الشبكة and كلمة المرور.
+- It skips lines it should not use, such as admin login, IP address and serial number.
+- If you cancel the camera, you go back to the editor and keep what you typed.
+
+## Guest passwords stay yours
+
+Before 1.7, iOS could offer to save a guest Wi-Fi password in the Passwords app, as if it were a website login. The password field now tells iOS not to do that. The QR images and sign PDFs that the app makes for sharing are also deleted the next time you open the app.
+
+## VoiceOver, large text and Arabic
+
+- VoiceOver reads each template and paper card as one item and says which one is selected.
+- Scanned passwords are not read aloud.
+- At the largest text sizes, editor controls stack and wrap instead of being cut off.
+- Arabic sign titles and paper size units now display correctly, and sign text follows the direction of the language.
+
+## Smaller things you may notice
+
+- Search results now have Edit and Print actions.
+- When you delete a saved network, you can undo it.
+- If camera access is off, the app shows you how to turn it on in Settings.
+- Delete in a hidden password field removes a whole emoji, not part of it.
+- If saved data is damaged, the app recovers your list instead of starting empty.
+
+## Price
+
+Wi-Fi QR is free, with no in-app purchases, no ads and no account. Your networks stay on your device. It runs on iPhone and iPad with iOS 17 or later.
+
+## How to update
+
+If automatic updates are on, your iPhone installs Wi-Fi QR 1.7 by itself. You can also open the App Store, find Wi-Fi QR, and tap Update. Questions or ideas? Write to me through [Wi-Fi QR support](https://yoloabdo.com/wifi-qr/support/).
 
 ---
 
