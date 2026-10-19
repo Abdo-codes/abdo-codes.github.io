@@ -152,11 +152,11 @@
 
 # Wi-Fi QR - Guest Wi-Fi QR Codes and Printable Signs
 
-> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and export printable sign PDFs. No account, ads, tracking, or analytics.
+> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and print or export sign PDFs in six templates and four paper sizes. Version 1.7 (October 2026) adds WPA or WEP checks, signs that fit long passwords, and Arabic router-sticker labels. Free, with no account, no ads and no in-app purchases; anonymous usage events through Firebase Analytics never include Wi-Fi names, passwords or QR contents.
 
 ## Links
 
-- [App Store](https://apps.apple.com/us/app/wi-fi-qr-code-maker/id6776169783)
+- [App Store](https://apps.apple.com/app/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
@@ -164,17 +164,17 @@
 
 ## Key Features
 
-- **Generate Guest Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, open, and hidden networks
-- **Printable Guest Wi-Fi Signs** - make host-friendly signs for homes, cafes, offices, guest rooms, and vacation rentals
+- **Generate Guest Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, open, and hidden networks, with inline checks for the network name and password
+- **Printable Guest Wi-Fi Signs** - six templates (Classic, Code Only, Gallery Placard, Concierge Ledger, Signal Grid, Ink-Safe Editorial) in 4 x 6 in, 5 x 7 in, A4 and US Letter; long names and passwords shrink and wrap to fit; print from the share sheet
 - **Airbnb and VRBO Host Use Cases** - create WiFi password signs for welcome binders, house manuals, check-in instructions, fridges, TV stands, desks, and router shelves
 - **Template Search Replacement** - useful for people searching Etsy, Canva, or Pinterest for WiFi QR code templates and printable Airbnb WiFi signs
-- **Router Label Scanning** - scan printed router-label or password-card text with the camera and review it before saving
+- **Router Sticker Scanning** - scan printed router-sticker or password-card text with the camera, including English, German, French and Arabic labels, and review it before saving
 - **Use Current Network Name** - with permission, reads the current Wi-Fi SSID to reduce typing
 - **Manual and Hidden Networks** - supports manual SSID entry, open guest networks, and hidden-network QR codes
 - **Saved Networks** - stores trusted networks locally on the device for quick reuse
 - **Search** - finds saved networks quickly from the tab bar
 - **Share QR Images and Sign PDFs** - exports QR images and printable guest signs through the iOS share sheet
-- **Privacy-First** - no accounts, ads, tracking, analytics, or third-party data collection
+- **Privacy** - no accounts, ads or cross-app tracking; saved networks stay on the device; anonymous usage events (Firebase Analytics) never include Wi-Fi names, passwords, QR contents, scanned text or sign text
 
 ## Pricing
 
