@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://yoloabdo.com/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-22</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/apps/</loc>
@@ -10,11 +10,15 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
-        <lastmod>2026-10-18</lastmod>
+        <lastmod>2026-10-22</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-22</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/</loc>
+        <lastmod>2026-10-22</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/tally-1-3-2-release-notes/</loc>
