@@ -268,25 +268,6 @@ body.film .film-bar { display: flex; }
 
 body.clean .brand, body.clean .top-actions, body.clean .panel, body.clean .chapters, body.clean .hint { display: none; }
 
-/* ---------- small screens ---------- */
-@media (max-width: 760px) {
-  .brand { top: 14px; left: 16px; font-size: 16px; }
-  .brand svg { width: 24px; }
-  .top-actions { top: 10px; right: 10px; gap: 6px; }
-  .top-actions .btn { padding: 9px 11px; }
-  .top-actions .txt { display: none; }
-  .panel {
-    left: 10px; right: 10px; top: auto; bottom: 64px; width: auto;
-    max-height: 44vh; padding: 16px 16px 14px; border-radius: 18px;
-  }
-  .panel h1 { font-size: 26px; margin: 8px 0 12px; }
-  .lines li { font-size: 13.5px; }
-  .chapters { left: 10px; right: 10px; bottom: 10px; transform: none; justify-content: space-between; overflow-x: auto; }
-  .chap { padding: 8px 10px; }
-  .chap span { display: none; }
-  .hint { display: none; }
-}
-
 /* Text version for visitors and crawlers without JavaScript. */
 .static-guide {
   position: fixed; inset: 0; z-index: 100; overflow: auto;

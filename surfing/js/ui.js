@@ -74,9 +74,13 @@
         controlsEl.innerHTML = '';
         (def.controls || []).forEach((c) => controlsEl.appendChild(control(def, c)));
         panel.scrollTop = 0;
+        panel.querySelector('.panel-body').scrollTop = 0;
         panel.classList.remove('swap');
       }, 180);
       navButtons.forEach((b, i) => b.classList.toggle('on', i === D.index));
+      // keep the active chapter visible when the nav scrolls (phones)
+      const nav = $('chapters'), on = navButtons[D.index];
+      if (on && nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: on.offsetLeft - (nav.clientWidth - on.offsetWidth) / 2, behavior: 'smooth' });
       try { history.replaceState(null, '', '#' + def.id); } catch (e) { /* file:// may refuse */ }
       $('btn-prev').style.visibility = D.index === 0 ? 'hidden' : 'visible';
       $('btn-next').textContent = D.index === D.EXPLORE.length - 1 ? '▶ Watch the film' : 'Next →';
@@ -89,6 +93,19 @@
     $('btn-prev').onclick = () => D.goTo(D.index - 1);
     $('btn-next').onclick = () => (D.index === D.EXPLORE.length - 1 ? startFilm(false) : D.goTo(D.index + 1));
     $('btn-collapse').onclick = () => panel.classList.toggle('collapsed');
+
+    // free area between the header buttons, caption panel and chapter nav, in CSS px (phones only)
+    const syncSafe = () => {
+      const tall = innerHeight > 520;
+      if (innerWidth > 760 && tall) { SURF.safe = null; return; }
+      const pr = panel.getBoundingClientRect(), t = $('top-actions').getBoundingClientRect().bottom + 8;
+      SURF.safe = tall
+        ? { l: 8, r: innerWidth - 8, t, b: pr.top - 8 }
+        : { l: pr.right + 8, r: innerWidth - 8, t, b: $('chapters').getBoundingClientRect().top - 8 };
+    };
+    if (window.ResizeObserver) { const ro = new ResizeObserver(syncSafe); ro.observe(panel); ro.observe($('top-actions')); }
+    addEventListener('resize', syncSafe);
+    syncSafe();
 
     // film + recording
     const recBtn = $('btn-record'), exitBtn = $('btn-film-exit');
@@ -141,6 +158,7 @@
       const b = e.currentTarget;
       b.setAttribute('aria-pressed', on);
       b.querySelector('.txt').textContent = on ? 'Sound on' : 'Sound off';
+      b.setAttribute('aria-label', on ? 'Sound on' : 'Sound off');
     };
 
     addEventListener('keydown', (e) => {

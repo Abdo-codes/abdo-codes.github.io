@@ -10,7 +10,7 @@
         if (!I) { S.insetRect = null; return; }
         const W = canvas.width, H = canvas.height, portrait = W < H;
         const w = Math.round(portrait ? W * 0.52 : Math.min(W * 0.3, 560 * u)), h = Math.round((w * 9) / 16);
-        const top = S.film.active ? Math.round(H * 0.075 + 24 * u) : Math.round((portrait ? 62 : 70) * u);
+        const top = S.film.active ? Math.round(H * 0.075 + 24 * u) : Math.round((SURF.safe ? SURF.safe.t : portrait ? 62 : 70) * u);
         const x = W - w - Math.round(24 * u);
         S.insetRect = { x, y: top, w, h, label: I.label };
 
