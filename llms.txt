@@ -37,12 +37,13 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/sajda/)
+- Languages: [English](https://yoloabdo.com/sajda/) · [العربية](https://yoloabdo.com/sajda/ar/) · [Türkçe](https://yoloabdo.com/sajda/tr/) · [Français](https://yoloabdo.com/sajda/fr/) · [Español](https://yoloabdo.com/sajda/es/) · [اردو](https://yoloabdo.com/sajda/ur/) · [বাংলা](https://yoloabdo.com/sajda/bn/) · [Bahasa Indonesia](https://yoloabdo.com/sajda/id/) · [Русский](https://yoloabdo.com/sajda/ru/) · [Svenska](https://yoloabdo.com/sajda/sv/) · [中文](https://yoloabdo.com/sajda/zh/)
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [Sajdah 1.6.0 release notes](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/): a new Today screen, the Prayer Screen in six Premium styles with a free preview, the Athan in 13 voices (Premium), new Adhkar art, a What's New screen
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
 - [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
 - [The journey so far: building Sajdah for Apple TV](https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/)
-- [Support](https://yoloabdo.com/sajda/support/) · [Privacy Policy](https://yoloabdo.com/sajda/privacy/)
+- [Support](https://yoloabdo.com/sajda/support/) · [Privacy Policy](https://yoloabdo.com/sajda/privacy/) · [Privacy Policy in Arabic](https://yoloabdo.com/sajda/privacy/ar/)
 
 ## Key Features
 

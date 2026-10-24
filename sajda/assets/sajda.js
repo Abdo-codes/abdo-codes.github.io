@@ -1,52 +1,18 @@
-/* Sajdah landing page behavior: language switcher, FAQ, scroll reveal, gallery, sticky App Store bar. */
+/* Sajdah landing page behavior: language menu, FAQ, scroll reveal, gallery, sticky App Store bar. */
 (function () {
-    var rtl = ['ar', 'ur'];
-    var order = ['en', 'ar', 'tr', 'fr', 'es', 'ur', 'bn', 'id', 'ru', 'sv', 'zh'];
+    // Each language is a static page (/sajda/ for English, /sajda/<code>/ for the rest).
+    // The language menu is plain links in the HTML; this script only opens and closes it.
+    var lang = document.documentElement.lang || 'en';
+    var pages = { en: '/sajda/', ar: '/sajda/ar/', tr: '/sajda/tr/', fr: '/sajda/fr/', es: '/sajda/es/', ur: '/sajda/ur/', bn: '/sajda/bn/', id: '/sajda/id/', ru: '/sajda/ru/', sv: '/sajda/sv/', zh: '/sajda/zh/' };
 
-    function stored() { try { return localStorage.getItem('sajda-lang'); } catch (e) { return null; } }
-    function remember(code) { try { localStorage.setItem('sajda-lang', code); } catch (e) { /* storage blocked */ } }
-
-    var urlLang = new URLSearchParams(window.location.search).get('lang');
-    var lang = urlLang && T[urlLang] ? urlLang : stored() || (navigator.language || '').split('-')[0] || 'en';
-    if (!T[lang]) lang = 'en';
+    // Old links such as /sajda/?lang=ar go to the matching static page.
+    var legacy = new URLSearchParams(window.location.search).get('lang');
+    if (legacy && pages[legacy] && pages[legacy] !== window.location.pathname) window.location.replace(pages[legacy]);
 
     var toggle = document.getElementById('lang-toggle');
     var dropdown = document.getElementById('lang-dropdown');
 
     function closeDropdown() { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
-
-    function buildDropdown() {
-        while (dropdown.firstChild) dropdown.removeChild(dropdown.firstChild);
-        order.forEach(function (code) {
-            var btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'lang-option' + (code === lang ? ' active' : '');
-            btn.textContent = T[code].label;
-            btn.lang = code;
-            btn.addEventListener('click', function () { setLang(code); });
-            dropdown.appendChild(btn);
-        });
-    }
-
-    function apply() {
-        var t = T[lang];
-        document.documentElement.lang = lang;
-        document.documentElement.dir = rtl.indexOf(lang) >= 0 ? 'rtl' : 'ltr';
-        document.getElementById('current-lang-label').textContent = t.label;
-        var els = document.querySelectorAll('[data-i18n]');
-        for (var i = 0; i < els.length; i++) {
-            var value = t[els[i].getAttribute('data-i18n')];
-            if (value) els[i].textContent = value;
-        }
-    }
-
-    function setLang(code) {
-        lang = code;
-        remember(code);
-        apply();
-        closeDropdown();
-        buildDropdown();
-    }
 
     toggle.addEventListener('click', function () {
         var open = dropdown.classList.toggle('open');
@@ -54,9 +20,6 @@
     });
     document.addEventListener('click', function (e) { if (!e.target.closest('.lang-bar')) closeDropdown(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDropdown(); });
-
-    buildDropdown();
-    apply();
 
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(function (q) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://yoloabdo.com/</loc>
         <lastmod>2026-10-22</lastmod>
@@ -10,7 +10,179 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/ar/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/tr/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/fr/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/es/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/ur/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/bn/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/id/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/ru/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/sv/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/sajda/zh/</loc>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://yoloabdo.com/sajda/fr/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://yoloabdo.com/sajda/es/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://yoloabdo.com/sajda/ur/"/>
+        <xhtml:link rel="alternate" hreflang="bn" href="https://yoloabdo.com/sajda/bn/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://yoloabdo.com/sajda/id/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://yoloabdo.com/sajda/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://yoloabdo.com/sajda/sv/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yoloabdo.com/sajda/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/"/>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/</loc>
@@ -50,11 +222,17 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/privacy/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/privacy/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/privacy/"/>
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/privacy/ar/</loc>
-        <lastmod>2026-03-14</lastmod>
+        <lastmod>2026-10-24</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/privacy/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/sajda/privacy/"/>
     </url>
     <url>
         <loc>https://yoloabdo.com/tally/</loc>
