@@ -1,0 +1,51 @@
+/* ============================================
+   LTR OVERRIDES (English page only)
+   Scoped to [dir="ltr"] so the Arabic page is unchanged.
+   ============================================ */
+[dir="ltr"] body {
+    line-height: 1.65;
+}
+
+/* Step connector lines: the next step is on the right in LTR */
+[dir="ltr"] .step-card:not(:last-child)::after {
+    left: auto;
+    right: -16px;
+    transform: translateX(50%);
+}
+
+/* English app name plus descriptor in the hero title */
+[dir="ltr"] .hero-title {
+    line-height: 1.05;
+}
+
+[dir="ltr"] .hero-title-sub {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(22px, 4.2vw, 34px);
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--text-dim);
+}
+
+[dir="ltr"] .section-label {
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+[dir="ltr"] .nav-brand span {
+    letter-spacing: 0;
+}
+
+[dir="ltr"] .faq-item summary {
+    line-height: 1.4;
+}
+
+[dir="ltr"] .stat-label {
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    [dir="ltr"] .hero-title-sub {
+        margin-top: 8px;
+    }
+}
