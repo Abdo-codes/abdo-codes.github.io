@@ -212,6 +212,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/tateemi/)
+- [English Page](https://yoloabdo.com/tateemi/en/)
 - [App Store](https://apps.apple.com/us/app/tateemi-baby-vaccine-tracker/id6760822504)
 - [Support](https://yoloabdo.com/tateemi/support/)
 - [Privacy Policy](https://yoloabdo.com/tateemi/privacy/)
