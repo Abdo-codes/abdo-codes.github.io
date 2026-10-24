@@ -89,3 +89,8 @@
     .gn-stats { gap: 28px; }
     .lead { font-size: 17px; }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .nav-brand { padding: 4px 0; margin: -4px 0; }
+}

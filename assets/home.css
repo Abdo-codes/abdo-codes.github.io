@@ -337,3 +337,9 @@ section { margin-bottom: 72px; }
     align-items: center;
     justify-content: space-between;
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .wordmark { display: inline-flex; align-items: center; min-height: 44px; }
+    .topnav a { display: inline-flex; align-items: center; min-height: 44px; }
+}

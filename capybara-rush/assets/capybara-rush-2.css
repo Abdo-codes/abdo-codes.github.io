@@ -136,3 +136,17 @@ footer a {
         width: 100%;
     }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .brand {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+}

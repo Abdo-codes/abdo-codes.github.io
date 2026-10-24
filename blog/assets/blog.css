@@ -193,3 +193,8 @@ footer.site-footer a:hover { color: var(--accent); }
     html { scroll-behavior: auto; }
     * { transition-duration: 0.01ms !important; }
 }
+
+@media (max-width: 640px) {
+    .crumbs a { display: inline-block; padding: 12px 8px; margin: -12px -8px; }
+    .wordmark, .topnav a { display: inline-flex; align-items: center; min-height: 44px; }
+}
