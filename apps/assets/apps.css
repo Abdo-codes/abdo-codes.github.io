@@ -223,21 +223,6 @@ body {
 
 .app-card:hover .visual img.art { transform: scale(1.03); }
 
-.visual.center {
-    display: grid;
-    place-items: center;
-}
-
-.visual.center img.big-icon {
-    width: 112px;
-    height: 112px;
-    border-radius: 26px;
-    box-shadow: var(--shadow-lift);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.app-card:hover .visual.center img.big-icon { transform: scale(1.06) rotate(-3deg); }
-
 .visual .corner-icon {
     position: absolute;
     left: 18px;
@@ -252,17 +237,10 @@ body {
 .sajda-bg { background: #0d1a2d; }
 .tally-bg { background: #11131e; }
 .capybara-bg { background: #feeccf; }
-.wifi-bg { background: linear-gradient(160deg, #e8f4fd 0%, #d7ebfa 100%); }
-[data-theme="dark"] .wifi-bg { background: linear-gradient(160deg, #0f1b26 0%, #122334 100%); }
-.tateemi-bg { background: linear-gradient(160deg, #eaf7ee 0%, #d9f0e1 100%); }
-[data-theme="dark"] .tateemi-bg { background: linear-gradient(160deg, #0f2017 0%, #12281d 100%); }
-.nona-bg { background: linear-gradient(160deg, #2a2368 0%, #1d1846 100%); }
+.wifi-bg { background: #0a63e8; }
+.tateemi-bg { background: #e3f4e8; }
+.nona-bg { background: #2a2368; }
 .colortalk-bg { background: linear-gradient(160deg, #2a2368 0%, #15113a 100%); }
-
-.visual.contain img.art {
-    object-fit: contain;
-    padding: 20px 0 0;
-}
 
 .app-body {
     display: flex;

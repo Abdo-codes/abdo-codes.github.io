@@ -47,6 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
   <div id="stage">
@@ -59,11 +60,11 @@
     How Surfing Works
   </header>
 
-  <div class="top-actions">
-    <button id="btn-play" class="btn light"><span class="ico">🏄</span><span class="txt">Surf it</span></button>
-    <button id="btn-film" class="btn primary"><span class="ico">▶</span><span class="txt">Watch as film</span></button>
-    <button id="btn-record" class="btn"><span class="dot"></span><span class="txt">Record video</span></button>
-    <button id="btn-sound" class="btn" aria-pressed="false"><span class="ico">♪</span><span class="txt">Sound off</span></button>
+  <div id="top-actions" class="top-actions">
+    <button id="btn-play" class="btn light" aria-label="Surf it" title="Surf it"><span class="ico" aria-hidden="true">🏄</span><span class="txt">Surf it</span></button>
+    <button id="btn-film" class="btn primary" aria-label="Watch as film" title="Watch as film"><span class="ico" aria-hidden="true">▶</span><span class="txt">Watch as film</span></button>
+    <button id="btn-record" class="btn" aria-label="Record video" title="Record video"><span class="dot" aria-hidden="true"></span><span class="txt">Record video</span></button>
+    <button id="btn-sound" class="btn" aria-pressed="false" aria-label="Sound off" title="Sound"><span class="ico" aria-hidden="true">♪</span><span class="txt">Sound off</span></button>
   </div>
 
   <aside id="panel" class="panel">

@@ -39,24 +39,34 @@
         v.copy(L.p).project(camera);
         if (v.z > 1 || Math.abs(v.x) > 1.3 || Math.abs(v.y) > 1.3) continue;
         const x = (v.x * 0.5 + 0.5) * W, y = (-v.y * 0.5 + 0.5) * H;
-        const lift = (L.lift || 46) * u, dir = Math.sign(lift);
+        let lift = (L.lift || 46) * u, dir = Math.sign(lift);
+        ctx.font = `700 ${15 * u}px ${SANS}`;
+        spacing(0.2 * u);
+        const tw = ctx.measureText(L.text).width, pw = tw + 26 * u, ph = 32 * u;
+        // phones: SURF.safe is the free band between header, caption panel and chapter nav (CSS px).
+        // Flip a pill that would leave it, then slide it back inside; the stem still reaches the point.
+        const sf = S.film.active ? null : SURF.safe;
+        let px = x - pw / 2, py = dir > 0 ? y - lift - ph : y - lift;
+        if (sf) {
+          if (py < sf.t * u && dir > 0) { lift = -lift; dir = -1; py = y - lift; }
+          else if (py + ph > sf.b * u && dir < 0) { lift = -lift; dir = 1; py = y - lift - ph; }
+          px = Math.max(sf.l * u, Math.min(sf.r * u - pw, px));
+          py = Math.max(sf.t * u, Math.min(sf.b * u - ph, py));
+        } else px = Math.max(8 * u, Math.min(W - pw - 8 * u, px));
+        const sx = Math.max(px + ph / 2, Math.min(px + pw - ph / 2, x)), sy = py + ph / 2 < y ? py + ph : py;
         ctx.globalAlpha = L.a * (1 - S.fade);
         ctx.strokeStyle = 'rgba(255,255,255,0.8)';
         ctx.lineWidth = 1.5 * u;
-        ctx.beginPath(); ctx.moveTo(x, y - 5 * u * dir); ctx.lineTo(x, y - lift); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x, y - 5 * u * (sy < y ? 1 : -1)); ctx.lineTo(sx, sy); ctx.stroke();
         ctx.fillStyle = '#fff';
         ctx.beginPath(); ctx.arc(x, y, 4 * u, 0, 7); ctx.fill();
         ctx.strokeStyle = 'rgba(255,255,255,0.35)';
         ctx.beginPath(); ctx.arc(x, y, 9 * u, 0, 7); ctx.stroke();
-        ctx.font = `700 ${15 * u}px ${SANS}`;
-        spacing(0.2 * u);
-        const tw = ctx.measureText(L.text).width, pw = tw + 26 * u, ph = 32 * u;
-        const px = x - pw / 2, py = dir > 0 ? y - lift - ph : y - lift;
         ctx.fillStyle = 'rgba(6,18,26,0.74)';
         rr(px, py, pw, ph, ph / 2); ctx.fill();
         ctx.strokeStyle = 'rgba(255,255,255,0.22)'; ctx.lineWidth = u; ctx.stroke();
         ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText(L.text, x, py + ph / 2 + u);
+        ctx.fillText(L.text, px + pw / 2, py + ph / 2 + u);
       }
       ctx.globalAlpha = 1;
       spacing(0);

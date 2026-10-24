@@ -1,0 +1,76 @@
+/* Phones and short landscape screens. Desktop rules live in style.css and are not changed here. */
+
+/* shared: icon-only 44px actions, compact scrolling panel, scrolling chapter nav */
+@media (max-width: 760px), (max-height: 520px) {
+  .brand { top: 12px; left: 16px; font-size: 16px; gap: 8px; }
+  .brand svg { width: 24px; height: 16px; }
+  .top-actions { top: 8px; right: 10px; gap: 6px; }
+  .top-actions .btn { width: 44px; height: 44px; padding: 0; justify-content: center; font-size: 17px; }
+  .top-actions .txt { display: none; }
+  .top-actions .btn .dot { width: 12px; height: 12px; }
+
+  .panel {
+    display: flex; flex-direction: column; overflow: hidden;
+    padding: 14px 14px 10px; border-radius: 18px;
+  }
+  .kicker { font-size: 10px; padding-right: 44px; }
+  .panel h1 { font-size: 22px; line-height: 1.08; margin: 6px 0 8px; padding-right: 30px; }
+  .panel-body {
+    flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+    padding-bottom: 12px; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(#000 calc(100% - 14px), transparent);
+    mask-image: linear-gradient(#000 calc(100% - 14px), transparent);
+  }
+  .panel-body::-webkit-scrollbar { display: none; }
+  .lines { gap: 8px; }
+  .lines li { font-size: 13px; line-height: 1.46; padding-left: 15px; }
+  .lines.steps li { padding-left: 32px; }
+  .hud { margin-top: 12px; padding: 10px 12px; }
+  .controls { margin-top: 14px; gap: 12px; }
+  .panel-nav { flex: none; margin-top: 4px; }
+  .panel-nav .btn { min-height: 44px; padding: 0 18px; }
+  .collapse { top: 2px; right: 2px; width: 44px; height: 44px; border: 0; background: none; }
+  .collapse::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--line); border-radius: 50%; }
+
+  .chapters {
+    left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom));
+    transform: none; justify-content: flex-start; gap: 2px; padding: 4px;
+    overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity;
+  }
+  .chapters::-webkit-scrollbar { display: none; }
+  .chap { flex: none; min-height: 44px; padding: 0 14px; scroll-snap-align: center; }
+  .chap span { display: none; }
+  .hint { display: none; }
+  .tilt-chip { min-height: 44px; padding: 0 16px; }
+  .film-bar { padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+  .film-bar .btn { min-height: 44px; }
+  .rec-badge { top: 14px; right: 12px; }
+}
+
+/* portrait phone: caption panel sits above the chapter nav, at most 40% of the screen */
+@media (max-width: 760px) and (min-height: 521px) {
+  .panel {
+    left: 10px; right: 10px; top: auto; width: auto;
+    bottom: calc(72px + env(safe-area-inset-bottom));
+    max-height: 40vh; max-height: 40dvh;
+  }
+  .tilt-chip { top: 62px; }
+}
+
+/* narrow phones: brand on its own row, the four actions underneath */
+@media (max-width: 440px) and (min-height: 521px) {
+  .brand { top: 12px; left: 14px; }
+  .top-actions { top: 42px; left: 10px; right: auto; }
+  .tilt-chip { top: 96px; }
+}
+
+/* landscape phone: caption panel on the left, scene on the right */
+@media (max-height: 520px) {
+  .panel {
+    left: 12px; top: auto; width: min(320px, 44vw);
+    bottom: calc(68px + env(safe-area-inset-bottom));
+    max-height: min(calc(100vh - 128px), 62vh);
+  }
+  .chapters { left: 50%; right: auto; transform: translateX(-50%); max-width: calc(100vw - 24px); }
+  .tilt-chip { top: 58px; }
+}
