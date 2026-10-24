@@ -96,7 +96,7 @@ body::before {
 .lang-dropdown.open { display: block; }
 .lang-option {
     display: block; width: 100%; text-align: left; padding: 10px 18px; color: var(--text-muted);
-    font-size: 14px; cursor: pointer; background: none; border: none; font-family: inherit;
+    font-size: 14px; cursor: pointer; background: none; border: none; font-family: inherit; text-decoration: none;
     transition: background 0.15s, color 0.15s;
 }
 .lang-option:hover { background: rgba(78, 203, 160, 0.08); color: var(--text); }
