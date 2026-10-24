@@ -252,7 +252,6 @@ body {
 .sajda-bg { background: #0d1a2d; }
 .tally-bg { background: #11131e; }
 .capybara-bg { background: #feeccf; }
-.stampt-bg { background: #f3eadc; }
 .wifi-bg { background: linear-gradient(160deg, #e8f4fd 0%, #d7ebfa 100%); }
 [data-theme="dark"] .wifi-bg { background: linear-gradient(160deg, #0f1b26 0%, #122334 100%); }
 .tateemi-bg { background: linear-gradient(160deg, #eaf7ee 0%, #d9f0e1 100%); }
