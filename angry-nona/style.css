@@ -253,3 +253,10 @@ footer a { color: var(--plum); font-weight: 700; }
     .doc { padding: 44px 16px 90px; }
     .doc-nav .container { padding: 0 16px; }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .brand,
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; }
+    .doc-nav .nav-brand { display: inline-block; padding: 12px 0; margin: -12px 0; }
+}

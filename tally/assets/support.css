@@ -258,3 +258,8 @@ footer {
     main { padding: 48px 0 80px; }
     .contact-card { padding: 24px 20px; }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .nav-brand { display: inline-block; padding: 10px 0; margin: -10px 0; }
+}

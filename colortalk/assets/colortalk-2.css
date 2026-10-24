@@ -242,3 +242,8 @@ footer {
     html { scroll-behavior: auto; }
     .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .nav-brand { padding: 4px 0; margin: -4px 0; }
+}

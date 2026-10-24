@@ -285,3 +285,8 @@ footer {
     .contact-card { padding: 24px 20px; }
     .contact-email { max-width: 100%; padding: 12px 16px; font-size: 15px; word-break: break-all; }
 }
+
+/* Touch targets on small screens */
+@media (max-width: 640px) {
+    .nav-brand { display: inline-block; padding: 10px 0; margin: -10px 0; }
+}
