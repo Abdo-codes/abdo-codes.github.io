@@ -42,6 +42,17 @@
       if (!R.active) return;
       ctx.drawImage(gl, 0, 0, comp.width, comp.height);
       ctx.drawImage(ov, 0, 0, comp.width, comp.height);
+      // site address in the corner, so a shared clip leads back here
+      const px = Math.round(comp.height * 0.024), pad = Math.round(comp.height * 0.035);
+      ctx.save();
+      ctx.font = `600 ${px}px Manrope, system-ui, sans-serif`;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'bottom';
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      ctx.shadowBlur = px * 0.6;
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
+      ctx.fillText('yoloabdo.com/surfing', comp.width - pad, comp.height - pad);
+      ctx.restore();
     };
 
     R.stop = function () {

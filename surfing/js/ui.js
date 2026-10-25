@@ -73,6 +73,7 @@
         linesEl.innerHTML = def.lines.map((l) => `<li>${l}</li>`).join('');
         controlsEl.innerHTML = '';
         (def.controls || []).forEach((c) => controlsEl.appendChild(control(def, c)));
+        $('p-maker').hidden = def.id !== 'safety';
         panel.scrollTop = 0;
         panel.querySelector('.panel-body').scrollTop = 0;
         panel.classList.remove('swap');
@@ -89,6 +90,16 @@
       lastHud = '';
     }
     D.listeners.push(() => { if (D.mode === 'explore') render(D.def); });
+
+    // "made by" card after the film; clicks on any promo link are counted in Google Analytics
+    const makerCard = $('maker-card');
+    const hideMaker = () => { makerCard.hidden = true; };
+    $('maker-close').onclick = hideMaker;
+    D.listeners.push(hideMaker);
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-promo]');
+      if (a && typeof window.gtag === 'function') gtag('event', 'select_promotion', { promotion_name: 'surfing', creative_slot: a.dataset.promo });
+    });
 
     $('btn-prev').onclick = () => D.goTo(D.index - 1);
     $('btn-next').onclick = () => (D.index === D.EXPLORE.length - 1 ? startFilm(false) : D.goTo(D.index + 1));
@@ -124,13 +135,15 @@
       exitBtn.textContent = record ? '■ Stop & save video' : 'Exit film · Esc';
       D.startFilm();
     }
-    D.onFilmEnd = () => {
+    D.onFilmEnd = (completed) => {
       document.body.classList.remove('film');
       $('rec-badge').hidden = true;
-      if (recorder.active) {
+      const recorded = recorder.active;
+      if (recorded) {
         recorder.stop();
         SURF.main.setFixedSize(null);
       }
+      if (completed || recorded) makerCard.hidden = false;
     };
     $('btn-film').onclick = () => startFilm(false);
     $('btn-play').onclick = (e) => { e.currentTarget.blur(); D.goTo(D.EXPLORE.indexOf('play')); };
@@ -163,7 +176,7 @@
 
     addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' && e.key !== 'Escape') return;
-      if (e.key === 'Escape') D.stopFilm(false);
+      if (e.key === 'Escape') { if (D.mode !== 'film') hideMaker(); D.stopFilm(false); }
       if (D.mode !== 'explore' || D.def.id === 'play') return;
       if (e.key === 'ArrowRight') D.goTo(D.index + 1);
       if (e.key === 'ArrowLeft') D.goTo(D.index - 1);

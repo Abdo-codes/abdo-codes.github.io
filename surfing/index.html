@@ -48,6 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="maker.css">
 </head>
 <body>
   <div id="stage">
@@ -57,7 +58,8 @@
 
   <header class="brand">
     <svg viewBox="0 0 32 20" aria-hidden="true"><path d="M1 15c4 0 5-9 11-9 5 0 6 5 3 7-2 1-4-1-2-2M17 15c3 0 4-3 7-3s4 3 7 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    How Surfing Works
+    <span>How Surfing Works</span>
+    <a class="byline" href="/" data-promo="byline">by Abdelrahman Eita</a>
   </header>
 
   <div id="top-actions" class="top-actions">
@@ -82,6 +84,15 @@
         <div class="hud-state" id="hud-state"></div>
       </div>
       <div id="p-controls" class="controls"></div>
+      <div id="p-maker" class="maker" hidden>
+        <p class="maker-lead">Made by <a href="/" data-promo="panel-profile">Abdelrahman Eita</a>, an iOS developer in Amsterdam. I also build small apps:</p>
+        <div class="maker-apps">
+          <a href="/capybara-rush/" data-promo="panel-capybara-rush"><img src="/images/optimized/capybara-rush-icon.webp" alt="" width="40" height="40" loading="lazy"><span><b>Capybara Rush</b>A cozy reflex game for iPhone</span></a>
+          <a href="/wifi-qr/" data-promo="panel-wifi-qr"><img src="/images/optimized/wifi-qr-icon.webp" alt="" width="40" height="40" loading="lazy"><span><b>Wi-Fi QR</b>Guest Wi-Fi signs for hosts</span></a>
+          <a href="/tally/" data-promo="panel-tally"><img src="/images/optimized/tally-icon.webp" alt="" width="40" height="40" loading="lazy"><span><b>Tally</b>A scoreboard for your Apple TV</span></a>
+        </div>
+        <a class="maker-all" href="/apps/" data-promo="panel-all-apps">See all apps &rarr;</a>
+      </div>
     </div>
     <div class="panel-nav">
       <button id="btn-prev" class="btn ghost">← Back</button>
@@ -98,6 +109,23 @@
     <button id="btn-film-exit" class="btn small">Exit film · Esc</button>
   </div>
   <div id="rec-badge" class="rec-badge" hidden><i></i><span id="rec-time">REC 0:00</span></div>
+
+  <aside id="maker-card" class="maker-card" hidden aria-labelledby="maker-title">
+    <button id="maker-close" class="maker-close" aria-label="Close">&times;</button>
+    <div class="kicker">Thanks for watching</div>
+    <h2 id="maker-title">Made by Abdelrahman Eita</h2>
+    <p>I am an iOS developer in Amsterdam. I build small, focused apps for iPhone and Apple TV.</p>
+    <div class="maker-icons">
+      <a href="/capybara-rush/" data-promo="card-capybara-rush"><img src="/images/optimized/capybara-rush-icon.webp" alt="" width="56" height="56" loading="lazy"><span>Capybara Rush</span></a>
+      <a href="/wifi-qr/" data-promo="card-wifi-qr"><img src="/images/optimized/wifi-qr-icon.webp" alt="" width="56" height="56" loading="lazy"><span>Wi-Fi QR</span></a>
+      <a href="/tally/" data-promo="card-tally"><img src="/images/optimized/tally-icon.webp" alt="" width="56" height="56" loading="lazy"><span>Tally</span></a>
+      <a href="/sajda/" data-promo="card-sajda"><img src="/images/optimized/sajda-icon.webp" alt="" width="56" height="56" loading="lazy"><span>Sajdah</span></a>
+    </div>
+    <div class="maker-actions">
+      <a class="btn light" href="/apps/" data-promo="card-all-apps">See all apps</a>
+      <a class="btn ghost" href="/" data-promo="card-profile">About me</a>
+    </div>
+  </aside>
 
   <noscript>
     <article class="static-guide">
