@@ -44,16 +44,6 @@
         if (typeof gtag === 'function') gtag('event', event, params);
     }
 
-    // App Store button clicks
-    document.querySelectorAll('a[href*="apps.apple.com"], a[href*="apple.com/app-store"]').forEach(function(link) {
-        link.addEventListener('click', function() {
-            track('app_store_click', {
-                link_url: link.href,
-                link_text: (link.textContent || '').trim().slice(0, 50)
-            });
-        });
-    });
-
     // Nav link clicks
     document.querySelectorAll('.nav-links a').forEach(function(link) {
         link.addEventListener('click', function() {
