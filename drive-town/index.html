@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4eb">
+  <title>Drive Town: Dutch car theory exam practice in 3D (CBR)</title>
+  <meta name="description" content="Free 3D driving game for the Dutch car theory exam (CBR theorie-examen auto): 24 lessons, a 50-question mock exam, hazard clips and Dutch exam terms.">
+  <link rel="canonical" href="https://yoloabdo.com/drive-town/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoloabdo.com/drive-town/">
+  <meta property="og:site_name" content="Abdelrahman Eita">
+  <meta property="og:title" content="Drive Town: practise the Dutch car theory exam in 3D">
+  <meta property="og:description" content="Drive through a small Dutch town, make the priority, signal and speed decisions yourself, then take a 50-question mock exam. Free, in your browser.">
+  <meta property="og:image" content="https://yoloabdo.com/drive-town/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A yellow learner car on a 30 km/h Dutch street in the Drive Town 3D driving game">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://yoloabdo.com/drive-town/og-image.jpg">
+  <meta name="twitter:image:alt" content="A yellow learner car on a 30 km/h Dutch street in the Drive Town 3D driving game">
+  <meta name="twitter:creator" content="@yoloabdo">
+  <meta name="author" content="Abdelrahman Eita">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": ["WebApplication", "LearningResource"], "@id": "https://yoloabdo.com/drive-town/#app", "name": "Drive Town",
+        "headline": "Drive Town: Dutch car theory exam practice in 3D", "url": "https://yoloabdo.com/drive-town/", "inLanguage": "en",
+        "description": "A free 3D driving game for the Dutch car theory exam (CBR, category B). Assisted steering: the player chooses speed, indicators, waiting, merging and overtaking. 24 lessons in 7 chapters, a mock exam in the current CBR format (50 questions, 30 minutes, pass at 44), hazard-perception clips, weak-topic practice and Dutch exam terms. An independent practice project, not made by or linked to CBR.",
+        "applicationCategory": "EducationalApplication", "operatingSystem": "Any web browser with WebGL", "browserRequirements": "Requires JavaScript and WebGL",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }, "isAccessibleForFree": true,
+        "learningResourceType": ["Game", "Practice exam"], "interactivityType": "active", "educationalLevel": "Beginner",
+        "audience": { "@type": "EducationalAudience", "educationalRole": "student", "audienceType": "Learner drivers in the Netherlands preparing for the car theory exam" },
+        "about": [{ "@type": "Thing", "name": "CBR theorie-examen auto" }, { "@type": "Thing", "name": "Dutch traffic rules (RVV 1990)" }],
+        "teaches": ["Priority (voorrang) and traffic from the right", "Pedestrian and cyclist crossings", "Traffic lights, amber light and STOP signs", "Shark teeth and signed priority", "Speed limits", "Buses, narrow roads and railway crossings", "Roundabouts", "Zipper merge and joining from an acceleration lane", "Emergency vehicles and police instructions", "Trams, cycle lanes and fietsstraat", "Overtaking", "Hazard perception (gevaarherkenning)"],
+        "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Drive Town", "item": "https://yoloabdo.com/drive-town/" } ] }
+    ]
+  }
+  </script>
+  <script>
+    // Site analytics, only on the published site; local play makes no network requests.
+    if (location.hostname === 'yoloabdo.com') {
+      const tag = document.createElement('script'); tag.async = true; tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ'; document.head.append(tag);
+      window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'G-MKWK9CX2JJ');
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23dc735b'/%3E%3Cpath d='M23 52V12m18 40V12M32 15v8m0 7v8m0 7v7' stroke='%23fff4de' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-status="loading">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Drive Town home"><span class="brand-icon">⫶</span><span>drive<span class="brand-town">town</span><small>A little drive. A lot to learn.</small></span></a>
+    <div class="header-center"><span class="live-dot"></span> YOUR WORLD IS YOUR CLASSROOM</div>
+    <div class="header-actions"><span class="country"><span class="flag">▰</span> Netherlands</span><div class="practice-menu"><button id="practice-open" class="hazard-open" type="button" aria-expanded="false" aria-controls="practice-list">Practice <span aria-hidden="true">▾</span></button><div id="practice-list" class="practice-list" hidden><button id="exam-open" type="button"><strong>Mock exam</strong><small>50 questions · 30 minutes</small></button><button id="hazard-open" type="button"><strong>Hazard test</strong><small>25 short clips</small></button></div></div><button id="help" class="quiet-button" aria-label="Help and controls">?</button></div>
+  </header>
+  <main class="game-layout">
+    <aside class="learning-panel">
+      <div id="chapter-label" class="chapter-label">YOUR FIRST CHAPTER <span>01</span></div>
+      <nav id="chapter-tabs" class="chapter-tabs" aria-label="Choose a chapter"></nav>
+      <h1 id="chapter-heading">Good habits.<br> Great journeys.</h1>
+      <p id="chapter-intro" class="chapter-intro">Five small missions. A whole new way to see the road.</p>
+      <div class="progress-caption"><span>Rules practised</span><strong id="progress-count">0 / 5</strong></div>
+      <div class="progress-track"><span id="progress-fill"></span></div>
+      <div class="practice-bar"><div id="practice-modes" role="group" aria-label="Practice mode"><button data-mode="guided" aria-pressed="true">Guided</button><button data-mode="independent" aria-pressed="false">Independent</button></div><button id="open-lessons">Lessons ☷</button></div>
+      <small id="independent-count" class="independent-count">0/12 independent passes</small>
+      <nav id="mission-list" aria-label="Driving missions"></nav>
+      <section class="coach-card" aria-label="Driving instructor">
+        <div class="coach-heading"><span class="coach-avatar" aria-hidden="true">M</span><div><strong>Mila</strong><small>Your driving coach</small></div><span class="coach-online"></span></div>
+        <p id="coach-message">Your town is getting ready…</p>
+      </section>
+      <div class="sidebar-footer"><span>↳</span> Mistakes are part of the journey. <a class="byline" href="https://yoloabdo.com/" target="_blank" rel="noopener">By Abdelrahman Eita</a></div>
+    </aside>
+    <section class="drive-panel" aria-label="Interactive 3D driving town">
+      <div class="world-toolbar"><div><span class="live-dot"></span> <span id="toolbar-chapter">BAKERY RUN / NEIGHBOURHOOD 01</span>
+        <button id="show-hint" class="hint-button" hidden>Show a hint · practice credit only</button>
+        <span id="attempt-credit" class="attempt-credit" role="status" hidden>Practice attempt · hint used</span>
+      </div><div class="view-controls"><button id="camera" class="glass-button" aria-label="Switch camera view">◈ <span>Overview</span></button><button id="sound" class="glass-button" aria-label="Enable sound">♫</button><button id="pause" class="glass-button" aria-label="Pause driving">Ⅱ</button></div></div>
+      <canvas id="world" aria-label="3D town with a yellow learner car following a blue route"></canvas>
+      <div class="mission-ribbon"><span class="ribbon-icon" id="ribbon-icon">30</span><div><small id="mission-number">MISSION 01 / 05</small><strong id="mission-title">A gentle start</strong></div><span id="distance-hint">Ready when you are</span></div>
+      <section id="direction-alert" class="direction-alert" aria-label="Route directions" hidden><span id="direction-arrow" class="direction-arrow" aria-hidden="true">↑</span><div class="direction-copy"><strong id="direction-title"></strong><small id="direction-detail"></small></div><span id="direction-distance" class="direction-distance"></span></section>
+      <span id="direction-announcement" class="direction-announcement" role="status" aria-live="polite" aria-atomic="true"></span>
+      <div id="lamp-chip" class="lamp-chip" role="status" aria-live="polite" data-light="green" hidden><span class="lamp-dot" aria-hidden="true"></span><span id="lamp-text">Light: green</span></div>
+      <div id="street-cue" class="street-cue" role="status" aria-live="polite" data-cue="brake" hidden><span></span></div>
+      <div id="siren-cue" class="siren-cue" role="status" aria-live="polite" data-side="left" hidden><span id="siren-text"></span></div>
+      <div class="minimap"><div class="minimap-title">YOUR LITTLE WORLD <span>N ↑</span></div><svg id="map" viewBox="0 0 120 96" role="img" aria-label="Town route and your car position"><rect x="1" y="1" width="118" height="94" rx="11" fill="#e8ebdc"/><path id="map-canal" d="M13 0v96" stroke="#a4c5bf" stroke-width="8"/><path id="map-route" fill="none" stroke="#afbbb0" stroke-width="7" stroke-linecap="round"/><path id="map-travel" fill="none" stroke="#547e75" stroke-width="1.6"/><g id="map-markers"></g><g id="map-street"></g><circle id="map-hazard" r="2.8" fill="#dd755b"/><circle id="map-player" r="3.6" fill="#e9b755" stroke="#fffaf0" stroke-width="1.4"/></svg><div class="map-caption"><span class="map-dot"></span> You <span class="route-dot"></span> Learning route</div></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="overlay" class="overlay" aria-live="polite"></div>
+      <div class="driving-hud">
+        <div class="speed-block"><div class="speed-value"><strong id="speed">0</strong><span>km/h</span></div><span id="speed-limit" class="speed-limit" aria-label="30 kilometres per hour maximum">30</span></div>
+        <div class="signal-controls"><button id="signal-left" class="control-button" aria-label="Signal left (Q or left arrow)">←<small>Signal<br>left</small></button><span class="signal-label" aria-hidden="true">SIGNAL</span><button id="signal-right" class="control-button" aria-label="Signal right (E or right arrow)">→<small>Signal<br>right</small></button></div>
+        <button id="cruise" class="cruise-button" aria-label="Slow to 10 kilometres per hour (C)">Slow <strong>10</strong><small>C</small></button>
+        <div class="pedals"><button id="brake" class="pedal brake" aria-label="Stop: tap for a full stop or hold to brake (Space)"><span>▥</span><strong>Stop</strong><small>TAP / HOLD</small></button><button id="accelerate" class="pedal accelerate" aria-label="Drive: tap for 22 kilometres per hour or hold to accelerate (W)"><span>▤</span><strong>Drive</strong><small id="drive-hint">TAP 22 / HOLD</small></button><button id="park" class="pedal park" aria-label="Park in the bakery bay (F)"><span>P</span><strong>Park</strong><small>F</small></button></div>
+      </div>
+      <div class="drive-footer"><span><span class="live-dot"></span> Assisted steering · you make the decisions</span><span id="footer-state">Take your time. There is no timer.</span></div>
+    </section>
+  </main>
+  <div id="exam-root" class="exam-root" role="region" aria-label="Mock exam" data-screen="start" hidden>
+    <header id="exam-bar" class="exam-bar" hidden></header>
+    <div id="exam-scene" class="exam-scene" hidden><div id="exam-stage" class="exam-stage" role="group" aria-label="Picture of the situation"><div id="exam-pins" class="exam-pins"></div><button type="button" id="exam-play" class="primary-button exam-play" data-act="play" hidden>▶ Play the clip</button><button type="button" id="exam-clip-close" class="secondary-button exam-clip-close" data-act="clip-close" hidden>Close the clip</button></div></div>
+    <div id="exam-card" class="exam-card" tabindex="-1"></div>
+    <footer id="exam-foot" class="exam-foot" hidden></footer>
+    <p id="exam-live" class="sr-only" role="status" aria-live="polite"></p>
+    <p id="exam-toast" class="exam-toast" role="status" hidden></p>
+    <dialog id="exam-help" class="exam-dialog" aria-labelledby="exam-help-title"></dialog>
+    <dialog id="exam-confirm" class="exam-dialog" aria-labelledby="exam-confirm-title"></dialog>
+  </div>
+  <dialog id="help-dialog">
+    <button id="close-help" class="dialog-close" aria-label="Close help">×</button><span class="eyebrow">WELCOME TO DRIVE TOWN</span><h2>The road is your classroom.</h2>
+    <p>Tap Drive for a steady pace, Slow for 10 km/h (30 km/h on the merge roads), and Stop for a full stop. Hold Drive to accelerate manually. Use the left and right indicator buttons, then use the button next to Drive. It changes name by lesson: Park when stopped beside the bay, Merge, Overtake or Back to lane. Steering follows the blue route while you decide when it is safe to go.</p>
+    <p>Guided mode offers coach prompts. Independent mode varies traffic timing and removes safety prompts until you choose Show a hint. Lessons opens all 24 named topics. Every mission ends with a rule check; a wrong answer leads to a changed situation. Independent passes require no hints or wrong answers on that attempt.</p>
+    <p>Practice in the header opens the Mock exam, the main way to practise: 50 questions in 30 minutes, a pass at 44, with pictures and an overview. Hazard test opens a separate practice of 25 short situations. Camera cycles through Following, Look right and Overview. In the merging, siren and street lessons it cycles Following and Look towards the other side. Look right shows the road beside and behind you before a turn. Recorded decisions use their own fitted view.</p>
+    <details><summary>Keyboard shortcuts</summary><dl class="help-controls"><dt>W / ↑</dt><dd>Tap for a steady pace; hold to accelerate</dd><dt>Space / ↓</dt><dd>Tap for a full stop; hold to brake</dd><dt>C</dt><dd>Slow to 10 km/h (30 km/h on the merge roads)</dd><dt>Q / E or ← / →</dt><dd>Left / right indicator</dd><dt>F</dt><dd>Park beside the bakery bay, Merge (chapter 05), Overtake and Back to lane (chapter 07 lesson 23)</dd><dt>V / P</dt><dd>Change view / pause</dd></dl></details>
+    <p>Feedback shows the recorded decision and actual speed. Pause or seek the replay, or jump to the decision frame. Progress is saved in this browser.</p>
+    <p class="help-scope">The seven chapters cover 24 selected Dutch rule topics. All missions end with a short rule check. It is a learning prototype, with original scenarios and links to the <a href="https://wetten.overheid.nl/BWBR0004825/2026-07-01" target="_blank" rel="noopener">RVV 1990</a>.</p>
+    <p class="help-scope">Drive Town is an independent practice project by <a href="https://yoloabdo.com/" target="_blank" rel="noopener">Abdelrahman Eita</a>. It is not made by or linked to CBR, and a practice result does not predict your exam result.</p>
+    <p class="help-scope"><a href="./credits.html" target="_blank" rel="noopener">3D artwork credits</a></p>
+    <button id="reset-progress" class="secondary-button">Reset practice progress</button>
+  </dialog>
+  <dialog id="lessons-dialog"><button id="close-lessons" class="dialog-close" aria-label="Close lessons">×</button><span class="eyebrow">YOUR CHAPTER OUTLINE</span><h2>Choose a rule to practise.</h2><p>Start any lesson in the selected practice mode. Leaving an active drive pauses it.</p><div id="lesson-outline"></div></dialog>
+  <noscript><div class="unsupported"><p>This driving game needs JavaScript and WebGL.</p><p>Drive Town is a free 3D driving game for the Dutch car theory exam (CBR theorie-examen auto). You drive a learner car through a small Dutch town and decide speed, indicators and when to wait. It has 24 lessons in 7 chapters: priority, crossings, lights and STOP signs, buses and railway crossings, roundabouts, merging, emergency vehicles, trams, cycle lanes and overtaking. A mock exam follows the current CBR format: 50 questions in 30 minutes, with a pass at 44. Drive Town is an independent practice project by <a href="https://yoloabdo.com/">Abdelrahman Eita</a>. It is not made by or linked to CBR.</p></div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* The result (Uitslag) and the review cards. The verdict has an icon and a word, not a colour alone. */
+.exam-passmark { margin:0 0 8px; font-size:16px; font-weight:600; }
+.verdict { display:inline-flex; align-items:center; gap:8px; margin:0 0 10px; padding:6px 16px; border-radius:22px; font-size:20px; font-weight:700; }
+.verdict.pass { background:#dbebd2; color:#23472f; }
+.verdict.fail { background:#f7e0d6; color:#7d2f1d; }
+.result-topics { display:grid; gap:6px; margin:0 0 12px; padding:0; list-style:none; }
+.result-topics li { padding:8px 14px; border-radius:10px; background:var(--exam-card); border:1px solid var(--exam-line); font-size:15px; }
+.result-stats { font-size:15px; color:var(--exam-soft); }
+.result-actions .primary-button { flex:1 1 100%; }
+.review { display:grid; gap:12px; }
+.review-topic { border:1.5px solid var(--exam-line); border-radius:12px; background:var(--exam-card); padding:0 14px 12px; }
+.review-topic summary { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; min-height:52px; padding:12px 0; cursor:pointer; font-size:16px; }
+.review-topic summary span { margin-left:auto; font-size:14px; color:var(--exam-soft); }
+.review-topic .exam-actions { margin:6px 0 12px; }
+.review-list { display:grid; gap:14px; margin:0; padding:0; list-style:none; }
+.review-card { padding:14px; border-radius:12px; background:var(--paper); border:1px solid var(--exam-line); }
+.review-q { margin:0 0 10px; font-weight:600; }
+.review-q span { display:block; font-size:13px; letter-spacing:.4px; text-transform:uppercase; color:var(--exam-soft); }
+.review-answers { display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:0 0 10px; font-size:15px; }
+.review-answers dt { font-weight:700; }
+.review-answers dd { margin:0; }
+.review-answers dd.wrong::before { content:"✕ "; color:var(--exam-red); font-weight:700; }
+.review-answers dd.right::before { content:"✓ "; color:var(--exam-green); font-weight:700; }
+.review-card .exam-actions { margin:10px 0 0; }
+@media (max-width:520px) { .review-answers { grid-template-columns:1fr; } .review-answers dd { margin-bottom:6px; } }
+/* Phone: the next step comes right after the verdict, before the mistakes by topic and the review. */
+@media (max-width:520px) {
+  .exam-result { display:flex; flex-direction:column; }
+  .exam-result .result-actions { order:1; margin:8px 0; }
+  .exam-result .result-block { order:2; }
+  .exam-result .result-review { order:3; }
+}

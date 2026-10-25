@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next app, ColorTalk (iPad ABC coloring app for children 5 and under), is coming soon. This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next app, ColorTalk (iPad ABC coloring app for children 5 and under), is coming soon. This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -25,7 +25,8 @@
 - [All Apps](https://yoloabdo.com/apps/)
 - [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
 - [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
-- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts and the surfing guide in full
+- [Drive Town](https://yoloabdo.com/drive-town/): a free 3D driving game to practise the Dutch car theory exam (CBR)
+- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts, the surfing guide and the Drive Town guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
 ---
@@ -287,9 +288,51 @@
 
 ---
 
+# Drive Town - Dutch Car Theory Exam Practice in 3D
+
+> Drive Town is a free 3D driving game by Abdelrahman Eita for learners who prepare for the Dutch car theory exam (CBR theorie-examen auto, category B). It runs in the browser on desktop and phone. The player drives a learner car through a small Dutch town with assisted steering and decides the speed, the indicators, when to wait, when to merge and when to overtake. It has 24 lessons in 7 chapters, a mock exam in the current CBR format (50 questions in 30 minutes, with a pass at 44), a hazard-perception practice and Dutch exam terms. It is an independent practice project and is not made by or linked to CBR.
+
+## Links
+
+- [Play Drive Town](https://yoloabdo.com/drive-town/)
+- [3D artwork credits](https://yoloabdo.com/drive-town/credits.html)
+
+## Key Features
+
+- **24 driving lessons in 7 chapters** — Bakery run (speed, priority from the right, zebra crossings, cyclists, parking), Signs & signals (traffic lights, STOP, shark teeth and signed priority, a changing speed limit), Sharing the road (buses leaving a stop, narrow roads, railway crossings), Roundabouts (entering, signalling out, cyclists on the cycle path), Merging (zipper merge, joining from an acceleration lane, making room), Lights & sirens (amber light, emergency vehicles, police instructions), Trams & bikes (trams, cycle lanes, overtaking)
+- **Mock exam** — 50 questions in 30 minutes with a pass at 44, like the CBR car theory exam since 7 April 2025. Six question types: Ja/Nee, multiple choice, multiple response, number, tap a marker in a picture, and put in order. Picture questions play a short 3D clip and stop at the key moment. The screen uses the exam terms Vraag x van y, Resterende tijd, Markeren and Overzicht. The bank has 193 original questions in eight exam topics, each with an explanation and an official source
+- **Hazard practice** — 61 short 3D clips, 25 per run, with the answers Brake, Release accelerator or Do nothing. It is based on the former CBR hazard-perception part (gevaarherkenning, used until 6 April 2025)
+- **Feedback and replay** — every lesson ends with a rule check; a mistake shows the recorded speed and position, with a replay of the decision moment
+- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and "Practise this" opens the matching lesson and clips
+- **Dutch exam terms** — 115 words such as voorrang verlenen (give way), haaientanden (shark teeth), ritsen (zipper merge) and invoegen (merging in), shown next to the English
+- **Guided and Independent modes** — coach prompts, or varied traffic with no safety hints
+
+## Pricing
+
+- Free, with no account, ads or in-app purchases
+
+## Platform
+
+- Any modern browser with WebGL, on desktop and phone
+- Interface in English, with Dutch exam terms
+- Game progress is saved only in the browser. The published page counts visits with Google Analytics, like the rest of this site
+
+## Limits
+
+- Practice only: a mock exam result does not predict a real exam result
+- Rules link to the Dutch traffic law (RVV 1990) and other official sources. A driving instructor has not yet reviewed every question and clip
+- Drive Town is not made by, endorsed by or linked to CBR
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
 # Full text
 
-> The sections below repeat the full text of the blog posts and the surfing guide, so a model can answer without loading the HTML pages.
+> The sections below repeat the full text of the blog posts, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
 
 ---
 
@@ -934,3 +977,91 @@ Source: https://yoloabdo.com/surfing/
 - **Rip currents** are rivers of water rushing back out to sea. Waves pile water onto the beach, and it escapes through deeper gaps between the sandbars.
 - **Spot one** by the calm-looking, darker gap where waves are not breaking — often with foam or sand drifting outward.
 - **Caught in one?** Do not swim against it. Stay calm, float, swim parallel to the beach until you are out of the pull, then let the waves bring you in.
+
+---
+
+# Drive Town: Dutch car theory exam practice in 3D
+
+Source: https://yoloabdo.com/drive-town/
+
+## How it works
+
+- Drive Town is a free browser game for learners who prepare for the Dutch car theory exam (CBR theorie-examen auto, category B). It is an independent practice project by Abdelrahman Eita and is not made by or linked to CBR.
+- The route steers the car. The player chooses the speed (Drive, Slow, Stop), the left and right indicators, when to wait, and when to park, merge, overtake or go back to the lane.
+- Each lesson ends with a rule check. A wrong answer explains the rule and gives a changed situation with three choices.
+- A mistake on the road shows the recorded speed, position and road users, with a replay that can pause, seek and jump to the decision moment.
+- Guided mode gives coach prompts. Independent mode varies the traffic timing and gives no safety hints until the player asks for one.
+- Progress is saved only in the browser. The interface is in English, and each lesson card shows the Dutch exam terms.
+
+## The 24 lessons
+
+### 01 Bakery run
+
+- **A gentle start** (Read the road): Drive through the signed 30 km/h zone. Source: RVV 1990 · Article 62 / sign A1.
+- **Someone on your right** (Give way): Let the orange car from your right pass. Source: RVV 1990 · Article 15.
+- **People come first** (Protect pedestrians): Turn right slowly, then let the pedestrian finish crossing the zebra. Source: RVV 1990 · Article 49.
+- **One last look** (Turn safely): Signal right and let the cyclist continue straight. Source: RVV 1990 · Articles 18 and 55.
+- **Made it to the bakery** (Finish with care): Signal, stop by the bay, let the pedestrian pass, then park. Source: RVV 1990 · Article 54.
+
+### 02 Signs & signals
+
+- **A light to listen to** (Red means stop): Wait before the stop line while the light is red. Continue on green when the road is clear. Source: RVV 1990 · Articles 68 and 14.
+- **A proper full stop** (STOP and give way): Stop completely before the line, then give way to the crossing car. Source: RVV 1990 · Article 62 / sign B7.
+- **The triangle has a say** (Recognise signed priority): Give priority at the yield sign and shark teeth. Continue once the crossing road is clear. Source: RVV 1990 · Articles 62, 80 / sign B6.
+- **A quieter street ahead** (50 becomes 30): Choose a comfortable pace on the 50 road. Slow to 30 or below before the new 30 sign. Source: RVV 1990 · Article 62 / sign A1.
+
+### 03 Sharing the road
+
+- **Room for the bus** (Let a signalling bus leave): In this built-up area, make room for the bus indicating left to leave its stop. Source: RVV 1990 · Article 56.
+- **One car at a time** (Read priority at a narrowing): The circular F5 sign gives the oncoming car priority through the narrow passage. Source: RVV 1990 · Article 62 / signs F5 and F6.
+- **Wait beyond the train** (Watch lights and barriers): Wait before the crossing until the red lights are off and the barriers fully open. Check that you can clear the tracks. Source: RVV 1990 · Articles 15a, 71 / ProRail.
+
+### 04 Roundabouts
+
+- **Traffic on the roundabout first** (Give way on entry): Give way to the car already on the roundabout, then enter when it has passed. Source: RVV 1990 · Articles 15, 62 and 80 / signs B6 and D1.
+- **Say where you are going** (Signal right to leave): Go straight on: switch on your right indicator before you leave the roundabout. Source: RVV 1990 · Article 55.
+- **Cyclists around the roundabout** (Give way as you leave): Signal right, then let the cyclist on the roundabout cycle path pass before you leave. Source: RVV 1990 · Articles 18 and 55 · ANWB roundabout guidance.
+
+### 05 Merging
+
+- **Take turns** (Merge where a lane ends): Drive on in your lane. Merge from the sign, when a gap is open. Source: RVV 1990 · Articles 54, 55 and 77.
+- **Join the road** (Merge from an acceleration lane): Build speed on the lane. Merge left when there is a gap. Source: RVV 1990 · Articles 1, 54 and 55.
+- **Make room** (Help a merging driver): Watch the acceleration lane. Give room if the driver cannot merge. Source: RVV 1990 · Article 54.
+
+### 06 Lights & sirens
+
+- **The light turns amber** (Amber means stop): Watch the light. When it turns amber, stop if you can stop in a safe way. Source: RVV 1990 · Article 68.
+- **Make way** (Let a priority vehicle go first): When you hear or see a siren, find the ambulance. Let it go first, then go on. Source: RVV 1990 · Article 50.
+- **Who ranks first?** (An instruction ranks above a light): Look at the officer and at the light. Obey the officer first. Source: RVV 1990 · Articles 64, 82 and 84.
+
+### 07 Trams & bikes
+
+- **Trams and passengers** (Give way to passengers and trams): Drive on. Give the passengers time. Let the tram go first. Source: RVV 1990 · Articles 15 and 52.
+- **Cyclists and the strip** (Give room to cyclists): Drive on. Watch the van and the cyclist. Give room. Source: RVV 1990 · Articles 10 and 23.
+- **Overtaking** (Pass only when you may and can): Look at the line, the crossing and the road ahead. Pass only when you may and can. Source: RVV 1990 · Articles 11, 12, 19, 55 and 76.
+
+## The mock exam
+
+- The CBR car theory exam has been one test since 7 April 2025: 50 scored questions in 30 minutes, with a pass at 44. Short 3D animations are part of the questions. Drive Town copies this format for practice.
+- Six question types: Ja/Nee, multiple choice, multiple response (every right answer and no wrong one), number, tap a marker in a picture, and put in order.
+- Picture questions play a short recording from the 3D lessons and stop at the key moment, for example "who goes first?".
+- The screen uses the exam terms: Vraag x van y, Resterende tijd, Markeren, Overzicht, Vorige and Volgende.
+- The bank has 193 original questions in eight topics of the CBR exam plan, such as Gebruik van de weg (road use) and Voorrang en voor laten gaan (priority). Each question has an explanation and an official source.
+- The result shows pass or fail at 44 of 50, a score per topic and a review of each wrong answer. It is practice and does not predict the real result.
+
+## The hazard practice
+
+- 61 short 3D clips from the lessons play for a few seconds and stop. The player chooses Brake, Release accelerator or Do nothing.
+- Each run draws 25 clips in mixed order. The feedback explains the answer, links the rule and plays what happens next.
+- The format is based on the former CBR hazard-perception part (gevaarherkenning), which the exam used until 6 April 2025.
+
+## Weak topics and Dutch terms
+
+- Mistakes from the mock exam, the hazard practice and the lessons count per topic. "Practise this" opens the lesson and the clips for the weakest topic.
+- The glossary has 115 Dutch exam words, for example voorrang verlenen (give way), haaientanden (shark teeth), bebouwde kom (built-up area), ritsen (zipper merge) and invoegen (merging in).
+
+## Sources and limits
+
+- Rules link to the Dutch traffic law, RVV 1990 (https://wetten.overheid.nl/BWBR0004825/2026-07-01), and to CBR, ProRail, ANWB and government pages where the law has no article.
+- Some points are game choices or a reading of the law, not confirmed facts, for example gap times for merging and the side gap when passing a cyclist. A driving instructor has not yet reviewed every question and clip.
+- Drive Town does not cover every exam topic and does not prove exam readiness.

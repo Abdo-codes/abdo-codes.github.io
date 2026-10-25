@@ -1,0 +1,21 @@
+/* Chapter 07 Trams and bikes. ui.js sets body[data-kind="street"]. The Overtake button is the contextual action button (#park, see merge-ui.css). */
+body[data-kind="street"] .cruise-button { display:flex; }
+body[data-kind="street"] .driving-hud { gap:9px; }
+body[data-kind="street"] #map-canal { display:none; }
+/* The cue for each sound (street-hud.js): same place and look as the lamp chip of chapter 06. */
+.street-cue { position:absolute; top:66px; left:50%; transform:translateX(-50%); z-index:3; pointer-events:none; }
+.street-cue[hidden] { display:none; }
+.street-cue span { display:flex; align-items:center; gap:9px; padding:8px 15px 8px 11px; border-radius:999px; background:#fffbedf5; border:1px solid #d5dcc7; color:#345943; font-size:13px; font-weight:650; white-space:nowrap; box-shadow:0 5px 18px #4355401a; }
+.street-cue span::before { content:'♪'; display:grid; place-items:center; width:18px; height:18px; border-radius:50%; background:#3f7fb0; color:#fff; font-size:11px; }
+.street-cue[data-cue="doors"] span::before { background:#49cd81; }
+body[data-status="review"] .street-cue { display:none; }
+@media(max-width:800px) { .street-cue { top:auto; bottom:172px; left:10px; transform:none; } .street-cue span { font-size:12px; padding:6px 11px 6px 9px; } }
+@media(max-width:340px) { .park strong { font-size:12px; letter-spacing:0; } }
+/* Ready card on a phone: a short card at the bottom of the scene, over the idle controls, so the road shows above it (the ready camera in street-layout.js frames the road for a tall canvas). */
+@media(max-width:800px) {
+  body[data-kind="street"][data-status="ready"] .overlay { align-items:flex-end; padding:0 12px 12px; }
+  body[data-kind="street"][data-status="ready"] .ready-card { width:100%; padding:12px 16px 2px; }
+  body[data-kind="street"][data-status="ready"] .ready-card :is(.card-icon,.eyebrow,.ready-note) { display:none; }
+  body[data-kind="street"][data-status="ready"] .ready-card h2 { font-size:21px; margin:0 0 6px; }
+  body[data-kind="street"][data-status="ready"] .ready-card p { font-size:11px; line-height:1.5; margin:0 0 8px; }
+}

@@ -1,0 +1,32 @@
+// The signs that the exam items use: id -> { annex, shape, glyph, num?, term }. The ids come from the annexes of the RVV 1990.
+// `A1-60` and `A4-40` are sign A1 and sign A4 with a number. `shape` and `glyph` are drawn by sign-svg.js. `term` is a glossary key:
+// an item may not list the term of its own sign in `terms`, because that would give the answer away.
+export const SIGNS = {
+  A1: { annex: 'A', shape: 'circle-red', glyph: 'num', num: 50, term: 'maximumsnelheid' },
+  'A1-60': { annex: 'A', shape: 'circle-red', glyph: 'num', num: 60, term: 'maximumsnelheid' },
+  'A4-40': { annex: 'A', shape: 'square-blue', glyph: 'num', num: 40, term: 'adviessnelheid' },
+  B1: { annex: 'B', shape: 'diamond', glyph: null, term: 'voorrangsweg' },
+  B2: { annex: 'B', shape: 'diamond', glyph: 'end-bar', term: 'einde voorrangsweg' },
+  B6: { annex: 'B', shape: 'tri-down', glyph: null, term: 'verleen voorrang' },
+  B7: { annex: 'B', shape: 'octagon', glyph: 'text-stop', term: 'stop' },
+  C1: { annex: 'C', shape: 'circle-red', glyph: null, term: 'gesloten voor voertuigen' },
+  C2: { annex: 'C', shape: 'circle-red', glyph: 'bar', term: 'gesloten in deze richting' },
+  C6: { annex: 'C', shape: 'circle-red', glyph: 'car', term: 'gesloten voor motorvoertuigen' },
+  C14: { annex: 'C', shape: 'circle-red', glyph: 'bike', term: 'gesloten voor fietsen' },
+  C16: { annex: 'C', shape: 'circle-red', glyph: 'walker', term: 'gesloten voor voetgangers' },
+  D1: { annex: 'D', shape: 'circle-blue', glyph: 'roundabout', term: 'rotonde' },
+  E1: { annex: 'E', shape: 'circle-blue-red', glyph: 'diag', term: 'parkeerverbod' },
+  E2: { annex: 'E', shape: 'circle-blue-red', glyph: 'cross', term: 'stopverbod' },
+  F1: { annex: 'F', shape: 'circle-red', glyph: 'overtake-ban', term: 'inhaalverbod' },
+  F2: { annex: 'F', shape: 'circle-grey', glyph: 'overtake-end', term: 'einde inhaalverbod' },
+  F6: { annex: 'F', shape: 'square-blue', glyph: 'arrows-priority', term: 'voorrang op tegenliggers' },
+  G11: { annex: 'G', shape: 'circle-blue', glyph: 'bike', term: 'verplicht fietspad' },
+  G13: { annex: 'G', shape: 'square-blue', glyph: 'bike', term: 'onverplicht fietspad' },
+  J9: { annex: 'J', shape: 'tri-up', glyph: 'roundabout', term: 'rotonde' },
+  J10: { annex: 'J', shape: 'tri-up', glyph: 'barrier', term: 'overweg' },
+  J14: { annex: 'J', shape: 'tri-up', glyph: 'tram', term: 'tram' },
+  J17: { annex: 'J', shape: 'tri-up', glyph: 'narrow', term: 'rijbaanversmalling' },
+  J22: { annex: 'J', shape: 'tri-up', glyph: 'walker', term: 'voetgangersoversteekplaats' },
+  J24: { annex: 'J', shape: 'tri-up', glyph: 'bike', term: 'fietsers en bromfietsers' },
+  L2: { annex: 'L', shape: 'square-blue', glyph: 'walker', term: 'voetgangersoversteekplaats' },
+};

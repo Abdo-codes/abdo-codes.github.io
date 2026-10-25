@@ -1,0 +1,73 @@
+import { yn, mc, multi, fill } from './make.js';
+
+// Topic 1, Gebruik van de weg: lane position, preselecting, overtaking, stopping and parking, speed. 24 items, sorted by subtopic.
+// Items with `sign` show the sign above the prompt; the text never names it. Items with `scene` use the picture at the freeze frame.
+const T = 'road-use';
+export default [
+  // Lane position (Article 3, 13)
+  mc('road-01', T, 'A road has two lanes for your direction. Both lanes are free and there is no queue. Which lane do you use?',
+    ['The left lane, because it is faster', 'The right lane', 'Either lane, as you like'], 1,
+    { explanation: 'Article 3 says that you keep to the right as far as you can. You overtake on the left (Article 11).', source: ['rvv-3', 'rvv-11'], terms: ['rijstrook'] }),
+  yn('road-02', T, 'You are in a queue on a road with two lanes for your direction. May you drive in the left lane?', true,
+    { explanation: 'In a queue you do not have to use the right lane (Article 13). Outside a queue you keep to the right (Article 3).', source: ['rvv-13', 'rvv-3'], terms: ['rijstrook'] }),
+  mc('road-03', T, 'Which pair of road users may ride next to each other on the road?',
+    ['Two riders of a light moped', 'A cyclist and a rider of a light moped', 'Two cyclists'], 2,
+    { explanation: 'Article 3 lets two cyclists ride side by side. This is not allowed for riders of a light moped.', source: 'rvv-3', terms: ['snorfiets'] }),
+  // Preselecting, arrows, solid line (Article 17, 76, 78)
+  mc('road-04', T, 'You drive in a lane with one arrow on the road. The arrow points left. What must you do at the junction?',
+    ['Go straight on', 'Go straight on or turn left', 'Turn left'], 2,
+    { explanation: 'A lane with an arrow is a preselect lane. At the junction you must follow the direction of the arrow (Article 78).', source: 'rvv-78', terms: ['voorsorteren', 'kruispunt'] }),
+  mc('road-05', T, 'You want to turn right at a junction on a two-way road. How do you preselect?',
+    ['Move close to the centre line of the road', 'Move to the right side in good time', 'Stay in your lane and brake at the junction'], 1,
+    { explanation: 'Article 17 lets you preselect. For a right turn, you drive as far to the right as you can in good time. You must also signal before you turn.', source: 'rvv-17', terms: ['voorsorteren'] }),
+  yn('road-06', T, 'A solid line separates your lane from the oncoming lane. May you cross it to overtake a slow car?', false,
+    { explanation: 'You may not cross a solid line between lanes with traffic in both directions (Article 76). Overtaking is not an exception.', source: 'rvv-76', terms: ['doorgetrokken streep', 'inhalen'], cluster: 'overtake-solid' }),
+  // Overtaking (Article 11, 12, 13; F1, F2)
+  mc('road-07', T, 'What does this sign tell you?',
+    ['A ban on overtaking starts here', 'You must overtake slow traffic', 'The ban on overtaking by motor vehicles ends'], 2,
+    { sign: 'F2', cluster: 'overtake-signs', explanation: 'This sign ends the ban on motor vehicles overtaking each other. From here you may overtake again if the other rules allow it.', source: ['rvv-annex-f', 'rvv-62'] }),
+  yn('road-08', T, 'A cyclist rides slowly ahead of you on the road. May you overtake the cyclist here?', true,
+    { sign: 'F1', cluster: 'overtake-signs', explanation: 'The sign bans motor vehicles from overtaking each other. A cyclist is not a motor vehicle (Article 1). Other rules, such as a solid line, still apply.', source: ['rvv-annex-f', 'rvv-1'] }),
+  mc('road-09', T, 'You want to overtake a slow car. A zebra crossing is just ahead. What is the rule?',
+    ['Do not overtake just before or on the crossing', 'Overtake if nobody is waiting to cross', 'Overtake quickly, before you reach the crossing'], 0,
+    { explanation: 'You may not overtake just before or on a zebra crossing (Article 12). This is also true when nobody waits to cross.', source: 'rvv-12', terms: ['zebrapad', 'inhalen'], cluster: 'overtake-zebra' }),
+  mc('road-10', T, 'A driver ahead has preselected left and signals a left turn. On which side do you overtake?',
+    ['On the right', 'On the left', 'You may not overtake'], 0,
+    { explanation: 'You overtake a driver who has preselected left and signals a left turn on the right (Article 11).', source: 'rvv-11', terms: ['voorsorteren', 'inhalen'] }),
+  multi('road-11', T, 'Which of these may you overtake on the right?',
+    ['A slow car on a quiet road', 'A tram', 'A queue of traffic', 'A driver who preselected left and signals left', 'A car that is about to turn right'], [1, 2, 3],
+    { explanation: 'You may overtake a tram on the right (Article 11). You may also overtake a queue (Article 13) and a driver who preselected left and signals left (Article 11) on the right.', source: ['rvv-11', 'rvv-13'], terms: ['inhalen', 'tram', 'voorsorteren'] }),
+  // Stopping and parking (Article 23, 24; E1, E2)
+  fill('road-12', T, 'You want to park next to the road. What is the smallest distance from a junction at which you may park?', 'm', 5,
+    { explanation: 'You may not park closer than 5 metres to a junction (Article 24).', source: 'rvv-24', terms: ['kruispunt'], mission: 'parking' }),
+  fill('road-13', T, 'A bus stop sign has no chequered marking on the road. What is the smallest distance from the sign at which you may stand still?', 'm', 12,
+    { explanation: 'With no chequered marking, you may not stand still closer than 12 metres to the sign (Article 23). You may stop only to let passengers get in or out.', source: 'rvv-23', mission: 'parking' }),
+  yn('road-14', T, 'You stop at the kerb next to this sign only to let a passenger get out. Is this allowed?', true,
+    { sign: 'E1', cluster: 'no-parking-signs', explanation: 'The sign bans parking. A stop only to let a passenger get in or out is not parking (Article 1).', source: ['rvv-annex-e', 'rvv-1'], mission: 'parking' }),
+  mc('road-15', T, 'What does this sign ban?',
+    ['Parking only', 'Standing still, so also parking', 'Driving into this street'], 1,
+    { sign: 'E2', cluster: 'no-parking-signs', explanation: 'The sign bans standing still. Parking is a form of standing still, so it is banned too.', source: ['rvv-annex-e', 'rvv-1'], mission: 'parking' }),
+  multi('road-16', T, 'Where is it forbidden to let your car stand still?',
+    ['In a marked parking space', 'On a level crossing', 'At the kerb of a street with no signs', 'In a tunnel', 'Within 5 metres of a zebra crossing'], [1, 3, 4],
+    { explanation: 'Article 23 forbids standing still on a level crossing, in a tunnel, and on or within 5 metres of a zebra crossing.', source: 'rvv-23', terms: ['overweg', 'zebrapad'], mission: 'parking' }),
+  // Speed and stopping distance (Article 19, 20, 21; A1)
+  fill('road-17', T, 'No sign shows a speed limit. What is the highest speed for a car in a built-up area?', 'km/h', 50,
+    { explanation: 'In a built-up area the highest speed for a car is 50 km/h (Article 20). A sign can set another maximum.', source: 'rvv-20', terms: ['bebouwde kom', 'maximumsnelheid'], mission: 'gentle-start' }),
+  fill('road-18', T, 'A car drives outside a built-up area. The road has no motorway, autoweg or limit sign. What is the highest speed?', 'km/h', 80,
+    { explanation: 'On other roads outside a built-up area the highest speed for a car is 80 km/h (Article 21).', source: 'rvv-21', terms: ['autoweg', 'autosnelweg', 'maximumsnelheid'] }),
+  mc('road-19', T, 'Which rule does this sign give you?',
+    ['The highest speed you may drive', 'The speed you must drive', 'The lowest speed you may drive'], 0,
+    { sign: 'A1', explanation: 'This sign sets the highest speed you may drive. It is a limit and not a speed that you must keep (Article 62).', source: ['rvv-annex-a', 'rvv-62'], mission: 'gentle-start' }),
+  yn('road-20', T, 'Thick fog limits your view to a few metres. May you still drive at the maximum speed that the sign allows?', false,
+    { explanation: 'You must be able to stop within the distance you can see to be free (Article 19). A maximum speed does not change this.', source: 'rvv-19', terms: ['maximumsnelheid'], mission: 'gentle-start' }),
+  // Scene items
+  yn('road-21', T, 'This street has a maximum of 30 km/h. You drive at 22 km/h. Must you speed up to 30 km/h?', false,
+    { scene: 'quiet-street', action: 'nothing', mission: 'gentle-start', explanation: 'A sign sets the highest speed you may drive. It is not a target. In a built-up area the normal maximum is 50 km/h, and a sign can lower it.', source: ['rvv-62', 'rvv-annex-a', 'rvv-20'], terms: ['maximumsnelheid'] }),
+  fill('road-22', T, 'You passed a speed limit sign on this street. What is the highest speed you may drive here?', 'km/h', 30,
+    { scene: 'quiet-street', check: 'limit-now', mission: 'gentle-start', explanation: 'The sign on this street shows 30. It sets the highest speed you may drive here. Without a sign it is 50 km/h in a built-up area (Article 20).', source: ['rvv-annex-a', 'rvv-62', 'rvv-20'], terms: ['bebouwde kom', 'maximumsnelheid'] }),
+  mc('road-23', T, 'You drive at 40 km/h. A sign ahead shows a lower maximum than your speed. What do you do?',
+    ['Keep your speed until you pass the sign', 'Slow down in good time, before the sign', 'Speed up to pass the sign sooner'], 1,
+    { scene: 'thirty-ahead', action: 'release', mission: 'changing-limit', explanation: 'A lower maximum applies from the sign. Slow down in good time so that you drive at that speed when you pass the sign.', source: ['rvv-annex-a', 'rvv-62', 'rvv-20'], terms: ['maximumsnelheid'] }),
+  fill('road-24', T, 'You drive at 40 km/h. After the sign ahead, what is the highest speed you may drive?', 'km/h', 30,
+    { scene: 'thirty-ahead', check: 'limit-next', mission: 'changing-limit', explanation: 'The sign ahead shows 30. From the sign you may drive 30 km/h at most (Article 62).', source: ['rvv-annex-a', 'rvv-62', 'rvv-20'], terms: ['maximumsnelheid'] }),
+];

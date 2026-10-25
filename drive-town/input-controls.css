@@ -1,0 +1,33 @@
+.control-button { min-width:44px; min-height:44px; font-size:23px; }
+.control-button small { font-size:8px; line-height:10px; }
+.cruise-button { min-width:58px; min-height:44px; font-size:12px; }
+.pedal { min-width:80px; height:62px; gap:5px; }
+.pedal strong { font-size:13px; }
+.pedal small { font-size:7px; letter-spacing:.2px; }
+.pedal span { font-size:17px; line-height:16px; }
+.accelerate.active { background:#345f4b; box-shadow:0 0 0 2px #a2cbb1,0 3px 0 #294b3b; }
+.pedal:active { transform:translateY(1px); }
+.control-button:focus-visible,.pedal:focus-visible,.cruise-button:focus-visible { outline:3px solid #c99d46; outline-offset:3px; }
+@media(max-width:800px) {
+  .driving-hud { display:grid; grid-template-columns:68px 1fr 58px; gap:9px; padding:10px; bottom:35px; }
+  .speed-block { justify-content:flex-start; }
+  .signal-controls { justify-content:center; gap:8px; }
+  .control-button { width:44px; height:44px; }
+  .cruise-button,body[data-mission="4"] .cruise-button { display:flex; flex-direction:column; justify-content:center; padding:4px 8px; height:44px; font-size:11px; gap:2px; }
+  .cruise-button strong { font-size:14px; }
+  .pedals { grid-column:1 / -1; gap:9px; }
+  .pedal { flex:1; min-width:0; height:57px; border-radius:9px; }
+  .pedal strong { font-size:14px; }
+  .pedal small { font-size:7px; }
+  body[data-mission="4"] .driving-hud { gap:9px; }
+  #toast { bottom:175px; }
+  .overlay { padding-bottom:175px; }
+  body.in-drive .site-header { height:60px; }
+  body.in-drive .game-layout { padding:8px; gap:8px; }
+  body.in-drive .learning-panel { display:flex; flex-direction:column; gap:4px; }
+  body.in-drive .chapter-label,body.in-drive h1,body.in-drive .chapter-intro,body.in-drive .progress-caption,body.in-drive .progress-track { display:none; }
+  body.in-drive #mission-list .mission-item { padding:4px; }
+  body.in-drive .coach-card { margin:0; padding:8px 10px; }
+  body.in-drive .coach-card p { font-size:11px; line-height:1.45; }
+  body.in-drive .drive-panel { height:calc(100svh - 200px); min-height:500px; }
+}

@@ -1,0 +1,8 @@
+/* Chapter 05 Merging. The Merge button is the contextual action button (#park); ui.js sets body[data-action] and body[data-kind]. */
+body[data-action="merge"] .park { display:flex; }
+body[data-kind="merge"] .cruise-button { display:flex; }
+body[data-kind="merge"] .driving-hud { gap:9px; }
+body[data-kind="merge"] #map-canal { display:none; }
+.park.suggested { box-shadow:0 0 0 2px #c49445; background:#f4e5c5; color:#795b2a; }
+.ready-note { margin:0 0 14px; padding:9px 11px; border-radius:8px; background:#eef2e6; border-left:3px solid #91aa8c; color:#45614f; font-size:12px; line-height:1.45; }
+.coaching-note { margin:10px 0 0; padding:9px 11px; border-radius:8px; background:#eef2e6; border-left:3px solid #91aa8c; color:#45614f; font-size:12px; line-height:1.45; text-align:left; }

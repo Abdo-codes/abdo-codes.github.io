@@ -1,0 +1,38 @@
+/* The start card and the overview (Overzicht). A tile shows its number and a state in text and shape, not colour alone. */
+.exam-start .eyebrow, .exam-result .eyebrow, .exam-timeup .eyebrow { margin-bottom:4px; }
+.exam-start h2, .exam-result h2, .exam-timeup h2 { font-size:30px; }
+.exam-facts { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 14px; padding:0; list-style:none; }
+.exam-facts li { flex:1 1 120px; padding:12px 14px; border:1.5px solid var(--exam-line); border-radius:12px; background:var(--exam-card); font-size:14px; }
+.exam-facts strong { display:block; font-size:26px; line-height:1.15; }
+.exam-options { margin:16px 0; padding:12px 14px; border:1.5px solid var(--exam-line); border-radius:12px; background:var(--exam-card); }
+.exam-options legend { padding:0 6px; font-weight:700; font-size:14px; }
+.exam-option { display:flex; align-items:flex-start; gap:12px; min-height:44px; padding:8px 0; cursor:pointer; }
+.exam-option input { flex:none; width:24px; height:24px; margin:2px 0 0; accent-color:var(--exam-green); }
+.exam-option small { display:block; font-size:13px; }
+.exam-actions { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+.exam-weak ul, .exam-history ul { display:grid; gap:8px; margin:0; padding:0; list-style:none; }
+.exam-history li { display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:4px 14px; padding:10px 14px; border-radius:10px; background:var(--exam-card); border:1px solid var(--exam-line); font-size:15px; }
+.exam-history li strong { text-align:center; }
+.exam-weak li { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 12px; padding:10px 14px; border-radius:10px; background:var(--exam-card); border:1px solid var(--exam-line); font-size:15px; }
+.exam-weak li > .exam-actions { flex-basis:100%; margin:4px 0 0; }
+.exam-foot-note { display:block; margin-top:20px; font-size:13px; }
+
+.exam-summary { margin:0 0 12px; font-size:16px; }
+.exam-filters { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px; }
+.exam-filter { min-height:44px; padding:0 16px; border:1.5px solid var(--exam-line); border-radius:22px; background:var(--exam-card); color:var(--exam-ink); font-weight:600; font-size:15px; }
+.exam-filter[aria-pressed="true"] { background:var(--exam-green); border-color:var(--exam-green); color:#fff; }
+.exam-tiles { display:grid; grid-template-columns:repeat(auto-fill,minmax(76px,1fr)); gap:8px; }
+.exam-tile { position:relative; display:grid; place-items:center; align-content:center; gap:0; min-height:68px; padding:6px 4px; border-radius:10px; background:var(--exam-card); color:var(--exam-ink); line-height:1.15; }
+.exam-tile.answered { border:2px solid var(--exam-green); }
+.exam-tile.open { border:2px dashed var(--exam-soft); }
+.exam-tile b { font-size:20px; }
+.tile-state { font-size:15px; font-weight:700; }
+.exam-tile small { font-size:11px; min-height:13px; color:var(--exam-soft); }
+.exam-tile.marked { background:var(--exam-gold); border-color:var(--exam-gold-ink); }
+.exam-tile.marked small { color:var(--exam-gold-ink); font-weight:700; }
+.exam-tile[aria-current="true"] { outline:3px solid var(--exam-ink); outline-offset:2px; }
+.exam-empty { grid-column:1 / -1; color:var(--exam-soft); }
+.exam-timeup { text-align:center; padding-top:48px; }
+/* The overview: Back and Finish stay at the bottom of the card while the tiles scroll. */
+.exam-overview .exam-actions { position:sticky; bottom:-28px; z-index:1; margin:18px 0 -28px; padding:12px 0 28px; background:var(--paper); box-shadow:0 -10px 10px -4px var(--paper); }
+@media (max-width:520px) { .exam-overview .exam-actions>* { flex:1 1 100%; } }

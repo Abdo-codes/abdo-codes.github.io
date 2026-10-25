@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next game, Angry Nona: Night Shift (iPhone nanny game), and ColorTalk (iPad ABC coloring app for children 5 and under) are coming soon. This file describes him and each app for AI search citation.
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next game, Angry Nona: Night Shift (iPhone nanny game), and ColorTalk (iPad ABC coloring app for children 5 and under) are coming soon. This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -25,7 +25,8 @@
 - [All Apps](https://yoloabdo.com/apps/)
 - [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
 - [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
-- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts and the surfing guide in full
+- [Drive Town](https://yoloabdo.com/drive-town/): a free 3D driving game to practise the Dutch car theory exam (CBR)
+- [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts, the surfing guide and the Drive Town guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
 ---
@@ -326,3 +327,45 @@
 ## Links
 
 - [How Surfing Works](https://yoloabdo.com/surfing/)
+
+---
+
+# Drive Town - Dutch Car Theory Exam Practice in 3D
+
+> Drive Town is a free 3D driving game by Abdelrahman Eita for learners who prepare for the Dutch car theory exam (CBR theorie-examen auto, category B). It runs in the browser on desktop and phone. The player drives a learner car through a small Dutch town with assisted steering and decides the speed, the indicators, when to wait, when to merge and when to overtake. It has 24 lessons in 7 chapters, a mock exam in the current CBR format (50 questions in 30 minutes, with a pass at 44), a hazard-perception practice and Dutch exam terms. It is an independent practice project and is not made by or linked to CBR.
+
+## Links
+
+- [Play Drive Town](https://yoloabdo.com/drive-town/)
+- [3D artwork credits](https://yoloabdo.com/drive-town/credits.html)
+
+## Key Features
+
+- **24 driving lessons in 7 chapters** — Bakery run (speed, priority from the right, zebra crossings, cyclists, parking), Signs & signals (traffic lights, STOP, shark teeth and signed priority, a changing speed limit), Sharing the road (buses leaving a stop, narrow roads, railway crossings), Roundabouts (entering, signalling out, cyclists on the cycle path), Merging (zipper merge, joining from an acceleration lane, making room), Lights & sirens (amber light, emergency vehicles, police instructions), Trams & bikes (trams, cycle lanes, overtaking)
+- **Mock exam** — 50 questions in 30 minutes with a pass at 44, like the CBR car theory exam since 7 April 2025. Six question types: Ja/Nee, multiple choice, multiple response, number, tap a marker in a picture, and put in order. Picture questions play a short 3D clip and stop at the key moment. The screen uses the exam terms Vraag x van y, Resterende tijd, Markeren and Overzicht. The bank has 193 original questions in eight exam topics, each with an explanation and an official source
+- **Hazard practice** — 61 short 3D clips, 25 per run, with the answers Brake, Release accelerator or Do nothing. It is based on the former CBR hazard-perception part (gevaarherkenning, used until 6 April 2025)
+- **Feedback and replay** — every lesson ends with a rule check; a mistake shows the recorded speed and position, with a replay of the decision moment
+- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and "Practise this" opens the matching lesson and clips
+- **Dutch exam terms** — 115 words such as voorrang verlenen (give way), haaientanden (shark teeth), ritsen (zipper merge) and invoegen (merging in), shown next to the English
+- **Guided and Independent modes** — coach prompts, or varied traffic with no safety hints
+
+## Pricing
+
+- Free, with no account, ads or in-app purchases
+
+## Platform
+
+- Any modern browser with WebGL, on desktop and phone
+- Interface in English, with Dutch exam terms
+- Game progress is saved only in the browser. The published page counts visits with Google Analytics, like the rest of this site
+
+## Limits
+
+- Practice only: a mock exam result does not predict a real exam result
+- Rules link to the Dutch traffic law (RVV 1990) and other official sources. A driving instructor has not yet reviewed every question and clip
+- Drive Town is not made by, endorsed by or linked to CBR
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
