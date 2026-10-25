@@ -1,0 +1,79 @@
+/* "Made by" links: header byline, the promo block in the last reading chapter, and the card after the film. */
+
+/* ---------- header byline ---------- */
+.brand a.byline {
+  font: 600 12px/1 var(--sans);
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  text-shadow: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.brand a.byline:hover { color: var(--ink); border-color: rgba(255, 255, 255, 0.3); }
+
+/* ---------- promo block in the panel ---------- */
+.maker { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.maker-lead { font-size: 13px; line-height: 1.5; color: var(--ink-dim); }
+.maker-lead a { color: var(--sun); text-decoration: none; font-weight: 700; }
+.maker-apps { display: grid; gap: 6px; margin-top: 12px; }
+.maker-apps a {
+  display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 10px 6px 6px;
+  border-radius: 14px; color: var(--ink); text-decoration: none;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.maker-apps a:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--line); }
+.maker-apps img { width: 40px; height: 40px; border-radius: 10px; flex: none; }
+.maker-apps span { display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--ink-faint); }
+.maker-apps b { font-size: 14px; color: var(--ink); font-weight: 700; }
+.maker-all {
+  display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px;
+  font: 700 13px/1 var(--sans); color: var(--sea); text-decoration: none;
+}
+
+/* ---------- card after the film ---------- */
+.maker-card {
+  position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(400px, calc(100vw - 32px)); padding: 24px 22px 20px;
+  background: var(--glass-strong);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35); backdrop-filter: blur(20px) saturate(1.35);
+  border: 1px solid var(--line); border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  z-index: 20; animation: maker-in 0.45s var(--ease);
+}
+.maker-card[hidden] { display: none; }
+@keyframes maker-in { from { opacity: 0; transform: translate(-50%, -46%); } }
+.maker-card h2 { font: 400 30px/1.08 var(--serif); letter-spacing: -0.015em; margin: 10px 0 10px; padding-right: 24px; text-wrap: balance; }
+.maker-card p { font-size: 14px; line-height: 1.5; color: var(--ink-dim); }
+.maker-close {
+  position: absolute; top: 8px; right: 8px; width: 44px; height: 44px;
+  border: 0; background: none; color: var(--ink-dim); font-size: 26px; line-height: 1; cursor: pointer;
+}
+.maker-close:hover { color: var(--ink); }
+.maker-icons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 18px 0 20px; }
+.maker-icons a {
+  display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 6px 2px;
+  color: var(--ink-dim); text-decoration: none; font-size: 11px; font-weight: 600; text-align: center;
+  border-radius: 14px; transition: background 0.2s, color 0.2s;
+}
+.maker-icons a:hover { background: rgba(255, 255, 255, 0.08); color: var(--ink); }
+.maker-icons img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3); }
+.maker-actions { display: flex; gap: 8px; }
+.maker-actions .btn { flex: 1; justify-content: center; min-height: 44px; text-decoration: none; }
+
+/* phones: the byline sits next to the title on narrow screens; it hides where the actions share the row */
+@media (max-width: 760px), (max-height: 520px) {
+  .brand a.byline { position: relative; font-size: 11px; padding: 5px 9px; }
+  .brand a.byline::after { content: ""; position: absolute; inset: -9px -4px; }
+  .maker-card { top: auto; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); }
+  @keyframes maker-in { from { opacity: 0; transform: translate(-50%, 12px); } }
+  .maker-card h2 { font-size: 26px; }
+}
+@media (min-width: 441px) and (max-width: 760px) and (min-height: 521px) { .brand a.byline { display: none; } }
+@media (max-height: 520px) { .brand a.byline { display: none; } }
