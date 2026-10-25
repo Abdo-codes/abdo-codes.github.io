@@ -14,10 +14,5 @@
             root.setAttribute('data-theme', next);
             try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked */ }
         });
-        document.querySelectorAll('[data-cta]').forEach(function (link) {
-            link.addEventListener('click', function () {
-                if (typeof gtag === 'function') gtag('event', 'app_store_click', { placement: link.getAttribute('data-cta') });
-            });
-        });
     });
 })();

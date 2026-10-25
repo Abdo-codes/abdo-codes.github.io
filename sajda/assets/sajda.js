@@ -2,7 +2,6 @@
 (function () {
     // Each language is a static page (/sajda/ for English, /sajda/<code>/ for the rest).
     // The language menu is plain links in the HTML; this script only opens and closes it.
-    var lang = document.documentElement.lang || 'en';
     var pages = { en: '/sajda/', ar: '/sajda/ar/', tr: '/sajda/tr/', fr: '/sajda/fr/', es: '/sajda/es/', ur: '/sajda/ur/', bn: '/sajda/bn/', id: '/sajda/id/', ru: '/sajda/ru/', sv: '/sajda/sv/', zh: '/sajda/zh/' };
 
     // Old links such as /sajda/?lang=ar go to the matching static page.
@@ -68,11 +67,4 @@
         new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; update(); }).observe(hero);
         new IntersectionObserver(function (e) { footerVisible = e[0].isIntersecting; update(); }).observe(footer);
     }
-
-    // Measure App Store clicks per placement (existing GA property).
-    document.querySelectorAll('[data-cta]').forEach(function (link) {
-        link.addEventListener('click', function () {
-            if (typeof gtag === 'function') gtag('event', 'app_store_click', { placement: link.getAttribute('data-cta'), language: lang });
-        });
-    });
 })();
