@@ -46,8 +46,10 @@ const recordDrive = createDriveRecorder(storage);
 function clearInput() { pedals?.clear(); }
 // Hazard test and mock exam replace the drive while they are open. Only one runs at a time.
 const activeMode = () => [hazardMode, examMode].find(mode => mode?.active);
+// The exam makes the header inert and has its own exit. The hazard test keeps the Practice menu open, so a choice there replaces it.
 function openMode(name, options) {
-  if (activeMode()) return;
+  if (examMode?.active) return;
+  if (hazardMode?.active) { hazardMode.close(); document.body.dataset.status = state.status; } // no drive frame runs before the next mode
   clearInput(); siren.stop(); if (state.status === 'driving') state.pause(); byId('help-dialog').close(); byId('lessons-dialog').close();
   ({ hazard: hazardMode, exam: examMode })[name]?.open(options);
 }

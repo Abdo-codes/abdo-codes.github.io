@@ -1,4 +1,4 @@
-.hazard-open {
+.hazard-open,.hazard-stop {
   height:28px;
   padding:0 12px;
   border:1px solid #cbd2c3;
@@ -8,7 +8,7 @@
   font-size:11px;
   font-weight:550;
 }
-.hazard-open:hover {
+.hazard-open:hover,.hazard-stop:hover {
   background:#efeadd;
 }
 body[data-status="hazard"] :is(.driving-hud,.mission-ribbon,.direction-alert,.minimap,.view-controls,.hint-button,.attempt-credit) {
@@ -74,6 +74,9 @@ body[data-status="hazard"]:is([data-hazard-phase="intro"],[data-hazard-phase="su
   font-size:12px;
   font-variant-numeric:tabular-nums;
   color:var(--muted);
+}
+.hazard-stop {
+  flex-shrink:0;
 }
 .hazard-timer {
   height:4px;
@@ -235,14 +238,28 @@ body[data-status="hazard"]:is([data-hazard-phase="intro"],[data-hazard-phase="su
   body[data-status="hazard"] .learning-panel {
     display:none;
   }
+  /* Fixed cells: Stop test keeps its place when the question text changes length at the freeze. */
   .hazard-status {
-    flex-wrap:wrap;
-    row-gap:4px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    align-items:center;
+    gap:2px 12px;
   }
   .hazard-status .eyebrow {
-    flex-basis:100%;
+    grid-area:1 / 1;
   }
-  .hazard-open {
+  .hazard-status strong {
+    grid-area:2 / 1;
+  }
+  .hazard-status :is(.hazard-speed,.hazard-time) {
+    grid-area:2 / 2;
+    justify-self:end;
+  }
+  .hazard-status .hazard-stop {
+    grid-area:1 / 2;
+    margin:-8px 0;
+  }
+  .hazard-open,.hazard-stop {
     padding:0 10px;
     min-height:44px;
   }

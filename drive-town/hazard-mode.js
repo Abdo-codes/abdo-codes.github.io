@@ -67,5 +67,5 @@ export function createHazardMode({ world, actors, onExit, pool, onResult, onLess
     if (speed) speed.textContent = `${Math.round(snapshot.speed)} km/h`;
     if (countdown) countdown.style.width = `${test.phase === 'answer' ? test.remaining / ANSWER_SECONDS * 100 : 100}%`;
   }
-  return { open, frame, get active() { return Boolean(test); } };
+  return { open, close, frame, get active() { return Boolean(test); } };
 }
