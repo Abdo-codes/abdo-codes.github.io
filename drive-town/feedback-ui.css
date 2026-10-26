@@ -1,0 +1,79 @@
+.practice-bar { display:flex; align-items:center; gap:8px; margin-top:16px; }
+#practice-modes { display:flex; flex:1; border:1px solid #c5d0be; border-radius:8px; overflow:hidden; }
+.practice-bar button { min-height:38px; padding:8px 10px; background:transparent; color:#44614e; font-size:11px; }
+#practice-modes button { flex:1; }
+#practice-modes [aria-pressed="true"] { background:#dfe9d9; color:#284c36; font-weight:650; }
+#open-lessons { border:1px solid #c5d0be; border-radius:8px; }
+.independent-count { display:block; margin:7px 0; color:#70816b; font-size:10px; }
+.hint-button { min-height:44px; padding:8px 12px; background:#fffbed; color:#44614e; border:1px solid #c5d0be; border-radius:8px; font-size:11px; line-height:1.3; letter-spacing:0; }
+.world-toolbar>div:first-child { min-width:0; }
+body[data-mode="independent"][data-status="driving"] .world-toolbar .live-dot,
+body[data-mode="independent"][data-status="driving"] #toolbar-chapter { display:none; }
+#lessons-dialog { max-width:540px; max-height:85dvh; overflow:auto; }
+#lesson-outline h3 { font-size:13px; margin:22px 0 10px; color:#536e55; }
+.outline-lesson { display:grid; grid-template-columns:1fr auto; gap:4px 12px; width:100%; text-align:left; padding:12px; min-height:64px; margin:7px 0; border:1px solid #d5deca; border-radius:8px; background:#f0f3e7; color:#365740; }
+.outline-lesson small { grid-column:1; font-size:11px; }
+.outline-lesson span { grid-column:2; grid-row:1/3; align-self:center; font-size:10px; }
+.outline-lesson[aria-current] { border-color:#809d80; background:#e2ebda; }
+body[data-status="question"] .driving-hud,body[data-status="review"] .driving-hud,body[data-status="replay"] .driving-hud,
+body[data-status="review"] .minimap,body[data-status="replay"] .minimap,
+body[data-status="review"] .mission-ribbon,body[data-status="replay"] .mission-ribbon,
+body[data-status="replay"] #direction-alert { display:none; }
+body[data-status="review"] .overlay,body[data-status="replay"] .overlay { justify-content:flex-end; align-items:center; padding:65px 18px 42px; }
+.feedback-card,.replay-card { width:300px; text-align:left; padding:20px; align-self:auto; max-height:calc(100% - 20px); overflow:auto; }
+.feedback-card h2 { font-size:27px; }
+.feedback-card p,.replay-card p { font-size:12px; color:#52624c; line-height:1.65; }
+.floating-card .attempt-evidence { background:#edf0e1; color:#365740; font-size:12px; font-weight:650; padding:10px; border-radius:7px; margin:12px 0; }
+.scene-legend::before { content:''; display:inline-block; width:9px; height:9px; border:2px solid #dba44e; border-radius:50%; margin-right:6px; vertical-align:middle; }
+.rule-details { margin:14px 0; font-size:11px; color:#526f51; }
+.rule-details summary,dialog summary { cursor:pointer; padding:7px 0; }
+.rule-details p { margin:8px 0; }
+.rule-details a { color:#496d53; }
+.replay-timeline { display:block; font-size:11px; color:#526f51; }
+.replay-timeline input { display:block; width:100%; margin:12px 0; accent-color:#527661; min-height:28px; }
+#replay-clock { display:block; font-size:11px; color:#526f51; margin:4px 0 12px; }
+.review-actions { display:flex; gap:7px; margin:0 0 15px; }
+.review-actions button { flex:1; margin:0; min-height:44px; padding:9px; }
+.question-card { width:390px; max-height:100%; overflow-y:auto; }
+.question-card .answer-button { text-align:left; line-height:1.4; }
+.question-feedback { margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid #d3d8c8; text-align:left; }
+.question-feedback strong { display:block; font-size:12px; margin-bottom:7px; }
+.question-feedback>p { color:#52624c; font-size:12px; margin:0; }
+.question-feedback .question-error { margin:8px 0 0; }
+.result-credit { display:block; padding:8px; margin-top:10px; border-radius:7px; background:#e9eedc; color:#365740; font-size:11px; line-height:1.4; font-weight:650; }
+.success-card>.primary-button[data-action="retry"],.complete-card>.primary-button[data-action="retry"] { margin-bottom:12px; }
+@media(max-width:800px) {
+  .practice-bar { grid-column:1/-1; margin:4px 0; gap:8px; }
+  .practice-bar button { min-height:36px; padding:7px 10px; }
+  .independent-count { grid-column:1/-1; margin:0; }
+  body.in-drive .independent-count { display:none; }
+  body.in-drive .game-layout { min-height:740px; grid-template-rows:auto minmax(440px,1fr); }
+  body.in-drive .drive-panel { min-height:440px; }
+  .hint-button { max-width:170px; font-size:10px; padding:6px 8px; }
+  body[data-status="question"] .learning-panel .coach-card,body[data-status="review"] .learning-panel .coach-card,body[data-status="replay"] .learning-panel .coach-card,
+  body[data-status="review"] #mission-list,body[data-status="replay"] #mission-list { display:none; }
+  body[data-status="review"] .drive-panel,body[data-status="replay"] .drive-panel { display:flex; flex-direction:column; min-height:560px; overflow:visible; }
+  body[data-status="review"] #world,body[data-status="replay"] #world { position:relative; width:100%; height:270px; flex:none; border-radius:15px 15px 0 0; }
+  body[data-status="review"] .world-toolbar,body[data-status="replay"] .world-toolbar { top:9px; }
+  body[data-status="review"] .overlay,body[data-status="replay"] .overlay { position:relative; inset:auto; padding:0; flex:1; display:block; }
+  .feedback-card,.replay-card { width:100%; border-radius:0 0 15px 15px; max-height:none; padding:16px 18px; box-shadow:none; }
+  .feedback-card h2 { font-size:25px; margin:8px 0; }
+  .feedback-card p,.replay-card p { font-size:12px; line-height:1.55; }
+  body[data-status="review"] .drive-footer,body[data-status="replay"] .drive-footer { display:none; }
+  .feedback-card .primary-button,.feedback-card .secondary-button,.replay-card .primary-button,.replay-card .secondary-button { min-height:42px; }
+  body[data-status="question"] .overlay { padding:75px 12px 30px; }
+  .question-card { padding:17px; }
+  .question-card h2 { font-size:22px; }
+  .question-card .answer-choices { margin:12px 0 5px; gap:7px; }
+  .question-card .answer-button { min-height:46px; }
+  .question-card .question-error { font-size:11px; line-height:1.5; padding:8px; margin:7px 0; }
+}
+/* The success and complete cards: the action buttons stick to the bottom of the card, so a tall card never hides them. */
+.success-card .card-actions, .complete-card .card-actions { position:sticky; bottom:-21px; z-index:1; padding:6px 0 21px; margin-bottom:-12px; background:#fffbed; box-shadow:0 -10px 10px -4px #fffbed; }
+.card-actions .secondary-button { margin-top:0; }
+.rule-explanation summary { cursor:pointer; padding:2px 0; font-size:10px; font-weight:650; color:#526f51; }
+.rule-explanation[open] summary { margin-bottom:6px; }
+@media(max-width:800px) {
+  .rule-explanation summary { display:flex; align-items:center; min-height:44px; font-size:12px; }
+  .coaching-note~.coaching-note { display:none; }
+}

@@ -1,0 +1,177 @@
+.driving-hud {
+  position:absolute;
+  bottom:53px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:17px;
+  background:#fbf9edef;
+  border:1px solid #fffaf0;
+  border-radius:15px;
+  padding:12px 17px;
+  z-index:3;
+  box-shadow:0 10px 30px #30462f14;
+  white-space:nowrap;
+}
+.speed-block {
+  display:flex;
+  gap:13px;
+  align-items:center;
+  padding-right:18px;
+  border-right:1px solid #e1e4d5;
+}
+.speed-value {
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+}
+.speed-value strong {
+  font-size:34px;
+  letter-spacing:-2px;
+  font-weight:500;
+  font-variant-numeric:tabular-nums;
+  min-width:36px;
+  text-align:right;
+}
+.speed-value span {
+  font-size:8px;
+  color:#9a9e87;
+}
+.speed-limit {
+  width:29px;
+  height:29px;
+  border:3px solid #c57561;
+  border-radius:50%;
+  font-size:11px;
+  display:grid;
+  place-items:center;
+  background:#fffbef;
+  font-weight:650;
+}
+.signal-controls {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.signal-label {
+  font-size:6px;
+  letter-spacing:1px;
+  color:#959e86;
+}
+.control-button {
+  width:31px;
+  height:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  border-radius:7px;
+  background:#eff0e4;
+  color:#84937a;
+  font-size:18px;
+  line-height:16px;
+}
+.control-button small {
+  font-size:6px;
+  line-height:7px;
+}
+.control-button.active {
+  color:#9b6819;
+  background:#f3dda7;
+  animation:signal-blink 1s infinite;
+}
+.cruise-button {
+  background:#edf0e3;
+  color:#6e8469;
+  border-radius:8px;
+  padding:9px 10px;
+  font-size:9px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.cruise-button strong {
+  font-weight:600;
+}
+.cruise-button small {
+  font-size:6px;
+  opacity:.6;
+}
+.cruise-button.active {
+  background:#d7e7cf;
+  color:#426445;
+}
+.pedals {
+  display:flex;
+  gap:7px;
+}
+.pedal {
+  height:53px;
+  min-width:58px;
+  border-radius:9px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:3px;
+  touch-action:none;
+  user-select:none;
+}
+.pedal span {
+  font-size:13px;
+  line-height:12px;
+}
+.pedal strong {
+  font-size:9px;
+  font-weight:600;
+}
+.pedal small {
+  font-size:5px;
+  letter-spacing:.8px;
+  opacity:.65;
+}
+.brake {
+  background:#efe4d5;
+  color:#9b8067;
+}
+.brake.held {
+  background:#d8b8a0;
+  color:#5f4934;
+}
+.accelerate {
+  background:#507764;
+  color:#fff6dd;
+  box-shadow:0 3px 0 #3c5f4d;
+}
+.accelerate.held {
+  background:#345944;
+}
+.park {
+  background:#ecdfb9;
+  color:#88723e;
+  display:none;
+}
+body[data-action="park"] .park {
+  display:flex;
+}
+.drive-footer {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:13px 21px;
+  background:#f2f0e6e3;
+  font-size:8px;
+  color:#87937d;
+  z-index:2;
+}
+.drive-footer .live-dot {
+  width:4px;
+  height:4px;
+  margin-right:5px;
+}

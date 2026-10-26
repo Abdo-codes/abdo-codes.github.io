@@ -1,0 +1,130 @@
+{
+  "format": "walk-mesh-v1",
+  "vertexCount": 5562,
+  "triangleCount": 1854,
+  "sourceVertexCount": 941,
+  "sourceTriangleCount": 1854,
+  "strideFloats": 22,
+  "strideBytes": 88,
+  "phaseFrames": [
+    0.0,
+    6.25,
+    12.5,
+    18.75
+  ],
+  "phaseCount": 4,
+  "phaseVertexCounts": [
+    5562,
+    5562,
+    5562,
+    5562
+  ],
+  "sourcePhaseVertexCounts": [
+    941,
+    941,
+    941,
+    941
+  ],
+  "phaseTriangleCounts": [
+    1854,
+    1854,
+    1854,
+    1854
+  ],
+  "topologyVerified": "phase vertex counts match; phase 0 deterministic triangle order is reused for every phase",
+  "byteLength": 489456,
+  "actualBounds": {
+    "min": [
+      -0.30980634689331055,
+      -0.5366042852401733,
+      0.0
+    ],
+    "max": [
+      0.31736522912979126,
+      0.4784904420375824,
+      1.7499998807907104
+    ]
+  },
+  "normalization": {
+    "targetHeightMeters": 1.75,
+    "sourceHeight": 4.766623020172119,
+    "scale": 0.36713622885512115,
+    "feetGroundZ": 0.0,
+    "centerXY": true
+  },
+  "materials": [
+    {
+      "name": "Skin",
+      "baseColor": [
+        0.49692198634147644,
+        0.31853097677230835,
+        0.16615138947963715
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Eyes",
+      "baseColor": [
+        0.025392768904566765,
+        0.025392768904566765,
+        0.025392768904566765
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Hair",
+      "baseColor": [
+        0.052216388285160065,
+        0.03497478738427162,
+        0.0360228605568409
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Shirt",
+      "baseColor": [
+        0.16338834166526794,
+        0.21393968164920807,
+        0.23301143944263458
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Pants",
+      "baseColor": [
+        0.06071754917502403,
+        0.05294143408536911,
+        0.05294143408536911
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Socks",
+      "baseColor": [
+        0.5070669651031494,
+        0.4347926676273346,
+        0.4347926676273346
+      ],
+      "roughness": 0.8
+    },
+    {
+      "name": "Shoes",
+      "baseColor": [
+        0.025392768904566765,
+        0.025392768904566765,
+        0.025392768904566765
+      ],
+      "roughness": 0.8
+    }
+  ],
+  "meshObject": "PedestrianBody",
+  "armatureObject": "PedestrianRig",
+  "walkAction": "Man_Walk",
+  "walkFrameRange": [
+    0.0,
+    25.0
+  ],
+  "sourceForward": "-Y",
+  "forward": "+Y",
+  "orientationAppliedDegrees": 180
+}

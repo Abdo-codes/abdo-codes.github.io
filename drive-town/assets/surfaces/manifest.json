@@ -1,0 +1,147 @@
+{
+  "adaptation": "Texture JPEGs recompressed with Pillow quality=88 optimize=True; HDR unchanged. All assets loaded locally.",
+  "assets": [
+    {
+      "file": "aerial_asphalt_01_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_asphalt_01/aerial_asphalt_01_diff_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 382370,
+      "sha256": "60796066662ad6282e3efdd4dc1e39c0eb1cb0446f1e494be2f9f4591cb962d1"
+    },
+    {
+      "file": "aerial_asphalt_01_nor_gl.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_asphalt_01/aerial_asphalt_01_nor_gl_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 150931,
+      "sha256": "cf160ae83fa65b380ffa6201fa1bd7e15b2a938bf934f347c45f00d07409540d"
+    },
+    {
+      "file": "aerial_asphalt_01_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_asphalt_01/aerial_asphalt_01_rough_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 161682,
+      "sha256": "f55eab1aaba0326d0464fe6e62f3fd964e8f3a4e222824ce288eddbada086d05"
+    },
+    {
+      "file": "grey_roof_01_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_01/grey_roof_01_diff_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 235854,
+      "sha256": "dab550cc95291439df145e05aad253e4c4ae01e7768f6f57e0b1617f4f091e0e"
+    },
+    {
+      "file": "grey_roof_01_nor_gl.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_01/grey_roof_01_nor_gl_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 240882,
+      "sha256": "56f37bc100696f0d1c9ba2ab0a4dd7009b790772697d12a199a1507fddb175cb"
+    },
+    {
+      "file": "grey_roof_01_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_01/grey_roof_01_rough_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 260305,
+      "sha256": "efbf7428d8c056220d0421563a49a0f6fc18cd3e1e9f4dce0fa49313294b25dc"
+    },
+    {
+      "file": "leafy_grass_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leafy_grass/leafy_grass_diff_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 438481,
+      "sha256": "e67437fb3b6267bf4c59e2d10870c5a7d27c4a9f8fe1930b7861dd7ec123785c"
+    },
+    {
+      "file": "leafy_grass_nor_gl.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leafy_grass/leafy_grass_nor_gl_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 562713,
+      "sha256": "297bfcba2f155f9474c9cb59f0e82f9eeb94b49dfc60188010a093c2730008bc"
+    },
+    {
+      "file": "leafy_grass_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leafy_grass/leafy_grass_rough_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 136862,
+      "sha256": "3d5973f229c758383134bdb4cdb5c20233037b814ad73c6078a8948dde86a4a7"
+    },
+    {
+      "file": "pavement_01_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pavement_01/pavement_01_diff_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 218731,
+      "sha256": "71ff7e0020496b09cab182ff73b3e117527028c20a89cebe314fc60fa5cf604b"
+    },
+    {
+      "file": "pavement_01_nor_gl.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pavement_01/pavement_01_nor_gl_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 193104,
+      "sha256": "7e4d9c79c52dbe65c869360fd6b6e1091a953de17f6cbb8c204bde4d30424300"
+    },
+    {
+      "file": "pavement_01_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pavement_01/pavement_01_rough_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 219864,
+      "sha256": "1fc16789598488f394d405925f2f89985310d681454c35c5f39a86d4cce4fd17"
+    },
+    {
+      "file": "red_brick_03_diff.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick_03/red_brick_03_diff_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 349883,
+      "sha256": "bf7e8564bb823db9ca04b617941ea97b103f1263ef855d3df6299ea5426a1a2f"
+    },
+    {
+      "file": "red_brick_03_nor_gl.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick_03/red_brick_03_nor_gl_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 291459,
+      "sha256": "ac5b74fe82c3636962cf69ea03f58428d7a71cf3bd5bcc59db101890a4bdda58"
+    },
+    {
+      "file": "red_brick_03_rough.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick_03/red_brick_03_rough_1k.jpg",
+      "license": "CC0",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 152450,
+      "sha256": "c602373347d92614ddcd785e44845125659c14b7f8241f26b3c2c98741b42cb2"
+    },
+    {
+      "file": "../daylight.hdr",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "license": "CC0",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    }
+  ]
+}

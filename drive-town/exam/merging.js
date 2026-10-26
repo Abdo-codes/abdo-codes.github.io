@@ -1,0 +1,65 @@
+import { yn, mc, multi, fill, hot } from './make.js';
+
+// Chapter 05 Merging: 15 items for the topic special-roads (ids continue spec-23). Seven are text items and eight sit on the merge scenes of scenes.js.
+// Article 54 puts the duty on the driver who changes lane. The law has no article for ritsen, so no item calls it a rule.
+// Items on the CBR driving procedure (the speed on the acceleration lane, the indicator, the lorry, the two-second distance) are habits, not law. They wait for the instructor review.
+const T = 'special-roads', PROCEDURE = 'cbr-rijprocedure-b';
+
+export default [
+  // Text items
+  yn('spec-23', T, 'May you use the hard shoulder of a motorway to join the traffic on the road?', false,
+    { explanation: 'Drivers may use the hard shoulder only in an emergency (Article 43). To join the traffic, use the acceleration lane.',
+      source: 'rvv-43', terms: ['autosnelweg', 'vluchtstrook', 'invoegstrook'], mission: 'acceleration-lane' }),
+  mc('spec-24', T, 'You drive on an acceleration lane next to the main road. Who goes first?',
+    ['You, because your lane ends', 'The drivers on the main road', 'The driver with the faster car'], 1,
+    { explanation: 'A driver who joins the main road from an acceleration lane lets the other traffic go first (Article 54). A lane that ends gives no priority.',
+      source: ['rvv-54', 'anwb-invoegen'], terms: ['invoegstrook', 'voor laten gaan'], mission: 'acceleration-lane' }),
+  multi('spec-25', T, 'A driver changes lane and shows the indicator. Which two statements are right?',
+    ['The driver lets the other traffic go first', 'The indicator gives the driver priority', 'The driver gives the signal before the move', 'The driver may force a gap with the indicator'], [0, 2],
+    { explanation: 'A driver who changes lane lets other traffic go first (Article 54). The driver also gives a signal before the move (Article 55). A signal gives no priority.',
+      source: ['rvv-54', 'rvv-55'], terms: ['voor laten gaan', 'richtingaanwijzer'], mission: 'zipper-merge' }),
+  mc('spec-26', T, 'Two lanes become one and your lane ends. Who must let the other traffic go first?',
+    ['You, because you change lane', 'The drivers in the lane that continues', 'Nobody, because the traffic is slow'], 0,
+    { explanation: 'The driver who changes lane lets the other traffic go first (Article 54). A driver in the other lane may let you in. This is courtesy and not a duty, but the CBR examiner expects you to give merging traffic the chance on a road narrowing.',
+      source: ['rvv-54', 'anwb-invoegen', 'cbr-rijprocedure-b-3'], terms: ['ritsen', 'voor laten gaan'], mission: 'zipper-merge' }),
+  mc('spec-27', T, 'You drive on an acceleration lane. What speed helps you to join the road?',
+    ['A speed well below the main road traffic', 'About the speed of the traffic on the main road', 'The legal maximum, even if the traffic is slow'], 1,
+    { explanation: 'Use the acceleration lane to match the speed of the main road traffic. Then you can join without hindering other drivers. This follows the CBR driving procedure.',
+      source: PROCEDURE, terms: ['invoegstrook', 'invoegen'], mission: 'acceleration-lane' }),
+  yn('spec-28', T, 'A lane ends at a hatched area. May you drive on the hatched area to pass the queue?', false,
+    { explanation: 'Drivers may not use a hatched area (Article 77). Stay in your lane and merge near the end, when a gap is open.',
+      source: 'rvv-77', terms: ['verdrijvingsvlak', 'ritsen'], mission: 'zipper-merge' }),
+  fill('spec-29', T, 'A car has just joined the road in front of you. What is the shortest following distance that you keep?', 'seconds', 2,
+    { explanation: 'Keep at least the distance that the car travels in two seconds. In rain or behind a large vehicle, keep more.',
+      source: 'cbr-following-distance', terms: ['volgafstand'], mission: 'room-to-merge' }),
+
+  // Scene items: the merge roads
+  hot('spec-30', T, 'Your lane ends. Tap the road user who goes first.', 'zipper-car-beside', 'car',
+    { check: 'who-first', explanation: 'You change lane, so you let the other traffic go first (Article 54). The car in the other lane goes before you.',
+      source: 'rvv-54', terms: ['voor laten gaan'], mission: 'zipper-merge' }),
+  mc('spec-31', T, 'You drive on an acceleration lane that ends soon. A car on the main road is level with you. What do you do?',
+    ['Speed up and join in front of the car', 'Slow down and join behind the car', 'Stop on the main road to wait'], 1,
+    { scene: 'lane-end-car-beside', action: 'brake', explanation: 'Traffic on the main road goes first (Article 54). Slow down, let the car pass and join when a gap is open.',
+      source: 'rvv-54', terms: ['invoegstrook'], mission: 'acceleration-lane' }),
+  hot('spec-32', T, 'Tap the place where you may not drive.', 'zipper-hatched-close', 'hatch',
+    { pictureOnly: true, explanation: 'Drivers may not use a hatched area (Article 77). Wait in your lane until a gap opens in the other lane.',
+      source: 'rvv-77', terms: ['verdrijvingsvlak'], mission: 'zipper-merge' }),
+  mc('spec-33', T, 'A lorry on the acceleration lane at your right cannot reach your speed. What do you do?',
+    ['Sound your horn', 'Release the accelerator to give it room', 'Speed up to stay ahead of the lorry'], 1,
+    { scene: 'room-slow-lorry', action: 'release', explanation: 'The merging driver lets you go first (Article 54). A careful driver still helps a heavy vehicle that cannot gain speed. This is a habit from the CBR driving procedure and not a rule.',
+      source: ['rvv-54', PROCEDURE], terms: ['invoegstrook'], mission: 'room-to-merge' }),
+  mc('spec-34', T, 'Your lane ends and your indicator is on. You merge into the gap. When do you switch off the indicator?',
+    ['When your whole car is in the new lane', 'When the front of your car reaches the lane line', 'When the car behind you flashes its lights'], 0,
+    { scene: 'zipper-gap-open', pictureOnly: true, explanation: 'Switch off the indicator as soon as you have changed lane. Then the other drivers know that your move is done. This follows the CBR driving procedure.',
+      source: [PROCEDURE, 'rvv-55'], terms: ['richtingaanwijzer'], mission: 'zipper-merge' }),
+  yn('spec-35', T, 'Your indicator is on and the main road is empty near you. May you join the road now?', true,
+    { scene: 'lane-clear-road', action: 'nothing', explanation: 'No traffic comes close, so you hinder nobody. Look in your mirror, keep your speed and join (Articles 54 and 55).',
+      source: ['rvv-54', 'rvv-55'], terms: ['invoegen'], mission: 'acceleration-lane' }),
+  mc('spec-36', T, 'Three cars on the main road drive close together, next to and just ahead of you. No gap is open. What do you do?',
+    ['Push in between two of the cars', 'Stop on the acceleration lane at once', 'Release the accelerator and join behind the last car'], 2,
+    { scene: 'lane-short-gap', action: 'release', explanation: 'Traffic on the main road goes first (Article 54). With no gap, release the accelerator and join behind the last car.',
+      source: 'rvv-54', terms: ['invoegstrook'], mission: 'acceleration-lane' }),
+  yn('spec-37', T, 'A car on the acceleration lane at your right can join by itself. Do you need to change your speed or lane?', false,
+    { scene: 'room-good-gap', action: 'nothing', explanation: 'The gap is long, so the driver can join without your help. Keep your speed and your lane. Extra moves only hinder other drivers.',
+      source: ['rvv-54', PROCEDURE], terms: ['invoegstrook'], mission: 'room-to-merge' }),
+];

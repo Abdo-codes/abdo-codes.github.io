@@ -1,0 +1,75 @@
+import { yn, mc, multi, fill } from './make.js';
+
+// Topic 4, Veilig rijden met het voertuig en reageren in noodsituaties (12 items) and topic 8, Voertuigkennis (8 items). Text items only.
+// Sources: RVV 1990, WVW 1994 and the Regeling voertuigen (anchors in anchors.js); CBR Rijprocedure B for driver assistance, mirrors, skids and hazard lights; Politie for what to do after an accident.
+const S = 'safe-driving', V = 'vehicle';
+export default [
+  // Signals and lights (Article 28, 32, 34; Rijprocedure B)
+  mc('veh-01', S, 'When may you sound the horn?',
+    ['To say hello to a friend', 'To ask a slow driver to go faster or to move over', 'To show that you are in a hurry', 'To warn of danger that is about to happen'], 3,
+    { explanation: 'Article 28 allows sound signals and flashing signals only to avoid danger that is about to happen. Do not use the horn to hurry other road users.', source: 'rvv-28', terms: ['claxon'] }),
+  mc('veh-02', S, 'It is day. Heavy rain makes it hard to see far ahead. Which lights do you use at the front?',
+    ['Main beam', 'Dipped headlights', 'No lights, because it is day'], 1,
+    { explanation: 'Article 32 says you use dipped headlights by day if the view is seriously hindered. You may not use main beam by day.', source: 'rvv-32', terms: ['dimlicht', 'grootlicht'] }),
+  yn('veh-04', S, 'Heavy rain limits your view to 100 metres. You may switch on the rear fog lamp.', false,
+    { explanation: 'Article 34 allows the rear fog lamp only in fog or snowfall. The view must be less than 50 metres.', source: 'rvv-34', terms: ['mistachterlicht'] }),
+  multi('veh-09', S, 'When do you use the hazard warning lights?',
+    ['You park for a short time where parking is forbidden', 'You come to the end of a traffic jam', 'You want to thank a driver who lets you pass', 'You stop where other drivers see you late'], [1, 3],
+    { explanation: 'These lights show that your car is a danger to others for a short time. Use them at the end of a traffic jam or where others see you late. They do not make a traffic offence legal.',
+      source: ['cbr-rijprocedure-b', 'regv-1.1'], terms: ['waarschuwingsknipperlichten'] }),
+  // Seat belts, seats and child seats (Article 59)
+  mc('veh-03', S, 'The rear seat of your car has three seat belts. Four adults want to sit there. What is right?',
+    ['Only three adults may sit there', 'Four may sit there on a short trip', 'Four may sit there if you drive slowly'], 0,
+    { cluster: 'belts', explanation: 'Article 59 says each passenger uses a seat belt. On seats with belts you carry no more passengers than there are belts.', source: 'rvv-59', terms: ['veiligheidsgordel'] }),
+  mc('veh-05', S, 'Your child is 6 years old and 1.20 metres tall. How must your child ride in your car?',
+    ['With the normal adult seat belt only', 'On the lap of an adult', 'In a child restraint system'], 2,
+    { cluster: 'child-seat', explanation: 'Article 59 says a passenger under 18 years and shorter than 1.35 metres uses a child restraint system with an approval mark.', source: 'rvv-59', terms: ['kinderbeveiligingssysteem'] }),
+  yn('veh-06', S, 'You may put a rear-facing child seat on a front seat with an active airbag.', false,
+    { cluster: 'child-seat', explanation: 'Article 59 forbids this. The only exception is an airbag that is off or that switches off by itself.', source: 'rvv-59', terms: ['kinderbeveiligingssysteem', 'airbag'] }),
+  // Breakdown and accident (Article 58; WVW Article 7; CBR exam plan)
+  mc('veh-07', S, 'Your car breaks down on a country road. Other drivers see it late. Where do you put the warning triangle?',
+    ['On the roof of the car', 'On the road, about 30 metres from the car', 'On the verge, next to the car'], 1,
+    { explanation: 'Article 58 says to put the triangle on the road, where drivers see it well. Put it about 30 metres from the car, towards the traffic that meets the danger. You do not need it if the hazard warning lights are on.',
+      source: 'rvv-58', terms: ['gevarendriehoek', 'waarschuwingsknipperlichten'] }),
+  multi('veh-08', S, 'You are in a road accident and a person is hurt. Which actions are right?',
+    ['Drive away at once if your car has no damage', 'Make the place safe, for example with the warning triangle', 'Warn the emergency services', 'Leave the hurt person alone and wait in your car', 'Help the hurt person as well as you can'], [1, 2, 4],
+    { explanation: 'Make the place safe, warn the emergency services and help the hurt person. Article 7 of the WVW forbids you to leave the place of an accident where a person is hurt. Do not leave a hurt person without help.',
+      source: ['politie-accident', 'wvw-7'], terms: ['ongeval', 'gevarendriehoek'] }),
+  mc('veh-10', S, 'The road is wet. What can make your car skid?',
+    ['An even, low speed', 'A large distance to the car in front', 'Hard braking or sudden steering'], 2,
+    { explanation: 'A car skids when the force on the tyres is more than the grip between the tyre and the road. Hard braking, sudden steering and too much speed in a bend can cause this.', source: 'cbr-rijprocedure-b', terms: ['slippen'] }),
+  // Driver assistance (Rijprocedure B, Introduction and chapters 1 and 2)
+  mc('veh-11', S, 'Your car has driver assistance systems with cameras and sensors. What do you check before a trip?',
+    ['That the cameras and sensors are clean enough', 'That all the systems are switched off', 'Nothing, because the systems clean themselves'], 0,
+    { explanation: 'Before a trip, check that the cameras and sensors are clean enough. Dirt can change how a system works. You, not the system, stay responsible for driving.', source: 'cbr-rijprocedure-b', terms: ['rijhulpsysteem'] }),
+  mc('veh-12', S, 'You use cruise control on a quiet motorway. What must you still do?',
+    ['Look away from the road for a short time', 'Watch the traffic and be ready to take over', 'Leave speed and distance to the system'], 1,
+    { explanation: 'You stay responsible for driving. Keep an active driving position, so that you can take over at once. Do not let the system take your attention from the road.',
+      source: 'cbr-rijprocedure-b', terms: ['cruisecontrole', 'rijhulpsysteem'] }),
+  // Dashboard lights (Regeling voertuigen; Rijprocedure B)
+  mc('veh-13', V, 'You start the engine. The ABS warning light stays on. What does this show?',
+    ['The brakes are too hot', 'The anti-lock braking system works well', 'The anti-lock braking system has a fault'], 2,
+    { cluster: 'warning-light', explanation: 'The warning light must go out after the engine starts. If it stays on, the system does not work as it should. When you switch on the ignition, the lights come on for a moment: this is a lamp test.',
+      source: ['regv-5.2.31', 'cbr-rijprocedure-b'], terms: ['antiblokkeersysteem'] }),
+  mc('veh-14', V, 'The airbag warning light stays on while you drive. What does this show?',
+    ['The airbag system has a fault', 'The airbag is ready and works well', 'A seat belt is not fastened'], 0,
+    { cluster: 'warning-light', explanation: 'The warning device of the airbag system must show no fault. A light that stays on means that the system does not work as it should.', source: 'regv-5.2.47', terms: ['airbag'] }),
+  // Mirrors, tyres and lights that must work (Rijprocedure B; Regeling voertuigen; Article 32)
+  mc('veh-15', V, 'How do you set an outside mirror in the right way?',
+    ['You see the horizon in the middle of the mirror', 'You still see a little of the side of your car', 'You see nothing of your own car'], 1,
+    { explanation: 'Set the mirrors before the trip. You must just see the side of your car, and the horizon must be about one quarter from the top of the mirror.', source: 'cbr-rijprocedure-b', terms: ['buitenspiegel'] }),
+  fill('veh-20', V, 'What is the smallest tread depth that the main grooves of a car tyre must have?', 'mm', 1.6,
+    { explanation: 'The main grooves of a car tyre must be at least 1.6 mm deep around the whole tyre, except at the wear indicators.', source: 'regv-5.2.27', terms: ['profieldiepte'] }),
+  yn('veh-18', V, 'You use dipped headlights. Your rear light and the number plate light must be on too.', true,
+    { explanation: 'Article 32 says the rear light and the number plate light are always on with dipped headlights, main beam, parking lights or fog lights.', source: 'rvv-32', terms: ['dimlicht', 'achterlicht'] }),
+  // Load and towing (Regeling voertuigen, Article 5.18)
+  multi('veh-19', V, 'You carry a load in your car. Which statements are right?',
+    ['Secure the load so it cannot fall off when you brake hard', 'Load can stay loose if you drive slowly', 'Cover loose load that the wind can blow away', 'The load may hide your view in the mirrors'], [0, 2],
+    { explanation: 'The load must not fall off or make the car unstable, also when you brake hard or swerve. Cover loose load that the wind can blow away. The driver must keep a good view of the road and in the mirrors.',
+      source: ['regv-5.18.6', 'regv-5.18.4'], terms: ['lading'] }),
+  mc('veh-16', V, 'How many motor vehicles may one car tow at the same time?',
+    ['One', 'Two', 'As many as the rope can hold'], 0,
+    { explanation: 'The Regeling voertuigen allows a motor vehicle to tow not more than one other motor vehicle.', source: 'regv-5.18.2', terms: ['slepen'] }),
+  yn('veh-17', V, 'The lights and light signals of a trailer must work in the same way as those of the car that pulls it.', true,
+    { explanation: 'Article 5.18.38 of the Regeling voertuigen says the lights of a trailer must match the lights and signals of the towing vehicle.', source: 'regv-5.18.38', terms: ['aanhangwagen'] }),
+];

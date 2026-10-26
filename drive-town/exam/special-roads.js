@@ -1,0 +1,96 @@
+import { yn, mc, multi, fill, hot } from './make.js';
+
+// Topic 3: special roads, road parts, road users and manoeuvres. 22 items: roundabouts (12, with the 7 scenes), level crossings, motorway and autoweg, lane signals, bus lanes.
+// Merging is in merging.js. The cycle-path items follow the lessons: a path close round a roundabout is part of it (ANWB), with no built-up-area limit.
+const T = 'special-roads';
+const SIGNAL = ['cbr-rijprocedure-b', 'rvv-17'], CYCLE = ['anwb-rotondes', 'cbr-rijprocedure-b'];
+
+export default [
+  // Roundabouts: signals, shark teeth, zebra crossing, lane position
+  mc('spec-01', T, 'You want to take the first exit at a roundabout. When do you switch on your right indicator?',
+    ['Only after you pass the first exit', 'As you approach the roundabout', 'Never; a roundabout needs no signal at all'], 1,
+    { explanation: 'The CBR driving test rules say to signal right as you approach, when you take the first exit. Signal in good time, so other drivers know your plan.',
+      source: SIGNAL, terms: ['rotonde'], mission: 'roundabout-exit', cluster: 'roundabout-exit' }),
+  mc('spec-02', T, 'You want to drive three-quarters round a roundabout. What do you do on the road before the roundabout?',
+    ['Signal left in good time', 'Signal right in good time', 'Give no signal until you leave it'], 0,
+    { explanation: 'Going three-quarters round is a left turn. The CBR driving test rules say to signal left on the road before the roundabout. Signal right again before your exit.',
+      source: SIGNAL, terms: ['rotonde'], mission: 'roundabout-exit', cluster: 'roundabout-exit' }),
+  mc('spec-03', T, 'Shark teeth are painted across your road at a roundabout entry. What do they tell you?',
+    ['Stop fully before the teeth, every time', 'Drive at walking speed from the teeth', 'Give way to drivers on the roundabout'], 2,
+    { explanation: 'Shark teeth mean you give way to drivers on the road you join. At a roundabout, that is the roundabout. You stop only if you must.',
+      source: 'rvv-80', terms: ['haaientanden', 'rotonde'], mission: 'roundabout-entry', cluster: 'roundabout-entry' }),
+  yn('spec-04', T, 'You leave a roundabout. A pedestrian is about to use the zebra crossing on the exit road. Must you let the pedestrian go first?', true,
+    { explanation: 'A pedestrian who is about to use a zebra crossing goes first (Article 49). This also holds on the exit road of a roundabout.',
+      source: ['rvv-49', 'anwb-rotondes'], terms: ['zebrapad', 'rotonde'], mission: 'zebra' }),
+  multi('spec-05', T, 'Which two things may a driver of a motor vehicle do just before or on a roundabout?',
+    ['Overtake on the right just before a roundabout', 'Overtake on the right just before any junction', 'Drive somewhere other than the right side of the road', 'Drive on the cycle path next to the roundabout'], [0, 2],
+    { explanation: 'Article 47 lets a motor vehicle driver use a part of the road other than the right side near a roundabout. Article 48 lets a driver overtake on the right there.',
+      source: ['rvv-47', 'rvv-48'], terms: ['rotonde', 'inhalen'] }),
+
+  // Roundabouts: scene items (7). The check or the action ties each answer to the recording.
+  hot('spec-06', T, 'Tap the road user who goes first at this roundabout entry.', 'roundabout-car-left', 'car',
+    { check: 'who-first', explanation: 'Shark teeth and a give-way sign mean that traffic on the roundabout goes first. The car on the roundabout goes before you.',
+      source: ['rvv-80', 'rvv-annex-b'], terms: ['haaientanden', 'rotonde'], mission: 'roundabout-entry' }),
+  yn('spec-07', T, 'The entry has shark teeth. A car on the roundabout is about to pass your entry. Must you let it pass first?', true,
+    { scene: 'roundabout-slow-car', action: 'brake', explanation: 'Shark teeth mean you give way to drivers on the roundabout. Wait until the car has passed your entry, then enter.',
+      source: 'rvv-80', terms: ['haaientanden', 'rotonde'], mission: 'roundabout-entry' }),
+  yn('spec-08', T, 'Your entry has shark teeth and the roundabout is empty. Must you stop completely before you enter?', false,
+    { scene: 'roundabout-empty', action: 'nothing', explanation: 'Shark teeth mean give way, not stop. If no traffic is on the roundabout, you may enter after you look.',
+      source: 'rvv-80', terms: ['haaientanden', 'rotonde'], mission: 'roundabout-entry' }),
+  mc('spec-09', T, 'You are near your exit on a roundabout and your right indicator is on. What does the indicator tell other drivers?',
+    ['That you have priority over all traffic', 'That you leave the roundabout here', 'That you stop at the exit and wait'], 1,
+    { scene: 'roundabout-leaving-clear', pictureOnly: true, explanation: 'A signal shows other drivers what you plan to do. It does not give you priority. Signal right in good time before your exit.',
+      source: ['cbr-rijprocedure-b', 'anwb-rotondes'], terms: ['rotonde'], mission: 'roundabout-exit' }),
+  mc('spec-10', T, 'The cycle path close to the roundabout has no shark teeth or signs. A cyclist on it reaches your exit. What do you do?',
+    ['Leave first, because your indicator is on', 'Give way and let the cyclist pass', 'Speed up and leave before the cyclist'], 1,
+    { scene: 'cycle-path-crossing', action: 'brake', explanation: 'A cycle path close to a roundabout counts as part of it. Drivers who leave give way to cyclists who stay on it. Shark teeth or signs on the path can change this.',
+      source: CYCLE, terms: ['fietspad', 'rotonde'], mission: 'roundabout-cyclist' }),
+  mc('spec-11', T, 'You drive on a roundabout. A cyclist on the cycle path close to it rides towards your exit. What is best to do now?',
+    ['Speed up, to pass your exit before the cyclist', 'Keep your speed and sound the horn', 'Release the accelerator, so you can give way at your exit'], 2,
+    { scene: 'cycle-path-ahead', action: 'release', explanation: 'You give way to the cyclist when you leave. Release the accelerator early, so you can stop at your exit if you must.',
+      source: CYCLE, terms: ['fietspad', 'rotonde'], mission: 'roundabout-cyclist' }),
+  yn('spec-12', T, 'The cyclist on the cycle path close to the roundabout has passed your exit. The path is empty. May you leave now?', true,
+    { scene: 'cycle-path-passed', action: 'nothing', explanation: 'You give way only to cyclists who still cross your exit. This cyclist has passed. Look again, then leave.',
+      source: CYCLE, terms: ['fietspad', 'rotonde'], mission: 'roundabout-cyclist' }),
+
+  // Level crossings
+  multi('spec-13', T, 'A train has passed a level crossing and the barriers start to rise. Which two statements are right?',
+    ['You may drive on while the barriers rise', 'You wait until the red lights are off', 'You may drive on if you see no train', 'A second train can still follow'], [1, 3],
+    { explanation: 'Flashing red lights mean stop (Article 71). Wait until they are off. A second train can follow while the barriers rise.',
+      source: ['rvv-71', 'prorail-overwegen'], terms: ['overweg'], mission: 'railway-crossing' }),
+  yn('spec-14', T, 'The lights are off, but a queue stands just beyond the level crossing. May you enter the crossing and wait there?', false,
+    { explanation: 'You may enter a level crossing only if you can drive on and leave it completely clear (Article 15a). You may not stand still on it (Article 23).',
+      source: ['rvv-15a', 'rvv-23'], terms: ['overweg'], mission: 'railway-crossing' }),
+
+  // Motorway and autoweg
+  fill('spec-15', T, 'To use a motorway, a motor vehicle must be allowed and able to drive at least how fast?', 'km/h', 60,
+    { explanation: 'Article 42 allows only motor vehicles that may and can drive at least 60 km/h on a motorway.',
+      source: 'rvv-42', terms: ['autosnelweg'], cluster: 'motorway-access' }),
+  fill('spec-16', T, 'What is the maximum speed for a car on an autoweg (road for motor vehicles) outside a built-up area, unless a sign says otherwise?', 'km/h', 100,
+    { explanation: 'Article 21 sets 100 km/h on an autoweg outside a built-up area. A sign can set a lower limit.',
+      source: 'rvv-21', terms: ['autoweg', 'maximumsnelheid', 'bebouwde kom'] }),
+  yn('spec-17', T, 'May the driver of a moped use a motorway?', false,
+    { explanation: 'A motorway is only for motor vehicles that may and can drive at least the minimum speed in Article 42. A moped may not drive that fast.',
+      source: 'rvv-42', terms: ['bromfiets', 'autosnelweg'], cluster: 'motorway-access' }),
+  yn('spec-18', T, 'Your phone rings while you drive on a motorway. May you stop on the hard shoulder to answer it?', false,
+    { explanation: 'Outside an emergency, you may not use the hard shoulder of a motorway (Article 43). A phone call is not an emergency.',
+      source: 'rvv-43', terms: ['autosnelweg'] }),
+  mc('spec-19', T, 'You miss your exit on a motorway. What do you do?',
+    ['Drive on and take the next exit', 'Reverse on the hard shoulder to the exit', 'Turn round at an open gap in the middle'], 0,
+    { explanation: 'You may not turn round or reverse on a motorway (Article 43). Drive on to the next exit.',
+      source: 'rvv-43', terms: ['autosnelweg'] }),
+  mc('spec-20', T, 'You move from the main road of a motorway onto the exit lane. Who goes first?',
+    ['You go first, because you signal right', 'Other traffic, even if you signal', 'The driver behind you must slow down for you'], 1,
+    { explanation: 'Moving onto an exit lane is a special manoeuvre. You signal and you let other traffic go first (Articles 54 and 55).',
+      source: ['rvv-54', 'rvv-55'], terms: ['autosnelweg'] }),
+
+  // Lane signals and bus lanes
+  mc('spec-21', T, 'A white arrow lights up above your lane on a motorway. What does it tell you?',
+    ['The lane is reserved for buses from now on', 'You may drive faster in this lane for a while', 'A red cross can follow; change lane soon'], 2,
+    { explanation: 'A white arrow is a warning that a red cross follows (Article 73). A red cross means that you may not use the lane.',
+      source: 'rvv-73', terms: ['autosnelweg', 'rijstrook'] }),
+  mc('spec-22', T, 'The word BUS is painted on a lane. Which road users may drive in this lane?',
+    ['Bus drivers and taxi drivers', 'Bus drivers and tram drivers only', 'Drivers of a car with two or more people'], 1,
+    { explanation: 'Article 81 says that only the driver of a bus or a tram may use a lane with the word BUS. The word LIJNBUS is only for a service bus or a tram.',
+      source: 'rvv-81', terms: ['tram'] }),
+];

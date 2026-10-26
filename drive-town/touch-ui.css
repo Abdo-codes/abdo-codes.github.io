@@ -1,0 +1,21 @@
+.attempt-credit { padding:8px 10px; border-radius:8px; background:#fffbed; border:1px solid #c5d0be; color:#44614e; font-size:11px; line-height:1.3; letter-spacing:0; }
+@media(max-width:800px) {
+  .quiet-button,.dialog-close { min-width:44px; min-height:44px; }
+  .practice-bar button,#chapter-tabs button { min-height:44px; }
+  .floating-card { background:#fffbed; }
+  .floating-card .primary-button,.floating-card .secondary-button { min-height:44px; }
+  body[data-status="ready"] .overlay { align-items:flex-start; padding:75px 12px 30px; }
+  /* The scene can start low on the page, so the Start row of the ready card sticks to the bottom of the screen. overflow:clip keeps the panel clip without a scroll container, so sticky follows the page. */
+  body[data-status="ready"] .drive-panel { overflow:clip; }
+  body[data-status="ready"] .ready-card { overflow:visible; max-height:none; }
+  .ready-card .card-actions { position:sticky; bottom:0; z-index:1; margin-bottom:4px; padding:8px 0 max(10px, env(safe-area-inset-bottom)); background:#fffbed; box-shadow:0 -10px 10px -4px #fffbed; }
+  body[data-status="success"] .driving-hud,body[data-status="complete"] .driving-hud { display:none; }
+  body[data-status="success"] .overlay,body[data-status="complete"] .overlay { padding:75px 12px 30px; }
+  .world-toolbar { height:54px; padding:0 8px; }
+  .glass-button,.glass-button:first-child { min-width:44px; height:44px; padding:0 8px; }
+  .view-controls { gap:5px; }
+  .mission-ribbon,.minimap { top:62px; }
+  .direction-alert { top:116px; }
+  .view-controls { flex-shrink:0; }
+  .attempt-credit { max-width:170px; font-size:10px; padding:6px 8px; }
+}
