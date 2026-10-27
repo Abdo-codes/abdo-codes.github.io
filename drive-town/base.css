@@ -306,4 +306,4 @@ h1 {
   font-size:13px;
   margin-right:6px;
 }
-.sidebar-footer .byline { display:block; margin-top:6px; color:inherit; text-underline-offset:2px; }
+.sidebar-footer .byline { display:block; margin-top:6px; color:var(--green); font-size:11px; text-underline-offset:2px; }

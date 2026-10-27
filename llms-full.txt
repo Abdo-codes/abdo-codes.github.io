@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next app, ColorTalk (iPad ABC coloring app for children 5 and under), is coming soon. This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next game, Angry Nona: Night Shift (iPhone nanny game), and ColorTalk (iPad ABC coloring app for children 5 and under) are coming soon. This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -26,6 +26,7 @@
 - [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
 - [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
 - [Drive Town](https://yoloabdo.com/drive-town/): a free 3D driving game to practise the Dutch car theory exam (CBR)
+- [Drive Town exam guide](https://yoloabdo.com/drive-town/guide/): the Dutch car theory exam in English, 24 rules and 115 Dutch exam terms
 - [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts, the surfing guide and the Drive Town guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
@@ -243,6 +244,48 @@
 
 ---
 
+# Angry Nona: Night Shift - Cozy iPhone Nanny Game (Coming Soon)
+
+> Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 13 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is not on the App Store yet.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/angry-nona/)
+- [Support](https://yoloabdo.com/angry-nona/support/)
+- [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
+
+## Key Features
+
+- **Six Toddlers, One Nanny** - keep every crib asleep through the night shift
+- **Shh and Fetch** - read each kid's bubble; shh them, or bring a bottle, a teddy, or a story
+- **Tap Queue** - tap several cribs in a row and the nanny serves them one by one
+- **Chores in Quiet Moments** - warm a bottle, crochet a teddy, or water the plant
+- **Coffee** - keeps the nanny going on long nights
+- **Mom's Calls** - decline fast, or the phone rings in the nursery
+- **Princess Nona** - the ringleader with a crown; if she wakes, the room can follow
+- **13 Nights + Endless** - nights add kids and twists, then Endless for high scores. Nights 1-4 free; Full Shift unlocks the rest
+- **Nanny Shop** - spend points earned in play on helps and new looks
+- **Outfits** - dress the nanny in new looks
+- **Accessibility** - VoiceOver and Reduce Motion support
+- **Privacy-First** - no ads, no tracking, no account; only anonymous game stats and crash reports
+
+## Availability
+
+- Coming soon to the App Store
+- Pricing will be announced at launch
+
+## Platform
+
+- iOS (iPhone), requires iOS 18+
+- Plays fully offline; progress, settings, and points are stored on the device
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
 # ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad (Coming Soon)
 
 > ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends no analytics or crash reports. It has no in-app purchases and no external links. It is not on the App Store yet.
@@ -295,6 +338,7 @@
 ## Links
 
 - [Play Drive Town](https://yoloabdo.com/drive-town/)
+- [Exam guide and Dutch terms](https://yoloabdo.com/drive-town/guide/)
 - [3D artwork credits](https://yoloabdo.com/drive-town/credits.html)
 
 ## Key Features
@@ -303,7 +347,7 @@
 - **Mock exam** — 50 questions in 30 minutes with a pass at 44, like the CBR car theory exam since 7 April 2025. Six question types: Ja/Nee, multiple choice, multiple response, number, tap a marker in a picture, and put in order. Picture questions play a short 3D clip and stop at the key moment. The screen uses the exam terms Vraag x van y, Resterende tijd, Markeren and Overzicht. The bank has 193 original questions in eight exam topics, each with an explanation and an official source
 - **Hazard practice** — 61 short 3D clips, 25 per run, with the answers Brake, Release accelerator or Do nothing. It is based on the former CBR hazard-perception part (gevaarherkenning, used until 6 April 2025)
 - **Feedback and replay** — every lesson ends with a rule check; a mistake shows the recorded speed and position, with a replay of the decision moment
-- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and "Practise this" opens the matching lesson and clips
+- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and a Practise button on the result opens the matching lesson and clips
 - **Dutch exam terms** — 115 words such as voorrang verlenen (give way), haaientanden (shark teeth), ritsen (zipper merge) and invoegen (merging in), shown next to the English
 - **Guided and Independent modes** — coach prompts, or varied traffic with no safety hints
 
@@ -980,88 +1024,437 @@ Source: https://yoloabdo.com/surfing/
 
 ---
 
-# Drive Town: Dutch car theory exam practice in 3D
+# Drive Town: Dutch car theory exam guide in English
 
-Source: https://yoloabdo.com/drive-town/
+Source: https://yoloabdo.com/drive-town/guide/
 
-## How it works
+Play: https://yoloabdo.com/drive-town/
 
-- Drive Town is a free browser game for learners who prepare for the Dutch car theory exam (CBR theorie-examen auto, category B). It is an independent practice project by Abdelrahman Eita and is not made by or linked to CBR.
-- The route steers the car. The player chooses the speed (Drive, Slow, Stop), the left and right indicators, when to wait, and when to park, merge, overtake or go back to the lane.
-- Each lesson ends with a rule check. A wrong answer explains the rule and gives a changed situation with three choices.
-- A mistake on the road shows the recorded speed, position and road users, with a replay that can pause, seek and jump to the decision moment.
-- Guided mode gives coach prompts. Independent mode varies the traffic timing and gives no safety hints until the player asks for one.
-- Progress is saved only in the browser. The interface is in English, and each lesson card shows the Dutch exam terms.
+Last checked: 27 October 2026
 
-## The 24 lessons
+This guide explains the CBR car theory exam for a car licence (category B) in plain English. It gives the 24 rules from the Drive Town lessons and 115 Dutch exam terms with their English meaning. Read the facts first. Then practise the rules in the free Drive Town game.
 
-### 01 Bakery run
+Drive Town is an independent project. It is not made by or linked to CBR.
 
-- **A gentle start** (Read the road): Drive through the signed 30 km/h zone. Source: RVV 1990 · Article 62 / sign A1.
-- **Someone on your right** (Give way): Let the orange car from your right pass. Source: RVV 1990 · Article 15.
-- **People come first** (Protect pedestrians): Turn right slowly, then let the pedestrian finish crossing the zebra. Source: RVV 1990 · Article 49.
-- **One last look** (Turn safely): Signal right and let the cyclist continue straight. Source: RVV 1990 · Articles 18 and 55.
-- **Made it to the bakery** (Finish with care): Signal, stop by the bay, let the pedestrian pass, then park. Source: RVV 1990 · Article 54.
+## The exam at a glance
 
-### 02 Signs & signals
+- Questions: 50 questions that count, plus 2 test questions that do not count. Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto
+- Time: 30 minutes (45 minutes with extra time or an individual exam). Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto
+- To pass: At least 44 of 50 correct. Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto
+- Topics: 8. Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/onderwerpen-in-het-theorie-examen
+- Question types: 6. Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/soort-vragen-tijdens-theorie
+- Animations: Some questions show a short animation without sound. Source: https://www.cbr.nl/nl/over-het-cbr/over/laatste-nieuws/nieuws/vernieuwd-theorie-examen-b-rijbewijs-vanaf-7-april
+- Result: You see it at once. Source: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto
 
-- **A light to listen to** (Red means stop): Wait before the stop line while the light is red. Continue on green when the road is clear. Source: RVV 1990 · Articles 68 and 14.
-- **A proper full stop** (STOP and give way): Stop completely before the line, then give way to the crossing car. Source: RVV 1990 · Article 62 / sign B7.
-- **The triangle has a say** (Recognise signed priority): Give priority at the yield sign and shark teeth. Continue once the crossing road is clear. Source: RVV 1990 · Articles 62, 80 / sign B6.
-- **A quieter street ahead** (50 becomes 30): Choose a comfortable pace on the 50 road. Slow to 30 or below before the new 30 sign. Source: RVV 1990 · Article 62 / sign A1.
+## What changed on 7 April 2025
 
-### 03 Sharing the road
+Before 7 April 2025, the exam had 65 questions in three parts: hazard perception (25 questions), knowledge (12 questions) and insight (28 questions). Now the exam has 50 questions, and you get one result for the whole exam. The separate photo-based hazard-perception part is gone. Animations are now part of the questions. CBR says that the level and the content of the exam stay the same.
 
-- **Room for the bus** (Let a signalling bus leave): In this built-up area, make room for the bus indicating left to leave its stop. Source: RVV 1990 · Article 56.
-- **One car at a time** (Read priority at a narrowing): The circular F5 sign gives the oncoming car priority through the narrow passage. Source: RVV 1990 · Article 62 / signs F5 and F6.
-- **Wait beyond the train** (Watch lights and barriers): Wait before the crossing until the red lights are off and the barriers fully open. Check that you can clear the tracks. Source: RVV 1990 · Articles 15a, 71 / ProRail.
+Source: [CBR: Vernieuwd theorie-examen B-rijbewijs vanaf 7 april](https://www.cbr.nl/nl/over-het-cbr/over/laatste-nieuws/nieuws/vernieuwd-theorie-examen-b-rijbewijs-vanaf-7-april)
 
-### 04 Roundabouts
+## Taking the exam in English
 
-- **Traffic on the roundabout first** (Give way on entry): Give way to the car already on the roundabout, then enter when it has passed. Source: RVV 1990 · Articles 15, 62 and 80 / signs B6 and D1.
-- **Say where you are going** (Signal right to leave): Go straight on: switch on your right indicator before you leave the roundabout. Source: RVV 1990 · Article 55.
-- **Cyclists around the roundabout** (Give way as you leave): Signal right, then let the cyclist on the roundabout cycle path pass before you leave. Source: RVV 1990 · Articles 18 and 55 · ANWB roundabout guidance.
+CBR offers the car theory exam in Dutch and in English. You can also take each of them with extra time. Six terms stay in Dutch in the English exam:
 
-### 05 Merging
+- APK (vehicle test)
+- autoweg (road for motor vehicles)
+- brommobiel
+- erf
+- snorfiets (light moped)
+- speed pedelec
 
-- **Take turns** (Merge where a lane ends): Drive on in your lane. Merge from the sign, when a gap is open. Source: RVV 1990 · Articles 54, 55 and 77.
-- **Join the road** (Merge from an acceleration lane): Build speed on the lane. Merge left when there is a gap. Source: RVV 1990 · Articles 1, 54 and 55.
-- **Make room** (Help a merging driver): Watch the acceleration lane. Give room if the driver cannot merge. Source: RVV 1990 · Article 54.
+For another language, you book and pay an official interpreter yourself. Do this at least 14 days before the exam.
 
-### 06 Lights & sirens
+Sources: [CBR: Welk theorie-examen voor de auto past bij jou?](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/welk-theorie-examen-past-bij-jou); [CBR: Theorie-examenplan voor de auto](https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto)
 
-- **The light turns amber** (Amber means stop): Watch the light. When it turns amber, stop if you can stop in a safe way. Source: RVV 1990 · Article 68.
-- **Make way** (Let a priority vehicle go first): When you hear or see a siren, find the ambulance. Let it go first, then go on. Source: RVV 1990 · Article 50.
-- **Who ranks first?** (An instruction ranks above a light): Look at the officer and at the light. Obey the officer first. Source: RVV 1990 · Articles 64, 82 and 84.
+## Age, booking, price and validity
 
-### 07 Trams & bikes
+- Age: You can take the theory exam from age 16. You can take driving lessons from age 16.5 and the practical exam from age 17. Source: [Rijksoverheid: Hoe oud moet ik zijn voor ik rijles mag nemen en rijexamen mag doen voor mijn autorijbewijs?](https://www.rijksoverheid.nl/onderwerpen/rijbewijs/vraag-en-antwoord/wanneer-mag-ik-rijles-nemen-en-rijexamen-doen-voor-mijn-autorijbewijs)
+- Booking: Book the exam in Mijn CBR. You log in with DigiD. Without DigiD, use the paper form. Your driving school can book the exam for you after you authorise it in Mijn CBR. Bring a valid ID to the exam. Source: [CBR: Je theorie-examen auto aanvragen](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/je-theorie-examen-auto-aanvragen)
+- Price: In 2026, the exam costs EUR 50.50 in Dutch and EUR 57.00 in English. Extra time costs EUR 13.50 more. CBR has announced the 2027 prices: EUR 52.20 in Dutch and EUR 59.00 in English, subject to change. Sources: [CBR: Tarieven 2026](https://www.cbr.nl/nl/service/nl/nl/tarieven-2026); [CBR: Tarieven 2027](https://www.cbr.nl/nl/service/nl/artikel/tarieven-2027)
+- Validity: Your practical exam must be within 1.5 years of your theory pass. Check the date in Mijn CBR. Source: [wetten.overheid.nl: Reglement rijbewijzen, artikel 67d](https://wetten.overheid.nl/BWBR0008074/)
 
-- **Trams and passengers** (Give way to passengers and trams): Drive on. Give the passengers time. Let the tram go first. Source: RVV 1990 · Articles 15 and 52.
-- **Cyclists and the strip** (Give room to cyclists): Drive on. Watch the van and the cyclist. Give room. Source: RVV 1990 · Articles 10 and 23.
-- **Overtaking** (Pass only when you may and can): Look at the line, the crossing and the road ahead. Pass only when you may and can. Source: RVV 1990 · Articles 11, 12, 19, 55 and 76.
+## The 8 exam topics
 
-## The mock exam
+The topic names come from CBR (in Dutch). CBR does not give a number of questions for each topic. The numbers show the questions of the Drive Town practice bank: 193 in total.
 
-- The CBR car theory exam has been one test since 7 April 2025: 50 scored questions in 30 minutes, with a pass at 44. Short 3D animations are part of the questions. Drive Town copies this format for practice.
-- Six question types: Ja/Nee, multiple choice, multiple response (every right answer and no wrong one), number, tap a marker in a picture, and put in order.
-- Picture questions play a short recording from the 3D lessons and stop at the key moment, for example "who goes first?".
-- The screen uses the exam terms: Vraag x van y, Resterende tijd, Markeren, Overzicht, Vorige and Volgende.
-- The bank has 193 original questions in eight topics of the CBR exam plan, such as Gebruik van de weg (road use) and Voorrang en voor laten gaan (priority). Each question has an explanation and an official source.
-- The result shows pass or fail at 44 of 50, a score per topic and a review of each wrong answer. It is practice and does not predict the real result.
+- Gebruik van de weg (Road use): 36 questions
+- Voorrang en voor laten gaan (Priority): 38 questions
+- Bijzondere wegen, weggedeelten, weggebruikers en manoeuvres (Special roads and manoeuvres): 37 questions
+- Veilig rijden met het voertuig en reageren in noodsituaties (Safe driving and emergencies): 12 questions
+- Verkeerstekens en aanwijzingen (Signs and instructions): 40 questions
+- Verantwoorde verkeersdeelname en milieubewust rijden (Responsible and economical driving): 14 questions
+- Wetgeving (Law): 8 questions
+- Voertuigkennis (Vehicle knowledge): 8 questions
+- Total: 193 questions
 
-## The hazard practice
+Sources: [CBR: Onderwerpen en onderdelen van het theorie-examen](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/onderwerpen-in-het-theorie-examen); [CBR: Theorie-examenplan voor de auto](https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto)
 
-- 61 short 3D clips from the lessons play for a few seconds and stop. The player chooses Brake, Release accelerator or Do nothing.
-- Each run draws 25 clips in mixed order. The feedback explains the answer, links the rule and plays what happens next.
-- The format is based on the former CBR hazard-perception part (gevaarherkenning), which the exam used until 6 April 2025.
+## 24 rules to know, in 7 chapters
 
-## Weak topics and Dutch terms
+Each Drive Town lesson practises one rule. The reference gives the article of the RVV 1990 (the Dutch traffic rules) or another source.
 
-- Mistakes from the mock exam, the hazard practice and the lessons count per topic. "Practise this" opens the lesson and the clips for the weakest topic.
-- The glossary has 115 Dutch exam words, for example voorrang verlenen (give way), haaientanden (shark teeth), bebouwde kom (built-up area), ritsen (zipper merge) and invoegen (merging in).
+### Chapter 01: Bakery run
 
-## Sources and limits
+#### A gentle start
 
-- Rules link to the Dutch traffic law, RVV 1990 (https://wetten.overheid.nl/BWBR0004825/2026-07-01), and to CBR, ProRail, ANWB and government pages where the law has no article.
-- Some points are game choices or a reading of the law, not confirmed facts, for example gap times for merging and the side gap when passing a cyclist. A driving instructor has not yet reviewed every question and clip.
-- Drive Town does not cover every exam topic and does not prove exam readiness.
+- Rule: A posted speed limit is a maximum. Choose a lower speed when the situation calls for it.
+- Reference: RVV 1990 · Article 62 / sign A1 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukIII_Paragraaf1_Artikel62)
+- Dutch terms: maximumsnelheid = maximum speed; bebouwde kom = built-up area
+
+#### Someone on your right
+
+- Rule: At an equal-priority junction, yield to drivers approaching from your right. Signs and specific exceptions can change this.
+- Reference: RVV 1990 · Article 15 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf5_Artikel15)
+- Dutch terms: voorrang = priority (right of way); kruispunt = junction
+
+#### People come first
+
+- Rule: Let pedestrians who are crossing, or clearly about to cross, a zebra crossing go first.
+- Reference: RVV 1990 · Article 49 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf19_Artikel49)
+- Dutch terms: zebrapad = zebra crossing; voor laten gaan = let go first
+
+#### One last look
+
+- Rule: When turning, yield to traffic continuing on the same road beside or close behind you. Indicate your turn.
+- Reference: RVV 1990 · Articles 18 and 55 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf7_Artikel18)
+- Dutch terms: afslaan = turn; richtingaanwijzer = indicator; voor laten gaan = let go first
+
+#### Made it to the bakery
+
+- Rule: During a special manoeuvre such as parking, yield to all other traffic.
+- Reference: RVV 1990 · Article 54 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel54)
+- Dutch terms: parkeerhaven = parking bay; richtingaanwijzer = indicator
+
+### Chapter 02: Signs & signals
+
+#### A light to listen to
+
+- Rule: Red means stop. Green permits you to continue; check that you can proceed safely without blocking the junction.
+- Reference: RVV 1990 · Articles 68 and 14 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukIII_Paragraaf3_Artikel68)
+- Dutch terms: verkeerslicht = traffic light; stopstreep = stop line
+
+#### A proper full stop
+
+- Rule: At sign B7, stop and give priority to drivers on the crossing road. Stopping alone does not give you priority.
+- Reference: RVV 1990 · Article 62 / sign B7 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#Bijlage1)
+- Dutch terms: stopstreep = stop line; voorrang verlenen = give way
+
+#### The triangle has a say
+
+- Rule: The B6 yield sign and white triangular road markings (shark teeth) require you to give priority to drivers on the crossing road. Unlike STOP, they do not always require a full stop.
+- Reference: RVV 1990 · Articles 62, 80 / sign B6 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#Bijlage1)
+- Dutch terms: haaientanden = shark teeth; voorrang verlenen = give way; kruispunt = junction
+
+#### A quieter street ahead
+
+- Rule: A1 sets the maximum speed. Reach a lower posted limit by its sign, and choose an even lower speed when conditions require it.
+- Reference: RVV 1990 · Article 62 / sign A1 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#Bijlage1)
+- Dutch terms: maximumsnelheid = maximum speed; bebouwde kom = built-up area
+
+### Chapter 03: Sharing the road
+
+#### Room for the bus
+
+- Rule: Inside a built-up area, drivers must give a bus room to leave its stop when its indicator shows that intention. Keep checking the road before following.
+- Reference: RVV 1990 · Article 56 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel56)
+- Dutch terms: bushalte = bus stop; bebouwde kom = built-up area
+
+#### One car at a time
+
+- Rule: At F5, give priority to oncoming traffic. F6 is the blue sign granting priority over oncoming vehicles; either sign still requires a safe, clear passage.
+- Reference: RVV 1990 · Article 62 / signs F5 and F6 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#Bijlage1)
+- Dutch terms: tegemoetkomende bestuurders = oncoming drivers; voor laten gaan = let go first
+
+#### Wait beyond the train
+
+- Rule: Wait at flashing red railway lights and closed or moving barriers. Give trains priority; enter only when you can clear the whole crossing immediately.
+- Reference: RVV 1990 · Articles 15a, 71 / ProRail (https://www.prorail.nl/veiligheid/overwegen/veilig-oversteken) (ProRail guidance, not law)
+- Dutch terms: overweg = level crossing
+
+### Chapter 04: Roundabouts
+
+#### Traffic on the roundabout first
+
+- Rule: Most Dutch roundabouts have a give-way sign and shark teeth on each entry: traffic already on the roundabout has priority. Without signs or markings, the general rule applies and traffic from the right goes first.
+- Reference: RVV 1990 · Articles 15, 62 and 80 / signs B6 and D1 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#Bijlage1)
+- Dutch terms: rotonde = roundabout; haaientanden = shark teeth; voorrang verlenen = give way
+
+#### Say where you are going
+
+- Rule: Leaving a roundabout is a change of direction: signal right in good time before you exit. Going straight on, no signal is needed on entry.
+- Reference: RVV 1990 · Article 55 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel55)
+- Dutch terms: rotonde = roundabout; richtingaanwijzer = indicator
+
+#### Cyclists around the roundabout
+
+- Rule: A cycle path close around a roundabout counts as part of it: drivers leaving give way to cyclists on it. Shark teeth or signs on the cycle path can change this, so read them.
+- Reference: RVV 1990 · Articles 18 and 55 · ANWB roundabout guidance (https://www.anwb.nl/verkeer/veiligheid/verkeersregels/rotondes) (ANWB guidance, not law)
+- Dutch terms: rotonde = roundabout; fietspad = cycle path; voorrang verlenen = give way
+
+### Chapter 05: Merging
+
+#### Take turns
+
+- Rule: When two lanes become one, drivers in the ending lane drive on and merge near the end. A driver in the continuing lane may let one car in. This is courtesy, not a duty of the law. The CBR examiner expects you to give merging traffic the chance when a road narrows. The driver who changes lane lets other traffic go first (Article 54).
+- Reference: RVV 1990 · Articles 54, 55 and 77 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel54)
+- Dutch terms: ritsen = zipper merge; einde rijstrook = end of lane; voor laten gaan = let go first
+
+#### Join the road
+
+- Rule: Traffic on the main road goes first. Use the lane to match its speed. Signal, then merge in one smooth move. To merge before the lane ends is a safe-driving habit from the CBR driving procedure, not an article.
+- Reference: RVV 1990 · Articles 1, 54 and 55 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel54)
+- Dutch terms: invoegstrook = acceleration lane; invoegen = merge; voor laten gaan = let go first
+
+#### Make room
+
+- Rule: A merging driver lets you go first (Article 54). A careful driver still slows down early to help a merger who cannot merge. This is a safe-driving habit, not a rule of the law. If the driver can merge, keep your lane and speed.
+- Reference: RVV 1990 · Article 54 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf24_Artikel54)
+- Dutch terms: invoegstrook = acceleration lane; voor laten gaan = let go first
+
+### Chapter 06: Lights & sirens
+
+#### The light turns amber
+
+- Rule: Amber means stop, unless you can no longer stop in a safe way. The law word is redelijkerwijs: in a reasonable way. Your speed and the distance to the stop line decide this.
+- Reference: RVV 1990 · Article 68 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukIII_Paragraaf3_Artikel68)
+- Dutch terms: geel licht = amber light; verkeerslicht = traffic light; stopstreep = stop line
+
+#### Make way
+
+- Rule: A priority vehicle uses a blue flashing light and a two-tone horn. All road users let its driver go first (Article 50). Article 50 names no exception for a green light.
+- Reference: RVV 1990 · Article 50 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf20_Artikel50)
+- Dutch terms: voorrangsvoertuig = priority vehicle; voor laten gaan = let go first; tweetonige hoorn = two-tone horn
+
+#### Who ranks first?
+
+- Rule: An instruction from a police officer ranks above signs, lights and rules (Articles 82 and 84). A traffic light ranks above a priority sign (Article 64).
+- Reference: RVV 1990 · Articles 64, 82 and 84 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukIV_Paragraaf2_Artikel84)
+- Dutch terms: aanwijzing = instruction; rangorde = order of rank; verkeerslicht = traffic light
+
+### Chapter 07: Trams & bikes
+
+#### Trams and passengers
+
+- Rule: A tram has priority at a junction. You give way to it, also when it comes from the left (Article 15). When a tram stands at a stop, give the passengers the chance to get on and off (Article 52). You may pass a tram on the right (Article 11).
+- Reference: RVV 1990 · Articles 15 and 52 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf22_Artikel52)
+- Dutch terms: tram = tram; tramhalte = tram stop; voorrang verlenen = give way
+
+#### Cyclists and the strip
+
+- Rule: A cycle strip with a solid line is for cyclists, light mopeds and disabled-person vehicles (Article 10 paragraph 2 and Article 2b). Do not let your car stand still on a cycle strip (Article 23). Two cyclists may ride side by side (Article 3 paragraph 2). A snorfiets may not.
+- Reference: RVV 1990 · Articles 10 and 23 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf1_Artikel10)
+- Dutch terms: fietsstrook = cycle strip; bromfiets = moped; snorfiets = light moped
+
+#### Overtaking
+
+- Rule: Overtake on the left (Article 11). Do not overtake just before or on a zebra crossing (Article 12). Do not cross a solid line between lanes (Article 76 paragraph 1). A broken line on your side may be crossed (Article 76 paragraph 2 part b). Be able to stop within the distance that is free (Article 19). An oncoming car takes that distance. Show your indicator before you move out (Article 55). Sign F1 bans motor vehicles from passing each other. A cyclist is not a motor vehicle, so you may pass it if the other rules allow.
+- Reference: RVV 1990 · Articles 11, 12, 19, 55 and 76 (https://wetten.overheid.nl/BWBR0004825/2026-07-01#HoofdstukII_Paragraaf2_Artikel12)
+- Dutch terms: inhalen = overtake; doorgetrokken streep = solid line; zebrapad = zebra crossing
+
+## Hazard practice (former CBR format)
+
+Drive Town has 61 short hazard clips. One hazard test shows 25 of them. For each clip, you choose Brake, Release accelerator or Do nothing.
+
+The clips follow the format of the former CBR hazard-perception part (gevaarherkenning), which CBR used until 6 April 2025. They are original 3D scenes, not CBR material. The exam today has no separate hazard part, but the animation questions also test what you expect to happen next.
+
+## How to practise with Drive Town
+
+- Guided mode gives you prompts from a driving coach. Independent mode changes the traffic timing and gives no safety prompts until you ask for a hint.
+- The mock exam has 50 questions in 30 minutes, with a pass at 44. It uses 193 original questions of 6 question types.
+- The result shows your weak topics. Choose "Practise lessons" to practise the lessons of a weak topic, or "Drill: 10 questions" to drill one topic.
+- Your progress stays only in your browser.
+- The questions are original. They are not CBR exam questions.
+- A practice result does not predict your result in the real exam.
+
+Play Drive Town: https://yoloabdo.com/drive-town/
+
+## Frequently asked questions
+
+### Can I take the Dutch car theory exam in English?
+
+Yes. CBR offers the car theory exam in English, with the same 30 minutes. Six terms stay in Dutch: APK, autoweg, brommobiel, erf, snorfiets and speed pedelec. For other languages, you book an official interpreter yourself.
+
+Sources: [CBR: Welk theorie-examen voor de auto past bij jou?](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/welk-theorie-examen-past-bij-jou); [CBR: Theorie-examenplan voor de auto](https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto)
+
+### How many questions are there, and how many must I get right?
+
+The exam has 50 questions that count, plus 2 test questions that do not count. You have 30 minutes. You must answer at least 44 correctly.
+
+Source: [CBR: Hoe gaat het theorie-examen auto?](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto)
+
+### Is there still a separate hazard perception test?
+
+No. Since 7 April 2025, the separate photo-based part is gone. Some questions show a short animation without sound, and you get one result for the whole exam.
+
+Source: [CBR: Vernieuwd theorie-examen B-rijbewijs vanaf 7 april](https://www.cbr.nl/nl/over-het-cbr/over/laatste-nieuws/nieuws/vernieuwd-theorie-examen-b-rijbewijs-vanaf-7-april)
+
+### How much does the theory exam cost?
+
+In 2026, the exam costs EUR 50.50 in Dutch and EUR 57.00 in English. CBR has announced EUR 52.20 and EUR 59.00 for 2027, subject to change.
+
+Sources: [CBR: Tarieven 2026](https://www.cbr.nl/nl/service/nl/nl/tarieven-2026); [CBR: Tarieven 2027](https://www.cbr.nl/nl/service/nl/artikel/tarieven-2027)
+
+### How old must I be?
+
+You can take the theory exam from age 16.
+
+Source: [Rijksoverheid: Hoe oud moet ik zijn voor ik rijles mag nemen en rijexamen mag doen voor mijn autorijbewijs?](https://www.rijksoverheid.nl/onderwerpen/rijbewijs/vraag-en-antwoord/wanneer-mag-ik-rijles-nemen-en-rijexamen-doen-voor-mijn-autorijbewijs)
+
+### How long is a theory pass valid?
+
+Your practical exam must be within 1.5 years of your theory pass. Check the date in Mijn CBR.
+
+Source: [wetten.overheid.nl: Reglement rijbewijzen, artikel 67d](https://wetten.overheid.nl/BWBR0008074/)
+
+### How do I book the exam?
+
+Log in to Mijn CBR with DigiD. Without DigiD, use the paper form. Your driving school can book it after you authorise it in Mijn CBR. Bring a valid ID.
+
+Source: [CBR: Je theorie-examen auto aanvragen](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/je-theorie-examen-auto-aanvragen)
+
+### Does CBR give free practice questions?
+
+CBR shows sample questions on its website, in Dutch only, and does not sell theory books. Drive Town is a free practice game with original questions.
+
+Source: [CBR: Zo leer en oefen je voor je theorie-examen](https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/leren-en-oefenen)
+
+## Dutch exam terms in English (115)
+
+All 115 Dutch terms of Drive Town, A to Z, as "Dutch: English".
+
+- aanhangwagen: trailer
+- aanwijzing: instruction
+- achterlicht: rear light
+- adviessnelheid: advised speed
+- afleiding: distraction
+- afslaan: turn
+- airbag: airbag
+- antiblokkeersysteem: anti-lock braking system (ABS)
+- APK: vehicle test
+- autosnelweg: motorway
+- autoweg: road for motor vehicles
+- bebouwde kom: built-up area
+- begeleiderspas: coach pass
+- beginnend bestuurder: beginning driver
+- blokmarkering: block marking
+- bromfiets: moped
+- buitenspiegel: outside mirror
+- bushalte: bus stop
+- claxon: horn
+- cruisecontrole: cruise control
+- dimlicht: dipped headlights
+- doorgetrokken streep: solid line
+- einde inhaalverbod: end of overtaking ban
+- einde rijstrook: end of lane
+- einde voorrangsweg: end of priority road
+- fietsers en bromfietsers: cyclists and moped riders
+- fietspad: cycle path
+- fietsstrook: cycle strip
+- Gas loslaten: release the accelerator
+- geel licht: amber light
+- gehandicaptenvoertuig: disabled-person vehicle
+- gesloten in deze richting: closed in this direction
+- gesloten voor fietsen: closed to bicycles
+- gesloten voor motorvoertuigen: closed to motor vehicles
+- gesloten voor voertuigen: closed to vehicles
+- gesloten voor voetgangers: closed to pedestrians
+- gevaarherkenning: hazard perception
+- gevarendriehoek: warning triangle
+- grootlicht: main beam
+- haaientanden: shark teeth
+- inhaalverbod: overtaking ban
+- inhalen: overtake
+- invoegen: merge
+- invoegstrook: acceleration lane
+- ja: yes
+- kenteken: registration number
+- kentekenbewijs: registration document
+- kinderbeveiligingssysteem: child restraint system
+- kruispunt: junction
+- kwetsbare weggebruikers: vulnerable road users
+- lading: load
+- maximumsnelheid: maximum speed
+- medicijnen: medicines
+- milieubewust rijden: environment-aware driving
+- mistachterlicht: rear fog lamp
+- mistlamp: fog lamp
+- mobiel elektronisch apparaat: mobile electronic device
+- nee: no
+- nullimiet: zero limit
+- onderbroken streep: broken line
+- ongeval: accident
+- onnodig geluid: unnecessary noise
+- onverplicht fietspad: optional cycle path
+- overweg: level crossing
+- parkeerhaven: parking bay
+- parkeerverbod: no parking
+- profieldiepte: tread depth
+- promille: per mille
+- rangorde: order of rank
+- rechts houden: keep right
+- Remmen: brake
+- richtingaanwijzer: indicator
+- rijbaanversmalling: road narrows
+- rijbewijs: driving licence
+- rijhulpsysteem: driver assistance system
+- rijstrook: lane
+- ritsen: zipper merge
+- rood licht: red light
+- rotonde: roundabout
+- ruimtekussen: space cushion
+- slepen: tow
+- slippen: skid
+- snorfiets: light moped
+- stop: stop and give way
+- stopstreep: stop line
+- stopverbod: no stopping
+- tegemoetkomende bestuurders: oncoming drivers
+- tram: tram
+- tramhalte: tram stop
+- tweetonige hoorn: two-tone horn
+- uitrit: driveway exit
+- veiligheidsgordel: seat belt
+- verdrijvingsvlak: hatched area
+- verkeersbord: traffic sign
+- verkeerslicht: traffic light
+- verkeersregelaar: traffic controller
+- verleen voorrang: give way
+- vermoeid: tired
+- verplicht fietspad: mandatory cycle path
+- verzekering: insurance
+- vluchtheuvel: traffic island
+- vluchtstrook: hard shoulder
+- voetgangersoversteekplaats: pedestrian crossing
+- volgafstand: following distance
+- voor laten gaan: let go first
+- voorrang: priority (right of way)
+- voorrang op tegenliggers: priority over oncoming traffic
+- voorrang verlenen: give way
+- voorrangsvoertuig: priority vehicle
+- voorrangsweg: priority road
+- voorsorteren: preselect
+- WA-verzekering: liability insurance
+- waarschuwingsknipperlichten: hazard warning lights
+- Wegenverkeerswet: Road Traffic Act
+- zebrapad: zebra crossing
+
+## Sources
+
+- CBR: Hoe gaat het theorie-examen auto? https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/hoe-gaat-het-theorie-examen-auto
+- CBR: Wat voor vragen krijg je tijdens je theorie-examen auto? https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/soort-vragen-tijdens-theorie
+- CBR: Onderwerpen en onderdelen van het theorie-examen https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/onderwerpen-in-het-theorie-examen
+- CBR: Vernieuwd theorie-examen B-rijbewijs vanaf 7 april https://www.cbr.nl/nl/over-het-cbr/over/laatste-nieuws/nieuws/vernieuwd-theorie-examen-b-rijbewijs-vanaf-7-april
+- CBR: Welk theorie-examen voor de auto past bij jou? https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/welk-theorie-examen-past-bij-jou
+- CBR: Theorie-examenplan voor de auto https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto
+- Rijksoverheid: Hoe oud moet ik zijn voor ik rijles mag nemen en rijexamen mag doen voor mijn autorijbewijs? https://www.rijksoverheid.nl/onderwerpen/rijbewijs/vraag-en-antwoord/wanneer-mag-ik-rijles-nemen-en-rijexamen-doen-voor-mijn-autorijbewijs
+- CBR: Je theorie-examen auto aanvragen https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/je-theorie-examen-auto-aanvragen
+- CBR: Tarieven 2026 https://www.cbr.nl/nl/service/nl/nl/tarieven-2026
+- CBR: Tarieven 2027 https://www.cbr.nl/nl/service/nl/artikel/tarieven-2027
+- wetten.overheid.nl: Reglement rijbewijzen, artikel 67d https://wetten.overheid.nl/BWBR0008074/
+- CBR: Zo leer en oefen je voor je theorie-examen https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/leren-en-oefenen
+- wetten.overheid.nl: Reglement verkeersregels en verkeerstekens 1990 (RVV 1990) https://wetten.overheid.nl/BWBR0004825/2026-07-01
+
+Last checked: 27 October 2026
+
+Drive Town is an independent project. It is not made by or linked to CBR.
