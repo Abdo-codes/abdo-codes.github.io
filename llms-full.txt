@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [The Prayer Screen: prayer times that look good on your TV all day](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/) (27 Oct 2026)
 - [Sajdah 1.6.0: a new Today screen, the Prayer Screen and the Athan in 13 voices](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/) (22 Oct 2026)
 - [Tally 1.3.2: the Apple TV scoreboard is now fully free](https://yoloabdo.com/blog/tally-1-3-2-release-notes/) (19 Oct 2026)
 - [Capybara Rush 1.5: daily runs, the Capybara Cup and a poster of your best run](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/) (19 Oct 2026)
@@ -41,6 +42,7 @@
 - [Landing Page](https://yoloabdo.com/sajda/)
 - Languages: [English](https://yoloabdo.com/sajda/) · [العربية](https://yoloabdo.com/sajda/ar/) · [Türkçe](https://yoloabdo.com/sajda/tr/) · [Français](https://yoloabdo.com/sajda/fr/) · [Español](https://yoloabdo.com/sajda/es/) · [اردو](https://yoloabdo.com/sajda/ur/) · [বাংলা](https://yoloabdo.com/sajda/bn/) · [Bahasa Indonesia](https://yoloabdo.com/sajda/id/) · [Русский](https://yoloabdo.com/sajda/ru/) · [Svenska](https://yoloabdo.com/sajda/sv/) · [中文](https://yoloabdo.com/sajda/zh/)
 - [App Store](https://apps.apple.com/app/id6759179587)
+- [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): the six full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board), Arabic layout, burn-in protection, and the free preview
 - [Sajdah 1.6.0 release notes](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/): a new Today screen, the Prayer Screen in six Premium styles with a free preview, the Athan in 13 voices (Premium), new Adhkar art, a What's New screen
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
 - [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
@@ -377,6 +379,59 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/
+
+Product · Sajdah for Apple TV
+
+# The Prayer Screen: prayer times that look good on your TV all day
+
+Most TVs sit dark between shows. With Sajdah, the biggest screen at home can show the day's prayers instead, in a design that fits the room.
+
+![The Horizon style of the Prayer Screen: Dhuhr is next in 1:23:45, the prayers sit on the arc of the sun across the day, and a small chip says: swipe up or down to change style, Back to exit.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-horizon-1280.webp)
+
+In many homes, the prayer times live on a phone. You unlock it, open an app, and look for the next prayer. In a masjid it is different: the times hang on the wall, and everyone in the room can see them. I wanted that feeling at home, on the screen the whole family already looks at.
+
+That is the **Prayer Screen** in [Sajdah, the Quran and Athan app for Apple TV](https://yoloabdo.com/sajda/). It shows the day's prayer times full screen, with a live countdown to the next prayer, and it stays on between prayers.
+
+## How it works
+
+Open the Prayer Screen from its tile on the Today screen. Swipe up or down on the remote to change the style. Press Back to leave. The hint chip goes away after four seconds, and Sajdah remembers the last style you picked.
+
+## Six styles
+
+Every style shows the next prayer, a countdown to it, all six times of the day (Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha), and the Hijri and Gregorian dates.
+
+- **Classic**: dark green, the next prayer in a large serif, a gold countdown, and the six times in one row.
+- **Focus**: deep navy, with a gold ring that fills as the time between two prayers passes.
+- **Horizon**: the path of the sun across the day, with each prayer on the arc and a dot for the time now. It opens first.
+- **Timetable**: the next prayer large on the left, and a table of prayers in English and Arabic on the right, with a progress bar.
+- **Rosette**: the day as a dial, with the Arabic name of the next prayer in the center.
+- **Board**: a black departure board with numbered rows and a status for each prayer: passed, next, or time left.
+
+![The Classic style.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-classic-1280.webp)
+
+![The Board style in Arabic, right to left with Arabic digits.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-board-arabic-1280.webp)
+
+## Made to read from the sofa
+
+Each style puts the name of the next prayer and the countdown first, large enough to read from across the room. Passed prayers are dimmer. The digits have equal width, so they do not jump. The colors are dark and soft for a room at night.
+
+## In Arabic, too
+
+When the Apple TV is in Arabic, the Prayer Screen reads right to left, with Arabic names, dates and digits.
+
+## Safe to leave on all day
+
+- It keeps the Apple TV awake while it is open.
+- Every two minutes, the content moves a few points along a small oval, to help protect OLED TVs from burn-in.
+- After ten minutes with no remote press, it dims to 70% brightness. Any button brings it back.
+
+## Free preview and Premium
+
+All six styles are part of Sajdah Premium. Without Premium, you can watch a free preview in Horizon with the real times for your city. Other styles show a Premium chip; press Select to see the Premium options, or Horizon comes back after 30 seconds. Premium also adds the Athan in 13 voices at every prayer.
 
 ---
 
