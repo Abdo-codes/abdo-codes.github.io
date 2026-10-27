@@ -64,6 +64,9 @@ footer {
 footer a { color: var(--text-secondary); text-decoration: none; }
 footer a:hover { color: var(--accent); }
 
+/* Drive Town card: the game paper colour behind the art */
+.drive-town-bg { background: #f7f4eb; }
+
 @media (max-width: 720px) {
     .page { padding: 32px 20px 72px; }
     .topbar { margin-bottom: 48px; }

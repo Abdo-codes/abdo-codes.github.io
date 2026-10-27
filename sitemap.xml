@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://yoloabdo.com/</loc>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-27</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/apps/</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-27</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
@@ -322,6 +322,10 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/drive-town/</loc>
-        <lastmod>2026-10-25</lastmod>
+        <lastmod>2026-10-27</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/drive-town/guide/</loc>
+        <lastmod>2026-10-27</lastmod>
     </url>
 </urlset>

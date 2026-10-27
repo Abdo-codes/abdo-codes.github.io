@@ -6,6 +6,8 @@ const button = (text, action, primary = true) =>
   `<button class="${primary ? 'primary-button' : 'secondary-button'}" data-hazard="${action}">${text}</button>`;
 const ruleLink = clip => { const { reference, source } = clipRule(clip); return `<a class="hazard-rule" href="${source}" target="_blank" rel="noopener">${reference} ↗</a>`; };
 const answerName = choice => choice ? `${ANSWERS[choice].label} · ${ANSWERS[choice].dutch}` : 'No answer in time';
+// The bar hides the lesson panel, so it carries its own exit. Escape does the same.
+const STOP = '<button type="button" class="hazard-stop" data-hazard="exit">Stop test</button>';
 
 export const hazardKey = test => `${test.phase}:${test.index}:${test.answers.length}`;
 
@@ -22,7 +24,7 @@ export function hazardOverlay(test, practice = (topic, focus) => practiceFor(top
   if (test.phase === 'watch' || test.phase === 'answer') {
     const asking = test.phase === 'answer';
     return `<section class="hazard-bar" aria-label="Hazard question">
-      <div class="hazard-status"><span class="eyebrow">${position}</span><strong>${asking ? 'What do you do now?' : 'Watch the road…'}</strong><span id="hazard-speed" class="hazard-speed"></span></div>
+      <div class="hazard-status"><span class="eyebrow">${position}</span><strong>${asking ? 'What do you do now?' : 'Watch the road…'}</strong><span id="hazard-speed" class="hazard-speed"></span>${STOP}</div>
       <div class="hazard-timer" aria-hidden="true"><span id="hazard-countdown"></span></div>
       <div class="hazard-answers" role="group" aria-label="Your answer">${Object.entries(ANSWERS).map(([id, answer]) =>
         `<button data-hazard="answer" data-choice="${id}" ${asking ? '' : 'disabled'}><strong>${answer.label}</strong><small>${answer.dutch} · ${answer.key}</small></button>`).join('')}</div>
@@ -33,7 +35,7 @@ export function hazardOverlay(test, practice = (topic, focus) => practiceFor(top
     const verdict = last.correct ? 'Correct' : last.choice ? 'Not quite' : 'Too late';
     return `<section class="hazard-bar hazard-feedback ${last.correct ? 'correct' : 'wrong'}" aria-live="polite">
       <div class="hazard-status"><span class="eyebrow">${position} · ${clip.topic.toUpperCase()}</span><strong>${verdict}: ${ANSWERS[clip.answer].label}</strong>
-      <span class="hazard-time">${last.choice ? `${last.seconds.toFixed(1)} s` : ''}</span></div>
+      <span class="hazard-time">${last.choice ? `${last.seconds.toFixed(1)} s` : ''}</span>${STOP}</div>
       <p>${last.correct ? '' : `You chose: ${answerName(last.choice)}. `}${clip.explanation}</p>
       ${ruleLink(clip)}
       <div class="hazard-actions">${button('Watch again', 'replay', false)}${button(final ? 'See your result →' : 'Next situation →', 'next')}</div>

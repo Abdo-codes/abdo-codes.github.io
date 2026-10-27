@@ -26,6 +26,7 @@
 - [Blog](https://yoloabdo.com/blog/) ([Atom feed](https://yoloabdo.com/blog/feed.xml))
 - [How Surfing Works](https://yoloabdo.com/surfing/): an interactive 3D explainer of waves and surfing
 - [Drive Town](https://yoloabdo.com/drive-town/): a free 3D driving game to practise the Dutch car theory exam (CBR)
+- [Drive Town exam guide](https://yoloabdo.com/drive-town/guide/): the Dutch car theory exam in English, 24 rules and 115 Dutch exam terms
 - [Full text for language models](https://yoloabdo.com/llms-full.txt): this file plus the blog posts, the surfing guide and the Drive Town guide in full
 - [GitHub](https://github.com/Abdo-codes) · [LinkedIn](https://www.linkedin.com/in/abdulrhmaneaita) · [YouTube](https://www.youtube.com/@abdoelrhmanmohammed) · [Medium](https://medium.com/@yoloabdo)
 
@@ -337,6 +338,7 @@
 ## Links
 
 - [Play Drive Town](https://yoloabdo.com/drive-town/)
+- [Exam guide and Dutch terms](https://yoloabdo.com/drive-town/guide/)
 - [3D artwork credits](https://yoloabdo.com/drive-town/credits.html)
 
 ## Key Features
@@ -345,7 +347,7 @@
 - **Mock exam** — 50 questions in 30 minutes with a pass at 44, like the CBR car theory exam since 7 April 2025. Six question types: Ja/Nee, multiple choice, multiple response, number, tap a marker in a picture, and put in order. Picture questions play a short 3D clip and stop at the key moment. The screen uses the exam terms Vraag x van y, Resterende tijd, Markeren and Overzicht. The bank has 193 original questions in eight exam topics, each with an explanation and an official source
 - **Hazard practice** — 61 short 3D clips, 25 per run, with the answers Brake, Release accelerator or Do nothing. It is based on the former CBR hazard-perception part (gevaarherkenning, used until 6 April 2025)
 - **Feedback and replay** — every lesson ends with a rule check; a mistake shows the recorded speed and position, with a replay of the decision moment
-- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and "Practise this" opens the matching lesson and clips
+- **Weak topics** — mistakes from the mock exam, the hazard practice and the lessons are counted per topic, and a Practise button on the result opens the matching lesson and clips
 - **Dutch exam terms** — 115 words such as voorrang verlenen (give way), haaientanden (shark teeth), ritsen (zipper merge) and invoegen (merging in), shown next to the English
 - **Guided and Independent modes** — coach prompts, or varied traffic with no safety hints
 

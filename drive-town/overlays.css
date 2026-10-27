@@ -211,6 +211,9 @@ dialog p {
   padding-top:14px;
   font-size:10px!important;
 }
+.help-scope a {
+  color:var(--green);
+}
 .unsupported {
   position:fixed;
   inset:100px 20px 20px;
