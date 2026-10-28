@@ -78,6 +78,8 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .button:hover { border-color: var(--text-muted); opacity: 1; }
 .button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .button.primary:hover { transform: translateY(-1px); }
+.button[aria-disabled="true"] { cursor: default; }
+.button.primary[aria-disabled="true"]:hover { transform: none; }
 .button svg { flex-shrink: 0; }
 
 .notes { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--text-muted); font-size: 15px; }
