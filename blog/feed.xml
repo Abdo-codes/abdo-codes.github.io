@@ -5,13 +5,23 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-10-27T12:00:00Z</updated>
+    <updated>2026-10-29T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR</title>
+        <id>https://yoloabdo.com/blog/wifi-qr-story/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/wifi-qr-story/"/>
+        <published>2026-10-29T12:00:00Z</published>
+        <updated>2026-10-29T12:00:00Z</updated>
+        <category term="Story"/>
+        <summary>The story behind Wi-Fi QR: a Wi-Fi password on a hotel card in London, a QR feature Android has, an app built with Codex in four days, and what other people made of it.</summary>
+    </entry>
 
     <entry>
         <title>The Prayer Screen: prayer times that look good on your TV all day</title>
