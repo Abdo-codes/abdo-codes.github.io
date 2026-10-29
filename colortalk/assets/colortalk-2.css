@@ -247,3 +247,19 @@ footer {
 @media (max-width: 640px) {
     .nav-brand { padding: 4px 0; margin: -4px 0; }
 }
+
+/* TestFlight beta link next to the Coming soon button */
+.beta-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 2px solid var(--accent);
+    border-radius: 14px;
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.beta-link:hover { transform: translateY(-2px); }
