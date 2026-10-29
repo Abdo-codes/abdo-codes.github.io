@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). His next game, Angry Nona: Night Shift (iPhone nanny game), and ColorTalk (iPad ABC coloring app for children 5 and under) are coming soon. This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). Three more are in public TestFlight beta and coming soon to the App Store: Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -248,13 +248,14 @@
 
 ---
 
-# Angry Nona: Night Shift - Cozy iPhone Nanny Game (Coming Soon)
+# Angry Nona: Night Shift - Cozy iPhone Nanny Game (TestFlight Beta)
 
 > Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 13 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is not on the App Store yet.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/angry-nona/)
+- [TestFlight Beta](https://testflight.apple.com/join/bvBDeeQ5)
 - [Support](https://yoloabdo.com/angry-nona/support/)
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
 
@@ -275,6 +276,7 @@
 
 ## Availability
 
+- Public TestFlight beta: https://testflight.apple.com/join/bvBDeeQ5
 - Coming soon to the App Store
 - Pricing will be announced at launch
 
@@ -290,13 +292,14 @@
 
 ---
 
-# ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad (Coming Soon)
+# ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad (TestFlight Beta)
 
 > ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends no analytics or crash reports. It has no in-app purchases and no external links. It is not on the App Store yet.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/colortalk/)
+- [TestFlight Beta](https://testflight.apple.com/join/4jjubyD7)
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
 
@@ -311,12 +314,49 @@
 
 ## Availability
 
+- Public TestFlight beta: https://testflight.apple.com/join/4jjubyD7
 - Coming soon to the App Store
 - Kids category, ages 5 and under
 
 ## Platform
 
 - iPadOS (iPad), landscape only, English only
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
+# SwingCoach: Kettlebell Workout - Kettlebell Swing Rep Counter and Form Check for iPhone (TestFlight Beta)
+
+> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone; no video is recorded or uploaded. SwingCoach is in public TestFlight beta and coming soon to the App Store.
+
+## Links
+
+- [Landing Page](https://yoloabdo.com/swingcoach/)
+- [TestFlight Beta](https://testflight.apple.com/join/Yk2ZgDkn)
+- [Support](https://yoloabdo.com/swingcoach/support/)
+- [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
+
+## Key Features
+
+- **Live Rep Count** - the camera finds your hips, knees and arms and counts each swing; fix the count with one tap
+- **Spoken Form Cues** - a short cue when a fault repeats
+- **Five-Swing Check** - one clear place to focus and a three-session starter plan
+- **Train Your Way** - open training, or a rep goal of 10, 20, 30, 50 or your own count
+- **Rep Review** - the deepest hinge and the final lockout of each rep, with hip, knee and arm angles, plus History
+- **Apple Watch, Optional** - heart rate, active calories, workout control and Apple Health
+
+## Availability
+
+- Public TestFlight beta: https://testflight.apple.com/join/Yk2ZgDkn
+- Coming soon to the App Store
+
+## Platform
+
+- iOS (iPhone), requires iOS 17+; the optional Apple Watch app needs watchOS 10+
 
 ## Developer
 
