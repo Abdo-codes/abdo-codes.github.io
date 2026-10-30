@@ -5,13 +5,23 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-10-29T12:00:00Z</updated>
+    <updated>2026-10-30T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Sajdah 1.7.0: prayer times that match your mosque</title>
+        <id>https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/"/>
+        <published>2026-10-30T12:00:00Z</published>
+        <updated>2026-10-30T12:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>What&apos;s new in Sajdah 1.7.0 for Apple TV: choose your city, pick one of 15 calculation methods with a preview of today&apos;s times, choose Standard or Hanafi Asr and a short-night rule, and move each prayer up to 30 minutes.</summary>
+    </entry>
 
     <entry>
         <title>From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR</title>
