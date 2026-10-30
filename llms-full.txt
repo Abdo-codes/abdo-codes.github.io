@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Sajdah 1.7.0: prayer times that match your mosque](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/) (30 Oct 2026)
 - [From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/) (29 Oct 2026)
 - [The Prayer Screen: prayer times that look good on your TV all day](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/) (27 Oct 2026)
 - [Sajdah 1.6.0: a new Today screen, the Prayer Screen and the Athan in 13 voices](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/) (22 Oct 2026)
@@ -44,6 +45,7 @@
 - Languages: [English](https://yoloabdo.com/sajda/) · [العربية](https://yoloabdo.com/sajda/ar/) · [Türkçe](https://yoloabdo.com/sajda/tr/) · [Français](https://yoloabdo.com/sajda/fr/) · [Español](https://yoloabdo.com/sajda/es/) · [اردو](https://yoloabdo.com/sajda/ur/) · [বাংলা](https://yoloabdo.com/sajda/bn/) · [Bahasa Indonesia](https://yoloabdo.com/sajda/id/) · [Русский](https://yoloabdo.com/sajda/ru/) · [Svenska](https://yoloabdo.com/sajda/sv/) · [中文](https://yoloabdo.com/sajda/zh/)
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): the six full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board), Arabic layout, burn-in protection, and the free preview
+- [Sajdah 1.7.0 release notes](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/): choose your city, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule above 48°, and each prayer adjusted up to 30 minutes (all Premium)
 - [Sajdah 1.6.0 release notes](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/): a new Today screen, the Prayer Screen in six Premium styles with a free preview, the Athan in 13 voices (Premium), new Adhkar art, a What's New screen
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
 - [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
@@ -59,6 +61,7 @@
 - **Today** (free): the verse of the day at the center, the next prayer in a one-line prayer bar, and short cards for continue listening, Adhkar and the hadith of the day in the app language
 - **Morning and Evening Adhkar** with a Siri Remote counter
 - **Prayer Times** for Fajr, Dhuhr, Asr, Maghrib and Isha in the location's time zone, **13 Athan voices** plus a Fajr Athan, and **Qibla Direction** (premium)
+- **Prayer time settings** (premium, new in 1.7.0): search any city or keep Automatic, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule for cities above 48° latitude, and an adjustment of up to 30 minutes for each prayer. The Athan, the Prayer Screen and Top Shelf follow these settings
 - **Prayer Screen** (formerly Prayer Room): full-screen prayer times that stay on the TV, in six styles (premium; free users can watch a preview)
 - **Top Shelf**: continue listening, verse of the day and next prayer on the Apple TV Home Screen
 - **Player**: focus mode, ambient mode, sleep timer (15-60 min or end of surah), repeat and A-B repeat, playback speed from 0.5x to 2x, translations and optional transliteration
@@ -66,8 +69,8 @@
 
 ## Pricing
 
-- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen with the next prayer time, morning and evening Adhkar
-- Sajdah Premium (optional in-app subscription): Quran radio, live TV, the full prayer schedule with the Athan in 13 voices, Qibla direction, the Prayer Screen in all six styles, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
+- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen with the next prayer time (default calculation), morning and evening Adhkar
+- Sajdah Premium (optional in-app subscription): Quran radio, live TV, the full prayer schedule with the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments), Qibla direction, the Prayer Screen in all six styles, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
 - No ads
 
 ## Platform
@@ -421,6 +424,85 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/
+
+Release notes · Sajdah for Apple TV
+
+# Sajdah 1.7.0: prayer times that match your mosque
+
+Choose your city, use the calculation method of your mosque, and move each prayer by a few minutes. The Athan, the Prayer Screen and Top Shelf follow your choices.
+
+![The Sajdah 1.7 What's New screen on Apple TV. It lists three changes: choose your city, your mosque's method with 15 calculation methods and Standard or Hanafi Asr, and move each prayer by up to 30 minutes.](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/sajdah-1-7-0-whatsnew-1280.webp)
+
+Sajdah (سجدة) 1.7.0 is out for the [Quran and Athan app for Apple TV](https://yoloabdo.com/sajda/). Many of you asked for one thing: prayer times that match the timetable of your local mosque. This update gives you the settings to do that. Here is everything that changed.
+
+## In short
+
+- Choose your city, or keep Automatic
+- 15 calculation methods with a preview of today's times
+- Standard or Hanafi Asr
+- A rule for short summer nights above 48°
+- Adjust each prayer up to 30 minutes
+- A What's New screen for 1.7
+
+All the new settings are in **Settings → Prayer Times**. They are part of Sajdah Premium.
+
+![The Prayer Times section of Sajdah Settings on Apple TV. It shows the city London set to Automatic, the Muslim World League method, today's five prayer times in London, the Asr choice of Standard or Hanafi, the short summer night rules, and a row to adjust times by minutes.](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/sajdah-1-7-0-settings-1280.webp)
+
+_One place for every prayer time setting, with today's times right under them._
+
+## Choose your city
+
+Sajdah used the location of your Apple TV to calculate prayer times. That still works: keep **Automatic** and nothing changes. You can now also **search for any city** and use it in place of the TV location. This helps when the TV location is wrong, or when you want the times of a city near you.
+
+The Athan, the Prayer Screen and the Top Shelf times all follow the city that you choose.
+
+## Your mosque's calculation method
+
+Mosques do not all use the same angles for Fajr and Isha, so two apps can give different times for the same city. In 1.7.0 you can pick one of **15 calculation methods**, for example Muslim World League, Umm al-Qura, the Egyptian General Authority of Survey, ISNA, Diyanet and the Moonsighting Committee. Automatic picks a method for your location.
+
+When you move the focus to a method, a panel shows **today's times with that method**, and how many minutes each prayer moves from your current method. Press Select to use it, or Menu to keep the current one.
+
+![The Calculation method screen in Sajdah. The Moonsighting Committee has the focus, and a panel on the right shows today's times in London with it: Fajr 16 minutes later and Isha 21 minutes earlier than the Muslim World League.](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/sajdah-1-7-0-method-1280.webp)
+
+_Compare a method with your current one before you choose it._
+
+## Standard or Hanafi Asr
+
+Choose **Standard** Asr, which the Shafi'i, Maliki and Hanbali schools use, or the later **Hanafi** Asr. Each choice shows the Asr time that it gives today.
+
+## Short summer nights
+
+In cities above 48° latitude, such as London, Paris or Stockholm, the sky does not get fully dark on summer nights. Then the usual angles cannot give a Fajr or Isha time. Choose the rule that your mosque uses for these nights:
+
+- **Angle-based**, the recommended rule.
+- **Middle of night**, which uses half the night.
+- **One-seventh**, which uses a seventh of the night.
+
+## Adjust each prayer by minutes
+
+Some mosques add a few minutes to the calculated times. With **Adjust times by minutes**, you can move each prayer up to **30 minutes earlier or later**, one minute at a time, until Sajdah matches the timetable on your mosque's wall. The Athan plays at the adjusted time. Reset all puts every prayer back to its calculated time.
+
+![The Adjust times screen in Sajdah. Each of the five prayers has a minus button, the number of minutes and a plus button, next to its time. Fajr is moved 5 minutes later.](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/sajdah-1-7-0-adjust-1280.webp)
+
+_Move a prayer one minute at a time. The new time shows next to it._
+
+## A What's New screen for 1.7
+
+After the update, Sajdah shows a short What's New screen with these changes. Choose **Set prayer times** to go straight to your city. If you do not have Premium, the same button shows what Premium adds to prayer times.
+
+## What is free and what is Premium
+
+Sajdah stays free to download. Quran recitation, verse-by-verse reading, the Today screen with your next prayer time, and the Adhkar are free. Free users keep the default prayer times, and they see the new prayer time settings as locked.
+
+**Sajdah Premium** adds the new prayer time settings (your city, the calculation method, Hanafi Asr, the short-night rule and the minute adjustments), the Athan in 13 voices, the full prayer schedule and Qibla direction, the Prayer Screen in all 6 styles, Quran radio and live TV, Ambient Quran Mode, memorization tools such as verse repeat, A-B repeat and playback speed, word-by-word highlighting, all translation languages and transliteration, and the extra Quran fonts.
+
+## How to update
+
+If automatic app updates are on, your Apple TV installs Sajdah 1.7.0 by itself. You can also open the App Store on your Apple TV, find Sajdah, and choose Update. To see what came before, read the [Sajdah 1.6.0 release notes](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/). Does your mosque use a method that is not on the list? Write to me through [Sajdah support](https://yoloabdo.com/sajda/support/).
 
 ---
 
