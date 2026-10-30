@@ -4,8 +4,8 @@
     --surface: #ffffff;
     --surface-hover: #ffffff;
     --text: #1d1d1f;
-    --text-secondary: #6e6e73;
-    --text-tertiary: #9c9ca1;
+    --text-secondary: #5f5f64;
+    --text-tertiary: #707075;
     --accent: #f05138;
     --accent-soft: rgba(240, 81, 56, 0.1);
     --live: #1e8e5a;
@@ -26,7 +26,7 @@
     --surface-hover: #1c1c1f;
     --text: #f5f5f7;
     --text-secondary: #a1a1a6;
-    --text-tertiary: #6e6e73;
+    --text-tertiary: #8a8a8f;
     --accent: #ff6a52;
     --accent-soft: rgba(255, 106, 82, 0.12);
     --live: #4cc38a;
@@ -98,14 +98,18 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* The first screen slides in without a fade, so it paints at once (LCP). */
+@keyframes slide { from { transform: translateY(16px); } }
+
 .rise { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero .rise { animation-name: slide; }
 .d1 { animation-delay: 0.05s; }
 .d2 { animation-delay: 0.14s; }
 .d3 { animation-delay: 0.23s; }
 .d4 { animation-delay: 0.32s; }
 
 @media (prefers-reduced-motion: reduce) {
-    .rise { animation: none; }
+    .rise, .hero .rise { animation: none; }
     html { scroll-behavior: auto; }
     * { transition-duration: 0.01ms !important; }
 }
