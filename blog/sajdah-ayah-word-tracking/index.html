@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracing Every Ayah and Word: Recitation Sync in Sajdah for Apple TV</title>
+    <meta name="description" content="How Sajdah follows a Quran recitation on Apple TV, ayah by ayah and word by word: the data, the bugs we hit, where it stands today and what comes next.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/sajdah-ayah-word-tracking/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/sajdah-ayah-word-tracking/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Tracing every ayah and word: how Sajdah follows the recitation">
+    <meta property="og:description" content="The data, the bugs and the decisions behind ayah and word tracking in Sajdah for Apple TV, and what comes next.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/sajdah-ayah-word-tracking/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A long ayah in Sajdah with the word being recited shown in gold">
+    <meta property="article:published_time" content="2026-10-30T15:00:00Z">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Engineering">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Tracing every ayah and word: how Sajdah follows the recitation">
+    <meta name="twitter:description" content="The data, the bugs and the decisions behind ayah and word tracking in Sajdah for Apple TV, and what comes next.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/sajdah-ayah-word-tracking/og-image.jpg">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <meta name="apple-itunes-app" content="app-id=6759179587">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
+    <link rel="stylesheet" href="/blog/assets/blog.css">
+    <script src="/blog/assets/theme.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/sajdah-ayah-word-tracking/#post",
+              "headline": "Tracing every ayah and word: how Sajdah follows the recitation",
+              "description": "How Sajdah follows a Quran recitation on Apple TV, ayah by ayah and word by word: the data, the bugs we hit, where it stands today and what comes next.",
+              "url": "https://yoloabdo.com/blog/sajdah-ayah-word-tracking/", "mainEntityOfPage": "https://yoloabdo.com/blog/sajdah-ayah-word-tracking/",
+              "image": ["https://yoloabdo.com/blog/sajdah-ayah-word-tracking/og-image.jpg", "https://yoloabdo.com/blog/sajdah-ayah-word-tracking/ayah-progress-1280.webp"],
+              "datePublished": "2026-10-30T15:00:00Z", "dateModified": "2026-10-30T15:00:00Z", "inLanguage": "en", "articleSection": "Engineering",
+              "keywords": ["Sajdah", "Quran app", "Apple TV", "tvOS", "word by word Quran", "ayah tracking", "Quran recitation sync", "audio timing", "forced alignment"],
+              "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+              "publisher": { "@id": "https://yoloabdo.com/#person" },
+              "about": { "@type": "SoftwareApplication", "@id": "https://yoloabdo.com/sajda/#app", "name": "Sajdah", "operatingSystem": "tvOS", "applicationCategory": "LifestyleApplication", "url": "https://yoloabdo.com/sajda/", "installUrl": "https://apps.apple.com/app/id6759179587" },
+              "isPartOf": { "@type": "Blog", "@id": "https://yoloabdo.com/blog/#blog", "name": "Abdelrahman Eita's blog", "url": "https://yoloabdo.com/blog/" } },
+            { "@type": "BreadcrumbList", "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" },
+                { "@type": "ListItem", "position": 3, "name": "Tracing every ayah and word", "item": "https://yoloabdo.com/blog/sajdah-ayah-word-tracking/" } ] }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Tracing every ayah and word</nav>
+            <p class="eyebrow mono">Engineering · Sajdah for Apple TV</p>
+            <h1 class="post-title">Tracing every ayah and word: how Sajdah follows the recitation</h1>
+            <p class="dek">Showing the right ayah on a TV while a reciter reads sounds simple. It took nine months, two data sources, a lot of validation, and one rule: if we are not sure, show nothing.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-10-30">30 October 2026</time> · 7 min read</span>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="/blog/sajdah-ayah-word-tracking/ayah-progress-1280.webp" srcset="/blog/sajdah-ayah-word-tracking/ayah-progress-640.webp 640w, /blog/sajdah-ayah-word-tracking/ayah-progress-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="Sajdah on Apple TV showing Al-Baqara verse 282 over a sky background, with the words already recited bright and the rest dimmed, and the transliteration below" fetchpriority="high">
+                <figcaption>Al-Baqara 2:282, the longest ayah. The words already recited are bright; the rest wait in a dim color.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p>In <a href="/sajda/">Sajdah</a>, you pick a reciter and a surah, and the Quran text follows the voice on your TV. The current ayah is on screen, and for some reciters the word being recited lights up in gold. People use it to read along, to memorize, and to understand what they hear.</p>
+                <p>This post is about how that works, what went wrong on the way, where it stands today, and what I want to improve next.</p>
+
+                <section class="summary" aria-labelledby="summary-title">
+                    <h2 id="summary-title">In short</h2>
+                    <ul>
+                        <li><a href="#start">The start</a>: verse timing in January 2026, in the app since version 1.2.0</li>
+                        <li><a href="#how">How it works</a>: time windows, a binary search, and two trusted data sources</li>
+                        <li><a href="#problems">Seven problems</a> we hit, and how we fixed them</li>
+                        <li><a href="#now">Today</a>: word-by-word on six recordings, verse tracking on many more</li>
+                        <li><a href="#next">Next</a>: more reciters with forced alignment, and a listening test</li>
+                    </ul>
+                </section>
+
+                <h2 id="start">Where it started</h2>
+                <p>The first version came in January 2026. It asked the Quran.com audio API for verse timings. A timing is a list of windows: ayah 1 from 0.0 s to 6.2 s, ayah 2 from 6.2 s to 11.8 s, and so on. If no timing came back, the app guessed: it split the audio by the number of words in each ayah.</p>
+                <p>In February we added a second source, the <strong>MP3Quran</strong> ayah timing API, and made it the first choice. That version shipped in Sajdah 1.2.0. It worked for the popular reciters. Then people played other reciters, and the problems started.</p>
+
+                <h2 id="how">How it works today</h2>
+                <p>The player builds a timeline for the surah. Each ayah has a start and an end time. Several times per second the player asks one question: "Which window holds the current audio time?" A binary search answers it, so the cost stays small even for Al-Baqara with its 286 ayahs. If the time falls in a short gap between two ayahs, the previous ayah stays on screen, so the text does not flicker.</p>
+                <p>Word tracking works the same way, one level down. Each word has its own window in the audio. The app looks up the active word by the absolute audio time. That is why seeking, changing the speed, or resuming tomorrow still lands on the right word. The app also sets an exact timer at each word edge, so the gold moves when the reciter moves, not on the next tick.</p>
+                <figure>
+                    <img src="/blog/sajdah-ayah-word-tracking/word-amiri-1280.webp" srcset="/blog/sajdah-ayah-word-tracking/word-amiri-640.webp 640w, /blog/sajdah-ayah-word-tracking/word-amiri-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="466" loading="lazy" alt="Al-Baqara verse 282 in the Amiri Quran font, with recited words in white, the current word in gold, and the words still to come dimmed">
+                    <figcaption>Late in 2:282: recited words in white, the current word in gold, the rest dimmed.</figcaption>
+                </figure>
+                <p>The timing data and the text on screen do not always split words the same way. So the app lines them up with an edit-distance match on normalized Arabic, and keeps the result in a cache. Without the cache, this work ran again on every progress tick.</p>
+                <p>Only two sources can put synchronized text on screen:</p>
+                <ul>
+                    <li><strong>Bundled word packs</strong> from the Qur'anic Universal Audio (QUA) dataset, v3.2.0. They give a window for every word and every ayah. They ship inside the app, and the import script checks a pinned SHA-256 for every source archive.</li>
+                    <li><strong>MP3Quran ayah timings</strong>, after the app checks that they match the exact recording and the text.</li>
+                </ul>
+                <p>The other two sources, the Quran.com timing and the word-count guess, can still help Next and Previous jump to about the right place. They can never show text. If the app has no trusted timing, it plays the audio alone and hides the text, the captions and the ayah controls.</p>
+
+                <h2 id="problems">The problems we hit</h2>
+                <h3>1. The wrong ayah, from the wrong edition</h3>
+                <p>The Quran is recited in several <em>riwayat</em> (transmissions), such as Hafs, Warsh and Qalun. They count some ayahs differently. In Qalun, Al-An'am has 167 ayahs; in Hafs it has 165. The player put Qalun timings on Hafs text, so the screen showed the wrong ayah. The fix bundled the text for six more riwayat and added a rule: a timing must cover every ayah of the surah, or it is not used. Each non-Hafs recording is now approved by hand before the app trusts it.</p>
+                <h3>2. One reciter's timing for every voice</h3>
+                <p>The first Quran.com request always asked for one reciter, Mishary Alafasy, whatever voice was playing. For other reciters the windows were wrong. Today that source is only a navigation fallback, and the app asks for it only when the main source is missing ayahs.</p>
+                <h3>3. A hand-kept list that went stale</h3>
+                <p>The "with ayah tracking" list in Reciters was typed by hand. Reciters with good timings had no badge, and at one point Mishary himself was missing from it. Now the app finds support by itself, by the exact recording: its ID, its audio folder and its surah list.</p>
+                <h3>4. Reciters who repeat</h3>
+                <p>Many reciters repeat a phrase or a whole ayah. A simple "ayah to window" map breaks there. In At-Takwir (81), Next jumped from the second reading of ayah 17 back to 46.0 s, instead of forward to ayah 18 at 52.2 s. The word packs now store each reading of an ayah as its own occurrence, in time order.</p>
+                <h3>5. Data we had to say no to</h3>
+                <p>For Al-Minshawi's mujawwad recording, strict checks rejected 23 surahs: some words had zero length, and some windows overlapped. We shipped the 91 surahs that passed, not all 114 with errors. Islam Sobhi's pack has 106 surahs for the same kind of reason.</p>
+                <h3>6. The audio moved</h3>
+                <p>On 5 October, MP3Quran moved its recordings to a new CDN. The app matches word packs to the recording by folder, so six reciters lost tracking overnight. We checked that the old links redirect to files with the same ETag and size, so the audio was the same. The fix taught the folder check about both addresses, and the bundled timings stayed as they were.</p>
+                <h3>7. Old answers that arrive late</h3>
+                <p>If you change surah quickly, the answer for the old surah can arrive after the new one. Every request for text, timing and captions now carries a tag, and the player drops answers for a context that is gone. Cancelled requests no longer count as errors.</p>
+                <p>Next to these, we fixed player bugs that hurt the reading: very long ayahs cut the Arabic text and hid the active word.</p>
+
+                <h2 id="now">Where we are now</h2>
+                <p>Word-by-word highlighting shipped in Sajdah 1.5.0 in October. It covers six recordings, all in Hafs:</p>
+                <ul>
+                    <li><strong>Mishary Alafasy</strong>, <strong>Saud Al-Shuraim</strong>, <strong>Mustafa Ismail</strong> and <strong>Mahmoud Abdul Hakam</strong>: all 114 surahs</li>
+                    <li><strong>Islam Sobhi</strong>: 106 surahs</li>
+                    <li><strong>Al-Minshawi</strong> (mujawwad): 91 surahs</li>
+                </ul>
+                <p>Ayah tracking reaches many more recordings through MP3Quran. When we counted on 2 October, 97 of the 242 reciters in the English list had verified ayah timing. You can turn on <strong>Ayah Tracking</strong> in Reciters to see only them, and each one has a badge.</p>
+                <p>Verse tracking is free. The gold word highlight is part of Sajdah Premium, because today it exists for only six recordings. Pause clears the gold word but keeps the words already recited, so you can find your place again.</p>
+                <figure>
+                    <img src="/blog/sajdah-ayah-word-tracking/word-nastaleeq-1280.webp" srcset="/blog/sajdah-ayah-word-tracking/word-nastaleeq-640.webp 640w, /blog/sajdah-ayah-word-tracking/word-nastaleeq-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="466" loading="lazy" alt="The same moment in Al-Baqara verse 282 in the Nastaleeq font, with the current word in gold">
+                    <figcaption>The same word in the Nastaleeq font. The highlight follows the Quran font you pick.</figcaption>
+                </figure>
+
+                <h2 id="next">What we can improve next</h2>
+                <ul>
+                    <li><strong>Word timing for more reciters.</strong> The plan is forced alignment: a small acoustic model lines up the known text with the audio. Ayah tracking would come first, and word tracking would turn on only for surahs that pass the same checks as the bundled packs. The hard parts are known: repeated phrases, extra audio such as the isti'adha, the basmala and the takbir, and word edges inside idgham and madd. A first test will use one murattal and one mujawwad reciter.</li>
+                    <li><strong>A listening test.</strong> Every pack passes strict data checks, but nobody has yet listened through the word edges to judge them by ear. That is next.</li>
+                    <li><strong>Fill the gaps.</strong> 23 surahs for Al-Minshawi and 8 for Islam Sobhi have no word timing yet.</li>
+                    <li><strong>Timings from a CDN.</strong> The packs ship inside the app today. Serving them from a CDN would let new reciters arrive without an app update.</li>
+                    <li><strong>Other riwayat.</strong> Warsh, Qalun and the others have ayah tracking only. Word timing for them needs their own text in the alignment step.</li>
+                </ul>
+                <p>The rule stays the same: Sajdah shows synchronized text only when it is sure. A blank card is better than the wrong ayah.</p>
+                <p>Word timings come from the Qur'anic Universal Audio dataset (v3.2.0, CC BY 4.0), and ayah timings from MP3Quran. Thank you to both projects. If a word or an ayah ever looks out of place, please write to me through <a href="/sajda/support/">Sajdah support</a> with the reciter, the surah and the ayah.</p>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="/sajda/app-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">Sajdah: Quran &amp; Athan for Apple TV</h2>
+                    <p>Follow the recitation ayah by ayah, or word by word on selected reciters. Prayer times, the verse of the day and Adhkar too. Free to download, with optional Premium.</p>
+                </div>
+                <div class="actions">
+                    <a href="https://apps.apple.com/app/id6759179587" target="_blank" rel="noopener" data-cta="ayah-tracking-post" aria-label="Download Sajdah on the App Store"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="162" height="54" loading="lazy"></a>
+                    <a class="more" href="/sajda/">See all features &rarr;</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>Keep reading</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/blog/sajdah-1-5-0-release-notes/">
+                <p class="meta mono">Release notes · 7 Oct 2026</p>
+                <h3>Sajdah 1.5.0: Live tab, Quran fonts and word-by-word recitation</h3>
+                <p>Radio and live TV in one tab, six Quran fonts, words that light up as they are recited, and a calmer player.</p>
+            </a>
+            <a class="post-item" href="/blog/building-sajdah-apple-tv-journey/">
+                <p class="meta mono">Story · 7 Oct 2026</p>
+                <h3>The journey so far: building Sajdah for Apple TV</h3>
+                <p>How a Quran player for the TV grew into a daily companion for the home, and what the big screen taught me.</p>
+            </a>
+        </div>
+        </main>
+
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="/sajda/">Sajdah</a> · <a href="/sajda/support/">Support</a> · <a href="/sajda/privacy/">Privacy</a> · <a href="/blog/">Blog</a></span>
+        </footer>
+    </div>
+</body>
+</html>
