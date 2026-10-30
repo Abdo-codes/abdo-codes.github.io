@@ -5,13 +5,23 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-10-30T12:00:00Z</updated>
+    <updated>2026-10-30T15:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Tracing every ayah and word: how Sajdah follows the recitation</title>
+        <id>https://yoloabdo.com/blog/sajdah-ayah-word-tracking/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/sajdah-ayah-word-tracking/"/>
+        <published>2026-10-30T15:00:00Z</published>
+        <updated>2026-10-30T15:00:00Z</updated>
+        <category term="Engineering"/>
+        <summary>How Sajdah follows a Quran recitation on Apple TV, ayah by ayah and word by word: the data, the bugs we hit, where it stands today and what comes next.</summary>
+    </entry>
 
     <entry>
         <title>Sajdah 1.7.0: prayer times that match your mosque</title>
