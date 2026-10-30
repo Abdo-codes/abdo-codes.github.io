@@ -34,13 +34,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <!-- Google tag (gtag.js), loaded after the page loads so it does not delay the first paint -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
       gtag("config", "G-MKWK9CX2JJ");
+      addEventListener("load", function () { var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"; document.head.appendChild(s); });
     </script>
     <script src="/assets/track.js" defer></script>
 
