@@ -45,8 +45,8 @@
   }
   </script>
   <script>
-    // Site analytics, only on the published site; local play makes no network requests.
-    if (location.hostname === 'yoloabdo.com') {
+    // Site analytics, only on the published site and not on a device opted out with ?notrack (undo with ?track); local play makes no network requests.
+    if (location.hostname === 'yoloabdo.com' && !(function () { try { if (/[?&]notrack\b/.test(location.search)) localStorage.setItem('notrack', '1'); if (/[?&]track\b/.test(location.search)) localStorage.removeItem('notrack'); return localStorage.getItem('notrack'); } catch (e) { return false; } })()) {
       const tag = document.createElement('script'); tag.async = true; tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ'; document.head.append(tag);
       window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'G-MKWK9CX2JJ');
     }
