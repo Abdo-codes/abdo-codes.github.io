@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/) (1 Nov 2026)
 - [Tracing every ayah and word: how Sajdah follows the recitation](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/) (30 Oct 2026)
 - [Sajdah 1.7.0: prayer times that match your mosque](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/) (30 Oct 2026)
 - [From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/) (29 Oct 2026)
@@ -181,6 +182,7 @@
 - [App Store](https://apps.apple.com/app/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
 - [Airbnb WiFi sign guide](https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/): what to put on an Airbnb WiFi sign or card, where to put it, which size to print, how guests scan the QR code, and how to make one with Wi-Fi QR
+- [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/): three ways to share Wi-Fi from an iPhone (the Passwords app QR code in iOS 18, Share Password for nearby Apple devices, and a printable code from Wi-Fi QR), how guests scan, and fixes for codes that do not work
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
