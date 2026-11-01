@@ -305,3 +305,4 @@ a.eyebrow:hover { border-color: var(--mint); }
         margin: -12px -4px;
     }
 }
+.h1-sub { display: block; margin-top: 16px; color: var(--blue-ink); font-size: clamp(1.35rem, 2.6vw, 2.1rem); line-height: 1.15; }
