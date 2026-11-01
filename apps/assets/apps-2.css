@@ -67,6 +67,7 @@ footer a:hover { color: var(--accent); }
 /* Drive Town card: the game paper colour behind the art */
 .drive-town-bg { background: #f7f4eb; }
 .swingcoach-bg { background: #0a0c0a; }
+.nightcap-bg { background: #050c18; }
 
 @media (max-width: 720px) {
     .page { padding: 32px 20px 72px; }

@@ -10,8 +10,11 @@
         '6776169783': 'Wi-Fi QR',
         '6819626561': 'Angry Nona',
         '6768992579': 'ColorTalk',
-        '6806616079': 'SwingCoach'
+        '6806616079': 'SwingCoach',
+        '6769450957': 'Nightcap Awake'
     };
+    // Mac App Store apps use media type 12; the iPhone, iPad and Apple TV apps use 8
+    var MAC_APPS = { '6769450957': true };
     var BETAS = {
         'Yk2ZgDkn': 'SwingCoach',
         '4jjubyD7': 'ColorTalk',
@@ -54,7 +57,7 @@
         var url = new URL(link.href);
         url.searchParams.set('pt', PROVIDER);
         url.searchParams.set('ct', campaign());
-        url.searchParams.set('mt', '8');
+        url.searchParams.set('mt', MAC_APPS[id] ? '12' : '8');
         link.href = url.toString();
     }
 
