@@ -180,6 +180,7 @@
 
 - [App Store](https://apps.apple.com/app/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Airbnb WiFi sign guide](https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/): what to put on an Airbnb WiFi sign or card, where to put it, which size to print, how guests scan the QR code, and how to make one with Wi-Fi QR
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
@@ -425,7 +426,7 @@
 
 # Full text
 
-> The sections below repeat the full text of the blog posts, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+> The sections below repeat the full text of the blog posts, the Airbnb WiFi sign guide, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
 
 ---
 
@@ -1021,6 +1022,63 @@ Wi-Fi QR is free, with no in-app purchases, no ads and no account. Your networks
 ## How to update
 
 If automatic updates are on, your iPhone installs Wi-Fi QR 1.7 by itself. You can also open the App Store, find Wi-Fi QR, and tap Update. Questions or ideas? Write to me through [Wi-Fi QR support](https://yoloabdo.com/wifi-qr/support/).
+
+---
+
+Source: https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/
+
+Wi-Fi QR guide for hosts
+
+# How to make an Airbnb WiFi sign with a QR code
+
+Guests ask for the WiFi password first. A good sign answers before they ask: the network name, the password and a QR code that they scan with the phone camera.
+
+## What an Airbnb WiFi sign needs
+
+- **The network name:** write it exactly as the phone shows it. Network names are case-sensitive.
+- **The password:** use a clear font and enough space. In many fonts, O and 0, or l, I and 1, look the same.
+- **A Wi-Fi QR code:** guests point the camera at the code and tap Join. Keep the name and password in text too, for laptops and TVs.
+- **One line of help:** "Open the camera and point it at the code." If guests may need to restart the router, say where it is.
+- **A welcome title:** for example "Welcome to the Lake Cabin".
+- **How to get help:** a short footer, for example "WiFi problems? Message us in the Airbnb app."
+
+## Where to put it
+
+- The entry table or kitchen counter, where guests put down bags, keys and phones.
+- The fridge, or a frame on the wall: a 4 x 6 or 5 x 7 card fits a small frame, a stand or a magnet sleeve.
+- Near the TV or the desk, where guests sign in to streaming apps or work on a laptop.
+- The welcome book and the listing: put a full page in the house manual, and add the network name and password to the WiFi details in the Airbnb arrival guide.
+
+## Size and printing
+
+- **4 x 6 in:** a bedside table, a shelf or a small frame.
+- **5 x 7 in:** a frame on the entry table or the wall.
+- **A4 or US Letter:** a page for the welcome book, or a wall in a shared kitchen or lobby.
+- **Print tips:** print at 100%, not "fit to page". Keep the QR code at least 3 cm (1.2 in) wide. Use a matte sleeve, because glossy plastic can reflect light.
+
+## How guests scan
+
+- **iPhone and iPad:** open the Camera app, point it at the code and tap the Join banner.
+- **Android:** open the camera or Google Lens, point it at the code and tap Connect. Most new Android phones can do this.
+- **Laptops, TVs and game consoles:** these cannot scan the code. Guests type the name and password from the sign.
+
+## Safety
+
+- **Guest network:** many routers can make a separate guest network. Guests get the internet, but not your cameras, smart locks or own devices.
+- **New password:** change the password when you need to. The old QR code then stops working, so print a new sign.
+- **Long password:** a long random password is safer. Guests scan it, so the length does not matter to them.
+- **Inside only:** put the sign where only guests see it, not in a window or at the street door.
+
+## Make an Airbnb WiFi sign with Wi-Fi QR
+
+1. Install [Wi-Fi QR](https://apps.apple.com/app/id6776169783). It is free for iOS 17 or later, with no account and no ads.
+2. Type the network name and password, or tap Scan Router Sticker. Choose WPA or WEP.
+3. Pick a style: Classic, Code Only, Gallery Placard, Concierge Ledger, Signal Grid or Ink-Safe Editorial.
+4. Pick 4 x 6 in, 5 x 7 in, A4 or US Letter, and add your own title and footer. Long passwords shrink and wrap to fit.
+5. Tap Print in the share sheet, or share the PDF.
+6. Scan the printed sign with an iPhone and an Android phone before the next guest arrives.
+
+Wi-Fi QR is not affiliated with Airbnb.
 
 ---
 

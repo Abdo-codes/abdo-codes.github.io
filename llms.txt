@@ -180,6 +180,7 @@
 
 - [App Store](https://apps.apple.com/app/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Airbnb WiFi sign guide](https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/): what to put on an Airbnb WiFi sign or card, where to put it, which size to print, how guests scan the QR code, and how to make one with Wi-Fi QR
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
