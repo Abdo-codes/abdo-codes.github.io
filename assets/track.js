@@ -1,5 +1,7 @@
-/* Counts App Store and TestFlight link clicks in Google Analytics (app_store_click, testflight_click) on every page. */
+/* Counts App Store and TestFlight link clicks in Google Analytics (app_store_click, testflight_click) on every page,
+   and adds an App Store campaign to links to these apps, so App Store Connect shows the downloads per page. */
 (function () {
+    var PROVIDER = '118222814';
     var APPS = {
         '6759179587': 'Sajdah',
         '6760623633': 'Tally',
@@ -37,6 +39,26 @@
             link_url: link.href
         });
     }
+
+    // App Store Connect keeps campaign names to 30 characters and hides campaigns with fewer than 5 installs,
+    // so the name is the page only: web-home, web-wifi-qr-airbnb-wifi-sign, web-wifi-qr-story.
+    function campaign() {
+        var parts = location.pathname.replace(/index\.html$/, '').toLowerCase().split('/').filter(Boolean);
+        if (parts[0] === 'blog' && parts.length > 1) parts.shift();
+        return ('web-' + (parts.join('-') || 'home')).replace(/[^a-z0-9-]+/g, '-').slice(0, 30).replace(/-+$/, '');
+    }
+
+    function addCampaign(link) {
+        var id = (link.href.match(/id(\d+)/) || [])[1];
+        if (!APPS[id] || /[?&]ct=/.test(link.search)) return;
+        var url = new URL(link.href);
+        url.searchParams.set('pt', PROVIDER);
+        url.searchParams.set('ct', campaign());
+        url.searchParams.set('mt', '8');
+        link.href = url.toString();
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="apps.apple.com"]'), addCampaign);
 
     // auxclick covers middle-click, which opens the store in a new tab
     document.addEventListener('click', onClick);
