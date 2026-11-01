@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published five apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), and Tateemi (Arabic vaccination tracker). Three more are in public TestFlight beta and coming soon to the App Store: Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published six apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), and Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run). Three more are in public TestFlight beta and coming soon to the App Store: Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -248,6 +248,45 @@
 
 - iOS (iPhone), requires iOS 17+
 - Works fully offline — no internet required
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
+# Nightcap Awake - Keep Your Mac Awake While Apps Run
+
+> Nightcap Awake (also called Nightcap) is a free menu bar app for Mac. It keeps the Mac awake only while the apps you choose are running, such as Codex, Ghostty, Xcode or Terminal, and lets the Mac sleep again when they quit. It is made for AI coding agents, builds, exports, uploads and command-line sessions. While a watched app runs, it holds a macOS power assertion against idle system sleep; when the last watched app quits, it releases the assertion. The display can still turn off. Version 1.0 came out in May 2026. Free on the Mac App Store, open source under the MIT license, sandboxed, with no analytics and no network access.
+
+## Links
+
+- [Mac App Store](https://apps.apple.com/app/id6769450957)
+- [Landing Page](https://yoloabdo.com/nightcap-awake/)
+- [Source code on GitHub](https://github.com/Abdo-codes/Nightcap)
+- [Support (GitHub issues)](https://github.com/Abdo-codes/Nightcap/issues)
+- [Privacy Policy](https://github.com/Abdo-codes/Nightcap/blob/main/PRIVACY.md)
+
+## Key Features
+
+- **App-Based Awake Rules** - add any app; while one watched app runs, the Mac does not go to idle sleep
+- **Automatic Release** - when the last watched app quits, Nightcap releases the hold and the Mac sleeps on its normal schedule
+- **Menu Bar Only** - a cup icon fills while the Mac is kept awake, the menu shows how many watched apps are active, and there is no Dock icon
+- **Pause and Resume** - keep an app in the list without keeping the Mac awake, then resume or remove it from the same menu
+- **Sleep and Wake Check** - after wake, Nightcap checks again which watched apps still run
+- **Launch at Login** - starts with the Mac
+- **Privacy** - sandboxed, no analytics and no network access; the watched-app list is one local file in the app sandbox
+
+## Pricing
+
+- Free
+- No account, no ads, no in-app purchases
+
+## Platform
+
+- macOS 14 Sonoma or later
+- Also available with Homebrew: `brew install --cask Abdo-codes/tap/nightcap`
 
 ## Developer
 

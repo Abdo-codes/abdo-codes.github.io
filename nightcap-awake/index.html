@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightcap Awake: Keep Your Mac Awake While Apps Run</title>
+    <meta name="description" content="Nightcap Awake is a free Mac menu bar app. It keeps your Mac awake only while the apps you choose run, then lets it sleep again. No tracking. macOS 14 or later.">
+    <meta name="author" content="Abdelrahman Eita">
+    <link rel="canonical" href="https://yoloabdo.com/nightcap-awake/">
+    <meta name="theme-color" content="#050C18">
+    <meta name="robots" content="index, follow">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="icon" type="image/png" sizes="32x32" href="/nightcap-awake/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/nightcap-awake/apple-touch-icon.png">
+    <link rel="preload" as="image" href="/nightcap-awake/shot-03.webp" imagesrcset="/nightcap-awake/shot-03-720.webp 720w, /nightcap-awake/shot-03.webp 1440w" imagesizes="(max-width: 900px) calc(100vw - 32px), 600px" fetchpriority="high">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/nightcap-awake/">
+    <meta property="og:site_name" content="Nightcap Awake">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Nightcap Awake: Keep Your Mac Awake While Apps Run">
+    <meta property="og:description" content="A free menu bar app that keeps your Mac awake while the apps you choose run, then lets it sleep. No tracking, no network access.">
+    <meta property="og:image" content="https://yoloabdo.com/nightcap-awake/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Nightcap menu in the Mac menu bar, keeping the Mac awake for Ghostty">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Nightcap Awake: Keep Your Mac Awake While Apps Run">
+    <meta name="twitter:description" content="A free menu bar app that keeps your Mac awake while the apps you choose run, then lets it sleep. No tracking, no network access.">
+    <meta name="twitter:image" content="https://yoloabdo.com/nightcap-awake/og-image.jpg">
+
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@graph": [
+        {"@type": "SoftwareApplication", "@id": "https://yoloabdo.com/nightcap-awake/#app", "name": "Nightcap Awake", "alternateName": ["Nightcap", "Nightcap: keep your Mac awake while apps run"], "description": "A menu bar utility for Mac that keeps the computer awake only while selected apps are running. It holds a system power assertion against idle sleep while a watched app runs and releases it when the watched apps quit. Free, sandboxed, open source, with no analytics and no network access.", "applicationCategory": "UtilitiesApplication", "applicationSubCategory": "Productivity", "operatingSystem": "macOS 14 or later", "url": "https://yoloabdo.com/nightcap-awake/", "installUrl": "https://apps.apple.com/app/id6769450957", "image": "https://yoloabdo.com/nightcap-awake/app-icon.png", "screenshot": ["https://yoloabdo.com/nightcap-awake/shot-01.webp", "https://yoloabdo.com/nightcap-awake/shot-02.webp", "https://yoloabdo.com/nightcap-awake/shot-03.webp", "https://yoloabdo.com/nightcap-awake/shot-04.webp"], "softwareVersion": "1.0", "datePublished": "2026-05-21", "featureList": ["Keeps the Mac awake while chosen apps run", "Releases the hold when the last watched app quits", "Menu bar app with no Dock icon", "Pause, resume or remove a watched app", "Checks watched apps again after sleep and wake", "Launch at Login", "Sandboxed, with no analytics and no network access", "Open source under the MIT license"], "sameAs": ["https://apps.apple.com/app/id6769450957", "https://github.com/Abdo-codes/Nightcap"], "author": {"@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+        {"@type": "WebPage", "@id": "https://yoloabdo.com/nightcap-awake/#webpage", "url": "https://yoloabdo.com/nightcap-awake/", "name": "Nightcap Awake: keep your Mac awake while apps run", "inLanguage": "en", "dateModified": "2026-11-01T12:00:00Z", "about": {"@id": "https://yoloabdo.com/nightcap-awake/#app"}, "primaryImageOfPage": "https://yoloabdo.com/nightcap-awake/og-image.jpg"},
+        {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://yoloabdo.com/apps/"}, {"@type": "ListItem", "position": 3, "name": "Nightcap Awake", "item": "https://yoloabdo.com/nightcap-awake/"}]},
+        {"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": "Does Nightcap keep my display on?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nightcap stops idle system sleep only. Your display can still turn off on its normal schedule, and your apps keep running."}},
+            {"@type": "Question", "name": "What happens when a watched app quits?", "acceptedAnswer": {"@type": "Answer", "text": "Nightcap releases its hold, and your Mac sleeps on its normal schedule again. If more than one watched app runs, Nightcap waits for the last one to quit."}},
+            {"@type": "Question", "name": "How is Nightcap different from caffeinate?", "acceptedAnswer": {"@type": "Answer", "text": "With caffeinate, you start and stop the hold yourself in Terminal. Nightcap watches the apps you choose and does it for you each time they run."}},
+            {"@type": "Question", "name": "Is Nightcap free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nightcap Awake is free on the Mac App Store, with no account, no ads and no in-app purchases. The source code is on GitHub under the MIT license."}},
+            {"@type": "Question", "name": "Which Macs does Nightcap support?", "acceptedAnswer": {"@type": "Answer", "text": "Nightcap needs macOS 14 Sonoma or later."}},
+            {"@type": "Question", "name": "Can I install Nightcap with Homebrew?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Run brew install --cask Abdo-codes/tap/nightcap in Terminal."}}
+        ]}
+    ] }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/nightcap-awake/assets/nightcap.css">
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="wrap">
+            <a class="brand" href="/nightcap-awake/">
+                <img src="/nightcap-awake/app-icon-256.webp" alt="" width="36" height="36">
+                <span>Nightcap Awake</span>
+            </a>
+            <div class="nav-links">
+                <a href="#privacy">Privacy</a>
+                <a class="hide-sm" href="https://github.com/Abdo-codes/Nightcap" rel="noopener">GitHub</a>
+                <a href="/apps/">Apps</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <span class="kicker">Menu bar app for Mac</span>
+                <h1>Awake while your apps run. <em>Asleep when they’re done.</em></h1>
+                <p class="lead">Nightcap keeps your Mac awake only while the apps you choose are running: Codex, Ghostty, Xcode, Terminal or any other app. When they quit, your Mac sleeps on its normal schedule again.</p>
+                <div class="actions">
+                    <a class="store-badge" href="https://apps.apple.com/app/id6769450957" data-cta="nightcap-hero" aria-label="Download Nightcap Awake on the Mac App Store">
+                        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" width="211" height="54">
+                    </a>
+                    <a class="button" href="#how-it-works">How it works</a>
+                </div>
+                <ul class="notes" aria-label="App highlights">
+                    <li>Free</li>
+                    <li>macOS 14 or later</li>
+                    <li>No tracking</li>
+                </ul>
+            </div>
+            <div class="frame">
+                <img src="/nightcap-awake/shot-03.webp" srcset="/nightcap-awake/shot-03-720.webp 720w, /nightcap-awake/shot-03.webp 1440w" sizes="(max-width: 900px) calc(100vw - 32px), 600px" alt="Two Nightcap menus: awake while Ghostty runs, then idle with sleep allowed" width="1440" height="900" fetchpriority="high">
+            </div>
+        </div>
+    </header>
+
+    <div class="stats">
+        <div class="wrap">
+            <div class="stat"><strong>Free</strong><span>No account, no ads, no in-app purchases</span></div>
+            <div class="stat"><strong>Offline</strong><span>No analytics and no network access</span></div>
+            <div class="stat"><strong>macOS 14+</strong><span>Sonoma or later</span></div>
+        </div>
+    </div>
+
+    <main>
+        <section id="features">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="kicker">What it does</span>
+                    <h2>Your AI agent has a goal. <em>Sleep should not stop it.</em></h2>
+                    <p>A five-minute sleep timer is fine for email. It is not fine for a long build, an upload or a coding agent. Nightcap keeps the Mac awake for the work, and only for the work.</p>
+                </div>
+                <div class="features">
+                    <article class="feature">
+                        <span class="num">01</span>
+                        <h3>Awake for the apps you pick</h3>
+                        <p>Add Codex, Ghostty, Xcode, Terminal or any other app. While one of them runs, your Mac does not go to idle sleep.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="num">02</span>
+                        <h3>Sleep comes back by itself</h3>
+                        <p>When the last watched app quits, Nightcap lets go and your Mac sleeps as usual. There is nothing to remember to turn off.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="num">03</span>
+                        <h3>Made for long jobs</h3>
+                        <p>AI coding agents, builds, exports, uploads and command-line sessions keep running while you step away from your desk.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="num">04</span>
+                        <h3>One cup in the menu bar</h3>
+                        <p>The cup fills while Nightcap keeps your Mac awake. The menu shows how many watched apps are active. There is no Dock icon.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="num">05</span>
+                        <h3>Pause, resume, remove</h3>
+                        <p>Pause an app to keep it in your list without keeping the Mac awake. Resume it or remove it from the same menu.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="num">06</span>
+                        <h3>Starts with your Mac</h3>
+                        <p>Turn on Launch at Login and Nightcap is ready after each restart. After sleep and wake, it checks again which watched apps still run.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-label="Screenshots">
+            <div class="wrap">
+                <div class="gallery">
+                    <div class="frame"><img src="/nightcap-awake/shot-01-720.webp" srcset="/nightcap-awake/shot-01-720.webp 720w, /nightcap-awake/shot-01.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1120px) calc(50vw - 36px), 536px" alt="The Nightcap menu keeps the Mac awake for Ghostty, with Codex and Ghostty in the watched list" width="720" height="450" loading="lazy" decoding="async"></div>
+                    <div class="frame"><img src="/nightcap-awake/shot-02-720.webp" srcset="/nightcap-awake/shot-02-720.webp 720w, /nightcap-awake/shot-02.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1120px) calc(50vw - 36px), 536px" alt="The Nightcap menu with no apps watched, sleep allowed, and an Add App button" width="720" height="450" loading="lazy" decoding="async"></div>
+                    <div class="frame"><img src="/nightcap-awake/shot-03-720.webp" srcset="/nightcap-awake/shot-03-720.webp 720w, /nightcap-awake/shot-03.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1120px) calc(50vw - 36px), 536px" alt="Nightcap holds sleep while a watched app runs, then allows sleep when it quits" width="720" height="450" loading="lazy" decoding="async"></div>
+                    <div class="frame"><img src="/nightcap-awake/shot-04-720.webp" srcset="/nightcap-awake/shot-04-720.webp 720w, /nightcap-awake/shot-04.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1120px) calc(50vw - 36px), 536px" alt="Nightcap is sandboxed, with no analytics and no network access" width="720" height="450" loading="lazy" decoding="async"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="kicker">How it works</span>
+                    <h2>Add an app. <em>Start the job.</em> Walk away.</h2>
+                </div>
+                <ol class="steps">
+                    <li>
+                        <h3>Add an app</h3>
+                        <p>Click the cup in the menu bar, choose Add App…, and pick the app that does the long work.</p>
+                    </li>
+                    <li>
+                        <h3>Start the job</h3>
+                        <p>Open the app and start your build, upload or agent. The cup fills, and your Mac stays awake while the app runs.</p>
+                    </li>
+                    <li>
+                        <h3>Let it finish</h3>
+                        <p>When the watched apps quit, Nightcap lets go. Your Mac goes to sleep on the schedule you set in System Settings.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="privacy">
+            <div class="wrap">
+                <div class="privacy-card">
+                    <div>
+                        <span class="kicker">Private by design</span>
+                        <h2>No tracking. <em>No network.</em></h2>
+                        <p>Nightcap has no analytics and no network access. Your list of watched apps is one small file in the app sandbox on your Mac. The code is open source, so you can read it yourself.</p>
+                        <div class="links">
+                            <a href="https://github.com/Abdo-codes/Nightcap/blob/main/PRIVACY.md" rel="noopener">Read the Privacy Policy</a>
+                            <a href="https://github.com/Abdo-codes/Nightcap" rel="noopener">See the source code</a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Runs in the macOS app sandbox</li>
+                        <li>No analytics and no tracking</li>
+                        <li>No network access</li>
+                        <li>Open source under the MIT license</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="kicker">Questions</span>
+                    <h2>Good to know</h2>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does Nightcap keep my display on?</summary>
+                        <div class="faq-answer">No. Nightcap stops idle system sleep only. Your display can still turn off on its normal schedule, and your apps keep running.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What happens when a watched app quits?</summary>
+                        <div class="faq-answer">Nightcap releases its hold, and your Mac sleeps on its normal schedule again. If more than one watched app runs, Nightcap waits for the last one to quit.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How is Nightcap different from caffeinate?</summary>
+                        <div class="faq-answer">With <code>caffeinate</code>, you start and stop the hold yourself in Terminal. Nightcap watches the apps you choose and does it for you each time they run.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is Nightcap free?</summary>
+                        <div class="faq-answer">Yes. Nightcap Awake is free on the Mac App Store, with no account, no ads and no in-app purchases. The source code is on <a href="https://github.com/Abdo-codes/Nightcap" rel="noopener">GitHub</a> under the MIT license.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Which Macs does Nightcap support?</summary>
+                        <div class="faq-answer">Nightcap needs macOS 14 Sonoma or later.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I install Nightcap with Homebrew?</summary>
+                        <div class="faq-answer">Yes. Run <code>brew install --cask Abdo-codes/tap/nightcap</code> in Terminal.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="wrap">
+                <img class="icon" src="/nightcap-awake/app-icon-256.webp" alt="Nightcap Awake app icon" width="96" height="96" loading="lazy">
+                <h2>Let the work <em>finish.</em></h2>
+                <p>Get Nightcap Awake free on the Mac App Store. Questions or bugs? <a href="https://github.com/Abdo-codes/Nightcap/issues" rel="noopener">Open an issue</a> or <a href="mailto:abdulrhman.eaita@gmail.com">email me</a>.</p>
+                <div class="actions">
+                    <a class="store-badge" href="https://apps.apple.com/app/id6769450957" data-cta="nightcap-footer" aria-label="Download Nightcap Awake on the Mac App Store">
+                        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" width="211" height="54" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <div class="footer-links">
+                <a href="https://github.com/Abdo-codes/Nightcap/blob/main/PRIVACY.md" rel="noopener">Privacy</a>
+                <a href="https://github.com/Abdo-codes/Nightcap" rel="noopener">Source code</a>
+                <a href="/apps/">All apps</a>
+                <a href="/">yoloabdo.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
