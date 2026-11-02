@@ -5,13 +5,33 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-11-01T12:00:00Z</updated>
+    <updated>2026-11-02T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Angry Nona: Night Shift is out on iPhone</title>
+        <id>https://yoloabdo.com/blog/angry-nona-night-shift-launch/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/angry-nona-night-shift-launch/"/>
+        <published>2026-11-02T12:00:00Z</published>
+        <updated>2026-11-02T12:00:00Z</updated>
+        <category term="Launch"/>
+        <summary>One nanny, six toddlers and one long night. Angry Nona: Night Shift is a cozy iPhone game: keep the nursery asleep until dawn. Nights 1 to 4 are free.</summary>
+    </entry>
+
+    <entry>
+        <title>ColorTalk is out: ABC coloring for kids on iPad</title>
+        <id>https://yoloabdo.com/blog/colortalk-abc-coloring-launch/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/colortalk-abc-coloring-launch/"/>
+        <published>2026-11-02T11:00:00Z</published>
+        <updated>2026-11-02T11:00:00Z</updated>
+        <category term="Launch"/>
+        <summary>One letter and one word per page, for children 5 and under. ColorTalk works offline, with no ads, no accounts and no in-app purchases.</summary>
+    </entry>
 
     <entry>
         <title>How to share your Wi-Fi with a QR code on iPhone</title>
