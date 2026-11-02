@@ -216,7 +216,7 @@ nav .container {
     flex-wrap: wrap;
 }
 
-.store-soon {
+.store-button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -231,7 +231,8 @@ nav .container {
     transition: transform 0.2s;
 }
 
-.store-soon svg { flex-shrink: 0; }
+.store-button svg { flex-shrink: 0; }
+.store-button:hover { transform: translateY(-2px); opacity: 1; }
 
 .platform-note {
     font-size: 15px;
