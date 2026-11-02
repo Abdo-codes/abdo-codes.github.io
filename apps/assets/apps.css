@@ -261,14 +261,14 @@ body {
     gap: 14px;
 }
 
-.app-title-row h2 {
+.app-title-row h3 {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: -0.015em;
     line-height: 1.2;
 }
 
-.app-title-row h2 .latin { font-weight: 400; color: var(--text-tertiary); font-size: 15px; }
+.app-title-row h3 .latin { font-weight: 400; color: var(--text-tertiary); font-size: 15px; }
 
 .app-title-row p {
     margin-top: 6px;
