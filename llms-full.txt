@@ -12,6 +12,8 @@
 
 ## Recent Writing
 
+- [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
+- [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
 - [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/) (1 Nov 2026)
 - [Tracing every ayah and word: how Sajdah follows the recitation](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/) (30 Oct 2026)
 - [Sajdah 1.7.0: prayer times that match your mosque](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/) (30 Oct 2026)
@@ -305,6 +307,7 @@
 - [App Store](https://apps.apple.com/us/app/angry-nona-night-shift/id6819626561)
 - [Support](https://yoloabdo.com/angry-nona/support/)
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
+- [Launch post](https://yoloabdo.com/blog/angry-nona-night-shift-launch/): what the game is, how a night plays, and what is free
 
 ## Key Features
 
@@ -348,6 +351,7 @@
 - [App Store](https://apps.apple.com/us/app/colortalk-abc-kids-coloring/id6768992579)
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
+- [Launch post](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/): how a letter page works, who it is for, and the privacy promise
 
 ## Key Features
 
