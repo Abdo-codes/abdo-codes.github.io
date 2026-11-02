@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "apps": [
+    {
+      "id": 6766263673,
+      "bundleID": "com.abdoelrhman.SwipeTheCapybara",
+      "name": {
+        "en": "Capybara Rush"
+      },
+      "subtitle": {
+        "en": "Swipe-fast arcade game",
+        "ar": "لعبة أركيد سريعة بالسحب"
+      },
+      "category": {
+        "en": "Games",
+        "ar": "الألعاب"
+      },
+      "platforms": [
+        "iPhone",
+        "iPad"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ba/06/ed/ba06eda7-5788-51b4-c506-c6d273541c31/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
+    },
+    {
+      "id": 6760822504,
+      "bundleID": "com.tateemi.app",
+      "name": {
+        "en": "Tateemi",
+        "ar": "تطعيمي"
+      },
+      "subtitle": {
+        "en": "Baby vaccine tracker",
+        "ar": "جدول تطعيمات طفلك"
+      },
+      "category": {
+        "en": "Health & Fitness",
+        "ar": "صحة ولياقة"
+      },
+      "platforms": [
+        "iPhone",
+        "iPad"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/89/25/ec/8925ecc8-c3c3-5ff0-a7ea-48f73cd1417e/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "urlScheme": "tateemi"
+    },
+    {
+      "id": 6819626561,
+      "bundleID": "com.abdoelrhman.AngryNona",
+      "name": {
+        "en": "Angry Nona"
+      },
+      "subtitle": {
+        "en": "Night-shift arcade game",
+        "ar": "لعبة أركيد للمناوبة الليلية"
+      },
+      "category": {
+        "en": "Games",
+        "ar": "الألعاب"
+      },
+      "platforms": [
+        "iPhone",
+        "iPad"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/74/f4/3c74f479-1521-d213-b08c-5517d517e4b9/AppIcon-0-0-1x_U007ephone-0-1-sRGB-85-220.png/512x512bb.jpg"
+    },
+    {
+      "id": 6768992579,
+      "bundleID": "com.eaita.KidColor",
+      "name": {
+        "en": "ColorTalk"
+      },
+      "subtitle": {
+        "en": "ABC coloring for kids",
+        "ar": "تلوين الحروف للأطفال"
+      },
+      "category": {
+        "en": "Education",
+        "ar": "تعليم"
+      },
+      "platforms": [
+        "iPhone",
+        "iPad"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/51/b2/7b51b28a-4b1c-d5a8-b358-172c639d8e6a/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg"
+    },
+    {
+      "id": 6776169783,
+      "bundleID": "com.abdoelrhman.WiFiQR",
+      "name": {
+        "en": "Wi-Fi QR"
+      },
+      "subtitle": {
+        "en": "Share Wi-Fi with a QR code",
+        "ar": "رمز واي فاي للضيوف"
+      },
+      "category": {
+        "en": "Utilities",
+        "ar": "أدوات"
+      },
+      "platforms": [
+        "iPhone",
+        "iPad"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/f2/13/fff21350-a9a0-4b63-7c57-b16e3165b7d8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
+    },
+    {
+      "id": 6759179587,
+      "bundleID": "com.sajdahQuraan.app",
+      "name": {
+        "en": "Sajdah",
+        "ar": "سجدة"
+      },
+      "subtitle": {
+        "en": "Quran & Athan for TV",
+        "ar": "قرآن وأذان للتلفاز"
+      },
+      "category": {
+        "en": "Reference",
+        "ar": "مَراجع"
+      },
+      "platforms": [
+        "appleTV"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3e/ff/4b/3eff4be5-943b-bd91-7a59-b33c5edddb88/App_Icon-marketing.lsr/512x512bb.jpg"
+    },
+    {
+      "id": 6760623633,
+      "bundleID": "com.abdo.Tally",
+      "name": {
+        "en": "Tally"
+      },
+      "subtitle": {
+        "en": "Game night scoreboard",
+        "ar": "لوحة نتائج لسهرات الألعاب"
+      },
+      "category": {
+        "en": "Sports",
+        "ar": "رياضة"
+      },
+      "platforms": [
+        "appleTV"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/27/f6/a227f63a-a0df-66d8-f436-5291edcf4d0f/App_Icon-marketing.lsr/512x512bb.jpg"
+    },
+    {
+      "id": 6769450957,
+      "bundleID": "com.abdocodes.nightcap",
+      "name": {
+        "en": "Nightcap"
+      },
+      "subtitle": {
+        "en": "Keep your Mac awake",
+        "ar": "أبقِ جهاز Mac مستيقظًا"
+      },
+      "category": {
+        "en": "Productivity",
+        "ar": "إنتاجية"
+      },
+      "platforms": [
+        "mac"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6b/b5/b3/6bb5b3e5-096b-d611-d3c2-fc36d86ec72b/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png"
+    }
+  ]
+}
