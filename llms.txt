@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published eight apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), and ColorTalk (iPad ABC coloring app for children 5 and under). One more is in public TestFlight beta and coming soon to the App Store: SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published nine apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
 - [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
 - [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
 - [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/) (1 Nov 2026)
@@ -379,16 +380,17 @@
 
 ---
 
-# SwingCoach: Kettlebell Workout - Kettlebell Swing Rep Counter and Form Check for iPhone (TestFlight Beta)
+# SwingCoach: Kettlebell Workout - Kettlebell Swing Rep Counter and Form Check for iPhone
 
-> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone; no video is recorded or uploaded. SwingCoach is in public TestFlight beta and coming soon to the App Store.
+> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone; no video is recorded or uploaded. It is free on the App Store.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/swingcoach/)
-- [TestFlight Beta](https://testflight.apple.com/join/Yk2ZgDkn)
+- [App Store](https://apps.apple.com/us/app/swingcoach-kettlebell-workout/id6806616079)
 - [Support](https://yoloabdo.com/swingcoach/support/)
 - [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
+- [Launch post](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/): why I built it, why a phone app, and how the Apple Watch helps
 
 ## Key Features
 
@@ -401,8 +403,8 @@
 
 ## Availability
 
-- Public TestFlight beta: https://testflight.apple.com/join/Yk2ZgDkn
-- Coming soon to the App Store
+- App Store: https://apps.apple.com/us/app/swingcoach-kettlebell-workout/id6806616079
+- Free, with no in-app purchases
 
 ## Platform
 
