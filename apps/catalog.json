@@ -104,6 +104,25 @@
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/f2/13/fff21350-a9a0-4b63-7c57-b16e3165b7d8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
     },
     {
+      "id": 6806616079,
+      "bundleID": "com.eaita.SwingCoach",
+      "name": {
+        "en": "SwingCoach"
+      },
+      "subtitle": {
+        "en": "Kettlebell rep counter",
+        "ar": "عدّاد تكرارات الكيتلبل"
+      },
+      "category": {
+        "en": "Health & Fitness",
+        "ar": "صحة ولياقة"
+      },
+      "platforms": [
+        "iPhone"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/18/10/d2/1810d20c-0c6a-505f-ce9c-90971df4ff07/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
+    },
+    {
       "id": 6759179587,
       "bundleID": "com.sajdahQuraan.app",
       "name": {
