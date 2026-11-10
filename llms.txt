@@ -12,9 +12,9 @@
 
 ## Recent Writing
 
-- [Sajdah 1.7.3: lifetime Premium, and steadier radio and prayer times](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
-- [SwingCoach 1.1: a hands-free coach you can read from across the room](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
-- [ColorTalk 1.1: a Numbers book, from 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
+- [Sajdah 1.7.3: lifetime Premium and steadier prayer times](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
+- [SwingCoach 1.1: a hands-free kettlebell swing coach](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
+- [ColorTalk 1.1: a Numbers coloring book for kids, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
 - [Angry Nona 1.5: Topsy-Turvy Week brings six new nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
 - [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
 - [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
@@ -349,14 +349,14 @@
 
 ---
 
-# ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad
+# ColorTalk: ABC & 123 Coloring - Letters and Numbers for Kids on iPad
 
-> ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. It has no in-app purchases and no external links. It is free on the App Store.
+> ColorTalk is an ABC and 123 coloring app for iPad that teaches children 5 and under the English alphabet and the numbers 1 to 10. Home is a bookshelf with two books, Letters and Numbers. In the Letters book, the child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. It has no in-app purchases and no external links. It is free on the App Store.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/colortalk/)
-- [App Store](https://apps.apple.com/us/app/colortalk-abc-kids-coloring/id6768992579)
+- [App Store](https://apps.apple.com/us/app/colortalk-abc-123-coloring/id6768992579)
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
 - [Launch post](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/): how a letter page works, who it is for, and the privacy promise
@@ -364,6 +364,7 @@
 
 ## Key Features
 
+- **Numbers 1 to 10** - each number page has that many things to color ("3. Three ducks!"); the child traces the number, counts along, then finds it
 - **One Letter, One Word** - each page teaches one letter and one word, such as "C is for cow"
 - **Coloring First** - coloring is the main activity; the letter and its word support the art
 - **Lumo the Firefly** - says the letters, words, and prompts in recorded voice clips; spoken prompts are off by default, and a parent turns them on in Settings
@@ -373,7 +374,7 @@
 
 ## Availability
 
-- App Store: https://apps.apple.com/us/app/colortalk-abc-kids-coloring/id6768992579
+- App Store: https://apps.apple.com/us/app/colortalk-abc-123-coloring/id6768992579
 - Free, with no in-app purchases
 - Kids category, ages 5 and under
 
