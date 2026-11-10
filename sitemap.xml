@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://yoloabdo.com/</loc>
-        <lastmod>2026-11-03</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/apps/</loc>
-        <lastmod>2026-11-03</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
-        <lastmod>2026-10-30</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
@@ -186,19 +186,35 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/</loc>
-        <lastmod>2026-11-03</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/angry-nona-night-shift-launch/</loc>
-        <lastmod>2026-11-02</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/colortalk-abc-coloring-launch/</loc>
-        <lastmod>2026-11-02</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/</loc>
         <lastmod>2026-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/angry-nona-1-5-release-notes/</loc>
+        <lastmod>2026-11-10</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/colortalk-1-1-release-notes/</loc>
+        <lastmod>2026-11-10</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/</loc>
+        <lastmod>2026-11-10</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/swingcoach-1-1-release-notes/</loc>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/share-wifi-qr-code-iphone/</loc>
@@ -330,7 +346,7 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/</loc>
-        <lastmod>2026-11-03</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/ar/</loc>
@@ -342,11 +358,11 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/angry-nona/support/</loc>
-        <lastmod>2026-11-02</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/colortalk/</loc>
-        <lastmod>2026-11-02</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/colortalk/privacy/</loc>
@@ -358,7 +374,7 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/swingcoach/</loc>
-        <lastmod>2026-11-03</lastmod>
+        <lastmod>2026-11-10</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/swingcoach/support/</loc>

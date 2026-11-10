@@ -12,6 +12,10 @@
 
 ## Recent Writing
 
+- [Sajdah 1.7.3: lifetime Premium and steadier prayer times](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
+- [SwingCoach 1.1: a hands-free kettlebell swing coach](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
+- [ColorTalk 1.1: a Numbers coloring book for kids, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
+- [Angry Nona 1.5: Topsy-Turvy Week brings six new nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
 - [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
 - [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
 - [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
@@ -52,6 +56,7 @@
 - [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): the six full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board), Arabic layout, burn-in protection, and the free preview
 - [Tracing every ayah and word](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/): how verse-by-verse and word-by-word tracking works, seven problems (edition mismatch, one reciter's timing for all, repeats, rejected data, a CDN move, late answers), coverage today (six recordings with word timing) and next steps (forced alignment, a listening test)
 - [Sajdah 1.7.0 release notes](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/): choose your city, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule above 48°, and each prayer adjusted up to 30 minutes (all Premium)
+- [Sajdah 1.7.3 release notes](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/): lifetime Premium as a one-time purchase, and the radio, Athan and prayer-time fixes in 1.7.1 to 1.7.3
 - [Sajdah 1.6.0 release notes](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/): a new Today screen, the Prayer Screen in six Premium styles with a free preview, the Athan in 13 voices (Premium), new Adhkar art, a What's New screen
 - [Sajdah 1.5.0 release notes](https://yoloabdo.com/blog/sajdah-1-5-0-release-notes/)
 - [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/): nine Quran apps that run on Apple TV, compared on the TV experience, with sources
@@ -300,7 +305,7 @@
 
 # Angry Nona: Night Shift - Cozy iPhone Nanny Game
 
-> Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 13 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is free on the App Store.
+> Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 25 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is free on the App Store.
 
 ## Links
 
@@ -310,6 +315,7 @@
 - [Support](https://yoloabdo.com/angry-nona/support/)
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
 - [Launch post](https://yoloabdo.com/blog/angry-nona-night-shift-launch/): what the game is, how a night plays, and what is free
+- [1.5 release notes](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/): what is in Topsy-Turvy Week (Nights 20 to 25), the Daily Night share grid and sound on silent
 
 ## Key Features
 
@@ -320,7 +326,7 @@
 - **Coffee** - keeps the nanny going on long nights
 - **Mom's Calls** - decline fast, or the phone rings in the nursery
 - **Princess Nona** - the ringleader with a crown; if she wakes, the room can follow
-- **13 Nights + Endless** - nights add kids and twists, then Endless for high scores. Nights 1-4 free; Full Shift unlocks the rest
+- **25 Nights + Endless** - nights add kids and twists, then Endless for high scores. Nights 1-4 free; Full Shift unlocks the rest
 - **Nanny Shop** - spend points earned in play on helps and new looks
 - **Outfits** - dress the nanny in new looks
 - **Accessibility** - VoiceOver and Reduce Motion support
@@ -343,30 +349,32 @@
 
 ---
 
-# ColorTalk: ABC Kids Coloring - Learn the Alphabet & Words on iPad
+# ColorTalk: ABC & 123 Coloring - Letters and Numbers for Kids on iPad
 
-> ColorTalk is an ABC coloring app for iPad that teaches children 5 and under the English alphabet. The child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends no analytics or crash reports. It has no in-app purchases and no external links. It is free on the App Store.
+> ColorTalk is an ABC and 123 coloring app for iPad that teaches children 5 and under the English alphabet and the numbers 1 to 10. Home is a bookshelf with two books, Letters and Numbers. In the Letters book, the child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. It has no in-app purchases and no external links. It is free on the App Store.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/colortalk/)
-- [App Store](https://apps.apple.com/us/app/colortalk-abc-kids-coloring/id6768992579)
+- [App Store](https://apps.apple.com/us/app/colortalk-abc-123-coloring/id6768992579)
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
 - [Launch post](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/): how a letter page works, who it is for, and the privacy promise
+- [1.1 release notes](https://yoloabdo.com/blog/colortalk-1-1-release-notes/): the Numbers book (1 to 10), the sparkle tool, letter sounds, printing and Dutch screens
 
 ## Key Features
 
+- **Numbers 1 to 10** - each number page has that many things to color ("3. Three ducks!"); the child traces the number, counts along, then finds it
 - **One Letter, One Word** - each page teaches one letter and one word, such as "C is for cow"
 - **Coloring First** - coloring is the main activity; the letter and its word support the art
 - **Lumo the Firefly** - says the letters, words, and prompts in recorded voice clips; spoken prompts are off by default, and a parent turns them on in Settings
 - **Parents Area** - behind a grown-up question; holds Settings and local progress
 - **Works Offline** - all pages, words, and prompts are bundled in the app
-- **Privacy** - No ads, no accounts, no tracking. ColorTalk sends no analytics or crash reports. Optional voice answers (off by default) use on-device speech recognition and save no audio
+- **Privacy** - No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. Optional voice answers (off by default) use on-device speech recognition and save no audio
 
 ## Availability
 
-- App Store: https://apps.apple.com/us/app/colortalk-abc-kids-coloring/id6768992579
+- App Store: https://apps.apple.com/us/app/colortalk-abc-123-coloring/id6768992579
 - Free, with no in-app purchases
 - Kids category, ages 5 and under
 
@@ -392,6 +400,7 @@
 - [Support](https://yoloabdo.com/swingcoach/support/)
 - [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
 - [Launch post](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/): why I built it, why a phone app, and how the Apple Watch helps
+- [1.1 release notes](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/): the hands-free start, spoken cues and rest, the big rep count, Apple Watch changes, the 1.1.1 fixes and the Firebase analytics change
 
 ## Key Features
 
