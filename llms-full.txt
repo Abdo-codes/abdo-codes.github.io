@@ -12,6 +12,8 @@
 
 ## Recent Writing
 
+- [ColorTalk 1.1: a Numbers book, from 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
+- [Angry Nona 1.5: Topsy-Turvy Week brings six new nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
 - [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
 - [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
 - [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
@@ -309,6 +311,7 @@
 - [Support](https://yoloabdo.com/angry-nona/support/)
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
 - [Launch post](https://yoloabdo.com/blog/angry-nona-night-shift-launch/): what the game is, how a night plays, and what is free
+- [1.5 release notes](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/): what is in Topsy-Turvy Week (Nights 20 to 25), the Daily Night share grid and sound on silent
 
 ## Key Features
 
@@ -353,6 +356,7 @@
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
 - [Launch post](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/): how a letter page works, who it is for, and the privacy promise
+- [1.1 release notes](https://yoloabdo.com/blog/colortalk-1-1-release-notes/): the Numbers book (1 to 10), the sparkle tool, letter sounds, printing and Dutch screens
 
 ## Key Features
 

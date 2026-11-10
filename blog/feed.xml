@@ -5,13 +5,33 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-11-03T12:00:00Z</updated>
+    <updated>2026-11-10T12:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Angry Nona 1.5: Topsy-Turvy Week brings six new nights</title>
+        <id>https://yoloabdo.com/blog/angry-nona-1-5-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/angry-nona-1-5-release-notes/"/>
+        <published>2026-11-10T12:00:00Z</published>
+        <updated>2026-11-10T12:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>Nights 20 to 25 are here, so the campaign now has 25 nights. Share your Daily Night as a grid of squares, and hear the game even when your iPhone is on silent.</summary>
+    </entry>
+
+    <entry>
+        <title>ColorTalk 1.1: a Numbers book, from 1 to 10</title>
+        <id>https://yoloabdo.com/blog/colortalk-1-1-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/colortalk-1-1-release-notes/"/>
+        <published>2026-11-10T11:00:00Z</published>
+        <updated>2026-11-10T11:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>ColorTalk 1.1 turns Home into a bookshelf with two books, Letters and Numbers. Each number page has that many things to color, then your child counts along.</summary>
+    </entry>
 
     <entry>
         <title>SwingCoach is out: a kettlebell swing coach for iPhone</title>
