@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Angry Nona 1.6: a reason to come back each night](https://yoloabdo.com/blog/angry-nona-1-6-release-notes/) (11 Nov 2026)
 - [Sajdah 1.7.3: lifetime Premium and steadier prayer times](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
 - [SwingCoach 1.1: a hands-free kettlebell swing coach](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
 - [ColorTalk 1.1: a Numbers coloring book for kids, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
@@ -315,6 +316,7 @@
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
 - [Launch post](https://yoloabdo.com/blog/angry-nona-night-shift-launch/): what the game is, how a night plays, and what is free
 - [1.5 release notes](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/): what is in Topsy-Turvy Week (Nights 20 to 25), the Daily Night share grid and sound on silent
+- [1.6 release notes](https://yoloabdo.com/blog/angry-nona-1-6-release-notes/): streak rewards for the Daily Night, friends today, a new text from Mom each day and Arabic Game Center achievements
 
 ## Key Features
 
