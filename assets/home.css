@@ -323,6 +323,7 @@ section { margin-bottom: 72px; }
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
+    position: relative;
     text-decoration: none;
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
