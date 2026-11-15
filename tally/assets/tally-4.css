@@ -94,3 +94,13 @@
 @media (max-width: 640px) {
     .nav-brand { padding: 4px 0; margin: -4px 0; }
 }
+
+/* iPhone screenshots (1.6) */
+.iphone-shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 820px; margin: 0 auto 48px; }
+.iphone-shots figure { margin: 0; text-align: center; }
+.iphone-shots img { width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--divider); }
+.iphone-shots figcaption { margin-top: 12px; font-size: 14px; color: var(--text-dim); }
+@media (max-width: 600px) {
+    .iphone-shots { grid-template-columns: repeat(3, 70%); overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 8px; }
+    .iphone-shots figure { scroll-snap-align: center; }
+}
