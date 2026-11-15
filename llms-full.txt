@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published nine apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (Apple TV scoreboard), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published nine apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (scoreboard and score keeper for Apple TV and iPhone), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), and SwingCoach (iPhone kettlebell swing coach). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -12,11 +12,14 @@
 
 ## Recent Writing
 
-- [Angry Nona 1.6: a reason to come back each night](https://yoloabdo.com/blog/angry-nona-1-6-release-notes/) (11 Nov 2026)
-- [Sajdah 1.7.3: lifetime Premium and steadier prayer times](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
-- [SwingCoach 1.1: a hands-free kettlebell swing coach](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
-- [ColorTalk 1.1: a Numbers coloring book for kids, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
-- [Angry Nona 1.5: Topsy-Turvy Week brings six new nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
+- [A score keeper app for iPhone and Apple TV: Tally 1.6](https://yoloabdo.com/blog/score-keeper-app-iphone-apple-tv/) (15 Nov 2026)
+- [Kettlebell workout app: hands-free, with a huge rep count](https://yoloabdo.com/blog/kettlebell-workout-app-hands-free/) (15 Nov 2026)
+- [Print a Wi-Fi QR code sign from your iPhone: Wi-Fi QR 1.8](https://yoloabdo.com/blog/print-wifi-qr-code-sign-iphone/) (15 Nov 2026)
+- [Nanny simulator game: Angry Nona 1.6 adds daily streaks](https://yoloabdo.com/blog/angry-nona-1-6-release-notes/) (11 Nov 2026)
+- [Quran app for Apple TV: Sajdah 1.7.3 adds lifetime Premium](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/) (10 Nov 2026)
+- [Kettlebell rep counter with voice cues: SwingCoach 1.1](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/) (10 Nov 2026)
+- [Numbers coloring book for kids: ColorTalk 1.1, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
+- [Babysitting game for iPhone: Angry Nona 1.5 adds six nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
 - [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
 - [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
 - [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
@@ -108,6 +111,7 @@
 - [App Store](https://apps.apple.com/us/app/tally-game-night-scoreboard/id6760623633)
 - [Support](https://yoloabdo.com/tally/support/)
 - [Privacy Policy](https://yoloabdo.com/tally/privacy/)
+- [Tally 1.6 release notes](https://yoloabdo.com/blog/score-keeper-app-iphone-apple-tv/): iPhone app with iCloud sync, a house leaderboard, a chess clock, and game types for Rummy 500, Hearts, Darts 501 and Cornhole
 - [Tally 1.3.2 release notes](https://yoloabdo.com/blog/tally-1-3-2-release-notes/): Tally is now fully free; every sport and Game Night unlocked; no analytics
 
 ## Key Features
@@ -193,6 +197,7 @@
 - [Airbnb WiFi sign guide](https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/): what to put on an Airbnb WiFi sign or card, where to put it, which size to print, how guests scan the QR code, and how to make one with Wi-Fi QR
 - [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/): three ways to share Wi-Fi from an iPhone (the Passwords app QR code in iOS 18, Share Password for nearby Apple devices, and a printable code from Wi-Fi QR), how guests scan, and fixes for codes that do not work
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
+- [Wi-Fi QR 1.8 printing guide and release notes](https://yoloabdo.com/blog/print-wifi-qr-code-sign-iphone/): printing a guest sign or 8 cut-out cards from the app, the place name, and Wi-Fi QR Pro
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
 - [Privacy Policy](https://yoloabdo.com/wifi-qr/privacy/)
@@ -401,6 +406,7 @@
 - [Support](https://yoloabdo.com/swingcoach/support/)
 - [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
 - [Launch post](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/): why I built it, why a phone app, and how the Apple Watch helps
+- [1.2 release notes](https://yoloabdo.com/blog/kettlebell-workout-app-hands-free/): the 1.2 dark look with one big number, the hands-free end, round workout results and Skip rest
 - [1.1 release notes](https://yoloabdo.com/blog/swingcoach-1-1-release-notes/): the hands-free start, spoken cues and rest, the big rep count, Apple Watch changes, the 1.1.1 fixes and the Firebase analytics change
 
 ## Key Features
