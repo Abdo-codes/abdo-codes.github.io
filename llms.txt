@@ -398,7 +398,7 @@
 
 # SwingCoach: Kettlebell Workout - Kettlebell Swing Rep Counter and Form Check for iPhone
 
-> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone; no video is recorded or uploaded. It is free on the App Store.
+> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone. From 1.2.1, you can opt in to silent workout recordings that stay on your iPhone unless you share them. SwingCoach does not upload camera footage. It is free on the App Store.
 
 ## Links
 
