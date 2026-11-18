@@ -68,6 +68,7 @@ footer a:hover { color: var(--accent); }
 .drive-town-bg { background: #f7f4eb; }
 .swingcoach-bg { background: #0a0c0a; }
 .nightcap-bg { background: #050c18; }
+.hona-bg { background: #3b2214; }
 
 /* ── App groups ── */
 .group-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: -24px 0 8px; }
