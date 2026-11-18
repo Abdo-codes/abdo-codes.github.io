@@ -179,6 +179,26 @@
         "mac"
       ],
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6b/b5/b3/6bb5b3e5-096b-d611-d3c2-fc36d86ec72b/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png"
+    },
+    {
+      "id": 6831580861,
+      "bundleID": "com.abdoelrhman.honaelqahra",
+      "name": {
+        "en": "Hona Elqahra",
+        "ar": "هنا القاهرة"
+      },
+      "subtitle": {
+        "en": "Quran radio",
+        "ar": "إذاعات القرآن"
+      },
+      "category": {
+        "en": "Music",
+        "ar": "الموسيقى"
+      },
+      "platforms": [
+        "iPhone"
+      ],
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/69/30/b16930b1-eda2-3c6a-0394-2d84a277ee67/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
     }
   ]
 }
