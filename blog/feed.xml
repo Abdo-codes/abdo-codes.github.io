@@ -5,13 +5,43 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-11-19T17:30:00Z</updated>
+    <updated>2026-11-19T21:20:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Dinosaur coloring app for kids: ColorTalk 1.2 and Arabic</title>
+        <id>https://yoloabdo.com/blog/colortalk-1-2-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/colortalk-1-2-release-notes/"/>
+        <published>2026-11-19T21:20:00Z</published>
+        <updated>2026-11-19T21:20:00Z</updated>
+        <category term="Release notes"/>
+        <summary>ColorTalk 1.2 adds a dinosaur coloring book with 20 dinosaurs and Dino Valley, an Arabic letters book with tracing, Glow, My Art frames and color by number.</summary>
+    </entry>
+
+    <entry>
+        <title>Kettlebell swing challenge app: SwingCoach 1.2.1</title>
+        <id>https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/"/>
+        <published>2026-11-19T21:10:00Z</published>
+        <updated>2026-11-19T21:10:00Z</updated>
+        <category term="Release notes"/>
+        <summary>A kettlebell swing challenge app for iPhone. SwingCoach 1.2.1 adds daily swing challenges, a daily reminder, better rep counting and Apple Watch updates.</summary>
+    </entry>
+
+    <entry>
+        <title>Quran app for Apple TV: Sajdah 1.7.4 previews Premium</title>
+        <id>https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/"/>
+        <published>2026-11-19T21:00:00Z</published>
+        <updated>2026-11-19T21:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>Sajdah 1.7.4 is a Quran app for Apple TV with the Athan and prayer times. See a preview of the Premium feature you pick. Radio and prayer times improve.</summary>
+    </entry>
 
     <entry>
         <title>Quran radio widget for iPhone: Hona Elqahra 1.1</title>

@@ -10,7 +10,7 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/sajda/</loc>
-        <lastmod>2026-11-10</lastmod>
+        <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://yoloabdo.com/sajda/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://yoloabdo.com/sajda/ar/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://yoloabdo.com/sajda/tr/"/>
@@ -186,6 +186,18 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/blog/</loc>
+        <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/colortalk-1-2-release-notes/</loc>
+        <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/</loc>
+        <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+        <loc>https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/</loc>
         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
@@ -394,7 +406,7 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/colortalk/</loc>
-        <lastmod>2026-11-10</lastmod>
+        <lastmod>2026-11-19</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/colortalk/privacy/</loc>
@@ -406,7 +418,7 @@
     </url>
     <url>
         <loc>https://yoloabdo.com/swingcoach/</loc>
-        <lastmod>2026-11-15</lastmod>
+        <lastmod>2026-11-19</lastmod>
     </url>
     <url>
         <loc>https://yoloabdo.com/swingcoach/support/</loc>
