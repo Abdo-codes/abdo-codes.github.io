@@ -12,6 +12,9 @@
 
 ## Recent Writing
 
+- [Dinosaur coloring app for kids: ColorTalk 1.2 and Arabic](https://yoloabdo.com/blog/colortalk-1-2-release-notes/) (19 Nov 2026)
+- [Kettlebell swing challenge app: SwingCoach 1.2.1](https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/) (19 Nov 2026)
+- [Quran app for Apple TV: Sajdah 1.7.4 previews Premium](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/) (19 Nov 2026)
 - [Quran radio widget for iPhone: Hona Elqahra 1.1](https://yoloabdo.com/blog/hona-elqahra-1-1-release-notes/) (19 Nov 2026)
 - [Quran radio app for iPhone: Hona Elqahra is out](https://yoloabdo.com/blog/quran-radio-app-iphone-hona-elqahra/) (18 Nov 2026)
 - [A score keeper app for iPhone and Apple TV: Tally 1.6](https://yoloabdo.com/blog/score-keeper-app-iphone-apple-tv/) (15 Nov 2026)
@@ -31,9 +34,6 @@
 - [From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/) (29 Oct 2026)
 - [The Prayer Screen: prayer times that look good on your TV all day](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/) (27 Oct 2026)
 - [Sajdah 1.6.0: a new Today screen, the Prayer Screen and the Athan in 13 voices](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/) (22 Oct 2026)
-- [Tally 1.3.2: the Apple TV scoreboard is now fully free](https://yoloabdo.com/blog/tally-1-3-2-release-notes/) (19 Oct 2026)
-- [Capybara Rush 1.5: daily runs, the Capybara Cup and a poster of your best run](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/) (19 Oct 2026)
-- [Wi-Fi QR 1.7: guest signs that fit, WPA or WEP, and smarter sticker scans](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/) (19 Oct 2026)
 
 ## Site Links
 
