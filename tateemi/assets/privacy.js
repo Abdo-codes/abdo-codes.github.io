@@ -35,5 +35,5 @@ function showLang(lang) {
     }
 }
 
-// Default: show Arabic only
-showLang('ar');
+const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+showLang(requestedLanguage === 'en' ? 'en' : 'ar');
