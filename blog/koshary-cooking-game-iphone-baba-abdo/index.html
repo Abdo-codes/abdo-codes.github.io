@@ -206,26 +206,26 @@
                 <p>On 10 October I had one picture of the idea: a warm, first-person koshary shop with a ladle and a bowl. I called the game Koshary Fatma. My project folder was named after Abou Tarek, but that is a real and famous koshary shop in Cairo, so the game needed a name of its own.</p>
                 <p>I picked Godot so the game could also come to Android. The first spike was 2D: code-drawn trays, a shader bowl and a hold-to-pour ladle. The pouring worked. The look did not. My note at the time was that it looked very far from the original idea.</p>
                 <figure>
-                    <img src="01-2d-spike.webp" width="1200" height="675" alt="The first Godot spike: flat tiled wall, drawn steel trays of rice and lentils, a round bowl, a ladle and an Arabic order card." loading="lazy">
+                    <img src="01-2d-spike.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="The first Godot spike: flat tiled wall, drawn steel trays of rice and lentils, a round bowl, a ladle and an Arabic order card." loading="lazy">
                     <figcaption>The 2D pour spike. The logic worked. The picture did not.</figcaption>
                 </figure>
                 <p>The same afternoon I tried sprites cut from the reference picture. A still frame looked almost the same as the picture, but the food in the bowl looked like flat stickers. So I went to 3D.</p>
                 <figure>
-                    <img src="02-sprite-test.webp" width="1200" height="675" alt="A sprite test with layers cut from the reference picture and flat food heaps in the bowl." loading="lazy">
+                    <img src="02-sprite-test.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="A sprite test with layers cut from the reference picture and flat food heaps in the bowl." loading="lazy">
                     <figcaption>The sprite test: close in a still frame, flat when it moves.</figcaption>
                 </figure>
 
                 <h2 id="directions">Six art directions</h2>
                 <p>Before I put more time into 3D, I used image generation in Paper to try six looks: warm 3D, Cairo truck-art, an isometric diorama, a gouache storybook, a 1970s cinema poster and a neon night arcade. The review scored truck-art first, because it was cheap to make and very Egyptian. I picked the warm 3D one anyway, because it was closest to the picture in my head.</p>
                 <figure>
-                    <img src="03-art-directions.webp" width="1200" height="1106" alt="Six art direction boards for Koshary Fatma: A Pixar-warm 3D, B truck-art flat vector, C isometric diorama, D gouache storybook, E retro cinema poster, F neon night arcade." loading="lazy">
+                    <img src="03-art-directions.webp" width="1200" height="1106" style="aspect-ratio: 1200 / 1106" alt="Six art direction boards for Koshary Fatma: A Pixar-warm 3D, B truck-art flat vector, C isometric diorama, D gouache storybook, E retro cinema poster, F neon night arcade." loading="lazy">
                     <figcaption>Six directions in one afternoon. I picked A. The final game is closer to B.</figcaption>
                 </figure>
 
                 <h2 id="prototype">The 3D prototype</h2>
                 <p>The 3D version mixed two tools. Blender rendered the kitchen behind the counter. Godot drew the bowl, the ladle, the hands and thousands of small food grains in real time. It looked like a real game in the first week.</p>
                 <figure>
-                    <img src="04-3d-prototype-first.webp" width="1200" height="675" alt="The 3D prototype: a Blender kitchen, a white bowl of lentils, a steel ladle and two stylized hands, with an Arabic order card." loading="lazy">
+                    <img src="04-3d-prototype-first.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="The 3D prototype: a Blender kitchen, a white bowl of lentils, a steel ladle and two stylized hands, with an Arabic order card." loading="lazy">
                     <figcaption>The 3D prototype, 10 October. Blender kitchen, Godot food and hands.</figcaption>
                 </figure>
                 <p>The details took the time. The first food looked like beads, then the rice looked like beans. The first TestFlight build did nothing at all on my iPhone, because a full-screen layer caught every touch before the game could see it. Build 0.1.1 fixed that.</p>
@@ -235,12 +235,12 @@
                 <p>At that point I asked myself if we were doing something wrong at a bigger level. We were. We had too many parallel tasks and a large set of automatic checks, and I was out of the loop. The new rule was simple: my eye is the gate, and one change gets one review.</p>
                 <p>In parallel I tried a photoreal 2D version in SpriteKit, with AI-made food and small hands. It did not feel like a game either, so I parked it.</p>
                 <figure>
-                    <img src="07-2d-photoreal-spritekit.webp" width="1200" height="552" alt="A photoreal 2D SpriteKit attempt with realistic food trays and small hands holding a bowl." loading="lazy">
+                    <img src="07-2d-photoreal-spritekit.webp" width="1200" height="552" style="aspect-ratio: 1200 / 552" alt="A photoreal 2D SpriteKit attempt with realistic food trays and small hands holding a bowl." loading="lazy">
                     <figcaption>A photoreal 2D side attempt, 13 October. Parked.</figcaption>
                 </figure>
                 <p>On 21 October I finally built the full game flow in 3D: orders, a timer, a day counter and the new name on the sign, Baba Abdo. It worked, but the camera moved too much, the text sat on top of a different set of labels, and the buttons felt like a website, not a game.</p>
                 <figure>
-                    <img src="06-3d-with-game-flow.webp" width="1200" height="557" alt="The 3D version with the full game flow: a Baba Abdo sign, an order card, labeled trays, a timer and Arabic buttons." loading="lazy">
+                    <img src="06-3d-with-game-flow.webp" width="1200" height="557" style="aspect-ratio: 1200 / 557" alt="The 3D version with the full game flow: a Baba Abdo sign, an order card, labeled trays, a timer and Arabic buttons." loading="lazy">
                     <figcaption>The full flow in 3D, 21 October. One day before the change.</figcaption>
                 </figure>
 
@@ -248,18 +248,18 @@
                 <p>The next day a tester played the TestFlight build. The writing felt cringy to her, the hands felt weird, and the customers did not work. Her short list matched what I already felt. So I asked for the simplest version that is still new: a fixed bowl, no arms, flat food, like the fixed boards of good kitchen games.</p>
                 <p>The first concept had a drawn customer at the counter. I did not want that, because every customer would need new art. We changed the customer to a reusable order ticket, and I said yes to that version. Then I asked to build it in SpriteKit, because it fits a flat, iPhone-first game.</p>
                 <figure>
-                    <img src="08a-flat-concept-rejected-guy.webp" width="1200" height="676" alt="A flat illustrated concept with a customer at the counter and a speech bubble." loading="lazy">
+                    <img src="08a-flat-concept-rejected-guy.webp" width="1200" height="676" style="aspect-ratio: 1200 / 676" alt="A flat illustrated concept with a customer at the counter and a speech bubble." loading="lazy">
                     <figcaption>Concept one: a drawn customer. Too much art per customer.</figcaption>
                 </figure>
                 <figure>
-                    <img src="08b-flat-concept-approved.webp" width="1200" height="676" alt="The same flat counter with six trays and a bowl, without the customer." loading="lazy">
+                    <img src="08b-flat-concept-approved.webp" width="1200" height="676" style="aspect-ratio: 1200 / 676" alt="The same flat counter with six trays and a bowl, without the customer." loading="lazy">
                     <figcaption>Concept two: the counter, the trays and the bowl. This became the game.</figcaption>
                 </figure>
 
                 <h2 id="flat">Making flat look good</h2>
                 <p>The first SpriteKit build shipped to TestFlight on 23 October. It played better than any 3D build. It also looked plain: an empty counter, one background and text boxes for buttons.</p>
                 <figure>
-                    <img src="09-spritekit-baseline-0.2.0.webp" width="1200" height="552" alt="The first SpriteKit build: a flat counter with six trays and a koshary bowl, with plain text boxes." loading="lazy">
+                    <img src="09-spritekit-baseline-0.2.0.webp" width="1200" height="552" style="aspect-ratio: 1200 / 552" alt="The first SpriteKit build: a flat counter with six trays and a koshary bowl, with plain text boxes." loading="lazy">
                     <figcaption>The first SpriteKit build, TestFlight 0.2.0. It played well and looked plain.</figcaption>
                 </figure>
                 <p>The next four weeks made it a game:</p>
