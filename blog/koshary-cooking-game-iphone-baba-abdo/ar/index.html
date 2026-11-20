@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة طبخ الكشري للآيفون: «كشري بابا عبده» متاحة الآن</title>
+    <meta name="keywords" content="لعبة كشري, كشري بابا عبده, لعبة طبخ مصرية, ألعاب عربية للآيفون, لعبة طبخ للآيفون, لعبة أكل مصري, koshary game">
+    <meta name="description" content="«كشري بابا عبده» لعبة طبخ مصرية مجانية للآيفون بالعربية. هذه قصة تحولها من نموذج ثنائي الأبعاد ونموذج ثلاثي الأبعاد إلى لعبة مسطحة بـ SpriteKit.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/">
+    <link rel="alternate" hreflang="en" href="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/">
+    <link rel="alternate" hreflang="ar" href="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="لعبة طبخ الكشري للآيفون: «كشري بابا عبده» متاحة الآن">
+    <meta property="og:description" content="«كشري بابا عبده» لعبة طبخ مصرية مجانية للآيفون بالعربية. هذه قصة تحولها من نموذج ثنائي الأبعاد ونموذج ثلاثي الأبعاد إلى لعبة مسطحة بـ SpriteKit.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="النموذج ثلاثي الأبعاد من أكتوبر، بيدين ومغرفة، بجانب شاشة لعبة «كشري بابا عبده» النهائية المسطحة.">
+    <meta property="article:published_time" content="2026-11-20T15:00:00Z">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Launch">
+    <meta property="article:tag" content="Baba Abdo">
+    <meta property="article:tag" content="Game development">
+    <meta property="article:tag" content="SpriteKit">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="لعبة طبخ الكشري للآيفون: «كشري بابا عبده» متاحة الآن">
+    <meta name="twitter:description" content="«كشري بابا عبده» لعبة طبخ مصرية مجانية للآيفون بالعربية. هذه قصة تحولها من نموذج ثنائي الأبعاد ونموذج ثلاثي الأبعاد إلى لعبة مسطحة بـ SpriteKit.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/og-image.jpg">
+    <meta name="twitter:image:alt" content="النموذج ثلاثي الأبعاد من أكتوبر، بيدين ومغرفة، بجانب شاشة لعبة «كشري بابا عبده» النهائية المسطحة.">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <meta name="apple-itunes-app" content="app-id=6821673461">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+    <style>body, .post-title, h2, h3 { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; } .post-title { letter-spacing: 0; } .mono { letter-spacing: 0; }</style>
+    <link rel="stylesheet" href="/blog/assets/blog.css?v=20261102">
+    <script src="/blog/assets/theme.js"></script>
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/#post",
+      "headline": "لعبة طبخ الكشري للآيفون: «كشري بابا عبده» متاحة الآن",
+      "description": "«كشري بابا عبده» لعبة طبخ مصرية مجانية للآيفون بالعربية. هذه قصة تحولها من نموذج ثنائي الأبعاد ونموذج ثلاثي الأبعاد إلى لعبة مسطحة بـ SpriteKit.",
+      "url": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+      "mainEntityOfPage": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+      "image": [
+        "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/og-image.jpg",
+        "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/04-3d-prototype-first.webp",
+        "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/11-final-game.webp"
+      ],
+      "datePublished": "2026-11-20T15:00:00Z",
+      "dateModified": "2026-11-20T15:00:00Z",
+      "inLanguage": "ar",
+      "articleSection": "Launch",
+      "keywords": [
+        "لعبة كشري",
+        "لعبة طبخ مصرية",
+        "ألعاب عربية للآيفون",
+        "SpriteKit",
+        "Godot"
+      ],
+      "author": {
+        "@type": "Person",
+        "@id": "https://yoloabdo.com/#person",
+        "name": "Abdelrahman Eita",
+        "url": "https://yoloabdo.com/"
+      },
+      "publisher": {
+        "@id": "https://yoloabdo.com/#person"
+      },
+      "about": {
+        "@id": "https://yoloabdo.com/baba-abdo/#app"
+      },
+      "isPartOf": {
+        "@id": "https://yoloabdo.com/blog/#blog"
+      },
+      "translationOfWork": {
+        "@id": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/#post"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل «كشري بابا عبده» مجانية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. اللعبة مجانية على App Store للآيفون، ولا توجد فيها مشتريات داخل التطبيق."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما لغة اللعبة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "اللعبة عربية أولًا، وحواراتها باللهجة المصرية. الإصدار 1.0 فيه أيضًا واجهة ونصوص بالإنجليزية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ماذا تفعل في اللعبة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تدير محل كشري في حارة من حواري القاهرة. تقرأ تذكرة كل زبون، وتبني الطبق بالطبقات الصحيحة، وتقدمه قبل أن يغضب الزبون. القصة سبعة أيام، وبعدها تستمر في اللعب."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "لماذا تركت النسخة ثلاثية الأبعاد؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "كانت النسخة ثلاثية الأبعاد قريبة من الصورة المرجعية، لكن حركة الذراع لم تكن طبيعية أبدًا، وكل زبون جديد كان يحتاج رسمًا جديدًا. النسخة المسطحة بـ SpriteKit أوضح، وأسرع في التعديل، وأمتع في اللعب."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://yoloabdo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المدونة",
+          "item": "https://yoloabdo.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "كشري بابا عبده",
+          "item": "https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="مسار التنقل"><a href="/">الرئيسية</a> / <a href="/blog/">المدونة</a> / كشري بابا عبده</nav>
+            <p class="eyebrow mono">إطلاق · كشري بابا عبده للآيفون · <a href="../" hreflang="en" lang="en">Read in English</a></p>
+            <h1 class="post-title">لعبة طبخ الكشري للآيفون: «كشري بابا عبده» متاحة الآن</h1>
+            <p class="dek">«كشري بابا عبده» لعبة طبخ كشري مجانية للآيفون، صُنعت بالعربية. استغرقت ستة أسابيع ومحركَي ألعاب، ونموذجًا ثلاثي الأبعاد أحببته، ونسخة مسطحة كدت ألا أجربها.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">عبد الرحمن عيطة</a> · <time datetime="2026-11-20">20 نوفمبر 2026</time></span>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="../11-final-game.webp" width="1200" height="553" style="aspect-ratio: 1200 / 553" alt="«كشري بابا عبده» 1.0: أبونا مينا ينتظر عند الكاونتر، وفوق الطبق ست صواني لمكونات الكشري، مع تذكرة الطلب والجرس." fetchpriority="high">
+                <figcaption>«كشري بابا عبده» 1.0. الجار يطلب، وأنت تبني الطبق، ثم تدق الجرس.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p>وافقت Apple اليوم على <a href="/baba-abdo/">«كشري بابا عبده»</a>. في اللعبة تدير محل كشري صغيرًا في حارة من حواري القاهرة. لكل جار طلبه المعتاد، وأنت تبني كل طبق بالطبقات الصحيحة: الأرز، والمكرونة، والعدس، والحمص، والصلصة، والبصل المحمّر. القصة سبعة أيام. اللعبة مجانية، ولا توجد فيها مشتريات داخل التطبيق.</p>
+                <p>اللعبة التي تنزّلها اليوم ليست اللعبة التي بدأتها. هذه التدوينة تعرض النسخ التي جاءت بينهما، بلقطات حقيقية من كل نسخة.</p>
+                <nav class="toc" aria-label="في هذه التدوينة">
+                    <ul>
+                        <li><a href="#spike">اليوم الأول: نموذج ثنائي الأبعاد</a></li>
+                        <li><a href="#directions">ستة اتجاهات فنية</a></li>
+                        <li><a href="#prototype">النموذج ثلاثي الأبعاد</a></li>
+                        <li><a href="#arms">ذراع لم تبدُ طبيعية أبدًا</a></li>
+                        <li><a href="#pivot">الملاحظة التي غيّرت اللعبة</a></li>
+                        <li><a href="#flat">كيف جعلنا الرسم المسطح جميلًا</a></li>
+                        <li><a href="#learned">ما تعلمته</a></li>
+                        <li><a href="#faq">أسئلة</a></li>
+                    </ul>
+                </nav>
+
+                <h2 id="spike">اليوم الأول: نموذج ثنائي الأبعاد</h2>
+                <p>في 10 أكتوبر كانت عندي صورة واحدة للفكرة: محل كشري دافئ، نراه بعين البائع، فيه مغرفة وطبق. سمّيت اللعبة «كشري فاطمة». كان مجلد المشروع باسم «أبو طارق»، لكنه اسم محل كشري حقيقي وشهير في القاهرة، فكان لا بد أن يكون للعبة اسم خاص بها.</p>
+                <p>اخترت Godot حتى تصل اللعبة إلى أندرويد أيضًا. كان النموذج الأول ثنائي الأبعاد: صوانٍ مرسومة بالكود، وطبق بـ shader، ومغرفة تصب ما دمت تضغط. الصب كان يعمل، لكن الشكل لم يكن كذلك. ملاحظتي وقتها أنه بعيد جدًا عن الفكرة الأصلية.</p>
+                <figure>
+                    <img src="../01-2d-spike.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="أول نموذج في Godot: حائط بلاط مسطح، وصوانٍ معدنية مرسومة فيها أرز وعدس، وطبق، ومغرفة، وبطاقة طلب بالعربية." loading="lazy">
+                    <figcaption>نموذج الصب ثنائي الأبعاد. المنطق يعمل، والصورة لا.</figcaption>
+                </figure>
+                <p>في العصر نفسه جربت صورًا مقصوصة من الصورة المرجعية. اللقطة الثابتة كانت تشبه الصورة جدًا، لكن الأكل في الطبق بدا كأنه ملصقات مسطحة. فانتقلت إلى الأبعاد الثلاثة.</p>
+                <figure>
+                    <img src="../02-sprite-test.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="تجربة بصور مقصوصة من الصورة المرجعية، والأكل في الطبق كوم مسطح." loading="lazy">
+                    <figcaption>تجربة الصور المقصوصة: قريبة في اللقطة الثابتة، ومسطحة عند الحركة.</figcaption>
+                </figure>
+
+                <h2 id="directions">ستة اتجاهات فنية</h2>
+                <p>قبل أن أضع وقتًا أكثر في الأبعاد الثلاثة، استخدمت توليد الصور في Paper لتجربة ستة أشكال: ثلاثي أبعاد دافئ، وفن عربات النقل المصرية، ومجسم من زاوية علوية، وقصة مرسومة بالألوان المائية، وملصق سينما من السبعينيات، وصالة ألعاب بأضواء النيون. المراجعة رشّحت فن عربات النقل أولًا، لأنه رخيص في الصنع ومصري جدًا. لكنني اخترت الشكل ثلاثي الأبعاد الدافئ، لأنه الأقرب إلى الصورة التي في رأسي.</p>
+                <figure>
+                    <img src="../03-art-directions.webp" width="1200" height="1106" style="aspect-ratio: 1200 / 1106" alt="ست لوحات لاتجاهات «كشري فاطمة» الفنية: ثلاثي أبعاد دافئ، وفن عربات النقل، ومجسم علوي، وألوان مائية، وملصق سينما قديم، ونيون ليلي." loading="lazy">
+                    <figcaption>ستة اتجاهات في عصر واحد. اخترت الأول، واللعبة النهائية أقرب إلى الثاني.</figcaption>
+                </figure>
+
+                <h2 id="prototype">النموذج ثلاثي الأبعاد</h2>
+                <p>جمعت النسخة ثلاثية الأبعاد بين أداتين. Blender رسم المطبخ خلف الكاونتر، وGodot رسم الطبق والمغرفة واليدين وآلاف الحبات الصغيرة من الأكل في الوقت الحقيقي. بدا كأنه لعبة حقيقية من الأسبوع الأول.</p>
+                <figure>
+                    <img src="../04-3d-prototype-first.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="النموذج ثلاثي الأبعاد: مطبخ من Blender، وطبق أبيض فيه عدس، ومغرفة معدنية، ويدان مرسومتان، مع بطاقة طلب بالعربية." loading="lazy">
+                    <figcaption>النموذج ثلاثي الأبعاد، 10 أكتوبر. مطبخ من Blender، وأكل ويدان من Godot.</figcaption>
+                </figure>
+                <p>التفاصيل هي التي أخذت الوقت. بدا الأكل في البداية مثل الخرز، ثم بدا الأرز مثل الفول. وأول نسخة على TestFlight لم تستجب لأي لمسة على الآيفون، لأن طبقة تغطي الشاشة كلها كانت تلتقط كل لمسة قبل أن تصل إلى اللعبة. أصلحت النسخة 0.1.1 ذلك.</p>
+
+                <h2 id="arms">ذراع لم تبدُ طبيعية أبدًا</h2>
+                <p>بعد ذلك أردت ذراعًا حقيقية تغرف وتصب. بنينا ثلاث جولات لحركة الذراع بالحركة العكسية (IK). الاختبارات نجحت، لكن عيني لم تقتنع: الكوع يرتفع، والذراع تنزل من أعلى الشاشة، ولا شيء فيها يبدو طبيعيًا. ثم كتبنا أداة تفحص حدود المفاصل والسرعة، ففشلت الجولتان الأخيرتان في 36 من 36 فحصًا.</p>
+                <p>وقتها سألت نفسي: هل نخطئ في الصورة الكبيرة؟ والجواب كان نعم. كانت عندنا مهام متوازية كثيرة، ومجموعة كبيرة من الفحوص الآلية، وأنا خارج الدائرة. فصارت القاعدة بسيطة: عيني هي البوابة، ولكل تغيير مراجعة واحدة.</p>
+                <p>وفي الوقت نفسه جربت نسخة ثنائية الأبعاد واقعية بـ SpriteKit، فيها أكل مولّد بالذكاء الاصطناعي ويدان صغيرتان. لم تبدُ هي أيضًا لعبة، فأوقفتها.</p>
+                <figure>
+                    <img src="../07-2d-photoreal-spritekit.webp" width="1200" height="552" style="aspect-ratio: 1200 / 552" alt="محاولة ثنائية الأبعاد واقعية بـ SpriteKit: صوانٍ بأكل واقعي ويدان صغيرتان تمسكان الطبق." loading="lazy">
+                    <figcaption>محاولة جانبية واقعية ثنائية الأبعاد، 13 أكتوبر. توقفت.</figcaption>
+                </figure>
+                <p>في 21 أكتوبر بنيت أخيرًا مسار اللعب كاملًا بالأبعاد الثلاثة: الطلبات، والمؤقت، وعدّاد الأيام، والاسم الجديد على اللافتة: «بابا عبده». كان يعمل، لكن الكاميرا تتحرك أكثر من اللازم، والنصوص فوق مجموعة أخرى من العناوين، والأزرار تشبه موقعًا على الإنترنت لا لعبة.</p>
+                <figure>
+                    <img src="../06-3d-with-game-flow.webp" width="1200" height="557" style="aspect-ratio: 1200 / 557" alt="النسخة ثلاثية الأبعاد بمسار اللعب كاملًا: لافتة بابا عبده، وبطاقة طلب، وصوانٍ عليها أسماء، ومؤقت، وأزرار بالعربية." loading="lazy">
+                    <figcaption>مسار اللعب كاملًا بالأبعاد الثلاثة، 21 أكتوبر. قبل التغيير بيوم واحد.</figcaption>
+                </figure>
+
+                <h2 id="pivot">الملاحظة التي غيّرت اللعبة</h2>
+                <p>في اليوم التالي لعبت مختبِرة نسخة TestFlight. وجدت الكتابة مصطنعة، وحركة اليدين غريبة، والزبائن غير مقنعين. قائمتها القصيرة كانت ما أشعر به أنا أيضًا. فطلبت أبسط نسخة تظل جديدة: طبق ثابت، بلا أذرع، وأكل مسطح، مثل اللوحات الثابتة في ألعاب المطبخ الجيدة.</p>
+                <p>كان في الفكرة الأولى زبون مرسوم عند الكاونتر. لم أرد ذلك، لأن كل زبون سيحتاج رسمًا جديدًا. فاستبدلنا الزبون بتذكرة طلب تتكرر، ووافقت على تلك النسخة. ثم طلبت بناءها بـ SpriteKit، لأنها تناسب لعبة مسطحة للآيفون أولًا.</p>
+                <figure>
+                    <img src="../08a-flat-concept-rejected-guy.webp" width="1200" height="676" style="aspect-ratio: 1200 / 676" alt="فكرة مسطحة مرسومة فيها زبون عند الكاونتر وفقاعة كلام." loading="lazy">
+                    <figcaption>الفكرة الأولى: زبون مرسوم. رسم كثير لكل زبون.</figcaption>
+                </figure>
+                <figure>
+                    <img src="../08b-flat-concept-approved.webp" width="1200" height="676" style="aspect-ratio: 1200 / 676" alt="الكاونتر المسطح نفسه بست صوانٍ وطبق، من غير الزبون." loading="lazy">
+                    <figcaption>الفكرة الثانية: الكاونتر والصواني والطبق. هذه صارت اللعبة.</figcaption>
+                </figure>
+
+                <h2 id="flat">كيف جعلنا الرسم المسطح جميلًا</h2>
+                <p>وصلت أول نسخة SpriteKit إلى TestFlight في 23 أكتوبر. كانت ألعب من أي نسخة ثلاثية الأبعاد، لكنها بدت بسيطة: كاونتر فارغ، وخلفية واحدة، وأزرار على شكل مربعات نص.</p>
+                <figure>
+                    <img src="../09-spritekit-baseline-0.2.0.webp" width="1200" height="552" style="aspect-ratio: 1200 / 552" alt="أول نسخة SpriteKit: كاونتر مسطح بست صوانٍ وطبق كشري، وأزرار نصية بسيطة." loading="lazy">
+                    <figcaption>أول نسخة SpriteKit، TestFlight 0.2.0. لعبها جيد وشكلها بسيط.</figcaption>
+                </figure>
+                <p>الأسابيع الأربعة التالية حوّلتها إلى لعبة:</p>
+                <ul>
+                    <li><strong>الأكل والصوت:</strong> صورة لكل طبقة من الأكل، وبخار فوق الحلل، وأصوات مطبخ مسجلة.</li>
+                    <li><strong>الناس:</strong> جيران لكل منهم طلبه ومزاجه، من حسن الذي لا يريد بصلًا إلى أبونا مينا.</li>
+                    <li><strong>الضغط:</strong> زحمة زبائن، ومواعيد، وزبائن يغادرون غاضبين إن تأخرت.</li>
+                    <li><strong>محل يكبر:</strong> اصرف فلوس اليوم على مفرش ومروحة وكراسي ولمبة.</li>
+                    <li><strong>الشكل:</strong> طابع «الحبر والفواتير» للتذاكر والقوائم وفاتورة آخر اليوم.</li>
+                    <li><strong>للجميع:</strong> طلب يومي مع Game Center، وإصلاحات للنص الكبير، والإنجليزية بجانب العربية.</li>
+                </ul>
+                <p>احتفظت اللعبة النهائية بالكاونتر المسطح من الفكرة الثانية. النموذج ثلاثي الأبعاد محفوظ في المستودع. ما زلت أحب شكله، لكنني أحب اللعب بالنسخة المسطحة أكثر.</p>
+
+                <h2 id="learned">ما تعلمته</h2>
+                <ul>
+                    <li><strong>طابق الصورة أولًا.</strong> المنطق الذي يعمل لا يفيد إن كانت الشاشة الأولى خاطئة.</li>
+                    <li><strong>الاختبارات لا تحكم على الحركة.</strong> الفحص الآلي قال إن الذراع سليمة، وعيني قالت العكس.</li>
+                    <li><strong>انتبه لتكلفة الرسم.</strong> زبون مرسوم واحد يبدو رائعًا، وعشرون زبونًا مرسومًا مشروع آخر.</li>
+                    <li><strong>دع المختبِر يقولها.</strong> جلسة لعب صادقة واحدة أفادت أكثر من عشرة أيام من تحسين الأبعاد الثلاثة.</li>
+                </ul>
+
+                <h2 id="faq">أسئلة</h2>
+                <p><strong>هل «كشري بابا عبده» مجانية؟</strong> نعم. اللعبة مجانية على App Store للآيفون، ولا توجد فيها مشتريات داخل التطبيق.</p>
+                <p><strong>ما لغة اللعبة؟</strong> اللعبة عربية أولًا، وحواراتها باللهجة المصرية. الإصدار 1.0 فيه أيضًا واجهة ونصوص بالإنجليزية.</p>
+                <p><strong>ماذا تفعل في اللعبة؟</strong> تدير محل كشري في حارة من حواري القاهرة. تقرأ تذكرة كل زبون، وتبني الطبق بالطبقات الصحيحة، وتقدمه قبل أن يغضب الزبون. القصة سبعة أيام، وبعدها تستمر في اللعب.</p>
+                <p><strong>لماذا تركت النسخة ثلاثية الأبعاد؟</strong> كانت النسخة ثلاثية الأبعاد قريبة من الصورة المرجعية، لكن حركة الذراع لم تكن طبيعية أبدًا، وكل زبون جديد كان يحتاج رسمًا جديدًا. النسخة المسطحة بـ SpriteKit أوضح، وأسرع في التعديل، وأمتع في اللعب.</p>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="/images/optimized/baba-abdo-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">كشري بابا عبده</h2>
+                    <p>أدر محل كشري في حارة من حواري القاهرة. مجانية على الآيفون، بالعربية والإنجليزية، ومن غير مشتريات داخل التطبيق.</p>
+                </div>
+                <div class="actions">
+                    <a href="https://apps.apple.com/app/id6821673461" target="_blank" rel="noopener" data-cta="baba-abdo-launch-ar" aria-label="نزّل كشري بابا عبده من App Store"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/ar-sa" alt="حمّلها من App Store" width="162" height="54" loading="lazy"></a>
+                    <a class="more" href="/baba-abdo/">صفحة اللعبة &larr;</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>اقرأ أيضًا</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/hona-elqahra/ar/">
+                <p class="meta mono">تطبيق · هنا القاهرة</p>
+                <h3>هنا القاهرة: إذاعات القرآن الكريم بشكل الراديو القديم</h3>
+                <p>قصة قاهرية أخرى: راديو للقرآن الكريم بمؤشر كلاسيكي.</p>
+            </a>
+            <a class="post-item" href="../" hreflang="en" lang="en" dir="ltr">
+                <p class="meta mono">English</p>
+                <h3>Koshary cooking game for iPhone: Baba Abdo is out</h3>
+                <p>The same story in English.</p>
+            </a>
+        </div>
+        </main>
+        <footer class="site-footer">
+            <span>&copy; 2026 عبد الرحمن عيطة</span>
+            <span><a href="/baba-abdo/">كشري بابا عبده</a> · <a href="/baba-abdo/privacy/">الخصوصية</a> · <a href="../" hreflang="en" lang="en">English</a> · <a href="/blog/">المدونة</a></span>
+        </footer>
+    </div>
+</body>
+</html>
