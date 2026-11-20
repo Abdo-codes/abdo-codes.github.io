@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Koshary cooking game for iPhone: Baba Abdo is out](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/) (20 Nov 2026)
 - [Dinosaur coloring app for kids: ColorTalk 1.2 and Arabic](https://yoloabdo.com/blog/colortalk-1-2-release-notes/) (19 Nov 2026)
 - [Kettlebell swing challenge app: SwingCoach 1.2.1](https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/) (19 Nov 2026)
 - [Quran app for Apple TV: Sajdah 1.7.4 previews Premium](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/) (19 Nov 2026)
@@ -33,7 +34,6 @@
 - [Sajdah 1.7.0: prayer times that match your mosque](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/) (30 Oct 2026)
 - [From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/) (29 Oct 2026)
 - [The Prayer Screen: prayer times that look good on your TV all day](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/) (27 Oct 2026)
-- [Sajdah 1.6.0: a new Today screen, the Prayer Screen and the Athan in 13 voices](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/) (22 Oct 2026)
 
 ## Site Links
 

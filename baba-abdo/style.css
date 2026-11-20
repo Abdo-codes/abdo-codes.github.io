@@ -38,6 +38,7 @@ button{font:inherit}
 .cta{color:var(--teal);background:var(--paper);border:2px solid var(--teal);border-radius:4px;box-shadow:3px 4px 0 var(--teal);text-decoration:none;font-weight:850;padding:.55rem 1.45rem;min-height:46px;display:inline-flex;align-items:center;justify-content:center}
 .cta:hover{background:#ffdb83;box-shadow:1px 2px 0 var(--teal);transform:translate(1px,1px)}
 .release{font-size:.95rem;font-weight:750;color:var(--paper)}
+.store-badge{display:inline-flex;min-height:46px;align-items:center}.store-badge img{display:block;height:50px;width:auto}
 .illustration{grid-area:illustration;position:relative;isolation:isolate;display:grid;place-items:center;align-self:stretch}
 .illustration img{width:104%;max-width:none;height:auto;position:relative;z-index:1;transform:rotate(-6deg);filter:drop-shadow(6px 9px 0 #79231899)}
 .rays{position:absolute;z-index:-1;width:180%;height:180%;left:-42%;bottom:-48%;background:repeating-conic-gradient(from 12deg at 47% 54%,#f57539 0deg 4.3deg,transparent 4.3deg 17deg);opacity:.72;mask-image:radial-gradient(ellipse at 47% 54%,#000 12%,#0009 44%,transparent 69%)}
