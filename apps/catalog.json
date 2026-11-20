@@ -182,6 +182,26 @@
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/69/30/b16930b1-eda2-3c6a-0394-2d84a277ee67/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
     },
     {
+      "id": 6821673461,
+      "bundleID": "com.abdoelrhman.KosharyFatma",
+      "name": {
+        "en": "Baba Abdo",
+        "ar": "كشري بابا عبده"
+      },
+      "subtitle": {
+        "en": "Koshary cooking game",
+        "ar": "لعبة طبخ كشري"
+      },
+      "category": {
+        "en": "Games",
+        "ar": "الألعاب"
+      },
+      "platforms": [
+        "iPhone"
+      ],
+      "iconURL": "https://yoloabdo.com/baba-abdo/media/app-icon-512.jpg"
+    },
+    {
       "id": 6769450957,
       "bundleID": "com.abdocodes.nightcap",
       "name": {
