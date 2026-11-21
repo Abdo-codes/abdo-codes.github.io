@@ -118,7 +118,7 @@
 
         <div class="section">
             <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> التحليلات</h2>
-            <p>نستخدم <strong>Firebase Analytics</strong> (من Google) لجمع بيانات استخدام <strong>مجهولة الهوية</strong> تساعدنا في تحسين التطبيق، مثل:</p>
+            <p>نستخدم <strong>Firebase Analytics</strong> (من Google) و<strong>Amplitude</strong> لجمع بيانات استخدام <strong>مجهولة الهوية</strong> تساعدنا في تحسين التطبيق، مثل:</p>
             <ul>
                 <li>عدد مرات فتح التطبيق</li>
                 <li>الشاشات الأكثر زيارة</li>
@@ -127,6 +127,17 @@
             <div class="highlight">
                 <p>هذه البيانات لا تتضمن معلومات شخصية ولا يمكن ربطها بهويتك. لا نجمع الأسماء أو التواريخ أو أي بيانات صحية عبر التحليلات.</p>
             </div>
+            <p>يسألك التطبيق عن موافقتك على التحليلات. إذا رفضت، يُوقف Amplitude، ويعمل Firebase Analytics في وضع الموافقة من Google دون تخزين بيانات التحليلات. يمكنك تغيير اختيارك من الإعدادات.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> تقارير الأعطال</h2>
+            <p>نستخدم <strong>Firebase Crashlytics</strong> (من Google) دائمًا لإرسال تقرير عند تعطل التطبيق. يتضمن التقرير تفاصيل العطل التقنية وطراز الجهاز وإصدار iOS وإصدار التطبيق، ولا يتضمن بيانات طفلك.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> المشتريات</h2>
+            <p>تطعيمي مجاني للتحميل. <strong>تطعيمي برو</strong> (اشتراك أو شراء لمرة واحدة مدى الحياة) يضيف أكثر من طفل. تتم المشتريات عبر Apple، ونستخدم <strong>RevenueCat</strong> لمعرفة حالة اشتراكك باستخدام معرّف مجهول للتطبيق وسجل المشتريات من Apple. لا نرى بيانات الدفع.</p>
         </div>
 
         <div class="section">
@@ -136,7 +147,7 @@
 
         <div class="section">
             <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg></span> مشاركة البيانات مع أطراف ثالثة</h2>
-            <p><strong>لا نشارك أو نبيع بياناتك</strong> مع أي طرف ثالث. لا توجد إعلانات في التطبيق.</p>
+            <p><strong>لا نبيع بياناتك</strong>، ولا توجد إعلانات في التطبيق. نستخدم فقط الخدمات المذكورة أعلاه: Google (Firebase) وAmplitude وRevenueCat، وكل منها يستقبل ما وُصف في قسمه فقط. سجلات تطعيم طفلك تبقى على جهازك.</p>
         </div>
 
         <div class="section">
@@ -234,7 +245,7 @@
 
         <div class="section">
             <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> Analytics</h2>
-            <p>We use <strong>Firebase Analytics</strong> (by Google) to collect <strong>anonymous</strong> usage data that helps us improve the app, such as:</p>
+            <p>We use <strong>Firebase Analytics</strong> (by Google) and <strong>Amplitude</strong> to collect <strong>anonymous</strong> usage data that helps us improve the app, such as:</p>
             <ul>
                 <li>Number of app opens</li>
                 <li>Most visited screens</li>
@@ -243,6 +254,17 @@
             <div class="highlight">
                 <p>This data does not include personal information and cannot be linked to your identity. We do not collect names, dates, or any health data through analytics.</p>
             </div>
+            <p>The app asks for your consent to analytics. If you decline, Amplitude is turned off, and Firebase Analytics runs in Google's consent mode with analytics storage denied. You can change your choice in Settings.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> Crash Reports</h2>
+            <p>We always use <strong>Firebase Crashlytics</strong> (by Google) to send a report when the app crashes. A report holds the technical crash details, the device model, the iOS version and the app version. It does not hold your child's data.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></span> Purchases</h2>
+            <p>Tateemi is free to download. <strong>Tateemi Pro</strong> (a subscription or a one-time lifetime purchase) lets you add more children. Apple handles every purchase. We use <strong>RevenueCat</strong> to check your Pro status with an anonymous app user ID and your Apple purchase records. We never see your payment details.</p>
         </div>
 
         <div class="section">
@@ -252,7 +274,7 @@
 
         <div class="section">
             <h2><span class="icon"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg></span> Third-Party Data Sharing</h2>
-            <p><strong>We do not share or sell your data</strong> with any third party. There are no ads in the app.</p>
+            <p><strong>We do not sell your data</strong>, and there are no ads in the app. We use only the services named above: Google (Firebase), Amplitude and RevenueCat, and each one receives only what its section describes. Your child's vaccination records stay on your device.</p>
         </div>
 
         <div class="section">
