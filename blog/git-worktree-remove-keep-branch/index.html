@@ -95,7 +95,7 @@
         { "@type": "Question", "name": "Does git worktree remove delete the branch?", "acceptedAnswer": { "@type": "Answer", "text": "No. It deletes the worktree folder and its administrative files in the repository. The branch and its commits stay. Delete the branch later with git branch -d or git branch -D." } },
         { "@type": "Question", "name": "How do I delete the branch too?", "acceptedAnswer": { "@type": "Answer", "text": "After you remove the worktree, run git branch -d <name>. It refuses if the branch is not merged. Use git branch -D <name> only when you are sure you do not need the commits." } },
         { "@type": "Question", "name": "What is the difference between git worktree remove and prune?", "acceptedAnswer": { "@type": "Answer", "text": "remove deletes a worktree folder and its administrative data. prune only deletes the administrative data of worktrees whose folder is already missing. Use git worktree prune -n -v to preview." } },
-        { "@type": "Question", "name": "How do I remove all git worktrees?", "acceptedAnswer": { "@type": "Answer", "text": "List them with git worktree list --porcelain, skip the first record, which is the main worktree, and run git worktree remove on each path without --force. Git refuses dirty and locked worktrees." } },
+        { "@type": "Question", "name": "How do I remove all git worktrees?", "acceptedAnswer": { "@type": "Answer", "text": "List them with git worktree list --porcelain, skip the first record, which is the main worktree, check each one with git status --porcelain --ignored, and run git worktree remove only on worktrees with no output. A normal remove also deletes ignored files such as .env, so the check matters. Git itself refuses dirty and locked worktrees." } },
         { "@type": "Question", "name": "How do I remove a locked git worktree?", "acceptedAnswer": { "@type": "Answer", "text": "Run git worktree unlock <path> and then git worktree remove <path>. Or run git worktree remove --force --force <path>. Check that no tool uses the worktree first." } }
       ]
     },
@@ -145,7 +145,7 @@
 
             <div class="prose">
                 <p><strong>No. <code>git worktree remove</code> does not delete the branch.</strong> It deletes the worktree folder and the administrative files that Git keeps for it. The branch and its commits stay in the repository. The <a href="https://git-scm.com/docs/git-worktree" target="_blank" rel="noopener">official git-worktree docs</a> do not say that remove deletes a branch, and my test below confirms it.</p>
-                <p>Only clean worktrees can be removed. The main worktree cannot be removed. This guide covers the errors you will see, prune, <code>--force</code>, locks, and a loop to remove many worktrees. It ends with a way to review worktrees before you remove them: <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a>, my open source Mac app.</p>
+                <p><strong>Warning:</strong> a normal <code>git worktree remove</code> also deletes ignored files, such as <code>.env</code> or local notes. Git counts a worktree as clean when it has no untracked files and no changes to tracked files (<a href="https://git-scm.com/docs/git-worktree#Documentation/git-worktree.txt-remove" rel="noopener">git docs</a>). Ignored files do not count, so Git does not stop you. Run <code>git -C &lt;path&gt; status --short --ignored</code> before every removal. Only clean worktrees can be removed. The main worktree cannot be removed. This guide covers the errors you will see, prune, <code>--force</code>, locks, and a loop to remove many worktrees. It ends with a way to review worktrees before you remove them: <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a>, my open source Mac app.</p>
                 <nav class="toc" aria-label="In this guide">
                     <ul>
                         <li><a href="#demo">Does git worktree remove delete the branch?</a></li>
@@ -192,7 +192,7 @@ $ git worktree prune</code></pre>
 
                 <h2 id="force">git worktree remove --force: when it is dangerous</h2>
                 <p>Without <code>--force</code>, Git refuses to remove a worktree that has modified tracked files or untracked files. With <code>--force</code>, Git deletes them. You cannot get them back from Git, because they were never committed. Git also removes worktrees with submodules only with <code>--force</code>, per the docs.</p>
-                <p>Files that <code>.gitignore</code> hides, such as <code>.env</code> or local notes, are not saved in a commit either. Treat them as lost when you use <code>--force</code>. Before you force a removal, run <code>git -C &lt;path&gt; status --short --ignored</code> and read the list.</p>
+                <p>Files that <code>.gitignore</code> hides, such as <code>.env</code> or local notes, are not in any commit. Git deletes them even <strong>without</strong> <code>--force</code>, because they do not make a worktree dirty. I tested it on Git 2.54: a worktree with only an ignored <code>.env</code> showed an empty status, and <code>git worktree remove</code> deleted it with the file. Before any removal, run <code>git -C &lt;path&gt; status --short --ignored</code> and copy what you need.</p>
                 <figure><img src="checklist.webp" width="1200" height="700" style="aspect-ratio: 1200 / 700" alt="Checklist: before you remove a git worktree, check the main worktree, a clean status, commits on a branch, locks and running tools, and ignored files." loading="lazy"><figcaption>Five checks before you remove a worktree.</figcaption></figure>
 
                 <h2 id="locked">How to remove a locked git worktree</h2>
@@ -205,15 +205,19 @@ $ git worktree prune</code></pre>
                 </ol>
 
                 <h2 id="all">How to remove all git worktrees</h2>
-                <p>The first record in <code>git worktree list --porcelain</code> is the main worktree. This loop skips it. It does not use <code>--force</code>, so Git refuses dirty and locked worktrees and the loop goes on to the next one:</p>
+                <p>The first record in <code>git worktree list --porcelain</code> is the main worktree. This loop skips it. It also skips every worktree that has changed, untracked <strong>or ignored</strong> files, because a normal remove deletes ignored files too. It does not use <code>--force</code>:</p>
 <pre><code>git worktree list --porcelain | awk '/^worktree /{print substr($0,10)}' | tail -n +2 |
-while IFS= read -r wt; do git worktree remove "$wt" &amp;&amp; echo "removed $wt"; done</code></pre>
-                <p>I tested it with four worktrees. One had an untracked file. Result:</p>
-<pre><code>removed /tmp/demo/wt-four
-removed /tmp/demo/wt-one
-fatal: '/tmp/demo/wt-three' contains modified or untracked files, use --force to delete it
-removed /tmp/demo/wt-two</code></pre>
-                <p>All four branches were still there. For a dry run, replace the <code>git worktree remove</code> command with <code>echo</code> first.</p>
+while IFS= read -r wt; do
+  if [ -n "$(git -C "$wt" status --porcelain --ignored)" ]; then
+    echo "skipped $wt: it has changed, untracked or ignored files"; continue
+  fi
+  git worktree remove "$wt" &amp;&amp; echo "removed $wt"
+done</code></pre>
+                <p>I tested it with three worktrees. One had an untracked file, and one had only an ignored <code>.env</code>. Result:</p>
+<pre><code>removed /tmp/demo/wt-one
+skipped /tmp/demo/wt-three: it has changed, untracked or ignored files
+skipped /tmp/demo/wt-two: it has changed, untracked or ignored files</code></pre>
+                <p>All three branches were still there. For a dry run, replace the <code>git worktree remove</code> command with <code>echo</code> first.</p>
 
                 <h2 id="branch">Delete the branch after you remove the worktree</h2>
                 <p>Use <code>git branch -d</code> first. It refuses to delete a branch that is not merged. Use <code>-D</code> only if you accept the loss of those commits:</p>
@@ -251,7 +255,7 @@ while IFS= read -r wt; do du -sh "$wt"; done</code></pre>
                 <p><strong>Does git worktree remove delete the branch?</strong> No. It deletes the folder and the admin files. The branch and the commits stay.</p>
                 <p><strong>How do I delete the branch too?</strong> Remove the worktree, then run <code>git branch -d &lt;name&gt;</code>. Use <code>-D</code> only for work you do not need.</p>
                 <p><strong>What is the difference between remove and prune?</strong> <code>remove</code> deletes a worktree. <code>prune</code> only cleans admin data of worktrees whose folder is already gone.</p>
-                <p><strong>How do I remove all worktrees?</strong> Use the loop above. It skips the main worktree and does not force anything.</p>
+                <p><strong>How do I remove all worktrees?</strong> Use the loop above. It skips the main worktree and every worktree with changed, untracked or ignored files, and it does not force anything.</p>
                 <p><strong>How do I remove a locked worktree?</strong> Unlock it, then remove it. Or use <code>--force</code> twice, if you know that no tool uses it.</p>
             </div>
 
