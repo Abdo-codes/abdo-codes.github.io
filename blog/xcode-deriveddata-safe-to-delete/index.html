@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Xcode DerivedData Safe to Delete? Every Folder</title>
+    <meta name="keywords" content="is xcode deriveddata safe to delete, xcode deriveddata location, xcode clean deriveddata command line, delete old xcode simulators, xcode simulator runtime delete, xcode delete unavailable simulators, clear xcode cache, xcode clear spm cache, xcode device support delete, DiskSage">
+    <meta name="description" content="Yes, DerivedData is safe to delete. See every Xcode folder in ~/Library/Developer: what it holds, the risk, the size check and the exact command.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Is Xcode DerivedData Safe to Delete? Every Folder">
+    <meta property="og:description" content="Yes, DerivedData is safe to delete. See every Xcode folder in ~/Library/Developer: what it holds, the risk, the size check and the exact command.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="A traffic-light chart of Xcode folders: DerivedData green, Archives amber, simulator runtimes red.">
+    <meta property="article:published_time" content="2026-11-21T13:00:00Z">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Developer tools">
+    <meta property="article:tag" content="Xcode">
+    <meta property="article:tag" content="macOS">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Is Xcode DerivedData Safe to Delete? Every Folder">
+    <meta name="twitter:description" content="Yes, DerivedData is safe to delete. See every Xcode folder in ~/Library/Developer: what it holds, the risk, the size check and the exact command.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/og-image.jpg">
+    <meta name="twitter:image:alt" content="A traffic-light chart of Xcode folders: DerivedData green, Archives amber, simulator runtimes red.">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
+    <link rel="stylesheet" href="/blog/assets/blog.css?v=20261102">
+    <script src="/blog/assets/theme.js"></script>
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+    <style>
+        .prose code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88em; background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+        .prose pre { background: #0e1a16; color: #d8efe2; border-radius: 14px; padding: 16px 18px; overflow-x: auto; font-size: 14.5px; line-height: 1.55; }
+        .prose pre code { background: none; padding: 0; color: inherit; font-size: inherit; overflow-wrap: normal; }
+        .compare { min-width: 860px; }
+        .compare td, .compare th { min-width: 0 !important; }
+        .compare tbody th, .compare thead th:first-child { min-width: 110px !important; }
+        .compare td code { font-size: 12px; }
+        .app-cta .actions a.gh { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--sajdah-emerald); color: #06201a; font-weight: 700; text-decoration: none; }
+        .app-cta .actions a.gh:hover { filter: brightness(1.08); }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/#post",
+      "headline": "Is Xcode DerivedData Safe to Delete? Every Folder",
+      "description": "Yes, DerivedData is safe to delete. See every Xcode folder in ~/Library/Developer: what it holds, the risk, the size check and the exact command.",
+      "url": "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/",
+      "mainEntityOfPage": "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/",
+      "image": [
+        "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/og-image.jpg",
+        "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/folder-map.webp",
+        "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/traffic-light.webp"
+      ],
+      "datePublished": "2026-11-21T13:00:00Z",
+      "dateModified": "2026-11-21T13:00:00Z",
+      "inLanguage": "en",
+      "articleSection": "Developer tools",
+      "keywords": ["is xcode deriveddata safe to delete", "xcode deriveddata location", "delete xcode simulators", "xcode simulator runtime delete", "clear xcode cache", "xcode clear spm cache", "xcode device support delete"],
+      "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+      "publisher": { "@id": "https://yoloabdo.com/#person" },
+      "about": {
+        "@type": "SoftwareSourceCode",
+        "name": "DiskSage",
+        "description": "A native macOS menu-bar app that finds developer build artifacts and caches, explains the risk of each item and asks before it deletes.",
+        "codeRepository": "https://github.com/Abdo-codes/DiskSage",
+        "license": "https://opensource.org/licenses/MIT",
+        "programmingLanguage": "Swift",
+        "runtimePlatform": "macOS 14 or later"
+      },
+      "isPartOf": { "@id": "https://yoloabdo.com/blog/#blog" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is it safe to delete Xcode DerivedData?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. DerivedData holds build products, indexes and caches. Xcode makes them again when you build. The cost is a slower next build. Quit Xcode before you delete it." } },
+        { "@type": "Question", "name": "Will deleting DerivedData delete my project?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your source files, project files and signing certificates are not in DerivedData. Swift package clones inside DerivedData are downloaded again at the next build." } },
+        { "@type": "Question", "name": "Where is Xcode DerivedData located?", "acceptedAnswer": { "@type": "Answer", "text": "The default place is ~/Library/Developer/Xcode/DerivedData. Each project has its own folder there. You can change the location in Xcode Settings, in the Locations tab." } },
+        { "@type": "Question", "name": "Can I delete iOS DeviceSupport?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for OS versions that you do not use. Xcode copies the debug symbols again when a device with that version connects. Keep the newest version for the devices that you use now." } },
+        { "@type": "Question", "name": "Why do simulator runtimes come back after I delete them?", "acceptedAnswer": { "@type": "Answer", "text": "Apple Developer Forums reports show that some runtimes stay in a system folder that SIP protects, and they mount again after a restart. Do not delete these folders by hand. Use Xcode Settings, Components, or xcrun simctl runtime delete, and update Xcode." } },
+        { "@type": "Question", "name": "How do I clear the Swift Package Manager cache?", "acceptedAnswer": { "@type": "Answer", "text": "Run swift package purge-cache. For one project, delete its folder in DerivedData, which holds the package clones in SourcePackages." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Is Xcode DerivedData safe to delete?", "item": "https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/" }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Xcode DerivedData</nav>
+            <p class="eyebrow mono">Developer tools · macOS</p>
+            <h1 class="post-title">Is Xcode DerivedData safe to delete? Every folder in ~/Library/Developer</h1>
+            <p class="dek">Yes, for DerivedData. Other Xcode folders are not as safe. Here is each folder, what you lose, and the exact command.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-11-21">21 November 2026</time></span>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="folder-map.webp" width="1400" height="540" style="aspect-ratio: 1400 / 540" alt="A folder map of ~/Library/Developer with a colored dot and a size for DerivedData, Archives, iOS DeviceSupport, simulator devices, SwiftPM cache, CocoaPods cache and simulator runtimes." fetchpriority="high">
+                <figcaption>Where the space goes on one Mac. Green is safe. Amber needs a check. Red is never a job for rm.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p><strong>Yes, Xcode DerivedData is safe to delete.</strong> It holds build products, indexes and caches. Xcode makes them again when you build. You lose only time, because the next build is slower. Quit Xcode first.</p>
+                <p>Developers say the same in the accepted answer on the <a href="https://developer.apple.com/forums/thread/812408" target="_blank" rel="noopener">Apple Developer Forums</a>. Some other folders are different. Archives hold crash symbols. Simulator runtimes can come back after you delete them. This guide covers each one. It also has one tool that does the review for you: <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a>, my open source Mac app.</p>
+                <nav class="toc" aria-label="In this guide">
+                    <ul>
+                        <li><a href="#measure">Measure first</a></li>
+                        <li><a href="#table">Every folder: safe or not</a></li>
+                        <li><a href="#deriveddata">DerivedData location and how to clear it</a></li>
+                        <li><a href="#simulators">Delete old Xcode simulators and runtimes</a></li>
+                        <li><a href="#archives">Archives and dSYMs</a></li>
+                        <li><a href="#devicesupport">Xcode DeviceSupport</a></li>
+                        <li><a href="#spm">Clear the SPM, CocoaPods and Carthage caches</a></li>
+                        <li><a href="#disksage">Do it with one review: DiskSage</a></li>
+                        <li><a href="#compare">Terminal, Xcode, DevCleaner or DiskSage</a></li>
+                        <li><a href="#faq">Questions</a></li>
+                    </ul>
+                </nav>
+
+                <h2 id="measure">How to clear the Xcode cache: measure first</h2>
+                <p>Do not delete anything before you know where the space is. This command prints sizes and deletes nothing:</p>
+                <figure><img src="terminal-measure.webp" width="1300" height="640" style="aspect-ratio: 1300 / 640" alt="Terminal output of du -sh for DerivedData, Archives, iOS DeviceSupport, CoreSimulator Devices, the SwiftPM cache and the CocoaPods cache, then xcrun simctl runtime list showing 13 disk images and 79.1G." loading="lazy"><figcaption>Real output from my Mac with Xcode 27.2 on 21 November 2026. The runtimes are the largest item.</figcaption></figure>
+                <p>Simulator runtimes are disk images. <code>du</code> does not show them well, so I use <code>xcrun simctl runtime list</code> and read the last line.</p>
+
+                <h2 id="table">Every folder in ~/Library/Developer: is it safe to delete?</h2>
+                <figure><img src="traffic-light.webp" width="1200" height="765" style="aspect-ratio: 1200 / 765" alt="Traffic-light chart: is it safe to delete? DerivedData, caches and old DeviceSupport are green. Simulator devices and Archives are amber. Simulator runtimes are red." loading="lazy"><figcaption>One verdict for each folder.</figcaption></figure>
+                <p class="table-note">Swipe or scroll the table sideways to see every column. Check a size with <code>du -sh &lt;path&gt;</code> before you delete.</p>
+                <div class="table-wrap" role="region" aria-labelledby="t1" tabindex="0">
+                    <table class="compare">
+                        <caption id="t1">Xcode folders and caches: what each one is, the risk, and the command. Quit Xcode first.</caption>
+                        <thead><tr><th scope="col">Folder</th><th scope="col">What it is</th><th scope="col">Safe?</th><th scope="col">What you lose</th><th scope="col">Command</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">DerivedData</th><td>Build products, indexes, module caches and package clones</td><td>Yes</td><td>Build time. Xcode makes it again.</td><td><code>rm -rf ~/Library/Developer/Xcode/DerivedData/*</code></td></tr>
+                            <tr><th scope="row">UserData/Previews</th><td>Data for SwiftUI Previews, with its own simulator set</td><td>Yes</td><td>Previews start slower</td><td><code>xcrun simctl --set previews delete all</code></td></tr>
+                            <tr><th scope="row">iOS DeviceSupport</th><td>Debug symbols that Xcode copies from a connected device</td><td>Yes, for old versions</td><td>Xcode copies the symbols again at the next connect</td><td><code>rm -rf "$HOME/Library/Developer/Xcode/iOS DeviceSupport/&lt;folder&gt;"</code></td></tr>
+                            <tr><th scope="row">Archives</th><td>One <code>.xcarchive</code> for each archive, with its dSYMs</td><td>Think first</td><td>The dSYMs of that build</td><td>Xcode Organizer, or delete one <code>.xcarchive</code></td></tr>
+                            <tr><th scope="row">CoreSimulator/Devices</th><td>One folder for each simulator: its apps and data</td><td>Use simctl</td><td>Installed apps and their data</td><td><code>xcrun simctl delete unavailable</code></td></tr>
+                            <tr><th scope="row">Simulator runtimes</th><td>OS disk images in <code>/Library/Developer/CoreSimulator</code></td><td>Not by hand</td><td>A download of several GB, if you need it again</td><td><code>xcrun simctl runtime delete &lt;id&gt;</code></td></tr>
+                            <tr><th scope="row">SwiftPM cache</th><td><code>~/Library/Caches/org.swift.swiftpm</code></td><td>Yes</td><td>Packages download again</td><td><code>swift package purge-cache</code></td></tr>
+                            <tr><th scope="row">CocoaPods cache</th><td><code>~/Library/Caches/CocoaPods</code></td><td>Yes</td><td>Pods download again</td><td><code>pod cache clean --all</code></td></tr>
+                            <tr><th scope="row">Carthage cache</th><td><code>~/Library/Caches/org.carthage.CarthageKit</code></td><td>Yes</td><td>Carthage fetches it again</td><td><code>rm -rf ~/Library/Caches/org.carthage.CarthageKit</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Sources: the <a href="https://developer.apple.com/forums/thread/812408" target="_blank" rel="noopener">Apple Developer Forums thread on ~/Library/Developer</a> (accepted answer and an Apple DTS engineer); the <a href="https://guides.cocoapods.org/terminal/commands.html" target="_blank" rel="noopener">CocoaPods commands guide</a>; <code>xcrun simctl help</code> and <code>swift package purge-cache --help</code> on my Mac.</p>
+
+                <h2 id="deriveddata">Xcode DerivedData location and how to clear it</h2>
+                <p>The default DerivedData location is <code>~/Library/Developer/Xcode/DerivedData</code>. Each project has its own folder, named with the project name and a hash. To open the folder, run <code>open ~/Library/Developer/Xcode/DerivedData</code>. If you changed the location, look in Xcode Settings, Locations.</p>
+                <ol>
+                    <li>Quit Xcode.</li>
+                    <li>To clear one project, delete its folder: <code>rm -rf ~/Library/Developer/Xcode/DerivedData/MyApp-*</code>.</li>
+                    <li>To clear all projects, run <code>rm -rf ~/Library/Developer/Xcode/DerivedData/*</code>.</li>
+                    <li>Open the project and build. The first build is slow. It makes the files again.</li>
+                </ol>
+                <p>A command line option with a similar name is <code>xcodebuild clean</code>. It works on the build of the scheme that you name. It does not remove the whole folder. To clear the whole folder, delete it.</p>
+                <p>Your source files, project files and signing certificates are not in DerivedData. An <a href="https://developer.apple.com/forums/thread/81265" target="_blank" rel="noopener">older Apple forum thread</a> says to close the project in Xcode before you delete its folder. I agree.</p>
+
+                <h2 id="simulators">Delete old Xcode simulators and runtimes</h2>
+                <p>Xcode has two things here. They are different.</p>
+                <ul>
+                    <li><strong>Simulator devices</strong> are small folders in <code>CoreSimulator/Devices</code>. Each one holds the apps and data of one simulator.</li>
+                    <li><strong>Runtimes</strong> are the large OS images. On my Mac, 13 images use 79.1 GB.</li>
+                </ul>
+                <p>Apple's DTS engineer says not to remove the CoreSimulator folder by hand. Use Xcode or <code>simctl</code>. To delete simulators that the current Xcode does not support, run <code>xcrun simctl delete unavailable</code>. Its help text says it deletes devices "not supported by the current Xcode SDK". I read this from <code>xcrun simctl help delete</code>.</p>
+                <figure><img src="terminal-simctl.webp" width="1300" height="700" style="aspect-ratio: 1300 / 700" alt="Terminal commands to delete old Xcode simulators: simctl delete unavailable, simctl runtime list, simctl runtime delete with the outdated and dry-run flags, and delete with notUsedSinceDays." loading="lazy"><figcaption>The <code>--dry-run</code> flag prints what <code>runtime delete</code> would remove. It deletes nothing.</figcaption></figure>
+                <p>To delete a runtime in the app, open <strong>Xcode, Settings, Components</strong>. Select the runtime and click the minus button. Apple's DTS engineer describes these steps in <a href="https://developer.apple.com/forums/thread/768055" target="_blank" rel="noopener">this thread</a>. Xcode shows how much space you get back.</p>
+                <p>The command line version is <code>xcrun simctl runtime delete</code>. These options come from <code>xcrun simctl help runtime</code>: an identifier, <code>--notUsedSinceDays &lt;days&gt;</code>, <code>--unusable</code>, <code>--outdated</code>, <code>--dry-run</code> and <code>--keep-asset</code>.</p>
+                <h3 id="runtimes-return">Why do runtimes come back after I delete them?</h3>
+                <p>Some people report this. Runtime files can sit in a folder that macOS protects with SIP. <a href="https://developer.apple.com/forums/thread/837906" target="_blank" rel="noopener">One thread</a> says deleted runtimes mount again after a restart. <a href="https://developer.apple.com/forums/thread/812992" target="_blank" rel="noopener">Another thread</a> says Components also left files on disk. An Apple DTS engineer says that disabling SIP to remove them is not supported. One user says Xcode 27.2 beta 2 fixed it.</p>
+                <p>My advice: never use <code>rm</code> on these folders. Update Xcode, try Components, then try <code>xcrun simctl runtime delete</code>. If a runtime stays, file a report in Feedback Assistant.</p>
+
+                <h2 id="archives">Xcode Archives: keep the dSYMs</h2>
+                <p>Each archive in <code>~/Library/Developer/Xcode/Archives</code> includes the dSYM files of that build. A crash log needs the matching dSYM to show function names. If you delete the archive, you lose that dSYM. Crash logs from that build then show raw addresses.</p>
+                <p>If you uploaded the dSYMs to App Store Connect or to a crash service, you can delete the archive. If not, keep the archives of builds that users still run. DiskSage does not offer Archives for removal.</p>
+
+                <h2 id="devicesupport">Xcode device support: delete old versions</h2>
+                <p><code>iOS DeviceSupport</code> holds symbols that Xcode copies when you connect a device. There is one folder for each OS version. Delete the folders of versions that you no longer use. Keep the newest one for each device. Xcode copies the symbols again if a device with an old version connects. This is the advice of the <a href="https://developer.apple.com/forums/thread/812408" target="_blank" rel="noopener">accepted forum answer</a>.</p>
+
+                <h2 id="spm">Clear the SPM, CocoaPods and Carthage caches</h2>
+                <ol>
+                    <li>SwiftPM: run <code>swift package purge-cache</code>. The help text says: "Purge the global repository cache."</li>
+                    <li>Package clones of one project are in <code>DerivedData/&lt;project&gt;/SourcePackages</code>. They go when you delete that DerivedData folder.</li>
+                    <li>In a package folder, <code>swift package reset</code> resets the cache and build directory of that package.</li>
+                    <li>CocoaPods: run <code>pod cache list</code> to see it. Then run <code>pod cache clean --all</code>. The <code>--all</code> flag skips the question and is required when you give no pod name.</li>
+                    <li>Carthage: the <a href="https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md" target="_blank" rel="noopener">Carthage docs</a> say its cache holds bare Git repositories and prebuilt binaries. Carthage fills it again at the next checkout.</li>
+                </ol>
+
+                <h2 id="disksage">Do it with one review: DiskSage</h2>
+                <p>The table above has nine rows and many commands. I built <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a> to do the same job in one review. It is a menu-bar app for macOS 14 or later. It is free and open source under the MIT license.</p>
+                <figure><img src="disksage-banner.webp" width="1280" height="640" style="aspect-ratio: 1280 / 640" alt="The DiskSage banner: a green disk icon with a leaf, and the text Developer disk cleanup for macOS." loading="lazy"><figcaption>DiskSage, a developer disk cleanup app for macOS. Banner from the project repository.</figcaption></figure>
+                <p>For Xcode, DiskSage scans these places. Each item has a risk label and a reason:</p>
+                <ul>
+                    <li><strong>DerivedData:</strong> compiled files, and whole project folders that did not change for some days. Low risk.</li>
+                    <li><strong>Older DeviceSupport versions:</strong> only when a newer version for the same device stays. Low risk.</li>
+                    <li><strong>Simulator devices:</strong> one at a time, only if shut down. Risk label: Review. The reason says that the apps and data go.</li>
+                    <li><strong>SwiftPM binary downloads</strong> and SwiftPM scratch folders. Low risk.</li>
+                    <li>Other caches that developers fill: npm, Go, Bazel, Homebrew, uv and some Electron apps.</li>
+                </ul>
+                <p>DiskSage does <strong>not</strong> offer Archives or simulator runtimes. Use the tools above for those. It skips files that changed in the last hour and files that a process has open. It never follows symlinks. A scan shows up to 100 of the largest candidates.</p>
+                <figure><img src="disksage-review.webp" width="1400" height="620" style="aspect-ratio: 1400 / 620" alt="Illustration of the DiskSage Review window with Xcode DerivedData and DeviceSupport rows marked Low risk, a simulator marked Review, and a Delete Selected button." loading="lazy"><figcaption>Illustration with sample values, drawn from the README and the source. It is not a screenshot.</figcaption></figure>
+                <p>You choose the items. DiskSage asks you to confirm each manual deletion. It keeps a history and a local log at <code>~/Library/Logs/DiskSage/cleanup.jsonl</code>. In Settings you can add keep rules for paths and for simulator names.</p>
+                <p><strong>Read this before you install.</strong> Deletion is permanent. Items do not go to the Trash. Low-disk automatic cleanup is on by default, at 15 GiB of free space. It removes low-risk targets without a prompt. To start in review-only mode, run this before the first launch:</p>
+                <pre><code>defaults write com.abdoeaita.DiskSage automaticCleanupEnabled -bool false</code></pre>
+                <p>There is no notarized installer. You build it from source with Xcode 27, which is the tested toolchain:</p>
+                <pre><code>git clone https://github.com/Abdo-codes/DiskSage.git
+cd DiskSage
+./Scripts/build-app.sh release
+open .build/release/DiskSage.app</code></pre>
+                <p>Local builds are ad-hoc signed. Click the menu-bar drive icon, scan, and choose <strong>Review items</strong>. DiskSage can also review <a href="/blog/git-worktree-remove-keep-branch/">Git worktrees</a> and has an MCP server for Claude Code and Codex.</p>
+
+                <h2 id="compare">Terminal, Xcode, DevCleaner or DiskSage</h2>
+                <p>Each way fits a different person. The table shows what each one does well.</p>
+                <div class="table-wrap" role="region" aria-labelledby="t2" tabindex="0">
+                    <table class="compare">
+                        <caption id="t2">Four ways to clean Xcode storage. DevCleaner facts come from its GitHub README.</caption>
+                        <thead><tr><th scope="col">Way</th><th scope="col">Best at</th><th scope="col">Weak at</th><th scope="col">Cost and install</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Terminal by hand</th><td>Full control. Reaches runtimes and every cache with <code>simctl</code> and the tool commands.</td><td>No risk label. One wrong path deletes the wrong thing. No history.</td><td>Free. Built in.</td></tr>
+                            <tr><th scope="row">Xcode settings</th><td>The safe way to remove runtimes (Components). Apple supports it.</td><td>Only runtimes and simulators. You still clear DerivedData and caches yourself. Reports of leftovers.</td><td>Free. Built in.</td></tr>
+                            <tr><th scope="row"><a href="https://github.com/vashpan/xcode-dev-cleaner" target="_blank" rel="noopener">DevCleaner for Xcode</a></th><td>Archives, DeviceSupport, DerivedData, documentation cache and old logs, in one window.</td><td>Its README lists no simulators or runtimes. It uses internal Xcode folder structures. It was tested on Xcode 15.</td><td>Free, GPL-3.0. On the Mac App Store.</td></tr>
+                            <tr><th scope="row"><a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a></th><td>One review with a risk label and a reason for each item, a confirmation, history and keep rules. Also npm, Go, Homebrew and more.</td><td>No Archives or runtimes. Permanent deletion. Automatic cleanup is on by default. Build from source.</td><td>Free, MIT. Not notarized.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The README of DevCleaner says to make a backup before you use it. MacPaw's guide says <a href="https://macpaw.com/how-to/clear-xcode-cache" target="_blank" rel="noopener">CleanMyMac</a> also clears Xcode junk and the iOS Simulator, with a free trial. I did not test either one. Use DevCleaner if you want Archives in the same window. Use DiskSage if you want one review across Xcode, package managers and agent folders.</p>
+
+                <h2 id="faq">Questions</h2>
+                <p><strong>Is it safe to delete Xcode DerivedData?</strong> Yes. Xcode makes it again when you build. The next build is slower. Quit Xcode first.</p>
+                <p><strong>Will deleting DerivedData delete my project?</strong> No. Source files, project files and signing certificates are not in DerivedData. Package clones download again.</p>
+                <p><strong>Where is DerivedData located?</strong> <code>~/Library/Developer/Xcode/DerivedData</code> by default. You can change it in Xcode Settings, Locations.</p>
+                <p><strong>Can I delete iOS DeviceSupport?</strong> Yes, for old OS versions. Xcode copies the symbols again when a device with that version connects.</p>
+                <p><strong>Why do simulator runtimes come back after I delete them?</strong> Forum reports say some runtimes stay in a SIP-protected folder and mount again at restart. Update Xcode and use Components or <code>simctl runtime delete</code>. Do not use <code>rm</code>.</p>
+                <p><strong>How do I clear the Swift Package Manager cache?</strong> Run <code>swift package purge-cache</code>. For one project, delete its DerivedData folder.</p>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="disksage-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">DiskSage: developer disk cleanup for macOS</h2>
+                    <p>Finds build artifacts and caches, explains the risk of each item and asks before it deletes. Open source, MIT. macOS 14 or later.</p>
+                </div>
+                <div class="actions">
+                    <a class="gh" href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener" data-cta="disksage-xcode">View DiskSage on GitHub</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>Keep reading</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/blog/git-worktree-remove-keep-branch/">
+                <p class="meta mono">Guide · 21 Nov 2026</p>
+                <h3>Git worktree remove: delete the folder, keep the branch</h3>
+                <p>What remove, prune and --force do, with real output. Plus how to audit worktrees that AI agents leave.</p>
+            </a>
+        </div>
+        </main>
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="https://github.com/Abdo-codes/DiskSage">DiskSage on GitHub</a> · <a href="/apps/">Apps</a> · <a href="/blog/">Blog</a></span>
+        </footer>
+    </div>
+</body>
+</html>
