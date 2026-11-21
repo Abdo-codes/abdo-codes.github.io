@@ -220,7 +220,8 @@
 ## Pricing
 
 - Free
-- No ads, no subscription, no in-app purchases
+- No ads and no subscription
+- Wi-Fi QR Pro: an optional one-time unlock for more templates and QR styles
 
 ## Platform
 
@@ -236,7 +237,7 @@
 
 # تطعيمي (Tateemi) - Vaccination Tracker
 
-> Tateemi is a free Arabic vaccination tracker for iPhone with country-based child immunization schedules. Parents choose the supported country schedule, add a child with their birth date, and the app calculates upcoming doses, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
+> Tateemi is a free-to-download Arabic vaccination tracker for iPhone with country-based child immunization schedules. Parents choose the supported country schedule, add a child with their birth date, and the app calculates upcoming doses, tracks vaccination progress, sends smart reminders, provides medical information for each vaccine, supports multiple children, and stores all data locally on-device only.
 
 ## Links
 
@@ -253,11 +254,11 @@
 - **Smart Reminders** — notifications 1 week, 3 days, and on the day of each upcoming dose
 - **Medical Information** for each vaccine: what it is, why it matters, and possible side effects
 - **Multiple Children Support** — track all your children's vaccinations in one place
-- **Offline / Local Data Only** — all data stored on-device, no servers, no tracking, no account required
+- **Offline / Local Data Only** — the child's records stay on the device and no account is needed; optional anonymous analytics (with consent) and crash reports
 
 ## Pricing
 
-- Free (no subscription, no ads, no in-app purchases)
+- Free to download, with no ads; the first child is free, and Tateemi Pro (a subscription or a one-time lifetime purchase) adds more children
 
 ## Platform
 
