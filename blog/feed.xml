@@ -5,13 +5,73 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-11-20T18:00:00Z</updated>
+    <updated>2026-11-21T15:00:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>SwiftUI Open App Store Page: 3 Ways, With Code</title>
+        <id>https://yoloabdo.com/blog/swiftui-open-app-store-page/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/swiftui-open-app-store-page/"/>
+        <published>2026-11-21T15:00:00Z</published>
+        <updated>2026-11-21T15:00:00Z</updated>
+        <category term="Developer"/>
+        <summary>How to open an App Store page from SwiftUI: openURL, SKStoreProductViewController and appStoreOverlay, with code. Then show all your apps with SiblingApps.</summary>
+    </entry>
+
+    <entry>
+        <title>Git Worktree Remove: Keep the Branch (Real Output)</title>
+        <id>https://yoloabdo.com/blog/git-worktree-remove-keep-branch/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/git-worktree-remove-keep-branch/"/>
+        <published>2026-11-21T14:00:00Z</published>
+        <updated>2026-11-21T14:00:00Z</updated>
+        <category term="Developer"/>
+        <summary>git worktree remove deletes the folder, not the branch. See real output, remove vs prune, --force, locked worktrees and a safe loop to remove all.</summary>
+    </entry>
+
+    <entry>
+        <title>Is Xcode DerivedData Safe to Delete? Every Folder</title>
+        <id>https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/"/>
+        <published>2026-11-21T13:00:00Z</published>
+        <updated>2026-11-21T13:00:00Z</updated>
+        <category term="Developer"/>
+        <summary>Yes, DerivedData is safe to delete. See every Xcode folder in ~/Library/Developer: what it holds, the risk, the size check and the exact command.</summary>
+    </entry>
+
+    <entry>
+        <title>100 Kettlebell Swings a Day: A 30-Day Plan</title>
+        <id>https://yoloabdo.com/blog/100-kettlebell-swings-a-day/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/100-kettlebell-swings-a-day/"/>
+        <published>2026-11-21T12:00:00Z</published>
+        <updated>2026-11-21T12:00:00Z</updated>
+        <category term="Guide"/>
+        <summary>100 kettlebell swings a day for 30 days: a plan with set splits, how to pick the bell weight, a form checklist, back safety, and what testers report.</summary>
+    </entry>
+
+    <entry>
+        <title>جدول التطعيمات السعودي 2026: من الولادة حتى 18 سنة</title>
+        <id>https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/"/>
+        <published>2026-11-21T11:00:00Z</published>
+        <updated>2026-11-21T11:00:00Z</updated>
+        <category term="Guide"/>
+        <summary>جدول التطعيمات السعودي 2026 (1448 هـ) حسب العمر من الولادة حتى 18 سنة، مع عدد لقاحات الشهرين والحرارة بعد التطعيم والمصدر الرسمي. آخر مراجعة نوفمبر 2026.</summary>
+    </entry>
+
+    <entry>
+        <title>Share Wi-Fi Password From iPhone to Android</title>
+        <id>https://yoloabdo.com/blog/share-wifi-password-iphone-to-android/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/share-wifi-password-iphone-to-android/"/>
+        <published>2026-11-21T10:00:00Z</published>
+        <updated>2026-11-21T10:00:00Z</updated>
+        <category term="Guide"/>
+        <summary>Share a Wi-Fi password from iPhone to Android with a QR code: iOS 18 Passwords app steps, no-app and no-QR options, Bluetooth, and printable codes.</summary>
+    </entry>
 
     <entry>
         <title>Baba Abdo 1.0 release notes: stickers, daily orders and more</title>

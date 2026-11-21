@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Worktree Remove: Keep the Branch (Real Output)</title>
+    <meta name="keywords" content="git worktree remove keep branch, git remove worktree but keep branch, does git worktree remove delete the branch, git worktree remove vs prune, git worktree remove force, git worktree remove all, git worktree remove locked worktree, how to delete a git worktree, claude code worktrees disk space, DiskSage">
+    <meta name="description" content="git worktree remove deletes the folder, not the branch. See real output, remove vs prune, --force, locked worktrees and a safe loop to remove all.">
+    <link rel="canonical" href="https://yoloabdo.com/blog/git-worktree-remove-keep-branch/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/git-worktree-remove-keep-branch/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Git Worktree Remove: Keep the Branch (Real Output)">
+    <meta property="og:description" content="git worktree remove deletes the folder, not the branch. See real output, remove vs prune, --force, locked worktrees and a safe loop to remove all.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/git-worktree-remove-keep-branch/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Text: Remove a worktree. Keep the branch. The folder is struck out. The branch and the commits stay.">
+    <meta property="article:published_time" content="2026-11-21T14:00:00Z">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Developer tools">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="AI coding agents">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Git Worktree Remove: Keep the Branch (Real Output)">
+    <meta name="twitter:description" content="git worktree remove deletes the folder, not the branch. See real output, remove vs prune, --force, locked worktrees and a safe loop to remove all.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/git-worktree-remove-keep-branch/og-image.jpg">
+    <meta name="twitter:image:alt" content="Text: Remove a worktree. Keep the branch. The folder is struck out. The branch and the commits stay.">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
+    <link rel="stylesheet" href="/blog/assets/blog.css?v=20261102">
+    <script src="/blog/assets/theme.js"></script>
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+    <style>
+        .prose code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88em; background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+        .prose pre { background: #0e1a16; color: #d8efe2; border-radius: 14px; padding: 16px 18px; overflow-x: auto; font-size: 14.5px; line-height: 1.55; }
+        .prose pre code { background: none; padding: 0; color: inherit; font-size: inherit; overflow-wrap: normal; }
+        .compare { min-width: 860px; }
+        .compare td, .compare th { min-width: 0 !important; }
+        .compare tbody th, .compare thead th:first-child { min-width: 110px !important; }
+        .compare td code { font-size: 12px; }
+        .app-cta .actions a.gh { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--sajdah-emerald); color: #06201a; font-weight: 700; text-decoration: none; }
+        .app-cta .actions a.gh:hover { filter: brightness(1.08); }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/#post",
+      "headline": "Git Worktree Remove: Keep the Branch (Real Output)",
+      "description": "git worktree remove deletes the folder, not the branch. See real output, remove vs prune, --force, locked worktrees and a safe loop to remove all.",
+      "url": "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/",
+      "mainEntityOfPage": "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/",
+      "image": [
+        "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/og-image.jpg",
+        "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/diagram.webp",
+        "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/remove-vs-prune.webp"
+      ],
+      "datePublished": "2026-11-21T14:00:00Z",
+      "dateModified": "2026-11-21T14:00:00Z",
+      "inLanguage": "en",
+      "articleSection": "Developer tools",
+      "keywords": ["git worktree remove keep branch", "git remove worktree but keep branch", "does git worktree remove delete the branch", "git worktree remove vs prune", "git worktree remove force", "git worktree remove all", "git worktree remove locked worktree"],
+      "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+      "publisher": { "@id": "https://yoloabdo.com/#person" },
+      "about": {
+        "@type": "SoftwareSourceCode",
+        "name": "DiskSage",
+        "description": "A native macOS menu-bar app with a Git Worktrees review that removes checkouts and keeps their branches.",
+        "codeRepository": "https://github.com/Abdo-codes/DiskSage",
+        "license": "https://opensource.org/licenses/MIT",
+        "programmingLanguage": "Swift",
+        "runtimePlatform": "macOS 14 or later"
+      },
+      "isPartOf": { "@id": "https://yoloabdo.com/blog/#blog" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does git worktree remove delete the branch?", "acceptedAnswer": { "@type": "Answer", "text": "No. It deletes the worktree folder and its administrative files in the repository. The branch and its commits stay. Delete the branch later with git branch -d or git branch -D." } },
+        { "@type": "Question", "name": "How do I delete the branch too?", "acceptedAnswer": { "@type": "Answer", "text": "After you remove the worktree, run git branch -d <name>. It refuses if the branch is not merged. Use git branch -D <name> only when you are sure you do not need the commits." } },
+        { "@type": "Question", "name": "What is the difference between git worktree remove and prune?", "acceptedAnswer": { "@type": "Answer", "text": "remove deletes a worktree folder and its administrative data. prune only deletes the administrative data of worktrees whose folder is already missing. Use git worktree prune -n -v to preview." } },
+        { "@type": "Question", "name": "How do I remove all git worktrees?", "acceptedAnswer": { "@type": "Answer", "text": "List them with git worktree list --porcelain, skip the first record, which is the main worktree, check each one with git status --porcelain --ignored, and run git worktree remove only on worktrees with no output. A normal remove also deletes ignored files such as .env, so the check matters. Git itself refuses dirty and locked worktrees." } },
+        { "@type": "Question", "name": "How do I remove a locked git worktree?", "acceptedAnswer": { "@type": "Answer", "text": "Run git worktree unlock <path> and then git worktree remove <path>. Or run git worktree remove --force --force <path>. Check that no tool uses the worktree first." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Git worktree remove: keep the branch", "item": "https://yoloabdo.com/blog/git-worktree-remove-keep-branch/" }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Site">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Git worktree remove</nav>
+            <p class="eyebrow mono">Developer tools · Git</p>
+            <h1 class="post-title">Git worktree remove: delete the folder, keep the branch</h1>
+            <p class="dek">Real output from a test repo. Remove vs prune, --force, locked worktrees, a safe loop for all of them, and the worktrees that AI agents leave on your disk.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-11-21">21 November 2026</time></span>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="diagram.webp" width="1400" height="520" style="aspect-ratio: 1400 / 520" alt="Diagram of git worktree remove: the worktree folder and its link are deleted, the admin entry is deleted, and the shared objects, the branch and the commits stay." fetchpriority="high">
+                <figcaption>What <code>git worktree remove</code> deletes (red) and what stays (green).</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p><strong>No. <code>git worktree remove</code> does not delete the branch.</strong> It deletes the worktree folder and the administrative files that Git keeps for it. The branch and its commits stay in the repository. The <a href="https://git-scm.com/docs/git-worktree" target="_blank" rel="noopener">official git-worktree docs</a> do not say that remove deletes a branch, and my test below confirms it.</p>
+                <p><strong>Warning:</strong> a normal <code>git worktree remove</code> also deletes ignored files, such as <code>.env</code> or local notes. Git counts a worktree as clean when it has no untracked files and no changes to tracked files (<a href="https://git-scm.com/docs/git-worktree#Documentation/git-worktree.txt-remove" rel="noopener">git docs</a>). Ignored files do not count, so Git does not stop you. Run <code>git -C &lt;path&gt; status --short --ignored</code> before every removal. Only clean worktrees can be removed. The main worktree cannot be removed. This guide covers the errors you will see, prune, <code>--force</code>, locks, and a loop to remove many worktrees. It ends with a way to review worktrees before you remove them: <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a>, my open source Mac app.</p>
+                <nav class="toc" aria-label="In this guide">
+                    <ul>
+                        <li><a href="#demo">Does git worktree remove delete the branch?</a></li>
+                        <li><a href="#errors">The errors and their fixes</a></li>
+                        <li><a href="#prune">git worktree remove vs prune</a></li>
+                        <li><a href="#force">git worktree remove --force</a></li>
+                        <li><a href="#locked">Remove a locked worktree</a></li>
+                        <li><a href="#all">Remove all worktrees</a></li>
+                        <li><a href="#branch">Delete the branch afterwards</a></li>
+                        <li><a href="#agents">AI agents fill your disk with worktrees</a></li>
+                        <li><a href="#disksage">Review worktrees with DiskSage</a></li>
+                        <li><a href="#faq">Questions</a></li>
+                    </ul>
+                </nav>
+
+                <h2 id="demo">Does git worktree remove delete the branch?</h2>
+                <p>I ran this in a throwaway repo with Git 2.54.0. The worktree <code>wt-feature</code> is on the branch <code>feature</code>.</p>
+                <figure><img src="terminal-demo.webp" width="1300" height="500" style="aspect-ratio: 1300 / 500" alt="Terminal: git worktree list shows main and wt-feature, git worktree remove ../wt-feature runs, then git branch still lists the feature branch." loading="lazy"><figcaption>Real output. The worktree is gone from the list. The branch <code>feature</code> is still there.</figcaption></figure>
+                <p>To remove a worktree and keep its branch, run one command:</p>
+                <pre><code>git worktree remove ../wt-feature</code></pre>
+                <p>Run it from the main repository or from another worktree. Use the path of the worktree, as <code>git worktree list</code> shows it.</p>
+
+                <h2 id="errors">git worktree remove errors and fixes</h2>
+                <figure><img src="terminal-errors.webp" width="1300" height="480" style="aspect-ratio: 1300 / 480" alt="Terminal with four git worktree remove errors: is a main working tree, is not a working tree, contains modified or untracked files, and cannot remove a locked working tree." loading="lazy"><figcaption>Four real error messages from Git 2.54.0.</figcaption></figure>
+                <ul>
+                    <li><strong><code>'.' is a main working tree</code>:</strong> you tried to remove the main worktree. Git does not allow it. This is the first line of <code>git worktree list</code>.</li>
+                    <li><strong><code>is not a working tree</code>:</strong> the path is wrong. Copy it from <code>git worktree list</code>.</li>
+                    <li><strong><code>contains modified or untracked files, use --force to delete it</code>:</strong> the worktree is not clean. Commit or save the work first. See <a href="#force">--force</a>.</li>
+                    <li><strong><code>cannot remove a locked working tree</code>:</strong> the worktree has a lock. Run <code>git worktree unlock &lt;path&gt;</code>. See <a href="#locked">locked worktrees</a>.</li>
+                    <li><strong><code>failed to delete</code>:</strong> Git could not delete a file. In my test, a read-only folder inside the worktree gave <code>Permission denied</code>. Change the permissions and run the command again. If the message says <code>Directory not empty</code>, a program may still write into the folder. Stop that program and try again.</li>
+                </ul>
+
+                <h2 id="prune">git worktree remove vs prune</h2>
+                <figure><img src="remove-vs-prune.webp" width="1400" height="570" style="aspect-ratio: 1400 / 570" alt="Comparison card of git worktree remove, git worktree prune and rm -rf: what each one does to the folder, the admin data and the branch." loading="lazy"><figcaption>All three keep the branch. Only <code>remove</code> checks for unsaved work.</figcaption></figure>
+                <p>The docs say <code>prune</code> removes the information in <code>$GIT_DIR/worktrees</code> for worktrees whose working trees are missing. Use <code>remove</code> next time you want to delete one. If you delete the folder by hand, Git marks the worktree as prunable:</p>
+<pre><code>$ rm -rf ../wt-three
+$ git worktree list
+/tmp/demo/repo      4341ca9 [main]
+/tmp/demo/wt-three  4341ca9 [agent-three] prunable
+$ git worktree prune -n -v
+Removing worktrees/wt-three: gitdir file points to non-existent location
+$ git worktree prune</code></pre>
+                <p>The <code>-n</code> flag is a dry run. Git also prunes stale entries on its own after a time that <code>gc.worktreePruneExpire</code> sets.</p>
+
+                <h2 id="force">git worktree remove --force: when it is dangerous</h2>
+                <p>Without <code>--force</code>, Git refuses to remove a worktree that has modified tracked files or untracked files. With <code>--force</code>, Git deletes them. You cannot get them back from Git, because they were never committed. Git also removes worktrees with submodules only with <code>--force</code>, per the docs.</p>
+                <p>Files that <code>.gitignore</code> hides, such as <code>.env</code> or local notes, are not in any commit. Git deletes them even <strong>without</strong> <code>--force</code>, because they do not make a worktree dirty. I tested it on Git 2.54: a worktree with only an ignored <code>.env</code> showed an empty status, and <code>git worktree remove</code> deleted it with the file. Before any removal, run <code>git -C &lt;path&gt; status --short --ignored</code> and copy what you need.</p>
+                <figure><img src="checklist.webp" width="1200" height="700" style="aspect-ratio: 1200 / 700" alt="Checklist: before you remove a git worktree, check the main worktree, a clean status, commits on a branch, locks and running tools, and ignored files." loading="lazy"><figcaption>Five checks before you remove a worktree.</figcaption></figure>
+
+                <h2 id="locked">How to remove a locked git worktree</h2>
+                <p>A lock protects a worktree from being pruned, moved or deleted. The docs say to specify <code>--force</code> twice to remove a locked worktree. The safer way is to unlock it first:</p>
+                <ol>
+                    <li>Find out who locked it: <code>git worktree list --porcelain</code> shows <code>locked</code> and the reason.</li>
+                    <li>Stop the tool that uses the worktree.</li>
+                    <li>Run <code>git worktree unlock &lt;path&gt;</code>.</li>
+                    <li>Run <code>git worktree remove &lt;path&gt;</code>.</li>
+                </ol>
+
+                <h2 id="all">How to remove all git worktrees</h2>
+                <p>The first record in <code>git worktree list --porcelain</code> is the main worktree. This loop skips it. It also skips every worktree that has changed, untracked <strong>or ignored</strong> files, because a normal remove deletes ignored files too. It does not use <code>--force</code>:</p>
+<pre><code>git worktree list --porcelain | awk '/^worktree /{print substr($0,10)}' | tail -n +2 |
+while IFS= read -r wt; do
+  if [ -n "$(git -C "$wt" status --porcelain --ignored)" ]; then
+    echo "skipped $wt: it has changed, untracked or ignored files"; continue
+  fi
+  git worktree remove "$wt" &amp;&amp; echo "removed $wt"
+done</code></pre>
+                <p>I tested it with three worktrees. One had an untracked file, and one had only an ignored <code>.env</code>. Result:</p>
+<pre><code>removed /tmp/demo/wt-one
+skipped /tmp/demo/wt-three: it has changed, untracked or ignored files
+skipped /tmp/demo/wt-two: it has changed, untracked or ignored files</code></pre>
+                <p>All three branches were still there. For a dry run, replace the <code>git worktree remove</code> command with <code>echo</code> first.</p>
+
+                <h2 id="branch">Delete the branch after you remove the worktree</h2>
+                <p>Use <code>git branch -d</code> first. It refuses to delete a branch that is not merged. Use <code>-D</code> only if you accept the loss of those commits:</p>
+<pre><code>$ git branch -d agent-one
+Deleted branch agent-one (was 4341ca9).
+$ git branch -d tmp
+error: the branch 'tmp' is not fully merged
+$ git branch -D tmp
+Deleted branch tmp (was b081546).</code></pre>
+                <p>Git does not let you delete a branch that is checked out in a worktree. Remove the worktree first.</p>
+
+                <h2 id="agents">AI coding agents fill your disk with worktrees</h2>
+                <p>Agents use worktrees to work in parallel. Claude Code creates them under <code>.claude/worktrees/&lt;name&gt;/</code> on a branch named <code>worktree-&lt;name&gt;</code>, <a href="https://code.claude.com/docs/en/worktrees.md" target="_blank" rel="noopener">its docs say</a>. The Codex app creates them in <code>$CODEX_HOME/worktrees</code> and, by default, <a href="https://learn.chatgpt.com/docs/environments/git-worktrees" target="_blank" rel="noopener">keeps your 15 most recent ones</a>. Each one is a full checkout, often with its own <code>node_modules</code> or build folder.</p>
+                <p>Note one difference. When you remove a worktree on exit, Claude Code deletes the worktree <em>and its branch</em>, if you choose removal. Core Git does not delete the branch.</p>
+                <p>To audit the worktrees of a repository, run:</p>
+<pre><code>git worktree list --porcelain
+git worktree list --porcelain | awk '/^worktree /{print substr($0,10)}' |
+while IFS= read -r wt; do du -sh "$wt"; done</code></pre>
+                <p>Look for worktrees with a <code>prunable</code> or <code>locked</code> line, and for large ones. Claude Code holds a lock while an agent runs. Its docs say that a lock left by <code>claude -p</code> runs stays until a later sweep, or until you run <code>git worktree unlock</code>.</p>
+
+                <h2 id="disksage">Review worktrees with DiskSage</h2>
+                <p>Many repositories mean many commands. <a href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener">DiskSage</a> is a macOS 14+ menu-bar app, free and open source (MIT). Its <strong>Git Worktrees</strong> review does the checks from the list above for you. I confirmed each point in the source code.</p>
+                <figure><img src="disksage-worktrees.webp" width="1400" height="600" style="aspect-ratio: 1400 / 600" alt="Illustration of the DiskSage Git Worktrees review: a clean checkout selected, one with local-only commits, one with uncommitted changes, and a Remove Selected button." loading="lazy"><figcaption>Illustration with sample values, drawn from the docs and the source. It is not a screenshot.</figcaption></figure>
+                <ul>
+                    <li><strong>Changed and ignored files:</strong> separate counts for staged, modified, conflicted, untracked and ignored files. You can read the ignored paths and sizes.</li>
+                    <li><strong>Commit preservation check:</strong> it shows commits that are not in the cached remote refs, and whether a local branch or tag keeps them. A missing upstream shows as Unknown, not zero. Labels include Clean, Uncommitted changes, Local-only commits, Not proven merged, Detached, Locked, In use.</li>
+                    <li><strong>Protection:</strong> main, locked, protected and active checkouts cannot be removed. You can also choose <strong>Keep this worktree</strong>.</li>
+                    <li><strong>Removal keeps branches:</strong> it runs <code>git worktree remove</code> on the exact path. It does not delete branches, unlock worktrees, run prune or clean up the repository.</li>
+                    <li><strong>You confirm:</strong> nothing is preselected. A confirmation lists the paths and the branches that stay.</li>
+                </ul>
+                <p>Be clear about the limits. Removal is permanent. It deletes the checkout files, and DiskSage cannot undo it. Keeping a commit is not a backup of ignored or untracked files. The review is local and does not fetch, so remote facts can be stale. Worktrees are never part of automatic, scheduled or low-risk cleanup. Separately, the app's low-disk automatic cleanup is on by default at 15 GiB, and it deletes low-risk cache files permanently. See the <a href="/blog/xcode-deriveddata-safe-to-delete/">Xcode cleanup guide</a> for the review-only launch option.</p>
+                <p>There is no notarized installer. Build it from source with Xcode 27: <code>git clone https://github.com/Abdo-codes/DiskSage.git</code>, then <code>./Scripts/build-app.sh release</code>, then <code>open .build/release/DiskSage.app</code>. Open <strong>Cleanup Review, Git Worktrees</strong> and add a repository or a projects folder.</p>
+
+                <h2 id="faq">Questions</h2>
+                <p><strong>Does git worktree remove delete the branch?</strong> No. It deletes the folder and the admin files. The branch and the commits stay.</p>
+                <p><strong>How do I delete the branch too?</strong> Remove the worktree, then run <code>git branch -d &lt;name&gt;</code>. Use <code>-D</code> only for work you do not need.</p>
+                <p><strong>What is the difference between remove and prune?</strong> <code>remove</code> deletes a worktree. <code>prune</code> only cleans admin data of worktrees whose folder is already gone.</p>
+                <p><strong>How do I remove all worktrees?</strong> Use the loop above. It skips the main worktree and every worktree with changed, untracked or ignored files, and it does not force anything.</p>
+                <p><strong>How do I remove a locked worktree?</strong> Unlock it, then remove it. Or use <code>--force</code> twice, if you know that no tool uses it.</p>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="disksage-icon.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">DiskSage: developer disk cleanup for macOS</h2>
+                    <p>Reviews Git worktrees and build caches, explains the risk of each item and asks before it deletes. Open source, MIT. macOS 14 or later.</p>
+                </div>
+                <div class="actions">
+                    <a class="gh" href="https://github.com/Abdo-codes/DiskSage" target="_blank" rel="noopener" data-cta="disksage-worktrees">View DiskSage on GitHub</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>Keep reading</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/blog/xcode-deriveddata-safe-to-delete/">
+                <p class="meta mono">Guide · 21 Nov 2026</p>
+                <h3>Is Xcode DerivedData safe to delete? Every folder</h3>
+                <p>Each folder in ~/Library/Developer: what it holds, the risk, and the exact command.</p>
+            </a>
+        </div>
+        </main>
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="https://github.com/Abdo-codes/DiskSage">DiskSage on GitHub</a> · <a href="/apps/">Apps</a> · <a href="/blog/">Blog</a></span>
+        </footer>
+    </div>
+</body>
+</html>
