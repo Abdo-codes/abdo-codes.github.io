@@ -1,13 +1,13 @@
 :root {
-    --bg: #0A0C0A;
-    --surface: #141814;
-    --text: #F4F7F0;
-    --text-dim: #A9B0A4;
-    --text-muted: #7E8679;
-    --accent: #B8F242;
-    --accent-ink: #0A0C0A;
-    --accent-ink-dim: #2A3320;
-    --divider: #262B24;
+    --bg: #0A0A0A;
+    --surface: #171717;
+    --text: #F5F5F5;
+    --text-dim: #ADADAD;
+    --text-muted: #878787;
+    --accent: #FF8F1F;
+    --accent-ink: #000000;
+    --accent-ink-dim: #4A2A08;
+    --divider: #242424;
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
 }
@@ -172,7 +172,7 @@ section h2 { font-size: clamp(32px, 4.2vw, 48px); line-height: 1.08; margin-bott
 .privacy-card p { color: var(--accent-ink-dim); font-size: 18px; margin-bottom: 20px; }
 .privacy-card a { color: var(--accent-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .privacy-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.privacy-card li { background: rgba(10, 12, 10, 0.08); border-radius: 12px; padding: 14px 18px; font-weight: 600; font-size: 16px; }
+.privacy-card li { background: rgba(0, 0, 0, 0.08); border-radius: 12px; padding: 14px 18px; font-weight: 600; font-size: 16px; }
 
 /* FAQ */
 .faq-list { max-width: 760px; }

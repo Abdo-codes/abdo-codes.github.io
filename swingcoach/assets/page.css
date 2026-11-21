@@ -1,11 +1,11 @@
 :root {
-    --bg: #0A0C0A;
-    --surface: #141814;
-    --text: #F4F7F0;
-    --text-dim: #A9B0A4;
-    --text-muted: #7E8679;
-    --accent: #B8F242;
-    --divider: #262B24;
+    --bg: #0A0A0A;
+    --surface: #171717;
+    --text: #F5F5F5;
+    --text-dim: #ADADAD;
+    --text-muted: #878787;
+    --accent: #FF8F1F;
+    --divider: #242424;
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
 }
