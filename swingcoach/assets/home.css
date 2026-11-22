@@ -174,6 +174,15 @@ section h2 { font-size: clamp(32px, 4.2vw, 48px); line-height: 1.08; margin-bott
 .privacy-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .privacy-card li { background: rgba(0, 0, 0, 0.08); border-radius: 12px; padding: 14px 18px; font-weight: 600; font-size: 16px; }
 
+/* Blog posts */
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.post { display: block; background: var(--surface); border: 1px solid var(--divider); border-radius: 20px; padding: 28px; color: var(--text); transition: border-color 0.2s; }
+.post:hover { border-color: var(--text-muted); opacity: 1; }
+.post .kicker { color: var(--accent); margin-bottom: 12px; }
+.post h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 8px; }
+.post time { display: block; color: var(--text-muted); font-size: 14px; margin-bottom: 10px; }
+.post p { color: var(--text-dim); font-size: 16px; }
+
 /* FAQ */
 .faq-list { max-width: 760px; }
 .faq-item { border-bottom: 1px solid var(--divider); }
@@ -205,7 +214,7 @@ section h2 { font-size: clamp(32px, 4.2vw, 48px); line-height: 1.08; margin-bott
 
 footer { border-top: 1px solid var(--divider); padding: 28px 0; }
 footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; color: var(--text-muted); font-size: 14px; }
-.footer-links { display: flex; gap: 20px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .footer-links a { color: var(--text-muted); }
 .footer-links a:hover { color: var(--text); opacity: 1; }
 
@@ -215,6 +224,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
     section { padding: 72px 0; }
     .features { grid-template-columns: 1fr 1fr; }
     .steps { grid-template-columns: 1fr; }
+    .posts { grid-template-columns: 1fr 1fr; }
     .privacy-card { grid-template-columns: 1fr; gap: 28px; padding: 40px 28px; }
 }
 
@@ -226,7 +236,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
     .stats .wrap { grid-template-columns: 1fr; }
     .stat, .stat:first-child { border-left: none; border-top: 1px solid var(--divider); padding: 20px 0; }
     .stat:first-child { border-top: none; }
-    .features { grid-template-columns: 1fr; }
+    .features, .posts { grid-template-columns: 1fr; }
     .gallery { grid-auto-columns: 200px; }
     .privacy-card { padding: 32px 20px; border-radius: 22px; }
 }

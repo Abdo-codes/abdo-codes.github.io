@@ -244,7 +244,7 @@ footer a { color: var(--plum); font-weight: 700; }
 
 @media (max-width: 560px) {
     .container { width: calc(100% - 32px); }
-    .nav-links a:first-child { display: none; }
+    .nav-links a:first-child, .nav-links .hide-sm { display: none; }
     .nav-links { gap: 16px; font-size: 14px; }
     .brand span { font-size: 17px; }
     .feature-grid { grid-template-columns: 1fr; }
@@ -270,3 +270,16 @@ footer a { color: var(--plum); font-weight: 700; }
 :root[lang="ar"] .section-label { letter-spacing: 0; text-transform: none; }
 :root[lang="ar"] h1,
 :root[lang="ar"] .section-title { line-height: 1.3; }
+
+/* Blog section */
+.post-card { display: flex; flex-direction: column; gap: 6px; color: inherit; transition: border-color 0.2s, transform 0.2s; }
+.post-card:hover { border-color: var(--plum); transform: translateY(-2px); }
+.post-card h3 { margin: 0; }
+.post-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--plum); font-size: 12px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+.post-tag { padding: 1px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-muted); font-size: 11px; letter-spacing: 0; text-transform: none; }
+.post-card time { color: var(--ink-muted); font-size: 14px; }
+.post-card p { margin: 0; }
+.posts-all { margin-top: 28px; font-weight: 800; }
+.posts-all a { color: var(--plum); }
+.posts-all a:hover { text-decoration: underline; }
+:root[lang="ar"] .post-card h3[dir="ltr"] { text-align: right; }

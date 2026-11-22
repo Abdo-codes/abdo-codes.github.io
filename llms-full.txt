@@ -12,6 +12,19 @@
 
 ## Recent Writing
 
+- [SwiftUI Open App Store Page: 3 Ways, With Code](https://yoloabdo.com/blog/swiftui-open-app-store-page/) (21 Nov 2026)
+- [Git Worktree Remove: Keep the Branch (Real Output)](https://yoloabdo.com/blog/git-worktree-remove-keep-branch/) (21 Nov 2026)
+- [Is Xcode DerivedData Safe to Delete? Every Folder](https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/) (21 Nov 2026)
+- [100 Kettlebell Swings a Day: A 30-Day Plan](https://yoloabdo.com/blog/100-kettlebell-swings-a-day/) (21 Nov 2026)
+- [جدول التطعيمات السعودي 2026: من الولادة حتى 18 سنة](https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/) (21 Nov 2026)
+- [Share Wi-Fi Password From iPhone to Android](https://yoloabdo.com/blog/share-wifi-password-iphone-to-android/) (21 Nov 2026)
+- [Baba Abdo 1.0 release notes: stickers, daily orders and more](https://yoloabdo.com/blog/baba-abdo-1-0-release-notes/) (20 Nov 2026)
+- [Koshary cooking game for iPhone: Baba Abdo is out](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/) (20 Nov 2026)
+- [Dinosaur coloring app for kids: ColorTalk 1.2 and Arabic](https://yoloabdo.com/blog/colortalk-1-2-release-notes/) (19 Nov 2026)
+- [Kettlebell swing challenge app: SwingCoach 1.2.1](https://yoloabdo.com/blog/swingcoach-1-2-1-release-notes/) (19 Nov 2026)
+- [Quran app for Apple TV: Sajdah 1.7.4 previews Premium](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/) (19 Nov 2026)
+- [Quran radio widget for iPhone: Hona Elqahra 1.1](https://yoloabdo.com/blog/hona-elqahra-1-1-release-notes/) (19 Nov 2026)
+- [Quran radio app for iPhone: Hona Elqahra is out](https://yoloabdo.com/blog/quran-radio-app-iphone-hona-elqahra/) (18 Nov 2026)
 - [A score keeper app for iPhone and Apple TV: Tally 1.6](https://yoloabdo.com/blog/score-keeper-app-iphone-apple-tv/) (15 Nov 2026)
 - [Kettlebell workout app: hands-free, with a huge rep count](https://yoloabdo.com/blog/kettlebell-workout-app-hands-free/) (15 Nov 2026)
 - [Print a Wi-Fi QR code sign from your iPhone: Wi-Fi QR 1.8](https://yoloabdo.com/blog/print-wifi-qr-code-sign-iphone/) (15 Nov 2026)
@@ -21,19 +34,6 @@
 - [Numbers coloring book for kids: ColorTalk 1.1, 1 to 10](https://yoloabdo.com/blog/colortalk-1-1-release-notes/) (10 Nov 2026)
 - [Babysitting game for iPhone: Angry Nona 1.5 adds six nights](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/) (10 Nov 2026)
 - [SwingCoach is out: a kettlebell swing coach for iPhone](https://yoloabdo.com/blog/swingcoach-kettlebell-swing-counter-launch/) (3 Nov 2026)
-- [Angry Nona: Night Shift is out on iPhone](https://yoloabdo.com/blog/angry-nona-night-shift-launch/) (2 Nov 2026)
-- [ColorTalk is out: ABC coloring for kids on iPad](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/) (2 Nov 2026)
-- [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/) (1 Nov 2026)
-- [Tracing every ayah and word: how Sajdah follows the recitation](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/) (30 Oct 2026)
-- [Sajdah 1.7.0: prayer times that match your mosque](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/) (30 Oct 2026)
-- [From a hotel Wi-Fi card to the App Store: the story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/) (29 Oct 2026)
-- [The Prayer Screen: prayer times that look good on your TV all day](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/) (27 Oct 2026)
-- [Sajdah 1.6.0: a new Today screen, the Prayer Screen and the Athan in 13 voices](https://yoloabdo.com/blog/sajdah-1-6-0-release-notes/) (22 Oct 2026)
-- [Tally 1.3.2: the Apple TV scoreboard is now fully free](https://yoloabdo.com/blog/tally-1-3-2-release-notes/) (19 Oct 2026)
-- [Capybara Rush 1.5: daily runs, the Capybara Cup and a poster of your best run](https://yoloabdo.com/blog/capybara-rush-1-5-release-notes/) (19 Oct 2026)
-- [Wi-Fi QR 1.7: guest signs that fit, WPA or WEP, and smarter sticker scans](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/) (19 Oct 2026)
-- [The best Quran apps for Apple TV, compared (2026)](https://yoloabdo.com/blog/quran-apps-apple-tv-compared/) (17 Oct 2026)
-- [The journey so far: building Sajdah for Apple TV](https://yoloabdo.com/blog/building-sajdah-apple-tv-journey/) (7 Oct 2026)
 
 ## Site Links
 
@@ -86,7 +86,7 @@
 ## Pricing
 
 - Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen with the next prayer time (default calculation), morning and evening Adhkar
-- Sajdah Premium (optional in-app subscription): Quran radio, live TV, the full prayer schedule with the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments), Qibla direction, the Prayer Screen in all six styles, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
+- Sajdah Premium (optional in-app subscription or one-time lifetime purchase): Quran radio, live TV, the full prayer schedule with the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments), Qibla direction, the Prayer Screen in all six styles, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
 - No ads
 
 ## Platform
@@ -101,9 +101,9 @@
 
 ---
 
-# Tally - Apple TV Scoreboard and Game Night Score Keeper
+# Tally - iPhone Score Keeper and Apple TV Scoreboard
 
-> Tally is a free Apple TV scoreboard app and game night score keeper built for the living room. It supports 6 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. Sports include basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives. Since version 1.3.2 (28 August 2026), every feature is free, with no subscriptions, in-app purchases, or ads. Version 1.3.2 sends no analytics. From version 1.3.3, the app sends usage analytics and crash reports to Google Firebase.
+> Tally is a free score keeper app for iPhone and scoreboard app for Apple TV built for game nights and sports. On Apple TV it supports 6 sports plus Game Night mode for 2-8 players, with giant room-readable scores, timers, live score tracking, turn markers, undo, and a big-screen winner reveal. On iPhone (added in version 1.6), Tally offers Game Night, a two-team Scoreboard, a chess clock, game types for Card Game 500, Word Game, Rummy 500, Hearts, Darts 501 and Cornhole, and a house leaderboard synced with iCloud. Sports on Apple TV include basketball, soccer, tennis, ping pong, volleyball, and a generic custom mode. Game Night mode supports Running Total, Rounds Won, and Lives. Since version 1.3.2 (28 August 2026), every feature is free, with no subscriptions, in-app purchases, or ads. Version 1.3.2 sends no analytics. From version 1.3.3, the app sends usage analytics and crash reports to Google Firebase.
 
 ## Links
 
@@ -136,9 +136,8 @@
 
 ## Platform
 
-- Apple TV (tvOS 17+)
-- Works on Apple TV 4K and Apple TV HD
-- No internet required — works fully offline
+- iPhone (iOS 17+) and Apple TV 4K / Apple TV HD (tvOS 17+)
+- Saved players and finished games sync between devices with iCloud; core scoring works offline
 
 ## Developer
 
@@ -189,13 +188,15 @@
 
 # Wi-Fi QR - Guest Wi-Fi QR Codes and Printable Signs
 
-> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and print or export sign PDFs in six templates and four paper sizes. Version 1.7 (October 2026) adds WPA or WEP checks, signs that fit long passwords, and Arabic router-sticker labels. Free, with no account, no ads and no in-app purchases; anonymous usage events through Firebase Analytics never include Wi-Fi names, passwords or QR contents.
+> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and print or export sign PDFs in six templates and four paper sizes. Version 1.7 (October 2026) adds WPA or WEP checks, signs that fit long passwords, and Arabic router-sticker labels. Free to download, with no account, no ads and no subscription (optional Wi-Fi QR Pro one-time unlock adds more sign templates and QR styles); anonymous usage events through Firebase Analytics never include Wi-Fi names, passwords or QR contents.
 
 ## Links
 
 - [App Store](https://apps.apple.com/app/id6776169783)
 - [Landing Page](https://yoloabdo.com/wifi-qr/)
+- [Free Browser Wi-Fi QR Code & Printable Sign Generator](https://yoloabdo.com/wifi-qr/generator/): 100% client-side, zero-signup Wi-Fi QR and printable card generator with PNG, SVG, and print export (passwords never leave the browser)
 - [Airbnb WiFi sign guide](https://yoloabdo.com/wifi-qr/airbnb-wifi-sign/): what to put on an Airbnb WiFi sign or card, where to put it, which size to print, how guests scan the QR code, and how to make one with Wi-Fi QR
+- [Wi-Fi QR vs Canva & Etsy templates (2026)](https://yoloabdo.com/wifi-qr/vs-canva-etsy/): pricing math and workflow comparison against Canva Pro, Etsy digital/acrylic signs, and Apple's iOS 18 Passwords app
 - [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/): three ways to share Wi-Fi from an iPhone (the Passwords app QR code in iOS 18, Share Password for nearby Apple devices, and a printable code from Wi-Fi QR), how guests scan, and fixes for codes that do not work
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
 - [Wi-Fi QR 1.8 printing guide and release notes](https://yoloabdo.com/blog/print-wifi-qr-code-sign-iphone/): printing a guest sign or 8 cut-out cards from the app, the place name, and Wi-Fi QR Pro
@@ -280,6 +281,7 @@
 
 - [Mac App Store](https://apps.apple.com/app/id6769450957)
 - [Landing Page](https://yoloabdo.com/nightcap-awake/)
+- [Nightcap Awake vs Amphetamine, KeepingYouAwake & caffeinate (2026)](https://yoloabdo.com/nightcap-awake/vs-amphetamine/): side-by-side comparison of open-source auditability, App Sandbox, triggers, and closed-lid trade-offs
 - [Source code on GitHub](https://github.com/Abdo-codes/Nightcap)
 - [Support (GitHub issues)](https://github.com/Abdo-codes/Nightcap/issues)
 - [Privacy Policy](https://github.com/Abdo-codes/Nightcap/blob/main/PRIVACY.md)
@@ -318,6 +320,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/angry-nona/)
+- [Arabic landing page (سكّت النونة)](https://yoloabdo.com/angry-nona/ar/)
 - [App Store](https://apps.apple.com/us/app/angry-nona-night-shift/id6819626561)
 - [Support](https://yoloabdo.com/angry-nona/support/)
 - [Privacy Policy](https://yoloabdo.com/angry-nona/privacy/)
@@ -389,7 +392,8 @@
 
 ## Platform
 
-- iPadOS (iPad), landscape only, English only
+- iPadOS (iPad), landscape orientation
+- App screens in English, Dutch, Arabic, German and French; the ABC book and Lumo's voice are in English; includes an Arabic letters book (28 letters) and Dinosaurs book (20 dinosaurs) since version 1.2
 
 ## Developer
 
@@ -430,6 +434,82 @@
 ## Platform
 
 - iOS (iPhone), requires iOS 17+; the optional Apple Watch app needs watchOS 10+
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
+# Hona Elqahra (هنا القاهرة) - Quran Radio App for iPhone
+
+> Hona Elqahra (هنا القاهرة, meaning "This is Cairo") is a free Quran radio app for iPhone designed as a warm vintage radio receiver with one tuning knob. Tap the knob to play or pause, and turn it to switch between six saved station presets. Cairo Quran Radio (إذاعة القرآن الكريم من القاهرة) is the first default preset, followed by Saudi Quran Radio and the Alafasy, Husary, Abdulbasit and Minshawi stations. The station list includes more than 170 Quran reciter, tafsir, adhkar and translation stations with search in Arabic or English, Home Screen widgets, Siri and Shortcuts, sleep timer, background audio, AirPlay and lock-screen controls. Free on the App Store with no ads and no account.
+
+## Links
+
+- [Landing Page (English)](https://yoloabdo.com/hona-elqahra/)
+- [Landing Page (Arabic — هنا القاهرة)](https://yoloabdo.com/hona-elqahra/ar/)
+- [App Store](https://apps.apple.com/us/app/hona-elqahra-quran-radio/id6831580861)
+- [Launch post](https://yoloabdo.com/blog/quran-radio-app-iphone-hona-elqahra/): how the vintage receiver and one-knob dial were designed
+- [1.1 release notes](https://yoloabdo.com/blog/hona-elqahra-1-1-release-notes/): Home Screen widgets with six presets, Siri and Shortcuts, station search and sleep timer
+- [Privacy Policy](https://hona-elqahra.web.app/privacy)
+
+## Key Features
+
+- **Vintage One-Knob Dial** - tap to play or pause, turn to switch across six station presets with haptic detents
+- **170+ Quran Stations** - Cairo Quran Radio, Saudi Quran Radio, major reciters, tafsir, adhkar and translations
+- **Widgets, Siri & Shortcuts** - Home Screen widgets for quick preset playback and Shortcuts support
+- **Sleep Timer, AirPlay & Background Audio** - keeps playing on the lock screen or via AirPlay
+- **Bilingual Interface** - full Arabic and English layouts, with search in both languages
+- **Privacy** - no account required; favorites and presets stay on-device; optional usage analytics and crash reports can be toggled in About
+
+## Pricing
+
+- Free, with no ads and no subscription
+
+## Platform
+
+- iOS (iPhone), requires iOS 18 or later
+- Live audio streaming requires an internet connection
+
+## Developer
+
+- Built by Abdelrahman Eita
+- Contact: abdulrhman.eaita@gmail.com
+
+---
+
+# Baba Abdo (كشري بابا عبده) - Egyptian Koshary Cooking Game for iPhone
+
+> Baba Abdo (كشري بابا عبده) is a free Egyptian koshary cooking game for iPhone, played in Egyptian Arabic (landscape orientation). Run a neighborhood koshary shop through a seven-day story with 16 neighbors, listen to each customer's exact order (rice, pasta, lentils, chickpeas, tomato sauce, fried onions, garlic vinegar and chili), build the bowl in layers, ring the service bell, spend earned in-game coins to decorate the shop, and unlock untimed Practice mode after week one. Version 1.0 includes Daily Orders, Game Center leaderboards and achievements, eight stickers, and a 50% extra-time accessibility setting. Free with no ads, no tracking, no analytics and no account required.
+
+## Links
+
+- [Landing Page (Arabic)](https://yoloabdo.com/baba-abdo/)
+- [Landing Page (English)](https://yoloabdo.com/baba-abdo/en/)
+- [App Store](https://apps.apple.com/app/id6821673461)
+- [Support](https://yoloabdo.com/baba-abdo/support/)
+- [Privacy Policy](https://yoloabdo.com/baba-abdo/privacy/)
+- [Launch post (English)](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/) · [Launch post (Arabic)](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/)
+- [1.0 release notes (English)](https://yoloabdo.com/blog/baba-abdo-1-0-release-notes/) · [1.0 release notes (Arabic)](https://yoloabdo.com/blog/baba-abdo-1-0-release-notes/ar/)
+
+## Key Features
+
+- **Seven-Day Story & 16 Neighbors** - neighborhood regulars with custom orders and dialogue in Egyptian Arabic
+- **Layered Koshary Bowl Gameplay** - assemble rice, pasta, lentils, chickpeas, sauce, onions and condiments; hold any ticket to pause the timer and read the order
+- **Shop Decoration & Untimed Practice** - spend in-game shift earnings on shop furnishings (no real money); unlock untimed practice after the 7-day story
+- **Daily Orders, Stickers & Game Center** - daily orders, eight stickers, optional Game Center scores and achievements
+- **Accessibility & Privacy** - 50% extra-time mode, reduced motion support, no ads, no analytics, no tracking, local save on device
+
+## Pricing
+
+- Free, with no ads, no in-app purchases and no subscriptions
+
+## Platform
+
+- iOS (iPhone), requires iOS 17 or later, landscape orientation, Arabic gameplay text
+- Plays fully offline (Game Center is optional)
 
 ## Developer
 

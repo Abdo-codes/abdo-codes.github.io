@@ -110,6 +110,18 @@ figcaption { margin-top: 10px; font-size: 14px; color: var(--ink-2); text-align:
 .shots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .shots img { border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 14px 30px rgba(59, 34, 20, 0.14); }
 
+/* Blog */
+.blog-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.blog-card { display: flex; flex-direction: column; gap: 6px; color: var(--ink); text-decoration: none; }
+.blog-card:hover { color: var(--ink); border-color: var(--brass); box-shadow: 0 10px 24px rgba(59, 34, 20, 0.12); }
+.blog-card:hover h3 { text-decoration: underline; }
+.blog-card .kicker { margin: 0; }
+.blog-card h3 { margin: 0; font-size: 19px; line-height: 1.35; }
+.blog-date { font-size: 14px; color: var(--ink-2); }
+.blog-all { display: inline-block; margin-top: 20px; font-weight: 600; }
+.blog-list + .blog-all { padding-block: 6px; }
+.blog-lang { align-self: flex-start; padding: 0 8px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+
 /* FAQ */
 .faq { background: var(--cream); }
 .faq details { max-width: 760px; border-bottom: 1px solid var(--line); padding-block: 16px; }
@@ -148,7 +160,7 @@ footer a { color: var(--ink-2); }
     .nav-links a.hide-sm { display: none; }
     .gallery, .gallery.five { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 70%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
     .gallery figure { scroll-snap-align: start; }
-    .feel-grid, .features { grid-template-columns: 1fr; }
+    .feel-grid, .features, .blog-list { grid-template-columns: 1fr; }
     .chapter figure { width: min(230px, 80%); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

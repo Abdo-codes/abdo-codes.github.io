@@ -198,7 +198,9 @@ footer {
 
 .footer-links {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
     list-style: none;
 }
 
@@ -247,3 +249,14 @@ footer {
 @media (max-width: 640px) {
     .nav-brand { padding: 4px 0; margin: -4px 0; }
 }
+
+/* Blog section */
+.posts-grid { max-width: 1000px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.post-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; text-align: left; }
+.post-kicker { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.post-card h3 { margin: 0; font-size: 19px; line-height: 1.3; }
+.post-card time { color: var(--text-muted); font-size: 13px; }
+.post-card p:last-child { margin: 0; }
+.posts-all { margin-top: 32px; text-align: center; font-weight: 600; }
+.posts-all a { color: var(--accent); }
+.posts-all a:hover { text-decoration: underline; }
