@@ -1,0 +1,5 @@
+# Keep internal SEO state, playbooks, and audit scripts out of the live GitHub Pages site.
+exclude:
+  - seo
+  - scripts
+  - .claude

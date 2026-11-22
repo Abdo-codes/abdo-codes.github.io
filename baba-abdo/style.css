@@ -75,6 +75,16 @@ h2{font:400 clamp(2.6rem,5vw,4.4rem)/1.16 Lalezar,sans-serif;color:var(--teal)}
 .neighbor.amina:before{background:#ec9674}
 .neighbor h3{font:700 3rem/1.35 Aref,Georgia,serif;color:var(--yellow)}
 .neighbor blockquote{font-weight:750;font-size:clamp(1rem,1.6vw,1.35rem);margin-top:.55rem;line-height:1.65}
+.blog{padding-block:clamp(3.3rem,6vw,6.2rem);border-top:2px solid var(--teal)}
+.blog-list{margin-top:1.6rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.blog-card{display:flex;flex-direction:column;gap:.35rem;padding:1.3rem 1.5rem;color:var(--ink);text-decoration:none;background:var(--paper);border:2px solid var(--teal);border-radius:4px;box-shadow:4px 5px 0 #caba8c}
+.blog-card:hover{box-shadow:2px 3px 0 #caba8c;transform:translate(1px,1px)}
+.blog-card:hover h3{text-decoration:underline}
+.blog-kicker{font-size:.85rem;font-weight:850;color:var(--red)}
+.blog-card h3{font:400 1.6rem/1.4 Lalezar,sans-serif;color:var(--teal)}
+.blog-date{font-size:.9rem;font-weight:650;color:#38524a}
+.blog-card p{font-weight:600;color:#3a5048}
+.blog-all{display:inline-block;margin-top:1.4rem;font-weight:800;color:var(--teal)}
 footer{background:var(--teal);color:var(--paper);padding-block:1.4rem}
 .foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .footer-brand{font:400 1.8rem/1.55 Lalezar,sans-serif;text-decoration:none}.foot nav{gap:1.4rem}
@@ -89,7 +99,7 @@ footer{background:var(--teal);color:var(--paper);padding-block:1.4rem}
 }
 @media(max-width:680px){
  .wrap{width:calc(100% - 2.25rem)}.masthead{gap:.65rem;min-height:62px;grid-template-columns:auto 1fr auto}.brand img{width:99px}
- .masthead nav{gap:.75rem;justify-content:center;font-size:.91rem}.masthead nav .support-link{display:none}.language{font-size:.88rem;gap:.35rem}
+ .masthead nav{gap:.75rem;justify-content:center;font-size:.91rem}.masthead nav .support-link,.masthead nav a[href="#blog"]{display:none}.language{font-size:.88rem;gap:.35rem}
  .hero-inner,html[lang=en] .hero-inner{display:flex;flex-direction:column;gap:0;padding:1.8rem 0 1.75rem}
  .hero-copy{text-align:center;align-self:stretch}.genre,.actions{justify-content:center}.genre{font-size:.94rem;margin-bottom:.45rem}
  .hero h1,html[lang=en] .hero h1{font-size:clamp(3.3rem,12.7vw,5rem)}
@@ -100,6 +110,7 @@ footer{background:var(--teal);color:var(--paper);padding-block:1.4rem}
  .hero:after{height:11px}.section-title{display:block}.section-title>p{margin-top:.35rem;font-size:1rem}
  .scene-tabs{gap:.45rem;margin:1rem 0 1.3rem}.scene-tabs a{padding:.3rem .65rem;font-size:.92rem}
  .scene figcaption{display:block;padding-top:.9rem}.scene h3{font-size:1.5rem}.game,.locals{padding-block:2.5rem}
+ .blog{padding-block:2.5rem}.blog-list{grid-template-columns:1fr;gap:1rem}.blog-card h3{font-size:1.4rem}
  .people{grid-template-columns:1fr;gap:1rem}.neighbor{min-height:202px}.neighbor img{max-width:210px}
  .foot{gap:.4rem 1.2rem}.foot nav{gap:1rem}
 }

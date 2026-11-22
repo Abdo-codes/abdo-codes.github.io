@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightcap Awake vs Amphetamine &amp; KeepingYouAwake (2026)</title>
+    <meta name="description" content="Amphetamine wins on triggers and closed-lid mode. Nightcap Awake wins if you want a sandboxed, MIT open-source Mac app that stays awake only while apps run.">
+    <meta name="author" content="Abdelrahman Eita">
+    <link rel="canonical" href="https://yoloabdo.com/nightcap-awake/vs-amphetamine/">
+    <meta name="theme-color" content="#050C18">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="icon" type="image/png" sizes="32x32" href="/nightcap-awake/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/nightcap-awake/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/nightcap-awake/vs-amphetamine/">
+    <meta property="og:site_name" content="Nightcap Awake">
+    <meta property="og:title" content="Nightcap Awake vs Amphetamine &amp; KeepingYouAwake (2026)">
+    <meta property="og:description" content="Honest comparison of Nightcap Awake, Amphetamine, KeepingYouAwake, and macOS caffeinate for Xcode builds and AI coding agents.">
+    <meta property="og:image" content="https://yoloabdo.com/nightcap-awake/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Nightcap Awake vs Amphetamine &amp; KeepingYouAwake (2026)">
+    <meta name="twitter:description" content="When Amphetamine or KeepingYouAwake is better, and when Nightcap Awake is the cleaner open-source Mac keep-awake tool.">
+    <meta name="twitter:image" content="https://yoloabdo.com/nightcap-awake/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://yoloabdo.com/nightcap-awake/vs-amphetamine/#article",
+          "headline": "Nightcap Awake vs Amphetamine, KeepingYouAwake, and caffeinate (2026)",
+          "description": "Amphetamine wins on complex triggers and closed-lid mode. Nightcap Awake wins if you want a sandboxed, MIT open-source Mac app that stays awake only while chosen apps run.",
+          "url": "https://yoloabdo.com/nightcap-awake/vs-amphetamine/",
+          "datePublished": "2026-11-22",
+          "dateModified": "2026-11-22",
+          "inLanguage": "en",
+          "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+          "publisher": { "@id": "https://yoloabdo.com/#person" },
+          "about": { "@id": "https://yoloabdo.com/nightcap-awake/#app" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Nightcap Awake", "item": "https://yoloabdo.com/nightcap-awake/" },
+            { "@type": "ListItem", "position": 3, "name": "vs Amphetamine", "item": "https://yoloabdo.com/nightcap-awake/vs-amphetamine/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Is Nightcap Awake a full replacement for Amphetamine?", "acceptedAnswer": { "@type": "Answer", "text": "No. Amphetamine supports closed-lid MacBook sessions (with its helper), schedules, Wi-Fi triggers, and display-awake toggles. Nightcap Awake intentionally does one job: prevent idle system sleep while your chosen apps run, then release the hold when they quit." } },
+            { "@type": "Question", "name": "How does Nightcap Awake compare to KeepingYouAwake?", "acceptedAnswer": { "@type": "Answer", "text": "Both are free and MIT open source. KeepingYouAwake is a manual/timed toggle wrapper around caffeinate (installed via GitHub or Homebrew). Nightcap Awake watches running apps automatically, lets your display sleep normally, and is available both on the sandboxed Mac App Store and via Homebrew." } },
+            { "@type": "Question", "name": "Why not just use caffeinate in Terminal?", "acceptedAnswer": { "@type": "Answer", "text": "caffeinate is built into macOS and great for wrapping a single script (caffeinate -i make build). It stops if the terminal closes, and you have to remember to run it before every Xcode build or coding agent session. Nightcap Awake handles the power assertion automatically whenever watched apps run." } },
+            { "@type": "Question", "name": "Does Nightcap Awake keep my MacBook awake with the lid closed?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nightcap Awake uses a standard macOS idle-sleep power assertion inside the App Sandbox, so closing the lid on battery still sleeps your MacBook. Use Amphetamine if you need closed-display mode." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/nightcap-awake/assets/nightcap.css">
+    <style>
+        .vs-hero { padding: 56px 0 48px; border-bottom: 1px solid var(--divider); }
+        .crumbs { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; }
+        .crumbs a { color: var(--text-dim); }
+        .vs-hero h1 { font-size: clamp(34px, 4.8vw, 56px); line-height: 1.06; margin-bottom: 20px; max-width: 22ch; }
+        .verdict-card { background: var(--surface); border: 1px solid var(--divider); border-left: 4px solid var(--accent); border-radius: 16px; padding: 20px 24px; max-width: 72ch; color: var(--text); margin-bottom: 26px; }
+        .vs-section { padding: 64px 0; border-bottom: 1px solid var(--divider); }
+        .vs-section h2 { font-size: clamp(26px, 3.4vw, 38px); margin-bottom: 14px; }
+        .vs-section .sub { color: var(--text-dim); max-width: 66ch; margin-bottom: 26px; }
+        .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--divider); border-radius: 16px; }
+        .vs-table { width: 100%; border-collapse: collapse; min-width: 700px; font-size: 16px; }
+        .vs-table th, .vs-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--divider); vertical-align: top; }
+        .vs-table thead th { background: var(--surface-2); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+        .vs-table tbody tr:last-child td { border-bottom: 0; }
+        .footnote { font-size: 14px; color: var(--text-muted); margin-top: 12px; }
+        .tool-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+        @media (max-width: 780px) { .tool-grid { grid-template-columns: 1fr; } }
+        .tool-card { background: var(--surface); border: 1px solid var(--divider); border-radius: 16px; padding: 22px; }
+        .tool-card h3 { font-size: 21px; margin-bottom: 8px; color: var(--accent); }
+        .tool-card p { font-size: 16px; color: var(--text-dim); margin-bottom: 12px; }
+        .tool-card ul { list-style: none; font-size: 15px; color: var(--text-dim); }
+        .tool-card li { margin-bottom: 7px; }
+        .tool-card strong { color: var(--text); }
+        .steps-ol { padding-left: 22px; max-width: 68ch; color: var(--text-dim); }
+        .steps-ol li { margin-bottom: 12px; }
+        .steps-ol strong { color: var(--text); }
+    </style>
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="wrap">
+            <a class="brand" href="/nightcap-awake/">
+                <img src="/nightcap-awake/app-icon-256.webp" alt="" width="36" height="36">
+                <span>Nightcap Awake</span>
+            </a>
+            <div class="nav-links">
+                <a href="/nightcap-awake/">App</a>
+                <a href="/blog/xcode-deriveddata-safe-to-delete/">Xcode Guide</a>
+                <a class="hide-sm" href="https://github.com/Abdo-codes/Nightcap" rel="noopener">GitHub</a>
+                <a href="/apps/">Apps</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="vs-hero">
+        <div class="wrap">
+            <div class="crumbs"><a href="/">Home</a> / <a href="/nightcap-awake/">Nightcap Awake</a> / vs Amphetamine</div>
+            <span class="kicker">Comparison &middot; Checked 22 Nov 2026</span>
+            <h1>Nightcap Awake vs Amphetamine, KeepingYouAwake, and <em>caffeinate</em></h1>
+            <div class="verdict-card">
+                <strong>Verdict:</strong> Pick <strong>Amphetamine</strong> if you need closed-lid MacBook keep-awake, Wi-Fi/USB triggers, or schedules, and pick <strong>KeepingYouAwake</strong> if you prefer a manual timed toggle. Pick <strong><a href="/nightcap-awake/">Nightcap Awake</a></strong> if you want a free, MIT open-source, sandboxed Mac App Store menu bar app with zero network access that keeps your Mac awake only while chosen apps like Xcode, Codex, Claude Code, or Ghostty are running.
+            </div>
+            <div class="actions">
+                <a class="store-badge" href="https://apps.apple.com/app/id6769450957" data-cta="nightcap-vs-hero" aria-label="Download Nightcap Awake on the Mac App Store">
+                    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" width="211" height="54">
+                </a>
+                <a class="button" href="https://github.com/Abdo-codes/Nightcap" rel="noopener">Inspect MIT Source</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="vs-section">
+            <div class="wrap">
+                <span class="kicker">Feature matrix</span>
+                <h2>Side-by-side comparison</h2>
+                <p class="sub">All four tools are free. The real difference is open-source auditability, App Sandbox isolation, automatic app watching, and whether you want advanced triggers or zero setup.</p>
+
+                <div class="table-wrap">
+                    <table class="vs-table">
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Nightcap Awake</th>
+                                <th>Amphetamine</th>
+                                <th>KeepingYouAwake</th>
+                                <th>caffeinate (built-in)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Price</strong></td>
+                                <td>Free (no ads, no IAP)</td>
+                                <td>Free (no ads, no IAP)</td>
+                                <td>Free</td>
+                                <td>Free (included in macOS)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Open source</strong></td>
+                                <td>Yes (MIT on GitHub)</td>
+                                <td>No (closed source)</td>
+                                <td>Yes (MIT, 7,058 stars on GitHub)</td>
+                                <td>Apple system binary</td>
+                            </tr>
+                            <tr>
+                                <td><strong>App-based auto awake</strong></td>
+                                <td>Core workflow: pick apps once, hold releases automatically when last watched app quits</td>
+                                <td>Yes, via custom Triggers configuration</td>
+                                <td>No (manual or timed duration toggle)</td>
+                                <td>Manual per command (<code>caffeinate -i &lt;cmd&gt;</code>)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Display can still turn off</strong></td>
+                                <td>Yes (stops idle system sleep only)</td>
+                                <td>Configurable (display sleep on or off)</td>
+                                <td>Configurable</td>
+                                <td>Yes with <code>-i</code> (or display awake with <code>-d</code>)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Closed-lid MacBook mode</strong></td>
+                                <td>No (App Sandbox limit)</td>
+                                <td>Yes (with optional Amphetamine Enhancer helper)</td>
+                                <td>No</td>
+                                <td>No on battery without external display</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Install method</strong></td>
+                                <td>Mac App Store (sandboxed) or Homebrew cask</td>
+                                <td>Mac App Store (+ separate helper download for closed-lid)</td>
+                                <td>GitHub release or Homebrew cask</td>
+                                <td>Pre-installed in <code>/usr/bin/caffeinate</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Minimum macOS</strong></td>
+                                <td>macOS 14 Sonoma or later</td>
+                                <td>Broad legacy macOS support</td>
+                                <td>macOS 10.14+ (check latest release)</td>
+                                <td>Every modern macOS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Network &amp; analytics</strong></td>
+                                <td>Zero network access, zero analytics</td>
+                                <td>No ads; App Store privacy labels</td>
+                                <td>Sparkle update checks (optional)</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="footnote">Facts checked 2026-11-22 against github.com/Abdo-codes/Nightcap, github.com/newmarcel/KeepingYouAwake, Mac App Store Amphetamine documentation, and macOS caffeinate.</p>
+            </div>
+        </section>
+
+        <section class="vs-section">
+            <div class="wrap">
+                <span class="kicker">Tool-by-tool breakdown</span>
+                <h2>When each tool is the right pick</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>1. Nightcap Awake</h3>
+                        <p><strong>Verdict:</strong> Built specifically to keep your Mac awake while chosen developer apps run, then sleep normally when they quit.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Developers running Xcode builds, Claude Code, Codex, Ghostty, or long exports who want zero manual toggling and inspectable MIT source code.</li>
+                            <li><strong>Strengths:</strong> Sandboxed Mac App Store build + Homebrew cask, zero network entitlements, zero analytics, allows display to turn off while CPU work finishes.</li>
+                            <li><strong>Trade-offs:</strong> Requires macOS 14+, no closed-lid clamshell override, no schedule or Wi-Fi triggers.</li>
+                            <li><strong>Price:</strong> Free (MIT).</li>
+                        </ul>
+                    </article>
+
+                    <article class="tool-card">
+                        <h3>2. Amphetamine</h3>
+                        <p><strong>Verdict:</strong> The most feature-complete keep-awake utility on macOS with triggers, schedules, and closed-lid sessions.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Power users who want sessions triggered by Wi-Fi SSID, battery threshold, connected displays, or closed-lid MacBook use.</li>
+                            <li><strong>Strengths:</strong> Free on Mac App Store, mature trigger engine, keeps screen awake when needed, optional Enhancer helper for closed-lid mode.</li>
+                            <li><strong>Trade-offs:</strong> Closed source; heavier preferences UI if you only ever wanted app-based wake rules.</li>
+                            <li><strong>Price:</strong> Free.</li>
+                        </ul>
+                    </article>
+
+                    <article class="tool-card">
+                        <h3>3. KeepingYouAwake</h3>
+                        <p><strong>Verdict:</strong> A trusted, open-source MIT menu-bar wrapper around macOS <code>caffeinate</code> for quick timed toggles.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> People who want a classic one-click coffee cup icon ("stay awake for 1 hour / 5 hours / indefinitely") with open-source code.</li>
+                            <li><strong>Strengths:</strong> MIT licensed, widely audited on GitHub (7,058 stars), supports older macOS versions, available via Homebrew.</li>
+                            <li><strong>Trade-offs:</strong> No automatic watched-app list; not distributed on the Mac App Store; easy to leave toggled on overnight.</li>
+                            <li><strong>Price:</strong> Free (MIT).</li>
+                        </ul>
+                    </article>
+
+                    <article class="tool-card">
+                        <h3>4. Apple caffeinate (CLI)</h3>
+                        <p><strong>Verdict:</strong> Built directly into macOS with zero installation required for single terminal commands and shell scripts.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> One-off commands (<code>caffeinate -i ./deploy.sh</code>) or CI/automation scripts where no GUI app belongs.</li>
+                            <li><strong>Strengths:</strong> Zero install, native macOS assertion flags (<code>-i</code> idle, <code>-d</code> display, <code>-t</code> seconds, <code>-w</code> wait for PID).</li>
+                            <li><strong>Trade-offs:</strong> Ends when the Terminal tab closes; requires remembering to wrap every build or agent launch manually.</li>
+                            <li><strong>Price:</strong> Built into macOS.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="vs-section">
+            <div class="wrap">
+                <span class="kicker">Quick setup</span>
+                <h2>Switch from Amphetamine or caffeinate in 2 minutes</h2>
+                <ol class="steps-ol">
+                    <li><strong>Install Nightcap Awake:</strong> grab it free on the <a href="https://apps.apple.com/app/id6769450957">Mac App Store</a> or run <code>brew install --cask Abdo-codes/tap/nightcap</code>.</li>
+                    <li><strong>Add your watched apps:</strong> click the cup icon in the menu bar and pick Xcode, Ghostty, Terminal, Codex, or any app that runs long jobs.</li>
+                    <li><strong>Turn on Launch at Login</strong> and let Nightcap run silently in the background. When you clean <a href="/blog/xcode-deriveddata-safe-to-delete/">Xcode DerivedData</a> or run parallel agents across <a href="/blog/git-worktree-remove-keep-branch/">Git worktrees</a>, your Mac stays awake until the app quits, then sleeps normally.</li>
+                    <li><strong>Disable overlapping holds:</strong> quit Amphetamine or remove custom <code>caffeinate</code> aliases so only one app manages sleep assertions.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="faq" class="vs-section">
+            <div class="wrap">
+                <span class="kicker">Questions</span>
+                <h2>Comparison FAQ</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is Nightcap Awake a full replacement for Amphetamine?</summary>
+                        <div class="faq-answer">No. If you need closed-lid MacBook keep-awake, Wi-Fi/power-adapter triggers, or timed schedules, stay with Amphetamine. Nightcap Awake is for users who want one focused, MIT open-source rule: stay awake while chosen apps run, sleep when they quit.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How does Nightcap Awake compare to KeepingYouAwake?</summary>
+                        <div class="faq-answer">Both are free and MIT licensed. KeepingYouAwake is a manual/timed toggle wrapper around <code>caffeinate</code>. Nightcap Awake watches running apps automatically, lets your display turn off normally, and ships sandboxed on the Mac App Store as well as Homebrew.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why not just run caffeinate in Terminal?</summary>
+                        <div class="faq-answer"><code>caffeinate -i &lt;command&gt;</code> is great inside a shell script, but you have to remember to invoke it before every GUI Xcode build or agent session. Nightcap Awake holds and releases the macOS power assertion automatically.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Nightcap Awake keep my MacBook awake with the lid closed?</summary>
+                        <div class="faq-answer">No. Because Nightcap Awake runs inside the macOS App Sandbox with standard idle-sleep assertions, closing the lid on battery still puts your MacBook to sleep. Use Amphetamine if you need closed-display mode.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="wrap">
+                <img class="icon" src="/nightcap-awake/app-icon-256.webp" alt="Nightcap Awake app icon" width="96" height="96" loading="lazy">
+                <h2>Auditable, sandboxed, <em>and automatic.</em></h2>
+                <p>Download Nightcap Awake free on the Mac App Store, or install via <code>brew install --cask Abdo-codes/tap/nightcap</code>.</p>
+                <div class="actions">
+                    <a class="store-badge" href="https://apps.apple.com/app/id6769450957" data-cta="nightcap-vs-footer" aria-label="Download Nightcap Awake on the Mac App Store">
+                        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" width="211" height="54" loading="lazy">
+                    </a>
+                    <a class="button" href="/nightcap-awake/">See Nightcap Awake features</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <div class="footer-links">
+                <a href="/nightcap-awake/">Nightcap Awake</a>
+                <a href="https://github.com/Abdo-codes/Nightcap" rel="noopener">MIT Source</a>
+                <a href="/apps/">All apps</a>
+                <a href="/">yoloabdo.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

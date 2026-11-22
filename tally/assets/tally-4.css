@@ -104,3 +104,13 @@
     .iphone-shots { grid-template-columns: repeat(3, 70%); overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 8px; }
     .iphone-shots figure { scroll-snap-align: center; }
 }
+
+/* Blog posts */
+.blog-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; margin: 0 auto; }
+.blog-card { display: block; background: var(--surface); border: 1px solid var(--divider); border-radius: 16px; padding: 28px 24px; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
+.blog-card:hover { border-color: var(--accent); transform: translateY(-2px); opacity: 1; }
+.blog-kicker { display: block; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+.blog-card h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; line-height: 1.3; margin-bottom: 6px; }
+.blog-card time { display: block; color: var(--text-muted); font-size: 13px; margin-bottom: 10px; }
+.blog-card p:last-child { color: var(--text-dim); font-size: 15px; line-height: 1.5; }
+.blog-all { text-align: center; margin-top: 28px; font-weight: 600; }

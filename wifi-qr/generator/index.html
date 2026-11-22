@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Wi-Fi QR Code &amp; Printable Sign Generator | Wi-Fi QR</title>
+    <meta name="description" content="Create a private Wi-Fi QR code and printable guest sign in your browser with zero signup. Runs 100% locally on your device, then print or download PNG/SVG.">
+    <meta name="author" content="Abdelrahman Eita">
+    <link rel="canonical" href="https://yoloabdo.com/wifi-qr/generator/">
+    <meta name="apple-itunes-app" content="app-id=6776169783">
+    <meta name="theme-color" content="#f6fbff">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wifi-qr/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/wifi-qr/apple-touch-icon.png">
+    <meta property="og:site_name" content="Wi-Fi QR">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoloabdo.com/wifi-qr/generator/">
+    <meta property="og:title" content="Free Wi-Fi QR Code &amp; Printable Sign Generator">
+    <meta property="og:description" content="Generate a scannable Wi-Fi QR code and printable Airbnb or guest sign in seconds. 100% in your browser, no account, password never uploaded.">
+    <meta property="og:image" content="https://yoloabdo.com/wifi-qr/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="Free Wi-Fi QR Code &amp; Printable Sign Generator">
+    <meta name="twitter:description" content="Generate a private Wi-Fi QR code and printable guest sign locally in your browser. Zero signup, download PNG or SVG, or print right away.">
+    <meta name="twitter:image" content="https://yoloabdo.com/wifi-qr/og-image.jpg">
+    <script src="/wifi-qr/assets/analytics.js" defer></script>
+    <script src="/assets/track.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://yoloabdo.com/wifi-qr/generator/#tool",
+          "name": "Free Wi-Fi QR Code & Printable Sign Generator",
+          "url": "https://yoloabdo.com/wifi-qr/generator/",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any modern web browser",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Free client-side Wi-Fi QR code and printable guest sign generator. Runs entirely in the browser with no account and never sends network names or passwords to a server.",
+          "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://yoloabdo.com/wifi-qr/generator/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yoloabdo.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Wi-Fi QR", "item": "https://yoloabdo.com/wifi-qr/" },
+            { "@type": "ListItem", "position": 3, "name": "Free Generator", "item": "https://yoloabdo.com/wifi-qr/generator/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://yoloabdo.com/wifi-qr/generator/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "Does this Wi-Fi QR code generator upload my password?", "acceptedAnswer": { "@type": "Answer", "text": "No. The QR code is computed locally in JavaScript inside your browser tab. Your Wi-Fi name and password never leave your device, and you can even disconnect from the internet after loading the page and keep generating codes." } },
+            { "@type": "Question", "name": "Will iPhone and Android cameras scan the QR code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool creates a standard WIFI:T:WPA;S:...;P:...;; QR code with proper escaping for special characters and Error Correction Level M. Point the built-in iPhone Camera app or Android camera at the code to join." } },
+            { "@type": "Question", "name": "Does the QR code expire or require a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a static QR code that holds your network credentials directly, not a redirect link. It works offline forever until you change your router password." } },
+            { "@type": "Question", "name": "What extra features are in the Wi-Fi QR iPhone app?", "acceptedAnswer": { "@type": "Answer", "text": "The Wi-Fi QR iPhone and iPad app adds 6 printable sign templates, 4 paper sizes (4 x 6 in, 5 x 7 in, A4, US Letter), 8 cut-out room cards on one sheet, camera router-sticker scanning in English, Arabic, German and French, and saved local networks." } }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="/wifi-qr/assets/wifi-qr.css">
+    <link rel="stylesheet" href="/wifi-qr/assets/wifi-qr-2.css">
+    <style>
+        .gen-hero { border-bottom: 1px solid var(--line); background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(246,251,255,0.98)), radial-gradient(circle at 82% 14%, rgba(31,174,133,0.16), transparent 32%), radial-gradient(circle at 12% 14%, rgba(35,116,247,0.12), transparent 30%); padding: 36px 0 44px; }
+        .gen-hero h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.08; margin: 14px 0 12px; letter-spacing: -0.025em; }
+        .gen-hero .lead { max-width: 66ch; margin: 0 0 24px; color: var(--muted); font-size: 1.08rem; }
+        .gen-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 430px); gap: 28px; align-items: start; }
+        @media (max-width: 860px) { .gen-grid { grid-template-columns: 1fr; } }
+        .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 24px; box-shadow: 0 12px 34px rgba(16, 32, 51, 0.06); }
+        .field { margin-bottom: 16px; }
+        .field label { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+        .field input[type="text"], .field input[type="password"], .field select {
+            width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: 12px;
+            font: inherit; font-size: 1rem; color: var(--ink); background: #fbfdff;
+        }
+        .field input:focus, .field select:focus { outline: 2px solid var(--blue); outline-offset: 1px; background: #fff; }
+        .pw-row { display: flex; gap: 8px; }
+        .pw-row input { flex: 1; }
+        .pw-toggle { padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--wash); color: var(--ink); font: inherit; font-size: 0.88rem; font-weight: 650; cursor: pointer; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        @media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+        .check-row { display: flex; align-items: center; gap: 10px; margin: 4px 0 18px; font-size: 0.94rem; color: var(--muted); }
+        .check-row input { width: 18px; height: 18px; accent-color: var(--blue); }
+        .style-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+        .style-pill { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--wash); color: var(--ink); font: inherit; font-size: 0.88rem; font-weight: 650; cursor: pointer; }
+        .style-pill[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+        .privacy-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 0.86rem; color: #16745a; background: var(--mint-soft); border: 1px solid #bfe9dc; border-radius: 10px; padding: 8px 12px; margin-bottom: 18px; }
+        .sign-card { background: #fff; border: 2px solid #102033; border-radius: 22px; padding: 28px 24px; text-align: center; box-shadow: var(--shadow); }
+        .sign-card.minimal { border-color: var(--line); box-shadow: 0 12px 30px rgba(16,32,51,0.08); }
+        .sign-kicker { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-ink); margin: 0 0 6px; }
+        .sign-title { font-size: 1.55rem; font-weight: 800; margin: 0 0 16px; color: var(--ink); line-height: 1.15; overflow-wrap: anywhere; }
+        .qr-frame { width: min(260px, 100%); aspect-ratio: 1 / 1; margin: 0 auto 18px; padding: 10px; border: 1px solid var(--line); border-radius: 16px; background: #fff; display: flex; align-items: center; justify-content: center; }
+        .qr-frame svg { width: 100%; height: 100%; display: block; }
+        .cred-box { background: var(--wash); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; text-align: left; margin-bottom: 14px; }
+        .cred-row { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 0.94rem; }
+        .cred-row + .cred-row { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 8px; }
+        .cred-label { color: var(--muted); font-weight: 650; flex-shrink: 0; }
+        .cred-val { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-weight: 700; color: var(--ink); overflow-wrap: anywhere; text-align: right; }
+        .sign-footer { font-size: 0.9rem; color: var(--muted); margin: 0; }
+        .gen-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+        .gen-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: 0.92rem; font-weight: 700; cursor: pointer; text-decoration: none; }
+        .gen-btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+        .gen-btn:hover { filter: brightness(0.97); }
+        .gen-status { min-height: 22px; margin: 10px 0 0; font-size: 0.86rem; color: #16745a; text-align: center; }
+        .app-upsell { margin-top: 28px; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 24px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+        .app-upsell h2 { font-size: 1.35rem; margin: 0 0 6px; }
+        .app-upsell p { margin: 0; color: var(--muted); max-width: 58ch; }
+        .crumbs { font-size: 0.88rem; color: var(--muted); margin-bottom: 10px; }
+        .crumbs a { text-decoration: none; }
+        .crumbs a:hover { text-decoration: underline; }
+        @media print {
+            body { background: #fff !important; }
+            .site-nav, .crumbs, .gen-hero > .section-inner > .eyebrow, .gen-hero h1, .gen-hero .lead, .gen-controls, .gen-actions, .gen-status, .app-upsell, main > section, footer { display: none !important; }
+            .gen-hero { border: none; background: #fff !important; padding: 0; }
+            .gen-grid { display: block; }
+            .sign-card { box-shadow: none; max-width: 460px; margin: 24px auto; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/wifi-qr/">
+                <img src="/wifi-qr/app-icon-256.webp" alt="Wi-Fi QR app icon" width="42" height="42">
+                <span>Wi-Fi QR</span>
+            </a>
+            <div class="nav-links" aria-label="Wi-Fi QR links">
+                <a href="/wifi-qr/">iPhone App</a>
+                <a href="/wifi-qr/airbnb-wifi-sign/">Host Guide</a>
+                <a href="/wifi-qr/vs-canva-etsy/">vs Canva &amp; Etsy</a>
+                <a href="/">Abdo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="gen-hero">
+        <div class="section-inner">
+            <div class="crumbs"><a href="/">Home</a> / <a href="/wifi-qr/">Wi-Fi QR</a> / Free Generator</div>
+            <span class="eyebrow">100% browser-side &middot; No signup</span>
+            <h1>Free Wi-Fi QR code and printable sign generator</h1>
+            <p class="lead">Enter your Wi-Fi name and password to generate a static, scannable QR code and printable guest card right in your browser. Nothing is uploaded, nothing expires, and iPhone and Android cameras scan it straight away.</p>
+
+            <div class="gen-grid">
+                <div class="panel gen-controls">
+                    <div class="privacy-pill">Private: generated locally in JavaScript. Your password never leaves this tab.</div>
+
+                    <div class="field">
+                        <label for="ssid">Wi-Fi network name (SSID)</label>
+                        <input id="ssid" type="text" value="Guest Wi-Fi" maxlength="64" autocomplete="off" spellcheck="false" placeholder="e.g. BeachHouse_Guest">
+                    </div>
+
+                    <div class="field" id="pwField">
+                        <label for="password">Password</label>
+                        <div class="pw-row">
+                            <input id="password" type="text" value="Welcome2026" maxlength="63" autocomplete="off" spellcheck="false" placeholder="Enter Wi-Fi password">
+                            <button type="button" class="pw-toggle" id="pwToggle" aria-label="Hide or show password">Hide</button>
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="field">
+                            <label for="security">Security</label>
+                            <select id="security">
+                                <option value="WPA" selected>WPA / WPA2 / WPA3</option>
+                                <option value="WEP">WEP (older router)</option>
+                                <option value="nopass">Open (no password)</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="cardTitle">Sign headline</label>
+                            <input id="cardTitle" type="text" value="Welcome! Join our Wi-Fi" maxlength="48" placeholder="Welcome! Join our Wi-Fi">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="cardFooter">Footer note</label>
+                        <input id="cardFooter" type="text" value="Point your iPhone or Android camera at the code to connect." maxlength="90">
+                    </div>
+
+                    <label class="check-row">
+                        <input type="checkbox" id="hiddenNet">
+                        <span>Hidden network (SSID is not broadcast)</span>
+                    </label>
+
+                    <label class="check-row">
+                        <input type="checkbox" id="showCreds" checked>
+                        <span>Show plain-text network name and password on the sign (recommended for laptops and TVs)</span>
+                    </label>
+
+                    <div class="style-pills" role="group" aria-label="Card style">
+                        <button type="button" class="style-pill" data-style="classic" aria-pressed="true">Classic Card</button>
+                        <button type="button" class="style-pill" data-style="minimal" aria-pressed="false">Minimal Ink-Safe</button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="sign-card" id="signCard">
+                        <p class="sign-kicker" id="previewKicker">Guest Wi-Fi</p>
+                        <h2 class="sign-title" id="previewTitle">Welcome! Join our Wi-Fi</h2>
+                        <div class="qr-frame" id="qrMount" aria-live="polite"></div>
+                        <div class="cred-box" id="credBox">
+                            <div class="cred-row"><span class="cred-label">Network</span><span class="cred-val" id="previewSsid">Guest Wi-Fi</span></div>
+                            <div class="cred-row" id="previewPwRow"><span class="cred-label">Password</span><span class="cred-val" id="previewPw">Welcome2026</span></div>
+                        </div>
+                        <p class="sign-footer" id="previewFooter">Point your iPhone or Android camera at the code to connect.</p>
+                    </div>
+
+                    <div class="gen-actions">
+                        <button type="button" class="gen-btn primary" id="btnPrint">Print Sign</button>
+                        <button type="button" class="gen-btn" id="btnPng">Download PNG Card</button>
+                        <button type="button" class="gen-btn" id="btnSvg">Download QR SVG</button>
+                        <button type="button" class="gen-btn" id="btnCopy">Copy WIFI: String</button>
+                    </div>
+                    <p class="gen-status" id="genStatus" role="status"></p>
+                </div>
+            </div>
+
+            <aside class="app-upsell" aria-label="Wi-Fi QR iPhone app">
+                <div>
+                    <h2>Need 6 print styles, 8 cut-out room cards, or router-sticker scanning?</h2>
+                    <p>The free <a href="/wifi-qr/"><strong>Wi-Fi QR app for iPhone and iPad</strong></a> scans printed router labels with your camera, saves multiple guest networks locally, and prints 4 x 6 in, 5 x 7 in, A4, US Letter, or 8 cut-out cards per page.</p>
+                </div>
+                <div class="actions">
+                    <a class="button primary" href="https://apps.apple.com/app/id6776169783" data-cta="wifi-qr-generator-upsell">Get Wi-Fi QR on App Store</a>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">How it works</span>
+                    <h2>What happens when a guest scans your Wi-Fi QR code?</h2>
+                    <p>Your code stores one plain text string (<code>WIFI:T:WPA;S:Network;P:Password;;</code>) directly in the black-and-white pattern. iOS Camera and Android Camera parse that standard string locally and prompt the guest to tap Join without installing any app.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature">
+                        <div class="feature-mark">1</div>
+                        <h3>Static and offline forever</h3>
+                        <p>Unlike "dynamic QR" websites that break after a 14-day trial, this code contains no redirect URL. It works as long as your router password stays the same.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">2</div>
+                        <h3>Special characters escaped safely</h3>
+                        <p>Backslashes, semicolons, colons, commas, and quotes in your network name or password are escaped per the ZXing/Apple Wi-Fi QR spec so scanning never drops characters.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-mark">3</div>
+                        <h3>Pair QR with readable text</h3>
+                        <p>Laptops, smart TVs, and older tablets cannot scan a Wi-Fi QR code. Keeping the printed name and password on the card prevents check-in messages. Read our <a href="/wifi-qr/airbnb-wifi-sign/">Airbnb WiFi sign host guide</a> or compare <a href="/wifi-qr/vs-canva-etsy/">Wi-Fi QR vs Canva &amp; Etsy templates</a>.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="template-band">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <span class="section-kicker">FAQ</span>
+                    <h2>Wi-Fi QR generator questions</h2>
+                </div>
+                <div class="faq">
+                    <article>
+                        <h3>Does this Wi-Fi QR code generator upload my password?</h3>
+                        <p>No. The QR encoder in <code>qr.js</code> runs locally inside your browser tab with zero network requests. You can turn off Wi-Fi after loading the page and generate as many codes as you want.</p>
+                    </article>
+                    <article>
+                        <h3>Will iPhone and Android cameras scan the QR code?</h3>
+                        <p>Yes. iOS Camera and modern Android cameras natively support the <code>WIFI:</code> QR standard. Need to share a saved password directly from an iPhone to Android without printing? Follow our <a href="/blog/share-wifi-password-iphone-to-android/">iPhone to Android Wi-Fi sharing guide</a>.</p>
+                    </article>
+                    <article>
+                        <h3>Does the QR code expire or require a subscription?</h3>
+                        <p>No. It is a static QR code with no tracking redirect and no account. You only need to print a new sign if you change your Wi-Fi password.</p>
+                    </article>
+                    <article>
+                        <h3>What extra features are in the Wi-Fi QR iPhone app?</h3>
+                        <p><a href="/wifi-qr/">Wi-Fi QR on iPhone and iPad</a> adds 6 print templates, exact 4 x 6 / 5 x 7 / A4 / US Letter sizing, 8 cut-out cards on one sheet, camera scanning for router stickers, and local saved networks for hosts managing multiple properties.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>&copy; 2026 Abdelrahman Eita. Wi-Fi QR.</span>
+            <span><a href="/wifi-qr/">Wi-Fi QR App</a> &middot; <a href="/wifi-qr/airbnb-wifi-sign/">Airbnb Host Guide</a> &middot; <a href="/wifi-qr/vs-canva-etsy/">vs Canva &amp; Etsy</a> &middot; <a href="/wifi-qr/privacy/">Privacy</a> &middot; <a href="/wifi-qr/support/">Support</a></span>
+        </div>
+    </footer>
+
+    <script src="/wifi-qr/generator/qr.js"></script>
+    <script>
+    (function () {
+        const els = {
+            ssid: document.getElementById('ssid'),
+            password: document.getElementById('password'),
+            pwField: document.getElementById('pwField'),
+            pwToggle: document.getElementById('pwToggle'),
+            security: document.getElementById('security'),
+            cardTitle: document.getElementById('cardTitle'),
+            cardFooter: document.getElementById('cardFooter'),
+            hiddenNet: document.getElementById('hiddenNet'),
+            showCreds: document.getElementById('showCreds'),
+            signCard: document.getElementById('signCard'),
+            previewTitle: document.getElementById('previewTitle'),
+            previewSsid: document.getElementById('previewSsid'),
+            previewPw: document.getElementById('previewPw'),
+            previewPwRow: document.getElementById('previewPwRow'),
+            previewFooter: document.getElementById('previewFooter'),
+            credBox: document.getElementById('credBox'),
+            qrMount: document.getElementById('qrMount'),
+            status: document.getElementById('genStatus'),
+            btnPrint: document.getElementById('btnPrint'),
+            btnPng: document.getElementById('btnPng'),
+            btnSvg: document.getElementById('btnSvg'),
+            btnCopy: document.getElementById('btnCopy')
+        };
+
+        // Non-sensitive URL presets (never read passwords from query strings)
+        const params = new URLSearchParams(location.search);
+        if (params.get('title')) els.cardTitle.value = params.get('title').slice(0, 48);
+        if (params.get('security') && ['WPA', 'WEP', 'nopass'].includes(params.get('security'))) {
+            els.security.value = params.get('security');
+        }
+
+        let currentSvg = '';
+        let currentPayload = '';
+        let currentQr = null;
+        let currentStyle = 'classic';
+
+        function render() {
+            const ssid = els.ssid.value.trim() || 'Guest Wi-Fi';
+            const sec = els.security.value;
+            const pw = sec === 'nopass' ? '' : els.password.value;
+            els.pwField.style.display = sec === 'nopass' ? 'none' : '';
+            els.previewTitle.textContent = els.cardTitle.value.trim() || 'Guest Wi-Fi';
+            els.previewSsid.textContent = ssid;
+            els.previewPw.textContent = pw || '(no password)';
+            els.previewPwRow.style.display = sec === 'nopass' ? 'none' : '';
+            els.credBox.style.display = els.showCreds.checked ? '' : 'none';
+            els.previewFooter.textContent = els.cardFooter.value.trim();
+
+            currentPayload = window.WifiQR.buildWifiPayload({
+                ssid,
+                password: pw,
+                security: sec,
+                hidden: els.hiddenNet.checked
+            });
+
+            try {
+                currentQr = window.WifiQR.encodeQR(currentPayload);
+                currentSvg = window.WifiQR.toSVG(currentQr, { quiet: 4, dark: '#102033', light: '#ffffff' });
+                els.qrMount.innerHTML = currentSvg;
+                els.status.textContent = '';
+            } catch (err) {
+                els.qrMount.textContent = 'Network name or password is too long for a scannable QR code.';
+                els.status.textContent = err.message;
+            }
+        }
+
+        els.pwToggle.addEventListener('click', function () {
+            const isPw = els.password.type === 'password';
+            els.password.type = isPw ? 'text' : 'password';
+            els.pwToggle.textContent = isPw ? 'Hide' : 'Show';
+        });
+
+        document.querySelectorAll('.style-pill').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                currentStyle = btn.dataset.style;
+                document.querySelectorAll('.style-pill').forEach(function (b) {
+                    b.setAttribute('aria-pressed', String(b === btn));
+                });
+                els.signCard.classList.toggle('minimal', currentStyle === 'minimal');
+            });
+        });
+
+        ['input', 'change'].forEach(function (ev) {
+            [els.ssid, els.password, els.security, els.cardTitle, els.cardFooter, els.hiddenNet, els.showCreds].forEach(function (el) {
+                el.addEventListener(ev, render);
+            });
+        });
+
+        els.btnPrint.addEventListener('click', function () {
+            window.print();
+        });
+
+        els.btnSvg.addEventListener('click', function () {
+            if (!currentSvg) return;
+            const blob = new Blob([currentSvg], { type: 'image/svg+xml;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'wifi-qr-code.svg';
+            a.click();
+            URL.revokeObjectURL(a.href);
+            els.status.textContent = 'Downloaded wifi-qr-code.svg';
+        });
+
+        els.btnCopy.addEventListener('click', function () {
+            if (!currentPayload) return;
+            navigator.clipboard.writeText(currentPayload).then(function () {
+                els.status.textContent = 'Copied standard WIFI: payload to clipboard.';
+            }, function () {
+                els.status.textContent = currentPayload;
+            });
+        });
+
+        els.btnPng.addEventListener('click', function () {
+            if (!currentQr) return;
+            const canvas = document.createElement('canvas');
+            const W = 1200, H = 1560;
+            canvas.width = W; canvas.height = H;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, W, H);
+
+            // Outer frame
+            ctx.strokeStyle = currentStyle === 'classic' ? '#102033' : '#dce5ee';
+            ctx.lineWidth = currentStyle === 'classic' ? 8 : 4;
+            ctx.strokeRect(48, 48, W - 96, H - 96);
+
+            // Kicker & Title
+            ctx.fillStyle = '#154a9c';
+            ctx.font = '700 28px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('GUEST WI-FI', W / 2, 138);
+
+            ctx.fillStyle = '#102033';
+            ctx.font = '800 54px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillText((els.cardTitle.value.trim() || 'Guest Wi-Fi').slice(0, 38), W / 2, 214);
+
+            // QR code
+            const quiet = 4;
+            const totalMod = currentQr.size + quiet * 2;
+            const qrPx = 760;
+            const cell = Math.floor(qrPx / totalMod);
+            const drawSize = cell * totalMod;
+            const ox = Math.floor((W - drawSize) / 2);
+            const oy = 270;
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(ox, oy, drawSize, drawSize);
+            ctx.fillStyle = '#102033';
+            for (let r = 0; r < currentQr.size; r++) {
+                for (let c = 0; c < currentQr.size; c++) {
+                    if (currentQr.modules[r][c]) {
+                        ctx.fillRect(ox + (c + quiet) * cell, oy + (r + quiet) * cell, cell, cell);
+                    }
+                }
+            }
+
+            // Credentials box
+            let y = oy + drawSize + 64;
+            if (els.showCreds.checked) {
+                ctx.fillStyle = '#f6fbff';
+                ctx.fillRect(140, y - 34, W - 280, els.security.value === 'nopass' ? 92 : 168);
+                ctx.strokeStyle = '#dce5ee';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(140, y - 34, W - 280, els.security.value === 'nopass' ? 92 : 168);
+
+                ctx.textAlign = 'left';
+                ctx.fillStyle = '#5d6c7b';
+                ctx.font = '600 30px -apple-system, BlinkMacSystemFont, sans-serif';
+                ctx.fillText('Network', 176, y + 20);
+                ctx.textAlign = 'right';
+                ctx.fillStyle = '#102033';
+                ctx.font = '700 32px ui-monospace, SFMono-Regular, Menlo, monospace';
+                ctx.fillText((els.ssid.value.trim() || 'Guest Wi-Fi').slice(0, 34), W - 176, y + 20);
+
+                if (els.security.value !== 'nopass') {
+                    ctx.textAlign = 'left';
+                    ctx.fillStyle = '#5d6c7b';
+                    ctx.font = '600 30px -apple-system, BlinkMacSystemFont, sans-serif';
+                    ctx.fillText('Password', 176, y + 96);
+                    ctx.textAlign = 'right';
+                    ctx.fillStyle = '#102033';
+                    ctx.font = '700 32px ui-monospace, SFMono-Regular, Menlo, monospace';
+                    ctx.fillText(els.password.value.slice(0, 34), W - 176, y + 96);
+                    y += 196;
+                } else {
+                    y += 120;
+                }
+            }
+
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#5d6c7b';
+            ctx.font = '500 28px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillText(els.cardFooter.value.trim().slice(0, 68), W / 2, Math.min(H - 96, y + 36));
+
+            const a = document.createElement('a');
+            a.href = canvas.toDataURL('image/png');
+            a.download = 'wifi-qr-sign.png';
+            a.click();
+            els.status.textContent = 'Downloaded wifi-qr-sign.png (1200 x 1560 px)';
+        });
+
+        render();
+    })();
+    </script>
+</body>
+</html>

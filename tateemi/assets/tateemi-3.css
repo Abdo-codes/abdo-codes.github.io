@@ -88,3 +88,18 @@
 @media (max-width: 900px) {
     .nav-end { gap: 0; }
 }
+
+/* ============================================
+   BLOG
+   ============================================ */
+.blog-section { background: var(--bg); border-top: 1px solid var(--divider); }
+.blog-list { display: grid; gap: 20px; max-width: 700px; margin: 0 auto; }
+.blog-card { display: flex; flex-direction: column; gap: 6px; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; color: var(--text); text-decoration: none; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
+.blog-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: var(--shadow-md); opacity: 1; }
+.blog-kicker { color: var(--green); font-size: 14px; font-weight: 700; }
+.blog-card h3 { font-size: 20px; line-height: 1.5; }
+.blog-date { color: var(--text-muted); font-size: 14px; }
+.blog-lang { align-self: flex-start; padding: 0 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--text-dim); font-size: 12px; line-height: 1.8; }
+.blog-card p { color: var(--text-dim); font-size: 16px; line-height: 1.8; }
+.blog-all { display: block; max-width: 700px; margin: 20px auto 0; color: var(--green-dark); font-weight: 700; }
+@media (max-width: 600px) { .blog-card { padding: 22px; } }

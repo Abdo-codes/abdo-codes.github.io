@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
-    <!-- Google tag (gtag.js) -->
+    <script src="/tally/assets/analytics.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MKWK9CX2JJ');
-    </script>
     <script src="/assets/track.js" defer></script>
-    <title>Tally — Free Score Keeper App for iPhone &amp; Apple TV Scoreboard</title>
+    <title>Tally: Free Score Keeper App for iPhone &amp; Apple TV</title>
     <meta name="description" content="Tally is a free score keeper app for iPhone and a scoreboard app for Apple TV. Game Night for 2–8 players, a chess clock and a house leaderboard. No ads.">
     <link rel="canonical" href="https://yoloabdo.com/tally/">
     <link rel="icon" type="image/png" sizes="32x32" href="/tally/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/tally/apple-touch-icon.png">
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yoloabdo.com/tally/">
     <meta property="og:title" content="Tally — Free Score Keeper for iPhone &amp; Apple TV Scoreboard">
@@ -40,19 +31,15 @@
     <meta name="twitter:description" content="Keep score on iPhone or Apple TV: Game Night for 2–8 players, a chess clock, a house leaderboard synced with iCloud, and giant sports scores on the TV.">
     <meta name="twitter:image" content="https://yoloabdo.com/tally/og-image.jpg">
     <meta name="twitter:image:alt" content="Tally scoreboard on Apple TV showing 47 to 38 in the second quarter">
-
     <meta name="apple-itunes-app" content="app-id=6760623633">
-
     <meta name="theme-color" content="#0A0A0F">
     <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Abdelrahman Eita">
     <meta name="keywords" content="score keeper app, score keeper app iphone, board game score keeper, rummy 500 score keeper, darts 501 scorer, chess clock app, apple tv scoreboard, game night score keeper, tvos scoreboard app, party game scoreboard, basketball scoreboard app, score keeper apple tv, tennis scoreboard, soccer scoreboard, ping pong score tracker, volleyball scoreboard, tv scoreboard app, living room scoreboard, game score tracker, sports scoreboard apple tv">
-
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "WebSite", "name": "Tally", "url": "https://yoloabdo.com/tally/", "inLanguage": "en" }
     </script>
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -66,7 +53,7 @@
               "softwareVersion": "1.6.0",
               "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
               "author": { "@type": "Person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com" } },
-            { "@type": "WebPage", "name": "Tally — Free Score Keeper App for iPhone & Apple TV Scoreboard", "url": "https://yoloabdo.com/tally/", "inLanguage": "en",
+            { "@type": "WebPage", "name": "Tally: Free Score Keeper App for iPhone & Apple TV", "url": "https://yoloabdo.com/tally/", "inLanguage": "en",
               "description": "Keep score on iPhone or Apple TV. Game Night for 2–8 players, a chess clock, a house leaderboard synced with iCloud, and giant sports scores on the TV. Free, with no ads or in-app purchases.",
               "isPartOf": { "@type": "WebSite", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
               "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
@@ -86,15 +73,13 @@
         ]
     }
     </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/tally/assets/tally.css">
     <link rel="stylesheet" href="/tally/assets/tally-2.css">
     <link rel="stylesheet" href="/tally/assets/tally-3.css">
-    <link rel="stylesheet" href="/tally/assets/tally-4.css?v=20261115">
+    <link rel="stylesheet" href="/tally/assets/tally-4.css?v=20261122">
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -110,6 +95,7 @@
                 <li><a href="#sports">Sports</a></li>
                 <li><a href="#game-night">Game Night</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
@@ -257,6 +243,19 @@
         </div>
     </section>
 
+    <section id="blog" class="section-rule">
+        <div class="container container--narrow">
+            <div class="section-header section-header--center">
+                <p class="section-label reveal">Blog</p><h2 class="section-title reveal reveal-delay-1">From the blog</h2>
+            </div>
+            <div class="blog-list">
+                <a class="blog-card reveal" href="/blog/score-keeper-app-iphone-apple-tv/"><span class="blog-kicker">Release notes</span><h3>A score keeper app for iPhone and Apple TV: Tally 1.6</h3><time>15 Nov 2026</time><p>Version 1.6 adds iPhone, a house leaderboard with iCloud sync, a chess clock and a number pad.</p></a>
+                <a class="blog-card reveal reveal-delay-1" href="/blog/tally-1-3-2-release-notes/"><span class="blog-kicker">Release notes</span><h3>Tally 1.3.2 Release Notes: The Apple TV Scoreboard Is Now Free</h3><time>19 Oct 2026</time><p>Tally 1.3.2 for Apple TV is completely free, with every sport, Game Night mode, timers and player colors unlocked.</p></a>
+            </div>
+            <p class="blog-all"><a href="/blog/">All posts &rarr;</a></p>
+        </div>
+    </section>
+
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header section-header--center">
@@ -338,6 +337,7 @@
                 <p class="footer-left">Made by Abdelrahman Eita &middot; &copy; 2026</p>
                 <ul class="footer-links">
                     <li><a href="/blog/score-keeper-app-iphone-apple-tv/">Release notes</a></li>
+                    <li><a href="/blog/">Blog</a></li>
                     <li><a href="/tally/privacy/">Privacy Policy</a></li>
                     <li><a href="/tally/support/">Support</a></li>
                 </ul>
