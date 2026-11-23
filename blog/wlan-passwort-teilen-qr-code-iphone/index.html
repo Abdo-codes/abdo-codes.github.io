@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone WLAN-Passwort per QR-Code teilen (Anleitung 2026)</title>
+    <meta name="description" content="So teilst du dein WLAN-Passwort auf dem iPhone per QR-Code: in 4 Schritten über die iOS-18-Passwörter-App, für deinen Persönlichen Hotspot oder als druckbare Gäste-Karte für Android &amp; iPhone.">
+    <meta name="keywords" content="iphone wlan-passwort teilen qr-code, wlan qr code anzeigen iphone, wlan passwort teilen iphone android, hotspot qr code iphone, passwörter app wlan qr code, gäste wlan schild drucken">
+    <link rel="canonical" href="https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/">
+    <link rel="alternate" hreflang="en" href="https://yoloabdo.com/blog/share-wifi-qr-code-iphone/">
+    <link rel="alternate" hreflang="es" href="https://yoloabdo.com/blog/compartir-wifi-qr-iphone/">
+    <link rel="alternate" hreflang="de" href="https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/">
+    <link rel="alternate" hreflang="x-default" href="https://yoloabdo.com/blog/share-wifi-qr-code-iphone/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/">
+    <meta property="og:site_name" content="Abdelrahman Eita">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:title" content="iPhone WLAN-Passwort per QR-Code teilen (3 Wege + Hotspot)">
+    <meta property="og:description" content="WLAN-QR-Code in der iOS-18-Passwörter-App anzeigen, Hotspot-QR-Code erstellen oder druckbare Gäste-Karten für iPhone und Android gestalten.">
+    <meta property="og:image" content="https://yoloabdo.com/blog/share-wifi-qr-code-iphone/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="WLAN-QR-Code auf dem iPhone anzeigen und druckbares Gäste-WLAN-Schild erstellen">
+    <meta property="article:published_time" content="2026-11-23T12:00:00Z">
+    <meta property="article:modified_time" content="2026-11-23T12:00:00Z">
+    <meta property="article:author" content="https://yoloabdo.com/">
+    <meta property="article:section" content="Anleitung">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yoloabdo">
+    <meta name="twitter:title" content="iPhone WLAN-Passwort per QR-Code teilen (3 Wege + Hotspot)">
+    <meta name="twitter:description" content="Passwörter-App ab iOS 18, Persönlicher-Hotspot-QR-Code und druckbare Gäste-WLAN-Karten für Android und iPhone.">
+    <meta name="twitter:image" content="https://yoloabdo.com/blog/share-wifi-qr-code-iphone/og-image.jpg">
+    <meta name="author" content="Abdelrahman Eita">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0e">
+    <meta name="apple-itunes-app" content="app-id=6776169783">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="help" href="/llms.txt" type="text/plain" title="LLM context">
+    <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="Abdelrahman Eita's blog">
+    <link rel="stylesheet" href="/blog/assets/blog.css?v=20261102">
+    <style>
+        .lang-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13.5px; color: var(--text-tertiary); margin: -18px 0 28px; }
+        .lang-strip a { color: var(--text-secondary); text-decoration: none; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); }
+        .lang-strip a:hover { border-color: var(--accent); color: var(--accent); }
+        .tldr-box {
+            background: var(--surface); border: 1px solid var(--border); border-inline-start: 4px solid var(--accent);
+            border-radius: 16px; padding: 20px 24px; box-shadow: var(--shadow); margin-bottom: 1.4em;
+        }
+        .tldr-box .kicker { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 6px; }
+        .tldr-box p { font-size: 16.5px; line-height: 1.65; margin: 0 0 12px; }
+        .tldr-box ul { margin: 0; font-size: 15.5px; }
+        .inline-promo {
+            margin: 1.8em 0; padding: 20px 22px; border-radius: 16px; background: var(--surface);
+            border: 1px solid var(--border-strong); box-shadow: var(--shadow);
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+        }
+        .inline-promo p { margin: 0; font-size: 15.5px; color: var(--text-secondary); max-width: 44ch; line-height: 1.5; }
+        .inline-promo strong { color: var(--text); }
+        .inline-promo .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+        .inline-promo a.btn {
+            display: inline-flex; align-items: center; padding: 9px 15px; border-radius: 10px;
+            font-size: 14px; font-weight: 650; text-decoration: none; border: 1px solid var(--border-strong); color: var(--text);
+        }
+        .inline-promo a.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .faq-list dt { font-weight: 700; color: var(--text); margin-top: 1.2em; font-size: 17.5px; }
+        .faq-list dd { margin: 0.3em 0 0; color: var(--text-secondary); font-size: 16.5px; }
+    </style>
+    <script src="/blog/assets/theme.js"></script>
+    <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKWK9CX2JJ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-MKWK9CX2JJ");</script>
+    <script src="/assets/track.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/#post",
+                "headline": "iPhone WLAN-Passwort per QR-Code teilen (3 Wege + Hotspot)",
+                "description": "So teilst du dein WLAN-Passwort auf dem iPhone per QR-Code: in 4 Schritten über die iOS-18-Passwörter-App, für deinen Persönlichen Hotspot oder als druckbare Gäste-Karte.",
+                "url": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/",
+                "mainEntityOfPage": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/",
+                "image": [
+                    "https://yoloabdo.com/blog/share-wifi-qr-code-iphone/og-image.jpg",
+                    "https://yoloabdo.com/blog/share-wifi-qr-code-iphone/iphone-show-wifi-qr-code-steps-1280.webp",
+                    "https://yoloabdo.com/blog/share-wifi-qr-code-iphone/iphone-wifi-sharing-methods-compared-1280.webp",
+                    "https://yoloabdo.com/blog/share-wifi-qr-code-iphone/iphone-hotspot-wifi-qr-code-1280.webp"
+                ],
+                "datePublished": "2026-11-23T12:00:00Z",
+                "dateModified": "2026-11-23T12:00:00Z",
+                "inLanguage": "de",
+                "articleSection": "Anleitung",
+                "keywords": ["iphone wlan-passwort teilen qr-code", "wlan qr code anzeigen iphone", "wlan passwort teilen iphone android", "hotspot qr code iphone", "Passwörter App iOS 18"],
+                "author": { "@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/" },
+                "publisher": { "@id": "https://yoloabdo.com/#person" },
+                "about": { "@type": "SoftwareApplication", "@id": "https://yoloabdo.com/wifi-qr/#app", "name": "Wi-Fi QR: Code Generator", "operatingSystem": "iOS 17 oder neuer", "applicationCategory": "UtilitiesApplication", "url": "https://yoloabdo.com/wifi-qr/", "installUrl": "https://apps.apple.com/app/id6776169783" },
+                "isPartOf": { "@type": "Blog", "@id": "https://yoloabdo.com/blog/#blog", "name": "Abdelrahman Eita's blog", "url": "https://yoloabdo.com/blog/" }
+            },
+            {
+                "@type": "HowTo",
+                "@id": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/#howto",
+                "name": "WLAN-QR-Code auf dem iPhone anzeigen",
+                "description": "Zeige auf einem iPhone ab iOS 18 über Apples Passwörter-App einen scannbaren WLAN-QR-Code an.",
+                "step": [
+                    { "@type": "HowToStep", "position": 1, "name": "Passwörter-App öffnen", "text": "Öffne die vorinstallierte Passwörter-App ab iOS 18 und entsperre sie mit Face ID, Touch ID oder Code." },
+                    { "@type": "HowToStep", "position": 2, "name": "Auf WLAN tippen", "text": "Tippe auf die Kachel WLAN, um alle gespeicherten Netzwerke anzuzeigen." },
+                    { "@type": "HowToStep", "position": 3, "name": "Netzwerk auswählen", "text": "Tippe auf das WLAN, das du teilen möchtest." },
+                    { "@type": "HowToStep", "position": 4, "name": "Netzwerk-QR-Code anzeigen", "text": "Tippe auf Netzwerk-QR-Code anzeigen und lass dein Gegenüber den Code mit der iPhone- oder Android-Kamera scannen." }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/#faq",
+                "mainEntity": [
+                    { "@type": "Question", "name": "Wie zeige ich einen WLAN-QR-Code auf dem iPhone an?", "acceptedAnswer": { "@type": "Answer", "text": "Ab iOS 18 öffnest du die Passwörter-App, tippst auf WLAN, wählst dein Netzwerk aus und tippst auf Netzwerk-QR-Code anzeigen. Sowohl iPhones als auch Android-Smartphones können den Code sofort scannen." } },
+                    { "@type": "Question", "name": "Kann ein Android-Handy den WLAN-QR-Code vom iPhone scannen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. WLAN-QR-Codes nutzen ein einheitliches Standardformat. Öffne auf Android die Kamera, Google Lens oder das QR-Symbol in den WLAN-Einstellungen und tippe auf Verbinden." } },
+                    { "@type": "Question", "name": "Wie erstelle ich einen QR-Code für meinen Persönlichen Hotspot auf dem iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Die Passwörter-App erstellt keinen QR-Code für deinen eigenen Hotspot. Öffne Einstellungen > Persönlicher Hotspot, aktiviere Zugriff für andere erlauben, notiere Gerätename (Einstellungen > Allgemein > Info > Name) und WLAN-Passwort und gib beides in Wi-Fi QR oder im kostenlosen Browser-Generator mit Sicherheit WPA ein." } },
+                    { "@type": "Question", "name": "Warum fehlt Netzwerk-QR-Code anzeigen auf meinem iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Die Funktion setzt iOS 18 voraus und erscheint nur für WLANs, mit denen dein iPhone bereits verbunden war. Für iOS 17, versteckte Netzwerke, WEP-Router oder druckbare Schilder nutze die kostenlose App Wi-Fi QR oder den lokalen Browser-Generator." } },
+                    { "@type": "Question", "name": "Kann ich ein Gäste-WLAN-Schild oder Karten vom iPhone drucken?", "acceptedAnswer": { "@type": "Answer", "text": "Die Passwörter-App zeigt den Code nur auf dem Display. Mit der kostenlosen App Wi-Fi QR (ohne Werbung, ohne Konto, erkennt auch deutsche Router-Aufkleber wie FRITZ!Box) druckst du Schilder in 4x6, 5x7, A4, US Letter oder 8 Ausschneidekarten auf einem Blatt." } }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://yoloabdo.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yoloabdo.com/blog/" },
+                    { "@type": "ListItem", "position": 3, "name": "iPhone WLAN-Passwort per QR-Code teilen", "item": "https://yoloabdo.com/blog/wlan-passwort-teilen-qr-code-iphone/" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="page">
+        <header class="topbar">
+            <a class="wordmark mono" href="/"><b>~</b>/yoloabdo</a>
+            <nav class="topnav" aria-label="Website">
+                <a href="/apps/">Apps</a>
+                <a href="/blog/">Blog</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Dunkelmodus umschalten">
+                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main id="main">
+        <article>
+            <nav class="crumbs" aria-label="Brotkrümel"><a href="/">Startseite</a> / <a href="/blog/">Blog</a> / iPhone WLAN-Passwort per QR-Code teilen</nav>
+            <p class="eyebrow mono">Anleitung · Wi-Fi QR für iPhone</p>
+            <h1 class="post-title">iPhone WLAN-Passwort per QR-Code teilen</h1>
+            <p class="dek">Zeige deinen WLAN-QR-Code ab iOS 18 in vier Schritten an, erstelle einen QR-Code für deinen Persönlichen Hotspot oder drucke ein Gäste-WLAN-Schild für iPhone und Android.</p>
+            <div class="byline">
+                <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
+                <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-11-23">23. November 2026</time> · 5 Min. Lesezeit</span>
+            </div>
+            <div class="lang-strip" aria-label="Verfügbare Sprachen">
+                <span>Auch verfügbar auf:</span>
+                <a href="/blog/share-wifi-qr-code-iphone/" hreflang="en" lang="en">English</a>
+                <a href="/blog/compartir-wifi-qr-iphone/" hreflang="es" lang="es">Español</a>
+            </div>
+
+            <div class="prose">
+                <section class="tldr-box" aria-labelledby="tldr-title">
+                    <span class="kicker" id="tldr-title">Kurzantwort</span>
+                    <p><strong>So teilst du dein WLAN-Passwort auf dem iPhone per QR-Code (ab iOS 18):</strong> Öffne die <strong>Passwörter</strong>-App &rarr; tippe auf <strong>WLAN</strong> &rarr; wähle dein Netzwerk &rarr; tippe auf <strong>Netzwerk-QR-Code anzeigen</strong>. Gäste mit iPhone oder Android scannen einfach deinen Bildschirm und sind sofort verbunden.</p>
+                    <ul>
+                        <li><a href="#passwoerter">1. Passwörter-App (ab iOS 18)</a>: am schnellsten für einen Gast direkt neben dir.</li>
+                        <li><a href="#apple">2. Passwort teilen</a>: ohne QR-Code zwischen Apple-Geräten aus deinen Kontakten.</li>
+                        <li><a href="#drucken">3. Druckbare Karte oder gespeicherter QR-Code</a>: für iOS 17+, versteckte/WEP-Netze, Ferienwohnungen und <a href="#hotspot">Persönlichen Hotspot</a>.</li>
+                    </ul>
+                </section>
+
+                <figure class="hero-figure">
+                    <img src="/blog/share-wifi-qr-code-iphone/iphone-show-wifi-qr-code-steps-1280.webp" srcset="/blog/share-wifi-qr-code-iphone/iphone-show-wifi-qr-code-steps-640.webp 640w, /blog/share-wifi-qr-code-iphone/iphone-show-wifi-qr-code-steps-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="Vier Schritte zum Anzeigen eines WLAN-QR-Codes auf dem iPhone in der iOS-18-Passwörter-App: Passwörter öffnen, WLAN tippen, Netzwerk wählen und Netzwerk-QR-Code anzeigen" fetchpriority="high">
+                    <figcaption>Weg 1: Über Apples Passwörter-App (ab iOS 18) zeigst du gespeicherte WLANs in vier Schritten als QR-Code.</figcaption>
+                </figure>
+
+                <h2 id="passwoerter">1. WLAN-QR-Code in der Passwörter-App anzeigen (ab iOS 18)</h2>
+                <p>Seit iOS 18 speichert die integrierte <strong>Passwörter</strong>-App alle WLAN-Netzwerke, mit denen dein iPhone verbunden war, und zeigt sie als scannbaren QR-Code an.</p>
+                <ol>
+                    <li>Öffne die <strong>Passwörter</strong>-App und entsperre sie mit Face ID, Touch ID oder deinem Code.</li>
+                    <li>Tippe auf <strong>WLAN</strong>.</li>
+                    <li>Wähle das gewünschte Netzwerk aus.</li>
+                    <li>Tippe auf <strong>Netzwerk-QR-Code anzeigen</strong> und halte das Display zum Scannen hin.</li>
+                </ol>
+                <p>Das klappt zuverlässig mit iPhone und Android, hat aber drei Einschränkungen:</p>
+                <ul>
+                    <li>Es erscheinen nur Netzwerke, mit denen dein iPhone bereits verbunden war (kein eigener Hotspot, kein separater Gäste-Router).</li>
+                    <li>Du musst dein iPhone jedes Mal entsperren und hinhalten.</li>
+                    <li>Du kannst daraus kein druckbares Gäste-Schild für Wohnzimmer, Büro oder Ferienwohnung erstellen.</li>
+                </ul>
+
+                <h2 id="apple">2. Passwort direkt mit einem Apple-Gerät in der Nähe teilen</h2>
+                <p>Nutzt dein Gegenüber ein iPhone, iPad oder einen Mac, überträgt iOS das Passwort auch ganz ohne QR-Code:</p>
+                <ol>
+                    <li>Entsperre dein iPhone, während es mit dem WLAN verbunden ist.</li>
+                    <li>Öffne auf dem anderen Apple-Gerät <strong>Einstellungen &rarr; WLAN</strong> und tippe auf dasselbe Netzwerk.</li>
+                    <li>Tippe auf deinem iPhone auf <strong>Passwort teilen</strong> und anschließend auf <strong>Fertig</strong>.</li>
+                </ol>
+                <p>Dafür müssen WLAN und Bluetooth auf beiden Geräten aktiv sein und beide Personen die Apple-Account-E-Mail des jeweils anderen in den Kontakten gespeichert haben. Mit Android oder Windows-Laptops funktioniert das nicht.</p>
+
+                <h2 id="drucken">3. QR-Code speichern, versenden oder als Gäste-Schild drucken</h2>
+                <p>Wenn du den Code im Foto-Favoritenalbum ablegen, per WhatsApp vorab schicken oder für Gäste ausdrucken möchtest, erstellst du ihn einmalig mit <a href="/wifi-qr/">Wi-Fi QR</a> (kostenlos ab iOS 17) oder direkt im <a href="/wifi-qr/generator/">kostenlosen Browser-Generator</a>.</p>
+                <ol>
+                    <li>Installiere <a href="https://apps.apple.com/app/id6776169783" data-cta="share-guide-de-steps">Wi-Fi QR</a> (kostenlos, werbefrei, ohne Konto).</li>
+                    <li>Gib Netzwerkname und Passwort ein – oder scanne einfach den Router-Aufkleber mit der Kamera (unterstützt auch deutsche Beschriftungen wie auf FRITZ!Box-Routern).</li>
+                    <li>Wähle WPA/WPA2/WPA3, WEP oder Offen und aktiviere bei Bedarf <strong>Verstecktes Netzwerk</strong>.</li>
+                    <li>Teile den QR-Code als Bild oder drucke direkt ein Gäste-Schild (4×6, 5×7, A4, US Letter) bzw. 8 Ausschneidekarten auf einer Seite.</li>
+                </ol>
+                <p>Alle WLAN-Daten bleiben lokal auf deinem Gerät. Für Ferienwohnungen und Gastgeber gibt es zusätzlich unseren <a href="/wifi-qr/airbnb-wifi-sign/">Airbnb-WLAN-Schild-Guide (auf Englisch)</a>.</p>
+
+                <div class="inline-promo">
+                    <p><strong>Sofort einen druckbaren WLAN-QR-Code erstellen?</strong> Kostenlos und werbefrei auf dem iPhone mit Wi-Fi QR – oder ohne App direkt lokal im Browser.</p>
+                    <div class="btns">
+                        <a class="btn primary" href="https://apps.apple.com/app/id6776169783" data-cta="share-guide-de-inline">Wi-Fi QR laden</a>
+                        <a class="btn" href="/wifi-qr/generator/">Browser-Generator</a>
+                    </div>
+                </div>
+
+                <h2 id="vergleich">Welcher Weg passt zu dir?</h2>
+                <figure>
+                    <img src="/blog/share-wifi-qr-code-iphone/iphone-wifi-sharing-methods-compared-1280.webp" srcset="/blog/share-wifi-qr-code-iphone/iphone-wifi-sharing-methods-compared-640.webp 640w, /blog/share-wifi-qr-code-iphone/iphone-wifi-sharing-methods-compared-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" loading="lazy" alt="Vergleich von drei Möglichkeiten zum Teilen von WLAN auf dem iPhone: Apple Passwörter-App, gespeichertes QR-Foto oder Widget und druckbare Gäste-Karte">
+                    <figcaption>Apple Passwörter-App, gespeichertes QR-Foto/Widget und druckbare Gäste-Karte im Vergleich.</figcaption>
+                </figure>
+                <div class="table-wrap" role="region" aria-labelledby="table-caption" tabindex="0">
+                    <table class="compare">
+                        <caption id="table-caption">Drei Wege, das WLAN-Passwort vom iPhone aus zu teilen.</caption>
+                        <thead>
+                            <tr><th scope="col">Methode</th><th scope="col">Voraussetzung</th><th scope="col">Android-Gäste</th><th scope="col">Drucken / Bild speichern</th><th scope="col">Am besten geeignet für</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Passwörter-App (QR)</th><td>Ab iOS 18, bekanntes WLAN</td><td>Ja (Bildschirm scannen)</td><td>Nur auf dem Display</td><td>Einzelner Gast direkt vor Ort</td></tr>
+                            <tr><th scope="row">Passwort teilen</th><td>Zwei Apple-Geräte in Kontakten</td><td>Nein</td><td>Nein</td><td>Familie &amp; Freunde mit Apple-Geräten</td></tr>
+                            <tr><th scope="row">Wi-Fi QR App</th><td>Ab iOS 17, WLAN-Name &amp; Passwort</td><td>Ja</td><td>Ja: PNG, PDF, Schilder &amp; 8 Ausschneidekarten</td><td>Ferienwohnungen, Gästezimmer, Büros &amp; Hotspot</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="hotspot">QR-Code für den Persönlichen Hotspot auf dem iPhone erstellen</h2>
+                <p>Für deinen eigenen <strong>Persönlichen Hotspot</strong> zeigt Apples Passwörter-App keinen QR-Code an. Du legst ihn aber in 30 Sekunden einmalig an:</p>
+                <figure>
+                    <img src="/blog/share-wifi-qr-code-iphone/iphone-hotspot-wifi-qr-code-1280.webp" srcset="/blog/share-wifi-qr-code-iphone/iphone-hotspot-wifi-qr-code-640.webp 640w, /blog/share-wifi-qr-code-iphone/iphone-hotspot-wifi-qr-code-1280.webp 1280w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" loading="lazy" alt="Drei Schritte für einen iPhone-Hotspot-QR-Code: Hotspot-Name und Passwort prüfen, in Wi-Fi QR mit WPA eintragen und QR-Code zum Scannen speichern">
+                    <figcaption>Hotspot-QR-Code einmal speichern und unterwegs ohne Buchstabieren teilen.</figcaption>
+                </figure>
+                <ol>
+                    <li>Öffne <strong>Einstellungen &rarr; Persönlicher Hotspot</strong> und aktiviere <strong>Zugriff für andere erlauben</strong>.</li>
+                    <li>Notiere das <strong>WLAN-Passwort</strong> sowie den genauen Namen deines iPhones unter <strong>Einstellungen &rarr; Allgemein &rarr; Info &rarr; Name</strong>.</li>
+                    <li>Trage beides in <a href="/wifi-qr/">Wi-Fi QR</a> (oder im <a href="/wifi-qr/generator/">Browser-Generator</a>) mit der Sicherheit <strong>WPA</strong> ein.</li>
+                    <li>Speichere das QR-Bild in deinen Fotos. Unterwegs schaltest du einfach den Hotspot ein und lässt deine Begleitung scannen.</li>
+                </ol>
+
+                <h2 id="scannen">So scannen Gäste den QR-Code</h2>
+                <ul>
+                    <li><strong>iPhone &amp; iPad:</strong> Kamera-App öffnen, auf den QR-Code richten und auf das gelbe Banner zum Verbinden tippen.</li>
+                    <li><strong>Android:</strong> Kamera, <strong>Google Lens</strong> oder das QR-Symbol in <strong>Einstellungen &rarr; WLAN</strong> nutzen und auf <strong>Verbinden</strong> tippen.</li>
+                    <li><strong>Laptops &amp; Smart-TVs:</strong> Können nicht scannen – drucke Netzwerkname und Passwort immer gut lesbar darunter.</li>
+                </ul>
+
+                <h2 id="faq">Häufige Fragen</h2>
+                <dl class="faq-list">
+                    <dt>Wie zeige ich einen WLAN-QR-Code auf dem iPhone an?</dt>
+                    <dd>Ab iOS 18 öffnest du die <strong>Passwörter</strong>-App, tippst auf <strong>WLAN</strong>, wählst dein Netzwerk aus und tippst auf <strong>Netzwerk-QR-Code anzeigen</strong>. Sowohl iPhones als auch Android-Smartphones können den Code sofort scannen.</dd>
+
+                    <dt>Kann ein Android-Handy den WLAN-QR-Code vom iPhone scannen?</dt>
+                    <dd>Ja. WLAN-QR-Codes nutzen ein einheitliches Standardformat. Öffne auf Android die Kamera, Google Lens oder das QR-Symbol in den WLAN-Einstellungen und tippe auf Verbinden.</dd>
+
+                    <dt>Wie erstelle ich einen QR-Code für meinen Persönlichen Hotspot auf dem iPhone?</dt>
+                    <dd>Die Passwörter-App erstellt keinen QR-Code für deinen eigenen Hotspot. Öffne Einstellungen &rarr; Persönlicher Hotspot, aktiviere Zugriff für andere erlauben, notiere Gerätename und WLAN-Passwort und gib beides in <a href="/wifi-qr/">Wi-Fi QR</a> oder im <a href="/wifi-qr/generator/">kostenlosen Browser-Generator</a> mit Sicherheit WPA ein.</dd>
+
+                    <dt>Warum fehlt „Netzwerk-QR-Code anzeigen“ auf meinem iPhone?</dt>
+                    <dd>Die Funktion setzt iOS 18 voraus und erscheint nur für WLANs, mit denen dein iPhone bereits verbunden war. Für iOS 17, versteckte Netzwerke, WEP-Router oder druckbare Schilder nutze die kostenlose App Wi-Fi QR oder den lokalen Browser-Generator.</dd>
+
+                    <dt>Kann ich ein Gäste-WLAN-Schild oder Karten vom iPhone drucken?</dt>
+                    <dd>Die Passwörter-App zeigt den Code nur auf dem Display. Mit der kostenlosen App <a href="/wifi-qr/">Wi-Fi QR</a> (ohne Werbung, ohne Konto, erkennt auch deutsche Router-Aufkleber) druckst du Schilder in 4×6, 5×7, A4, US Letter oder 8 Ausschneidekarten auf einem Blatt.</dd>
+                </dl>
+            </div>
+
+            <aside class="app-cta" aria-labelledby="cta-title">
+                <img class="icon" src="/wifi-qr/app-icon-256.webp" alt="" width="72" height="72">
+                <div>
+                    <h2 id="cta-title">Wi-Fi QR: Gäste-WLAN-Codes &amp; Schilder</h2>
+                    <p>Erstelle WLAN-QR-Codes für Zuhause, Hotspot oder Ferienwohnung, drucke Gäste-Schilder oder 8 Ausschneidekarten und speichere alles lokal. Kostenlos &amp; werbefrei.</p>
+                </div>
+                <div class="actions">
+                    <a href="https://apps.apple.com/app/id6776169783" target="_blank" rel="noopener" data-cta="share-guide-de-cta" aria-label="Wi-Fi QR im App Store laden"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/de-de" alt="Laden im App Store" width="162" height="54" loading="lazy"></a>
+                    <a class="more" href="/wifi-qr/generator/">Oder im Browser nutzen &rarr;</a>
+                </div>
+            </aside>
+        </article>
+
+        <div class="section-title"><h2>Weiterlesen</h2><span class="rule"></span></div>
+        <div class="post-list">
+            <a class="post-item" href="/wifi-qr/airbnb-wifi-sign/">
+                <p class="meta mono">Guide (EN) · 23 Nov 2026</p>
+                <h3>How to make an Airbnb WiFi sign &amp; printable QR card</h3>
+                <p>Druckbare Kartenbeispiele, exakte Formate (4×6, 5×7, A4 &amp; 8 Ausschneidekarten) und Platzierungstipps.</p>
+            </a>
+            <a class="post-item" href="/blog/share-wifi-qr-code-iphone/">
+                <p class="meta mono">Guide (EN) · 23 Nov 2026</p>
+                <h3>How to share your Wi-Fi password with a QR code on iPhone</h3>
+                <p>Englische Originalversion dieser Anleitung.</p>
+            </a>
+        </div>
+        </main>
+
+        <footer class="site-footer">
+            <span>&copy; 2026 Abdelrahman Eita</span>
+            <span><a href="/wifi-qr/">Wi-Fi QR</a> · <a href="/wifi-qr/generator/">Browser-Generator</a> · <a href="/wifi-qr/support/">Support</a> · <a href="/wifi-qr/privacy/">Datenschutz</a> · <a href="/blog/">Blog</a></span>
+        </footer>
+    </div>
+</body>
+</html>

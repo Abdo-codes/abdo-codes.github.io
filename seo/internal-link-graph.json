@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-23T11:16:30.847Z",
-  "totalPages": 95,
+  "generatedAt": "2026-11-23T13:44:09.404Z",
+  "totalPages": 97,
   "moneyPagesCount": 23,
   "orphanMoneyPages": [
     "/angry-nona/ar/",
@@ -52,7 +52,7 @@
       "money": true,
       "contextualInbound": 3,
       "blogInbound": 0,
-      "distinctAnchors": 3,
+      "distinctAnchors": 4,
       "linkedFrom": [
         "/wifi-qr/",
         "/wifi-qr/airbnb-wifi-sign/",
@@ -205,21 +205,6 @@
       ]
     },
     {
-      "route": "/wifi-qr/generator/",
-      "file": "wifi-qr/generator/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 4,
-      "linkedFrom": [
-        "/blog/share-wifi-password-iphone-to-android/",
-        "/blog/share-wifi-qr-code-iphone/",
-        "/wifi-qr/",
-        "/wifi-qr/airbnb-wifi-sign/",
-        "/wifi-qr/vs-canva-etsy/"
-      ]
-    },
-    {
       "route": "/angry-nona/",
       "file": "angry-nona/index.html",
       "money": true,
@@ -254,18 +239,37 @@
       ]
     },
     {
+      "route": "/wifi-qr/generator/",
+      "file": "wifi-qr/generator/index.html",
+      "money": true,
+      "contextualInbound": 7,
+      "blogInbound": 4,
+      "distinctAnchors": 14,
+      "linkedFrom": [
+        "/blog/compartir-wifi-qr-iphone/",
+        "/blog/share-wifi-password-iphone-to-android/",
+        "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
+        "/wifi-qr/",
+        "/wifi-qr/airbnb-wifi-sign/",
+        "/wifi-qr/vs-canva-etsy/"
+      ]
+    },
+    {
       "route": "/wifi-qr/airbnb-wifi-sign/",
       "file": "wifi-qr/airbnb-wifi-sign/index.html",
       "money": true,
-      "contextualInbound": 7,
-      "blogInbound": 5,
-      "distinctAnchors": 7,
+      "contextualInbound": 9,
+      "blogInbound": 7,
+      "distinctAnchors": 12,
       "linkedFrom": [
+        "/blog/compartir-wifi-qr-iphone/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
         "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
         "/wifi-qr/generator/"
       ]
@@ -274,17 +278,19 @@
       "route": "/wifi-qr/",
       "file": "wifi-qr/index.html",
       "money": true,
-      "contextualInbound": 13,
-      "blogInbound": 5,
-      "distinctAnchors": 11,
+      "contextualInbound": 15,
+      "blogInbound": 7,
+      "distinctAnchors": 10,
       "linkedFrom": [
         "/",
         "/apps/",
+        "/blog/compartir-wifi-qr-iphone/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
         "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/surfing/",
         "/wifi-qr/airbnb-wifi-sign/",
         "/wifi-qr/generator/",
@@ -299,7 +305,7 @@
       "money": true,
       "contextualInbound": 17,
       "blogInbound": 1,
-      "distinctAnchors": 9,
+      "distinctAnchors": 10,
       "linkedFrom": [
         "/",
         "/apps/",
@@ -499,6 +505,18 @@
       ]
     },
     {
+      "route": "/blog/compartir-wifi-qr-iphone/",
+      "file": "blog/compartir-wifi-qr-iphone/index.html",
+      "money": false,
+      "contextualInbound": 2,
+      "blogInbound": 2,
+      "distinctAnchors": 1,
+      "linkedFrom": [
+        "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/"
+      ]
+    },
+    {
       "route": "/blog/swiftui-open-app-store-page/",
       "file": "blog/swiftui-open-app-store-page/index.html",
       "money": false,
@@ -508,6 +526,18 @@
       "linkedFrom": [
         "/",
         "/blog/"
+      ]
+    },
+    {
+      "route": "/blog/wlan-passwort-teilen-qr-code-iphone/",
+      "file": "blog/wlan-passwort-teilen-qr-code-iphone/index.html",
+      "money": false,
+      "contextualInbound": 2,
+      "blogInbound": 2,
+      "distinctAnchors": 1,
+      "linkedFrom": [
+        "/blog/compartir-wifi-qr-iphone/",
+        "/blog/share-wifi-qr-code-iphone/"
       ]
     },
     {
@@ -598,16 +628,16 @@
       ]
     },
     {
-      "route": "/blog/sajdah-1-7-3-release-notes/",
-      "file": "blog/sajdah-1-7-3-release-notes/index.html",
+      "route": "/blog/sajdah-1-7-0-release-notes/",
+      "file": "blog/sajdah-1-7-0-release-notes/index.html",
       "money": false,
       "contextualInbound": 3,
       "blogInbound": 2,
       "distinctAnchors": 4,
       "linkedFrom": [
         "/blog/",
-        "/blog/sajdah-1-7-4-release-notes/",
-        "/blog/swingcoach-1-1-release-notes/"
+        "/blog/sajdah-1-7-3-release-notes/",
+        "/blog/sajdah-1-7-4-release-notes/"
       ]
     },
     {
@@ -694,7 +724,7 @@
       "money": true,
       "contextualInbound": 3,
       "blogInbound": 0,
-      "distinctAnchors": 3,
+      "distinctAnchors": 4,
       "linkedFrom": [
         "/wifi-qr/",
         "/wifi-qr/airbnb-wifi-sign/",
@@ -758,6 +788,20 @@
       ]
     },
     {
+      "route": "/blog/sajdah-1-7-3-release-notes/",
+      "file": "blog/sajdah-1-7-3-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 4,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/quran-apps-apple-tv-compared/",
+        "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/swingcoach-1-1-release-notes/"
+      ]
+    },
+    {
       "route": "/blog/sajdah-ayah-word-tracking/",
       "file": "blog/sajdah-ayah-word-tracking/index.html",
       "money": false,
@@ -768,20 +812,6 @@
         "/blog/",
         "/blog/quran-apps-apple-tv-compared/",
         "/blog/sajdah-1-7-3-release-notes/",
-        "/sajda/"
-      ]
-    },
-    {
-      "route": "/blog/sajdah-prayer-screen-apple-tv/",
-      "file": "blog/sajdah-prayer-screen-apple-tv/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 4,
-      "linkedFrom": [
-        "/blog/",
-        "/blog/quran-apps-apple-tv-compared/",
-        "/blog/sajdah-1-7-4-release-notes/",
         "/sajda/"
       ]
     },
@@ -1092,7 +1122,7 @@
       "money": false,
       "contextualInbound": 5,
       "blogInbound": 2,
-      "distinctAnchors": 8,
+      "distinctAnchors": 9,
       "linkedFrom": [
         "/blog/",
         "/blog/share-wifi-password-iphone-to-android/",
@@ -1114,21 +1144,6 @@
         "/blog/sajdah-1-7-0-release-notes/",
         "/blog/sajdah-prayer-screen-apple-tv/",
         "/sajda/"
-      ]
-    },
-    {
-      "route": "/blog/share-wifi-password-iphone-to-android/",
-      "file": "blog/share-wifi-password-iphone-to-android/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 0,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/blog/",
-        "/wifi-qr/",
-        "/wifi-qr/generator/",
-        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1204,21 +1219,6 @@
         "/blog/git-worktree-remove-keep-branch/",
         "/blog/xcode-deriveddata-safe-to-delete/",
         "/nightcap-awake/vs-amphetamine/"
-      ]
-    },
-    {
-      "route": "/wifi-qr/generator/",
-      "file": "wifi-qr/generator/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 4,
-      "linkedFrom": [
-        "/blog/share-wifi-password-iphone-to-android/",
-        "/blog/share-wifi-qr-code-iphone/",
-        "/wifi-qr/",
-        "/wifi-qr/airbnb-wifi-sign/",
-        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1351,20 +1351,37 @@
       ]
     },
     {
-      "route": "/blog/share-wifi-qr-code-iphone/",
-      "file": "blog/share-wifi-qr-code-iphone/index.html",
+      "route": "/blog/sajdah-1-5-0-release-notes/",
+      "file": "blog/sajdah-1-5-0-release-notes/index.html",
       "money": false,
       "contextualInbound": 7,
-      "blogInbound": 4,
-      "distinctAnchors": 7,
+      "blogInbound": 6,
+      "distinctAnchors": 5,
       "linkedFrom": [
         "/blog/",
-        "/blog/print-wifi-qr-code-sign-iphone/",
-        "/blog/share-wifi-password-iphone-to-android/",
-        "/blog/wifi-qr-1-7-release-notes/",
-        "/blog/wifi-qr-story/",
+        "/blog/building-sajdah-apple-tv-journey/",
+        "/blog/capybara-rush-1-5-release-notes/",
+        "/blog/sajdah-1-6-0-release-notes/",
+        "/blog/sajdah-ayah-word-tracking/",
+        "/blog/tally-1-3-2-release-notes/",
+        "/blog/wifi-qr-1-7-release-notes/"
+      ]
+    },
+    {
+      "route": "/blog/share-wifi-password-iphone-to-android/",
+      "file": "blog/share-wifi-password-iphone-to-android/index.html",
+      "money": false,
+      "contextualInbound": 7,
+      "blogInbound": 1,
+      "distinctAnchors": 7,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/blog/share-wifi-qr-code-iphone/",
         "/wifi-qr/",
-        "/wifi-qr/airbnb-wifi-sign/"
+        "/wifi-qr/airbnb-wifi-sign/",
+        "/wifi-qr/generator/",
+        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1402,20 +1419,20 @@
       ]
     },
     {
-      "route": "/wifi-qr/airbnb-wifi-sign/",
-      "file": "wifi-qr/airbnb-wifi-sign/index.html",
+      "route": "/wifi-qr/generator/",
+      "file": "wifi-qr/generator/index.html",
       "money": true,
       "contextualInbound": 7,
-      "blogInbound": 5,
-      "distinctAnchors": 7,
+      "blogInbound": 4,
+      "distinctAnchors": 14,
       "linkedFrom": [
-        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/compartir-wifi-qr-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
-        "/blog/wifi-qr-1-7-release-notes/",
-        "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
-        "/wifi-qr/generator/"
+        "/wifi-qr/airbnb-wifi-sign/",
+        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1437,21 +1454,41 @@
       ]
     },
     {
-      "route": "/blog/sajdah-1-5-0-release-notes/",
-      "file": "blog/sajdah-1-5-0-release-notes/index.html",
+      "route": "/blog/share-wifi-qr-code-iphone/",
+      "file": "blog/share-wifi-qr-code-iphone/index.html",
       "money": false,
-      "contextualInbound": 8,
-      "blogInbound": 7,
-      "distinctAnchors": 6,
+      "contextualInbound": 9,
+      "blogInbound": 6,
+      "distinctAnchors": 10,
       "linkedFrom": [
         "/blog/",
-        "/blog/building-sajdah-apple-tv-journey/",
-        "/blog/capybara-rush-1-5-release-notes/",
-        "/blog/quran-apps-apple-tv-compared/",
-        "/blog/sajdah-1-6-0-release-notes/",
-        "/blog/sajdah-ayah-word-tracking/",
-        "/blog/tally-1-3-2-release-notes/",
-        "/blog/wifi-qr-1-7-release-notes/"
+        "/blog/compartir-wifi-qr-iphone/",
+        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/share-wifi-password-iphone-to-android/",
+        "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
+        "/wifi-qr/",
+        "/wifi-qr/airbnb-wifi-sign/"
+      ]
+    },
+    {
+      "route": "/wifi-qr/airbnb-wifi-sign/",
+      "file": "wifi-qr/airbnb-wifi-sign/index.html",
+      "money": true,
+      "contextualInbound": 9,
+      "blogInbound": 7,
+      "distinctAnchors": 12,
+      "linkedFrom": [
+        "/blog/compartir-wifi-qr-iphone/",
+        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/share-wifi-password-iphone-to-android/",
+        "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
+        "/wifi-qr/",
+        "/wifi-qr/generator/"
       ]
     },
     {
@@ -1658,11 +1695,12 @@
       "route": "/blog/sajdah-1-7-4-release-notes/",
       "file": "blog/sajdah-1-7-4-release-notes/index.html",
       "money": false,
-      "contextualInbound": 12,
-      "blogInbound": 0,
-      "distinctAnchors": 23,
+      "contextualInbound": 13,
+      "blogInbound": 1,
+      "distinctAnchors": 37,
       "linkedFrom": [
         "/blog/",
+        "/blog/quran-apps-apple-tv-compared/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1674,29 +1712,6 @@
         "/sajda/tr/",
         "/sajda/ur/",
         "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/wifi-qr/",
-      "file": "wifi-qr/index.html",
-      "money": true,
-      "contextualInbound": 13,
-      "blogInbound": 5,
-      "distinctAnchors": 11,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/print-wifi-qr-code-sign-iphone/",
-        "/blog/share-wifi-password-iphone-to-android/",
-        "/blog/share-wifi-qr-code-iphone/",
-        "/blog/wifi-qr-1-7-release-notes/",
-        "/blog/wifi-qr-story/",
-        "/surfing/",
-        "/wifi-qr/airbnb-wifi-sign/",
-        "/wifi-qr/generator/",
-        "/wifi-qr/privacy/",
-        "/wifi-qr/support/",
-        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1724,15 +1739,15 @@
       ]
     },
     {
-      "route": "/blog/sajdah-1-7-0-release-notes/",
-      "file": "blog/sajdah-1-7-0-release-notes/index.html",
+      "route": "/blog/sajdah-prayer-screen-apple-tv/",
+      "file": "blog/sajdah-prayer-screen-apple-tv/index.html",
       "money": false,
       "contextualInbound": 14,
       "blogInbound": 2,
-      "distinctAnchors": 15,
+      "distinctAnchors": 8,
       "linkedFrom": [
         "/blog/",
-        "/blog/sajdah-1-7-3-release-notes/",
+        "/blog/quran-apps-apple-tv-compared/",
         "/blog/sajdah-1-7-4-release-notes/",
         "/sajda/",
         "/sajda/ar/",
@@ -1748,12 +1763,37 @@
       ]
     },
     {
+      "route": "/wifi-qr/",
+      "file": "wifi-qr/index.html",
+      "money": true,
+      "contextualInbound": 15,
+      "blogInbound": 7,
+      "distinctAnchors": 10,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/compartir-wifi-qr-iphone/",
+        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/share-wifi-password-iphone-to-android/",
+        "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
+        "/surfing/",
+        "/wifi-qr/airbnb-wifi-sign/",
+        "/wifi-qr/generator/",
+        "/wifi-qr/privacy/",
+        "/wifi-qr/support/",
+        "/wifi-qr/vs-canva-etsy/"
+      ]
+    },
+    {
       "route": "/tateemi/",
       "file": "tateemi/index.html",
       "money": true,
       "contextualInbound": 17,
       "blogInbound": 1,
-      "distinctAnchors": 9,
+      "distinctAnchors": 10,
       "linkedFrom": [
         "/",
         "/apps/",
@@ -1775,20 +1815,20 @@
       ]
     },
     {
-      "route": "/blog/quran-apps-apple-tv-compared/",
-      "file": "blog/quran-apps-apple-tv-compared/index.html",
+      "route": "/blog/building-sajdah-apple-tv-journey/",
+      "file": "blog/building-sajdah-apple-tv-journey/index.html",
       "money": false,
       "contextualInbound": 18,
       "blogInbound": 6,
-      "distinctAnchors": 15,
+      "distinctAnchors": 16,
       "linkedFrom": [
         "/blog/",
-        "/blog/building-sajdah-apple-tv-journey/",
-        "/blog/hona-elqahra-1-1-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/blog/sajdah-1-5-0-release-notes/",
-        "/blog/sajdah-1-6-0-release-notes/",
-        "/blog/sajdah-1-7-0-release-notes/",
+        "/blog/sajdah-ayah-word-tracking/",
+        "/blog/sajdah-prayer-screen-apple-tv/",
+        "/blog/score-keeper-app-iphone-apple-tv/",
+        "/blog/wifi-qr-story/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1803,21 +1843,21 @@
       ]
     },
     {
-      "route": "/blog/building-sajdah-apple-tv-journey/",
-      "file": "blog/building-sajdah-apple-tv-journey/index.html",
+      "route": "/blog/quran-apps-apple-tv-compared/",
+      "file": "blog/quran-apps-apple-tv-compared/index.html",
       "money": false,
       "contextualInbound": 19,
       "blogInbound": 7,
       "distinctAnchors": 16,
       "linkedFrom": [
         "/blog/",
-        "/blog/quran-apps-apple-tv-compared/",
+        "/blog/building-sajdah-apple-tv-journey/",
+        "/blog/hona-elqahra-1-1-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/blog/sajdah-1-5-0-release-notes/",
-        "/blog/sajdah-ayah-word-tracking/",
+        "/blog/sajdah-1-6-0-release-notes/",
+        "/blog/sajdah-1-7-0-release-notes/",
         "/blog/sajdah-prayer-screen-apple-tv/",
-        "/blog/score-keeper-app-iphone-apple-tv/",
-        "/blog/wifi-qr-story/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1968,8 +2008,8 @@
       "route": "/",
       "file": "index.html",
       "money": false,
-      "contextualInbound": 46,
-      "blogInbound": 38,
+      "contextualInbound": 48,
+      "blogInbound": 40,
       "distinctAnchors": 7,
       "linkedFrom": [
         "/apps/",
@@ -1985,6 +2025,7 @@
         "/blog/colortalk-1-1-release-notes/",
         "/blog/colortalk-1-2-release-notes/",
         "/blog/colortalk-abc-coloring-launch/",
+        "/blog/compartir-wifi-qr-iphone/",
         "/blog/git-worktree-remove-keep-branch/",
         "/blog/hona-elqahra-1-1-release-notes/",
         "/blog/kettlebell-workout-app-hands-free/",
@@ -2011,6 +2052,7 @@
         "/blog/tally-1-3-2-release-notes/",
         "/blog/wifi-qr-1-7-release-notes/",
         "/blog/wifi-qr-story/",
+        "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/blog/xcode-deriveddata-safe-to-delete/",
         "/drive-town/",
         "/drive-town/guide/",
