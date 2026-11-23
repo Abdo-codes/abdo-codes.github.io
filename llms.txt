@@ -78,7 +78,7 @@
 - **Morning and Evening Adhkar** with a Siri Remote counter, or hands-free with Auto-Pace (new in 1.9)
 - **Ramadan Living Room Mode** (new in 1.9, free): Iftar and Suhoor countdowns on Today, Top Shelf and the Horizon Prayer Screen, the authentic Iftar dua in the last 10 minutes before Maghrib, a one-press 30-day Ramadan Khatmah (one Juz a day), Live Makkah Taraweeh pinned on Ramadan evenings, and a Hijri date adjustment of -2 to +2 days for local moon sighting
 - **Family Hifz** (new in 1.9, free): listen-and-repeat memorization for the whole family across all 114 surahs, started from Today
-- **Playlists, Juz jump and Quick Tafsir** (new in 1.9, free): curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah), a Juz 1-30 filter in surah selection, and Tafsir Al-Muyassar or an English explanation for the current verse in the player (Hafs recordings)
+- **Playlists, Juz jump and Quick Tafsir** (new in 1.9): play curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah) and saved playlists read-only for free (creating, adding to, and editing custom playlists requires Sajdah Premium); Juz 1-30 filter in surah selection and Tafsir Al-Muyassar / English explanation in the player (Hafs recordings) are free
 - **Prayer Times** for Fajr, Dhuhr, Asr, Maghrib and Isha in the location's time zone (free since 1.9), **13 Athan voices** plus a Fajr Athan, and **Qibla Direction** (premium)
 - **Prayer time settings** (premium, new in 1.7.0): search any city or keep Automatic, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule for cities above 48° latitude, and an adjustment of up to 30 minutes for each prayer. The Athan, the Prayer Screen and Top Shelf follow these settings
 - **Prayer Screen** (formerly Prayer Room): full-screen prayer times that stay on the TV, in six styles, with background Quran audio and burn-in protection (Horizon is free since 1.9; Premium unlocks all six styles and Iqamah countdowns)
@@ -88,8 +88,8 @@
 
 ## Pricing
 
-- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen, all five daily prayer times (default calculation) with the Hijri date adjustment, the Horizon Prayer Screen, Ramadan Living Room Mode, Family Hifz, Playlists, Quick Tafsir, Khatmah, morning and evening Adhkar with Auto-Pace, and a 60-second daily preview of Quran Radio and Live TV
-- Sajdah Premium (optional in-app subscription or one-time lifetime purchase): unlimited Quran radio and live TV, the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments, Iqamah offsets), Qibla direction, the Prayer Screen in all six styles with Iqamah countdowns, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
+- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen, all five daily prayer times (default calculation) with the Hijri date adjustment, the Horizon Prayer Screen, Ramadan Living Room Mode, Family Hifz, playing starter and saved playlists (read-only), Juz 1-30 jump, Quick Tafsir, Khatmah, morning and evening Adhkar with Auto-Pace, and a 60-second daily preview of Quran Radio and Live TV
+- Sajdah Premium (optional in-app subscription or one-time lifetime purchase): creating, saving and editing custom playlists, unlimited Quran radio and live TV, the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments, Iqamah offsets), Qibla direction, the Prayer Screen in all six styles with Iqamah countdowns, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
 - No ads
 
 ## Platform
