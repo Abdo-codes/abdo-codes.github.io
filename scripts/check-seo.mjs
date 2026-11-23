@@ -55,7 +55,14 @@ for (const file of files) {
   if (route === '/404.html') continue
 
   const isNoindex = /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(raw)
-  if (!isNoindex && !sitemap.has(route)) errors.push(`Indexable page missing from sitemap.xml: ${route}`)
+  const isLegalOrSupport = /\/(privacy|support)\//.test(route)
+  if (!isNoindex && !isLegalOrSupport && !sitemap.has(route)) errors.push(`Indexable page missing from sitemap.xml: ${route}`)
+  if (isLegalOrSupport && sitemap.has(route)) errors.push(`Low-value legal/support page should not be in sitemap.xml: ${route}`)
+
+  // GA4 localhost/?notrack guard check whenever G-MKWK9CX2JJ is referenced inline
+  if (/G-MKWK9CX2JJ/.test(raw) && !/ga-disable-G-MKWK9CX2JJ/.test(raw)) {
+    errors.push(`Missing ga-disable-G-MKWK9CX2JJ guard on ${route}`)
+  }
 
   // Canonical
   const canM = raw.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)
