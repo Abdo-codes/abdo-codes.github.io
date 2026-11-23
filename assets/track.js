@@ -1,5 +1,6 @@
-/* Counts App Store and TestFlight link clicks in Google Analytics (app_store_click, testflight_click) on every page,
-   and adds an App Store campaign to links to these apps, so App Store Connect shows the downloads per page. */
+/* Counts App Store and TestFlight link clicks in Google Analytics (app_store_click, testflight_click),
+   tracks section_view and scroll_depth milestones, and adds App Store campaign tokens to links to these apps
+   so App Store Connect shows downloads per page. */
 (function () {
     var PROVIDER = '118222814';
     var APPS = {
@@ -11,7 +12,9 @@
         '6819626561': 'Angry Nona',
         '6768992579': 'ColorTalk',
         '6806616079': 'SwingCoach',
-        '6769450957': 'Nightcap Awake'
+        '6769450957': 'Nightcap Awake',
+        '6821673461': 'Baba Abdo',
+        '6831580861': 'Hona Elqahra'
     };
     // Mac App Store apps use media type 12; the iPhone, iPad and Apple TV apps use 8
     var MAC_APPS = { '6769450957': true };
@@ -27,20 +30,6 @@
         var area = link.closest('section, article, header, nav, aside, footer');
         if (!area) return 'page';
         return area.id || area.classList[0] || area.tagName.toLowerCase();
-    }
-
-    function onClick(e) {
-        var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"], a[href*="testflight.apple.com"]');
-        if (!link || typeof gtag !== 'function') return;
-        var beta = link.hostname === 'testflight.apple.com';
-        var id = beta ? link.pathname.split('/').pop() : (link.href.match(/id(\d+)/) || [])[1] || '';
-        gtag('event', beta ? 'testflight_click' : 'app_store_click', {
-            app_name: (beta ? BETAS[id] : APPS[id]) || 'other',
-            app_id: id,
-            placement: placement(link),
-            language: document.documentElement.lang || 'en',
-            link_url: link.href
-        });
     }
 
     // App Store Connect keeps campaign names to 30 characters and hides campaigns with fewer than 5 installs,
@@ -61,9 +50,71 @@
         link.href = url.toString();
     }
 
+    function onClick(e) {
+        // Ignore right-click context menu on auxclick; only count middle-click (button 1)
+        if (e.type === 'auxclick' && e.button !== 1) return;
+        var el = e.target && e.target.nodeType === 1 ? e.target : e.target && e.target.parentElement;
+        var link = el && el.closest ? el.closest('a[href*="apps.apple.com"], a[href*="testflight.apple.com"]') : null;
+        if (!link) return;
+        var beta = link.hostname === 'testflight.apple.com';
+        if (!beta) addCampaign(link);
+        if (typeof gtag !== 'function') return;
+        var id = beta ? link.pathname.split('/').pop() : (link.href.match(/id(\d+)/) || [])[1] || '';
+        gtag('event', beta ? 'testflight_click' : 'app_store_click', {
+            app_name: (beta ? BETAS[id] : APPS[id]) || 'other',
+            app_id: id,
+            placement: placement(link),
+            language: document.documentElement.lang || 'en',
+            link_url: link.href,
+            transport_type: 'beacon'
+        });
+    }
+
+    function initEngagement() {
+        if (typeof gtag !== 'function') return;
+
+        // Section visibility: fire once per section[id] when 20% visible (works on tall mobile sections too)
+        var sections = document.querySelectorAll('section[id]');
+        if (sections.length && 'IntersectionObserver' in window) {
+            var seen = {};
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var id = entry.target.id;
+                    if (entry.isIntersecting && id && !seen[id]) {
+                        seen[id] = true;
+                        observer.unobserve(entry.target);
+                        gtag('event', 'section_view', { section: id });
+                    }
+                });
+            }, { threshold: 0.2 });
+            sections.forEach(function (sec) { observer.observe(sec); });
+        }
+
+        // Scroll depth milestones (25%, 50%, 75%, 100%)
+        var depthsFired = {};
+        var milestones = [25, 50, 75, 100];
+        window.addEventListener('scroll', function () {
+            var docH = document.documentElement.scrollHeight;
+            if (docH <= 0) return;
+            var pct = Math.round(100 * (window.scrollY + window.innerHeight) / docH);
+            milestones.forEach(function (m) {
+                if (pct >= m && !depthsFired[m]) {
+                    depthsFired[m] = true;
+                    gtag('event', 'scroll_depth', { percent: m });
+                }
+            });
+        }, { passive: true });
+    }
+
     Array.prototype.forEach.call(document.querySelectorAll('a[href*="apps.apple.com"]'), addCampaign);
 
     // auxclick covers middle-click, which opens the store in a new tab
     document.addEventListener('click', onClick);
     document.addEventListener('auxclick', onClick);
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initEngagement);
+    } else {
+        initEngagement();
+    }
 })();

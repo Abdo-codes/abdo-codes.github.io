@@ -59,34 +59,5 @@
             track('faq_toggle', { question: text, action: isOpen ? 'close' : 'open' });
         });
     });
-
-    // Section visibility — fire once per section when 50% visible
-    var sectionsSeen = {};
-    var sections = ['features', 'scoreboard', 'sports', 'game-night', 'roadmap', 'faq'];
-    if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting && !sectionsSeen[entry.target.id]) {
-                    sectionsSeen[entry.target.id] = true;
-                    track('section_view', { section: entry.target.id });
-                }
-            });
-        }, { threshold: 0.5 });
-        sections.forEach(function(id) {
-            var el = document.getElementById(id);
-            if (el) observer.observe(el);
-        });
-    }
-
-    // Scroll depth milestones (25%, 50%, 75%, 100%)
-    var depthsFired = {};
-    window.addEventListener('scroll', function() {
-        var scrollPct = Math.round(100 * (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight);
-        [25, 50, 75, 100].forEach(function(milestone) {
-            if (scrollPct >= milestone && !depthsFired[milestone]) {
-                depthsFired[milestone] = true;
-                track('scroll_depth', { percent: milestone });
-            }
-        });
-    }, { passive: true });
+    // section_view and scroll_depth are tracked site-wide in /assets/track.js
 })();

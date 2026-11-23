@@ -60,6 +60,13 @@
     padding: 12px 24px; border-radius: 100px; font-size: 15px; font-weight: 500;
     background: rgba(78, 203, 160, 0.06); border: 1px solid rgba(78, 203, 160, 0.15); color: rgba(255, 255, 255, 0.78);
 }
+.lang-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
+.lang-strip a {
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; text-decoration: none;
+    color: var(--text-muted); background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border);
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.lang-strip a:hover, .lang-strip a[aria-current="page"] { color: var(--emerald); border-color: var(--border-strong); background: rgba(78, 203, 160, 0.08); }
 
 /* FAQ */
 .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
