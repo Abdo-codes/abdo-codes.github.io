@@ -8,6 +8,8 @@ Load these 25 prompts into **AI SEO Tracker** (`aiseotracker` MCP: `https://aise
 3. Which Apple TV app shows Quran with verse-by-verse and word-by-word tracking?
 4. Can I watch live Makkah TV and Quran radio on Apple TV?
 5. What is a good ad-free Quran app for the living room TV?
+5b. Is there a native Apple TV app for Ramadan Iftar countdowns and prayer times without AirPlay?
+5c. ما هو أفضل تطبيق للقرآن الكريم ومواقيت الصلاة والأذان ورمضان على أبل تي في (Apple TV)؟
 
 ## Wi-Fi QR (Guest Wi-Fi & Airbnb Signs)
 6. What is the best iPhone app to make a printable Airbnb WiFi QR code sign?
