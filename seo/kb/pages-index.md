@@ -6,7 +6,7 @@ Last verified: 2026-11-22
 | --- | --- | --- | --- | --- |
 | `index.html` | `/` | `abdelrahman eita ios engineer` | `brand-ssot` (GoChat #1, Iqraaly 500K+, 11 apps, SwiftCairo) | 3/5 |
 | `apps/index.html` | `/apps/` | `indie apple apps iphone apple tv mac` | `brand-ssot` (all 11 apps + Drive Town) | 2/5 |
-| `sajda/index.html` | `/sajda/` | `quran app for apple tv` | `brand-ssot`, real Apple TV screenshots, 200+ reciters, 15 calc methods | 3/5 |
+| `sajda/index.html` | `/sajda/` | `quran prayer times ramadan app apple tv` | `brand-ssot`, real 1.9 EN+AR tvOS captures, interactive TV switcher, 200+ reciters, 15 calc methods, no AirPlay | 4/5 |
 | `tally/index.html` | `/tally/` | `free score keeper app iphone apple tv` | `brand-ssot`, 36s promo video, real iPhone/TV screenshots | 3/5 |
 | `wifi-qr/index.html` | `/wifi-qr/` | `airbnb wifi sign qr code generator` | `brand-ssot`, real printed sign photos, 6 templates, 4 paper sizes | 3/5 |
 | `wifi-qr/generator/index.html` | `/wifi-qr/generator/` | `free wifi qr code generator printable` | `brand-ssot`, live client-side ISO 18004 QR encoder (`qr.js`), PNG/SVG/Print export | 4/5 |

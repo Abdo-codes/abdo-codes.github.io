@@ -16,7 +16,7 @@ Sources: `index.html`, `apps/index.html`, `apps/catalog.json`, `llms.txt`, and e
 
 | App | Route(s) | App Store ID | Platforms | Latest Ver | Pricing & Monetization | Privacy / Analytics |
 | --- | --- | --- | --- | --- | --- | --- |
-| Sajdah (Sajda) | `/sajda/` (+ 10 locales: ar, tr, fr, es, ur, bn, id, ru, sv, zh) | `6759179587` | Apple TV (tvOS 17+) | `1.7.4` | Free download; optional Sajdah Premium (subscription or one-time lifetime purchase); no ads | Requires internet for streaming |
+| Sajdah (Sajda) | `/sajda/` (+ 10 locales: ar, tr, fr, es, ur, bn, id, ru, sv, zh) | `6759179587` | Apple TV (tvOS 17+, native — no AirPlay) | `1.9.0` | Free download (5 daily prayer times, Horizon Prayer Screen, Ramadan mode, Family Hifz, Playlists, Quick Tafsir, 60s daily Live/Radio preview); optional Sajdah Premium (monthly, yearly, or one-time Lifetime); zero ads | Requires internet for streaming |
 | Tally | `/tally/` | `6760623633` | iPhone (iOS 17+) & Apple TV (tvOS 17+) | `1.6.0` | 100% free since v1.3.2; no IAP, no subscriptions, no ads | iCloud sync; Firebase Analytics & crash reports from v1.3.3 |
 | Wi-Fi QR | `/wifi-qr/`, `/wifi-qr/airbnb-wifi-sign/` | `6776169783` | iPhone & iPad (iOS 17+) | `1.8` | Free download; no ads, no subscription; optional one-time Wi-Fi QR Pro unlock | Local storage; Firebase Analytics never includes SSID/password/QR text |
 | Tateemi (تطعيمي) | `/tateemi/` (AR), `/tateemi/en/` (EN) | `6760822504` | iPhone (iOS 17+) | `1.2.12` | Free download; first child free; Tateemi Pro (subscription or one-time lifetime) adds more children; no ads | Local records only; optional consented Firebase/Amplitude analytics + Crashlytics |
