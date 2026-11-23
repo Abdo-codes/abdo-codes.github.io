@@ -46,7 +46,20 @@
     <style>body, .post-title, h2, h3 { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; } .post-title { letter-spacing: 0; } .mono { letter-spacing: 0; } .prose h2 { letter-spacing: 0; }
     .stbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 560px; font-size: 15px; line-height: 1.55; } .stbl caption { caption-side: bottom; text-align: start; font-size: 13px; color: var(--text-tertiary); padding: 10px 14px; }
     .stbl th, .stbl td { padding: 10px 12px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--border); } .stbl thead th { background: var(--surface); color: var(--text-tertiary); font-size: 13px; white-space: nowrap; } .stbl tbody th { white-space: nowrap; font-weight: 650; } .stbl tbody tr:last-child th, .stbl tbody tr:last-child td { border-bottom: 0; }
-    .callout { border-inline-start: 4px solid var(--accent); background: var(--surface); border-radius: 12px; padding: 14px 18px; font-size: 16px; box-shadow: var(--shadow); }</style>
+    .callout { border-inline-start: 4px solid var(--accent); background: var(--surface); border-radius: 12px; padding: 14px 18px; font-size: 16px; box-shadow: var(--shadow); }
+    .oral-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: rgba(224, 68, 44, 0.12); color: var(--accent); margin-inline-start: 4px; vertical-align: middle; }
+    .milestone-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 18px 0 22px; }
+    .ms-card { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid #2e7d32; border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); }
+    .ms-card .ms-stage { display: block; font-size: 12px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+    .ms-card strong { display: block; font-size: 16px; margin-bottom: 4px; color: var(--text); }
+    .ms-card span { display: block; font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+    .mid-cta { margin: 26px 0; padding: 20px 22px; border-radius: 16px; background: var(--surface); border: 1px solid rgba(46, 125, 50, 0.35); border-inline-start: 4px solid #2e7d32; box-shadow: var(--shadow); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    .mid-cta p { margin: 0; font-size: 15.5px; color: var(--text-secondary); max-width: 44ch; line-height: 1.6; }
+    .mid-cta strong { color: var(--text); }
+    .mid-cta .mid-btns { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .mid-cta a.tbtn { display: inline-flex; align-items: center; padding: 10px 16px; border-radius: 10px; font-size: 14.5px; font-weight: 700; text-decoration: none; border: 1px solid var(--border-strong); color: var(--text); }
+    .mid-cta a.tbtn.primary { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+    @media (max-width: 600px) { .milestone-grid { grid-template-columns: 1fr; } }</style>
     <link rel="stylesheet" href="/blog/assets/blog.css?v=20261102">
     <script src="/blog/assets/theme.js"></script>
     <script>/* No Google Analytics on local hosts or on a device opted out with ?notrack (undo with ?track) */(function(){var q=location.search,off=/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)||/[?&]notrack\b/.test(q);try{if(/[?&]notrack\b/.test(q))localStorage.setItem("notrack","1");if(/[?&]track\b/.test(q))localStorage.removeItem("notrack");off=off||!!localStorage.getItem("notrack")}catch(e){}if(off)window["ga-disable-G-MKWK9CX2JJ"]=true})();</script>
@@ -55,9 +68,12 @@
     <script src="/assets/track.js" defer></script>
     <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"BlogPosting","@id":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/#post","headline":"جدول التطعيمات السعودي 2026: من الولادة حتى 18 سنة","description":"جدول التطعيمات السعودي 2026 (1448 هـ) حسب العمر من الولادة حتى 18 سنة، مع عدد لقاحات الشهرين والحرارة بعد التطعيم والمصدر الرسمي. آخر مراجعة نوفمبر 2026.","url":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/","mainEntityOfPage":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/","image":["https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/og-image.jpg","https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/01-saudi-vaccination-schedule.webp","https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/02-two-month-vaccines.webp"],"datePublished":"2026-11-21T11:00:00Z","dateModified":"2026-11-21T18:00:00Z","inLanguage":"ar","articleSection":"Guide","keywords":["جدول التطعيمات السعودي 2026","تطعيمات الاطفال السعودية","تطعيم شهرين","تطعيمي"],"author":{"@type":"Person","@id":"https://yoloabdo.com/#person","name":"Abdelrahman Eita","url":"https://yoloabdo.com/"},"publisher":{"@id":"https://yoloabdo.com/#person"},"about":{"@id":"https://yoloabdo.com/tateemi/#app"},"isPartOf":{"@id":"https://yoloabdo.com/blog/#blog"},"citation":["https://sfda.gov.sa/sites/default/files/2022-08/012-000.pdf","https://www.moh.gov.sa/HealthAwareness/EducationalContent/vaccination/Pages/vaccination1.aspx"]},
+{"@type":"BlogPosting","@id":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/#post","headline":"جدول التطعيمات السعودي 2026: من الولادة حتى 18 سنة","description":"جدول التطعيمات السعودي 2026 (1448 هـ) حسب العمر من الولادة حتى 18 سنة، مع عدد لقاحات الشهرين والحرارة بعد التطعيم والمصدر الرسمي. آخر مراجعة نوفمبر 2026.","url":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/","mainEntityOfPage":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/","image":["https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/og-image.jpg","https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/01-saudi-vaccination-schedule.webp",{"@id":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/#img-timeline"},"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/02-two-month-vaccines.webp"],"datePublished":"2026-11-21T11:00:00Z","dateModified":"2026-11-23T12:00:00Z","inLanguage":"ar","articleSection":"Guide","keywords":["جدول التطعيمات السعودي 2026","تطعيمات الاطفال السعودية","تطعيم شهرين","تطعيمي","جدول التطعيمات من الولادة حتى 6 سنوات"],"author":{"@type":"Person","@id":"https://yoloabdo.com/#person","name":"Abdelrahman Eita","url":"https://yoloabdo.com/"},"publisher":{"@id":"https://yoloabdo.com/#person"},"about":{"@id":"https://yoloabdo.com/tateemi/#app"},"isPartOf":{"@id":"https://yoloabdo.com/blog/#blog"},"citation":["https://sfda.gov.sa/sites/default/files/2022-08/012-000.pdf","https://www.moh.gov.sa/HealthAwareness/EducationalContent/vaccination/Pages/vaccination1.aspx"]},
+{"@type":"ImageObject","@id":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/#img-timeline","url":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/06-birth-to-6-years-timeline.webp","contentUrl":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/06-birth-to-6-years-timeline.webp","width":1200,"height":675,"name":"الخط الزمني لتطعيمات الأطفال في السعودية من الولادة حتى 6 سنوات","caption":"ملخص مصور لأربع مراحل و9 زيارات أساسية (38 جرعة مسجلة) في جدول التطعيمات السعودي من الولادة حتى دخول الصف الأول الابتدائي."},
 {"@type":"FAQPage","@id":"https://yoloabdo.com/blog/saudi-vaccination-schedule-2026/#faq","mainEntity":[{"@type": "Question", "name": "هل يوجد تطعيم للفيروس المخلوي التنفسي (RSV) للمواليد في السعودية؟", "acceptedAnswer": {"@type": "Answer", "text": "تذكر تقارير صحفية أن حماية حديثي الولادة من RSV أُضيفت في 2025، لكن صفحات وزارة الصحة لم توضح ذلك بعد. اسأل المستشفى عند الولادة أو مركز الرعاية الأولية."}},
 {"@type":"Question","name":"كم إبرة في تطعيم الشهرين؟","acceptedAnswer":{"@type":"Answer","text":"يضم جدول الشهرين 6 لقاحات: خمسة بالحقن وواحد بالفم هو لقاح الروتا. عدد الإبر الفعلي يقل إذا استخدم المركز لقاحًا مدمجًا مثل السداسي. اسأل الممرضة عن اللقاحات المستخدمة."}},
+{"@type":"Question","name":"كم عدد زيارات وتطعيمات الطفل في السنة الأولى في السعودية؟","acceptedAnswer":{"@type":"Answer","text":"في السنة الأولى (من الولادة حتى 12 شهرًا) توجد 6 زيارات: عند الولادة، وعمر شهرين، و4 شهور، و6 شهور، و9 شهور، و12 شهرًا، وتضم 27 لقاحًا مدرجًا في الجدول (بينها قطرات فموية للروتا وشلل الأطفال الفموي، ويقل عدد الحقن عند استخدام اللقاحات المدمجة)."}},
+{"@type":"Question","name":"هل يُحسب جدول التطعيمات السعودي بالهجري أم بالميلادي؟","acceptedAnswer":{"@type":"Answer","text":"تُحسب أعمار الجرعات في مراكز الرعاية الأولية بالأشهر الميلادية من تاريخ ميلاد الطفل. وفي تطبيق تطعيمي يمكنك عرض التواريخ بالتقويم الهجري أو الميلادي حسب اختيارك."}},
 {"@type":"Question","name":"هل الحرارة بعد التطعيم طبيعية؟","acceptedAnswer":{"@type":"Answer","text":"نعم. تذكر وزارة الصحة ارتفاع الحرارة ضمن الآثار الشائعة، وتستمر عادة بين 12 و24 ساعة. راجع الطبيب إذا حدثت تشنجات، أو بكاء أكثر من 3 ساعات، أو رعشة، أو قل نشاط الطفل بوضوح، أو زاد التورم والاحمرار بعد 24 ساعة."}},
 {"@type":"Question","name":"ماذا أفعل إذا فاتني موعد التطعيم؟","acceptedAnswer":{"@type":"Answer","text":"راجع عيادة التحصين في المركز الصحي في أقرب وقت. حسب وزارة الصحة، تكمل الجرعات من آخر جرعة أخذها الطفل ولا تبدأ من الأول."}},
 {"@type":"Question","name":"أين أجد جدول التطعيمات الرسمي؟","acceptedAnswer":{"@type":"Answer","text":"في صفحة «جدول التطعيمات الأساسية» على موقع وزارة الصحة السعودية، وفي ملف الهيئة العامة للغذاء والدواء «جدول التطعيمات الأساسية في المملكة العربية السعودية» (أغسطس 2022)."}},
@@ -103,6 +119,7 @@
                 <p><strong>آخر مراجعة: 21 نوفمبر 2026.</strong> المصدر: جدول <a href="https://sfda.gov.sa/sites/default/files/2022-08/012-000.pdf" rel="noopener">«جدول التطعيمات الأساسية في المملكة العربية السعودية»</a> الصادر عن الهيئة العامة للغذاء والدواء في أغسطس 2022، مقارنًا بصفحة <a href="https://www.moh.gov.sa/HealthAwareness/EducationalContent/vaccination/Pages/vaccination1.aspx" rel="noopener">وزارة الصحة</a>. قد تحدّث الوزارة الجدول، فاستشر طبيب الأطفال أو مركز الرعاية الأولية قبل أي قرار. ولحساب مواعيد الجرعات تلقائيًا من تاريخ ميلاد طفلك مع تذكيرات على الآيفون، جرّب <a href="/tateemi/">تطبيق تطعيمي لمتابعة التطعيمات</a> (أو <a href="/tateemi/en/" hreflang="en" lang="en">Tateemi baby vaccine tracker in English</a>).</p>
                 <nav class="toc" aria-label="في هذه التدوينة">
                     <ul>
+                        <li><a href="#timeline">الخط الزمني السريع: من الولادة حتى 6 سنوات</a></li>
                         <li><a href="#table">جدول التطعيمات السعودي 2026 حسب العمر</a></li>
                         <li><a href="#new">هل يوجد جدول تطعيمات سعودي جديد؟</a></li>
                         <li><a href="#two-months">تطعيم شهرين: كم إبرة؟</a></li>
@@ -116,6 +133,35 @@
                     </ul>
                 </nav>
 
+                <h2 id="timeline">الخط الزمني السريع: من الولادة حتى 6 سنوات</h2>
+                <p>تركّز 9 زيارات أساسية (38 لقاحًا مدرجًا في الجدول) على مرحلة الطفولة المبكرة حتى دخول الصف الأول الابتدائي، مقسّمة على أربع مراحل واضحة:</p>
+                <div class="milestone-grid" aria-label="مراحل تطعيمات الأطفال في السعودية">
+                    <div class="ms-card">
+                        <span class="ms-stage">المرحلة 1 · التأسيس (4 زيارات)</span>
+                        <strong>الولادة، شهران، 4 و6 شهور</strong>
+                        <span>تبدأ بالكبدي (ب) عند الولادة، ثم الجرعات الأساسية الستة في 2 و4 شهور، وتبلغ ذروتها في 6 شهور بـ 8 لقاحات (بينها قطرات فموية والسل BCG).</span>
+                    </div>
+                    <div class="ms-card">
+                        <span class="ms-stage">المرحلة 2 · نهاية السنة الأولى (زيارتان)</span>
+                        <strong>9 شهور و12 شهرًا</strong>
+                        <span>الحصبة المفردة والحمى الشوكية MCV4 في 9 شهور، ثم الثلاثي الفيروسي MMR والمكورات الرئوية والحمى الشوكية وشلل الأطفال الفموي في 12 شهرًا.</span>
+                    </div>
+                    <div class="ms-card">
+                        <span class="ms-stage">المرحلة 3 · السنة الثانية (زيارتان)</span>
+                        <strong>18 شهرًا و24 شهرًا</strong>
+                        <span>جرعات منشّطة مع الجديري المائي والكبدي (أ) في عمر سنة ونصف، تليها الجرعة الثانية من الكبدي (أ) عند إتمام عامين.</span>
+                    </div>
+                    <div class="ms-card">
+                        <span class="ms-stage">المرحلة 4 · دخول المدرسة (زيارة واحدة)</span>
+                        <strong>4–6 سنوات (الصف الأول)</strong>
+                        <span>الجرعات المنشّطة الأخيرة قبل المدرسة (OPV، DTaP، MMR والجديري المائي) وتُوثّق رقميًا في «صحتي». تليها لاحقًا جرعات 11 و12 و18 سنة.</span>
+                    </div>
+                </div>
+                <figure>
+                    <img src="06-birth-to-6-years-timeline.webp" width="1200" height="675" style="aspect-ratio: 1200 / 675" alt="الخط الزمني المصور لجدول التطعيمات السعودي من الولادة حتى 6 سنوات: أربع مراحل و9 زيارات أساسية و38 جرعة مسجلة مع تمييز الحقن والقطرات الفموية." loading="lazy">
+                    <figcaption>ملخص بصري للمراحل الأربع من الولادة حتى دخول الصف الأول الابتدائي (يمكنك حفظ الصورة كمرجع سريع).</figcaption>
+                </figure>
+
                 <h2 id="table">جدول التطعيمات السعودي 2026 (1448 هـ) حسب العمر</h2>
                 <p>هذا الجدول للتطعيمات الأساسية. الأسماء من ملف الهيئة، والأحرف اللاتينية هي الرموز المستخدمة في الملف. العمود الأخير يعدّ اللقاحات المدرجة، وليس عدد الإبر.</p>
                 <div class="table-wrap" tabindex="0" role="region" aria-label="جدول التطعيمات حسب العمر">
@@ -124,19 +170,27 @@
                     <thead><tr><th scope="col">الزيارة</th><th scope="col">اللقاحات</th><th scope="col">العدد</th></tr></thead>
                     <tbody>
                         <tr><th scope="row">عند الولادة</th><td>الالتهاب الكبدي (ب) HepB</td><td>1</td></tr>
-                        <tr><th scope="row">شهران</th><td>شلل الأطفال المعطل IPV، الثلاثي البكتيري DTaP، الالتهاب الكبدي (ب)، المستدمية النزلية Hib، البكتيريا العقدية الرئوية PCV، فيروس الروتا Rota (فموي)</td><td>6</td></tr>
-                        <tr><th scope="row">4 شهور</th><td>اللقاحات الستة نفسها</td><td>6</td></tr>
-                        <tr><th scope="row">6 شهور</th><td><span dir="ltr">IPV, DTaP, HepB, Hib, PCV</span>، شلل الأطفال الفموي OPV (فموي)، Rota (فموي)، السل BCG</td><td>8</td></tr>
+                        <tr><th scope="row">شهران</th><td>شلل الأطفال المعطل IPV، الثلاثي البكتيري DTaP، الالتهاب الكبدي (ب)، المستدمية النزلية Hib، البكتيريا العقدية الرئوية PCV، فيروس الروتا Rota <span class="oral-tag">فموي</span></td><td>6</td></tr>
+                        <tr><th scope="row">4 شهور</th><td>اللقاحات الستة نفسها (مع الروتا <span class="oral-tag">فموي</span>)</td><td>6</td></tr>
+                        <tr><th scope="row">6 شهور</th><td><span dir="ltr">IPV, DTaP, HepB, Hib, PCV</span>، شلل الأطفال الفموي OPV <span class="oral-tag">فموي</span>، Rota <span class="oral-tag">فموي</span>، السل BCG</td><td>8</td></tr>
                         <tr><th scope="row">9 شهور</th><td>الحصبة المفردة، الحمى المخية الشوكية المدمج MCV4</td><td>2</td></tr>
-                        <tr><th scope="row">12 شهرًا</th><td>OPV، الثلاثي الفيروسي <span dir="ltr">MMR, PCV, MCV4</span></td><td>4</td></tr>
-                        <tr><th scope="row">18 شهرًا</th><td><span dir="ltr">OPV, DTaP, Hib, MMR</span>، الجديري المائي، الالتهاب الكبدي (أ) HepA</td><td>6</td></tr>
+                        <tr><th scope="row">12 شهرًا</th><td>OPV <span class="oral-tag">فموي</span>، الثلاثي الفيروسي <span dir="ltr">MMR, PCV, MCV4</span></td><td>4</td></tr>
+                        <tr><th scope="row">18 شهرًا</th><td>OPV <span class="oral-tag">فموي</span>، <span dir="ltr">DTaP, Hib, MMR</span>، الجديري المائي، الالتهاب الكبدي (أ) HepA</td><td>6</td></tr>
                         <tr><th scope="row">24 شهرًا</th><td>الالتهاب الكبدي (أ)</td><td>1</td></tr>
-                        <tr><th scope="row">4–6 سنوات (الصف الأول)</th><td><span dir="ltr">OPV, DTaP, MMR</span>، الجديري المائي</td><td>4</td></tr>
+                        <tr><th scope="row">4–6 سنوات (الصف الأول)</th><td>OPV <span class="oral-tag">فموي</span>، <span dir="ltr">DTaP, MMR</span>، الجديري المائي</td><td>4</td></tr>
                         <tr><th scope="row">11 سنة</th><td>DTaP، فيروس الورم الحليمي HPV (إناث)</td><td>2</td></tr>
                         <tr><th scope="row">12 سنة</th><td>HPV (إناث)</td><td>1</td></tr>
                         <tr><th scope="row">18 سنة</th><td>MCV4</td><td>1</td></tr>
                     </tbody>
                 </table>
+                </div>
+
+                <div class="mid-cta" role="region" aria-label="تذكير مواعيد التطعيم في تطبيق تطعيمي">
+                    <p><strong>تريد حساب مواعيد طفلك تلقائيًا دون أن تفوتك جرعة؟</strong> أدخل تاريخ الميلاد في <strong>تطعيمي</strong> ليجهّز لك كل المواعيد من الولادة حتى 6 سنوات (هجري أو ميلادي) مع تذكيرات قبل كل موعد، مجانًا وبلا حساب.</p>
+                    <div class="mid-btns">
+                        <a class="tbtn primary" href="https://apps.apple.com/us/app/tateemi-baby-vaccine-tracker/id6760822504" target="_blank" rel="noopener" data-cta="tateemi-vaccination-schedule-mid-ar">نزّل تطعيمي للآيفون</a>
+                        <a class="tbtn" href="/tateemi/">عن تطبيق تطعيمي</a>
+                    </div>
                 </div>
 
                 <h2 id="new">هل يوجد جدول تطعيمات سعودي جديد؟</h2>
@@ -227,6 +281,8 @@
                 <h2 id="faq">أسئلة شائعة</h2>
                 <p><strong>هل يوجد تطعيم للفيروس المخلوي التنفسي (RSV) للمواليد في السعودية؟</strong> تذكر تقارير صحفية أن حماية حديثي الولادة من RSV أُضيفت في 2025، لكن صفحات وزارة الصحة لم توضح ذلك بعد. اسأل المستشفى عند الولادة أو مركز الرعاية الأولية.</p>
                 <p><strong>كم إبرة في تطعيم الشهرين؟</strong> في الزيارة 6 لقاحات: خمسة بالحقن وواحد بالفم (الروتا). عدد الإبر الفعلي يقل إذا استخدم المركز لقاحًا مدمجًا مثل السداسي. اسأل الممرضة عن اللقاحات المستخدمة.</p>
+                <p><strong>كم عدد زيارات وتطعيمات الطفل في السنة الأولى في السعودية؟</strong> في السنة الأولى (من الولادة حتى 12 شهرًا) توجد 6 زيارات: عند الولادة، وعمر شهرين، و4 شهور، و6 شهور، و9 شهور، و12 شهرًا، وتضم 27 لقاحًا مدرجًا في الجدول (بينها قطرات فموية للروتا وشلل الأطفال الفموي، ويقل عدد الحقن عند استخدام اللقاحات المدمجة).</p>
+                <p><strong>هل يُحسب جدول التطعيمات السعودي بالهجري أم بالميلادي؟</strong> تُحسب أعمار الجرعات في مراكز الرعاية الأولية بالأشهر الميلادية من تاريخ ميلاد الطفل. وفي تطبيق <a href="/tateemi/">تطعيمي</a> يمكنك عرض التواريخ بالتقويم الهجري أو الميلادي حسب اختيارك.</p>
                 <p><strong>هل الحرارة بعد التطعيم طبيعية؟</strong> نعم. تذكر وزارة الصحة ارتفاع الحرارة ضمن الآثار الشائعة، وتستمر عادة بين 12 و24 ساعة. راجع الطبيب إذا حدثت تشنجات، أو بكاء أكثر من 3 ساعات، أو رعشة، أو قل نشاط الطفل بوضوح، أو زاد التورم والاحمرار بعد 24 ساعة.</p>
                 <p><strong>ماذا أفعل إذا فاتني موعد التطعيم؟</strong> راجع عيادة التحصين في المركز الصحي في أقرب وقت. حسب وزارة الصحة، تكمل الجرعات من آخر جرعة أخذها الطفل ولا تبدأ من الأول.</p>
                 <p><strong>أين أجد جدول التطعيمات الرسمي؟</strong> في صفحة «جدول التطعيمات الأساسية» على موقع وزارة الصحة، وفي ملف الهيئة العامة للغذاء والدواء (أغسطس 2022). الروابط في آخر المقال.</p>
