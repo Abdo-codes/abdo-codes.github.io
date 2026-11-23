@@ -76,17 +76,18 @@
         // Section visibility: fire once per section[id] when 20% visible (works on tall mobile sections too)
         var sections = document.querySelectorAll('section[id]');
         if (sections.length && 'IntersectionObserver' in window) {
+            var SECTION_THRESHOLD = 0.2;
             var seen = {};
             var observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
                     var id = entry.target.id;
-                    if (entry.isIntersecting && id && !seen[id]) {
+                    if (entry.isIntersecting && entry.intersectionRatio >= SECTION_THRESHOLD && id && !seen[id]) {
                         seen[id] = true;
                         observer.unobserve(entry.target);
                         gtag('event', 'section_view', { section: id });
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: SECTION_THRESHOLD });
             sections.forEach(function (sec) { observer.observe(sec); });
         }
 
