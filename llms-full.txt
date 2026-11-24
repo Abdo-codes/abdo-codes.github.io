@@ -12,6 +12,9 @@
 
 ## Recent Writing
 
+- [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & 11 Prayer Screen Styles](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
+- [ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs & Four-Book Printing](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/) (24 Nov 2026)
+- [Wi-Fi QR 1.9: Home & Lock Screen Widgets, Bright Mode & Custom Branding](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/) (24 Nov 2026)
 - [SwiftUI Open App Store Page: 3 Ways, With Code](https://yoloabdo.com/blog/swiftui-open-app-store-page/) (21 Nov 2026)
 - [Git Worktree Remove: Keep the Branch (Real Output)](https://yoloabdo.com/blog/git-worktree-remove-keep-branch/) (21 Nov 2026)
 - [Is Xcode DerivedData Safe to Delete? Every Folder](https://yoloabdo.com/blog/xcode-deriveddata-safe-to-delete/) (21 Nov 2026)
@@ -59,6 +62,7 @@
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): all eleven full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board, Masjid, Sanctuary, Mihrab, Chronograph, Ayat), the Liquid Glass Quick Control Dock, dynamic living-sky Horizon (free), Arabic layout, and OLED burn-in protection
 - [Tracing every ayah and word](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/): how verse-by-verse and word-by-word tracking works, seven problems (edition mismatch, one reciter's timing for all, repeats, rejected data, a CDN move, late answers), coverage today (six recordings with word timing) and next steps (forced alignment, a listening test)
+- [Sajdah 2.0 release notes](https://yoloabdo.com/blog/sajdah-2-0-release-notes/): Ramadan 1448 Living Room Mode, free five daily prayers and Horizon Prayer Screen, 11 Prayer Screen styles with Quick Control Dock, Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, and 60-second daily Radio and Live TV previews
 - [Sajdah 1.7.0 release notes](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/): choose your city, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule above 48°, and each prayer adjusted up to 30 minutes (all Premium)
 - [Sajdah 1.7.4 release notes](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/): a preview of the Premium feature you pick, scenic backgrounds, Khatmah, surah search, and Quran Radio and prayer-time fixes
 - [Sajdah 1.7.3 release notes](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/): lifetime Premium as a one-time purchase, and the radio, Athan and prayer-time fixes in 1.7.1 to 1.7.3
@@ -191,7 +195,7 @@
 
 # Wi-Fi QR - Guest Wi-Fi QR Codes and Printable Signs
 
-> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. It can start from the current Wi-Fi network name, add hidden or manual networks, scan router-label or printed password text, save trusted networks locally, search saved networks, share QR code images, and print or export sign PDFs in six templates and four paper sizes. Version 1.7 (October 2026) adds WPA or WEP checks, signs that fit long passwords, and Arabic router-sticker labels. Free to download, with no account, no ads and no subscription (optional Wi-Fi QR Pro one-time unlock adds more sign templates and QR styles); anonymous usage events through Firebase Analytics never include Wi-Fi names, passwords or QR contents.
+> Wi-Fi QR is a private iPhone and iPad utility for creating guest Wi-Fi QR codes, Home & Lock Screen widgets, Airbnb WiFi signs, and printable guest Wi-Fi signs. It is built for hosts, homes, cafes, offices, guest rooms, short-term rentals, VRBO stays, vacation rentals, and Airbnb-style stays. It helps people who are searching for an Airbnb WiFi sign template, WiFi QR code template, WiFi password sign, editable Canva WiFi template, Etsy WiFi QR sign, house manual WiFi instructions, welcome binder WiFi page, or guest network QR code. Version 1.9 (November 2026) adds Home & Lock Screen widgets (Pro), full-screen bright QR mode, one-tap Copy Password (2-minute auto-expiry) and Send as Text, custom QR dot patterns, auto-contrasted brand color and venue logo (Pro), and reading QR codes from router sticker photos or saved screenshots. Up to 2 saved networks are free, with 10 printable sign templates (3 free, 7 in one-time Pro) across four paper sizes, no account, no ads, and no subscription; anonymous usage events through Firebase Analytics never include Wi-Fi names, passwords or QR contents.
 
 ## Links
 
@@ -202,6 +206,7 @@
 - [Wi-Fi QR vs Canva & Etsy templates (2026)](https://yoloabdo.com/wifi-qr/vs-canva-etsy/): pricing math and workflow comparison against Canva Pro, Etsy digital/acrylic signs, and Apple's iOS 18 Passwords app
 - [How to share your Wi-Fi with a QR code on iPhone](https://yoloabdo.com/blog/share-wifi-qr-code-iphone/): three ways to share Wi-Fi from an iPhone (the Passwords app QR code in iOS 18, Share Password for nearby Apple devices, and a printable code from Wi-Fi QR), how guests scan, and fixes for codes that do not work
 - [The story behind Wi-Fi QR](https://yoloabdo.com/blog/wifi-qr-story/): why the app exists, from a hotel Wi-Fi card in London to the App Store in four days, built with Codex
+- [Wi-Fi QR 1.9 release notes](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/): Home & Lock Screen widgets (Pro), full-screen bright QR mode, Copy Password and Send as Text, custom QR patterns, brand color and logo (Pro), and photo QR scan
 - [Wi-Fi QR 1.8 printing guide and release notes](https://yoloabdo.com/blog/print-wifi-qr-code-sign-iphone/): printing a guest sign or 8 cut-out cards from the app, the place name, and Wi-Fi QR Pro
 - [Wi-Fi QR 1.7 release notes](https://yoloabdo.com/blog/wifi-qr-1-7-release-notes/): WPA or WEP with clear checks, guest signs that fit long passwords, better router-sticker scanning
 - [Support](https://yoloabdo.com/wifi-qr/support/)
@@ -210,22 +215,25 @@
 ## Key Features
 
 - **Generate Guest Wi-Fi QR Codes** - create scannable codes for WPA/WPA2/WPA3, WEP, open, and hidden networks, with inline checks for the network name and password
-- **Printable Guest Wi-Fi Signs** - six templates (Classic, Code Only, Gallery Placard, Concierge Ledger, Signal Grid, Ink-Safe Editorial) in 4 x 6 in, 5 x 7 in, A4 and US Letter; long names and passwords shrink and wrap to fit; print from the share sheet
+- **Home & Lock Screen Widgets (Pro)** - pin a scannable QR code in small or medium size to the Home Screen or open a pinned pass from the Lock Screen
+- **Full-Screen Bright QR Mode** - expand any QR pass to 100% display brightness and keep the screen awake while guests scan
+- **Copy Password & Send as Text** - local-only password copy with 2-minute auto-expiry, plus plain-text Wi-Fi details for laptops and TVs
+- **Custom QR Branding (Pro)** - choose from Squircle (free), Dots, Connected, and Classic Square patterns, pick an auto-contrasted (>= 6.5:1) brand color, and embed a custom venue logo
+- **Printable Guest Wi-Fi Signs** - ten templates (Classic, Code Only, 8-per-page Cut-out Cards free; Gallery Placard, Concierge Ledger, Signal Grid, Ink-Safe Editorial, Keycard, Olive Branch, Arrival Folio in Pro) in 4 x 6 in, 5 x 7 in, A4 and US Letter; direct printing from the app
 - **Airbnb and VRBO Host Use Cases** - create WiFi password signs for welcome binders, house manuals, check-in instructions, fridges, TV stands, desks, and router shelves
 - **Template Search Replacement** - useful for people searching Etsy, Canva, or Pinterest for WiFi QR code templates and printable Airbnb WiFi signs
-- **Router Sticker Scanning** - scan printed router-sticker or password-card text with the camera, including English, German, French and Arabic labels, and review it before saving
+- **Router Sticker & Photo Scanning** - scan router-sticker text or read Wi-Fi QR codes from sticker photos and saved screenshots, including English, German, French and Arabic labels, and review before saving
 - **Use Current Network Name** - with permission, reads the current Wi-Fi SSID to reduce typing
 - **Manual and Hidden Networks** - supports manual SSID entry, open guest networks, and hidden-network QR codes
-- **Saved Networks** - stores trusted networks locally on the device for quick reuse
-- **Search** - finds saved networks quickly from the tab bar
+- **Saved Networks & Search** - save up to 2 networks free locally in Keychain (unlimited with Pro) and search saved networks quickly
 - **Share QR Images and Sign PDFs** - exports QR images and printable guest signs through the iOS share sheet
 - **Privacy** - no accounts, ads or cross-app tracking; saved networks stay on the device; anonymous usage events (Firebase Analytics) never include Wi-Fi names, passwords, QR contents, scanned text or sign text
 
 ## Pricing
 
-- Free
+- Free (up to 2 saved networks, unlimited QR generation, bright full-screen mode, Copy Password, Send as Text, direct printing, 3 templates)
 - No ads and no subscription
-- Wi-Fi QR Pro: an optional one-time unlock for more templates and QR styles
+- Wi-Fi QR Pro: optional one-time unlock for widgets, unlimited saved networks, custom QR dot patterns/brand color/logo, 7 extra templates, 3 extra themes, and removing the app link from Classic signs
 
 ## Platform
 
@@ -365,7 +373,7 @@
 
 # ColorTalk: ABC & 123 Coloring - Letters and Numbers for Kids on iPad
 
-> ColorTalk is an ABC and 123 coloring app for iPad that teaches children 5 and under the English alphabet and the numbers 1 to 10. Home is a bookshelf with four books: Letters, Numbers, Arabic Letters and Dinosaurs. In the Letters book, the child picks a letter, colors its page, and meets the letter and one word: "C is for cow." X is the one exception: "Fox ends with X." It works offline. No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. It has no in-app purchases and no external links. It is free on the App Store.
+> ColorTalk is an ABC and 123 coloring app for iPad that teaches children 5 and under the English alphabet, numbers 1 to 10, Arabic letters, and 20 dinosaurs. Home is a bookshelf with four tactile open picture books: Letters, Numbers, Arabic Letters and Dinosaurs. In version 1.2.1 (November 2026), all four books open as real two-page spreads showing the child's own colored artwork, every finished dinosaur comes alive in its prehistoric habitat with a discovery fact and gentle storybook adventure, and parents can print colored or blank pages from all four books via AirPrint. It works offline. No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. It has no in-app purchases and no external links in the child flow. It is free on the App Store.
 
 ## Links
 
@@ -374,16 +382,19 @@
 - [Support](https://yoloabdo.com/colortalk/support/)
 - [Privacy Policy](https://yoloabdo.com/colortalk/privacy/)
 - [Launch post](https://yoloabdo.com/blog/colortalk-abc-coloring-launch/): how a letter page works, who it is for, and the privacy promise
-- [1.2 release notes](https://yoloabdo.com/blog/colortalk-1-2-release-notes/): the Dinosaurs book and Dino Valley, the Arabic letters book, color by number for 3 to 5, Glow, My Art frames and screens in Arabic, German and French
+- [1.2.1 release notes](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/): tactile open picture books across all four books, 20 living dinosaurs in prehistoric habitats with storybook adventures, Lumo canvas cheering, and 4-book AirPrint printing
+- [1.2 release notes](https://yoloabdo.com/blog/colortalk-1-2-release-notes/): the Dinosaurs book, the Arabic letters book, color by number for 3 to 5, Glow, My Art frames and screens in Arabic, German and French
 - [1.1 release notes](https://yoloabdo.com/blog/colortalk-1-1-release-notes/): the Numbers book (1 to 10), the sparkle tool, letter sounds, printing and Dutch screens
 
 ## Key Features
 
+- **Four Open Picture Books** - Letters (A to Z), Numbers (1 to 10), Arabic Letters (28 letters, right-to-left), and Dinosaurs (20 dinosaurs) all flip as two-page spreads showing the child's colored pages
+- **20 Living Dinosaurs** - finished dinosaurs come alive in prehistoric habitats with walking gaits, wildlife calls, discovery facts in all 6 UI languages, and gentle storybook adventures with felt keepsakes
 - **Numbers 1 to 10** - each number page has that many things to color ("3. Three ducks!"); the child traces the number, counts along, then finds it
 - **One Letter, One Word** - each page teaches one letter and one word, such as "C is for cow"
-- **Coloring First** - coloring is the main activity; the letter and its word support the art
-- **Lumo the Firefly** - says the letters, words, and prompts in recorded voice clips; spoken prompts are off by default, and a parent turns them on in Settings
-- **Parents Area** - behind a grown-up question; holds Settings and local progress
+- **Coloring First** - coloring is the main activity; Glow, Sparkle, undoable clear, and Lumo cheering beside the canvas support the art
+- **Lumo the Firefly** - says the letters, words, and prompts in recorded English voice clips; spoken prompts are off by default, and a parent can preview and turn them on in Settings
+- **Parents Area** - behind a grown-up math gate; holds progress across all 4 books, today's play time, 4-book AirPrint printing, and Settings
 - **Works Offline** - all pages, words, and prompts are bundled in the app
 - **Privacy** - No ads, no accounts, no tracking. ColorTalk sends only anonymous usage counts (since version 1.1) and no crash reports. Optional voice answers (off by default) use on-device speech recognition and save no audio
 
@@ -577,6 +588,89 @@
 # Full text
 
 > The sections below repeat the full text of the blog posts, the Airbnb WiFi sign guide, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/sajdah-2-0-release-notes/
+
+Release notes · Sajdah for Apple TV
+
+# Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & 11 Prayer Screen Styles
+
+Sajdah 2.0 brings Ramadan 1448 Living Room Mode, free five daily prayer times with the Horizon Prayer Screen, Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, and 60-second daily Radio & Live TV previews.
+
+![Sajdah 2.0 Ramadan Mode on Apple TV showing live Iftar countdown, five daily prayers, verse of the day, and Today shelf](https://yoloabdo.com/sajda/screenshots/sajdah-ramadan-iftar-countdown-apple-tv-1280.webp)
+
+[Sajdah](https://yoloabdo.com/sajda/) is a native Quran, prayer times, and Athan app built for Apple TV with zero ads and no AirPlay required. Version 2.0 has been submitted to Apple for review and will roll out to Apple TV as soon as Apple approves it.
+
+## Ramadan 1448 Living Room Mode (Free)
+
+- Live Iftar & Suhoor countdowns on Today, Apple TV Top Shelf, and the free Horizon Prayer Screen.
+- Authentic Iftar dua shown automatically during the final 10 minutes before Maghrib.
+- Free Hijri date adjustment (-2 to +2 days) in Settings for local moon sighting.
+- 1-tap 30-day Ramadan Khatmah and Live Makkah Taraweeh pinned on Ramadan evenings.
+
+## Free daily prayer times, Horizon Prayer Screen & 11 styles
+
+All five daily prayer times for your location and the dynamic living-sky Horizon Prayer Screen are free for every household with zero ads. Sajdah 2.0 grows the Prayer Screen from 6 styles to 11 (adding Masjid, Sanctuary, Mihrab, Chronograph, and Ayat) with the auto-hiding Liquid Glass Quick Control Dock (style picker, Quran audio, 12h/24h/Auto clock format, verse strip toggle). Sajdah Premium (monthly, yearly, or one-time Lifetime) unlocks all 11 styles, Iqamah countdowns, 13 Athan voices, Qibla, and 15 mosque calculation methods.
+
+## Family Hifz, Playlists, Juz 1-30 & Quick Tafsir
+
+- **Family Hifz (Free):** listen-and-repeat memorization for the whole family across all 114 surahs from Today.
+- **Playlists:** play curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah) and saved playlists for free; creating and editing custom playlists requires Sajdah Premium.
+- **Juz 1-30 jump & Quick Tafsir (Free):** browse by Juz 1-30 and read Tafsir Al-Muyassar inside the player.
+- **60-second daily Live previews, Adhkar Auto-Pace & unified sky:** sample 60 seconds of Quran Radio and Live TV (including Makkah) daily for free, advance Morning & Evening Adhkar hands-free with Auto-Pace, and enjoy the Home living sky carried into Playlists, Prayer Times, and Settings. Requires an internet connection for streaming.
+
+---
+
+Source: https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/
+
+Release notes · ColorTalk for iPad
+
+# ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs & Four-Book Printing
+
+Every book now opens as a real two-page picture book, all 20 dinosaurs come alive in their own prehistoric habitats with storybook adventures, and parents can print pages from all four books.
+
+![The Letters open picture book spread in ColorTalk 1.2.1 on iPad showing colored letter A is for apple on the left and B is for bee on the right](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/colortalk-1-2-1-open-book.webp)
+
+[ColorTalk](https://yoloabdo.com/colortalk/) is a calm, offline coloring app on iPad for children ages 2 to 5. Version 1.2.1 has been live on the App Store since 24 November 2026.
+
+## Four tactile open picture books
+
+All four books—ABC (A to Z), 123 (1 to 10), Arabic Letters (28 letters), and Dinosaurs (20 dinosaurs)—share a stitched two-page spread matching each shelf cover, showing the child's own colored artwork on every page, page turns with quick-jump dots, and natural reading directions across all 6 UI languages (English, British English, Dutch, Arabic, German, French).
+
+## 20 living dinosaurs & gentle storybook adventures
+
+Dino Valley is retired in 1.2.1. Each finished dinosaur comes alive in its own prehistoric habitat with a walking gait and wildlife call, teaches a localized discovery fact on arrival, and opens a calm interactive storybook adventure that awards felt keepsakes on the Dinosaurs spread. Both Dinosaurs and Arabic Letters stay voice-free for quiet time.
+
+## Coloring studio & Parents upgrades
+
+- Lumo cheers beside the canvas without covering the drawing; Glow and Sparkle pop even on bright colors; region clear is undoable; 64 pt tap targets throughout.
+- Behind the grown-up math gate in Parents: print colored or blank sheets from all four books via AirPrint, view today's play time and adventure progress, preview Lumo's voice before enabling Spoken Prompts (off by default), copy the support email in one tap, and browse Artwork & Sound Credits.
+- 100% free on iPad, offline, no ads, no accounts, no in-app purchases, Kids-safe anonymous usage counts only.
+
+---
+
+Source: https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/
+
+Release notes · Wi-Fi QR for iPhone & iPad
+
+# Wi-Fi QR 1.9: Home & Lock Screen Widgets, Bright Mode & Custom Branding
+
+Version 1.9 brings Home & Lock Screen widgets, full-screen bright QR mode, one-tap Copy Password and Send as Text, custom QR dot patterns, brand colors and logos.
+
+![Three Wi-Fi QR 1.9 iPhone screens side by side: home QR pass in light mode, dark mode with Copy Password and Pin to Widget, and the Concierge Ledger print customizer](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/wifi-qr-1-9-overview.webp)
+
+[Wi-Fi QR](https://yoloabdo.com/wifi-qr/) turns any Wi-Fi password into a scannable QR code and ready-to-print guest sign on iPhone and iPad. Version 1.9 has been live on the App Store since 23 November 2026.
+
+## What shipped in 1.9
+
+- **Home & Lock Screen widgets (Wi-Fi QR Pro):** tap Pin to Widget on any saved network to display a scannable small or medium Home Screen widget, or open your pinned pass from a Lock Screen widget.
+- **Full-screen bright QR mode (Free):** tap expand on any QR pass to show it at 100% display brightness and keep the screen awake while guests scan, then restore your previous brightness.
+- **Copy Password & Send as Text (Free):** copy passwords locally to your device clipboard with 2-minute (120-second) auto-expiry, or share formatted `Wi-Fi` and `Password` plain text for laptops and smart TVs.
+- **Custom QR dot patterns, brand color & venue logo (Wi-Fi QR Pro):** choose Squircle (free default), Dots, Connected, or Classic Square dot patterns, pick a brand color auto-adjusted to >= 6.5:1 WCAG contrast against white, and embed a custom venue logo on QR codes and printed guest signs.
+- **Sticker QR & photo scan (Free):** read Wi-Fi QR codes from router sticker photos or saved screenshots, plus one-tap paste and iOS Settings/Passwords help.
+- **Free vs. Pro:** save up to 2 networks free locally in Keychain (existing networks remain viewable, editable, and deletable), with unlimited QR generation and 3 free templates; Wi-Fi QR Pro is a one-time unlock with no subscription for widgets, custom branding, 7 extra sign templates (10 total), 3 extra pass themes, unlimited saved networks, and hiding the app link on Classic signs.
 
 ---
 

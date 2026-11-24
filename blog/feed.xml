@@ -5,13 +5,43 @@
     <id>https://yoloabdo.com/blog/</id>
     <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/"/>
     <link rel="self" type="application/atom+xml" href="https://yoloabdo.com/blog/feed.xml"/>
-    <updated>2026-11-21T15:00:00Z</updated>
+    <updated>2026-11-24T12:20:00Z</updated>
     <author>
         <name>Abdelrahman Eita</name>
         <uri>https://yoloabdo.com/</uri>
     </author>
     <icon>https://yoloabdo.com/favicon-32.png</icon>
     <logo>https://yoloabdo.com/apple-touch-icon.png</logo>
+
+    <entry>
+        <title>Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times &amp; 11 Prayer Screen Styles</title>
+        <id>https://yoloabdo.com/blog/sajdah-2-0-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/sajdah-2-0-release-notes/"/>
+        <published>2026-11-24T12:20:00Z</published>
+        <updated>2026-11-24T12:20:00Z</updated>
+        <category term="Release notes"/>
+        <summary>Sajdah 2.0 brings Ramadan 1448 Living Room Mode, free daily prayer times and the Horizon Prayer Screen, 11 Prayer Screen styles with Quick Control Dock, Family Hifz for all 114 surahs, Playlists, Juz 1–30 jump, Quick Tafsir, and 60-second daily Radio and Live TV previews.</summary>
+    </entry>
+
+    <entry>
+        <title>ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs &amp; Four-Book Printing</title>
+        <id>https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/"/>
+        <published>2026-11-24T12:10:00Z</published>
+        <updated>2026-11-24T12:10:00Z</updated>
+        <category term="Release notes"/>
+        <summary>ColorTalk 1.2.1 turns all four books (ABC, 123, Arabic Letters, Dinosaurs) into tactile two-page picture books, brings 20 dinosaurs alive in their prehistoric habitats with storybook adventures, and adds 4-book AirPrint printing for parents.</summary>
+    </entry>
+
+    <entry>
+        <title>Wi-Fi QR 1.9: Home &amp; Lock Screen Widgets, Bright Mode &amp; Custom Branding</title>
+        <id>https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/</id>
+        <link rel="alternate" type="text/html" href="https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/"/>
+        <published>2026-11-24T12:00:00Z</published>
+        <updated>2026-11-24T12:00:00Z</updated>
+        <category term="Release notes"/>
+        <summary>Wi-Fi QR 1.9 adds Home &amp; Lock Screen widgets, full-screen bright QR mode, one-tap Copy Password with 2-minute expiry and Send as Text, custom QR dot patterns, high-contrast brand colors, custom logos, and photo library QR scanning.</summary>
+    </entry>
 
     <entry>
         <title>SwiftUI Open App Store Page: 3 Ways, With Code</title>
