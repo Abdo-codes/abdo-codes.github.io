@@ -12,7 +12,7 @@
 
 ## Recent Writing
 
-- [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & 11 Prayer Screen Styles](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
+- [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & Family Hifz](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
 - [ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs & Four-Book Printing](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/) (24 Nov 2026)
 - [Wi-Fi QR 1.9: Home & Lock Screen Widgets, Bright Mode & Custom Branding](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/) (24 Nov 2026)
 - [SwiftUI Open App Store Page: 3 Ways, With Code](https://yoloabdo.com/blog/swiftui-open-app-store-page/) (21 Nov 2026)
@@ -62,7 +62,7 @@
 - [App Store](https://apps.apple.com/app/id6759179587)
 - [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): all eleven full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board, Masjid, Sanctuary, Mihrab, Chronograph, Ayat), the Liquid Glass Quick Control Dock, dynamic living-sky Horizon (free), Arabic layout, and OLED burn-in protection
 - [Tracing every ayah and word](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/): how verse-by-verse and word-by-word tracking works, seven problems (edition mismatch, one reciter's timing for all, repeats, rejected data, a CDN move, late answers), coverage today (six recordings with word timing) and next steps (forced alignment, a listening test)
-- [Sajdah 2.0 release notes](https://yoloabdo.com/blog/sajdah-2-0-release-notes/): Ramadan 1448 Living Room Mode, free five daily prayers and Horizon Prayer Screen, 11 Prayer Screen styles with Quick Control Dock, Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, and 60-second daily Radio and Live TV previews
+- [Sajdah 2.0 release notes](https://yoloabdo.com/blog/sajdah-2-0-release-notes/): Ramadan 1448 Living Room Mode, free five daily prayers and Horizon Prayer Screen (6 styles total in the submitted 2.0 build; 5 extra styles and Quick Control Dock planned for a follow-up update), Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, Adhkar Auto-Pace, and 60-second daily Radio and Live TV previews
 - [Sajdah 1.7.0 release notes](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/): choose your city, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule above 48°, and each prayer adjusted up to 30 minutes (all Premium)
 - [Sajdah 1.7.4 release notes](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/): a preview of the Premium feature you pick, scenic backgrounds, Khatmah, surah search, and Quran Radio and prayer-time fixes
 - [Sajdah 1.7.3 release notes](https://yoloabdo.com/blog/sajdah-1-7-3-release-notes/): lifetime Premium as a one-time purchase, and the radio, Athan and prayer-time fixes in 1.7.1 to 1.7.3
@@ -595,9 +595,9 @@ Source: https://yoloabdo.com/blog/sajdah-2-0-release-notes/
 
 Release notes · Sajdah for Apple TV
 
-# Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & 11 Prayer Screen Styles
+# Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & Family Hifz
 
-Sajdah 2.0 brings Ramadan 1448 Living Room Mode, free five daily prayer times with the Horizon Prayer Screen, Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, and 60-second daily Radio & Live TV previews.
+Sajdah 2.0 brings Ramadan 1448 Living Room Mode, free five daily prayer times with the Horizon Prayer Screen, Family Hifz, Playlists, Juz 1-30 jump, Quick Tafsir, Adhkar Auto-Pace, and 60-second daily Radio & Live TV previews.
 
 ![Sajdah 2.0 Ramadan Mode on Apple TV showing live Iftar countdown, five daily prayers, verse of the day, and Today shelf](https://yoloabdo.com/sajda/screenshots/sajdah-ramadan-iftar-countdown-apple-tv-1280.webp)
 
@@ -610,16 +610,16 @@ Sajdah 2.0 brings Ramadan 1448 Living Room Mode, free five daily prayer times wi
 - Free Hijri date adjustment (-2 to +2 days) in Settings for local moon sighting.
 - 1-tap 30-day Ramadan Khatmah and Live Makkah Taraweeh pinned on Ramadan evenings.
 
-## Free daily prayer times, Horizon Prayer Screen & 11 styles
+## Free daily prayer times & Horizon Prayer Screen
 
-All five daily prayer times for your location and the dynamic living-sky Horizon Prayer Screen are free for every household with zero ads. Sajdah 2.0 grows the Prayer Screen from 6 styles to 11 (adding Masjid, Sanctuary, Mihrab, Chronograph, and Ayat) with the auto-hiding Liquid Glass Quick Control Dock (style picker, Quran audio, 12h/24h/Auto clock format, verse strip toggle). Sajdah Premium (monthly, yearly, or one-time Lifetime) unlocks all 11 styles, Iqamah countdowns, 13 Athan voices, Qibla, and 15 mosque calculation methods.
+All five daily prayer times for your location and the Horizon Prayer Screen are free for every household with zero ads. Sajdah Premium (monthly, yearly, or one-time Lifetime) unlocks the other 5 alternate Prayer Screen styles (Classic, Focus, Timetable, Rosette, and Board — 6 styles in total in the submitted 2.0 build), 13 Athan voices, Qibla, and 15 mosque calculation methods. Five additional Prayer Screen styles and a Quick Control Dock are planned for a follow-up update and are not part of this submitted 2.0 build.
 
 ## Family Hifz, Playlists, Juz 1-30 & Quick Tafsir
 
 - **Family Hifz (Free):** listen-and-repeat memorization for the whole family across all 114 surahs from Today.
 - **Playlists:** play curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah) and saved playlists for free; creating and editing custom playlists requires Sajdah Premium.
 - **Juz 1-30 jump & Quick Tafsir (Free):** browse by Juz 1-30 and read Tafsir Al-Muyassar inside the player.
-- **60-second daily Live previews, Adhkar Auto-Pace & unified sky:** sample 60 seconds of Quran Radio and Live TV (including Makkah) daily for free, advance Morning & Evening Adhkar hands-free with Auto-Pace, and enjoy the Home living sky carried into Playlists, Prayer Times, and Settings. Requires an internet connection for streaming.
+- **60-second daily Live previews, Adhkar Auto-Pace & unified sky:** sample 60 seconds of Quran Radio and Live TV (including Makkah) daily for free, advance Morning & Evening Adhkar hands-free with Auto-Pace, and enjoy the Home sky carried into Playlists, Prayer Times, and Settings. Requires an internet connection for streaming.
 
 ---
 
