@@ -4,7 +4,7 @@
 Source of truth: sajda/index.html (English) and the strings in sajda/assets/i18n*.js.
 Run from the repo root after changing either one:  python3 sajda/tools/build_i18n.py
 Supports dedicated per-locale SEO metadata (seoTitle, seoDesc, seoAppDesc, seoKeywords,
-seoOffersDesc, seoAppAltNames), data-i18n-alt, data-i18n-label, and native Arabic 1.9 screens.
+seoOffersDesc, seoAppAltNames), data-i18n-alt, data-i18n-label, and native Arabic 2.0 screens.
 """
 import html
 import json
@@ -28,6 +28,12 @@ AR_SCREENS = [
     'sajdah-prayer-screen-timetable-apple-tv',
     'sajdah-prayer-screen-rosette-apple-tv',
     'sajdah-prayer-screen-board-apple-tv',
+    'sajdah-prayer-screen-masjid-apple-tv',
+    'sajdah-prayer-screen-mihrab-apple-tv',
+    'sajdah-prayer-screen-sanctuary-apple-tv',
+    'sajdah-prayer-screen-chronograph-apple-tv',
+    'sajdah-prayer-screen-ayat-apple-tv',
+    'sajdah-prayer-screen-dock-apple-tv',
     'sajdah-playlists-friday-alkahf-apple-tv',
     'sajdah-morning-adhkar-apple-tv',
 ]

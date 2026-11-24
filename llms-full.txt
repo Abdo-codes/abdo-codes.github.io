@@ -50,14 +50,14 @@
 
 # Sajdah (Sajda) - Quran, Prayer Times & Athan for Apple TV
 
-> Sajdah (App Store name "Sajdah: Quran & Athan TV", also spelled Sajda) is a native Quran, prayer times, Athan, and Ramadan app built specifically for Apple TV (tvOS 17 or later — runs directly on Apple TV with no iPhone or AirPlay needed). It is free to download, with 200+ reciters, verse-by-verse and word-by-word tracking, Quran fonts, free daily prayer times, 13 athan voices, Qibla direction, the Prayer Screen (full-screen prayer times in six styles, formerly Prayer Room), a Ramadan Living Room Mode (Iftar and Suhoor countdowns, the Iftar dua, a 30-day Khatmah and Live Makkah Taraweeh), Family Hifz, Playlists, Quick Tafsir (Al-Muyassar), morning and evening adhkar, the verse and hadith of the day, Quran radio, live Islamic TV including Makkah, and Top Shelf cards on the Apple TV Home Screen.
+> Sajdah (App Store name "Sajdah: Quran & Athan TV", also spelled Sajda) is a native Quran, prayer times, Athan, and Ramadan app built specifically for Apple TV (tvOS 17 or later — runs directly on Apple TV with no iPhone or AirPlay needed). It is free to download, with 200+ reciters, verse-by-verse and word-by-word tracking, Quran fonts, free daily prayer times, 13 athan voices, Qibla direction, the Prayer Screen (full-screen prayer times in eleven styles with dynamic living-sky Horizon and a Liquid Glass Quick Control Dock, formerly Prayer Room), a Ramadan Living Room Mode (Iftar and Suhoor countdowns, the Iftar dua, a 30-day Khatmah and Live Makkah Taraweeh), Family Hifz, Playlists, Quick Tafsir (Al-Muyassar), morning and evening adhkar, the verse and hadith of the day, Quran radio, live Islamic TV including Makkah, and Top Shelf cards on the Apple TV Home Screen.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/sajda/)
 - Languages: [English](https://yoloabdo.com/sajda/) · [العربية](https://yoloabdo.com/sajda/ar/) · [Türkçe](https://yoloabdo.com/sajda/tr/) · [Français](https://yoloabdo.com/sajda/fr/) · [Español](https://yoloabdo.com/sajda/es/) · [اردو](https://yoloabdo.com/sajda/ur/) · [বাংলা](https://yoloabdo.com/sajda/bn/) · [Bahasa Indonesia](https://yoloabdo.com/sajda/id/) · [Русский](https://yoloabdo.com/sajda/ru/) · [Svenska](https://yoloabdo.com/sajda/sv/) · [中文](https://yoloabdo.com/sajda/zh/)
 - [App Store](https://apps.apple.com/app/id6759179587)
-- [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): the six full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board), Arabic layout, burn-in protection, and the free preview
+- [The Prayer Screen on Apple TV](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/): all eleven full-screen Prayer Screen styles (Classic, Focus, Horizon, Timetable, Rosette, Board, Masjid, Sanctuary, Mihrab, Chronograph, Ayat), the Liquid Glass Quick Control Dock, dynamic living-sky Horizon (free), Arabic layout, and OLED burn-in protection
 - [Tracing every ayah and word](https://yoloabdo.com/blog/sajdah-ayah-word-tracking/): how verse-by-verse and word-by-word tracking works, seven problems (edition mismatch, one reciter's timing for all, repeats, rejected data, a CDN move, late answers), coverage today (six recordings with word timing) and next steps (forced alignment, a listening test)
 - [Sajdah 1.7.0 release notes](https://yoloabdo.com/blog/sajdah-1-7-0-release-notes/): choose your city, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule above 48°, and each prayer adjusted up to 30 minutes (all Premium)
 - [Sajdah 1.7.4 release notes](https://yoloabdo.com/blog/sajdah-1-7-4-release-notes/): a preview of the Premium feature you pick, scenic backgrounds, Khatmah, surah search, and Quran Radio and prayer-time fixes
@@ -73,23 +73,23 @@
 - **200+ Quran Reciters** with multiple narrations (Hafs, Warsh, and others)
 - **Verse-by-Verse Sync** with precise ayah tracking, and **word-by-word highlighting** on selected Hafs reciters (premium)
 - **Quran Fonts**: Uthmanic (free), plus Amiri, Scheherazade New, Noto Naskh, KFGQPC Nastaleeq and Lateef (premium)
-- **Live Tab**: Quran radio stations with a live equalizer and live Islamic TV channels, including Makkah (premium; since 1.9 everyone gets a free 60-second daily preview of Radio and of Live TV)
+- **Live Tab**: Quran radio stations with a live equalizer and live Islamic TV channels, including Makkah (premium; since 2.0 everyone gets a free 60-second daily preview of Radio and of Live TV)
 - **Today** (free): the verse of the day at the center, the next prayer in a one-line prayer bar, and short cards for continue listening, Adhkar and the hadith of the day in the app language
-- **Morning and Evening Adhkar** with a Siri Remote counter, or hands-free with Auto-Pace (new in 1.9)
-- **Ramadan Living Room Mode** (new in 1.9, free): Iftar and Suhoor countdowns on Today, Top Shelf and the Horizon Prayer Screen, the authentic Iftar dua in the last 10 minutes before Maghrib, a one-press 30-day Ramadan Khatmah (one Juz a day), Live Makkah Taraweeh pinned on Ramadan evenings, and a Hijri date adjustment of -2 to +2 days for local moon sighting
-- **Family Hifz** (new in 1.9, free): listen-and-repeat memorization for the whole family across all 114 surahs, started from Today
-- **Playlists, Juz jump and Quick Tafsir** (new in 1.9): play curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah) and saved playlists read-only for free (creating, adding to, and editing custom playlists requires Sajdah Premium); Juz 1-30 filter in surah selection and Tafsir Al-Muyassar / English explanation in the player (Hafs recordings) are free
-- **Prayer Times** for Fajr, Dhuhr, Asr, Maghrib and Isha in the location's time zone (free since 1.9), **13 Athan voices** plus a Fajr Athan, and **Qibla Direction** (premium)
+- **Morning and Evening Adhkar** with a Siri Remote counter, or hands-free with Auto-Pace (new in 2.0)
+- **Ramadan Living Room Mode** (new in 2.0, free): Iftar and Suhoor countdowns on Today, Top Shelf and the Horizon Prayer Screen, the authentic Iftar dua in the last 10 minutes before Maghrib, a one-press 30-day Ramadan Khatmah (one Juz a day), Live Makkah Taraweeh pinned on Ramadan evenings, and a Hijri date adjustment of -2 to +2 days for local moon sighting
+- **Family Hifz** (new in 2.0, free): listen-and-repeat memorization for the whole family across all 114 surahs, started from Today
+- **Playlists, Juz jump and Quick Tafsir** (new in 2.0): play curated starter playlists (Friday Al-Kahf, Before Sleep, Ruqyah) and saved playlists read-only for free (creating, adding to, and editing custom playlists requires Sajdah Premium); Juz 1-30 filter in surah selection and Tafsir Al-Muyassar / English explanation in the player (Hafs recordings) are free
+- **Prayer Times** for Fajr, Dhuhr, Asr, Maghrib and Isha in the location's time zone (free since 2.0), **13 Athan voices** plus a Fajr Athan, and **Qibla Direction** (premium)
 - **Prayer time settings** (premium, new in 1.7.0): search any city or keep Automatic, 15 calculation methods with a preview of today's times, Standard or Hanafi Asr, a short-night rule for cities above 48° latitude, and an adjustment of up to 30 minutes for each prayer. The Athan, the Prayer Screen and Top Shelf follow these settings
-- **Prayer Screen** (formerly Prayer Room): full-screen prayer times that stay on the TV, in six styles, with background Quran audio and burn-in protection (Horizon is free since 1.9; Premium unlocks all six styles and Iqamah countdowns)
+- **Prayer Screen** (formerly Prayer Room): full-screen prayer times that stay on the TV, in eleven styles (Classic, Focus, Horizon, Timetable, Rosette, Board, Masjid, Sanctuary, Mihrab, Chronograph and Ayat), with an auto-hiding Liquid Glass Quick Control Dock (direct style picker, background Quran audio, persisted 12h/24h/Auto clock format, and verse strip toggle) and OLED burn-in protection (dynamic living-sky Horizon + Quick Control Dock are free; Premium unlocks all eleven styles and Iqamah countdowns)
 - **Top Shelf**: continue listening, verse of the day and next prayer on the Apple TV Home Screen
 - **Player**: focus mode, ambient mode, sleep timer (15-60 min or end of surah), repeat and A-B repeat, playback speed from 0.5x to 2x, translations and optional transliteration
 - **Multilingual**: English, Arabic, Turkish, French, Spanish, Urdu, Bengali, Indonesian, Russian, Swedish, and Chinese
 
 ## Pricing
 
-- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen, all five daily prayer times (default calculation) with the Hijri date adjustment, the Horizon Prayer Screen, Ramadan Living Room Mode, Family Hifz, playing starter and saved playlists (read-only), Juz 1-30 jump, Quick Tafsir, Khatmah, morning and evening Adhkar with Auto-Pace, and a 60-second daily preview of Quran Radio and Live TV
-- Sajdah Premium (optional in-app subscription or one-time lifetime purchase): creating, saving and editing custom playlists, unlimited Quran radio and live TV, the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments, Iqamah offsets), Qibla direction, the Prayer Screen in all six styles with Iqamah countdowns, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
+- Free: Quran recitation with every reciter, verse-by-verse reading with synchronized Arabic text, one translation, surah repeat, sleep timer, the Today screen, all five daily prayer times (default calculation) with the Hijri date adjustment, the dynamic living-sky Horizon Prayer Screen with Quick Control Dock, Ramadan Living Room Mode, Family Hifz, playing starter and saved playlists (read-only), Juz 1-30 jump, Quick Tafsir, Khatmah, morning and evening Adhkar with Auto-Pace, and a 60-second daily preview of Quran Radio and Live TV
+- Sajdah Premium (optional in-app subscription or one-time lifetime purchase): creating, saving and editing custom playlists, unlimited Quran radio and live TV, the Athan in 13 voices, the prayer time settings (city, calculation method, Hanafi Asr, short-night rule, minute adjustments, Iqamah offsets), Qibla direction, the Prayer Screen in all eleven styles with Iqamah countdowns, ambient mode, all translations and transliteration, word-by-word highlighting, memorization tools, playback speed, extra Quran fonts
 - No ads
 
 ## Platform
@@ -764,7 +764,7 @@ Product · Sajdah for Apple TV
 
 Most TVs sit dark between shows. With Sajdah, the biggest screen at home can show the day's prayers instead, in a design that fits the room.
 
-![The Horizon style of the Prayer Screen: Dhuhr is next in 1:23:45, the prayers sit on the arc of the sun across the day, and a small chip says: swipe up or down to change style, Back to exit.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-horizon-1280.webp)
+![The Horizon style of the Prayer Screen: Dhuhr is next in 1:23:45 against a deep morning sky, with 10:51 AM in the top corner and all six prayers along the arc of the sun.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-horizon-1280.webp)
 
 In many homes, the prayer times live on a phone. You unlock it, open an app, and look for the next prayer. In a masjid it is different: the times hang on the wall, and everyone in the room can see them. I wanted that feeling at home, on the screen the whole family already looks at.
 
@@ -772,20 +772,27 @@ That is the **Prayer Screen** in [Sajdah, the Quran and Athan app for Apple TV](
 
 ## How it works
 
-Open the Prayer Screen from its tile on the Today screen. Swipe up or down on the remote to change the style. Press Back to leave. The hint chip goes away after four seconds, and Sajdah remembers the last style you picked.
+Open the Prayer Screen from its tile on the Today screen. Swipe up or down on the remote to step through styles, press Select on any unlocked style to open the auto-hiding Liquid Glass Quick Control Dock (visual style picker, background Quran audio, 12h/24h/Auto clock format, and verse strip toggle), or press Back to leave. Sajdah remembers your last style, clock format, and verse preference.
 
-## Six styles
+![The Prayer Screen Quick Control Dock open over Horizon.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-dock-1280.webp)
+
+## Eleven styles
 
 Every style shows the next prayer, a countdown to it, all six times of the day (Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha), and the Hijri and Gregorian dates.
 
 - **Classic**: dark green, the next prayer in a large serif, a gold countdown, and the six times in one row.
 - **Focus**: deep navy, with a gold ring that fills as the time between two prayers passes.
-- **Horizon**: the path of the sun across the day, with each prayer on the arc and a dot for the time now. It opens first.
+- **Horizon (Free)**: the path of the sun across the day with a dynamic living sky that shifts across Fajr, midday, Maghrib dusk, and night. It is free for everyone and opens first.
 - **Timetable**: the next prayer large on the left, and a table of prayers in English and Arabic on the right, with a progress bar.
 - **Rosette**: the day as a dial, with the Arabic name of the next prayer in the center.
 - **Board**: a black departure board with numbered rows and a status for each prayer: passed, next, or time left.
+- **Masjid**: emerald mosque wall board with a live ticking-seconds clock, an Iqamah pill, and side-by-side Athan and Iqamah columns.
+- **Sanctuary**: layered twilight hills, an ultra-light modernist clock, a compact next-prayer card, and a floating six-prayer bar.
+- **Mihrab**: a golden architectural mihrab arch framing the Arabic prayer calligraphy and live countdown.
+- **Chronograph**: minimalist OLED-black timepiece with huge thin digits and an amber countdown capsule for night rooms.
+- **Ayat**: deep emerald sanctuary centering the Quran Verse of the Day above all six daily prayers.
 
-![The Classic style.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-classic-1280.webp)
+![The Masjid style.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-masjid-1280.webp)
 
 ![The Board style in Arabic, right to left with Arabic digits.](https://yoloabdo.com/blog/sajdah-prayer-screen-apple-tv/prayer-screen-board-arabic-1280.webp)
 
@@ -795,7 +802,7 @@ Each style puts the name of the next prayer and the countdown first, large enoug
 
 ## In Arabic, too
 
-When the Apple TV is in Arabic, the Prayer Screen reads right to left, with Arabic names, dates and digits.
+When the Apple TV is in Arabic, all eleven Prayer Screen styles read right to left, with Arabic names, dates and digits.
 
 ## Safe to leave on all day
 
@@ -803,9 +810,9 @@ When the Apple TV is in Arabic, the Prayer Screen reads right to left, with Arab
 - Every two minutes, the content moves a few points along a small oval, to help protect OLED TVs from burn-in.
 - After ten minutes with no remote press, it dims to 70% brightness. Any button brings it back.
 
-## Free preview and Premium
+## Free Horizon and Sajdah Premium
 
-All six styles are part of Sajdah Premium. Without Premium, you can watch a free preview in Horizon with the real times for your city. Other styles show a Premium chip; press Select to see the Premium options, or Horizon comes back after 30 seconds. Premium also adds the Athan in 13 voices at every prayer.
+Dynamic living-sky Horizon — including the Quick Control Dock for background Quran audio, 12h/24h clock format, and verse strip visibility — is free for everyone using the real times for your city. Sajdah Premium unlocks the other ten styles, Iqamah countdowns, 15 calculation methods, Qibla, and the Athan in 13 voices. Locked styles show a Premium chip; press Select to see the Premium options, or Horizon comes back after 30 seconds.
 
 ---
 
@@ -1258,7 +1265,7 @@ Every app was checked on 17 October 2026 in the US App Store. An app is in the l
 
 | App | Type | Price (US) | Listening on TV | Quran text on TV | Live streams | Prayer times and Athan | Top Shelf | Ads on TV |
 |---|---|---|---|---|---|---|---|---|
-| Sajdah | Built only for Apple TV (tvOS 17+) | Free; Premium $2.99/month or $26.90/year | 200+ reciters | Verse sync free; word by word on selected reciters (Premium) | Quran radio and live TV incl. Makkah (Premium) | Yes, 13 Athan voices and Qibla (Premium) | Yes | No |
+| Sajdah | Built only for Apple TV (tvOS 17+) | Free; Premium monthly, yearly, or one-time Lifetime | 200+ reciters | Verse sync & Quick Tafsir free; word by word on selected reciters (Premium) | 60s/day free preview; unlimited Quran radio & live Makkah TV (Premium) | 5 daily prayers & living-sky Horizon Prayer Screen free; 13 Athan voices, Qibla, 11 Prayer Screen styles & Quick Control Dock (Premium) | Yes | No |
 | Quran Mushaf TV | Built only for Apple TV (tvOS 16.4+) | Free; subscriptions from $0.99/week | Recitation with verse repeat | Madani Mushaf pages, translation, tafsir | Not stated | Not stated | Not stated | Yes |
 | the Holy Quran TV! | Built only for Apple TV (tvOS 9+) | $4.99 | 1 reciter (Abdelbasit Abdelsamad) | Verse by verse | Not stated | Not stated | Not stated | Not marked |
 | Quran Pro | Phone app with TV version (tvOS 12+) | Free; one subscription covers Apple TV | Yes | Not stated | Not stated | Not stated | Not stated | Not stated |
