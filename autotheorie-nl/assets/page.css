@@ -1,0 +1,335 @@
+:root {
+    --bg: #0A0E17;
+    --surface: #131B2B;
+    --text: #F5F7FA;
+    --text-dim: #B8C2D4;
+    --text-muted: #8B97AD;
+    --accent: #38BDF8;
+    --divider: #222D42;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+a:hover { opacity: 0.85; text-decoration: underline; }
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--divider);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-sep {
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.nav-page {
+    color: var(--text-dim);
+    font-size: 16px;
+}
+
+.nav-spacer {
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+    font-size: 15px;
+}
+
+main {
+    padding: 72px 0 112px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 5vw, 46px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    margin-bottom: 14px;
+}
+
+.support-intro {
+    color: var(--text-dim);
+    font-size: 20px;
+    margin-bottom: 44px;
+    max-width: 600px;
+}
+
+.hero-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.hero-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
+    border: 1px solid var(--divider);
+    flex-shrink: 0;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid var(--divider);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #06131F;
+}
+
+.btn:hover { opacity: 0.9; text-decoration: none; }
+
+.contact-card,
+.notice-card {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    padding: 28px 28px;
+    margin-bottom: 44px;
+}
+
+.contact-card h2,
+.notice-card h2 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.contact-card p,
+.notice-card p {
+    color: var(--text-dim);
+    margin-bottom: 18px;
+}
+
+.notice-card p:last-child { margin-bottom: 0; }
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    padding: 14px 22px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.contact-email:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+    opacity: 1;
+}
+
+h2.faq-heading {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.faq-list {
+    margin-bottom: 56px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--divider);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item summary {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 22px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--text);
+}
+
+.faq-item summary:hover {
+    color: var(--accent);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-muted);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding-bottom: 22px;
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.last-updated {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.policy h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 40px;
+    margin-bottom: 14px;
+}
+
+.policy p,
+.policy ul {
+    color: var(--text-dim);
+    margin-bottom: 18px;
+}
+
+.policy ul { padding-left: 24px; }
+.policy li { margin-bottom: 8px; }
+.policy strong { color: var(--text); font-weight: 600; }
+
+footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--divider);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-content p,
+.footer-content a {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-content a:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+    main { padding: 48px 0 80px; }
+    .contact-card, .notice-card { padding: 22px 18px; }
+    .contact-email { max-width: 100%; padding: 12px 16px; font-size: 15px; word-break: break-all; }
+}
