@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Baba Abdo 1.1: Peacock & Brass UI and live language switch](https://yoloabdo.com/blog/baba-abdo-1-1-release-notes/) (25 Nov 2026)
 - [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & Family Hifz](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
 - [ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs & Four-Book Printing](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/) (24 Nov 2026)
 - [Wi-Fi QR 1.9: Home & Lock Screen Widgets, Bright Mode & Custom Branding](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/) (24 Nov 2026)
@@ -496,7 +497,7 @@
 
 # Baba Abdo (كشري بابا عبده) - Egyptian Koshary Cooking Game for iPhone
 
-> Baba Abdo (كشري بابا عبده) is a free Egyptian koshary cooking game for iPhone, played in Egyptian Arabic (landscape orientation). Run a neighborhood koshary shop through a seven-day story with 16 neighbors, listen to each customer's exact order (rice, pasta, lentils, chickpeas, tomato sauce, fried onions, garlic vinegar and chili), build the bowl in layers, ring the service bell, spend earned in-game coins to decorate the shop, and unlock untimed Practice mode after week one. Version 1.0 includes Daily Orders, Game Center leaderboards and achievements, eight stickers, and a 50% extra-time accessibility setting. Free with no ads, no tracking, no analytics and no account required.
+> Baba Abdo (كشري بابا عبده) is a free Egyptian koshary cooking game for iPhone, in Arabic and English with a live in-app language switch (landscape orientation). Run a neighborhood koshary shop through a seven-day story with 16 neighbors, listen to each customer's exact order (rice, pasta, lentils, chickpeas, tomato sauce, fried onions, garlic vinegar and chili), build the bowl in layers, ring the service bell, spend earned in-game coins to decorate the shop, and unlock untimed Practice mode after week one. Version 1.1 adds the Peacock & Brass Lantern UI across menus and cards, a live persisted Arabic and English switcher, and clearer Day 1 kitchen cues alongside Daily Orders, Open Days, Personal Best, Game Center leaderboards and achievements, eight stickers, and a 50% extra-time accessibility setting. Free with no ads, no in-app purchases, and no account required (optional analytics and crash reporting can be turned off in Settings).
 
 ## Links
 
@@ -505,6 +506,7 @@
 - [App Store](https://apps.apple.com/app/id6821673461)
 - [Support](https://yoloabdo.com/baba-abdo/support/)
 - [Privacy Policy](https://yoloabdo.com/baba-abdo/privacy/)
+- [1.1 release notes (English)](https://yoloabdo.com/blog/baba-abdo-1-1-release-notes/) · [1.1 release notes (Arabic)](https://yoloabdo.com/blog/baba-abdo-1-1-release-notes/ar/)
 - [Launch post (English)](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/) · [Launch post (Arabic)](https://yoloabdo.com/blog/koshary-cooking-game-iphone-baba-abdo/ar/)
 - [1.0 release notes (English)](https://yoloabdo.com/blog/baba-abdo-1-0-release-notes/) · [1.0 release notes (Arabic)](https://yoloabdo.com/blog/baba-abdo-1-0-release-notes/ar/)
 
@@ -514,7 +516,7 @@
 - **Layered Koshary Bowl Gameplay** - assemble rice, pasta, lentils, chickpeas, sauce, onions and condiments; hold any ticket to pause the timer and read the order
 - **Shop Decoration & Untimed Practice** - spend in-game shift earnings on shop furnishings (no real money); unlock untimed practice after the 7-day story
 - **Daily Orders, Stickers & Game Center** - daily orders, eight stickers, optional Game Center scores and achievements
-- **Accessibility & Privacy** - 50% extra-time mode, reduced motion support, no ads, no analytics, no tracking, local save on device
+- **Accessibility & Privacy** - live Arabic/English switch, 50% extra-time mode, reduced motion support, no ads, optional gameplay analytics and crash reporting (can be turned off in Settings), local save on device
 
 ## Pricing
 
@@ -522,7 +524,7 @@
 
 ## Platform
 
-- iOS (iPhone), requires iOS 17 or later, landscape orientation, Arabic gameplay text
+- iOS (iPhone), requires iOS 17 or later, landscape orientation, Arabic and English UI
 - Plays fully offline (Game Center is optional)
 
 ## Developer
