@@ -1,38 +1,11 @@
 {
-  "generatedAt": "2026-11-23T13:44:09.404Z",
-  "totalPages": 97,
-  "moneyPagesCount": 23,
-  "orphanMoneyPages": [
-    "/angry-nona/ar/",
-    "/tateemi/en/"
-  ],
+  "generatedAt": "2026-11-26T15:43:30.716Z",
+  "totalPages": 108,
+  "moneyPagesCount": 26,
+  "orphanMoneyPages": [],
   "lateOrMissingBlogLinksCount": 0,
   "lateOrMissingBlogLinks": [],
   "moneyPages": [
-    {
-      "route": "/angry-nona/ar/",
-      "file": "angry-nona/ar/index.html",
-      "money": true,
-      "contextualInbound": 2,
-      "blogInbound": 1,
-      "distinctAnchors": 2,
-      "linkedFrom": [
-        "/apps/",
-        "/blog/angry-nona-1-6-release-notes/"
-      ]
-    },
-    {
-      "route": "/tateemi/en/",
-      "file": "tateemi/en/index.html",
-      "money": true,
-      "contextualInbound": 2,
-      "blogInbound": 1,
-      "distinctAnchors": 2,
-      "linkedFrom": [
-        "/apps/",
-        "/blog/saudi-vaccination-schedule-2026/"
-      ]
-    },
     {
       "route": "/nightcap-awake/vs-amphetamine/",
       "file": "nightcap-awake/vs-amphetamine/index.html",
@@ -102,20 +75,6 @@
       ]
     },
     {
-      "route": "/hona-elqahra/",
-      "file": "hona-elqahra/index.html",
-      "money": true,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/quran-radio-app-iphone-hona-elqahra/"
-      ]
-    },
-    {
       "route": "/surfing/",
       "file": "surfing/index.html",
       "money": true,
@@ -127,6 +86,49 @@
         "/apps/",
         "/blog/",
         "/drive-town/guide/"
+      ]
+    },
+    {
+      "route": "/swingcoach/vs-kettlebell-apps/",
+      "file": "swingcoach/vs-kettlebell-apps/index.html",
+      "money": true,
+      "contextualInbound": 4,
+      "blogInbound": 3,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/blog/100-kettlebell-swings-a-day/",
+        "/blog/kettlebell-workout-app-hands-free/",
+        "/blog/swingcoach-1-2-1-release-notes/",
+        "/swingcoach/"
+      ]
+    },
+    {
+      "route": "/tateemi/en/",
+      "file": "tateemi/en/index.html",
+      "money": true,
+      "contextualInbound": 4,
+      "blogInbound": 1,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/saudi-vaccination-schedule-2026/",
+        "/tateemi/",
+        "/tateemi/support/"
+      ]
+    },
+    {
+      "route": "/angry-nona/ar/",
+      "file": "angry-nona/ar/index.html",
+      "money": true,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/angry-nona/",
+        "/apps/",
+        "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
+        "/blog/angry-nona-night-shift-launch/"
       ]
     },
     {
@@ -160,33 +162,33 @@
       ]
     },
     {
-      "route": "/colortalk/",
-      "file": "colortalk/index.html",
+      "route": "/hona-elqahra/ar/stations/",
+      "file": "hona-elqahra/ar/stations/index.html",
       "money": true,
       "contextualInbound": 5,
       "blogInbound": 3,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/colortalk-1-1-release-notes/",
-        "/blog/colortalk-1-2-release-notes/",
-        "/blog/colortalk-abc-coloring-launch/"
-      ]
-    },
-    {
-      "route": "/hona-elqahra/ar/",
-      "file": "hona-elqahra/ar/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 4,
-      "distinctAnchors": 4,
+      "distinctAnchors": 7,
       "linkedFrom": [
         "/apps/",
         "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
-        "/blog/saudi-vaccination-schedule-2026/"
+        "/hona-elqahra/ar/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/stations/",
+      "file": "hona-elqahra/stations/index.html",
+      "money": true,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 8,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/"
       ]
     },
     {
@@ -205,11 +207,60 @@
       ]
     },
     {
+      "route": "/colortalk/",
+      "file": "colortalk/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 4,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
+        "/blog/colortalk-1-2-release-notes/",
+        "/blog/colortalk-abc-coloring-launch/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/",
+      "file": "hona-elqahra/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 8,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/stations/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/ar/",
+      "file": "hona-elqahra/ar/index.html",
+      "money": true,
+      "contextualInbound": 7,
+      "blogInbound": 5,
+      "distinctAnchors": 7,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/blog/saudi-vaccination-schedule-2026/",
+        "/hona-elqahra/ar/stations/"
+      ]
+    },
+    {
       "route": "/angry-nona/",
       "file": "angry-nona/index.html",
       "money": true,
-      "contextualInbound": 7,
-      "blogInbound": 3,
+      "contextualInbound": 8,
+      "blogInbound": 4,
       "distinctAnchors": 6,
       "linkedFrom": [
         "/",
@@ -218,6 +269,7 @@
         "/apps/",
         "/blog/angry-nona-1-5-release-notes/",
         "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
         "/blog/angry-nona-night-shift-launch/"
       ]
     },
@@ -225,9 +277,9 @@
       "route": "/swingcoach/",
       "file": "swingcoach/index.html",
       "money": true,
-      "contextualInbound": 7,
+      "contextualInbound": 8,
       "blogInbound": 5,
-      "distinctAnchors": 9,
+      "distinctAnchors": 11,
       "linkedFrom": [
         "/",
         "/apps/",
@@ -235,20 +287,22 @@
         "/blog/kettlebell-workout-app-hands-free/",
         "/blog/swingcoach-1-1-release-notes/",
         "/blog/swingcoach-1-2-1-release-notes/",
-        "/blog/swingcoach-kettlebell-swing-counter-launch/"
+        "/blog/swingcoach-kettlebell-swing-counter-launch/",
+        "/swingcoach/vs-kettlebell-apps/"
       ]
     },
     {
       "route": "/wifi-qr/generator/",
       "file": "wifi-qr/generator/index.html",
       "money": true,
-      "contextualInbound": 7,
-      "blogInbound": 4,
-      "distinctAnchors": 14,
+      "contextualInbound": 8,
+      "blogInbound": 5,
+      "distinctAnchors": 16,
       "linkedFrom": [
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
         "/wifi-qr/airbnb-wifi-sign/",
@@ -259,15 +313,16 @@
       "route": "/wifi-qr/airbnb-wifi-sign/",
       "file": "wifi-qr/airbnb-wifi-sign/index.html",
       "money": true,
-      "contextualInbound": 9,
-      "blogInbound": 7,
-      "distinctAnchors": 12,
+      "contextualInbound": 10,
+      "blogInbound": 8,
+      "distinctAnchors": 14,
       "linkedFrom": [
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
@@ -278,8 +333,8 @@
       "route": "/wifi-qr/",
       "file": "wifi-qr/index.html",
       "money": true,
-      "contextualInbound": 15,
-      "blogInbound": 7,
+      "contextualInbound": 16,
+      "blogInbound": 8,
       "distinctAnchors": 10,
       "linkedFrom": [
         "/",
@@ -289,6 +344,7 @@
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/surfing/",
@@ -389,15 +445,16 @@
       "route": "/sajda/",
       "file": "sajda/index.html",
       "money": true,
-      "contextualInbound": 31,
-      "blogInbound": 11,
-      "distinctAnchors": 14,
+      "contextualInbound": 24,
+      "blogInbound": 13,
+      "distinctAnchors": 15,
       "linkedFrom": [
         "/",
         "/apps/",
         "/blog/",
         "/blog/building-sajdah-apple-tv-journey/",
         "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-apps-apple-tv-compared/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/blog/sajdah-1-5-0-release-notes/",
@@ -405,21 +462,13 @@
         "/blog/sajdah-1-7-0-release-notes/",
         "/blog/sajdah-1-7-3-release-notes/",
         "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
         "/blog/sajdah-ayah-word-tracking/",
         "/blog/sajdah-prayer-screen-apple-tv/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
+        "/hona-elqahra/",
+        "/hona-elqahra/stations/",
         "/sajda/privacy/",
         "/sajda/privacy/ar/",
-        "/sajda/ru/",
-        "/sajda/support/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/",
         "/surfing/",
         "/tally/",
         "/tateemi/",
@@ -428,6 +477,87 @@
     }
   ],
   "pages": [
+    {
+      "route": "/sajda/bn/",
+      "file": "sajda/bn/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/es/",
+      "file": "sajda/es/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/fr/",
+      "file": "sajda/fr/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/id/",
+      "file": "sajda/id/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/ru/",
+      "file": "sajda/ru/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/sv/",
+      "file": "sajda/sv/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/tr/",
+      "file": "sajda/tr/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/ur/",
+      "file": "sajda/ur/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
+    {
+      "route": "/sajda/zh/",
+      "file": "sajda/zh/index.html",
+      "money": false,
+      "contextualInbound": 0,
+      "blogInbound": 0,
+      "distinctAnchors": 0,
+      "linkedFrom": []
+    },
     {
       "route": "/stampt/privacy/",
       "file": "stampt/privacy/index.html",
@@ -445,6 +575,17 @@
       "blogInbound": 0,
       "distinctAnchors": 0,
       "linkedFrom": []
+    },
+    {
+      "route": "/autotheorie-nl/support/",
+      "file": "autotheorie-nl/support/index.html",
+      "money": false,
+      "contextualInbound": 1,
+      "blogInbound": 0,
+      "distinctAnchors": 1,
+      "linkedFrom": [
+        "/autotheorie-nl/"
+      ]
     },
     {
       "route": "/baba-abdo/support/",
@@ -469,15 +610,27 @@
       ]
     },
     {
-      "route": "/angry-nona/ar/",
-      "file": "angry-nona/ar/index.html",
-      "money": true,
+      "route": "/autotheorie-nl/",
+      "file": "autotheorie-nl/index.html",
+      "money": false,
       "contextualInbound": 2,
-      "blogInbound": 1,
-      "distinctAnchors": 2,
+      "blogInbound": 0,
+      "distinctAnchors": 3,
       "linkedFrom": [
-        "/apps/",
-        "/blog/angry-nona-1-6-release-notes/"
+        "/drive-town/",
+        "/drive-town/guide/"
+      ]
+    },
+    {
+      "route": "/autotheorie-nl/privacy/",
+      "file": "autotheorie-nl/privacy/index.html",
+      "money": false,
+      "contextualInbound": 2,
+      "blogInbound": 0,
+      "distinctAnchors": 1,
+      "linkedFrom": [
+        "/autotheorie-nl/",
+        "/autotheorie-nl/support/"
       ]
     },
     {
@@ -490,18 +643,6 @@
       "linkedFrom": [
         "/apps/",
         "/baba-abdo/support/"
-      ]
-    },
-    {
-      "route": "/blog/colortalk-1-2-release-notes/",
-      "file": "blog/colortalk-1-2-release-notes/index.html",
-      "money": false,
-      "contextualInbound": 2,
-      "blogInbound": 0,
-      "distinctAnchors": 2,
-      "linkedFrom": [
-        "/blog/",
-        "/colortalk/"
       ]
     },
     {
@@ -565,15 +706,27 @@
       ]
     },
     {
-      "route": "/tateemi/en/",
-      "file": "tateemi/en/index.html",
-      "money": true,
+      "route": "/sajda/ar/",
+      "file": "sajda/ar/index.html",
+      "money": false,
       "contextualInbound": 2,
-      "blogInbound": 1,
+      "blogInbound": 0,
+      "distinctAnchors": 3,
+      "linkedFrom": [
+        "/hona-elqahra/ar/",
+        "/hona-elqahra/ar/stations/"
+      ]
+    },
+    {
+      "route": "/sajda/privacy/",
+      "file": "sajda/privacy/index.html",
+      "money": false,
+      "contextualInbound": 2,
+      "blogInbound": 0,
       "distinctAnchors": 2,
       "linkedFrom": [
         "/apps/",
-        "/blog/saudi-vaccination-schedule-2026/"
+        "/sajda/privacy/ar/"
       ]
     },
     {
@@ -589,25 +742,12 @@
       ]
     },
     {
-      "route": "/blog/100-kettlebell-swings-a-day/",
-      "file": "blog/100-kettlebell-swings-a-day/index.html",
+      "route": "/blog/angry-nona-1-7-release-notes/",
+      "file": "blog/angry-nona-1-7-release-notes/index.html",
       "money": false,
       "contextualInbound": 3,
       "blogInbound": 0,
       "distinctAnchors": 4,
-      "linkedFrom": [
-        "/",
-        "/blog/",
-        "/swingcoach/"
-      ]
-    },
-    {
-      "route": "/blog/angry-nona-1-6-release-notes/",
-      "file": "blog/angry-nona-1-6-release-notes/index.html",
-      "money": false,
-      "contextualInbound": 3,
-      "blogInbound": 0,
-      "distinctAnchors": 3,
       "linkedFrom": [
         "/angry-nona/",
         "/angry-nona/ar/",
@@ -628,6 +768,32 @@
       ]
     },
     {
+      "route": "/blog/colortalk-1-2-1-release-notes/",
+      "file": "blog/colortalk-1-2-1-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 3,
+      "blogInbound": 0,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/colortalk/"
+      ]
+    },
+    {
+      "route": "/blog/colortalk-1-2-release-notes/",
+      "file": "blog/colortalk-1-2-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 3,
+      "blogInbound": 1,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/colortalk-1-2-1-release-notes/",
+        "/colortalk/"
+      ]
+    },
+    {
       "route": "/blog/sajdah-1-7-0-release-notes/",
       "file": "blog/sajdah-1-7-0-release-notes/index.html",
       "money": false,
@@ -641,6 +807,19 @@
       ]
     },
     {
+      "route": "/blog/sajdah-1-7-3-release-notes/",
+      "file": "blog/sajdah-1-7-3-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 3,
+      "blogInbound": 2,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/swingcoach-1-1-release-notes/"
+      ]
+    },
+    {
       "route": "/blog/swingcoach-1-2-1-release-notes/",
       "file": "blog/swingcoach-1-2-1-release-notes/index.html",
       "money": false,
@@ -651,6 +830,19 @@
         "/blog/",
         "/blog/100-kettlebell-swings-a-day/",
         "/swingcoach/"
+      ]
+    },
+    {
+      "route": "/blog/wifi-qr-1-9-release-notes/",
+      "file": "blog/wifi-qr-1-9-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 3,
+      "blogInbound": 0,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/wifi-qr/"
       ]
     },
     {
@@ -680,19 +872,6 @@
       ]
     },
     {
-      "route": "/sajda/privacy/",
-      "file": "sajda/privacy/index.html",
-      "money": false,
-      "contextualInbound": 3,
-      "blogInbound": 0,
-      "distinctAnchors": 2,
-      "linkedFrom": [
-        "/apps/",
-        "/sajda/privacy/ar/",
-        "/sajda/support/"
-      ]
-    },
-    {
       "route": "/tateemi/support/",
       "file": "tateemi/support/index.html",
       "money": false,
@@ -703,19 +882,6 @@
         "/apps/",
         "/tateemi/",
         "/tateemi/en/"
-      ]
-    },
-    {
-      "route": "/wifi-qr/privacy/",
-      "file": "wifi-qr/privacy/index.html",
-      "money": false,
-      "contextualInbound": 3,
-      "blogInbound": 1,
-      "distinctAnchors": 3,
-      "linkedFrom": [
-        "/apps/",
-        "/blog/print-wifi-qr-code-sign-iphone/",
-        "/wifi-qr/support/"
       ]
     },
     {
@@ -732,17 +898,45 @@
       ]
     },
     {
-      "route": "/blog/colortalk-abc-coloring-launch/",
-      "file": "blog/colortalk-abc-coloring-launch/index.html",
+      "route": "/blog/100-kettlebell-swings-a-day/",
+      "file": "blog/100-kettlebell-swings-a-day/index.html",
+      "money": false,
+      "contextualInbound": 4,
+      "blogInbound": 0,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/swingcoach/",
+        "/swingcoach/vs-kettlebell-apps/"
+      ]
+    },
+    {
+      "route": "/blog/angry-nona-1-6-release-notes/",
+      "file": "blog/angry-nona-1-6-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 4,
+      "blogInbound": 1,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/angry-nona/",
+        "/angry-nona/ar/",
+        "/blog/",
+        "/blog/angry-nona-1-7-release-notes/"
+      ]
+    },
+    {
+      "route": "/blog/baba-abdo-1-0-release-notes/",
+      "file": "blog/baba-abdo-1-0-release-notes/index.html",
       "money": false,
       "contextualInbound": 4,
       "blogInbound": 2,
-      "distinctAnchors": 4,
+      "distinctAnchors": 5,
       "linkedFrom": [
+        "/baba-abdo/en/",
         "/blog/",
-        "/blog/colortalk-1-1-release-notes/",
-        "/blog/colortalk-1-2-release-notes/",
-        "/colortalk/"
+        "/blog/angry-nona-1-6-release-notes/",
+        "/blog/baba-abdo-1-0-release-notes/ar/"
       ]
     },
     {
@@ -760,17 +954,17 @@
       ]
     },
     {
-      "route": "/blog/hona-elqahra-1-1-release-notes/",
-      "file": "blog/hona-elqahra-1-1-release-notes/index.html",
+      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/",
+      "file": "blog/koshary-cooking-game-iphone-baba-abdo/index.html",
       "money": false,
       "contextualInbound": 4,
-      "blogInbound": 1,
-      "distinctAnchors": 4,
+      "blogInbound": 2,
+      "distinctAnchors": 6,
       "linkedFrom": [
+        "/baba-abdo/en/",
         "/blog/",
-        "/blog/quran-radio-app-iphone-hona-elqahra/",
-        "/hona-elqahra/",
-        "/hona-elqahra/ar/"
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
       ]
     },
     {
@@ -788,40 +982,12 @@
       ]
     },
     {
-      "route": "/blog/sajdah-1-7-3-release-notes/",
-      "file": "blog/sajdah-1-7-3-release-notes/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 3,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/blog/",
-        "/blog/quran-apps-apple-tv-compared/",
-        "/blog/sajdah-1-7-4-release-notes/",
-        "/blog/swingcoach-1-1-release-notes/"
-      ]
-    },
-    {
-      "route": "/blog/sajdah-ayah-word-tracking/",
-      "file": "blog/sajdah-ayah-word-tracking/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 4,
-      "linkedFrom": [
-        "/blog/",
-        "/blog/quran-apps-apple-tv-compared/",
-        "/blog/sajdah-1-7-3-release-notes/",
-        "/sajda/"
-      ]
-    },
-    {
       "route": "/blog/saudi-vaccination-schedule-2026/",
       "file": "blog/saudi-vaccination-schedule-2026/index.html",
       "money": false,
       "contextualInbound": 4,
       "blogInbound": 0,
-      "distinctAnchors": 5,
+      "distinctAnchors": 4,
       "linkedFrom": [
         "/",
         "/blog/",
@@ -942,20 +1108,6 @@
       ]
     },
     {
-      "route": "/hona-elqahra/",
-      "file": "hona-elqahra/index.html",
-      "money": true,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/quran-radio-app-iphone-hona-elqahra/"
-      ]
-    },
-    {
       "route": "/surfing/",
       "file": "surfing/index.html",
       "money": true,
@@ -967,6 +1119,20 @@
         "/apps/",
         "/blog/",
         "/drive-town/guide/"
+      ]
+    },
+    {
+      "route": "/swingcoach/vs-kettlebell-apps/",
+      "file": "swingcoach/vs-kettlebell-apps/index.html",
+      "money": true,
+      "contextualInbound": 4,
+      "blogInbound": 3,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/blog/100-kettlebell-swings-a-day/",
+        "/blog/kettlebell-workout-app-hands-free/",
+        "/blog/swingcoach-1-2-1-release-notes/",
+        "/swingcoach/"
       ]
     },
     {
@@ -998,17 +1164,32 @@
       ]
     },
     {
-      "route": "/wifi-qr/support/",
-      "file": "wifi-qr/support/index.html",
-      "money": false,
+      "route": "/tateemi/en/",
+      "file": "tateemi/en/index.html",
+      "money": true,
       "contextualInbound": 4,
-      "blogInbound": 3,
-      "distinctAnchors": 2,
+      "blogInbound": 1,
+      "distinctAnchors": 4,
       "linkedFrom": [
         "/apps/",
-        "/blog/print-wifi-qr-code-sign-iphone/",
-        "/blog/wifi-qr-1-7-release-notes/",
-        "/blog/wifi-qr-story/"
+        "/blog/saudi-vaccination-schedule-2026/",
+        "/tateemi/",
+        "/tateemi/support/"
+      ]
+    },
+    {
+      "route": "/angry-nona/ar/",
+      "file": "angry-nona/ar/index.html",
+      "money": true,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/angry-nona/",
+        "/apps/",
+        "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
+        "/blog/angry-nona-night-shift-launch/"
       ]
     },
     {
@@ -1024,21 +1205,6 @@
         "/angry-nona/support/",
         "/apps/",
         "/blog/angry-nona-1-5-release-notes/"
-      ]
-    },
-    {
-      "route": "/angry-nona/support/",
-      "file": "angry-nona/support/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 3,
-      "distinctAnchors": 2,
-      "linkedFrom": [
-        "/angry-nona/privacy/",
-        "/apps/",
-        "/blog/angry-nona-1-5-release-notes/",
-        "/blog/angry-nona-1-6-release-notes/",
-        "/blog/angry-nona-night-shift-launch/"
       ]
     },
     {
@@ -1072,78 +1238,33 @@
       ]
     },
     {
-      "route": "/blog/baba-abdo-1-0-release-notes/",
-      "file": "blog/baba-abdo-1-0-release-notes/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/baba-abdo/en/",
-        "/blog/",
-        "/blog/angry-nona-1-6-release-notes/",
-        "/blog/baba-abdo-1-0-release-notes/ar/"
-      ]
-    },
-    {
-      "route": "/blog/colortalk-1-1-release-notes/",
-      "file": "blog/colortalk-1-1-release-notes/index.html",
+      "route": "/blog/colortalk-abc-coloring-launch/",
+      "file": "blog/colortalk-abc-coloring-launch/index.html",
       "money": false,
       "contextualInbound": 5,
       "blogInbound": 3,
       "distinctAnchors": 5,
       "linkedFrom": [
         "/blog/",
-        "/blog/angry-nona-1-5-release-notes/",
+        "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
         "/blog/colortalk-1-2-release-notes/",
-        "/blog/colortalk-abc-coloring-launch/",
         "/colortalk/"
       ]
     },
     {
-      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/",
-      "file": "blog/koshary-cooking-game-iphone-baba-abdo/index.html",
+      "route": "/blog/hona-elqahra-1-1-release-notes/",
+      "file": "blog/hona-elqahra-1-1-release-notes/index.html",
       "money": false,
       "contextualInbound": 5,
       "blogInbound": 2,
-      "distinctAnchors": 7,
-      "linkedFrom": [
-        "/",
-        "/baba-abdo/en/",
-        "/blog/",
-        "/blog/baba-abdo-1-0-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
-      ]
-    },
-    {
-      "route": "/blog/print-wifi-qr-code-sign-iphone/",
-      "file": "blog/print-wifi-qr-code-sign-iphone/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 9,
+      "distinctAnchors": 8,
       "linkedFrom": [
         "/blog/",
-        "/blog/share-wifi-password-iphone-to-android/",
-        "/blog/share-wifi-qr-code-iphone/",
-        "/wifi-qr/",
-        "/wifi-qr/airbnb-wifi-sign/"
-      ]
-    },
-    {
-      "route": "/blog/sajdah-1-6-0-release-notes/",
-      "file": "blog/sajdah-1-6-0-release-notes/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 3,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/blog/",
-        "/blog/sajdah-1-5-0-release-notes/",
-        "/blog/sajdah-1-7-0-release-notes/",
-        "/blog/sajdah-prayer-screen-apple-tv/",
-        "/sajda/"
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/",
+        "/hona-elqahra/ar/"
       ]
     },
     {
@@ -1162,48 +1283,33 @@
       ]
     },
     {
-      "route": "/colortalk/",
-      "file": "colortalk/index.html",
+      "route": "/hona-elqahra/ar/stations/",
+      "file": "hona-elqahra/ar/stations/index.html",
       "money": true,
       "contextualInbound": 5,
       "blogInbound": 3,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/colortalk-1-1-release-notes/",
-        "/blog/colortalk-1-2-release-notes/",
-        "/blog/colortalk-abc-coloring-launch/"
-      ]
-    },
-    {
-      "route": "/colortalk/support/",
-      "file": "colortalk/support/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 3,
-      "distinctAnchors": 3,
-      "linkedFrom": [
-        "/apps/",
-        "/blog/colortalk-1-1-release-notes/",
-        "/blog/colortalk-1-2-release-notes/",
-        "/blog/colortalk-abc-coloring-launch/",
-        "/colortalk/"
-      ]
-    },
-    {
-      "route": "/hona-elqahra/ar/",
-      "file": "hona-elqahra/ar/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 4,
-      "distinctAnchors": 4,
+      "distinctAnchors": 7,
       "linkedFrom": [
         "/apps/",
         "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
-        "/blog/saudi-vaccination-schedule-2026/"
+        "/hona-elqahra/ar/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/stations/",
+      "file": "hona-elqahra/stations/index.html",
+      "money": true,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 8,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/"
       ]
     },
     {
@@ -1222,19 +1328,49 @@
       ]
     },
     {
-      "route": "/blog/angry-nona-1-5-release-notes/",
-      "file": "blog/angry-nona-1-5-release-notes/index.html",
+      "route": "/wifi-qr/privacy/",
+      "file": "wifi-qr/privacy/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 2,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/wifi-qr-1-9-release-notes/",
+        "/wifi-qr/",
+        "/wifi-qr/support/"
+      ]
+    },
+    {
+      "route": "/wifi-qr/support/",
+      "file": "wifi-qr/support/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 4,
+      "distinctAnchors": 2,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/print-wifi-qr-code-sign-iphone/",
+        "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
+        "/blog/wifi-qr-story/"
+      ]
+    },
+    {
+      "route": "/angry-nona/support/",
+      "file": "angry-nona/support/index.html",
       "money": false,
       "contextualInbound": 6,
-      "blogInbound": 3,
-      "distinctAnchors": 7,
+      "blogInbound": 4,
+      "distinctAnchors": 2,
       "linkedFrom": [
-        "/angry-nona/",
-        "/angry-nona/ar/",
-        "/blog/",
+        "/angry-nona/privacy/",
+        "/apps/",
+        "/blog/angry-nona-1-5-release-notes/",
         "/blog/angry-nona-1-6-release-notes/",
-        "/blog/angry-nona-night-shift-launch/",
-        "/blog/colortalk-1-1-release-notes/"
+        "/blog/angry-nona-1-7-release-notes/",
+        "/blog/angry-nona-night-shift-launch/"
       ]
     },
     {
@@ -1254,35 +1390,67 @@
       ]
     },
     {
-      "route": "/blog/kettlebell-workout-app-hands-free/",
-      "file": "blog/kettlebell-workout-app-hands-free/index.html",
+      "route": "/blog/colortalk-1-1-release-notes/",
+      "file": "blog/colortalk-1-1-release-notes/index.html",
       "money": false,
       "contextualInbound": 6,
       "blogInbound": 4,
-      "distinctAnchors": 8,
+      "distinctAnchors": 6,
       "linkedFrom": [
         "/blog/",
-        "/blog/100-kettlebell-swings-a-day/",
-        "/blog/swingcoach-1-1-release-notes/",
-        "/blog/swingcoach-1-2-1-release-notes/",
-        "/blog/swingcoach-kettlebell-swing-counter-launch/",
-        "/swingcoach/"
+        "/blog/angry-nona-1-5-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
+        "/blog/colortalk-1-2-release-notes/",
+        "/blog/colortalk-abc-coloring-launch/",
+        "/colortalk/"
       ]
     },
     {
-      "route": "/blog/quran-radio-app-iphone-hona-elqahra/",
-      "file": "blog/quran-radio-app-iphone-hona-elqahra/index.html",
+      "route": "/blog/hona-elqahra-1-2-release-notes/",
+      "file": "blog/hona-elqahra-1-2-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 6,
+      "blogInbound": 2,
+      "distinctAnchors": 9,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/",
+        "/hona-elqahra/ar/"
+      ]
+    },
+    {
+      "route": "/blog/print-wifi-qr-code-sign-iphone/",
+      "file": "blog/print-wifi-qr-code-sign-iphone/index.html",
       "money": false,
       "contextualInbound": 6,
       "blogInbound": 3,
-      "distinctAnchors": 7,
+      "distinctAnchors": 10,
       "linkedFrom": [
         "/blog/",
-        "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/",
-        "/blog/sajdah-1-7-4-release-notes/",
-        "/hona-elqahra/",
-        "/hona-elqahra/ar/"
+        "/blog/share-wifi-password-iphone-to-android/",
+        "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wifi-qr-1-9-release-notes/",
+        "/wifi-qr/",
+        "/wifi-qr/airbnb-wifi-sign/"
+      ]
+    },
+    {
+      "route": "/blog/share-wifi-password-iphone-to-android/",
+      "file": "blog/share-wifi-password-iphone-to-android/index.html",
+      "money": false,
+      "contextualInbound": 6,
+      "blogInbound": 1,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/share-wifi-qr-code-iphone/",
+        "/wifi-qr/",
+        "/wifi-qr/airbnb-wifi-sign/",
+        "/wifi-qr/generator/",
+        "/wifi-qr/vs-canva-etsy/"
       ]
     },
     {
@@ -1302,19 +1470,51 @@
       ]
     },
     {
-      "route": "/colortalk/privacy/",
-      "file": "colortalk/privacy/index.html",
+      "route": "/colortalk/",
+      "file": "colortalk/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 4,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
+        "/blog/colortalk-1-2-release-notes/",
+        "/blog/colortalk-abc-coloring-launch/"
+      ]
+    },
+    {
+      "route": "/colortalk/support/",
+      "file": "colortalk/support/index.html",
       "money": false,
       "contextualInbound": 6,
-      "blogInbound": 3,
+      "blogInbound": 4,
       "distinctAnchors": 3,
       "linkedFrom": [
         "/apps/",
         "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
         "/blog/colortalk-1-2-release-notes/",
         "/blog/colortalk-abc-coloring-launch/",
-        "/colortalk/",
-        "/colortalk/support/"
+        "/colortalk/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/",
+      "file": "hona-elqahra/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 8,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/hona-elqahra/stations/"
       ]
     },
     {
@@ -1334,20 +1534,54 @@
       ]
     },
     {
-      "route": "/angry-nona/",
-      "file": "angry-nona/index.html",
-      "money": true,
+      "route": "/blog/angry-nona-1-5-release-notes/",
+      "file": "blog/angry-nona-1-5-release-notes/index.html",
+      "money": false,
       "contextualInbound": 7,
-      "blogInbound": 3,
-      "distinctAnchors": 6,
+      "blogInbound": 4,
+      "distinctAnchors": 7,
       "linkedFrom": [
-        "/",
-        "/angry-nona/privacy/",
-        "/angry-nona/support/",
-        "/apps/",
-        "/blog/angry-nona-1-5-release-notes/",
+        "/angry-nona/",
+        "/angry-nona/ar/",
+        "/blog/",
         "/blog/angry-nona-1-6-release-notes/",
-        "/blog/angry-nona-night-shift-launch/"
+        "/blog/angry-nona-1-7-release-notes/",
+        "/blog/angry-nona-night-shift-launch/",
+        "/blog/colortalk-1-1-release-notes/"
+      ]
+    },
+    {
+      "route": "/blog/kettlebell-workout-app-hands-free/",
+      "file": "blog/kettlebell-workout-app-hands-free/index.html",
+      "money": false,
+      "contextualInbound": 7,
+      "blogInbound": 4,
+      "distinctAnchors": 9,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/100-kettlebell-swings-a-day/",
+        "/blog/swingcoach-1-1-release-notes/",
+        "/blog/swingcoach-1-2-1-release-notes/",
+        "/blog/swingcoach-kettlebell-swing-counter-launch/",
+        "/swingcoach/",
+        "/swingcoach/vs-kettlebell-apps/"
+      ]
+    },
+    {
+      "route": "/blog/quran-radio-app-iphone-hona-elqahra/",
+      "file": "blog/quran-radio-app-iphone-hona-elqahra/index.html",
+      "money": false,
+      "contextualInbound": 7,
+      "blogInbound": 4,
+      "distinctAnchors": 8,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/sajdah-1-7-4-release-notes/",
+        "/hona-elqahra/",
+        "/hona-elqahra/ar/"
       ]
     },
     {
@@ -1368,29 +1602,64 @@
       ]
     },
     {
-      "route": "/blog/share-wifi-password-iphone-to-android/",
-      "file": "blog/share-wifi-password-iphone-to-android/index.html",
+      "route": "/colortalk/privacy/",
+      "file": "colortalk/privacy/index.html",
       "money": false,
       "contextualInbound": 7,
-      "blogInbound": 1,
+      "blogInbound": 4,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/apps/",
+        "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
+        "/blog/colortalk-1-2-release-notes/",
+        "/blog/colortalk-abc-coloring-launch/",
+        "/colortalk/",
+        "/colortalk/support/"
+      ]
+    },
+    {
+      "route": "/hona-elqahra/ar/",
+      "file": "hona-elqahra/ar/index.html",
+      "money": true,
+      "contextualInbound": 7,
+      "blogInbound": 5,
       "distinctAnchors": 7,
       "linkedFrom": [
+        "/apps/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/blog/saudi-vaccination-schedule-2026/",
+        "/hona-elqahra/ar/stations/"
+      ]
+    },
+    {
+      "route": "/angry-nona/",
+      "file": "angry-nona/index.html",
+      "money": true,
+      "contextualInbound": 8,
+      "blogInbound": 4,
+      "distinctAnchors": 6,
+      "linkedFrom": [
         "/",
-        "/blog/",
-        "/blog/share-wifi-qr-code-iphone/",
-        "/wifi-qr/",
-        "/wifi-qr/airbnb-wifi-sign/",
-        "/wifi-qr/generator/",
-        "/wifi-qr/vs-canva-etsy/"
+        "/angry-nona/privacy/",
+        "/angry-nona/support/",
+        "/apps/",
+        "/blog/angry-nona-1-5-release-notes/",
+        "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
+        "/blog/angry-nona-night-shift-launch/"
       ]
     },
     {
       "route": "/swingcoach/",
       "file": "swingcoach/index.html",
       "money": true,
-      "contextualInbound": 7,
+      "contextualInbound": 8,
       "blogInbound": 5,
-      "distinctAnchors": 9,
+      "distinctAnchors": 11,
       "linkedFrom": [
         "/",
         "/apps/",
@@ -1398,16 +1667,17 @@
         "/blog/kettlebell-workout-app-hands-free/",
         "/blog/swingcoach-1-1-release-notes/",
         "/blog/swingcoach-1-2-1-release-notes/",
-        "/blog/swingcoach-kettlebell-swing-counter-launch/"
+        "/blog/swingcoach-kettlebell-swing-counter-launch/",
+        "/swingcoach/vs-kettlebell-apps/"
       ]
     },
     {
       "route": "/swingcoach/privacy/",
       "file": "swingcoach/privacy/index.html",
       "money": false,
-      "contextualInbound": 7,
+      "contextualInbound": 8,
       "blogInbound": 4,
-      "distinctAnchors": 3,
+      "distinctAnchors": 4,
       "linkedFrom": [
         "/apps/",
         "/blog/kettlebell-workout-app-hands-free/",
@@ -1415,20 +1685,22 @@
         "/blog/swingcoach-1-2-1-release-notes/",
         "/blog/swingcoach-kettlebell-swing-counter-launch/",
         "/swingcoach/",
-        "/swingcoach/support/"
+        "/swingcoach/support/",
+        "/swingcoach/vs-kettlebell-apps/"
       ]
     },
     {
       "route": "/wifi-qr/generator/",
       "file": "wifi-qr/generator/index.html",
       "money": true,
-      "contextualInbound": 7,
-      "blogInbound": 4,
-      "distinctAnchors": 14,
+      "contextualInbound": 8,
+      "blogInbound": 5,
+      "distinctAnchors": 16,
       "linkedFrom": [
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
         "/wifi-qr/airbnb-wifi-sign/",
@@ -1439,8 +1711,8 @@
       "route": "/blog/angry-nona-night-shift-launch/",
       "file": "blog/angry-nona-night-shift-launch/index.html",
       "money": false,
-      "contextualInbound": 8,
-      "blogInbound": 5,
+      "contextualInbound": 9,
+      "blogInbound": 6,
       "distinctAnchors": 7,
       "linkedFrom": [
         "/angry-nona/",
@@ -1448,6 +1720,7 @@
         "/blog/",
         "/blog/angry-nona-1-5-release-notes/",
         "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
         "/blog/baba-abdo-1-0-release-notes/",
         "/blog/colortalk-abc-coloring-launch/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/"
@@ -1457,15 +1730,16 @@
       "route": "/blog/share-wifi-qr-code-iphone/",
       "file": "blog/share-wifi-qr-code-iphone/index.html",
       "money": false,
-      "contextualInbound": 9,
-      "blogInbound": 6,
-      "distinctAnchors": 10,
+      "contextualInbound": 10,
+      "blogInbound": 7,
+      "distinctAnchors": 11,
       "linkedFrom": [
         "/blog/",
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
@@ -1476,15 +1750,16 @@
       "route": "/wifi-qr/airbnb-wifi-sign/",
       "file": "wifi-qr/airbnb-wifi-sign/index.html",
       "money": true,
-      "contextualInbound": 9,
-      "blogInbound": 7,
-      "distinctAnchors": 12,
+      "contextualInbound": 10,
+      "blogInbound": 8,
+      "distinctAnchors": 14,
       "linkedFrom": [
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/wifi-qr/",
@@ -1492,215 +1767,15 @@
       ]
     },
     {
-      "route": "/sajda/ar/",
-      "file": "sajda/ar/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/bn/",
-      "file": "sajda/bn/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/es/",
-      "file": "sajda/es/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/fr/",
-      "file": "sajda/fr/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/id/",
-      "file": "sajda/id/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/ru/",
-      "file": "sajda/ru/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/sv/",
-      "file": "sajda/sv/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/tr/",
-      "file": "sajda/tr/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/ur/",
-      "file": "sajda/ur/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/sajda/zh/",
-      "file": "sajda/zh/index.html",
-      "money": false,
-      "contextualInbound": 10,
-      "blogInbound": 0,
-      "distinctAnchors": 1,
-      "linkedFrom": [
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/"
-      ]
-    },
-    {
-      "route": "/blog/sajdah-1-7-4-release-notes/",
-      "file": "blog/sajdah-1-7-4-release-notes/index.html",
+      "route": "/blog/sajdah-2-0-release-notes/",
+      "file": "blog/sajdah-2-0-release-notes/index.html",
       "money": false,
       "contextualInbound": 13,
-      "blogInbound": 1,
-      "distinctAnchors": 37,
+      "blogInbound": 0,
+      "distinctAnchors": 25,
       "linkedFrom": [
+        "/",
         "/blog/",
-        "/blog/quran-apps-apple-tv-compared/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1739,16 +1814,90 @@
       ]
     },
     {
-      "route": "/blog/sajdah-prayer-screen-apple-tv/",
-      "file": "blog/sajdah-prayer-screen-apple-tv/index.html",
+      "route": "/blog/sajdah-1-7-4-release-notes/",
+      "file": "blog/sajdah-1-7-4-release-notes/index.html",
       "money": false,
       "contextualInbound": 14,
       "blogInbound": 2,
-      "distinctAnchors": 8,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/quran-apps-apple-tv-compared/",
+        "/blog/sajdah-2-0-release-notes/",
+        "/sajda/",
+        "/sajda/ar/",
+        "/sajda/bn/",
+        "/sajda/es/",
+        "/sajda/fr/",
+        "/sajda/id/",
+        "/sajda/ru/",
+        "/sajda/sv/",
+        "/sajda/tr/",
+        "/sajda/ur/",
+        "/sajda/zh/"
+      ]
+    },
+    {
+      "route": "/blog/sajdah-ayah-word-tracking/",
+      "file": "blog/sajdah-ayah-word-tracking/index.html",
+      "money": false,
+      "contextualInbound": 14,
+      "blogInbound": 2,
+      "distinctAnchors": 14,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/quran-apps-apple-tv-compared/",
+        "/blog/sajdah-1-7-3-release-notes/",
+        "/sajda/",
+        "/sajda/ar/",
+        "/sajda/bn/",
+        "/sajda/es/",
+        "/sajda/fr/",
+        "/sajda/id/",
+        "/sajda/ru/",
+        "/sajda/sv/",
+        "/sajda/tr/",
+        "/sajda/ur/",
+        "/sajda/zh/"
+      ]
+    },
+    {
+      "route": "/blog/sajdah-1-6-0-release-notes/",
+      "file": "blog/sajdah-1-6-0-release-notes/index.html",
+      "money": false,
+      "contextualInbound": 15,
+      "blogInbound": 3,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/sajdah-1-5-0-release-notes/",
+        "/blog/sajdah-1-7-0-release-notes/",
+        "/blog/sajdah-prayer-screen-apple-tv/",
+        "/sajda/",
+        "/sajda/ar/",
+        "/sajda/bn/",
+        "/sajda/es/",
+        "/sajda/fr/",
+        "/sajda/id/",
+        "/sajda/ru/",
+        "/sajda/sv/",
+        "/sajda/tr/",
+        "/sajda/ur/",
+        "/sajda/zh/"
+      ]
+    },
+    {
+      "route": "/blog/sajdah-prayer-screen-apple-tv/",
+      "file": "blog/sajdah-prayer-screen-apple-tv/index.html",
+      "money": false,
+      "contextualInbound": 15,
+      "blogInbound": 3,
+      "distinctAnchors": 27,
       "linkedFrom": [
         "/blog/",
         "/blog/quran-apps-apple-tv-compared/",
         "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1766,8 +1915,8 @@
       "route": "/wifi-qr/",
       "file": "wifi-qr/index.html",
       "money": true,
-      "contextualInbound": 15,
-      "blogInbound": 7,
+      "contextualInbound": 16,
+      "blogInbound": 8,
       "distinctAnchors": 10,
       "linkedFrom": [
         "/",
@@ -1777,6 +1926,7 @@
         "/blog/share-wifi-password-iphone-to-android/",
         "/blog/share-wifi-qr-code-iphone/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/surfing/",
@@ -1829,35 +1979,6 @@
         "/blog/sajdah-prayer-screen-apple-tv/",
         "/blog/score-keeper-app-iphone-apple-tv/",
         "/blog/wifi-qr-story/",
-        "/sajda/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/ru/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/"
-      ]
-    },
-    {
-      "route": "/blog/quran-apps-apple-tv-compared/",
-      "file": "blog/quran-apps-apple-tv-compared/index.html",
-      "money": false,
-      "contextualInbound": 19,
-      "blogInbound": 7,
-      "distinctAnchors": 16,
-      "linkedFrom": [
-        "/blog/",
-        "/blog/building-sajdah-apple-tv-journey/",
-        "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/quran-radio-app-iphone-hona-elqahra/",
-        "/blog/sajdah-1-5-0-release-notes/",
-        "/blog/sajdah-1-6-0-release-notes/",
-        "/blog/sajdah-1-7-0-release-notes/",
-        "/blog/sajdah-prayer-screen-apple-tv/",
         "/sajda/",
         "/sajda/ar/",
         "/sajda/bn/",
@@ -1931,11 +2052,75 @@
       ]
     },
     {
+      "route": "/blog/quran-apps-apple-tv-compared/",
+      "file": "blog/quran-apps-apple-tv-compared/index.html",
+      "money": false,
+      "contextualInbound": 20,
+      "blogInbound": 8,
+      "distinctAnchors": 17,
+      "linkedFrom": [
+        "/blog/",
+        "/blog/building-sajdah-apple-tv-journey/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/blog/sajdah-1-5-0-release-notes/",
+        "/blog/sajdah-1-6-0-release-notes/",
+        "/blog/sajdah-1-7-0-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
+        "/blog/sajdah-prayer-screen-apple-tv/",
+        "/sajda/",
+        "/sajda/ar/",
+        "/sajda/bn/",
+        "/sajda/es/",
+        "/sajda/fr/",
+        "/sajda/id/",
+        "/sajda/ru/",
+        "/sajda/sv/",
+        "/sajda/tr/",
+        "/sajda/ur/",
+        "/sajda/zh/"
+      ]
+    },
+    {
+      "route": "/sajda/",
+      "file": "sajda/index.html",
+      "money": true,
+      "contextualInbound": 24,
+      "blogInbound": 13,
+      "distinctAnchors": 15,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/",
+        "/blog/building-sajdah-apple-tv-journey/",
+        "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/quran-apps-apple-tv-compared/",
+        "/blog/quran-radio-app-iphone-hona-elqahra/",
+        "/blog/sajdah-1-5-0-release-notes/",
+        "/blog/sajdah-1-6-0-release-notes/",
+        "/blog/sajdah-1-7-0-release-notes/",
+        "/blog/sajdah-1-7-3-release-notes/",
+        "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
+        "/blog/sajdah-ayah-word-tracking/",
+        "/blog/sajdah-prayer-screen-apple-tv/",
+        "/hona-elqahra/",
+        "/hona-elqahra/stations/",
+        "/sajda/privacy/",
+        "/sajda/privacy/ar/",
+        "/surfing/",
+        "/tally/",
+        "/tateemi/",
+        "/tateemi/en/"
+      ]
+    },
+    {
       "route": "/sajda/support/",
       "file": "sajda/support/index.html",
       "money": false,
-      "contextualInbound": 23,
-      "blogInbound": 9,
+      "contextualInbound": 24,
+      "blogInbound": 10,
       "distinctAnchors": 15,
       "linkedFrom": [
         "/apps/",
@@ -1946,6 +2131,7 @@
         "/blog/sajdah-1-7-0-release-notes/",
         "/blog/sajdah-1-7-3-release-notes/",
         "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
         "/blog/sajdah-ayah-word-tracking/",
         "/blog/sajdah-prayer-screen-apple-tv/",
         "/sajda/",
@@ -1964,70 +2150,32 @@
       ]
     },
     {
-      "route": "/sajda/",
-      "file": "sajda/index.html",
-      "money": true,
-      "contextualInbound": 31,
-      "blogInbound": 11,
-      "distinctAnchors": 14,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/",
-        "/blog/building-sajdah-apple-tv-journey/",
-        "/blog/hona-elqahra-1-1-release-notes/",
-        "/blog/quran-apps-apple-tv-compared/",
-        "/blog/quran-radio-app-iphone-hona-elqahra/",
-        "/blog/sajdah-1-5-0-release-notes/",
-        "/blog/sajdah-1-6-0-release-notes/",
-        "/blog/sajdah-1-7-0-release-notes/",
-        "/blog/sajdah-1-7-3-release-notes/",
-        "/blog/sajdah-1-7-4-release-notes/",
-        "/blog/sajdah-ayah-word-tracking/",
-        "/blog/sajdah-prayer-screen-apple-tv/",
-        "/sajda/ar/",
-        "/sajda/bn/",
-        "/sajda/es/",
-        "/sajda/fr/",
-        "/sajda/id/",
-        "/sajda/privacy/",
-        "/sajda/privacy/ar/",
-        "/sajda/ru/",
-        "/sajda/support/",
-        "/sajda/sv/",
-        "/sajda/tr/",
-        "/sajda/ur/",
-        "/sajda/zh/",
-        "/surfing/",
-        "/tally/",
-        "/tateemi/",
-        "/tateemi/en/"
-      ]
-    },
-    {
       "route": "/",
       "file": "index.html",
       "money": false,
-      "contextualInbound": 48,
-      "blogInbound": 40,
-      "distinctAnchors": 7,
+      "contextualInbound": 56,
+      "blogInbound": 45,
+      "distinctAnchors": 8,
       "linkedFrom": [
         "/apps/",
         "/blog/",
         "/blog/100-kettlebell-swings-a-day/",
         "/blog/angry-nona-1-5-release-notes/",
         "/blog/angry-nona-1-6-release-notes/",
+        "/blog/angry-nona-1-7-release-notes/",
         "/blog/angry-nona-night-shift-launch/",
         "/blog/baba-abdo-1-0-release-notes/",
         "/blog/baba-abdo-1-0-release-notes/ar/",
         "/blog/building-sajdah-apple-tv-journey/",
         "/blog/capybara-rush-1-5-release-notes/",
         "/blog/colortalk-1-1-release-notes/",
+        "/blog/colortalk-1-2-1-release-notes/",
         "/blog/colortalk-1-2-release-notes/",
         "/blog/colortalk-abc-coloring-launch/",
         "/blog/compartir-wifi-qr-iphone/",
         "/blog/git-worktree-remove-keep-branch/",
         "/blog/hona-elqahra-1-1-release-notes/",
+        "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/kettlebell-workout-app-hands-free/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
@@ -2039,6 +2187,7 @@
         "/blog/sajdah-1-7-0-release-notes/",
         "/blog/sajdah-1-7-3-release-notes/",
         "/blog/sajdah-1-7-4-release-notes/",
+        "/blog/sajdah-2-0-release-notes/",
         "/blog/sajdah-ayah-word-tracking/",
         "/blog/sajdah-prayer-screen-apple-tv/",
         "/blog/saudi-vaccination-schedule-2026/",
@@ -2051,13 +2200,17 @@
         "/blog/swingcoach-kettlebell-swing-counter-launch/",
         "/blog/tally-1-3-2-release-notes/",
         "/blog/wifi-qr-1-7-release-notes/",
+        "/blog/wifi-qr-1-9-release-notes/",
         "/blog/wifi-qr-story/",
         "/blog/wlan-passwort-teilen-qr-code-iphone/",
         "/blog/xcode-deriveddata-safe-to-delete/",
         "/drive-town/",
         "/drive-town/guide/",
+        "/hona-elqahra/ar/stations/",
+        "/hona-elqahra/stations/",
         "/nightcap-awake/vs-amphetamine/",
         "/surfing/",
+        "/swingcoach/vs-kettlebell-apps/",
         "/wifi-qr/generator/",
         "/wifi-qr/vs-canva-etsy/"
       ]

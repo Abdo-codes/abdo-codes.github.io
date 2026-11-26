@@ -24,7 +24,7 @@ Recommended flagship candidates to submit first (web/dev/utility products fit Aw
     "websiteUrl": "https://yoloabdo.com/wifi-qr/",
     "submitterName": "Abdelrahman Eita",
     "submitterEmail": "abdulrhman.eaita@gmail.com",
-    "submitterNote": "Private iPhone & iPad utility to generate guest Wi-Fi QR codes and printable Airbnb/hotel Wi-Fi signs in 6 templates and 4 paper sizes, with router-sticker scanning.",
+    "submitterNote": "Private iPhone & iPad utility to generate guest Wi-Fi QR codes and printable Airbnb/hotel Wi-Fi signs in 10 sign styles (3 free, 7 Pro) and 4 paper sizes, with router-sticker scanning.",
     "botBudget": "Free listing only; no purchases authorized without explicit approval"
   },
   {

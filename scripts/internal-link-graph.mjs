@@ -29,6 +29,7 @@ const MONEY_ROUTES = new Set([
   '/angry-nona/ar/',
   '/colortalk/',
   '/swingcoach/',
+  '/swingcoach/vs-kettlebell-apps/',
   '/nightcap-awake/',
   '/nightcap-awake/vs-amphetamine/',
   '/surfing/',

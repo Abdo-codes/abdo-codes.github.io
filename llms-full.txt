@@ -327,7 +327,7 @@
 
 # Angry Nona: Night Shift - Cozy iPhone Nanny Game
 
-> Angry Nona: Night Shift is a cozy iPhone game. Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. It has 25 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks the rest), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is free on the App Store.
+> Angry Nona: Night Shift is a cozy iPhone game (version 1.7, November 2026). Six toddlers. One nanny. The player keeps a nursery asleep from 9 PM until dawn: shh kids who stir, fetch the bottle, teddy, or story they ask for, queue several taps in a row, do chores in quiet moments, and keep Princess Nona from waking the room. Version 1.7 makes Night 1 a 60-second shh-only first shift, trims Nights 2 and 3 to 75 seconds each, adds title-screen Nanny shop hints, and polishes audio, haptics, VoiceOver, and Dynamic Type. It has 25 nights plus Endless (Nights 1-4 free; one Full Shift purchase unlocks Nights 5-25, Endless, and the Dawn medal), a Nanny shop that runs on points earned in play, and nanny outfits. No ads and no tracking. It is free on the App Store.
 
 ## Links
 
@@ -339,6 +339,7 @@
 - [Launch post](https://yoloabdo.com/blog/angry-nona-night-shift-launch/): what the game is, how a night plays, and what is free
 - [1.5 release notes](https://yoloabdo.com/blog/angry-nona-1-5-release-notes/): what is in Topsy-Turvy Week (Nights 20 to 25), the Daily Night share grid and sound on silent
 - [1.6 release notes](https://yoloabdo.com/blog/angry-nona-1-6-release-notes/): streak rewards for the Daily Night, friends today, a new text from Mom each day and Arabic Game Center achievements
+- [1.7 release notes](https://yoloabdo.com/blog/angry-nona-1-7-release-notes/): 60-second shh-only Night 1, 75-second Nights 2 and 3, title-screen Nanny shop hints, and audio, haptics, VoiceOver and Dynamic Type polish
 
 ## Key Features
 
@@ -424,6 +425,7 @@
 ## Links
 
 - [Landing Page](https://yoloabdo.com/swingcoach/)
+- [vs Kettlebell Apps (Comparison)](https://yoloabdo.com/swingcoach/vs-kettlebell-apps/): honest comparison of SwingCoach (camera pose) vs pocket accelerometer apps (OmniSwing), Apple Watch apps (BELLr), and interval timers
 - [App Store](https://apps.apple.com/us/app/swingcoach-kettlebell-workout/id6806616079)
 - [Support](https://yoloabdo.com/swingcoach/support/)
 - [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
@@ -591,7 +593,27 @@
 
 # Full text
 
-> The sections below repeat the full text of the blog posts, the Airbnb WiFi sign guide, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+> The sections below repeat the full text of the blog posts, the Airbnb WiFi sign guide, the SwingCoach comparison, the surfing guide and the Drive Town guide, so a model can answer without loading the HTML pages.
+
+---
+
+Source: https://yoloabdo.com/blog/angry-nona-1-7-release-notes/
+
+Release notes · Angry Nona: Night Shift for iPhone
+
+# Angry Nona 1.7: faster first nights, title shop hints & polish
+
+Version 1.7 is live on the App Store for iPhone (iOS 18+, English and Egyptian Arabic). Night 1 is now a 60-second shh-only lesson that starts straight into the shift with no Tonight card wait, skip available from frame 1 of the opening scene, and no item requests yet. Nights 2 (Bottle Run) and 3 (Full Row) now take 75 seconds each (down from 100s) with focused first-clear win cards. The Nanny shop button on the title screen now flags what earned points can already buy. Mom's daily text reminder waits until Night 2 is cleared and only prompts on the title screen. Audio transitions, paused overlays, gated UI haptics, VoiceOver isolation, Reduce Motion, and AX3 Dynamic Type layouts (Daily Night grid, summary card, Settings rows) were polished across English and Arabic. Nights 1 to 4 remain free; Full Shift is a single one-time Family Shareable purchase (no subscription, no ads) unlocking Nights 5 to 25, Endless mode, and the Dawn medal.
+
+---
+
+Source: https://yoloabdo.com/swingcoach/vs-kettlebell-apps/
+
+Comparison · SwingCoach for iPhone
+
+# SwingCoach vs OmniSwing, BELLr & Kettlebell Timers (2026)
+
+Compares four ways to track Russian kettlebell swings on iPhone: SwingCoach (on-device Apple Vision 2D side-view camera pose rep counter with spoken form cues and per-rep hip/knee/arm angles), pocket accelerometer apps like OmniSwing (no camera setup, works in dim/crowded gyms, pace/RPM only with no form check), Apple Watch wrist-motion apps like BELLr (instant wrist counting and upswing power in Activity rings, requires wearing a Watch and cannot see hip hinge mechanics), and EMOM/interval timers (best for mixed multi-lift kettlebell circuits, zero automatic rep counting). SwingCoach 1.2.1 is free on iPhone (iOS 17+, optional watchOS 10+ Watch companion for HR/active calories/Apple Health) with no IAP, no ads, no account, and on-device pose analysis that never uploads frames or video.
 
 ---
 
