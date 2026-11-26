@@ -18,8 +18,11 @@ Last verified: 2026-11-24
 | `colortalk/index.html` | `/colortalk/` | `abc coloring app for kids ipad` | `brand-ssot`, real iPad screenshots, 4 books (26 letters, 10 numbers, 28 Arabic, 20 dinos) | 3/5 |
 | `nightcap-awake/index.html` | `/nightcap-awake/` | `keep mac awake while app is running` | `brand-ssot`, open-source MIT repo, macOS power assertion mechanism | 3/5 |
 | `nightcap-awake/vs-amphetamine/index.html` | `/nightcap-awake/vs-amphetamine/` | `nightcap awake vs amphetamine` | `brand-ssot`, `seo/competitors/amphetamine-keepingyouawake.md` (verified 2026-11-22) | 4/5 |
-| `hona-elqahra/index.html` | `/hona-elqahra/` | `quran radio app iphone` | `brand-ssot`, 170+ stations, vintage dial screenshots | 3/5 |
-| `hona-elqahra/ar/index.html` | `/hona-elqahra/ar/` | `تطبيق اذاعة القران الكريم للايفون` | `brand-ssot`, 170+ stations, Arabic screenshots | 3/5 |
+| `hona-elqahra/index.html` | `/hona-elqahra/` | `quran radio app iphone` | `brand-ssot`, 178 stations, interactive 6-preset dial, Home Screen widgets, Live Activities, Cairo 1934/1964 origin | 4/5 |
+| `hona-elqahra/ar/index.html` | `/hona-elqahra/ar/` | `تطبيق اذاعة القران الكريم للايفون` | `brand-ssot`, 178 stations, Arabic RTL dial preview, widgets & Live Activities, Arabic screenshots | 4/5 |
+| `hona-elqahra/stations/index.html` | `/hona-elqahra/stations/` | `all 178 quran radio stations iphone` | `brand-ssot`, generated directly from `Stations.json` (178 stations, 18 languages, 10 riwayat), instant search & category filters | 4/5 |
+| `hona-elqahra/ar/stations/index.html` | `/hona-elqahra/ar/stations/` | `دليل 178 اذاعة قران كريم للايفون` | `brand-ssot`, generated directly from `Stations.json` (178 Arabic/bilingual entries), Arabic/riwayah instant filter | 4/5 |
+| `blog/hona-elqahra-1-2-release-notes/index.html` | `/blog/hona-elqahra-1-2-release-notes/` | `quran radio live activity dynamic island` | `brand-ssot`, Lock Screen & Dynamic Island Live Activities, stream failover, upper-40% internal links | 4/5 |
 | `angry-nona/index.html` | `/angry-nona/` | `nanny game for iphone` | `brand-ssot`, 25 nights + Endless, real gameplay screens | 3/5 |
 | `baba-abdo/index.html` | `/baba-abdo/` | `لعبة طبخ كشري للايفون` | `brand-ssot`, 7-day story, 16 neighbors, SpriteKit screenshots | 3/5 |
 | `capybara-rush/index.html` | `/capybara-rush/` | `capybara reflex game iphone` | `brand-ssot`, 30-second rounds, Game Center screenshots | 3/5 |
