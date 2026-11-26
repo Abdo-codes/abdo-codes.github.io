@@ -918,6 +918,7 @@ footer a { color: var(--ink-2); }
     flex-direction: column;
     gap: 4px;
 }
+.station-row[hidden], .dir-cat-section[hidden], .dir-empty[hidden] { display: none; }
 .station-row h3 { margin: 0; font-size: 16px; line-height: 1.35; color: var(--ink); }
 .station-sub { font-size: 13.5px; color: var(--ink-2); }
 .station-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
