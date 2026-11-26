@@ -60,7 +60,7 @@
             { "@type": "Question", "name": "Does this Wi-Fi QR code generator upload my password?", "acceptedAnswer": { "@type": "Answer", "text": "No. The QR code is computed locally in JavaScript inside your browser tab. Your Wi-Fi name and password never leave your device, and you can even disconnect from the internet after loading the page and keep generating codes." } },
             { "@type": "Question", "name": "Will iPhone and Android cameras scan the QR code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool creates a standard WIFI:T:WPA;S:...;P:...;; QR code with proper escaping for special characters and Error Correction Level M. Point the built-in iPhone Camera app or Android camera at the code to join." } },
             { "@type": "Question", "name": "Does the QR code expire or require a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a static QR code that holds your network credentials directly, not a redirect link. It works offline forever until you change your router password." } },
-            { "@type": "Question", "name": "What extra features are in the Wi-Fi QR iPhone app?", "acceptedAnswer": { "@type": "Answer", "text": "The Wi-Fi QR iPhone and iPad app adds 6 printable sign templates, 4 paper sizes (4 x 6 in, 5 x 7 in, A4, US Letter), 8 cut-out room cards on one sheet, camera router-sticker scanning in English, Arabic, German and French, and saved local networks." } }
+            { "@type": "Question", "name": "What extra features are in the Wi-Fi QR iPhone app?", "acceptedAnswer": { "@type": "Answer", "text": "The Wi-Fi QR iPhone and iPad app adds 10 printable sign styles (3 free and 7 in Pro), 4 paper sizes (4 x 6 in, 5 x 7 in, A4, US Letter), 8 cut-out room cards on one sheet, camera router-sticker scanning in English, Arabic, German and French, and saved local networks." } }
           ]
         }
       ]
@@ -226,8 +226,8 @@
 
             <aside class="app-upsell" aria-label="Wi-Fi QR iPhone app">
                 <div>
-                    <h2>Need 6 print styles, 8 cut-out room cards, or router-sticker scanning?</h2>
-                    <p>The free <a href="/wifi-qr/"><strong>Wi-Fi QR app for iPhone and iPad</strong></a> scans printed router labels with your camera, saves multiple guest networks locally, and prints 4 x 6 in, 5 x 7 in, A4, US Letter, or 8 cut-out cards per page.</p>
+                    <h2>Need 10 print styles, 8 cut-out room cards, or router-sticker scanning?</h2>
+                    <p>The free <a href="/wifi-qr/"><strong>Wi-Fi QR app for iPhone and iPad</strong></a> includes 3 free sign styles (7 more in one-time Pro), scans printed router labels with your camera, saves guest networks locally, and prints 4 x 6 in, 5 x 7 in, A4, US Letter, or 8 cut-out cards per page.</p>
                 </div>
                 <div class="actions">
                     <a class="button primary" href="https://apps.apple.com/app/id6776169783" data-cta="wifi-qr-generator-upsell">Get Wi-Fi QR on App Store</a>
@@ -285,7 +285,7 @@
                     </article>
                     <article>
                         <h3>What extra features are in the Wi-Fi QR iPhone app?</h3>
-                        <p><a href="/wifi-qr/">Wi-Fi QR on iPhone and iPad</a> adds 6 print templates, exact 4 x 6 / 5 x 7 / A4 / US Letter sizing, 8 cut-out cards on one sheet, camera scanning for router stickers, and local saved networks for hosts managing multiple properties.</p>
+                        <p><a href="/wifi-qr/">Wi-Fi QR on iPhone and iPad</a> adds 10 printable sign styles (3 free and 7 in one-time Pro), exact 4 x 6 / 5 x 7 / A4 / US Letter sizing, 8 cut-out cards on one sheet, camera scanning for router stickers, and local saved networks for hosts managing multiple properties.</p>
                     </article>
                 </div>
             </div>
@@ -341,6 +341,25 @@
         let currentPassword = '';
         let currentSecurity = 'WPA';
         let currentStyle = 'classic';
+        let generateTrackTimer = null;
+
+        // Privacy-safe GA4 funnel events: never send SSID, password, headline, or footer text.
+        function trackGeneratorEvent(eventName) {
+            if (window['ga-disable-G-MKWK9CX2JJ'] || typeof gtag !== 'function') return;
+            gtag('event', eventName, {
+                security: currentSecurity,
+                style: currentStyle,
+                hidden_network: Boolean(els.hiddenNet.checked),
+                show_credentials: Boolean(els.showCreds.checked)
+            });
+        }
+
+        function scheduleGeneratedTrack() {
+            clearTimeout(generateTrackTimer);
+            generateTrackTimer = setTimeout(function () {
+                if (currentQr) trackGeneratorEvent('wifi_qr_generated');
+            }, 800);
+        }
 
         function setExportEnabled(enabled) {
             [els.btnPrint, els.btnPng, els.btnSvg, els.btnCopy].forEach(function (btn) {
@@ -453,17 +472,22 @@
 
         ['input', 'change'].forEach(function (ev) {
             [els.ssid, els.password, els.security, els.cardTitle, els.cardFooter, els.hiddenNet, els.showCreds].forEach(function (el) {
-                el.addEventListener(ev, render);
+                el.addEventListener(ev, function () {
+                    render();
+                    scheduleGeneratedTrack();
+                });
             });
         });
 
         els.btnPrint.addEventListener('click', function () {
             if (!currentQr) return;
+            trackGeneratorEvent('wifi_qr_print');
             window.print();
         });
 
         els.btnSvg.addEventListener('click', function () {
             if (!currentSvg) return;
+            trackGeneratorEvent('wifi_qr_download_svg');
             const blob = new Blob([currentSvg], { type: 'image/svg+xml;charset=utf-8' });
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
@@ -484,6 +508,7 @@
 
         els.btnPng.addEventListener('click', function () {
             if (!currentQr) return;
+            trackGeneratorEvent('wifi_qr_download_png');
             const canvas = document.createElement('canvas');
             const W = 1200;
             canvas.width = W;
