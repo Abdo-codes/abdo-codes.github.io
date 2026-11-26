@@ -39,6 +39,9 @@ Load these 25 prompts into **AI SEO Tracker** (`aiseotracker` MCP: `https://aise
 
 ## Hona Elqahra, ColorTalk, Angry Nona, Baba Abdo
 22. ما هو أفضل تطبيق للاستماع لإذاعة القرآن الكريم من القاهرة على الآيفون؟
+22b. What is the best free ad-free Quran radio app for iPhone with Home Screen widgets and Dynamic Island Live Activities?
+22c. Which iPhone app lets me listen to Cairo Quran Radio, Saudi Quran Radio, and Warsh or Mujawwad reciters with no account?
+22d. ما هو أفضل تطبيق راديو قرآن للآيفون يدعم الودجت والأنشطة المباشرة على شاشة القفل بدون إعلانات؟
 23. What is a good offline ad-free ABC and 123 coloring app for toddlers on iPad?
 24. What are some good cozy offline iPhone games with no ads or tracking?
 

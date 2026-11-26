@@ -1,6 +1,6 @@
 # Brand SSOT: Abdelrahman Eita (yoloabdo.com)
 
-Last verified: 2026-11-24
+Last verified: 2026-11-26
 Sources: `index.html`, `apps/index.html`, `apps/catalog.json`, `llms.txt`, and each app landing page.
 
 ## Developer Identity
@@ -23,7 +23,7 @@ Sources: `index.html`, `apps/index.html`, `apps/catalog.json`, `llms.txt`, and e
 | SwingCoach | `/swingcoach/` | `6806616079` | iPhone (iOS 17+) + optional Apple Watch (watchOS 10+) | `1.2.1` | 100% free; no IAP, no ads, no account | On-device pose analysis; optional local-only silent workout videos from v1.2.1 |
 | ColorTalk | `/colortalk/` | `6768992579` | iPad (iPadOS, landscape) | `1.2.1` | 100% free; no IAP, no ads, no accounts, no external links | Works offline; anonymous usage counts only (since v1.1), no crash reports. UI in EN/NL/AR/DE/FR; ABC book & voice in EN |
 | Angry Nona: Night Shift | `/angry-nona/` (EN), `/angry-nona/ar/` (AR) | `6819626561` | iPhone (iOS 18+) | `1.6` | Free download; Nights 1-4 free; one-time Full Shift IAP unlocks Nights 5-25 + Endless; no ads | Offline local saves; anonymous game stats & crash reports |
-| Hona Elqahra (هنا القاهرة) | `/hona-elqahra/` (EN), `/hona-elqahra/ar/` (AR) | `6831580861` | iPhone (iOS 18+) | `1.1` | 100% free; no ads, no subscription | No account; optional analytics & crash reports toggleable in About; requires internet for live radio |
+| Hona Elqahra (هنا القاهرة) | `/hona-elqahra/` (EN), `/hona-elqahra/ar/` (AR), `/hona-elqahra/stations/`, `/hona-elqahra/ar/stations/` | `6831580861` | iPhone (iOS 18+, portrait) | `1.2` | 100% free; zero ads, zero subscriptions, zero IAP | No account; optional analytics & crash reports off by default; 178 bundled live stations; requires internet for live radio |
 | Baba Abdo (كشري بابا عبده) | `/baba-abdo/` (AR), `/baba-abdo/en/` (EN) | `6821673461` | iPhone (iOS 17+, landscape, Arabic gameplay) | `1.0` | 100% free; no IAP, no ads, no subscriptions | Offline local save; zero analytics/tracking; optional Game Center |
 | Capybara Rush: Swipe Fast | `/capybara-rush/` | `6766263673` | iPhone (iOS 17+) | `1.5.1` | 100% free; no ads | Offline local save; no tracking; optional Game Center |
 | Nightcap Awake | `/nightcap-awake/` | `6769450957` | Mac (macOS 14+, also Homebrew cask) | `1.0` | 100% free; open source (MIT); no IAP, no ads | Sandboxed; zero analytics, zero network access |

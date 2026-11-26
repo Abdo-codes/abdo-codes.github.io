@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Hona Elqahra 1.2: Quran Radio Live Activity & Dynamic Island](https://yoloabdo.com/blog/hona-elqahra-1-2-release-notes/) (26 Nov 2026)
 - [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & Family Hifz](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
 - [ColorTalk 1.2.1: Four Open Picture Books, Living Dinosaurs & Four-Book Printing](https://yoloabdo.com/blog/colortalk-1-2-1-release-notes/) (24 Nov 2026)
 - [Wi-Fi QR 1.9: Home & Lock Screen Widgets, Bright Mode & Custom Branding](https://yoloabdo.com/blog/wifi-qr-1-9-release-notes/) (24 Nov 2026)
@@ -456,36 +457,39 @@
 
 ---
 
-# Hona Elqahra (هنا القاهرة) - Quran Radio App for iPhone
+# Hona Elqahra (هنا القاهرة) - Quran Radio App for iPhone (v1.2)
 
-> Hona Elqahra (هنا القاهرة, meaning "This is Cairo") is a free Quran radio app for iPhone designed as a warm vintage radio receiver with one tuning knob. Tap the knob to play or pause, and turn it to switch between six saved station presets. Cairo Quran Radio (إذاعة القرآن الكريم من القاهرة) is the first default preset, followed by Saudi Quran Radio and the Alafasy, Husary, Abdulbasit and Minshawi stations. The station list includes more than 170 Quran reciter, tafsir, adhkar and translation stations with search in Arabic or English, Home Screen widgets, Siri and Shortcuts, sleep timer, background audio, AirPlay and lock-screen controls. Free on the App Store with no ads and no account.
+> Hona Elqahra (هنا القاهرة, meaning "This is Cairo") is a free, ad-free Quran radio app for iPhone (iOS 18+) designed as a warm walnut and champagne-brass receiver with one tuning knob. Tap the knob to play or pause, and turn it across six saved station presets: Cairo Quran Radio (إذاعة القرآن الكريم من القاهرة), Saudi Quran Radio, Mishary Alafasy, Mahmoud Al-Husary, Abdulbasit Abdulsamad, and Mohamed Al-Minshawi. The bundled catalog contains 178 live stations (2 national broadcasts, 137 reciter and Surah Al-Baqarah streams, 4 tafsir streams, 3 adhkar and Sharia ruqyah streams, 10 Islamic programs, and 22 Quran translation streams across 18 languages) with diacritic-insensitive Arabic and phonetic English search across 10 recitation styles (Warsh, Mujawwad, Qalun, Khalaf, As-Susi, Ad-Duri, etc.). Version 1.2 adds Lock Screen, StandBy, and Dynamic Island Live Activities alongside small and wide Home Screen widgets, Siri and Shortcuts, a 15-90 minute sleep timer, AirPlay, stream failover, and opt-in only analytics. Free with no ads, no subscriptions, and no account.
 
 ## Links
 
 - [Landing Page (English)](https://yoloabdo.com/hona-elqahra/)
 - [Landing Page (Arabic — هنا القاهرة)](https://yoloabdo.com/hona-elqahra/ar/)
+- [All 178 Stations Directory (English)](https://yoloabdo.com/hona-elqahra/stations/)
+- [All 178 Stations Directory (Arabic)](https://yoloabdo.com/hona-elqahra/ar/stations/)
 - [App Store](https://apps.apple.com/us/app/hona-elqahra-quran-radio/id6831580861)
-- [Launch post](https://yoloabdo.com/blog/quran-radio-app-iphone-hona-elqahra/): how the vintage receiver and one-knob dial were designed
+- [1.2 release notes](https://yoloabdo.com/blog/hona-elqahra-1-2-release-notes/): Lock Screen and Dynamic Island Live Activities, 6-preset switching, and stream failover
 - [1.1 release notes](https://yoloabdo.com/blog/hona-elqahra-1-1-release-notes/): Home Screen widgets with six presets, Siri and Shortcuts, station search and sleep timer
+- [Launch post](https://yoloabdo.com/blog/quran-radio-app-iphone-hona-elqahra/): how the vintage receiver and one-knob dial were designed
 - [Privacy Policy](https://hona-elqahra.web.app/privacy)
 
 ## Key Features
 
-- **Vintage One-Knob Dial** - tap to play or pause, turn to switch across six station presets with haptic detents
-- **170+ Quran Stations** - Cairo Quran Radio, Saudi Quran Radio, major reciters, tafsir, adhkar and translations
-- **Widgets, Siri & Shortcuts** - Home Screen widgets for quick preset playback and Shortcuts support
-- **Sleep Timer, AirPlay & Background Audio** - keeps playing on the lock screen or via AirPlay
-- **Bilingual Interface** - full Arabic and English layouts, with search in both languages
-- **Privacy** - no account required; favorites and presets stay on-device; optional usage analytics and crash reports can be toggled in About
+- **Vintage One-Knob Dial** - tap to play or pause, turn to switch across six customizable station presets with haptic detents and soft tuning hiss
+- **178 Live Quran Stations** - Cairo Quran Radio, Saudi Quran Radio, 135+ reciters, 10 searchable riwayat, 4 tafsir, 3 adhkar/ruqyah, 10 Islamic programs, and 22 translations in 18 languages
+- **Live Activities (1.2)** - Lock Screen, StandBy, and Dynamic Island Live Activity with ON AIR/TUNING/BUFFERING status, round play/pause button, and 6 preset buttons
+- **Home Screen Widgets, Siri & Shortcuts (1.1)** - small pinned-station widget and wide 6-preset receiver widget plus Siri voice commands and Shortcuts actions
+- **Sleep Timer, AirPlay & Stream Failover** - 15, 30, 45, 60, and 90 minute sleep timer, AirPlay, lock-screen controls, and primary/backup stream failover
+- **Bilingual & Private** - full Arabic and English layouts, no account required, favorites and presets stored on-device, optional analytics and crash reports off by default
 
 ## Pricing
 
-- Free, with no ads and no subscription
+- Free, with zero ads, zero subscriptions, and zero in-app purchases
 
 ## Platform
 
-- iOS (iPhone), requires iOS 18 or later
-- Live audio streaming requires an internet connection
+- iOS (iPhone only, portrait), requires iOS 18 or later (for Apple TV Quran radio, see Sajdah)
+- Station list works offline for browsing; live audio streaming requires an internet connection
 
 ## Developer
 

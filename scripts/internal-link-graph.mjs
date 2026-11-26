@@ -23,6 +23,8 @@ const MONEY_ROUTES = new Set([
   '/baba-abdo/en/',
   '/hona-elqahra/',
   '/hona-elqahra/ar/',
+  '/hona-elqahra/stations/',
+  '/hona-elqahra/ar/stations/',
   '/angry-nona/',
   '/angry-nona/ar/',
   '/colortalk/',
