@@ -503,7 +503,7 @@
 
 # Baba Abdo (كشري بابا عبده) - Egyptian Koshary Cooking Game for iPhone
 
-> Baba Abdo (كشري بابا عبده) is a free Egyptian koshary cooking game for iPhone, played in Egyptian Arabic (landscape orientation). Run a neighborhood koshary shop through a seven-day story with 16 neighbors, listen to each customer's exact order (rice, pasta, lentils, chickpeas, tomato sauce, fried onions, garlic vinegar and chili), build the bowl in layers, ring the service bell, spend earned in-game coins to decorate the shop, and unlock untimed Practice mode after week one. Version 1.0 includes Daily Orders, Game Center leaderboards and achievements, eight stickers, and a 50% extra-time accessibility setting. Free with no ads, no tracking, no analytics and no account required.
+> Baba Abdo (كشري بابا عبده) is a free Egyptian koshary cooking game for iPhone, in Arabic and English (landscape orientation). Run a neighborhood koshary shop through a seven-day story with 16 neighbors, listen to each customer's exact order (rice, pasta, lentils, chickpeas, tomato sauce, fried onions, garlic vinegar and chili), build the bowl in layers, ring the service bell, spend earned in-game coins to decorate the shop, and unlock untimed Practice mode after week one. Version 1.0 includes Daily Orders, Game Center leaderboards and achievements, eight stickers, and a 50% extra-time accessibility setting. Free with no ads, no tracking, no analytics and no account required.
 
 ## Links
 
@@ -530,7 +530,7 @@
 
 ## Platform
 
-- iOS (iPhone), requires iOS 17 or later, landscape orientation, Arabic gameplay text
+- iOS (iPhone), requires iOS 17 or later, landscape orientation, Arabic and English interface and text
 - Plays fully offline (Game Center is optional)
 
 ## Developer

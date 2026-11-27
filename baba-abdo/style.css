@@ -76,7 +76,7 @@ h2{font:400 clamp(2.6rem,5vw,4.4rem)/1.16 Lalezar,sans-serif;color:var(--teal)}
 .neighbor h3{font:700 3rem/1.35 Aref,Georgia,serif;color:var(--yellow)}
 .neighbor blockquote{font-weight:750;font-size:clamp(1rem,1.6vw,1.35rem);margin-top:.55rem;line-height:1.65}
 .blog{padding-block:clamp(3.3rem,6vw,6.2rem);border-top:2px solid var(--teal)}
-.blog-list{margin-top:1.6rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.blog-list{margin-top:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
 .blog-card{display:flex;flex-direction:column;gap:.35rem;padding:1.3rem 1.5rem;color:var(--ink);text-decoration:none;background:var(--paper);border:2px solid var(--teal);border-radius:4px;box-shadow:4px 5px 0 #caba8c}
 .blog-card:hover{box-shadow:2px 3px 0 #caba8c;transform:translate(1px,1px)}
 .blog-card:hover h3{text-decoration:underline}
