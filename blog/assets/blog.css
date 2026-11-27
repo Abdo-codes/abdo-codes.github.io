@@ -82,10 +82,18 @@ body {
 
 /* Article header */
 .eyebrow { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.eyebrow a { color: inherit; white-space: nowrap; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.eyebrow a:hover { color: var(--text); }
+/* Arabic: no monospace, letter spacing or uppercase, which break the joined letters */
+[dir="rtl"] .eyebrow { font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+[dir="rtl"] .eyebrow [lang="en"] { font-size: 13.5px; }
+.eyebrow [lang="ar"] { font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0; }
 .post-title {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
     font-size: clamp(32px, 6vw, 46px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px;
+    text-wrap: balance;
 }
+[dir="rtl"] .post-title { letter-spacing: 0; line-height: 1.25; }
 .dek { font-size: 19px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 24px; }
 .byline { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-tertiary); margin-bottom: 36px; }
 .byline img { width: 36px; height: 36px; border-radius: 10px; object-fit: cover; border: 1px solid var(--border); }
