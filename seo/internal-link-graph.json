@@ -1,24 +1,11 @@
 {
-  "generatedAt": "2026-11-27T11:39:29.906Z",
-  "totalPages": 110,
+  "generatedAt": "2026-11-27T15:16:59.905Z",
+  "totalPages": 111,
   "moneyPagesCount": 26,
   "orphanMoneyPages": [],
   "lateOrMissingBlogLinksCount": 0,
   "lateOrMissingBlogLinks": [],
   "moneyPages": [
-    {
-      "route": "/nightcap-awake/vs-amphetamine/",
-      "file": "nightcap-awake/vs-amphetamine/index.html",
-      "money": true,
-      "contextualInbound": 3,
-      "blogInbound": 2,
-      "distinctAnchors": 3,
-      "linkedFrom": [
-        "/blog/git-worktree-remove-keep-branch/",
-        "/blog/xcode-deriveddata-safe-to-delete/",
-        "/nightcap-awake/"
-      ]
-    },
     {
       "route": "/wifi-qr/vs-canva-etsy/",
       "file": "wifi-qr/vs-canva-etsy/index.html",
@@ -72,6 +59,20 @@
         "/apps/",
         "/blog/",
         "/drive-town/"
+      ]
+    },
+    {
+      "route": "/nightcap-awake/vs-amphetamine/",
+      "file": "nightcap-awake/vs-amphetamine/index.html",
+      "money": true,
+      "contextualInbound": 4,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/blog/git-worktree-remove-keep-branch/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/xcode-deriveddata-safe-to-delete/",
+        "/nightcap-awake/"
       ]
     },
     {
@@ -162,21 +163,6 @@
       ]
     },
     {
-      "route": "/nightcap-awake/",
-      "file": "nightcap-awake/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/git-worktree-remove-keep-branch/",
-        "/blog/xcode-deriveddata-safe-to-delete/",
-        "/nightcap-awake/vs-amphetamine/"
-      ]
-    },
-    {
       "route": "/baba-abdo/",
       "file": "baba-abdo/index.html",
       "money": true,
@@ -238,6 +224,22 @@
         "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/hona-elqahra/stations/"
+      ]
+    },
+    {
+      "route": "/nightcap-awake/",
+      "file": "nightcap-awake/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/git-worktree-remove-keep-branch/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/xcode-deriveddata-safe-to-delete/",
+        "/nightcap-awake/vs-amphetamine/"
       ]
     },
     {
@@ -783,6 +785,19 @@
       ]
     },
     {
+      "route": "/blog/keep-mac-awake-ai-agents-overnight/",
+      "file": "blog/keep-mac-awake-ai-agents-overnight/index.html",
+      "money": false,
+      "contextualInbound": 3,
+      "blogInbound": 0,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/nightcap-awake/"
+      ]
+    },
+    {
       "route": "/blog/sajdah-1-7-0-release-notes/",
       "file": "blog/sajdah-1-7-0-release-notes/index.html",
       "money": false,
@@ -845,19 +860,6 @@
         "/apps/",
         "/capybara-rush/",
         "/capybara-rush/support/"
-      ]
-    },
-    {
-      "route": "/nightcap-awake/vs-amphetamine/",
-      "file": "nightcap-awake/vs-amphetamine/index.html",
-      "money": true,
-      "contextualInbound": 3,
-      "blogInbound": 2,
-      "distinctAnchors": 3,
-      "linkedFrom": [
-        "/blog/git-worktree-remove-keep-branch/",
-        "/blog/xcode-deriveddata-safe-to-delete/",
-        "/nightcap-awake/"
       ]
     },
     {
@@ -926,20 +928,6 @@
         "/blog/",
         "/blog/baba-abdo-1-0-release-notes/",
         "/blog/koshary-recipe/ar/"
-      ]
-    },
-    {
-      "route": "/blog/git-worktree-remove-keep-branch/",
-      "file": "blog/git-worktree-remove-keep-branch/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 1,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/",
-        "/blog/",
-        "/blog/xcode-deriveddata-safe-to-delete/",
-        "/nightcap-awake/vs-amphetamine/"
       ]
     },
     {
@@ -1066,6 +1054,20 @@
         "/apps/",
         "/blog/",
         "/drive-town/"
+      ]
+    },
+    {
+      "route": "/nightcap-awake/vs-amphetamine/",
+      "file": "nightcap-awake/vs-amphetamine/index.html",
+      "money": true,
+      "contextualInbound": 4,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/blog/git-worktree-remove-keep-branch/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/xcode-deriveddata-safe-to-delete/",
+        "/nightcap-awake/"
       ]
     },
     {
@@ -1199,6 +1201,21 @@
       ]
     },
     {
+      "route": "/blog/git-worktree-remove-keep-branch/",
+      "file": "blog/git-worktree-remove-keep-branch/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 2,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/xcode-deriveddata-safe-to-delete/",
+        "/nightcap-awake/vs-amphetamine/"
+      ]
+    },
+    {
       "route": "/blog/hona-elqahra-1-1-release-notes/",
       "file": "blog/hona-elqahra-1-1-release-notes/index.html",
       "money": false,
@@ -1259,21 +1276,6 @@
       ]
     },
     {
-      "route": "/blog/xcode-deriveddata-safe-to-delete/",
-      "file": "blog/xcode-deriveddata-safe-to-delete/index.html",
-      "money": false,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/",
-        "/blog/",
-        "/blog/git-worktree-remove-keep-branch/",
-        "/blog/swiftui-open-app-store-page/",
-        "/nightcap-awake/vs-amphetamine/"
-      ]
-    },
-    {
       "route": "/hona-elqahra/ar/stations/",
       "file": "hona-elqahra/ar/stations/index.html",
       "money": true,
@@ -1301,21 +1303,6 @@
         "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/hona-elqahra/"
-      ]
-    },
-    {
-      "route": "/nightcap-awake/",
-      "file": "nightcap-awake/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/blog/git-worktree-remove-keep-branch/",
-        "/blog/xcode-deriveddata-safe-to-delete/",
-        "/nightcap-awake/vs-amphetamine/"
       ]
     },
     {
@@ -1509,6 +1496,22 @@
       ]
     },
     {
+      "route": "/blog/xcode-deriveddata-safe-to-delete/",
+      "file": "blog/xcode-deriveddata-safe-to-delete/index.html",
+      "money": false,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 7,
+      "linkedFrom": [
+        "/",
+        "/blog/",
+        "/blog/git-worktree-remove-keep-branch/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/swiftui-open-app-store-page/",
+        "/nightcap-awake/vs-amphetamine/"
+      ]
+    },
+    {
       "route": "/colortalk/",
       "file": "colortalk/index.html",
       "money": true,
@@ -1554,6 +1557,22 @@
         "/blog/hona-elqahra-1-2-release-notes/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/hona-elqahra/stations/"
+      ]
+    },
+    {
+      "route": "/nightcap-awake/",
+      "file": "nightcap-awake/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/blog/git-worktree-remove-keep-branch/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
+        "/blog/xcode-deriveddata-safe-to-delete/",
+        "/nightcap-awake/vs-amphetamine/"
       ]
     },
     {
@@ -2192,8 +2211,8 @@
       "route": "/",
       "file": "index.html",
       "money": false,
-      "contextualInbound": 58,
-      "blogInbound": 47,
+      "contextualInbound": 59,
+      "blogInbound": 48,
       "distinctAnchors": 8,
       "linkedFrom": [
         "/apps/",
@@ -2215,6 +2234,7 @@
         "/blog/git-worktree-remove-keep-branch/",
         "/blog/hona-elqahra-1-1-release-notes/",
         "/blog/hona-elqahra-1-2-release-notes/",
+        "/blog/keep-mac-awake-ai-agents-overnight/",
         "/blog/kettlebell-workout-app-hands-free/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
