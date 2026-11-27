@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-26T15:43:30.716Z",
-  "totalPages": 108,
+  "generatedAt": "2026-11-27T11:39:29.906Z",
+  "totalPages": 110,
   "moneyPagesCount": 26,
   "orphanMoneyPages": [],
   "lateOrMissingBlogLinksCount": 0,
@@ -132,36 +132,6 @@
       ]
     },
     {
-      "route": "/baba-abdo/",
-      "file": "baba-abdo/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 3,
-      "distinctAnchors": 4,
-      "linkedFrom": [
-        "/apps/",
-        "/baba-abdo/en/",
-        "/blog/baba-abdo-1-0-release-notes/ar/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
-      ]
-    },
-    {
-      "route": "/baba-abdo/en/",
-      "file": "baba-abdo/en/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/baba-abdo/",
-        "/blog/baba-abdo-1-0-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/"
-      ]
-    },
-    {
       "route": "/hona-elqahra/ar/stations/",
       "file": "hona-elqahra/ar/stations/index.html",
       "money": true,
@@ -204,6 +174,38 @@
         "/blog/git-worktree-remove-keep-branch/",
         "/blog/xcode-deriveddata-safe-to-delete/",
         "/nightcap-awake/vs-amphetamine/"
+      ]
+    },
+    {
+      "route": "/baba-abdo/",
+      "file": "baba-abdo/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 4,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/apps/",
+        "/baba-abdo/en/",
+        "/blog/baba-abdo-1-0-release-notes/ar/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/koshary-recipe/ar/"
+      ]
+    },
+    {
+      "route": "/baba-abdo/en/",
+      "file": "baba-abdo/en/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/baba-abdo/",
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-recipe/"
       ]
     },
     {
@@ -755,19 +757,6 @@
       ]
     },
     {
-      "route": "/blog/baba-abdo-1-0-release-notes/ar/",
-      "file": "blog/baba-abdo-1-0-release-notes/ar/index.html",
-      "money": false,
-      "contextualInbound": 3,
-      "blogInbound": 1,
-      "distinctAnchors": 3,
-      "linkedFrom": [
-        "/baba-abdo/",
-        "/blog/",
-        "/blog/baba-abdo-1-0-release-notes/"
-      ]
-    },
-    {
       "route": "/blog/colortalk-1-2-1-release-notes/",
       "file": "blog/colortalk-1-2-1-release-notes/index.html",
       "money": false,
@@ -926,17 +915,17 @@
       ]
     },
     {
-      "route": "/blog/baba-abdo-1-0-release-notes/",
-      "file": "blog/baba-abdo-1-0-release-notes/index.html",
+      "route": "/blog/baba-abdo-1-0-release-notes/ar/",
+      "file": "blog/baba-abdo-1-0-release-notes/ar/index.html",
       "money": false,
       "contextualInbound": 4,
       "blogInbound": 2,
-      "distinctAnchors": 5,
+      "distinctAnchors": 4,
       "linkedFrom": [
-        "/baba-abdo/en/",
+        "/baba-abdo/",
         "/blog/",
-        "/blog/angry-nona-1-6-release-notes/",
-        "/blog/baba-abdo-1-0-release-notes/ar/"
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-recipe/ar/"
       ]
     },
     {
@@ -951,34 +940,6 @@
         "/blog/",
         "/blog/xcode-deriveddata-safe-to-delete/",
         "/nightcap-awake/vs-amphetamine/"
-      ]
-    },
-    {
-      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/",
-      "file": "blog/koshary-cooking-game-iphone-baba-abdo/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/baba-abdo/en/",
-        "/blog/",
-        "/blog/baba-abdo-1-0-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
-      ]
-    },
-    {
-      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
-      "file": "blog/koshary-cooking-game-iphone-baba-abdo/ar/index.html",
-      "money": false,
-      "contextualInbound": 4,
-      "blogInbound": 2,
-      "distinctAnchors": 6,
-      "linkedFrom": [
-        "/baba-abdo/",
-        "/blog/",
-        "/blog/baba-abdo-1-0-release-notes/ar/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/"
       ]
     },
     {
@@ -1208,33 +1169,18 @@
       ]
     },
     {
-      "route": "/baba-abdo/",
-      "file": "baba-abdo/index.html",
-      "money": true,
+      "route": "/blog/baba-abdo-1-0-release-notes/",
+      "file": "blog/baba-abdo-1-0-release-notes/index.html",
+      "money": false,
       "contextualInbound": 5,
       "blogInbound": 3,
-      "distinctAnchors": 4,
+      "distinctAnchors": 6,
       "linkedFrom": [
-        "/apps/",
         "/baba-abdo/en/",
+        "/blog/",
+        "/blog/angry-nona-1-6-release-notes/",
         "/blog/baba-abdo-1-0-release-notes/ar/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/"
-      ]
-    },
-    {
-      "route": "/baba-abdo/en/",
-      "file": "baba-abdo/en/index.html",
-      "money": true,
-      "contextualInbound": 5,
-      "blogInbound": 2,
-      "distinctAnchors": 5,
-      "linkedFrom": [
-        "/",
-        "/apps/",
-        "/baba-abdo/",
-        "/blog/baba-abdo-1-0-release-notes/",
-        "/blog/koshary-cooking-game-iphone-baba-abdo/"
+        "/blog/koshary-recipe/"
       ]
     },
     {
@@ -1268,12 +1214,57 @@
       ]
     },
     {
+      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/",
+      "file": "blog/koshary-cooking-game-iphone-baba-abdo/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 7,
+      "linkedFrom": [
+        "/baba-abdo/en/",
+        "/blog/",
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/koshary-recipe/"
+      ]
+    },
+    {
+      "route": "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+      "file": "blog/koshary-cooking-game-iphone-baba-abdo/ar/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 7,
+      "linkedFrom": [
+        "/baba-abdo/",
+        "/blog/",
+        "/blog/baba-abdo-1-0-release-notes/ar/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-recipe/ar/"
+      ]
+    },
+    {
+      "route": "/blog/koshary-recipe/ar/",
+      "file": "blog/koshary-recipe/ar/index.html",
+      "money": false,
+      "contextualInbound": 5,
+      "blogInbound": 3,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/baba-abdo/",
+        "/blog/",
+        "/blog/baba-abdo-1-0-release-notes/ar/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/koshary-recipe/"
+      ]
+    },
+    {
       "route": "/blog/xcode-deriveddata-safe-to-delete/",
       "file": "blog/xcode-deriveddata-safe-to-delete/index.html",
       "money": false,
       "contextualInbound": 5,
       "blogInbound": 2,
-      "distinctAnchors": 7,
+      "distinctAnchors": 6,
       "linkedFrom": [
         "/",
         "/blog/",
@@ -1374,6 +1365,38 @@
       ]
     },
     {
+      "route": "/baba-abdo/",
+      "file": "baba-abdo/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 4,
+      "distinctAnchors": 4,
+      "linkedFrom": [
+        "/apps/",
+        "/baba-abdo/en/",
+        "/blog/baba-abdo-1-0-release-notes/ar/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/koshary-recipe/ar/"
+      ]
+    },
+    {
+      "route": "/baba-abdo/en/",
+      "file": "baba-abdo/en/index.html",
+      "money": true,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 5,
+      "linkedFrom": [
+        "/",
+        "/apps/",
+        "/baba-abdo/",
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-recipe/"
+      ]
+    },
+    {
       "route": "/blog/capybara-rush-1-5-release-notes/",
       "file": "blog/capybara-rush-1-5-release-notes/index.html",
       "money": false,
@@ -1419,6 +1442,22 @@
         "/blog/quran-radio-app-iphone-hona-elqahra/",
         "/hona-elqahra/",
         "/hona-elqahra/ar/"
+      ]
+    },
+    {
+      "route": "/blog/koshary-recipe/",
+      "file": "blog/koshary-recipe/index.html",
+      "money": false,
+      "contextualInbound": 6,
+      "blogInbound": 3,
+      "distinctAnchors": 6,
+      "linkedFrom": [
+        "/",
+        "/baba-abdo/en/",
+        "/blog/",
+        "/blog/baba-abdo-1-0-release-notes/",
+        "/blog/koshary-cooking-game-iphone-baba-abdo/",
+        "/blog/koshary-recipe/ar/"
       ]
     },
     {
@@ -2153,8 +2192,8 @@
       "route": "/",
       "file": "index.html",
       "money": false,
-      "contextualInbound": 56,
-      "blogInbound": 45,
+      "contextualInbound": 58,
+      "blogInbound": 47,
       "distinctAnchors": 8,
       "linkedFrom": [
         "/apps/",
@@ -2179,6 +2218,8 @@
         "/blog/kettlebell-workout-app-hands-free/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/",
         "/blog/koshary-cooking-game-iphone-baba-abdo/ar/",
+        "/blog/koshary-recipe/",
+        "/blog/koshary-recipe/ar/",
         "/blog/print-wifi-qr-code-sign-iphone/",
         "/blog/quran-apps-apple-tv-compared/",
         "/blog/quran-radio-app-iphone-hona-elqahra/",
