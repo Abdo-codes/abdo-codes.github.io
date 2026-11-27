@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keep Your Mac Awake While Claude Code or Codex Runs Overnight</title>
     <meta name="keywords" content="keep mac awake for claude code, keep mac awake ai agents overnight, keep mac awake codex, caffeinate claude code, caffeinate command mac, prevent mac from sleeping terminal, keep mac awake lid closed, keep mac awake terminal command, Nightcap Awake">
-    <meta name="description" content="Stop macOS sleep from pausing Claude Code or Codex overnight. The caffeinate command, an app-based way with Nightcap Awake, and what works with the lid closed.">
+    <meta name="description" content="Stop macOS sleep from pausing AI agents like Claude Code or Codex overnight: the caffeinate command, Nightcap Awake, and what works with the lid closed.">
     <link rel="canonical" href="https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/">
     <meta property="og:site_name" content="Abdelrahman Eita">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Keep Your Mac Awake While Claude Code or Codex Runs Overnight">
-    <meta property="og:description" content="Stop macOS sleep from pausing Claude Code or Codex overnight. The caffeinate command, an app-based way with Nightcap Awake, and what works with the lid closed.">
+    <meta property="og:description" content="Stop macOS sleep from pausing AI agents like Claude Code or Codex overnight: the caffeinate command, Nightcap Awake, and what works with the lid closed.">
     <meta property="og:image" content="https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yoloabdo">
     <meta name="twitter:title" content="Keep Your Mac Awake While Claude Code or Codex Runs Overnight">
-    <meta name="twitter:description" content="Stop macOS sleep from pausing Claude Code or Codex overnight. The caffeinate command, an app-based way with Nightcap Awake, and what works with the lid closed.">
+    <meta name="twitter:description" content="Stop macOS sleep from pausing AI agents like Claude Code or Codex overnight: the caffeinate command, Nightcap Awake, and what works with the lid closed.">
     <meta name="twitter:image" content="https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/og-image.jpg">
     <meta name="twitter:image:alt" content="Keep your Mac awake while AI agents run overnight: caffeinate -i claude, next to the Nightcap Awake cup icon.">
     <meta name="author" content="Abdelrahman Eita">
@@ -53,13 +53,13 @@
     </style>
     <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
-{"@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/#post", "headline": "Keep Your Mac Awake While Claude Code or Codex Runs Overnight", "description": "Stop macOS sleep from pausing Claude Code or Codex overnight. The caffeinate command, an app-based way with Nightcap Awake, and what works with the lid closed.", "url": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/", "mainEntityOfPage": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/", "image": ["https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/og-image.jpg", "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/sleep-timeline.webp", "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/terminal-assertions.webp"], "datePublished": "2026-11-27T15:00:00Z", "dateModified": "2026-11-27T15:00:00Z", "inLanguage": "en", "articleSection": "Developer tools", "keywords": ["keep mac awake for claude code", "keep mac awake ai agents overnight", "caffeinate claude code", "prevent mac from sleeping terminal", "keep mac awake lid closed"], "author": {"@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/"}, "publisher": {"@id": "https://yoloabdo.com/#person"}, "about": {"@id": "https://yoloabdo.com/nightcap-awake/#app"}, "isPartOf": {"@id": "https://yoloabdo.com/blog/#blog"}},
-{"@type": "HowTo", "@id": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/#howto", "name": "Keep a Mac awake while Claude Code runs overnight with caffeinate", "tool": [{"@type": "HowToTool", "name": "Terminal"}], "step": [{"@type": "HowToStep", "name": "Connect power", "text": "Connect the Mac to power. A long agent run on battery can empty it."}, {"@type": "HowToStep", "name": "Start the agent under caffeinate", "text": "Run caffeinate -i claude, or caffeinate -i codex. caffeinate holds the sleep assertion until the agent exits."}, {"@type": "HowToStep", "name": "Check the assertion", "text": "In a new tab, run pmset -g assertions | grep caffeinate. A PreventUserIdleSystemSleep line shows that idle sleep is blocked."}, {"@type": "HowToStep", "name": "Leave the lid open", "text": "Leave a MacBook lid open, or use closed-display mode with power, an external display and an external keyboard or mouse."}]},
+{"@type": "BlogPosting", "@id": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/#post", "headline": "Keep Your Mac Awake While Claude Code or Codex Runs Overnight", "description": "Stop macOS sleep from pausing AI agents like Claude Code or Codex overnight: the caffeinate command, Nightcap Awake, and what works with the lid closed.", "url": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/", "mainEntityOfPage": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/", "image": ["https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/og-image.jpg", "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/sleep-timeline.webp", "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/terminal-assertions.webp"], "datePublished": "2026-11-27T15:00:00Z", "dateModified": "2026-11-27T15:00:00Z", "inLanguage": "en", "articleSection": "Developer tools", "keywords": ["keep mac awake for claude code", "keep mac awake ai agents overnight", "caffeinate claude code", "prevent mac from sleeping terminal", "keep mac awake lid closed"], "author": {"@type": "Person", "@id": "https://yoloabdo.com/#person", "name": "Abdelrahman Eita", "url": "https://yoloabdo.com/"}, "publisher": {"@id": "https://yoloabdo.com/#person"}, "about": {"@id": "https://yoloabdo.com/nightcap-awake/#app"}, "isPartOf": {"@id": "https://yoloabdo.com/blog/#blog"}},
+{"@type": "HowTo", "@id": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/#howto", "name": "Keep a Mac awake while Claude Code runs overnight with caffeinate", "tool": [{"@type": "HowToTool", "name": "Terminal"}], "step": [{"@type": "HowToStep", "name": "Connect power", "text": "Connect the Mac to power. A long agent run on battery can empty it."}, {"@type": "HowToStep", "name": "Start the agent under caffeinate", "text": "Run caffeinate -i claude, or caffeinate -i codex. caffeinate holds the sleep assertion until the agent exits."}, {"@type": "HowToStep", "name": "Check the assertion", "text": "In a new tab, run pmset -g assertions | grep -E \"Nightcap|caffeinate\". A PreventUserIdleSystemSleep line shows that idle sleep is blocked."}, {"@type": "HowToStep", "name": "Leave the lid open", "text": "Leave a MacBook lid open, or use closed-display mode with power, an external display and an external keyboard or mouse."}]},
 {"@type": "FAQPage", "@id": "https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/#faq", "mainEntity": [
 {"@type": "Question", "name": "Does Claude Code keep running when my Mac sleeps?", "acceptedAnswer": {"@type": "Answer", "text": "No. System sleep pauses every process, and the network connection goes down. The agent continues only after the Mac wakes, and a request that was open at that time can fail."}},
 {"@type": "Question", "name": "What is the caffeinate command for Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Run caffeinate -i claude. caffeinate starts Claude Code and blocks idle system sleep until Claude Code exits. Use caffeinate -i codex for the Codex CLI."}},
 {"@type": "Question", "name": "Can my Mac sleep the display and keep the agent running?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. caffeinate -i and Nightcap Awake block idle system sleep only. The display turns off on its normal schedule, and the agent keeps running."}},
-{"@type": "Question", "name": "Can I keep a MacBook awake with the lid closed?", "acceptedAnswer": {"@type": "Answer", "text": "Not with caffeinate -i or Nightcap Awake. A MacBook sleeps when you close the lid. Apple's closed-display mode keeps it awake with the lid closed when it has power, an external display, and an external keyboard or mouse."}},
+{"@type": "Question", "name": "Can I keep a MacBook awake with the lid closed?", "acceptedAnswer": {"@type": "Answer", "text": "Not with caffeinate -i or Nightcap Awake. A MacBook sleeps when you close the lid. Apple's closed-display mode keeps it awake with the lid closed when it has power, an external display, and an external keyboard or mouse. Amphetamine also offers closed-lid sessions with its helper."}},
 {"@type": "Question", "name": "Does a locked screen stop the agent?", "acceptedAnswer": {"@type": "Answer", "text": "No. A locked screen or a screen saver does not stop processes. Only sleep does."}},
 {"@type": "Question", "name": "Is Nightcap Awake free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nightcap Awake is free on the Mac App Store, with no account, no ads and no in-app purchases. It is open source under the MIT license and needs macOS 14 or later."}}
 ]},
@@ -88,7 +88,7 @@
             <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Keep your Mac awake for AI agents</nav>
             <p class="eyebrow mono">Developer tools · macOS</p>
             <h1 class="post-title">Keep your Mac awake while Claude Code or Codex runs overnight</h1>
-            <p class="dek">You start a long agent task, go to bed, and in the morning it did ten minutes of work. Here is why, and three ways to stop it.</p>
+            <p class="dek">You start a long AI agent task in Claude Code or Codex, go to bed, and in the morning it did ten minutes of work. Here is why, and three ways to stop it.</p>
             <div class="byline">
                 <img src="/images/optimized/profile.webp" alt="" width="36" height="36">
                 <span><a href="/">Abdelrahman Eita</a> · <time datetime="2026-11-27">27 November 2026</time></span>
@@ -115,15 +115,14 @@
                     </ul>
                 </nav>
 
-                <h2 id="why">Why Claude Code stops when the Mac sleeps</h2>
-                <p>When nobody touches the Mac, macOS turns off the display, and then the system goes to idle sleep. In sleep, the CPU stops every process. Claude Code, Codex, a build and a download all pause. The Wi-Fi connection also goes down, so a request to the model that was open at that time can fail.</p>
-                <p>A locked screen or a screen saver does not cause this. Only sleep does. To stop idle sleep, a program creates a <em>power assertion</em>. This is a request to macOS that says "do not idle sleep now". The three ways below all make this request in a different way.</p>
+                <h2 id="why">Why AI agents stop when the Mac sleeps</h2>
+                <p>When nobody touches the Mac, macOS turns off the display, and then the system goes to idle sleep. In sleep, the CPU stops every process. Claude Code, Codex, a build and a download all pause. The network connection also goes down, so a request to the model that was open at that time can fail.</p>
+                <p>A locked screen or a screen saver does not cause this. Only sleep does. To stop idle sleep, a program creates a <em>power assertion</em>. This is a request to macOS that says "do not idle sleep now". The first two ways below make this request. The third way changes a macOS setting.</p>
 
                 <h2 id="caffeinate">Way 1: the caffeinate command</h2>
                 <p><code>caffeinate</code> is built into macOS, in <code>/usr/bin</code>. The man page says that when you give it a command, it holds the assertion "for the duration of the utility's execution". So start the agent with it:</p>
                 <pre><code>caffeinate -i claude      # Claude Code
-caffeinate -i codex       # Codex CLI
-caffeinate -is claude     # on AC power: also add -s (system sleep)</code></pre>
+caffeinate -i codex       # Codex CLI</code></pre>
                 <p>When the agent exits, caffeinate exits too, and normal sleep comes back. If the agent already runs, open a new tab and run <code>caffeinate -i</code> with no command. It holds the assertion until you press Control-C. To stop when a process ends, give its ID: <code>caffeinate -i -w &lt;pid&gt;</code>.</p>
                 <div class="table-wrap" role="region" aria-labelledby="t1" tabindex="0">
                     <table class="compare">
@@ -149,19 +148,19 @@ caffeinate -is claude     # on AC power: also add -s (system sleep)</code></pre>
                 <ol>
                     <li>Install it from the <a href="https://apps.apple.com/app/id6769450957" target="_blank" rel="noopener" data-cta="nightcap-agents-inline">Mac App Store</a>, or run <code>brew install --cask Abdo-codes/tap/nightcap</code>.</li>
                     <li>Click the cup in the menu bar and choose <strong>Add App…</strong>.</li>
-                    <li>Add the app that runs the agent. For Claude Code or the Codex CLI, add your terminal: Ghostty, Terminal or iTerm. For the desktop apps, add Codex or Claude.</li>
+                    <li>Add the app that runs the agent. Nightcap watches Ghostty by default. For Claude Code or the Codex CLI in another terminal, add Terminal or iTerm. For the desktop apps, add Codex or Claude.</li>
                     <li>Turn on <strong>Launch at Login</strong>. Nightcap then works after each restart.</li>
                 </ol>
                 <p><strong>Know this before you use it.</strong> Nightcap watches apps, not one command. If your terminal stays open after the agent finishes, the Mac stays awake until you quit the terminal. To keep the terminal open and allow sleep, pause it in the Nightcap menu. Nightcap does not keep the display on, and it does not work with the lid closed. It is sandboxed, has no analytics and no network access, and needs macOS 14 or later. The <a href="https://github.com/Abdo-codes/Nightcap" target="_blank" rel="noopener">source is on GitHub</a> under the MIT license.</p>
 
                 <h2 id="settings">Way 3: a System Settings switch</h2>
                 <p>macOS has a setting that stops sleep when the display is off. On a MacBook, open <strong>System Settings, Battery, Options</strong> and turn on "Prevent automatic sleeping on power adapter when the display is off". On a desktop Mac, the setting is in <strong>Energy</strong>. Apple describes it in <a href="https://support.apple.com/guide/mac-help/set-sleep-and-wake-settings-mchle41a6ccd/mac" target="_blank" rel="noopener">Set sleep and wake settings for your Mac</a>.</p>
-                <p>This is the simplest way, but it is on all the time while the Mac has power. Apple says that it can increase power use. If you agree with that, it is a good choice for a desktop Mac that runs agents every night.</p>
+                <p>This is the simplest way, but it is on all the time while the Mac has power. Apple says that it can increase power use. If the extra power use is acceptable to you, it is a good choice for a desktop Mac that runs agents every night.</p>
 
                 <h2 id="lid">Can I keep a MacBook awake with the lid closed?</h2>
-                <p>Not with <code>caffeinate -i</code>, Nightcap or the setting above. A MacBook sleeps when you close the lid, even with an idle-sleep assertion. There are two ways that work:</p>
+                <p>Not with <code>caffeinate</code>, Nightcap or the setting above. A MacBook sleeps when you close the lid, even with an idle-sleep assertion. There are two ways that work:</p>
                 <ul>
-                    <li><strong>Closed-display mode.</strong> Connect power, an external display, and an external keyboard or mouse. Then close the lid. Apple explains it in <a href="https://support.apple.com/en-bw/HT201834" target="_blank" rel="noopener">Use your Mac notebook computer in closed-display mode</a>. On Apple silicon, allow the accessories to connect first, in <a href="https://support.apple.com/en-us/102282" target="_blank" rel="noopener">Privacy &amp; Security</a>.</li>
+                    <li><strong>Closed-display mode.</strong> Connect power, an external display, and an external keyboard or mouse. Then close the lid. Apple explains it in <a href="https://support.apple.com/en-us/102555" target="_blank" rel="noopener">Connect displays to your Mac</a>. On Apple silicon, allow the accessories to connect first, in <a href="https://support.apple.com/en-us/102282" target="_blank" rel="noopener">Privacy &amp; Security</a>.</li>
                     <li><strong>Amphetamine with its helper.</strong> Amphetamine offers closed-lid sessions with a separate download. See my <a href="/nightcap-awake/vs-amphetamine/">Nightcap Awake vs Amphetamine comparison</a> for the details.</li>
                 </ul>
                 <p>Do not put a running MacBook in a bag. With sleep blocked, it gets hot.</p>
@@ -171,12 +170,12 @@ caffeinate -is claude     # on AC power: also add -s (system sleep)</code></pre>
                 <figure><img src="terminal-assertions.webp" width="1300" height="500" style="aspect-ratio: 1300 / 500" alt="Terminal output of pmset -g assertions filtered for Nightcap and caffeinate, both holding PreventUserIdleSystemSleep, and pmset -g showing sleep prevented by Nightcap, Claude and caffeinate." loading="lazy"><figcaption>Real output from my Mac on 27 November 2026. I shortened the assertion IDs.</figcaption></figure>
                 <pre><code>pmset -g assertions | grep -E "Nightcap|caffeinate"
 pmset -g | grep "^ sleep"</code></pre>
-                <p>Look for <code>PreventUserIdleSystemSleep</code>. The second command lists each process that blocks sleep now. If the list is empty, the Mac will sleep.</p>
+                <p>In the first result, look for <code>PreventUserIdleSystemSleep</code> next to Nightcap or caffeinate. In the second result, check that Nightcap or caffeinate is in the "sleep prevented by" list. System processes can also be in that list, so do not use them as proof. The System Settings switch is a setting, not an assertion, so it does not show here.</p>
 
                 <h2 id="compare">Which way to use</h2>
                 <div class="table-wrap" role="region" aria-labelledby="t2" tabindex="0">
                     <table class="compare">
-                        <caption id="t2">Four ways to keep a Mac awake for an AI agent. All are free.</caption>
+                        <caption id="t2">Three ways to keep a Mac awake for an AI agent, plus Amphetamine for a closed lid. All are free.</caption>
                         <thead><tr><th scope="col">Way</th><th scope="col">Best for</th><th scope="col">Stops by itself</th><th scope="col">Lid closed</th></tr></thead>
                         <tbody>
                             <tr><th scope="row"><code>caffeinate -i claude</code></th><td>One terminal session that you start yourself</td><td>Yes, when the agent exits</td><td>No</td></tr>
@@ -197,12 +196,12 @@ pmset -g | grep "^ sleep"</code></pre>
                 </ul>
 
                 <h2 id="faq">Questions</h2>
-                <p><strong>Does Claude Code keep running when my Mac sleeps?</strong> No. Sleep pauses every process and the network goes down. The agent continues only after the Mac wakes.</p>
-                <p><strong>What is the caffeinate command for Claude Code?</strong> <code>caffeinate -i claude</code>. For the Codex CLI, use <code>caffeinate -i codex</code>.</p>
-                <p><strong>Can the display sleep while the agent runs?</strong> Yes. <code>caffeinate -i</code> and Nightcap block idle system sleep only.</p>
-                <p><strong>Can I keep a MacBook awake with the lid closed?</strong> Only in closed-display mode (power, an external display and an external keyboard or mouse), or with Amphetamine and its helper.</p>
-                <p><strong>Does a locked screen stop the agent?</strong> No. A locked screen or a screen saver does not stop processes.</p>
-                <p><strong>Is Nightcap Awake free?</strong> Yes. No account, no ads and no in-app purchases. It is open source under the MIT license.</p>
+                <p><strong>Does Claude Code keep running when my Mac sleeps?</strong> No. System sleep pauses every process, and the network connection goes down. The agent continues only after the Mac wakes, and a request that was open at that time can fail.</p>
+                <p><strong>What is the caffeinate command for Claude Code?</strong> Run <code>caffeinate -i claude</code>. caffeinate starts Claude Code and blocks idle system sleep until Claude Code exits. Use <code>caffeinate -i codex</code> for the Codex CLI.</p>
+                <p><strong>Can my Mac sleep the display and keep the agent running?</strong> Yes. <code>caffeinate -i</code> and Nightcap Awake block idle system sleep only. The display turns off on its normal schedule, and the agent keeps running.</p>
+                <p><strong>Can I keep a MacBook awake with the lid closed?</strong> Not with <code>caffeinate -i</code> or Nightcap Awake. A MacBook sleeps when you close the lid. Apple's closed-display mode keeps it awake with the lid closed when it has power, an external display, and an external keyboard or mouse. Amphetamine also offers closed-lid sessions with its helper.</p>
+                <p><strong>Does a locked screen stop the agent?</strong> No. A locked screen or a screen saver does not stop processes. Only sleep does.</p>
+                <p><strong>Is Nightcap Awake free?</strong> Yes. Nightcap Awake is free on the Mac App Store, with no account, no ads and no in-app purchases. It is open source under the MIT license and needs macOS 14 or later.</p>
             </div>
 
             <aside class="app-cta" aria-labelledby="cta-title">
