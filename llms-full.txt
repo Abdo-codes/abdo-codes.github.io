@@ -12,6 +12,7 @@
 
 ## Recent Writing
 
+- [Keep Your Mac Awake While Claude Code or Codex Runs Overnight](https://yoloabdo.com/blog/keep-mac-awake-ai-agents-overnight/) (27 Nov 2026)
 - [Egyptian Koshary Recipe: Like the Cairo Shops, Step by Step](https://yoloabdo.com/blog/koshary-recipe/) (27 Nov 2026)
 - [Hona Elqahra 1.2: Quran Radio Live Activity & Dynamic Island](https://yoloabdo.com/blog/hona-elqahra-1-2-release-notes/) (26 Nov 2026)
 - [Sajdah 2.0 for Apple TV: Ramadan Living Room Mode, Free Prayer Times & Family Hifz](https://yoloabdo.com/blog/sajdah-2-0-release-notes/) (24 Nov 2026)
