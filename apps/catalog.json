@@ -157,7 +157,9 @@
         "ar": "صحة ولياقة"
       },
       "platforms": [
-        "iPhone"
+        "iPhone",
+        "iPad",
+        "Apple Watch"
       ],
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/18/10/d2/1810d20c-0c6a-505f-ce9c-90971df4ff07/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
     },

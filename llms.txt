@@ -1,6 +1,6 @@
 # yoloabdo.com — Abdelrahman Eita
 
-> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published eleven apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (scoreboard and score keeper for Apple TV and iPhone), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), SwingCoach (iPhone kettlebell swing coach), Baba Abdo (كشري بابا عبده, an Egyptian koshary cooking game for iPhone in Arabic and English: https://yoloabdo.com/baba-abdo/en/), and Hona Elqahra (هنا القاهرة, Quran radio for iPhone on a vintage receiver with one tuning knob: https://yoloabdo.com/hona-elqahra/). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
+> Abdelrahman Eita (also known as "yoloabdo") is a Staff Software Engineer based in Amsterdam, Netherlands, with 10+ years of iOS and Apple-platform development experience. He has published eleven apps on the App Store: Sajdah (also spelled Sajda; Quran for Apple TV), Tally (scoreboard and score keeper for Apple TV and iPhone), Capybara Rush (iPhone reflex game), Wi-Fi QR (guest Wi-Fi QR code maker and printable sign app), Tateemi (Arabic vaccination tracker), Nightcap Awake (Mac menu bar app that keeps the Mac awake while chosen apps run), Angry Nona: Night Shift (iPhone nanny game), ColorTalk (iPad ABC coloring app for children 5 and under), SwingCoach (kettlebell rep counter and form coach for iPhone, iPad, and Apple Watch), Baba Abdo (كشري بابا عبده, an Egyptian koshary cooking game for iPhone in Arabic and English: https://yoloabdo.com/baba-abdo/en/), and Hona Elqahra (هنا القاهرة, Quran radio for iPhone on a vintage receiver with one tuning knob: https://yoloabdo.com/hona-elqahra/). This file describes him and each app for AI search citation. He also makes free browser projects: How Surfing Works (an interactive 3D surfing explainer) and Drive Town (a 3D driving game to practise the Dutch car theory exam).
 
 ## About Abdelrahman Eita
 
@@ -420,14 +420,14 @@
 
 ---
 
-# SwingCoach: Kettlebell Workout - Kettlebell Swing Rep Counter and Form Check for iPhone
+# SwingCoach: Kettlebell Workout - Rep Counter & Form Coach for iPhone, iPad, and Apple Watch (v1.5)
 
-> SwingCoach is a kettlebell workout app for the Russian swing. The iPhone camera counts each rep and checks your form. When a fault repeats, a short spoken cue tells you what to fix. It starts you with a five-swing form check and a three-session starter plan. An Apple Watch app is optional. Free, with no account, no ads and no in-app purchases. Pose analysis runs on the iPhone. From 1.2.1, you can opt in to silent workout recordings that stay on your iPhone unless you share them. SwingCoach does not upload camera footage. It is free on the App Store.
+> SwingCoach is a hands-free kettlebell workout app for iPhone, iPad, and Apple Watch. Your camera counts two-hand and one-arm Russian swings, goblet squats, and kettlebell deadlifts while giving on-device form estimates and spoken cues — or train standalone on Apple Watch without the camera. Version 1.5 adds one-arm swings, goblet squats, and kettlebell deadlifts, standalone Watch counting and Watch motion assist (up to 2.5 s drops), Heart-Rate Guided Rest, multi-week programs (10,000-Swing Challenge, Bell-Step Progression, 4-Week Hinge & Volume Builder), a Plan tab scheduler, opt-in local silent video with rep-jump scrubbing, offline Training Partner challenges, 25 badges, optional private iCloud Sync, iPad landscape support, and 26 app languages. No account and no ads.
 
 ## Links
 
 - [Landing Page](https://yoloabdo.com/swingcoach/)
-- [vs Kettlebell Apps (Comparison)](https://yoloabdo.com/swingcoach/vs-kettlebell-apps/): honest comparison of SwingCoach (camera pose) vs pocket accelerometer apps (OmniSwing), Apple Watch apps (BELLr), and interval timers
+- [vs Kettlebell Apps (Comparison)](https://yoloabdo.com/swingcoach/vs-kettlebell-apps/): honest comparison of SwingCoach (camera pose & Apple Watch) vs pocket accelerometer apps (OmniSwing), Watch-only apps (BELLr), and interval timers
 - [App Store](https://apps.apple.com/us/app/swingcoach-kettlebell-workout/id6806616079)
 - [Support](https://yoloabdo.com/swingcoach/support/)
 - [Privacy Policy](https://yoloabdo.com/swingcoach/privacy/)
@@ -438,21 +438,21 @@
 
 ## Key Features
 
-- **Live Rep Count** - the camera finds your hips, knees and arms and counts each swing; fix the count with one tap
-- **Spoken Form Cues** - a short cue when a fault repeats
-- **Five-Swing Check** - one clear place to focus and a three-session starter plan
-- **Train Your Way** - open training, or a rep goal of 10, 20, 30, 50 or your own count
-- **Rep Review** - the deepest hinge and the final lockout of each rep, with hip, knee and arm angles, plus History
-- **Apple Watch, Optional** - heart rate, active calories, workout control and Apple Health
+- **Four Movements & Hands-Free Count** - camera pose tracking counts two-hand Russian swings, one-arm swings (left/right splits), goblet squats, and kettlebell deadlifts; adjust the count with one tap
+- **Spoken Cues in 26 Languages & Chimes** - short spoken coaching cues or subtle audio chimes that mix beside music
+- **Five-Swing Check & Programs** - 5-swing check, Starter Program, 10,000-Swing Challenge, Bell-Step Progression, and 4-Week Hinge & Volume Builder
+- **Plan Tab & Timers** - weekly scheduling up to 4 weeks ahead, custom EMOM, interval, and cluster sets, Heart-Rate Guided Rest, Siri & Shortcuts
+- **Rep Review & Opt-In Local Video** - joint angles, early/middle/late consistency, and optional silent workout video with rep-jump scrubbing
+- **Apple Watch Standalone & Motion Assist** - train standalone on Apple Watch without the camera, bridge brief framing drops up to 2.5 s, Double Tap, Skip Rest, live heart rate, calories, and Apple Health
+- **Sync, Partners & Exports** - offline Training Partner invites/check-ins, 25 badges, CSV/JSON/PDF export, widgets, Live Activity, and optional private iCloud Sync
 
 ## Availability
 
 - App Store: https://apps.apple.com/us/app/swingcoach-kettlebell-workout/id6806616079
-- Free, with no in-app purchases
 
 ## Platform
 
-- iOS (iPhone), requires iOS 17+; the optional Apple Watch app needs watchOS 10+
+- iPhone (iOS 17+), iPad (iPadOS 17+, portrait & landscape), Apple Watch (watchOS 10+)
 
 ## Developer
 
